@@ -293,6 +293,69 @@ describe.skipIf(!connection)("isolated PostgreSQL integration", () => {
     } finally {
       budgetFailure.mockRestore();
     }
+    const priorQuota = process.env.MONTHLY_ANALYSIS_QUOTA;
+    process.env.MONTHLY_ANALYSIS_QUOTA = "100";
+    try {
+      const recoveryOwner = await p.user.create({
+        data: {
+          id: `recovery-${suffix}`,
+          email: `${suffix}@recovery.example.invalid`,
+        },
+      });
+      const recoveryOrg = await p.organization.create({
+        data: {
+          name: "Lease recovery",
+          slug: `recovery-${suffix}`,
+          ownerId: recoveryOwner.id,
+          memberships: { create: { userId: recoveryOwner.id } },
+        },
+      });
+      const recoveryTenant = {
+        organizationId: recoveryOrg.id,
+        userId: recoveryOwner.id,
+      };
+      const recoveryProduct = await p.product.create({
+        data: {
+          organizationId: recoveryOrg.id,
+          name: "Lease test",
+          websiteUrl: "https://lease.example.invalid/",
+        },
+      });
+      const expired = await p.analysisRun.create({
+        data: {
+          productId: recoveryProduct.id,
+          leaseExpiresAt: new Date(Date.now() - 1000),
+          provider: "fixture",
+          model: "fixture",
+        },
+      });
+      await generate(recoveryTenant, `https://retry-${suffix}.example.com`);
+      expect(
+        (await p.analysisRun.findUniqueOrThrow({ where: { id: expired.id } }))
+          .status,
+      ).toBe("FAILED");
+      const active = await p.analysisRun.create({
+        data: {
+          productId: recoveryProduct.id,
+          leaseExpiresAt: new Date(Date.now() + 60000),
+          provider: "fixture",
+          model: "fixture",
+        },
+      });
+      await expect(
+        generate(recoveryTenant, `https://busy-${suffix}.example.com`),
+      ).rejects.toMatchObject({ status: 429, code: "analysis_busy" });
+      expect(
+        (await p.analysisRun.findUniqueOrThrow({ where: { id: active.id } }))
+          .status,
+      ).toBe("RUNNING");
+      await p.analysisRun.update({
+        where: { id: active.id },
+        data: { status: "FAILED" },
+      });
+    } finally {
+      process.env.MONTHLY_ANALYSIS_QUOTA = priorQuota;
+    }
   }, 30000);
   afterAll(async () => {
     if (connection) await db().$disconnect();

@@ -528,3 +528,40 @@ for (const width of widths)
       expect(scan.violations.map((v) => v.id)).toEqual([]);
     }
   });
+
+test("mobile workspace labels failed, active and preserved strategies accurately", async ({
+  page,
+}) => {
+  await setup(page);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.route("**/ui-workspace-states", async (route) =>
+    route.fulfill({
+      contentType: "text/html",
+      body: await readFile("artifacts/ui/workspace-states.html", "utf8"),
+    }),
+  );
+  await page.goto("/ui-workspace-states");
+  const failed = page
+    .locator(".product-row")
+    .filter({ hasText: "Failed SaaS" });
+  await expect(failed).toContainText("Open the product to retry");
+  await expect(failed).not.toContainText("Ready for your review");
+  const building = page
+    .locator(".product-row")
+    .filter({ hasText: "Building SaaS" });
+  await expect(building).toContainText("This page updates automatically");
+  await expect(
+    page.locator(".product-row").filter({ hasText: "Saved SaaS" }),
+  ).toContainText("Approved strategy v2 is still available");
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBe(
+    390,
+  );
+  await page.screenshot({
+    path: "artifacts/ui/workspace-statuses-390.png",
+    fullPage: true,
+  });
+  const scan = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag22aa"])
+    .analyze();
+  expect(scan.violations.map((v) => v.id)).toEqual([]);
+});

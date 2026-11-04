@@ -1,5 +1,5 @@
 "use client";
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight, LoaderCircle, Globe } from "lucide-react";
 import { Button } from "./ui/button";
@@ -9,24 +9,38 @@ import Link from "next/link";
 export function UrlForm({
   authenticated = false,
   initialUrl = "",
+  processing = false,
+  processingHref,
 }: {
   authenticated?: boolean;
   initialUrl?: string;
+  processing?: boolean;
+  processingHref?: string;
 }) {
   const [url, setUrl] = useState(initialUrl);
   const websiteId = useId();
   const [pending, setPending] = useState(false);
   const [error, setError] = useState("");
-  const [reportLink, setReportLink] = useState("");
   const router = useRouter();
+  const [busyNotice, setBusyNotice] = useState(false);
+  useEffect(() => {
+    if (!busyNotice) return;
+    const timer = setTimeout(() => {
+      setBusyNotice(false);
+      router.refresh();
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [busyNotice, router]);
+  const [reportLink, setReportLink] = useState("");
   const [turnstileToken, setTurnstileToken] = useState("");
   const [resetKey, setResetKey] = useState(0);
   return (
     <form
       className="url-form"
-      aria-busy={pending}
+      aria-busy={pending || processing || busyNotice}
       onSubmit={async (e) => {
         e.preventDefault();
+        if (processing || busyNotice || pending) return;
         setError("");
         setReportLink("");
         setPending(true);
@@ -66,6 +80,11 @@ export function UrlForm({
           );
           const data = await r.json();
           if (!r.ok) {
+            if (authenticated && data.code === "analysis_busy") {
+              setBusyNotice(true);
+              router.refresh();
+              return;
+            }
             if (!authenticated && r.status === 409)
               setReportLink(
                 data.error?.includes("saved") ? "/dashboard" : "/guest/report",
@@ -79,6 +98,7 @@ export function UrlForm({
           );
           router.refresh();
         } catch (e) {
+          if (authenticated) router.refresh();
           setError(
             e instanceof Error ? e.message : "Report generation failed.",
           );
@@ -116,7 +136,12 @@ export function UrlForm({
           />
         </div>
         <Button
-          disabled={pending || (!authenticated && !turnstileToken)}
+          disabled={
+            pending ||
+            processing ||
+            busyNotice ||
+            (!authenticated && !turnstileToken)
+          }
           type="submit"
         >
           {pending ? (
@@ -126,9 +151,11 @@ export function UrlForm({
           )}{" "}
           {pending
             ? "Building your report…"
-            : authenticated
-              ? "Generate free report"
-              : "Generate my free strategy"}
+            : processing || busyNotice
+              ? "Report in progress…"
+              : authenticated
+                ? "Generate free report"
+                : "Generate my free strategy"}
         </Button>
       </div>
       {!authenticated && (
@@ -152,6 +179,19 @@ export function UrlForm({
             ? "Open workspace"
             : "View my guest strategy"}
         </Link>
+      )}
+      {(processing || busyNotice) && !pending && (
+        <p role="status" className="mt-4 text-sm muted">
+          A report is already building. This page will update when it finishes.
+          {processingHref && (
+            <>
+              {" "}
+              <Link href={processingHref} className="underline">
+                View report progress
+              </Link>
+            </>
+          )}
+        </p>
       )}
       {pending && (
         <p role="status" className="mt-4 text-sm muted">

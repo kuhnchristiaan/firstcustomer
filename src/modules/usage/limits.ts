@@ -9,6 +9,7 @@ export function enforceLimits(
     throw new AppError(
       "A report is already processing. Please wait before starting another.",
       429,
+      "analysis_busy",
     );
   if (counts.recent >= 3)
     throw new AppError(

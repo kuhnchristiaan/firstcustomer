@@ -4,6 +4,8 @@ import { redirect, notFound } from "next/navigation";
 import { tenant, ownedProduct, AppError } from "@/modules/auth/tenant";
 import { db } from "@/lib/db";
 import { ProgressiveReport } from "@/components/progressive-report";
+import { WorkspaceRefresh } from "@/components/workspace-refresh";
+import { activeAnalysis, analysisStatus } from "@/modules/analysis/status";
 import { UrlForm } from "@/components/url-form";
 import { reportSchema } from "@/modules/intelligence/schema";
 import { strategyEnabled } from "@/modules/strategy/feature";
@@ -35,6 +37,9 @@ export default async function ProductPage({
       profiles: { orderBy: { version: "desc" }, take: 1 },
     },
   });
+  const now = new Date();
+  const processing = p.analyses.some((a) => activeAnalysis(a, now));
+  const latestStatus = analysisStatus(p.analyses[0], now);
   const q = await searchParams;
   const profile = p.profiles[0];
   const strategyApproval =
@@ -67,6 +72,7 @@ export default async function ProductPage({
       : analysis?.output;
   return (
     <WorkspaceShell product>
+      <WorkspaceRefresh active={processing} />
       <Link href="/dashboard" className="no-print mb-7 block text-sm muted">
         ← Back to workspace
       </Link>
@@ -82,11 +88,17 @@ export default async function ProductPage({
       ) : (
         <div className="panel">
           <h1 className="text-2xl font-semibold">
-            Your report isn’t ready yet.
+            {latestStatus === "FAILED"
+              ? "Your last report attempt needs a retry."
+              : "Your report is being prepared."}
           </h1>
           <p className="mt-4 muted">
-            {p.analyses[0]?.error ||
-              "Processing may still be in progress. Refresh to check its status."}
+            {latestStatus === "FAILED"
+              ? p.analyses[0]?.status === "RUNNING"
+                ? "The previous attempt exceeded its processing deadline. Start a new attempt below."
+                : p.analyses[0]?.error ||
+                  "The previous attempt could not be completed. You can retry below."
+              : "This page will update automatically when the report is ready."}
           </p>
         </div>
       )}
@@ -110,7 +122,8 @@ export default async function ProductPage({
             className="flex flex-wrap justify-between gap-2 border-t border-slate-100 py-3 text-xs"
           >
             <span>
-              {a.startedAt.toLocaleString("en-ZA")} · {a.status} · {a.provider}
+              {a.startedAt.toLocaleString("en-ZA")} · {analysisStatus(a, now)} ·{" "}
+              {a.provider}
             </span>
             <span>
               {a.inputTokens + a.outputTokens} tokens ·{" "}
@@ -126,7 +139,11 @@ export default async function ProductPage({
           </div>
         ))}
         <div className="mt-6">
-          <UrlForm authenticated initialUrl={p.websiteUrl} />
+          <UrlForm
+            authenticated
+            initialUrl={p.websiteUrl}
+            processing={processing}
+          />
         </div>
       </section>
     </WorkspaceShell>

@@ -14,7 +14,7 @@ export function sameOrigin(request: Request) {
 export function failure(error: unknown) {
   if (error instanceof AppError)
     return NextResponse.json(
-      { error: error.message },
+      { error: error.message, ...(error.code ? { code: error.code } : {}) },
       { status: error.status },
     );
   if (error instanceof ZodError)

@@ -151,3 +151,21 @@ Fix implemented locally:
 A real crawl and two-stage OpenAI analysis of **https://plausible.io/** succeeded using signed-in default limits: one source, 4,088 extracted characters, **3,033 input / 2,483 output tokens**. Result: Plausible Analytics, Product analytics; quoted evidence and recommendation basis validated. No production account or report was mutated. The result is retained only under ignored `.local-live-test/`.
 
 Verification: **151 tests passed, 6 opt-in checks skipped**, with isolated local PostgreSQL; a strengthened previous-over-budget regression also passed separately. `npm run build`, `npm run typecheck`, `npm run lint` and `git diff --check` passed. No frontend layout changed, so the already completed responsive/PDF checks were not repeated. No secret values were printed; no Neon, DNS, auth-domain or EDUCERT changes were made. The user approved committing, pushing and redeploying the follow-up fix. Production readiness is checked separately against the resulting Vercel deployment.
+
+## Follow-up: stale dashboard states and processing notices
+
+A narrowly scoped, read-only query of FirstCustomers application runs for Plausible and Senja confirmed the newest Plausible run **SUCCEEDED in about 23 seconds** after the previous deployment. Senja's visible failed attempts predated that fix. There were no active refinement rows for those two products at inspection time. No report content, EDUCERT rows, account data or infrastructure was accessed or modified by this diagnostic. The screenshot therefore did not establish a permanently stuck production job: it showed an older failure while another request was in progress, followed by a dashboard that did not refresh its state.
+
+Confirmed presentation bug: every unapproved product was given “Ready for your review,” including FAILED and RUNNING attempts.
+
+Local remediation:
+
+- Failed, building, successful and not-yet-analyzed rows now have distinct descriptions. A failed re-analysis explicitly preserves the availability of an earlier approved strategy.
+- Visible active workspaces refresh server state every five seconds; completed workspaces do not poll. Returning to the tab or a browser back-cache page refreshes once. Hidden tabs do not poll. Refreshing preserves typed URL state and never starts a paid analysis.
+- The dashboard passes active-run state to the form, disables duplicate submission, and provides a link to the report in progress. A race with another tab returns the machine-readable `analysis_busy` code and refreshes status instead of leaving a permanent red error. The transient busy notice clears after a bounded interval.
+- Both dashboard and product history treat RUNNING leases at/beyond their deadline as expired. The product page explains how to retry. Backend running counts explicitly require an unexpired lease; cleanup includes the exact expiration boundary. The real concurrency limit, quotas, tenant scope, source reports and version history remain intact.
+- Dashboard analysis summaries select only IDs, statuses and lease deadlines rather than fetching complete report JSON repeatedly.
+
+Verification: **160 tests passed, 6 opt-in checks skipped**, including real isolated PostgreSQL expiry/retry and active-job rejection checks. Additional tests cover failed/approved labels, exact lease-boundary behavior, disabled duplicate submissions with retained URL, visible/hidden refresh behavior, listener cleanup and machine-readable API errors. Production build, TypeScript and ESLint passed. **54 Chrome browser checks passed**, including mobile failed/building/approved row labels, overflow and accessibility. The mobile fixture screenshot is `artifacts/ui/workspace-statuses-390.png`. A generated-directory permission failure was resolved by running the local build with normal filesystem access; a new integration fixture initially reused a unique owner ID and was corrected to use a distinct test owner.
+
+The user approved committing, pushing and deploying these UI/status changes; the resulting production deployment is verified separately. No production database rows were repaired or rewritten: the Plausible report was already successful.

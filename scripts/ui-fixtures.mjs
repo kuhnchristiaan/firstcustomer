@@ -137,6 +137,38 @@ try {
       },
     ]),
   );
+  await writeFile(
+    "artifacts/ui/workspace-states.html",
+    workspace([
+      {
+        id: "retry-fixture",
+        name: "Failed SaaS",
+        websiteUrl: "https://retry.example.invalid",
+        status: "ACTIVE",
+        latestStatus: "FAILED",
+        approvedVersion: null,
+        updatedLabel: "4 Nov",
+      },
+      {
+        id: "active-fixture",
+        name: "Building SaaS",
+        websiteUrl: "https://building.example.invalid",
+        status: "ACTIVE",
+        latestStatus: "RUNNING",
+        approvedVersion: null,
+        updatedLabel: "4 Nov",
+      },
+      {
+        id: "preserved-fixture",
+        name: "Saved SaaS",
+        websiteUrl: "https://saved.example.invalid",
+        status: "ACTIVE",
+        latestStatus: "FAILED",
+        approvedVersion: 2,
+        updatedLabel: "4 Nov",
+      },
+    ]),
+  );
   await writeFile("artifacts/ui/workspace-empty.html", workspace([]));
   console.log(
     "Prepared isolated synthetic report and workspace visual fixtures.",

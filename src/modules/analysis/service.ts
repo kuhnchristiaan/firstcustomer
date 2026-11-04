@@ -26,7 +26,7 @@ export async function generate(t: Tenant, input: string) {
         where: {
           product: { organizationId: t.organizationId },
           status: "RUNNING",
-          leaseExpiresAt: { lt: now },
+          leaseExpiresAt: { lte: now },
         },
         data: {
           status: "FAILED",
@@ -46,7 +46,9 @@ export async function generate(t: Tenant, input: string) {
             },
           },
         }),
-        tx.analysisRun.count({ where: { ...scope, status: "RUNNING" } }),
+        tx.analysisRun.count({
+          where: { ...scope, status: "RUNNING", leaseExpiresAt: { gt: now } },
+        }),
         tx.analysisRun.count({
           where: {
             ...scope,

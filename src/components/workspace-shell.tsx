@@ -155,9 +155,17 @@ export function WorkspaceOverview({
                       p.latestStatus.replaceAll("_", " ").toLowerCase()}
                   </span>
                   <p className="mt-2">
-                    {p.approvedVersion
-                      ? `Approved strategy v${p.approvedVersion}`
-                      : "Ready for your review"}
+                    {p.latestStatus === "RUNNING"
+                      ? "Your report is building. This page updates automatically."
+                      : p.latestStatus === "FAILED"
+                        ? p.approvedVersion
+                          ? `Latest attempt failed. Approved strategy v${p.approvedVersion} is still available.`
+                          : "This attempt failed. Open the product to retry."
+                        : p.approvedVersion
+                          ? `Approved strategy v${p.approvedVersion}`
+                          : p.latestStatus === "SUCCEEDED"
+                            ? "Ready for your review"
+                            : "Generate a report to get started."}
                   </p>
                 </div>
                 <p className="product-date">{p.updatedLabel}</p>

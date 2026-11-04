@@ -12,6 +12,8 @@ import { reportSchema } from "@/modules/intelligence/schema";
 import { strategySchema } from "@/modules/strategy/schema";
 import { strategyEnabled } from "@/modules/strategy/feature";
 import { safeInitialReport } from "@/modules/strategy/claims";
+import { WorkspaceRefresh } from "@/components/workspace-refresh";
+import { activeAnalysis, analysisStatus } from "@/modules/analysis/status";
 import { SignOut } from "@/components/auth-form";
 export const dynamic = "force-dynamic";
 export default async function Dashboard({
@@ -45,10 +47,18 @@ export default async function Dashboard({
     where: { organizationId: t.organizationId },
     orderBy: { updatedAt: "desc" },
     include: {
-      analyses: { orderBy: { startedAt: "desc" }, take: 5 },
+      analyses: {
+        orderBy: { startedAt: "desc" },
+        take: 5,
+        select: { id: true, status: true, leaseExpiresAt: true },
+      },
       profiles: { orderBy: { version: "desc" }, take: 1 },
     },
   });
+  const now = new Date();
+  const processingProduct = products.find((p) =>
+    p.analyses.some((a) => activeAnalysis(a, now)),
+  );
   const e = config();
   const monthly = await db().analysisRun.count({
     where: {
@@ -94,6 +104,7 @@ export default async function Dashboard({
         : undefined;
   return (
     <WorkspaceShell>
+      <WorkspaceRefresh active={Boolean(processingProduct)} />
       <WorkspaceOverview
         products={products.map((p) => ({
           id: p.id,
@@ -102,7 +113,7 @@ export default async function Dashboard({
           status: p.status,
           approvedVersion:
             refined.get(p.id)?.version ?? p.profiles[0]?.version ?? null,
-          latestStatus: p.analyses[0]?.status ?? p.status,
+          latestStatus: analysisStatus(p.analyses[0], now) ?? p.status,
           updatedLabel: p.updatedAt.toLocaleDateString("en-ZA", {
             month: "short",
             day: "numeric",
@@ -110,7 +121,18 @@ export default async function Dashboard({
         }))}
         monthly={monthly}
         quota={e.MONTHLY_ANALYSIS_QUOTA}
-        form={<UrlForm authenticated initialUrl={url} />}
+        form={
+          <UrlForm
+            authenticated
+            initialUrl={url}
+            processing={Boolean(processingProduct)}
+            processingHref={
+              processingProduct
+                ? `/products/${processingProduct.id}`
+                : undefined
+            }
+          />
+        }
         signOut={<SignOut />}
         nextAction={
           nextStep && nextProduct
