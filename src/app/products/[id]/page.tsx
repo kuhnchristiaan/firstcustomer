@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WorkspaceShell } from "@/components/workspace-shell";
 import { redirect, notFound } from "next/navigation";
 import { tenant, ownedProduct, AppError } from "@/modules/auth/tenant";
 import { db } from "@/lib/db";
@@ -65,7 +66,7 @@ export default async function ProductPage({
       ? profile.findings
       : analysis?.output;
   return (
-    <main className="container py-10">
+    <WorkspaceShell product>
       <Link href="/dashboard" className="no-print mb-7 block text-sm muted">
         ← Back to workspace
       </Link>
@@ -128,6 +129,6 @@ export default async function ProductPage({
           <UrlForm authenticated initialUrl={p.websiteUrl} />
         </div>
       </section>
-    </main>
+    </WorkspaceShell>
   );
 }

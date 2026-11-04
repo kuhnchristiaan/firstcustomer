@@ -1,8 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Compass } from "lucide-react";
+import localFont from "next/font/local";
+import { Brand } from "@/components/brand";
+import { PrintSupport } from "@/components/print-support";
 import { SiteNavigation } from "@/components/site-navigation";
 import "./globals.css";
+import "./print.css";
+const displayFont = localFont({
+  src: "./fonts/InstrumentSans.woff2",
+  variable: "--font-display",
+  display: "swap",
+  weight: "400 700",
+});
+const interfaceFont = localFont({
+  src: "./fonts/Inter.woff2",
+  variable: "--font-interface",
+  display: "swap",
+  weight: "400 700",
+});
 export const metadata: Metadata = {
   title: "FirstCustomers — Your first customers start with a plan",
   description:
@@ -16,29 +31,30 @@ export default function RootLayout({
   return (
     // Browser extensions can add attributes to <html> before React hydrates.
     // Suppress root attributes only; application content still gets checked.
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${displayFont.variable} ${interfaceFont.variable}`}
+      suppressHydrationWarning
+    >
       {/* Grammarly adds body attributes before hydration, too. */}
       <body suppressHydrationWarning>
-        <header className="border-b border-[var(--border)] bg-white">
-          <div className="container flex h-20 items-center justify-between gap-4">
-            <Link
-              href="/"
-              className="brand-link flex items-center gap-2 font-bold text-xl tracking-tight"
-            >
-              <Compass size={26} className="text-teal-800" />
-              FirstCustomers
-              <span className="brand-badge badge hidden sm:block">
-                FOR SAAS FOUNDERS
-              </span>
+        <PrintSupport />
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+        <header className="site-header no-print">
+          <div className="container header-inner">
+            <Link href="/" className="brand-link">
+              <Brand />
             </Link>
             <SiteNavigation />
           </div>
         </header>
-        {children}
-        <footer className="container flex flex-wrap justify-between gap-4 py-10 text-xs text-slate-500">
-          <span>
-            FirstCustomers · A clearer path to your first 10 customers.
-          </span>
+        <div id="main-content" tabIndex={-1}>
+          {children}
+        </div>
+        <footer className="container site-footer no-print">
+          <span>Built for the leap from product to paying customers.</span>
           <nav aria-label="Footer" className="flex flex-wrap gap-5 text-sm">
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Beta terms</Link>

@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <main className="container py-12">
-      <article className="panel mx-auto max-w-3xl">
+      <article className="legal-page mx-auto">
         <h1 className="mb-6 text-3xl font-semibold">Support</h1>
         <p className="mb-5 text-sm leading-7">
           For a reproducible technical problem, open an issue in the
@@ -20,7 +20,7 @@ export default function Page() {
           a beta support route; no response-time commitment is offered.
         </p>
         <a
-          className="text-teal-800 underline"
+          className="text-ink underline"
           href="https://github.com/kuhnchristiaan/firstcustomer/issues"
         >
           Open FirstCustomers support issues

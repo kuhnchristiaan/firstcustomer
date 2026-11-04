@@ -3,6 +3,7 @@ import { safeInitialReport } from "@/modules/strategy/claims";
 import { useState } from "react";
 import { Printer, Check, PenLine } from "lucide-react";
 import { Button } from "./ui/button";
+import { presentStrategyValue } from "./strategy-presentation";
 import { reportSchema, type Report } from "@/modules/intelligence/schema";
 type Claim = { text: string; confidence: string; sources: string[] };
 const labels: Record<string, string> = {
@@ -25,6 +26,21 @@ const labels: Record<string, string> = {
   missingInformation: "09 · Assumptions, limitations and validation questions",
 };
 function humanize(s: string) {
+  const friendly: Record<string, string> = {
+    batchPlanningTarget: "Initial prospect batch",
+    targetDisclaimer: "Planning assumption",
+    stages: "Track the buying journey",
+    qualificationQuestions: "Qualification questions",
+    paymentDefinition: "What counts as a customer",
+    weeklyMinutes: "Weekly time in minutes",
+    weeklyTime: "Available time",
+    monthlyBudget: "Monthly acquisition budget",
+    existingAudience: "Existing audience",
+    confirmedCapabilities: "Founder-confirmed capabilities",
+    freeUsers: "Free users or trials",
+    payingCustomers: "Paying customers",
+  };
+  if (friendly[s]) return friendly[s];
   return s.replace(/([A-Z])/g, " $1").replace(/^./, (s) => s.toUpperCase());
 }
 function OutreachCard({
@@ -34,12 +50,10 @@ function OutreachCard({
 }) {
   const [status, setStatus] = useState("");
   return (
-    <article className="rounded-xl border p-5">
+    <article className="message-block">
       <h3 className="font-semibold">{message.channel}</h3>
-      <p className="my-3 text-sm font-semibold">{message.subject}</p>
-      <p className="whitespace-pre-wrap text-sm leading-7">
-        {message.body.replace(/\\n/g, "\n")}
-      </p>
+      <p className="message-subject">{message.subject}</p>
+      <p className="message-body">{message.body.replace(/\\n/g, "\n")}</p>
       <p className="mt-3 text-sm muted">
         Replace every placeholder and verify your product claims before sending.
       </p>
@@ -76,6 +90,12 @@ export function Value({
   editing: boolean;
   label?: string;
 }): React.ReactNode {
+  if (!editing) {
+    const presentation = presentStrategyValue(value, (v) => (
+      <Value value={v} editing={false} onChange={() => {}} />
+    ));
+    if (presentation) return presentation;
+  }
   if (
     !editing &&
     Array.isArray(value) &&
@@ -85,16 +105,17 @@ export function Value({
     )
   )
     return (
-      <div className="grid gap-4">
+      <div className="segment-list">
         {(value as Report["segments"]).map((s, i) => (
-          <article key={i} className="rounded-xl border p-5">
-            <h3 className="text-lg font-semibold">
-              {s.priority}. {s.name}
-            </h3>
-            <p className="my-2 text-sm muted">
+          <article key={i} className="segment-entry">
+            <div className="segment-heading">
+              <span className="priority-number">{s.priority}</span>
+              <h3>{s.name}</h3>
+            </div>
+            <p className="segment-meta">
               {s.industry} · {s.customerType} · {s.buyerRoles.join(", ")}
             </p>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="segment-body">
               <div>
                 <h4 className="font-semibold text-sm">Pain to investigate</h4>
                 <p className="text-sm leading-7">{s.problems.join("; ")}</p>
@@ -126,24 +147,29 @@ export function Value({
     )
   )
     return (
-      <div className="grid gap-4">
+      <div className="weekly-plan">
         {(value as Report["thirtyDayPlan"]).map((w) => (
-          <article key={w.week} className="rounded-xl border p-5">
-            <h3 className="font-semibold">
-              Week {w.week} · {w.objective}
-            </h3>
-            <ul className="my-3 list-disc pl-5 text-sm leading-7">
-              {w.actions.map((a) => (
-                <li key={a}>{a}</li>
-              ))}
-            </ul>
-            <p className="text-sm leading-7">Review: {w.successMetric}</p>
-            <details>
-              <summary className="mt-3 cursor-pointer text-sm underline">
-                Planning assumptions
-              </summary>
-              <Value value={w.rationale} editing={false} onChange={() => {}} />
-            </details>
+          <article key={w.week} className="week-entry">
+            <span className="week-number">Week {w.week}</span>
+            <div>
+              <h3>{w.objective}</h3>
+              <ul className="my-3 list-disc pl-5 text-sm leading-7">
+                {w.actions.map((a) => (
+                  <li key={a}>{a}</li>
+                ))}
+              </ul>
+              <p className="text-sm leading-7">Review: {w.successMetric}</p>
+              <details>
+                <summary className="mt-3 cursor-pointer text-sm underline">
+                  Planning assumptions
+                </summary>
+                <Value
+                  value={w.rationale}
+                  editing={false}
+                  onChange={() => {}}
+                />
+              </details>
+            </div>
           </article>
         ))}
       </div>
@@ -203,14 +229,12 @@ export function Value({
     );
   if (Array.isArray(value))
     return (
-      <div className="space-y-4">
+      <div className="value-list">
         {value.map((v, i) => (
           <div
             key={i}
             className={
-              typeof v === "object"
-                ? "rounded-xl border border-slate-200 p-5"
-                : "border-l-2 border-teal-100 pl-4"
+              typeof v === "object" ? "detail-group" : "plain-list-item"
             }
           >
             <Value
@@ -242,13 +266,7 @@ export function Value({
             <select
               aria-label={`${label} confidence`}
               className="mb-3 rounded border p-2 text-xs"
-              value={
-                c.confidence === "Inferred"
-                  ? "Hypothesis — needs validation"
-                  : c.confidence === "Unknown"
-                    ? "Not established yet"
-                    : "Website-supported"
-              }
+              value={c.confidence}
               onChange={(e) => onChange({ ...c, confidence: e.target.value })}
             >
               {["Verified", "Inferred", "Unknown"].map((x) => (
@@ -263,7 +281,7 @@ export function Value({
             onChange={(text) => onChange({ ...c, text })}
           />
           {c.sources.length > 0 && (
-            <div className="mt-2 flex flex-wrap gap-3 text-xs text-teal-800">
+            <div className="mt-2 flex flex-wrap gap-3 text-xs text-ink">
               {[...new Set(c.sources)].map((s) => (
                 <a
                   key={s}
@@ -281,12 +299,10 @@ export function Value({
       );
     }
     return (
-      <div className="space-y-4">
+      <div className="definition-grid">
         {Object.entries(obj).map(([k, v]) => (
           <div key={k}>
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide muted">
-              {humanize(k)}
-            </h3>
+            <h3 className="reading-label">{humanize(k)}</h3>
             <Value
               value={v}
               editing={editing}
@@ -331,7 +347,7 @@ export function ReportView({
       : Object.keys(labels));
   return (
     <>
-      <div className="no-print mb-7 flex flex-wrap items-center justify-between gap-3">
+      <div className="report-toolbar no-print mb-7 flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap gap-2">
           <span className="badge">
             {savedVersion
@@ -357,34 +373,9 @@ export function ReportView({
           )}
         </div>
       </div>
-      {!sections && !preview && (
-        <section className="report-section panel border-teal-200 bg-teal-50">
-          <h2>Your first sales experiment</h2>
-          <p className="mb-3 text-sm leading-7">
-            Start with {report.segments.find((s) => s.priority === 1)?.name}.
-            Test {report.acquisitionChannels[0].title.toLowerCase()} before
-            expanding to other channels.
-          </p>
-          <Value
-            value={report.acquisitionChannels[0].recommendation}
-            editing={false}
-            onChange={() => {}}
-          />
-          <p className="mt-3 text-sm leading-7">
-            First action: {report.acquisitionChannels[0].steps[0]}
-          </p>
-          <p className="mt-3 text-sm leading-7">
-            Review the result: {report.acquisitionChannels[0].successMetric}
-          </p>
-          <p className="mt-3 text-xs muted">
-            This is an unvalidated experiment. Use the optional founder
-            questions after the report to fit it to your time and budget.
-          </p>
-        </section>
-      )}
       <nav
         aria-label="Report sections"
-        className="panel no-print mb-6 lg:hidden"
+        className="report-mobile-nav no-print lg:hidden"
       >
         <details>
           <summary className="cursor-pointer text-sm font-semibold">
@@ -407,7 +398,7 @@ export function ReportView({
               <a
                 key={k}
                 href={`#${k}`}
-                className="block text-xs leading-5 muted hover:text-teal-800"
+                className="block text-xs leading-5 muted hover:text-ink"
               >
                 {displayLabel(k)}
               </a>
@@ -417,11 +408,9 @@ export function ReportView({
         <div>
           <p className="eyebrow mb-3">SAAS SALES STRATEGY</p>
           {sections ? (
-            <h2 className="text-3xl font-semibold tracking-tight">
-              {report.businessName}
-            </h2>
+            <h2 className="report-title">{report.businessName}</h2>
           ) : (
-            <h1 className="text-4xl font-semibold tracking-tight">
+            <h1 className="report-title">
               {editing ? (
                 <input
                   aria-label="Product name"
@@ -435,12 +424,38 @@ export function ReportView({
               )}
             </h1>
           )}
-          <p className="mt-4 mb-7 text-sm leading-7 muted">
+          <p className="report-intro mt-4 mb-7">
             A focused starting point for finding your first customers. Verified
             means supported by the website; inferred means a hypothesis to test;
             unknown means more information is needed. Targets are experiments,
             not forecasts.
           </p>
+          {!sections && !preview && (
+            <section className="report-first-move">
+              <h2>Your first sales experiment</h2>
+              <p className="mb-3 text-sm leading-7">
+                Start with {report.segments.find((s) => s.priority === 1)?.name}
+                . Test {report.acquisitionChannels[0].title.toLowerCase()}{" "}
+                before expanding to other channels.
+              </p>
+              <Value
+                value={report.acquisitionChannels[0].recommendation}
+                editing={false}
+                onChange={() => {}}
+              />
+              <p className="mt-3 text-sm leading-7">
+                First action: {report.acquisitionChannels[0].steps[0]}
+              </p>
+              <p className="mt-3 text-sm leading-7">
+                Review the result: {report.acquisitionChannels[0].successMetric}
+              </p>
+              <p className="mt-3 text-xs muted">
+                This is an unvalidated experiment. Use the optional founder
+                questions after the report to fit it to your time and budget.
+              </p>
+            </section>
+          )}
+
           {keys.map((key) => (
             <section id={key} key={key} className="report-section panel">
               <h2>{displayLabel(key)}</h2>

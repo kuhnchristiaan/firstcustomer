@@ -1,13 +1,6 @@
 import { guestConfig } from "@/modules/guest/config";
 import Link from "next/link";
-import {
-  ArrowUpRight,
-  Check,
-  Target,
-  MessageSquare,
-  CalendarDays,
-  Route,
-} from "lucide-react";
+import { ArrowDown, ArrowUpRight, Check, ArrowRight } from "lucide-react";
 import { UrlForm } from "@/components/url-form";
 import { LandingMetric } from "@/components/landing-metric";
 export default async function Home({
@@ -24,172 +17,224 @@ export default async function Home({
   const initialUrl =
     typeof query.url === "string" ? query.url.slice(0, 2048) : "";
   return (
-    <main>
+    <main className="marketing">
       {guestAvailable && <LandingMetric />}
-      <section className="container grid items-center gap-14 py-20 lg:grid-cols-[1.15fr_1fr] lg:py-28">
-        <div>
-          <p className="eyebrow mb-6">
-            YOU BUILT THE PRODUCT. NOW FIND YOUR PEOPLE.
-          </p>
-          <h1 className="max-w-2xl text-5xl font-semibold leading-[1.08] tracking-[-.055em] sm:text-6xl">
+      <section className="marketing-hero">
+        <div className="container">
+          <div className="hero-topline">
+            <span>
+              <i /> The next chapter for SaaS founders
+            </span>
+            <span className="hero-edition">
+              Your first customers start here.
+            </span>
+          </div>
+          <h1>
             You built your SaaS.
             <br />
-            Now find{" "}
-            <span className="text-teal-700">your first customers.</span>
+            Now find your
+            <br className="hero-break" /> <span>first customers.</span>
           </h1>
-          <p className="mt-7 max-w-xl text-lg leading-relaxed muted">
-            Enter your SaaS website and get a free, personalised sales strategy
-            showing who to target, where to find customers and how to start
-            selling.
-          </p>
-          <div className="panel mt-9 shadow-sm">
+          <div className="hero-bottom">
+            <p>
+              A sharper target. A message worth sending. A practical sales
+              strategy built from your website — so you can stop guessing and
+              start a conversation.
+            </p>
+            <a href="#strategy-example" className="hero-explore">
+              See what you’ll get <ArrowDown size={18} />
+            </a>
+          </div>
+          <div className="hero-form" id="generate">
+            <div className="form-intro">
+              <span className="step-number">01</span>
+              <div>
+                <h2>Start with your website.</h2>
+                <p>We’ll help you find your next move.</p>
+              </div>
+              <span className="free-label">Free. Yours to use.</span>
+            </div>
             {guestAvailable ? (
               <UrlForm initialUrl={initialUrl} />
             ) : (
-              <div>
-                <p role="status" className="mb-4 text-sm leading-7">
-                  Free website analysis is temporarily unavailable while we
-                  finish public access setup. Explore the sample to see your
-                  first move, customer priorities and weekly plan.
+              <div role="status">
+                <p className="mb-4">
+                  Free website analysis is temporarily unavailable. Your saved
+                  reports are still available.
                 </p>
-                <Link
-                  className="font-semibold text-teal-800 underline"
-                  href="/preview"
-                >
-                  View a sample sales plan
+                <Link href="/preview" className="text-link">
+                  Explore a sample sales strategy <ArrowUpRight size={16} />
                 </Link>
-                <p className="mt-3 text-xs muted">
-                  Existing account?{" "}
-                  <Link href="/dashboard" className="underline">
-                    Open your saved reports
-                  </Link>
-                  .
-                </p>
               </div>
             )}
           </div>
-          <div className="mt-5 flex flex-wrap gap-5 text-xs muted">
-            {[
-              "Built for SaaS founders",
-              "Free sales strategy",
-              "Grounded in your website",
-            ].map((x) => (
-              <span key={x} className="flex gap-1.5">
-                <Check size={14} />
-                {x}
-              </span>
-            ))}
+          <div className="hero-assurances">
+            <span>
+              <Check size={15} /> No account required
+            </span>
+            <span>
+              <Check size={15} /> No credit card
+            </span>
+            <span>
+              <Check size={15} /> Built for SaaS founders
+            </span>
           </div>
         </div>
-        <div className="relative rounded-2xl border border-emerald-900/10 bg-[#eaf1ed] p-5 sm:p-8">
-          <div className="panel shadow-sm">
-            <div className="flex items-center justify-between border-b border-slate-100 pb-5">
-              <span className="eyebrow">YOUR GROWTH BLUEPRINT</span>
-              <span className="badge">ILLUSTRATIVE PREVIEW</span>
-            </div>
-            <p className="mt-6 text-xs muted">01 / THE RIGHT CUSTOMERS</p>
-            <h2 className="mt-2 text-2xl font-semibold tracking-tight">
-              Focus beats finding everyone.
-            </h2>
-            <p className="mt-3 text-sm leading-6 muted">
-              Three prioritized customer profiles, with the pain points and
-              motivations behind each.
+      </section>
+      <section className="container demonstration" id="strategy-example">
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">
+              Less guesswork. A better first move.
             </p>
-            <div className="my-6 space-y-3">
-              {[
-                "01  Your strongest starting segment",
-                "02  Your next best opportunity",
-                "03  A focused expansion hypothesis",
-              ].map((s, i) => (
-                <div
-                  className="flex items-center gap-3 rounded-lg border border-slate-200 p-3 text-sm"
-                  key={s}
-                >
-                  <Target
-                    size={17}
-                    className={i ? "text-slate-400" : "text-teal-700"}
-                  />
-                  {s}
-                </div>
-              ))}
-            </div>
-            <div className="rounded-lg bg-teal-50 p-4 text-sm leading-6 text-teal-900">
-              <span className="font-semibold">From insight to action.</span>
+            <h2>
+              A strategy you can
               <br />
-              Audience → message → experiment → learning.
+              actually put to work.
+            </h2>
+          </div>
+          <p>
+            Not another list of marketing channels.
+            <br />A starting point, a small experiment, and a reason to keep
+            going — or change course.
+          </p>
+        </div>
+        <article className="strategy-demonstration">
+          <div className="demo-title">
+            <div>
+              <span className="demo-product">L</span>
+              <div>
+                <h3>Launchboard</h3>
+                <p>Onboarding analytics SaaS · Illustrative example</p>
+              </div>
             </div>
-            <Link
-              href="/preview"
-              className="mt-6 flex items-center justify-between text-sm font-semibold"
-            >
-              Explore a sample report <ArrowUpRight size={17} />
+            <span className="badge inferred">
+              Hypothesis — needs validation
+            </span>
+          </div>
+          <div className="demo-main">
+            <div className="demo-recommendation">
+              <p className="section-kicker">Your recommended first move</p>
+              <h3>
+                Find the founders
+                <br />
+                whose trials get stuck.
+              </h3>
+              <p>
+                Start with small, founder-led SaaS teams that have active trials
+                but don’t know why users fail to activate.
+              </p>
+              <span className="demo-effort">
+                45 minutes <span>·</span> No paid tools assumed
+              </span>
+            </div>
+            <div className="demo-steps">
+              <div>
+                <span>01</span>
+                <div>
+                  <h4>Make it small.</h4>
+                  <p>
+                    Choose two relevant founders you can already reach. Ask
+                    about the last trial that went quiet.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <span>02</span>
+                <div>
+                  <h4>Learn something that matters.</h4>
+                  <p>
+                    Look for an urgent onboarding problem and an agreed next
+                    buying step, not likes or free signups.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <span>03</span>
+                <div>
+                  <h4>Let the evidence decide.</h4>
+                  <p>
+                    If the problem is low priority, narrow the audience before
+                    contacting more people.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="demo-footer">
+            <p>
+              Assumes access to relevant founders. No prospects discovered. Two
+              contacts is a planning target, not a forecast.
+            </p>
+            <Link href="/preview">
+              Read the sample strategy <ArrowUpRight size={18} />
             </Link>
           </div>
+        </article>
+      </section>
+      <section className="container editorial-section">
+        <div className="section-heading">
+          <h2>
+            From “who needs this?”
+            <br />
+            to “here’s my next move.”
+          </h2>
+          <p>
+            For solo founders and small SaaS teams
+            <br />
+            with a product — and customers to find.
+          </p>
+        </div>
+        <div className="outcome-list">
+          {[
+            [
+              "01",
+              "Find your people.",
+              "Three prioritized customer profiles. Their likely problems, buying motivations, and the trade-offs that make one a better starting point.",
+            ],
+            [
+              "02",
+              "Start the right conversation.",
+              "Positioning and outreach you can adapt. Clear experiments with concrete actions, assumptions, and decisions to make.",
+            ],
+            [
+              "03",
+              "Make the next 30 days count.",
+              "A practical weekly sales plan. Add your time, budget, and traction to refine it around the business you’re actually building.",
+            ],
+          ].map(([number, title, body]) => (
+            <div key={number}>
+              <span>{number}</span>
+              <h3>{title}</h3>
+              <p>{body}</p>
+            </div>
+          ))}
         </div>
       </section>
-      <section className="border-y border-[var(--border)] bg-white py-16">
-        <div className="container">
-          <p className="eyebrow">A PLAN YOU CAN ACTUALLY USE</p>
-          <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-            Less marketing guesswork. More useful next steps.
-          </h2>
-          <div className="mt-10 grid gap-8 md:grid-cols-3">
-            {[
-              [
-                Target,
-                "Know who needs you",
-                "Three prioritized ideal customer profiles, their problems, buying motivations and signs worth investigating.",
-              ],
-              [
-                MessageSquare,
-                "Find the words that land",
-                "Positioning recommendations and editable outreach templates grounded in what your product does.",
-              ],
-              [
-                CalendarDays,
-                "Make the next 30 days count",
-                "A first-ten-customers playbook and weekly experiments with clear measures of progress.",
-              ],
-            ].map(([Icon, title, desc]) => {
-              const I = Icon as typeof Route;
-              return (
-                <div key={String(title)}>
-                  <I size={24} className="mb-5 text-teal-700" />
-                  <h3 className="font-semibold">{String(title)}</h3>
-                  <p className="mt-3 text-sm leading-6 muted">{String(desc)}</p>
-                </div>
-              );
-            })}
+      <section className="trust-section">
+        <div className="container trust-grid">
+          <div>
+            <p className="section-kicker">Useful advice starts with honesty.</p>
+            <h2>
+              Evidence where we have it.
+              <br />
+              <span>Questions where we don’t.</span>
+            </h2>
           </div>
-        </div>
-      </section>
-      <section className="container py-14">
-        <p className="max-w-3xl text-sm leading-7 muted">
-          Evidence where we have it. Assumptions where we don’t. Your report
-          labels verified website facts, AI inferences and unknowns.
-          Recommendations are experiments to test; they are never presented as
-          validated demand, researched competitors or real prospects.
-        </p>
-      </section>
-      <section className="container pb-16">
-        <div className="panel bg-teal-50">
-          <p className="eyebrow">AN ILLUSTRATIVE FIRST MOVE</p>
-          <h2 className="my-3 text-2xl font-semibold">
-            A plan that tells you what to do next.
-          </h2>
-          <p className="max-w-3xl text-sm leading-7">
-            For an onboarding analytics SaaS: spend 45 minutes inviting two
-            founders to discuss where their trials get stuck. Continue only when
-            you hear an urgent problem and agree on a buying next step.
-          </p>
-          <p className="my-4 text-sm leading-7 muted">
-            Week 1: validate the pain. Week 2: test the message. Week 3: explore
-            a buying next step. Week 4: review qualified conversations and
-            payments separately.
-          </p>
-          <Link href="/preview" className="text-sm font-semibold underline">
-            See the sample strategy and its assumptions →
-          </Link>
+          <div>
+            <p>
+              Your website tells part of the story. Your context makes it
+              sharper. FirstCustomers keeps website-supported information,
+              founder answers, hypotheses, and unknowns distinct.
+            </p>
+            <p>
+              Recommendations are experiments to test. We don’t invent market
+              demand, customer results, competitor research, or real prospects.
+            </p>
+            <a href="#generate" className="text-link">
+              Find your next move <ArrowRight size={18} />
+            </a>
+          </div>
         </div>
       </section>
     </main>

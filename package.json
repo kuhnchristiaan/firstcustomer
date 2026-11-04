@@ -11,6 +11,9 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "ui:build": "node scripts/ui-server.mjs build",
+    "ui:serve": "node scripts/ui-server.mjs start",
+    "test:ui": "node scripts/ui-fixtures.mjs && playwright test",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
@@ -45,6 +48,8 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
     "@tailwindcss/postcss": "^4.3.4",
     "@types/node": "^26.6.6",
     "@types/pg": "^8.23.1",

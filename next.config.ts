@@ -1,5 +1,8 @@
 import type { NextConfig } from "next";
 const config: NextConfig = {
+  // Keep fixture-only browser QA separate from the founder's running dev server.
+  distDir:
+    process.env.FIRSTCUSTOMERS_UI_QA === "true" ? ".next-ui-qa" : ".next",
   poweredByHeader: false,
   allowedDevOrigins:
     process.env.NODE_ENV !== "production" && process.env.DEV_LAN_ORIGIN

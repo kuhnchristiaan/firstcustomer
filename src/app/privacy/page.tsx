@@ -1,7 +1,7 @@
 export default function Page() {
   return (
     <main className="container py-12">
-      <article className="panel mx-auto max-w-3xl">
+      <article className="legal-page mx-auto">
         <h1 className="mb-6 text-3xl font-semibold">Privacy and data use</h1>
         <p className="mb-5 text-sm leading-7">
           FirstCustomers processes the public website URL you submit, fetched

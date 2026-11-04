@@ -4,6 +4,14 @@ import { tenant, AppError } from "@/modules/auth/tenant";
 import { configured, config } from "@/modules/config/env";
 import { db } from "@/lib/db";
 import { UrlForm } from "@/components/url-form";
+import {
+  WorkspaceShell,
+  WorkspaceOverview,
+} from "@/components/workspace-shell";
+import { reportSchema } from "@/modules/intelligence/schema";
+import { strategySchema } from "@/modules/strategy/schema";
+import { strategyEnabled } from "@/modules/strategy/feature";
+import { safeInitialReport } from "@/modules/strategy/claims";
 import { SignOut } from "@/components/auth-form";
 export const dynamic = "force-dynamic";
 export default async function Dashboard({
@@ -53,77 +61,67 @@ export default async function Dashboard({
     },
   });
   const { url = "" } = await searchParams;
+  const approvals =
+    strategyEnabled() && products.length
+      ? await db().strategyApproval.findMany({
+          where: {
+            productId: { in: products.map((p) => p.id) },
+            revision: {
+              analysis: { product: { organizationId: t.organizationId } },
+            },
+          },
+          orderBy: { createdAt: "desc" },
+          distinct: ["productId"],
+          select: {
+            productId: true,
+            revision: { select: { version: true, output: true } },
+          },
+        })
+      : [];
+  const refined = new Map(approvals.map((a) => [a.productId, a.revision]));
+  const nextProduct = products.find((p) => refined.has(p.id) || p.profiles[0]);
+  const savedStrategy = strategySchema.safeParse(
+    nextProduct ? refined.get(nextProduct.id)?.output : undefined,
+  );
+  const savedReport = reportSchema.safeParse(
+    nextProduct?.profiles[0]?.findings,
+  );
+  const nextStep =
+    savedStrategy.success && savedStrategy.data.schemaVersion === "3.0"
+      ? savedStrategy.data.firstMove.action
+      : savedReport.success
+        ? safeInitialReport(savedReport.data, []).firstTenPlaybook[0]?.steps[0]
+        : undefined;
   return (
-    <main className="container py-12">
-      <div className="mb-10 flex items-center justify-between">
-        <div>
-          <p className="eyebrow">FOUNDER WORKSPACE</p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight">
-            From product to first customers.
-          </h1>
-        </div>
-        <SignOut />
-      </div>
-      <div className="mb-8 grid gap-5 md:grid-cols-3">
-        {[
-          ["Your products", products.length],
-          ["Reports this month", `${monthly} / ${e.MONTHLY_ANALYSIS_QUOTA}`],
-          ["Your plan", "Free"],
-        ].map(([label, value]) => (
-          <div className="panel" key={label}>
-            <p className="text-xs muted">{label}</p>
-            <p className="mt-3 text-3xl font-semibold">{value}</p>
-          </div>
-        ))}
-      </div>
-      <section className="panel">
-        <h2 className="mb-5 text-xl font-semibold">
-          Build your next sales strategy
-        </h2>
-        <UrlForm authenticated initialUrl={url} />
-      </section>
-      <section className="mt-10">
-        <h2 className="mb-5 text-xl font-semibold">Your products & reports</h2>
-        {!products.length ? (
-          <div className="panel text-center">
-            <p className="my-8 muted">
-              Your first sales plan belongs here. Add your SaaS website above to
-              get started.
-            </p>
-          </div>
-        ) : (
-          <div className="grid gap-5 md:grid-cols-2">
-            {products.map((p) => (
-              <article className="panel" key={p.id}>
-                <div className="flex justify-between">
-                  <span className="badge">{p.status}</span>
-                  <span className="text-xs muted">
-                    {p.profiles[0]
-                      ? `Approved v${p.profiles[0].version}`
-                      : "Awaiting review"}
-                  </span>
-                </div>
-                <Link
-                  href={`/products/${p.id}`}
-                  className="mt-5 block text-xl font-semibold hover:underline"
-                >
-                  {p.name}
-                </Link>
-                <p className="mt-2 truncate text-sm muted">{p.websiteUrl}</p>
-                <div className="mt-5 border-t border-slate-100 pt-4">
-                  {p.analyses.map((a) => (
-                    <p key={a.id} className="mt-2 text-xs muted">
-                      {a.startedAt.toLocaleDateString("en-ZA")} · {a.status} ·{" "}
-                      {a.provider === "mock" ? "SAMPLE" : a.model}
-                      {a.error && ` · ${a.error}`}
-                    </p>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        )}
-      </section>
-    </main>
+    <WorkspaceShell>
+      <WorkspaceOverview
+        products={products.map((p) => ({
+          id: p.id,
+          name: p.name,
+          websiteUrl: p.websiteUrl,
+          status: p.status,
+          approvedVersion:
+            refined.get(p.id)?.version ?? p.profiles[0]?.version ?? null,
+          latestStatus: p.analyses[0]?.status ?? p.status,
+          updatedLabel: p.updatedAt.toLocaleDateString("en-ZA", {
+            month: "short",
+            day: "numeric",
+          }),
+        }))}
+        monthly={monthly}
+        quota={e.MONTHLY_ANALYSIS_QUOTA}
+        form={<UrlForm authenticated initialUrl={url} />}
+        signOut={<SignOut />}
+        nextAction={
+          nextStep && nextProduct
+            ? {
+                text: nextStep,
+                productId: nextProduct.id,
+                name: nextProduct.name,
+              }
+            : undefined
+        }
+      />
+    </WorkspaceShell>
   );
 }

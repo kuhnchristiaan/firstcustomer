@@ -12,12 +12,13 @@ export async function SiteNavigation() {
       signedIn = Boolean((await auth().getSession()).data?.user);
     } catch {}
   return (
-    <nav className="flex items-center gap-4 text-sm">
+    <nav aria-label="Main navigation" className="site-nav">
       <Link href={signedIn ? "/dashboard" : "/preview"}>
         {signedIn ? "Workspace" : "View sample report"}
       </Link>
       <Link href={signedIn ? "/dashboard" : "/auth/sign-in"}>
         {signedIn ? "My reports" : "Sign in"}
+        <span aria-hidden="true"> ↗</span>
       </Link>
     </nav>
   );

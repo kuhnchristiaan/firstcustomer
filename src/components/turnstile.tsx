@@ -80,7 +80,7 @@ export function Turnstile({
           )
         }
       />
-      <div ref={ref} className="mt-4 min-h-16" />
+      <div ref={ref} className="verification-slot" />
       {ready && (status.includes("expired") || status.includes("failed")) && (
         <button
           type="button"

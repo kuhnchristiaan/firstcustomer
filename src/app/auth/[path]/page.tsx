@@ -1,3 +1,4 @@
+import { BrandMark } from "@/components/brand";
 import { RecoveryForm } from "@/components/recovery-form";
 import { notFound } from "next/navigation";
 import { AuthForm } from "@/components/auth-form";
@@ -23,43 +24,63 @@ export default async function AuthPage({
     notFound();
   const recovery = path === "forgot-password" || path === "reset-password";
   return (
-    <main className="container py-16">
-      <div className="panel mx-auto max-w-md">
-        <p className="eyebrow">YOUR NEXT CHAPTER</p>
-        <h1 className="mb-3 mt-4 text-3xl font-semibold tracking-tight">
-          {recovery
-            ? path === "forgot-password"
-              ? "Reset your password"
-              : "Choose a new password"
-            : signup
-              ? "Your sales plan starts here."
-              : "Welcome back."}
-        </h1>
-        <p className="mb-7 text-sm leading-6 muted">
-          A free account keeps your reports and approved strategy in one place.
-        </p>
-        {configured() ? (
-          recovery ? (
-            <RecoveryForm
-              reset={path === "reset-password"}
-              token={token}
-              invalid={Boolean(error)}
-              saveGuest={save === "guest"}
-            />
-          ) : (
-            <AuthForm
-              signup={signup}
-              website={url}
-              saveGuest={save === "guest"}
-            />
-          )
-        ) : (
-          <p className="rounded-lg bg-amber-50 p-4 text-sm leading-6">
-            Account registration needs this application’s Neon Auth and
-            PostgreSQL configuration. You can explore the sample preview now; no
-            credentials are required for that preview.
+    <main className="container">
+      <div className="auth-layout">
+        <aside className="auth-story">
+          <span className="brand-symbol">
+            <BrandMark />
+          </span>
+          <div>
+            <h2>
+              A little more focus.
+              <br />
+              <span>A better next move.</span>
+            </h2>
+            <p>
+              Your product intelligence, sales experiments, and next 30 days.
+              One place to turn your strategy into a starting point.
+            </p>
+          </div>
+          <p>Built for SaaS founders. Free to get started.</p>
+        </aside>
+        <div className="auth-content">
+          <p className="eyebrow">YOUR NEXT CHAPTER</p>
+          <h1 className="mb-3 mt-4 text-3xl font-semibold tracking-tight">
+            {recovery
+              ? path === "forgot-password"
+                ? "Reset your password"
+                : "Choose a new password"
+              : signup
+                ? "Your sales plan starts here."
+                : "Welcome back."}
+          </h1>
+          <p className="mb-7 text-sm leading-6 muted">
+            A free account keeps your reports and approved strategy in one
+            place.
           </p>
-        )}
+          {configured() ? (
+            recovery ? (
+              <RecoveryForm
+                reset={path === "reset-password"}
+                token={token}
+                invalid={Boolean(error)}
+                saveGuest={save === "guest"}
+              />
+            ) : (
+              <AuthForm
+                signup={signup}
+                website={url}
+                saveGuest={save === "guest"}
+              />
+            )
+          ) : (
+            <p className="rounded-lg bg-amber-50 p-4 text-sm leading-6">
+              Account registration needs this application’s Neon Auth and
+              PostgreSQL configuration. You can explore the sample preview now;
+              no credentials are required for that preview.
+            </p>
+          )}
+        </div>
       </div>
     </main>
   );

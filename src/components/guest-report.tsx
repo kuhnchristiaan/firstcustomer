@@ -61,7 +61,7 @@ export function GuestReport() {
     <main className="container py-10">
       {report ? (
         <>
-          <section className="panel no-print mb-8 border-teal-200 bg-teal-50">
+          <section className="panel no-print mb-8 border-accent surface-highlight">
             <p className="eyebrow">YOUR SALES STRATEGY IS READY</p>
             <h1 className="mt-3 text-2xl font-semibold">
               A plan to start finding your first customers.

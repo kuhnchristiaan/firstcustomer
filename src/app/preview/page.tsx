@@ -12,7 +12,7 @@ export default async function Preview({
   if (url) redirect(`/?url=${encodeURIComponent(url.slice(0, 2048))}`);
   return (
     <main className="container py-12">
-      <section className="panel mb-8 bg-teal-50">
+      <section className="sample-banner">
         <p className="eyebrow">ILLUSTRATIVE SAMPLE</p>
         <h1 className="my-3 text-3xl font-semibold">
           A smaller plan. A clearer first move.
@@ -35,7 +35,7 @@ export default async function Preview({
           ads or a content programme.
         </p>
       </section>
-      <section className="report-section panel border-teal-300">
+      <section className="report-first-move">
         <h2>Your Recommended First Move</h2>
         <p className="mb-4 text-sm leading-7">
           Spend 45 minutes choosing two founders from your existing network and

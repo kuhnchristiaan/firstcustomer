@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { ReportView, Value } from "./report";
 import { Button } from "./ui/button";
 import { Turnstile } from "./turnstile";
+import { SegmentComparison } from "./segment-comparison";
 import {
   founderSchema,
   strategySchema,
@@ -38,6 +39,14 @@ const sectionLabels: Record<string, string> = {
   weeks: "30-day action plan",
   messages: "Sales messaging",
   changesFromPrevious: "What changed and why",
+};
+const factLabels: Record<string, string> = {
+  overview: "Product overview",
+  offerings: "Products and capabilities",
+  problems: "Customer problems",
+  valueProposition: "Value proposition",
+  differentiators: "Differentiation to validate",
+  geographicFocus: "Geographic focus",
 };
 export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
   const guest = !props.productId,
@@ -208,7 +217,9 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
             <section
               key={k}
               id={`strategy-${k}`}
-              className={`report-section panel ${k === "firstMove" ? "border-teal-300 bg-teal-50" : ""}`}
+              className={
+                k === "firstMove" ? "report-first-move" : "report-section panel"
+              }
             >
               <h2>{sectionLabels[k]}</h2>
               <Value
@@ -229,36 +240,28 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
                 Comparisons are qualitative planning judgements, not measured
                 demand or conversion probabilities.
               </p>
-              {strategy.intelligence.segmentComparison.map((s) => (
-                <article
-                  key={s.priority}
-                  className="mb-4 rounded-xl border border-slate-200 p-4"
-                >
-                  <h3 className="font-semibold">
-                    {s.priority}. {s.name}
-                  </h3>
-                  <p className="text-sm leading-7">
-                    Attraction: {s.attraction}
-                  </p>
-                  <p className="text-sm leading-7">
-                    Acquisition friction: {s.acquisitionDifficulty}
-                  </p>
-                  <p className="text-sm leading-7">Unknown: {s.unknowns}</p>
-                  <p className="text-sm leading-7">
-                    Validate: {s.validationExperiment}
-                  </p>
-                  <details>
-                    <summary className="text-sm underline">
-                      Comparison framework
-                    </summary>
-                    <Value
-                      value={s.factors}
-                      editing={false}
-                      onChange={() => {}}
-                    />
-                  </details>
-                </article>
-              ))}
+              <div className="comparison-list">
+                {strategy.intelligence.segmentComparison.map((s) => (
+                  <article key={s.priority} className="comparison-entry">
+                    <h3 className="font-semibold">
+                      {s.priority}. {s.name}
+                    </h3>
+                    <p className="text-sm leading-7">
+                      Attraction: {s.attraction}
+                    </p>
+                    <p className="text-sm leading-7">
+                      Acquisition friction: {s.acquisitionDifficulty}
+                    </p>
+                    <p className="text-sm leading-7">Unknown: {s.unknowns}</p>
+                    <p className="text-sm leading-7">
+                      Validate: {s.validationExperiment}
+                    </p>
+                  </article>
+                ))}
+              </div>
+              <SegmentComparison
+                comparisons={strategy.intelligence.segmentComparison}
+              />
               <p className="text-sm leading-7">
                 Alternative segment:{" "}
                 {strategy.intelligence.alternativeSegment.name}.{" "}
@@ -359,9 +362,7 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
               "geographicFocus",
             ].map((k) => (
               <div key={k} className="mb-4">
-                <h3 className="font-semibold">
-                  {k.replace(/([A-Z])/g, " $1")}
-                </h3>
+                <h3 className="font-semibold">{factLabels[k]}</h3>
                 <Value
                   value={facts[k as keyof Report]}
                   editing={false}
@@ -449,7 +450,7 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
         </>
       )}
       {available && (
-        <section className="panel no-print mt-8" id="refine-strategy">
+        <section className="refinement-form no-print mt-8" id="refine-strategy">
           <h2 className="text-2xl font-semibold">
             Make your sales strategy more realistic
           </h2>
