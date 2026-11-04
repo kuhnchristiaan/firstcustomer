@@ -20,6 +20,7 @@ export function AuthForm({
   const router = useRouter();
   const [pending, setPending] = useState(false);
   const [error, setError] = useState("");
+  const [notice, setNotice] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   return (
     <form
@@ -28,6 +29,7 @@ export function AuthForm({
         e.preventDefault();
         setPending(true);
         setError("");
+        setNotice("");
         const f = new FormData(e.currentTarget);
         try {
           const credentials = {
@@ -42,6 +44,12 @@ export function AuthForm({
             : await client.signIn.email(credentials);
           if (r.error)
             throw new Error(r.error.message || "Authentication failed");
+          if (signup && r.data && "token" in r.data && !r.data.token) {
+            setNotice(
+              "Check your email to verify your account, then sign in here. If you are saving a guest report, use this same browser before the report expires.",
+            );
+            return;
+          }
           router.push(
             saveGuest
               ? "/guest/claim"
@@ -123,6 +131,9 @@ export function AuthForm({
       </Button>
       <p role="alert" className="text-sm text-red-700">
         {error}
+      </p>
+      <p role="status" className="text-sm leading-6">
+        {notice}
       </p>
       <Link
         className="block text-center text-sm underline"
