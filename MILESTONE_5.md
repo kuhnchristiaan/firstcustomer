@@ -135,3 +135,19 @@ git diff --check — Exit 0
 - [Before A4 PDF](artifacts/ui/milestone5-before/refined-A4.pdf)
 - [Before Letter PDF](artifacts/ui/milestone5-before/refined-Letter.pdf)
 - [Passive production Turnstile screenshot](artifacts/ui/production-turnstile-passive.png)
+
+## Follow-up: signed-in Plausible report failure
+
+Production `/api/analyses` logs showed three `analysis_output_rejected` events with `reason: input_budget` during the reported test. The initial M5 real-provider check used guest limits (30,000 input / 6,000 output), missing the smaller signed-in default (20,000 / 4,500). Detailed product evidence plus repeated inline schema definitions could exceed that conservative combined bound after the first AI call. The original error handler then replaced this specific cause with a generic message.
+
+Fix implemented locally:
+
+- Use the installed OpenAI SDK's strict schema converter with shared claim, recommendation and experiment definitions. The base report schema is 4,390 bytes versus 8,513 inline; no constraints are removed. A recursive-reference expansion regression proves schema equivalence. [Official structured-output reference](https://developers.openai.com/api/docs/guides/structured-outputs).
+- Reuse compact owner context for initial generation and refinement. Exact publisher statement text and supported IDs stay in model input; full quote/URL/block provenance stays in the immutable persisted profile and server-side grounding checks.
+- Keep all existing token/cost limits. A detailed four-claim fixture now fits within 20,000 conservative input units, while the reconstructed previous request representation exceeds it. Total output allocation remains 4,500.
+- Map budget and identity uncertainty failures to actionable, safe messages in both the API response and failed run record. Known billed usage remains recorded; successful historical reports remain unchanged.
+- Ignore desktop remote attachments so the user's screenshot cannot be included accidentally in Git.
+
+A real crawl and two-stage OpenAI analysis of **https://plausible.io/** succeeded using signed-in default limits: one source, 4,088 extracted characters, **3,033 input / 2,483 output tokens**. Result: Plausible Analytics, Product analytics; quoted evidence and recommendation basis validated. No production account or report was mutated. The result is retained only under ignored `.local-live-test/`.
+
+Verification: **151 tests passed, 6 opt-in checks skipped**, with isolated local PostgreSQL; a strengthened previous-over-budget regression also passed separately. `npm run build`, `npm run typecheck`, `npm run lint` and `git diff --check` passed. No frontend layout changed, so the already completed responsive/PDF checks were not repeated. No secret values were printed; no Neon, DNS, auth-domain or EDUCERT changes were made. The user approved committing, pushing and redeploying the follow-up fix. Production readiness is checked separately against the resulting Vercel deployment.

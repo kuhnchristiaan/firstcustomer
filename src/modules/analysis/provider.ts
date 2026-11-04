@@ -2,7 +2,7 @@ import { safeInitialReport } from "@/modules/strategy/claims";
 import OpenAI from "openai";
 import { z } from "zod";
 import { AppError } from "@/lib/errors";
-import { zodTextFormat } from "openai/helpers/zod";
+import { zodTextFormat, zodResponseFormat } from "openai/helpers/zod";
 import {
   reportV1Schema,
   reportV11Schema,
@@ -17,11 +17,29 @@ import {
 import {
   groundReport,
   generationProductProfile,
+  generationProductContext,
 } from "@/modules/intelligence/attribution";
 import { readDocument, productEvidence } from "@/modules/website/document";
 import { config } from "@/modules/config/env";
 import type { Source } from "@/modules/website/extract";
 import { mockReport } from "./mock";
+// Reuse the SDK's strict schema conversion, retaining every constraint while
+// sharing repeated claim/experiment definitions across report fields.
+export function reportTextFormat(schema: z.ZodType, name: string) {
+  const { json_schema } = zodResponseFormat(schema, name, {
+    schemaDefinitions: {
+      claim: reportV1Schema.shape.overview,
+      recommendation: reportV1Schema.shape.positioning,
+      experiment: reportV1Schema.shape.acquisitionChannels.element,
+    },
+  });
+  return {
+    type: "json_schema" as const,
+    name,
+    strict: true,
+    schema: json_schema.schema!,
+  };
+}
 export class ProviderOutputError extends Error {
   constructor(
     public inputTokens: number,
@@ -77,7 +95,12 @@ export function provider(): AnalysisProvider {
             { role: "system" as const, content: instructions },
             { role: "user" as const, content: JSON.stringify(data) },
           ],
-          text: { format: zodTextFormat(schema, name) },
+          text: {
+            format:
+              name === "business_intelligence"
+                ? reportTextFormat(schema, name)
+                : zodTextFormat(schema, name),
+          },
         };
         const size = Buffer.byteLength(JSON.stringify(request), "utf8") + 1024;
         if (requestBytes + size > budget.input)
@@ -165,7 +188,7 @@ export function provider(): AnalysisProvider {
           "business_intelligence",
           "Generate a comprehensive, specific SaaS sales strategy from ONLY this attributed owner-product profile. Do not re-interpret raw website text, examples or excluded materials. Exactly three prioritized ICPs/segments and four weeks; at least three acquisition experiments. Use the owner's primaryJob and actual capabilities as the basis for every target, recommendation and outreach message. A problem the audience experiences is relevant only if this owner's product can address it; do not recommend solving an unrelated problem just because the same people experience it. For each of the five recommendation sections return the supporting owner statement IDs; these IDs establish the product context, not validated market demand. Do not copy an illustrative company's problem into this business. Website-supported product wording must exactly reuse a supplied product statement or identity summary; otherwise mark it Inferred or Unknown, not Verified. No live prospects, invented research, validated demand, performance metrics, compliance or security guarantees. Unknown prices/geography/traction remain unknown. All recommendations are Inferred experiments with steps and decision criteria. Keep each field concise (typically under 30 words), outreach under 70 words. Return schemaVersion 1.0; the server owns the final version and attributed product metadata.",
           {
-            product: generationProductProfile(profile),
+            product: generationProductContext(profile),
             marketResearch: "Not performed",
             externalVerification: "Not performed",
           },

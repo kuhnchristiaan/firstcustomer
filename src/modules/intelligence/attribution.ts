@@ -64,18 +64,7 @@ export function strategyProductInput(report: Report) {
   if (report.schemaVersion === "1.1")
     return {
       businessName: report.productIntelligence.identity.name,
-      profile: {
-        identity: (({ evidence, ...identity }) => {
-          void evidence;
-          return identity;
-        })(report.productIntelligence.identity),
-        statements: generationProductProfile(
-          report.productIntelligence,
-        ).statements.map(({ evidence, ...statement }) => {
-          void evidence;
-          return statement;
-        }),
-      },
+      profile: generationProductContext(report.productIntelligence),
       recommendationBasis: report.recommendationBasis,
     };
   return {
@@ -115,4 +104,20 @@ export function profileEvidence(profile: ProductProfile) {
       ]),
     ).values(),
   ];
+}
+
+// The generated statements already contain the exact publisher wording. Keep
+// quotation/URL provenance in the stored profile rather than repeat it to AI.
+export function generationProductContext(profile: ProductProfile) {
+  const { evidence, ...identity } = profile.identity;
+  void evidence;
+  return {
+    identity,
+    statements: generationProductProfile(profile).statements.map(
+      ({ evidence, ...statement }) => {
+        void evidence;
+        return statement;
+      },
+    ),
+  };
 }

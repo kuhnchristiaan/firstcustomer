@@ -3,6 +3,7 @@ import { config } from "@/modules/config/env";
 import { crawl } from "@/modules/website/extract";
 import { provider, ProviderOutputError } from "./provider";
 import { AppError } from "@/lib/errors";
+import { analysisFailure } from "./failure";
 import { metric } from "@/modules/analytics/service";
 export type AnalysisLimits = {
   pages: number;
@@ -118,6 +119,7 @@ export async function executeAnalysis(
     );
     return result;
   } catch (error) {
+    const failure = analysisFailure(error);
     if (error instanceof ProviderOutputError) {
       knownUsage = {
         inputTokens: error.inputTokens,
@@ -138,18 +140,10 @@ export async function executeAnalysis(
         status: "FAILED",
         completedAt: new Date(),
         ...knownUsage,
-        error:
-          error instanceof AppError
-            ? error.message
-            : "Analysis failed or timed out. No results were invented.",
+        error: failure.message,
       },
     });
     if (!tenant) await metric("analysis_failed");
-    throw error instanceof AppError
-      ? error
-      : new AppError(
-          "The report could not be generated. Please try again.",
-          502,
-        );
+    throw failure;
   }
 }

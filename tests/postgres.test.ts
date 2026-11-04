@@ -245,6 +245,54 @@ describe.skipIf(!connection)("isolated PostgreSQL integration", () => {
         })
       ).output,
     ).toEqual(attributed);
+    // The same safe, actionable budget failure must reach the form and persisted run,
+    // retaining billed usage and leaving prior successful reports unchanged.
+    const { executeAnalysis } = await import("@/modules/analysis/execute");
+    const failedBudgetRun = await p.analysisRun.create({
+      data: {
+        productId: attributedProduct.id,
+        leaseExpiresAt: new Date(Date.now() + 60000),
+        provider: "fixture",
+        model: "fixture",
+      },
+    });
+    const budgetFailure = vi.spyOn(providerModule, "provider").mockReturnValue({
+      analyze: async () => {
+        throw new providerModule.ProviderOutputError(120, 40, "input_budget");
+      },
+    });
+    try {
+      await expect(
+        executeAnalysis(
+          failedBudgetRun.id,
+          attributedProduct.id,
+          f.source.url,
+          undefined,
+          t,
+        ),
+      ).rejects.toMatchObject({
+        status: 422,
+        message: expect.stringContaining("main product page"),
+      });
+      const failed = await p.analysisRun.findUniqueOrThrow({
+        where: { id: failedBudgetRun.id },
+      });
+      expect(failed).toMatchObject({
+        status: "FAILED",
+        inputTokens: 120,
+        outputTokens: 40,
+        error: expect.stringContaining("main product page"),
+      });
+      expect(
+        (
+          await p.analysisRun.findUniqueOrThrow({
+            where: { id: attributedRun.id },
+          })
+        ).output,
+      ).toEqual(attributed);
+    } finally {
+      budgetFailure.mockRestore();
+    }
   }, 30000);
   afterAll(async () => {
     if (connection) await db().$disconnect();

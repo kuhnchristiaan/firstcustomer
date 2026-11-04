@@ -102,3 +102,43 @@ it.skipIf(process.env.LIVE_ATTRIBUTION_REFINEMENT !== "true")(
   },
   125000,
 );
+
+it.skipIf(process.env.LIVE_SIGNED_ANALYSIS_TEST !== "true")(
+  "analyzes Plausible with the signed-in default 20k/4500 limits",
+  async () => {
+    loadEnv({ path: ".env.local", quiet: true });
+    const signal = AbortSignal.timeout(125000);
+    const sources = await crawl(
+      "https://plausible.io/",
+      3,
+      Math.floor((20000 - 3500) / 4),
+      signal,
+    );
+    const result = await provider().analyze(sources, signal, {
+      inputTokens: 20000,
+      outputTokens: 4500,
+    });
+    expect(result.report.schemaVersion).toBe("1.1");
+    if (result.report.schemaVersion !== "1.1")
+      throw Error("Missing attribution");
+    const profile = validateProductProfile(
+      result.report.productIntelligence,
+      sources,
+    );
+    expect(profile.identity.certainty).toBe("Website-supported");
+    expect(profile.identity.name.toLowerCase()).toContain("plausible");
+    expect(profile.identity.category).toBe("Product analytics");
+    validateBasis(result.report.recommendationBasis, profile);
+    await mkdir(".local-live-test", { recursive: true });
+    await writeFile(
+      ".local-live-test/plausible-signed-analysis.json",
+      JSON.stringify({ sources, ...result }, null, 2),
+    );
+    console.log({
+      product: profile.identity.name,
+      inputTokens: result.inputTokens,
+      outputTokens: result.outputTokens,
+    });
+  },
+  135000,
+);
