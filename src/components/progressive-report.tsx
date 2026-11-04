@@ -151,6 +151,27 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
       )}
       {strategy && current ? (
         <article className="refined-report">
+          <nav
+            aria-label="Refined strategy sections"
+            className="panel no-print mb-6"
+          >
+            <details>
+              <summary className="cursor-pointer text-sm font-semibold">
+                Jump to a strategy section
+              </summary>
+              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                {Object.entries(sectionLabels).map(([k, label]) => (
+                  <a
+                    key={k}
+                    className="text-sm underline"
+                    href={`#strategy-${k}`}
+                  >
+                    {label}
+                  </a>
+                ))}
+              </div>
+            </details>
+          </nav>
           <div className="mb-6">
             <p className="eyebrow">
               REFINED STRATEGY · VERSION {current.version}
@@ -174,6 +195,7 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
           {["executiveSummary", "firstMove"].map((k) => (
             <section
               key={k}
+              id={`strategy-${k}`}
               className={`report-section panel ${k === "firstMove" ? "border-teal-300 bg-teal-50" : ""}`}
             >
               <h2>{sectionLabels[k]}</h2>
@@ -205,7 +227,11 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
           {Object.keys(sectionLabels)
             .filter((k) => !["executiveSummary", "firstMove"].includes(k))
             .map((k) => (
-              <section key={k} className="report-section panel">
+              <section
+                key={k}
+                id={`strategy-${k}`}
+                className="report-section panel"
+              >
                 <h2>{sectionLabels[k]}</h2>
                 <Value
                   value={strategy[k as keyof Strategy]}

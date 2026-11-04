@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, Compass } from "lucide-react";
+import { Compass } from "lucide-react";
+import { SiteNavigation } from "@/components/site-navigation";
 import "./globals.css";
 export const metadata: Metadata = {
   title: "FirstCustomers — Your first customers start with a plan",
@@ -30,12 +31,7 @@ export default function RootLayout({
                 FOR SAAS FOUNDERS
               </span>
             </Link>
-            <nav className="flex gap-5 text-sm">
-              <Link href="/dashboard">Workspace</Link>
-              <Link href="/auth/sign-in" className="flex items-center gap-1">
-                Sign in <ArrowUpRight size={15} />
-              </Link>
-            </nav>
+            <SiteNavigation />
           </div>
         </header>
         {children}

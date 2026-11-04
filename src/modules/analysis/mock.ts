@@ -107,25 +107,77 @@ export const mockReport: Report = {
       industry: "Software",
       customerType: "2–10 employees",
     })),
-    { ...base.segments[0], name: "Small product teams", priority: 2 },
-    { ...base.segments[0], name: "Customer success teams", priority: 3 },
+    {
+      ...base.segments[0],
+      name: "Small product teams",
+      priority: 2,
+      buyerRoles: ["Product manager"],
+      problems: [
+        "Cannot connect a failed activation step to a specific product change",
+      ],
+      motivations: [
+        "Choose a measurable onboarding improvement for the next sprint",
+      ],
+      buyingSignals: [
+        "A product lead is investigating an activation drop after a release",
+      ],
+    },
+    {
+      ...base.segments[0],
+      name: "Customer success teams",
+      priority: 3,
+      buyerRoles: ["Customer success lead"],
+      problems: [
+        "Repeated support questions obscure the onboarding step needing attention",
+      ],
+      motivations: [
+        "Reduce repeated onboarding assistance and share evidence with product teams",
+      ],
+      buyingSignals: [
+        "A success team is documenting recurring trial-user questions",
+      ],
+    },
   ],
   positioning: inferred(
     "For founder-led B2B SaaS teams who cannot explain trial drop-off, test positioning around finding the first broken onboarding step. Confirm that the product supports this outcome.",
   ),
   acquisitionChannels: [
-    step(
-      "Founder communities",
-      "Test helpful onboarding teardowns in communities where the founder already participates. Community rules and demand require validation.",
-    ),
-    step(
-      "Founder-led outbound",
-      "Manually research a small relevant cohort. Personalize to a visible onboarding problem; do not claim you measured their conversion.",
-    ),
-    step(
-      "Partner referrals",
-      "Interview implementation consultants to test whether onboarding analytics is a recurring client need.",
-    ),
+    {
+      ...step(
+        "Founder communities",
+        "Test whether founders already discussing trial activation will describe a costly problem. No community or demand has been verified.",
+      ),
+      steps: [
+        "Choose one community you already belong to and read its promotion rules.",
+        "Ask a focused question about failed trial activation; invite one consenting respondent to a conversation.",
+      ],
+      successMetric:
+        "Record confirmed pain and permission for a next conversation; stop if the topic is unwelcome.",
+    },
+    {
+      ...step(
+        "Founder-led outbound",
+        "Test a manually verified segment before creating a larger outreach list.",
+      ),
+      steps: [
+        "Select two relevant founders from your own network.",
+        "Ask about their current activation investigation process using one honest, personalised message.",
+      ],
+      successMetric:
+        "Count relevant replies and qualified conversations separately from trial signups and payments.",
+    },
+    {
+      ...step(
+        "Partner referrals",
+        "Explore whether onboarding consultants encounter a recurring analytics gap in client work.",
+      ),
+      steps: [
+        "Identify one consultant whose public services fit the onboarding use case.",
+        "Ask which client problems recur and what evidence would justify an introduction.",
+      ],
+      successMetric:
+        "One concrete description of client pain and an agreed next step; no promised introductions.",
+    },
   ],
   outreachTemplates: [
     {

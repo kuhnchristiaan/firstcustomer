@@ -92,13 +92,23 @@ export function Value({
       return (
         <div className="claim">
           <span className={`badge ${c.confidence.toLowerCase()}`}>
-            {c.confidence}
+            {c.confidence === "Inferred"
+              ? "Hypothesis — needs validation"
+              : c.confidence === "Unknown"
+                ? "Not established yet"
+                : "Website-supported"}
           </span>
           {editing && (
             <select
               aria-label={`${label} confidence`}
               className="mb-3 rounded border p-2 text-xs"
-              value={c.confidence}
+              value={
+                c.confidence === "Inferred"
+                  ? "Hypothesis — needs validation"
+                  : c.confidence === "Unknown"
+                    ? "Not established yet"
+                    : "Website-supported"
+              }
               onChange={(e) => onChange({ ...c, confidence: e.target.value })}
             >
               {["Verified", "Inferred", "Unknown"].map((x) => (
@@ -181,7 +191,6 @@ export function ReportView({
     <>
       <div className="no-print mb-7 flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap gap-2">
-          <span className="badge">SCHEMA {report.schemaVersion}</span>
           <span className="badge">
             {savedVersion
               ? `APPROVED VERSION ${savedVersion}`
@@ -206,6 +215,48 @@ export function ReportView({
           )}
         </div>
       </div>
+      {!sections && !preview && (
+        <section className="report-section panel border-teal-200 bg-teal-50">
+          <h2>Your first sales experiment</h2>
+          <p className="mb-3 text-sm leading-7">
+            Start with {report.segments.find((s) => s.priority === 1)?.name}.
+            Test {report.acquisitionChannels[0].title.toLowerCase()} before
+            expanding to other channels.
+          </p>
+          <Value
+            value={report.acquisitionChannels[0].recommendation}
+            editing={false}
+            onChange={() => {}}
+          />
+          <p className="mt-3 text-sm leading-7">
+            First action: {report.acquisitionChannels[0].steps[0]}
+          </p>
+          <p className="mt-3 text-sm leading-7">
+            Review the result: {report.acquisitionChannels[0].successMetric}
+          </p>
+          <p className="mt-3 text-xs muted">
+            This is an unvalidated experiment. Use the optional founder
+            questions after the report to fit it to your time and budget.
+          </p>
+        </section>
+      )}
+      <nav
+        aria-label="Report sections"
+        className="panel no-print mb-6 lg:hidden"
+      >
+        <details>
+          <summary className="cursor-pointer text-sm font-semibold">
+            Jump to a report section
+          </summary>
+          <div className="mt-4 grid gap-3">
+            {keys.map((k) => (
+              <a key={k} href={`#${k}`} className="text-sm underline">
+                {labels[k]}
+              </a>
+            ))}
+          </div>
+        </details>
+      </nav>
       <div className="report-grid grid items-start gap-8 lg:grid-cols-[210px_1fr]">
         <aside className="no-print sticky top-6 hidden lg:block">
           <p className="eyebrow mb-4">IN THIS REPORT</p>

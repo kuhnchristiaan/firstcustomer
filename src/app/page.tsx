@@ -1,3 +1,4 @@
+import { guestConfig } from "@/modules/guest/config";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -14,12 +15,17 @@ export default async function Home({
 }: {
   searchParams: Promise<{ url?: string }>;
 }) {
+  let guestAvailable = false;
+  try {
+    guestConfig();
+    guestAvailable = true;
+  } catch {}
   const query = await searchParams;
   const initialUrl =
     typeof query.url === "string" ? query.url.slice(0, 2048) : "";
   return (
     <main>
-      <LandingMetric />
+      {guestAvailable && <LandingMetric />}
       <section className="container grid items-center gap-14 py-20 lg:grid-cols-[1.15fr_1fr] lg:py-28">
         <div>
           <p className="eyebrow mb-6">
@@ -37,7 +43,30 @@ export default async function Home({
             selling.
           </p>
           <div className="panel mt-9 shadow-sm">
-            <UrlForm initialUrl={initialUrl} />
+            {guestAvailable ? (
+              <UrlForm initialUrl={initialUrl} />
+            ) : (
+              <div>
+                <p role="status" className="mb-4 text-sm leading-7">
+                  Free website analysis is temporarily unavailable while we
+                  finish public access setup. Explore the sample to see your
+                  first move, customer priorities and weekly plan.
+                </p>
+                <Link
+                  className="font-semibold text-teal-800 underline"
+                  href="/preview"
+                >
+                  View a sample sales plan
+                </Link>
+                <p className="mt-3 text-xs muted">
+                  Existing account?{" "}
+                  <Link href="/dashboard" className="underline">
+                    Open your saved reports
+                  </Link>
+                  .
+                </p>
+              </div>
+            )}
           </div>
           <div className="mt-5 flex flex-wrap gap-5 text-xs muted">
             {[
@@ -141,6 +170,27 @@ export default async function Home({
           Recommendations are experiments to test; they are never presented as
           validated demand, researched competitors or real prospects.
         </p>
+      </section>
+      <section className="container pb-16">
+        <div className="panel bg-teal-50">
+          <p className="eyebrow">AN ILLUSTRATIVE FIRST MOVE</p>
+          <h2 className="my-3 text-2xl font-semibold">
+            A plan that tells you what to do next.
+          </h2>
+          <p className="max-w-3xl text-sm leading-7">
+            For an onboarding analytics SaaS: spend 45 minutes inviting two
+            founders to discuss where their trials get stuck. Continue only when
+            you hear an urgent problem and agree on a buying next step.
+          </p>
+          <p className="my-4 text-sm leading-7 muted">
+            Week 1: validate the pain. Week 2: test the message. Week 3: explore
+            a buying next step. Week 4: review qualified conversations and
+            payments separately.
+          </p>
+          <Link href="/preview" className="text-sm font-semibold underline">
+            See the sample strategy and its assumptions →
+          </Link>
+        </div>
       </section>
     </main>
   );
