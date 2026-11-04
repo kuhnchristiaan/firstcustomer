@@ -1,3 +1,4 @@
+import { intelligenceSchema } from "./critique-schema";
 import { z } from "zod";
 export const payingOptions = [
   "0",
@@ -35,6 +36,13 @@ export const channelOptions = [
 ] as const;
 export const founderSchema = z
   .strictObject({
+    confirmedCapabilities: z
+      .array(z.string().trim().min(1).max(500))
+      .max(8)
+      .optional(),
+    existingAudience: z
+      .enum(["None", "Small", "Established", "Unknown"])
+      .optional(),
     payingCustomers: z.enum(payingOptions).optional(),
     freeUsers: z.number().int().nonnegative().max(100000000).optional(),
     weeklyTime: z.enum(timeOptions).optional(),
@@ -104,7 +112,7 @@ const action = z.strictObject({
   action: text,
   minutes: z.number().int().min(1).max(10080),
 });
-export const strategySchema = z.strictObject({
+export const strategyV2Schema = z.strictObject({
   schemaVersion: z.literal("2.0"),
   executiveSummary: text,
   changesFromPrevious: z.array(text).min(1).max(6),
@@ -190,6 +198,11 @@ export const strategySchema = z.strictObject({
   assumptions: z.array(text).min(1).max(8),
   validationQuestions: z.array(text).min(1).max(6),
 });
+export const strategyV3Schema = strategyV2Schema.extend({
+  schemaVersion: z.literal("3.0"),
+  intelligence: intelligenceSchema,
+});
+export const strategySchema = z.union([strategyV2Schema, strategyV3Schema]);
 export type Strategy = z.infer<typeof strategySchema>;
 export function validateStrategy(
   input: unknown,
@@ -230,5 +243,61 @@ export function validateStrategy(
       (context.monthlyBudget ?? 0)
   )
     throw new Error("Strategy exceeds budget or uses wrong currency");
+  if (s.schemaVersion === "3.0") {
+    const review = s.intelligence;
+    for (const segment of s.prioritizedSegments) {
+      const comparison = review.segmentComparison.find(
+        (x) => x.name === segment.name && x.priority === segment.priority,
+      );
+      if (!comparison)
+        throw new Error("Segment comparison does not match ranking");
+    }
+    if (
+      review.segmentComparison
+        .map((x) => x.priority)
+        .sort()
+        .join() !== "1,2,3"
+    )
+      throw new Error("Invalid comparison priorities");
+    if (
+      review.effortBreakdown
+        .map((x) => x.week)
+        .sort()
+        .join() !== "1,2,3,4"
+    )
+      throw new Error("Invalid effort weeks");
+    for (const w of review.effortBreakdown) {
+      const total =
+        w.researchMinutes +
+        w.outreachMinutes +
+        w.replyMinutes +
+        w.preparationMinutes +
+        w.followUpMinutes;
+      const planned = s.weeks
+        .find((x) => x.week === w.week)!
+        .actions.reduce((n, a) => n + a.minutes, 0);
+      if (total !== planned || total > cap)
+        throw new Error("Effort breakdown does not fit planned work");
+      if (
+        w.outreachMinutes > 0 &&
+        (w.replyMinutes === 0 ||
+          w.followUpMinutes === 0 ||
+          w.preparationMinutes === 0)
+      )
+        throw new Error(
+          "Outreach must include preparation, replies and follow-up",
+        );
+    }
+    if (s.firstTen.batchPlanningTarget > Math.max(1, Math.floor(cap / 5)))
+      throw new Error("Prospect research target is too optimistic");
+    if (
+      review.effortBreakdown.find((w) => w.week === 1)!.researchMinutes <
+      s.firstTen.batchPlanningTarget * 5
+    )
+      throw new Error("Prospect research allocation is too optimistic");
+    for (const c of s.channels)
+      if (!review.experiments.some((x) => x.channel === c.name))
+        throw new Error("Missing concrete channel experiment");
+  }
   return s;
 }

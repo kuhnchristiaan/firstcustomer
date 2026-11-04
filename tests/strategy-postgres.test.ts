@@ -111,7 +111,7 @@ describe.skipIf(!connection)("strategy revision PostgreSQL integration", () => {
     expect((await readGuest(s.token)).output).toEqual(before.output);
     const r = await readRevisions(a);
     expect(r.revisions).toHaveLength(1);
-    expect(r.revisions[0].output).toHaveProperty("schemaVersion", "2.0");
+    expect(r.revisions[0].output).toHaveProperty("schemaVersion", "3.0");
     await expect(
       generateRevision(a, { ...context, monthlyBudget: 1 }),
     ).rejects.toMatchObject({ status: 429 });
@@ -203,9 +203,19 @@ describe.skipIf(!connection)("strategy revision PostgreSQL integration", () => {
       original,
     ) as unknown as import("@/modules/strategy/schema").Strategy;
     edited.executiveSummary = "Founder-edited acquisition priorities";
+    edited.messages[0].body = "We reduce admin time by 50%.";
+    if (edited.schemaVersion === "3.0")
+      edited.intelligence.firstMoveTradeoff = "We are POPIA-compliant.";
     const third = await approveRevision(a, second, edited);
     const final = await readRevisions(a);
     expect(final.revisions).toHaveLength(3);
+    const savedEdit = final.revisions.find((r) => r.id === third)
+      ?.output as unknown as import("@/modules/strategy/schema").Strategy;
+    expect(savedEdit.messages[0].body).not.toContain("50%");
+    if (savedEdit.schemaVersion === "3.0")
+      expect(savedEdit.intelligence.firstMoveTradeoff).not.toContain(
+        "POPIA-compliant",
+      );
     expect(final.revisions.find((r) => r.id === third)).toMatchObject({
       approved: true,
       output: { executiveSummary: "Founder-edited acquisition priorities" },

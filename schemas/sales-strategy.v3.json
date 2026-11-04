@@ -1,0 +1,851 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "3.0"
+    },
+    "executiveSummary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1400
+    },
+    "changesFromPrevious": {
+      "minItems": 1,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1400
+      }
+    },
+    "firstMove": {
+      "type": "object",
+      "properties": {
+        "segment": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        },
+        "why": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        },
+        "where": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        },
+        "action": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        },
+        "minutes": {
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        },
+        "continueWhen": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        },
+        "changeWhen": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        }
+      },
+      "required": [
+        "segment",
+        "why",
+        "where",
+        "action",
+        "minutes",
+        "message",
+        "continueWhen",
+        "changeWhen"
+      ],
+      "additionalProperties": false
+    },
+    "prioritizedSegments": {
+      "minItems": 3,
+      "maxItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          }
+        },
+        "required": ["name", "priority", "rationale"],
+        "additionalProperties": false
+      }
+    },
+    "positioning": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1400
+    },
+    "channels": {
+      "minItems": 2,
+      "maxItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "priority": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "segment": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "weeklyMinutes": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "monthlyDirectCost": {
+            "type": "number",
+            "minimum": 0
+          },
+          "costCurrency": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 3
+          },
+          "timeHorizonAssumption": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "risks": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "evidenceLevel": {
+            "type": "string",
+            "const": "Inferred — unvalidated experiment"
+          },
+          "firstAction": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          }
+        },
+        "required": [
+          "name",
+          "priority",
+          "rationale",
+          "segment",
+          "weeklyMinutes",
+          "monthlyDirectCost",
+          "costCurrency",
+          "timeHorizonAssumption",
+          "risks",
+          "evidenceLevel",
+          "firstAction"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "whyTopChannel": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1400
+    },
+    "firstTen": {
+      "type": "object",
+      "properties": {
+        "segment": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        },
+        "experiment": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        },
+        "batchPlanningTarget": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "targetDisclaimer": {
+          "type": "string",
+          "const": "Experimental planning target, not a forecast"
+        },
+        "stages": {
+          "minItems": 5,
+          "maxItems": 5,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Prospects identified",
+              "Prospects contacted",
+              "Qualified conversations",
+              "Trial / demo if relevant",
+              "Paying customers"
+            ]
+          }
+        },
+        "qualificationQuestions": {
+          "minItems": 2,
+          "maxItems": 4,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          }
+        },
+        "objections": {
+          "minItems": 1,
+          "maxItems": 3,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          }
+        },
+        "followUp": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        },
+        "changeCriteria": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1400
+        },
+        "paymentDefinition": {
+          "type": "string",
+          "const": "A free signup or trial is not a paying customer; count only confirmed payment."
+        }
+      },
+      "required": [
+        "segment",
+        "experiment",
+        "batchPlanningTarget",
+        "targetDisclaimer",
+        "stages",
+        "qualificationQuestions",
+        "objections",
+        "followUp",
+        "changeCriteria",
+        "paymentDefinition"
+      ],
+      "additionalProperties": false
+    },
+    "weeks": {
+      "minItems": 4,
+      "maxItems": 4,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "week": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          },
+          "objective": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "actions": {
+            "minItems": 2,
+            "maxItems": 3,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "action": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 1400
+                },
+                "minutes": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 10080
+                }
+              },
+              "required": ["action", "minutes"],
+              "additionalProperties": false
+            }
+          },
+          "deliverable": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "successMetric": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "nextDecision": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          }
+        },
+        "required": [
+          "week",
+          "objective",
+          "actions",
+          "deliverable",
+          "successMetric",
+          "nextDecision"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "messages": {
+      "minItems": 2,
+      "maxItems": 3,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "channel": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "subject": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          },
+          "body": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1400
+          }
+        },
+        "required": ["channel", "subject", "body"],
+        "additionalProperties": false
+      }
+    },
+    "assumptions": {
+      "minItems": 1,
+      "maxItems": 8,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1400
+      }
+    },
+    "validationQuestions": {
+      "minItems": 1,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1400
+      }
+    },
+    "intelligence": {
+      "type": "object",
+      "properties": {
+        "verdict": {
+          "type": "string",
+          "enum": ["keep", "revise"]
+        },
+        "segmentComparison": {
+          "minItems": 3,
+          "maxItems": 3,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "priority": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 3
+              },
+              "factors": {
+                "type": "object",
+                "properties": {
+                  "productRelevance": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high", "unknown"]
+                  },
+                  "painSeverity": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high", "unknown"]
+                  },
+                  "decisionMakerAccess": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high", "unknown"]
+                  },
+                  "purchasingSimplicity": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high", "unknown"]
+                  },
+                  "onboardingSimplicity": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high", "unknown"]
+                  },
+                  "timeFit": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high", "unknown"]
+                  },
+                  "paymentLikelihood": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high", "unknown"]
+                  },
+                  "evidenceStrength": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high", "unknown"]
+                  },
+                  "repeatability": {
+                    "type": "string",
+                    "enum": ["low", "medium", "high", "unknown"]
+                  }
+                },
+                "required": [
+                  "productRelevance",
+                  "painSeverity",
+                  "decisionMakerAccess",
+                  "purchasingSimplicity",
+                  "onboardingSimplicity",
+                  "timeFit",
+                  "paymentLikelihood",
+                  "evidenceStrength",
+                  "repeatability"
+                ],
+                "additionalProperties": false
+              },
+              "attraction": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "acquisitionDifficulty": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "unknowns": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "validationExperiment": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "name",
+              "priority",
+              "factors",
+              "attraction",
+              "acquisitionDifficulty",
+              "unknowns",
+              "validationExperiment"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "segmentWeaknesses": {
+          "maxItems": 4,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "channelWeaknesses": {
+          "maxItems": 4,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "commercialWeaknesses": {
+          "maxItems": 4,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "corrections": {
+          "maxItems": 6,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "alternativeSegment": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            },
+            "preferWhen": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            }
+          },
+          "required": ["name", "preferWhen"],
+          "additionalProperties": false
+        },
+        "alternativeChannel": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            },
+            "preferWhen": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 500
+            }
+          },
+          "required": ["name", "preferWhen"],
+          "additionalProperties": false
+        },
+        "firstMoveTradeoff": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "experiments": {
+          "minItems": 2,
+          "maxItems": 3,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "channel": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "segment": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "where": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "identifySuitableProspects": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "action": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "positiveResult": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "continueWhen": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "changeWhen": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "abandonWhen": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "channel",
+              "segment",
+              "where",
+              "identifySuitableProspects",
+              "action",
+              "positiveResult",
+              "continueWhen",
+              "changeWhen",
+              "abandonWhen"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "effortBreakdown": {
+          "minItems": 4,
+          "maxItems": 4,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "week": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 4
+              },
+              "researchMinutes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "outreachMinutes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "replyMinutes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "preparationMinutes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "followUpMinutes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "uncertainty": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              }
+            },
+            "required": [
+              "week",
+              "researchMinutes",
+              "outreachMinutes",
+              "replyMinutes",
+              "preparationMinutes",
+              "followUpMinutes",
+              "uncertainty"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "claims": {
+          "maxItems": 40,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 180
+              },
+              "claim": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 500
+              },
+              "classification": {
+                "type": "string",
+                "enum": [
+                  "Website-supported",
+                  "Founder-confirmed",
+                  "Independently verified",
+                  "Inferred or hypothetical",
+                  "Unsupported"
+                ]
+              },
+              "sourceUrl": {
+                "type": ["string", "null"]
+              },
+              "quote": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 1000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "founderCapability": {
+                "type": ["string", "null"]
+              }
+            },
+            "required": [
+              "path",
+              "claim",
+              "classification",
+              "sourceUrl",
+              "quote",
+              "founderCapability"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "claimActions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "classification": {
+                "type": "string",
+                "enum": [
+                  "Website-supported",
+                  "Founder-confirmed",
+                  "Independently verified",
+                  "Inferred or hypothetical",
+                  "Unsupported"
+                ]
+              },
+              "action": {
+                "type": "string",
+                "enum": ["retained", "removed"]
+              }
+            },
+            "required": ["path", "classification", "action"],
+            "additionalProperties": false
+          }
+        },
+        "generation": {
+          "type": "object",
+          "properties": {
+            "candidateInputTokens": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "candidateOutputTokens": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "critiqueInputTokens": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            "critiqueOutputTokens": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            }
+          },
+          "required": [
+            "candidateInputTokens",
+            "candidateOutputTokens",
+            "critiqueInputTokens",
+            "critiqueOutputTokens"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "verdict",
+        "segmentComparison",
+        "segmentWeaknesses",
+        "channelWeaknesses",
+        "commercialWeaknesses",
+        "corrections",
+        "alternativeSegment",
+        "alternativeChannel",
+        "firstMoveTradeoff",
+        "experiments",
+        "effortBreakdown",
+        "claims",
+        "claimActions",
+        "generation"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "executiveSummary",
+    "changesFromPrevious",
+    "firstMove",
+    "prioritizedSegments",
+    "positioning",
+    "channels",
+    "whyTopChannel",
+    "firstTen",
+    "weeks",
+    "messages",
+    "assumptions",
+    "validationQuestions",
+    "intelligence"
+  ],
+  "additionalProperties": false
+}

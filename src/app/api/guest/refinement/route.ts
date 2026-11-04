@@ -11,7 +11,7 @@ import {
 } from "@/modules/guest/security";
 import { readRevisions, generateRevision } from "@/modules/strategy/service";
 export const runtime = "nodejs";
-export const maxDuration = 90;
+export const maxDuration = 150;
 export async function GET() {
   try {
     return Response.json(

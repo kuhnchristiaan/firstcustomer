@@ -1,3 +1,4 @@
+import { safeInitialReport } from "@/modules/strategy/claims";
 import { db } from "@/lib/db";
 import { config } from "@/modules/config/env";
 import { AppError, ownedProduct } from "@/modules/auth/tenant";
@@ -140,7 +141,9 @@ export async function approve(
   expectedVersion: number,
 ) {
   await ownedProduct(t.organizationId, productId);
-  const findings = reportSchema.parse(input);
+  const findings = reportSchema.parse(
+    safeInitialReport(reportSchema.parse(input), []),
+  );
   const p = db();
   return p.$transaction(async (tx) => {
     await tx.$queryRaw`SELECT id FROM "Product" WHERE id = ${productId} AND "organizationId" = ${t.organizationId} FOR UPDATE`;

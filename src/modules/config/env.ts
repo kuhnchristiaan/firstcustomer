@@ -14,6 +14,19 @@ const schema = z.object({
   ),
   OPENAI_MODEL: z.string().default("gpt-4.1-mini"),
   MOCK_ANALYSIS: z.enum(["true", "false"]).default("false"),
+  REFINEMENT_MAX_INPUT_TOKENS: z.coerce
+    .number()
+    .int()
+    .min(24000)
+    .max(60000)
+    .default(38000),
+  REFINEMENT_MAX_OUTPUT_TOKENS: z.coerce
+    .number()
+    .int()
+    .min(5000)
+    .max(10000)
+    .default(9000),
+  REFINEMENT_MAX_COST_USD: z.coerce.number().positive().max(1).default(0.03),
   MAX_PAGES: z.coerce.number().int().min(1).max(8).default(5),
   MAX_CONTENT_CHARS: z.coerce
     .number()

@@ -1,3 +1,4 @@
+import { verifyClaims } from "./claims";
 import { createHash } from "node:crypto";
 import { db } from "@/lib/db";
 import { AppError } from "@/lib/errors";
@@ -63,7 +64,7 @@ async function authorized(
   });
   if (!session || session.claimedAt || session.expiresAt <= new Date())
     throw new AppError("Guest report unavailable", 404);
-  if (lock && session.expiresAt.getTime() - Date.now() < 120000)
+  if (lock && session.expiresAt.getTime() - Date.now() < 160000)
     throw new AppError(
       "Guest session is about to expire. Save your report first.",
       409,
@@ -133,6 +134,34 @@ export async function generateRevision(a: Access, input: unknown) {
     .digest("hex");
   const guest = !("tenant" in a),
     g = guest ? guestConfig() : null;
+  const inputRateConfigured =
+    g?.GUEST_INPUT_USD_PER_MILLION ??
+    e.OPENAI_INPUT_USD_PER_MILLION ??
+    (process.env.GUEST_PRICED_MODEL === e.OPENAI_MODEL
+      ? Number(process.env.GUEST_INPUT_USD_PER_MILLION)
+      : NaN);
+  const outputRateConfigured =
+    g?.GUEST_OUTPUT_USD_PER_MILLION ??
+    e.OPENAI_OUTPUT_USD_PER_MILLION ??
+    (process.env.GUEST_PRICED_MODEL === e.OPENAI_MODEL
+      ? Number(process.env.GUEST_OUTPUT_USD_PER_MILLION)
+      : NaN);
+  const maximumCost =
+    (e.REFINEMENT_MAX_INPUT_TOKENS * inputRateConfigured +
+      e.REFINEMENT_MAX_OUTPUT_TOKENS * outputRateConfigured) /
+    1e6;
+  if (
+    e.MOCK_ANALYSIS !== "true" &&
+    (!Number.isFinite(maximumCost) ||
+      inputRateConfigured <= 0 ||
+      outputRateConfigured <= 0 ||
+      maximumCost >
+        Math.min(g?.GUEST_MAX_COST_USD ?? Infinity, e.REFINEMENT_MAX_COST_USD))
+  )
+    throw new AppError(
+      "Refinement cost limits need operator configuration.",
+      503,
+    );
   const reserved = await db().$transaction(
     async (tx) => {
       if (guest) await lockAdmission(tx);
@@ -248,9 +277,9 @@ export async function generateRevision(a: Access, input: unknown) {
           version: (history[0]?.version ?? 0) + 1,
           founderContext: context,
           contextHash: hash,
-          leaseExpiresAt: new Date(now.getTime() + 65000),
+          leaseExpiresAt: new Date(now.getTime() + 140000),
           provider: e.MOCK_ANALYSIS === "true" ? "mock" : "openai",
-          model: e.MOCK_ANALYSIS === "true" ? "fixture-v2" : e.OPENAI_MODEL,
+          model: e.MOCK_ANALYSIS === "true" ? "fixture-v3" : e.OPENAI_MODEL,
         },
       });
       return {
@@ -265,10 +294,12 @@ export async function generateRevision(a: Access, input: unknown) {
   if (reserved.duplicate) return reserved.revision.id;
   let inputTokens = 0,
     outputTokens = 0;
-  const inputRate =
-      g?.GUEST_INPUT_USD_PER_MILLION ?? e.OPENAI_INPUT_USD_PER_MILLION,
-    outputRate =
-      g?.GUEST_OUTPUT_USD_PER_MILLION ?? e.OPENAI_OUTPUT_USD_PER_MILLION;
+  const inputRate = Number.isFinite(inputRateConfigured)
+      ? inputRateConfigured
+      : undefined,
+    outputRate = Number.isFinite(outputRateConfigured)
+      ? outputRateConfigured
+      : undefined;
   const cost = () =>
     inputRate !== undefined && outputRate !== undefined
       ? (inputTokens * inputRate + outputTokens * outputRate) / 1e6
@@ -283,16 +314,19 @@ export async function generateRevision(a: Access, input: unknown) {
       })),
       reserved.previous,
       {
-        input: Math.min(g?.GUEST_MAX_INPUT_TOKENS ?? e.MAX_INPUT_TOKENS, 30000),
-        output: Math.min(
-          g?.GUEST_MAX_OUTPUT_TOKENS ?? e.MAX_OUTPUT_TOKENS,
-          4500,
-        ),
+        input: e.REFINEMENT_MAX_INPUT_TOKENS,
+        output: e.REFINEMENT_MAX_OUTPUT_TOKENS,
       },
     );
     inputTokens = result.inputTokens;
     outputTokens = result.outputTokens;
     const validatedOutput = validateStrategy(result.strategy, context);
+    if (validatedOutput.schemaVersion !== "3.0")
+      throw new ProviderOutputError(
+        inputTokens,
+        outputTokens,
+        "critique_failed",
+      );
     const written = await db().strategyRevision.updateMany({
       where: {
         id: reserved.revision.id,
@@ -327,6 +361,10 @@ export async function generateRevision(a: Access, input: unknown) {
         "Invalid priorities or weeks":
           "The generated priorities or weekly schedule were invalid.",
         incomplete_output: "The AI stopped before completing the strategy.",
+        critique_failed:
+          "The independent strategy review did not pass validation.",
+        critique_input_budget:
+          "The stored evidence exceeds the bounded strategy review budget.",
         invalid_schema: "The AI returned an invalid strategy structure.",
       };
       message = `${reasons[error.reason] ?? "The AI returned an invalid strategy."} Your original report is unchanged. Please try again later.`;
@@ -411,6 +449,54 @@ export async function approveRevision(
           400,
         );
       }
+      const { schemaVersion, ...fields } = output;
+      const reviews =
+        output.schemaVersion === "3.0" ? output.intelligence.claims : [];
+      const payload =
+        output.schemaVersion === "3.0"
+          ? Object.fromEntries(
+              Object.entries(fields).filter(([k]) => k !== "intelligence"),
+            )
+          : fields;
+      const checked = verifyClaims(
+        payload,
+        reviews,
+        base.sources,
+        founderSchema.parse(revision.founderContext),
+      );
+      // An edited rationale is publication content too; raw review metadata stays separate.
+      const safeIntelligence =
+        output.schemaVersion === "3.0"
+          ? (() => {
+              const { claims, claimActions, generation, ...assessment } =
+                output.intelligence;
+              return {
+                ...verifyClaims(
+                  assessment,
+                  [],
+                  base.sources,
+                  founderSchema.parse(revision.founderContext),
+                ).value,
+                claims,
+                claimActions: [...claimActions, ...checked.actions],
+                generation,
+              };
+            })()
+          : null;
+      output = validateStrategy(
+        {
+          ...checked.value,
+          schemaVersion,
+          ...(output.schemaVersion === "3.0"
+            ? {
+                intelligence: {
+                  ...safeIntelligence!,
+                },
+              }
+            : {}),
+        },
+        founderSchema.parse(revision.founderContext),
+      );
       const latest = await tx.strategyRevision.findFirst({
         where: { analysisId: base.id },
         orderBy: { version: "desc" },

@@ -9,12 +9,27 @@ export function mockStrategy(r: Report, c: FounderContext) {
   const cap = weeklyAllowance(c),
     established = c.payingCustomers === "More than 200",
     lean = cap < 60 || c.monthlyBudget === 0;
-  const channel = established
-    ? "Customer referral experiment"
-    : lean
-      ? "One focused problem interview"
-      : "Founder-led targeted outreach";
-  const segment = r.segments[0].name,
+  const provenChannels = c.channels?.some(
+    (x) =>
+      x === "Partnerships or referrals" || x === "SEO or content marketing",
+  );
+  const channel =
+    established || provenChannels
+      ? "Customer referral experiment"
+      : lean
+        ? "One focused problem interview"
+        : "Founder-led targeted outreach";
+  const complex = /enterprise|procurement|complex integration/i.test(
+    JSON.stringify([r.overview, r.segments]),
+  );
+  const ranked =
+    complex && r.segments.length === 3
+      ? [r.segments[1], r.segments[0], r.segments[2]].map((s, i) => ({
+          ...s,
+          priority: i + 1,
+        }))
+      : r.segments;
+  const segment = ranked[0].name,
     minutes = Math.max(1, Math.floor(cap / 3));
   return validateStrategy(
     {
@@ -27,9 +42,12 @@ export function mockStrategy(r: Report, c: FounderContext) {
       firstMove: {
         segment,
         why: `Test the pain described in the original analysis of ${r.businessName}.`,
-        where: established
-          ? "Your own consenting paying customer contacts"
-          : "Your own professional network; manually verify role and fit",
+        where:
+          c.existingAudience === "None"
+            ? "Manually verify a public buyer role; no existing audience is assumed"
+            : established
+              ? "Your own consenting paying customer contacts"
+              : "Your own professional network; manually verify role and fit",
         action: established
           ? "Ask one satisfied customer what triggered their purchase and whether a peer has the same problem"
           : "Invite one person matching the segment to a short problem interview",
@@ -40,7 +58,7 @@ export function mockStrategy(r: Report, c: FounderContext) {
         changeWhen:
           "After the small batch, no one confirms the problem or agrees to a next step",
       },
-      prioritizedSegments: r.segments.map((s) => ({
+      prioritizedSegments: ranked.map((s) => ({
         name: s.name,
         priority: s.priority,
         rationale: s.evidence.text,
@@ -84,7 +102,10 @@ export function mockStrategy(r: Report, c: FounderContext) {
       firstTen: {
         segment,
         experiment: channel,
-        batchPlanningTarget: lean ? 2 : established ? 10 : 5,
+        batchPlanningTarget: Math.max(
+          1,
+          Math.min(Math.floor(cap / 5), lean ? 2 : established ? 10 : 5),
+        ),
         targetDisclaimer: "Experimental planning target, not a forecast",
         stages: [
           "Prospects identified",

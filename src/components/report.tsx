@@ -1,4 +1,5 @@
 "use client";
+import { safeInitialReport } from "@/modules/strategy/claims";
 import { useState } from "react";
 import { Printer, Check, PenLine } from "lucide-react";
 import { Button } from "./ui/button";
@@ -316,7 +317,7 @@ export function ReportView({
   preview?: boolean;
   sections?: string[];
 }) {
-  const [report, setReport] = useState(initial);
+  const [report, setReport] = useState(() => safeInitialReport(initial, []));
   const [editing, setEditing] = useState(false);
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState("");

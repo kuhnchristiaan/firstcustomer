@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "confirmedCapabilities": {
+      "maxItems": 8,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 500
+      }
+    },
+    "existingAudience": {
+      "type": "string",
+      "enum": ["None", "Small", "Established", "Unknown"]
+    },
+    "payingCustomers": {
+      "type": "string",
+      "enum": ["0", "1–10", "11–50", "51–200", "More than 200"]
+    },
+    "freeUsers": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100000000
+    },
+    "weeklyTime": {
+      "type": "string",
+      "enum": [
+        "Less than 1 hour",
+        "1–2 hours",
+        "3–5 hours",
+        "6–10 hours",
+        "More than 10 hours"
+      ]
+    },
+    "weeklyMinutes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10080
+    },
+    "monthlyBudget": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100000000
+    },
+    "currency": {
+      "type": "string",
+      "enum": [
+        "USD",
+        "EUR",
+        "GBP",
+        "ZAR",
+        "CAD",
+        "AUD",
+        "INR",
+        "JPY",
+        "NZD",
+        "CHF"
+      ]
+    },
+    "challenge": {
+      "type": "string",
+      "enum": [
+        "I don't know who to sell to",
+        "I don't know where to find potential customers",
+        "I don't have time for marketing or sales",
+        "I struggle to convert prospects",
+        "I struggle to convert free users into paying customers",
+        "Other"
+      ]
+    },
+    "channels": {
+      "maxItems": 10,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "None",
+          "Organic social media",
+          "Paid advertising",
+          "Cold email",
+          "LinkedIn outreach",
+          "SEO or content marketing",
+          "Online communities",
+          "Partnerships or referrals",
+          "Marketplaces or app directories",
+          "Other"
+        ]
+      }
+    },
+    "geographicTarget": {
+      "type": "string",
+      "enum": ["My country", "Internationally", "Specific countries or regions"]
+    },
+    "regions": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 200
+    },
+    "stage": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "preferredApproach": {
+      "type": "string",
+      "maxLength": 500
+    }
+  },
+  "additionalProperties": false
+}

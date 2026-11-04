@@ -9,7 +9,7 @@ import {
   approveRevision,
 } from "@/modules/strategy/service";
 export const runtime = "nodejs";
-export const maxDuration = 90;
+export const maxDuration = 150;
 type C = { params: Promise<{ id: string }> };
 async function access(request: Request, c: C) {
   const t = await tenant(),

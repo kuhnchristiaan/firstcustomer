@@ -14,6 +14,7 @@ import {
   type FounderContext,
   type Strategy,
 } from "@/modules/strategy/schema";
+import { safeInitialReport, verifyClaims } from "@/modules/strategy/claims";
 import type { Report } from "@/modules/intelligence/schema";
 type Revision = {
   id: string;
@@ -53,9 +54,20 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
     [reset, setReset] = useState(0);
   const [editing, setEditing] = useState(false),
     [draft, setDraft] = useState<Strategy | null>(null);
+  const facts = safeInitialReport(props.initial, []);
   const current = revisions.find((r) => r.id === selected),
     strategy =
-      draft ?? (current?.output ? strategySchema.parse(current.output) : null);
+      draft ??
+      (current?.output
+        ? current.output.schemaVersion === "2.0"
+          ? verifyClaims(
+              strategySchema.parse(current.output),
+              [],
+              [],
+              current.context,
+            ).value
+          : strategySchema.parse(current.output)
+        : null);
   useEffect(() => {
     let live = true;
     fetch(endpoint, { cache: "no-store" })
@@ -207,8 +219,99 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
               />
             </section>
           ))}
+          {strategy.schemaVersion === "3.0" && (
+            <section className="report-section panel">
+              <h2>Why this strategy was selected</h2>
+              <p className="mb-4 text-sm leading-7">
+                {strategy.intelligence.firstMoveTradeoff}
+              </p>
+              <p className="mb-4 text-sm muted">
+                Comparisons are qualitative planning judgements, not measured
+                demand or conversion probabilities.
+              </p>
+              {strategy.intelligence.segmentComparison.map((s) => (
+                <article
+                  key={s.priority}
+                  className="mb-4 rounded-xl border border-slate-200 p-4"
+                >
+                  <h3 className="font-semibold">
+                    {s.priority}. {s.name}
+                  </h3>
+                  <p className="text-sm leading-7">
+                    Attraction: {s.attraction}
+                  </p>
+                  <p className="text-sm leading-7">
+                    Acquisition friction: {s.acquisitionDifficulty}
+                  </p>
+                  <p className="text-sm leading-7">Unknown: {s.unknowns}</p>
+                  <p className="text-sm leading-7">
+                    Validate: {s.validationExperiment}
+                  </p>
+                  <details>
+                    <summary className="text-sm underline">
+                      Comparison framework
+                    </summary>
+                    <Value
+                      value={s.factors}
+                      editing={false}
+                      onChange={() => {}}
+                    />
+                  </details>
+                </article>
+              ))}
+              <p className="text-sm leading-7">
+                Alternative segment:{" "}
+                {strategy.intelligence.alternativeSegment.name}.{" "}
+                {strategy.intelligence.alternativeSegment.preferWhen}
+              </p>
+              <p className="text-sm leading-7">
+                Alternative channel:{" "}
+                {strategy.intelligence.alternativeChannel.name}.{" "}
+                {strategy.intelligence.alternativeChannel.preferWhen}
+              </p>
+              <details className="mt-4">
+                <summary className="text-sm underline">
+                  Practical experiments and effort assumptions
+                </summary>
+                <Value
+                  value={{
+                    experiments: strategy.intelligence.experiments,
+                    weeklyEffort: strategy.intelligence.effortBreakdown,
+                    limitations: [
+                      ...strategy.intelligence.segmentWeaknesses,
+                      ...strategy.intelligence.channelWeaknesses,
+                      ...strategy.intelligence.commercialWeaknesses,
+                    ],
+                  }}
+                  editing={false}
+                  onChange={() => {}}
+                />
+              </details>
+              {strategy.intelligence.claimActions.some(
+                (x) => x.action === "removed",
+              ) && (
+                <p className="mt-4 text-sm muted">
+                  Unsupported assertions were removed during claim review.
+                  Source-backed statements still require your judgement; no
+                  independent external research was performed.
+                </p>
+              )}
+            </section>
+          )}
           <section className="report-section panel">
             <h2>Founder-confirmed context</h2>
+            <Button
+              className="no-print mb-4"
+              variant="outline"
+              onClick={() => {
+                setContext(current.context);
+                document
+                  .getElementById("refine-strategy")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              Edit Founder Context
+            </Button>
             <p className="mb-3 text-sm muted">
               Provided by the founder, not independently verified. Unanswered
               fields remain unknown. Weekly planning allowance:{" "}
@@ -260,7 +363,7 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
                   {k.replace(/([A-Z])/g, " $1")}
                 </h3>
                 <Value
-                  value={props.initial[k as keyof Report]}
+                  value={facts[k as keyof Report]}
                   editing={false}
                   onChange={() => {}}
                 />
@@ -362,7 +465,16 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
               setPending(true);
               setNotice("");
               try {
-                const parsed = founderSchema.safeParse(context);
+                const parsed = founderSchema.safeParse({
+                  ...context,
+                  ...(context.confirmedCapabilities
+                    ? {
+                        confirmedCapabilities: context.confirmedCapabilities
+                          .map((s) => s.trim())
+                          .filter(Boolean),
+                      }
+                    : {}),
+                });
                 if (!parsed.success)
                   throw new Error(parsed.error.issues[0].message);
                 const r = await fetch(endpoint, {
@@ -391,6 +503,29 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
             }}
           >
             <fieldset disabled={pending} className="grid gap-5 sm:grid-cols-2">
+              {selectField("existingAudience", "Existing audience access", [
+                "None",
+                "Small",
+                "Established",
+                "Unknown",
+              ])}
+              <label className="block text-sm sm:col-span-2">
+                Founder-confirmed product capabilities (optional; one per line)
+                <textarea
+                  className="mt-2 w-full rounded border p-3"
+                  rows={3}
+                  maxLength={4000}
+                  value={(context.confirmedCapabilities ?? []).join("\n")}
+                  onChange={(e) =>
+                    update("confirmedCapabilities", e.target.value.split("\n"))
+                  }
+                />
+                <span className="text-xs muted">
+                  Confirm actual features only. Your confirmation does not
+                  independently verify compliance, certification or performance
+                  results.
+                </span>
+              </label>
               {selectField(
                 "payingCustomers",
                 "How many paying customers do you have?",
