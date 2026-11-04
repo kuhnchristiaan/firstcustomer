@@ -1,4 +1,9 @@
 import { safeInitialReport } from "@/modules/strategy/claims";
+import {
+  validateProductProfile,
+  validateBasis,
+} from "@/modules/intelligence/product-profile";
+import { groundReport } from "@/modules/intelligence/attribution";
 import { db } from "@/lib/db";
 import { config } from "@/modules/config/env";
 import { AppError, ownedProduct } from "@/modules/auth/tenant";
@@ -141,7 +146,7 @@ export async function approve(
   expectedVersion: number,
 ) {
   await ownedProduct(t.organizationId, productId);
-  const findings = reportSchema.parse(
+  let findings = reportSchema.parse(
     safeInitialReport(reportSchema.parse(input), []),
   );
   const p = db();
@@ -152,6 +157,28 @@ export async function approve(
       include: { sources: true },
     });
     if (!analysis) throw new AppError("Completed report not found.", 404);
+    const original = reportSchema.parse(analysis.output);
+    if (original.schemaVersion === "1.1" && findings.schemaVersion !== "1.1")
+      throw new AppError(
+        "Attributed reports cannot be downgraded to a legacy schema.",
+        400,
+      );
+    if (findings.schemaVersion === "1.1") {
+      if (
+        original.schemaVersion !== "1.1" ||
+        JSON.stringify(original.productIntelligence) !==
+          JSON.stringify(findings.productIntelligence)
+      )
+        throw new AppError(
+          "Source product attribution cannot be changed by editing a report.",
+          400,
+        );
+      validateProductProfile(findings.productIntelligence, analysis.sources);
+      validateBasis(findings.recommendationBasis, findings.productIntelligence);
+      const identityName = findings.productIntelligence.identity.name;
+      findings = groundReport(findings, findings.productIntelligence);
+      findings.businessName = identityName;
+    }
     validateEvidence(
       findings,
       analysis.sources.map((s) => s.url),

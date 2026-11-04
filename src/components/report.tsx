@@ -4,6 +4,12 @@ import { useState } from "react";
 import { Printer, Check, PenLine } from "lucide-react";
 import { Button } from "./ui/button";
 import { presentStrategyValue } from "./strategy-presentation";
+import {
+  EvidenceProvider,
+  EvidenceLinks,
+  SourceReferences,
+  ProductAttribution,
+} from "./evidence";
 import { reportSchema, type Report } from "@/modules/intelligence/schema";
 type Claim = { text: string; confidence: string; sources: string[] };
 const labels: Record<string, string> = {
@@ -282,17 +288,7 @@ export function Value({
           />
           {c.sources.length > 0 && (
             <div className="mt-2 flex flex-wrap gap-3 text-xs text-ink">
-              {[...new Set(c.sources)].map((s) => (
-                <a
-                  key={s}
-                  href={s}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="underline"
-                >
-                  {s}
-                </a>
-              ))}
+              <EvidenceLinks sources={c.sources} />
             </div>
           )}
         </div>
@@ -346,7 +342,7 @@ export function ReportView({
       ? ["overview", "idealCustomers", "positioning"]
       : Object.keys(labels));
   return (
-    <>
+    <EvidenceProvider report={report}>
       <div className="report-toolbar no-print mb-7 flex flex-wrap items-center justify-between gap-3">
         <div className="flex flex-wrap gap-2">
           <span className="badge">
@@ -430,6 +426,13 @@ export function ReportView({
             unknown means more information is needed. Targets are experiments,
             not forecasts.
           </p>
+          {!mock && report.schemaVersion === "1.0" && (
+            <p className="legacy-attribution-note no-print">
+              This historical report predates product-attribution checks. Run a
+              fresh website analysis if its product assessment includes example
+              or unrelated content.
+            </p>
+          )}
           {!sections && !preview && (
             <section className="report-first-move">
               <h2>Your first sales experiment</h2>
@@ -467,6 +470,8 @@ export function ReportView({
               />
             </section>
           ))}
+          <ProductAttribution report={report} />
+          <SourceReferences />
           {productId && (
             <div className="panel no-print mt-7">
               <h2 className="font-semibold">Make this plan yours.</h2>
@@ -523,6 +528,6 @@ export function ReportView({
           )}
         </div>
       </div>
-    </>
+    </EvidenceProvider>
   );
 }

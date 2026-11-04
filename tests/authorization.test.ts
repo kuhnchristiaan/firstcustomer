@@ -77,7 +77,7 @@ describe("authorization", () => {
   });
   it("detects stale profile updates", async () => {
     f.product.mockResolvedValue({ id: "p" });
-    f.run.mockResolvedValue({ sources: [] });
+    f.run.mockResolvedValue({ sources: [], output: mockReport });
     f.latest.mockResolvedValue({ version: 2 });
     await expect(
       approve({ organizationId: "org", userId: "u" }, "p", "r", mockReport, 1),
@@ -86,7 +86,7 @@ describe("authorization", () => {
   });
   it("saves a new approved version and retains structured findings", async () => {
     f.product.mockResolvedValue({ id: "p" });
-    f.run.mockResolvedValue({ sources: [] });
+    f.run.mockResolvedValue({ sources: [], output: mockReport });
     f.latest.mockResolvedValue({ version: 1 });
     f.create.mockResolvedValue({ id: "new-profile", version: 2 });
     await expect(

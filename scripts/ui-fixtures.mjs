@@ -40,6 +40,16 @@ try {
     context,
     mockStrategy(mockReport, context),
   );
+  const { siteFixture } = await server.ssrLoadModule(
+    "/tests/fixtures/product-attribution.ts",
+  );
+  const attributedFixture = siteFixture();
+  const attributed = {
+    ...attributedFixture.report,
+    schemaVersion: "1.1",
+    productIntelligence: attributedFixture.profile,
+    recommendationBasis: attributedFixture.basis,
+  };
   const home = await (await fetch("http://localhost:3100")).text();
   const headAssets = [...home.matchAll(/<link\b[^>]*>/g)]
     .map((x) => x[0])
@@ -111,7 +121,7 @@ try {
   await mkdir("artifacts/ui", { recursive: true });
   await writeFile(
     "artifacts/ui/fixtures.json",
-    JSON.stringify({ report: mockReport, strategy, context }),
+    JSON.stringify({ report: mockReport, strategy, context, attributed }),
   );
   await writeFile(
     "artifacts/ui/workspace.html",

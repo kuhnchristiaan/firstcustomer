@@ -302,3 +302,229 @@ test("supporting pages remain accessible on narrow screens and reduced motion", 
     ),
   ).toBe("auto");
 });
+
+// SDK callbacks are deterministic local fixtures only. Production verification is never mocked.
+test("Turnstile expiry, errors and offline recovery retain the submitted URL", async ({
+  page,
+}) => {
+  await setup(page);
+  await page.route("https://challenges.cloudflare.com/**", (route) =>
+    route.fulfill({
+      contentType: "application/javascript",
+      body: `window.turnstile={render:(el,o)=>{window.testVerification=o;return 'recovery-fixture'},remove:()=>{}};`,
+    }),
+  );
+  await page.goto("/");
+  const submit = page.getByRole("button", {
+    name: "Generate my free strategy",
+  });
+  await page.getByLabel("Your SaaS website").fill("https://example.com");
+  await expect(submit).toBeDisabled();
+  await page.waitForFunction(
+    () =>
+      !!(
+        window as unknown as {
+          testVerification: Record<string, (...args: string[]) => void>;
+        }
+      ).testVerification,
+  );
+  for (const event of [
+    "expired-callback",
+    "timeout-callback",
+    "error-callback",
+  ]) {
+    await page.evaluate(() =>
+      (
+        window as unknown as {
+          testVerification: Record<string, (...args: string[]) => void>;
+        }
+      ).testVerification.callback("local-fixture-token"),
+    );
+    await expect(submit).toBeEnabled();
+    await page.evaluate(
+      (e) =>
+        (
+          window as unknown as {
+            testVerification: Record<string, (...args: string[]) => void>;
+          }
+        ).testVerification[e](),
+      event,
+    );
+    await expect(submit).toBeDisabled();
+    await page.getByRole("button", { name: "Retry verification" }).click();
+    await expect(page.getByLabel("Your SaaS website")).toHaveValue(
+      "https://example.com",
+    );
+  }
+  await page.evaluate(() => window.dispatchEvent(new Event("offline")));
+  await expect(submit).toBeDisabled();
+  await expect(page.getByRole("status")).toContainText("offline");
+  await page.evaluate(() => window.dispatchEvent(new Event("online")));
+  await expect(page.getByRole("status")).toContainText("Connection restored");
+  await page.getByRole("button", { name: "Retry verification" }).click();
+  await page.evaluate(() =>
+    (
+      window as unknown as {
+        testVerification: Record<string, (...args: string[]) => void>;
+      }
+    ).testVerification.callback("fresh-local-fixture-token"),
+  );
+  await expect(submit).toBeEnabled();
+});
+test("Turnstile can retry a failed SDK download", async ({ page }) => {
+  await setup(page);
+  let downloads = 0;
+  await page.route("https://challenges.cloudflare.com/**", (route) =>
+    ++downloads === 1
+      ? route.abort()
+      : route.fulfill({ contentType: "application/javascript", body: sdk }),
+  );
+  await page.goto("/");
+  await page.getByLabel("Your SaaS website").fill("https://example.com");
+  await expect(
+    page.getByRole("button", { name: "Generate my free strategy" }),
+  ).toBeDisabled();
+  await page.getByRole("button", { name: "Retry verification" }).click();
+  await expect(
+    page.getByRole("button", { name: "Generate my free strategy" }),
+  ).toBeEnabled();
+  await expect(page.getByLabel("Your SaaS website")).toHaveValue(
+    "https://example.com",
+  );
+});
+test("initial, short and long reports print without screen width constraints", async ({
+  page,
+}) => {
+  await setup(page);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/guest/report");
+  await page.getByLabel("Strategy history").selectOption("initial");
+  await page.emulateMedia({ media: "print" });
+  await page.pdf({
+    path: "artifacts/ui/initial-A4.pdf",
+    format: "A4",
+    preferCSSPageSize: true,
+    printBackground: true,
+  });
+  await page.goto("/guest/report");
+  await expect(page.getByText("Why this strategy was selected")).toBeVisible();
+  await page.pdf({
+    path: "artifacts/ui/refined-mobile-viewport-A4.pdf",
+    format: "A4",
+    preferCSSPageSize: true,
+    printBackground: true,
+  });
+  // Stress the existing report with longer substantive text, retaining every section.
+  await page.evaluate(() => {
+    document
+      .querySelectorAll(".experiment-entry p,.comparison-entry p,.week-entry p")
+      .forEach((el) => (el.textContent = (el.textContent + " ").repeat(4)));
+  });
+  await page.pdf({
+    path: "artifacts/ui/long-A4.pdf",
+    format: "A4",
+    preferCSSPageSize: true,
+    printBackground: true,
+  });
+  await page.goto("/guest/report");
+  await expect(page.getByText("Why this strategy was selected")).toBeVisible();
+  await page.evaluate(() => {
+    document.querySelectorAll(".refined-report > section").forEach((el, i) => {
+      if (i > 1) el.remove();
+    });
+    document
+      .querySelectorAll(".refined-report > details")
+      .forEach((el) => el.remove());
+  });
+  await page.pdf({
+    path: "artifacts/ui/short-A4.pdf",
+    format: "A4",
+    preferCSSPageSize: true,
+    printBackground: true,
+  });
+});
+
+test("attributed report displays exact publisher evidence and a single source list", async ({
+  page,
+}) => {
+  await setup(page);
+  await page.route("**/api/guest/report", (route) =>
+    route.fulfill({
+      json: {
+        status: "SUCCEEDED",
+        output: fixture.attributed,
+        mock: false,
+        expiresAt: "2026-11-06T12:00:00Z",
+        websiteUrl: "https://www.firstcustomers.app/",
+      },
+    }),
+  );
+  await page.route("**/api/guest/refinement", (route) =>
+    route.fulfill({ json: { defaultContext: fixture.context, revisions: [] } }),
+  );
+  await page.goto("/guest/report");
+  await page
+    .getByText("Product identity and quoted evidence", { exact: true })
+    .click();
+  await expect(
+    page.locator(".product-attribution blockquote").first(),
+  ).toContainText(
+    fixture.attributed.productIntelligence.statements[0].evidence[0].quote,
+  );
+  await expect(page.locator(".source-references li")).toHaveCount(1);
+  await page.emulateMedia({ media: "print" });
+  await page.pdf({
+    path: "artifacts/ui/attributed-A4.pdf",
+    format: "A4",
+    preferCSSPageSize: true,
+    printBackground: true,
+  });
+});
+
+test("Turnstile stalled verification offers recovery without enabling generation", async ({
+  page,
+}) => {
+  await setup(page);
+  await page.route("https://challenges.cloudflare.com/**", (route) =>
+    route.fulfill({
+      contentType: "application/javascript",
+      body: `window.turnstile={render:()=> 'waiting-fixture',remove:()=>{}};`,
+    }),
+  );
+  await page.clock.install();
+  await page.goto("/");
+  await page.getByLabel("Your SaaS website").fill("https://example.com");
+  await page.clock.fastForward(46000);
+  await expect(
+    page.getByRole("button", { name: "Retry verification" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Generate my free strategy" }),
+  ).toBeDisabled();
+  await expect(page.getByLabel("Your SaaS website")).toHaveValue(
+    "https://example.com",
+  );
+});
+
+for (const width of widths)
+  test(`founder questionnaire wraps at ${width}px`, async ({ page }) => {
+    await setup(page);
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto("/guest/report");
+    await page.getByRole("button", { name: "Edit Founder Context" }).click();
+    await expect(
+      page.getByLabel("How many paying customers do you have?"),
+    ).toBeVisible();
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth),
+    ).toBe(width);
+    if (width === 390 || width === 1440) {
+      await page
+        .locator("#refine-strategy")
+        .screenshot({ path: `artifacts/ui/founder-context-${width}.png` });
+      const scan = await new AxeBuilder({ page })
+        .withTags(["wcag2a", "wcag2aa", "wcag22aa"])
+        .analyze();
+      expect(scan.violations.map((v) => v.id)).toEqual([]);
+    }
+  });

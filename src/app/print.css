@@ -1,6 +1,6 @@
 @page {
-  size: A4;
-  margin: 15mm 14mm;
+  size: A4 portrait;
+  margin: 14mm;
 }
 @media print {
   html,
@@ -329,5 +329,164 @@
   .comparison-entry > p {
     font-size: 9pt;
     line-height: 1.55;
+  }
+}
+/* Print width follows the selected paper, never the device's screen layout. */
+@media print {
+  html,
+  body,
+  #main-content,
+  main,
+  .workspace-content,
+  .report-grid,
+  .report-grid > div,
+  .refined-report {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  .container,
+  .workspace-shell {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .report-section,
+  .refined-report > .report-section {
+    padding: 3mm 0 !important;
+    margin: 0 !important;
+  }
+  .report-section h2 {
+    font-size: 14pt;
+    margin-bottom: 2mm;
+  }
+  .report-title {
+    font-size: 25pt;
+  }
+  .report-first-move h2 {
+    font-size: 16pt;
+  }
+  .report-first-move .first-move-target {
+    font-size: 14pt !important;
+  }
+  .definition-grid > div,
+  .detail-group {
+    break-inside: auto;
+  }
+  .definition-grid {
+    gap: 2mm 5mm;
+  }
+  details > .definition-grid {
+    display: block !important;
+  }
+  details > .definition-grid > div {
+    margin-bottom: 3mm;
+  }
+  details .definition-grid .definition-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 2mm 5mm;
+  }
+  .comparison-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4mm;
+    break-inside: avoid;
+  }
+  .comparison-entry {
+    border-top: 1px solid #bfc3c8;
+    padding: 2mm 0;
+  }
+  .comparison-entry h3 {
+    font-size: 9pt;
+  }
+  .comparison-entry > p {
+    font-size: 8.5pt;
+    line-height: 1.5;
+  }
+  .comparison-matrix table {
+    width: 100% !important;
+  }
+  .week-entry {
+    padding: 2mm 0;
+  }
+  .week-entry .week-decision {
+    margin-top: 1.5mm;
+  }
+  .week-entry h3 {
+    margin-bottom: 1.5mm;
+  }
+  .message-block {
+    padding: 3mm;
+  }
+  .claim {
+    padding: 1.5mm 0;
+  }
+  .report-first-move {
+    padding: 4mm !important;
+    margin: 4mm 0 !important;
+  }
+  .report-intro {
+    margin-bottom: 3mm;
+  }
+}
+@media print {
+  .source-references ol {
+    font-size: 8pt;
+    gap: 1mm;
+  }
+  .source-references li {
+    break-inside: avoid;
+  }
+  .evidence-links a {
+    min-height: 0;
+    font-size: 8pt;
+  }
+  .attribution-quote {
+    font-size: 8pt;
+    line-height: 1.5;
+    margin-top: 2mm;
+    padding-left: 3mm;
+  }
+  .product-attribution {
+    padding: 3mm 0;
+  }
+  .product-attribution .detail-group {
+    break-inside: auto;
+  }
+}
+
+@media print {
+  .report-grid .report-section {
+    padding: 2mm 0 !important;
+  }
+  .report-grid .report-section h2 {
+    font-size: 13pt;
+    margin-bottom: 1.5mm;
+  }
+  .report-grid .claim {
+    padding: 1mm 0;
+    break-inside: auto;
+  }
+  .report-grid .claim .badge {
+    margin-bottom: 1mm;
+  }
+  .report-grid .segment-meta {
+    margin: 1mm 0 2mm;
+  }
+  .report-grid .week-entry {
+    padding: 1.5mm 0;
+  }
+  .report-grid .week-entry ul {
+    gap: 1mm;
+  }
+  .report-grid .value-list {
+    gap: 1mm;
+  }
+  .report-grid .value-list > div {
+    margin-bottom: 1mm;
   }
 }

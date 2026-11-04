@@ -256,3 +256,60 @@ it("records usage for invalid or incomplete model output without a fallback stra
     }),
   ).rejects.toMatchObject({ inputTokens: 100, outputTokens: 200 });
 });
+
+it("uses the same attributed owner profile for candidate and critical review", async () => {
+  const { siteFixture } = await import("./fixtures/product-attribution");
+  const { profileEvidence, groundReport } =
+    await import("@/modules/intelligence/attribution");
+  const f = siteFixture();
+  const report = {
+    ...groundReport(f.report, f.profile, true),
+    schemaVersion: "1.1" as const,
+    productIntelligence: f.profile,
+    recommendationBasis: f.basis,
+  };
+  const original = JSON.stringify(report);
+  const candidate = mockStrategy(report, context);
+  const reviewed = mockIntelligence(report, context, candidate);
+  if (reviewed.schemaVersion !== "3.0") throw Error("Fixture");
+  const { claimActions, generation, effortBreakdown, ...assessment } =
+    reviewed.intelligence;
+  void claimActions;
+  void generation;
+  void effortBreakdown;
+  assessment.verdict = "revise";
+  assessment.corrections = ["Confirm owner product context."];
+  calls.create
+    .mockResolvedValueOnce({
+      status: "completed",
+      output_text: JSON.stringify(candidate),
+      usage: { input_tokens: 100, output_tokens: 100 },
+    })
+    .mockResolvedValueOnce({
+      status: "completed",
+      output_text: JSON.stringify({ assessment, finalStrategy: candidate }),
+      usage: { input_tokens: 100, output_tokens: 100 },
+    });
+  await refineStrategy(report, context, profileEvidence(f.profile), null, {
+    input: 40000,
+    output: 9000,
+  });
+  const first = JSON.parse(calls.create.mock.calls[0][0].input[1].content);
+  const second = JSON.parse(calls.create.mock.calls[1][0].input[1].content);
+  expect(first.productIntelligence.profile.identity).toMatchObject({
+    name: f.profile.identity.name,
+    primaryJob: f.profile.identity.primaryJob,
+    summary: f.profile.identity.summary,
+  });
+  expect(second.productFacts.profile.identity).toEqual(
+    first.productIntelligence.profile.identity,
+  );
+  expect(
+    first.supportingEvidence.every((e: { content: string }) =>
+      f.profile.statements.some((s) =>
+        s.evidence.some((r) => r.quote === e.content),
+      ),
+    ),
+  ).toBe(true);
+  expect(JSON.stringify(report)).toBe(original);
+});

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { productProfileSchema, basisSchema } from "./product-profile";
 export const claimSchema = z.object({
   text: z.string().min(1).max(2000),
   confidence: z.enum(["Verified", "Inferred", "Unknown"]),
@@ -24,7 +25,7 @@ const strategyItem = z.object({
   steps: z.array(z.string().max(600)).min(1).max(8),
   successMetric: z.string().max(300),
 });
-export const reportSchema = z.object({
+export const reportV1Schema = z.object({
   schemaVersion: z.literal("1.0"),
   businessName: z.string().min(1).max(200),
   overview: claimSchema,
@@ -65,6 +66,12 @@ export const reportSchema = z.object({
     )
     .length(4),
 });
+export const reportV11Schema = reportV1Schema.extend({
+  schemaVersion: z.literal("1.1"),
+  productIntelligence: productProfileSchema,
+  recommendationBasis: basisSchema,
+});
+export const reportSchema = z.union([reportV1Schema, reportV11Schema]);
 export type Report = z.infer<typeof reportSchema>;
 export function validateEvidence(report: Report, urls: string[]) {
   if (report.segments.map((s) => s.priority).join(",") !== "1,2,3")

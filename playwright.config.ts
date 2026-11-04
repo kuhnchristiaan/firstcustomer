@@ -6,7 +6,9 @@ export default defineConfig({
   use: {
     baseURL: "http://localhost:3100",
     browserName: "chromium",
-    channel: process.platform === "win32" ? "msedge" : undefined,
+    channel:
+      process.env.UI_BROWSER_CHANNEL ??
+      (process.platform === "win32" ? "msedge" : undefined),
     screenshot: "only-on-failure",
     trace: "retain-on-failure",
   },

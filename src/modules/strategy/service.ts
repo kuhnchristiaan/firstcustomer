@@ -1,4 +1,5 @@
 import { verifyClaims } from "./claims";
+import { profileEvidence } from "@/modules/intelligence/attribution";
 import { createHash } from "node:crypto";
 import { db } from "@/lib/db";
 import { AppError } from "@/lib/errors";
@@ -305,13 +306,16 @@ export async function generateRevision(a: Access, input: unknown) {
       ? (inputTokens * inputRate + outputTokens * outputRate) / 1e6
       : null;
   try {
+    const initialReport = reportSchema.parse(reserved.base.output);
     const result = await refineStrategy(
-      reportSchema.parse(reserved.base.output),
+      initialReport,
       context,
-      reserved.base.sources.map((s) => ({
-        url: s.url,
-        content: s.content.slice(0, 600),
-      })),
+      initialReport.schemaVersion === "1.1"
+        ? profileEvidence(initialReport.productIntelligence)
+        : reserved.base.sources.map((s) => ({
+            url: s.url,
+            content: s.content.slice(0, 600),
+          })),
       reserved.previous,
       {
         input: e.REFINEMENT_MAX_INPUT_TOKENS,

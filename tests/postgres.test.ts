@@ -162,6 +162,89 @@ describe.skipIf(!connection)("isolated PostgreSQL integration", () => {
       providerStub.mockRestore();
       process.env.MOCK_ANALYSIS = "true";
     }
+    const { siteFixture } = await import("./fixtures/product-attribution");
+    const f = siteFixture();
+    const attributed = {
+      ...f.report,
+      schemaVersion: "1.1" as const,
+      productIntelligence: f.profile,
+      recommendationBasis: f.basis,
+    };
+    const attributedProduct = await p.product.create({
+      data: {
+        organizationId: org.id,
+        name: f.profile.identity.name,
+        websiteUrl: f.source.url,
+      },
+    });
+    const attributedRun = await p.analysisRun.create({
+      data: {
+        productId: attributedProduct.id,
+        status: "SUCCEEDED",
+        provider: "fixture",
+        model: "fixture",
+        output: attributed,
+        leaseExpiresAt: new Date(Date.now() + 60000),
+        sources: {
+          create: {
+            url: f.source.url,
+            title: f.source.title,
+            content: f.source.content,
+            contentHash: f.source.contentHash,
+            status: "SUCCESS",
+            productId: attributedProduct.id,
+          },
+        },
+      },
+    });
+    const approved = await approve(
+      t,
+      attributedProduct.id,
+      attributedRun.id,
+      attributed,
+      0,
+    );
+    expect(approved.findings).toMatchObject({ productIntelligence: f.profile });
+    await expect(
+      approve(
+        t,
+        attributedProduct.id,
+        attributedRun.id,
+        { ...attributed, schemaVersion: "1.0" },
+        1,
+      ),
+    ).rejects.toMatchObject({ status: 400 });
+    const changed = structuredClone(attributed);
+    changed.productIntelligence.identity.name = "Fictional demo";
+    await expect(
+      approve(t, attributedProduct.id, attributedRun.id, changed, 1),
+    ).rejects.toMatchObject({ status: 400 });
+    const editedAttribution = {
+      ...attributed,
+      positioning: {
+        ...attributed.positioning,
+        text: "Founder reviewed acquisition positioning",
+      },
+    };
+    await approve(
+      t,
+      attributedProduct.id,
+      attributedRun.id,
+      editedAttribution,
+      1,
+    );
+    expect(
+      await p.productProfile.count({
+        where: { productId: attributedProduct.id },
+      }),
+    ).toBe(2);
+    expect(
+      (
+        await p.analysisRun.findUniqueOrThrow({
+          where: { id: attributedRun.id },
+        })
+      ).output,
+    ).toEqual(attributed);
   }, 30000);
   afterAll(async () => {
     if (connection) await db().$disconnect();

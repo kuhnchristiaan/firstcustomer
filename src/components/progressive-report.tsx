@@ -5,6 +5,11 @@ import { Button } from "./ui/button";
 import { Turnstile } from "./turnstile";
 import { SegmentComparison } from "./segment-comparison";
 import {
+  EvidenceProvider,
+  SourceReferences,
+  ProductAttribution,
+} from "./evidence";
+import {
   founderSchema,
   strategySchema,
   payingOptions,
@@ -136,7 +141,7 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
   }
   const initial = <ReportView {...props} />;
   return (
-    <>
+    <EvidenceProvider report={props.initial}>
       {available && (
         <div className="no-print panel mb-6">
           <label className="text-sm font-semibold">
@@ -172,6 +177,13 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
       )}
       {strategy && current ? (
         <article className="refined-report">
+          {!props.mock && props.initial.schemaVersion === "1.0" && (
+            <p className="legacy-attribution-note no-print">
+              This strategy uses a historical product assessment that predates
+              quotation attribution. Run a fresh website analysis if it includes
+              example or unrelated content.
+            </p>
+          )}
           <nav
             aria-label="Refined strategy sections"
             className="panel no-print mb-6"
@@ -436,6 +448,8 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
               </p>
             </div>
           )}
+          <ProductAttribution report={props.initial} />
+          <SourceReferences />
           <details className="no-print panel mt-6">
             <summary className="cursor-pointer font-semibold">
               Compare with the complete initial strategy
@@ -698,6 +712,6 @@ export function ProgressiveReport(props: Parameters<typeof ReportView>[0]) {
       <p role="status" className="no-print my-4 text-sm">
         {notice}
       </p>
-    </>
+    </EvidenceProvider>
   );
 }

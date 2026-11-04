@@ -29,21 +29,67 @@ export default async function Home({
               Your first customers start here.
             </span>
           </div>
-          <h1>
-            You built your SaaS.
-            <br />
-            Now find your
-            <br className="hero-break" /> <span>first customers.</span>
-          </h1>
-          <div className="hero-bottom">
-            <p>
-              A sharper target. A message worth sending. A practical sales
-              strategy built from your website — so you can stop guessing and
-              start a conversation.
-            </p>
-            <a href="#strategy-example" className="hero-explore">
-              See what you’ll get <ArrowDown size={18} />
-            </a>
+          <div className="hero-intro">
+            <div className="hero-copy">
+              <h1>
+                You built your SaaS.
+                <br />
+                Now find your
+                <br className="hero-break" /> <span>first customers.</span>
+              </h1>
+              <div className="hero-bottom">
+                <p>
+                  A sharper target. A message worth sending. A practical sales
+                  strategy built from your website — so you can stop guessing
+                  and start a conversation.
+                </p>
+                <a href="#strategy-example" className="hero-explore">
+                  See what you’ll get <ArrowDown size={18} />
+                </a>
+              </div>
+            </div>
+            <aside
+              className="hero-first-move"
+              data-content-kind="illustrative"
+              aria-label="Illustrative first move for fictional Launchboard onboarding analytics, not FirstCustomers capabilities"
+            >
+              <p className="section-kicker">An illustrative first move</p>
+              <h2>
+                A smaller experiment.
+                <br />A clearer next step.
+              </h2>
+              <dl>
+                <div>
+                  <dt>Target</dt>
+                  <dd>Founder-led SaaS teams with active trials.</dd>
+                </div>
+                <div>
+                  <dt>Action</dt>
+                  <dd>
+                    Invite two reachable founders to discuss the last trial that
+                    stalled.
+                  </dd>
+                </div>
+                <div>
+                  <dt>Time</dt>
+                  <dd>45 minutes · no paid tools assumed.</dd>
+                </div>
+                <div>
+                  <dt>Positive result</dt>
+                  <dd>
+                    A buyer confirms an urgent problem and agrees on a next
+                    step.
+                  </dd>
+                </div>
+              </dl>
+              <p className="hero-example-note">
+                Example for a fictional onboarding analytics SaaS. A planning
+                target, never a forecast.
+              </p>
+              <Link href="/preview">
+                See the complete sample <ArrowUpRight size={16} />
+              </Link>
+            </aside>
           </div>
           <div className="hero-form" id="generate">
             <div className="form-intro">
@@ -99,7 +145,11 @@ export default async function Home({
             going — or change course.
           </p>
         </div>
-        <article className="strategy-demonstration">
+        <article
+          className="strategy-demonstration"
+          data-content-kind="illustrative"
+          aria-label="Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities"
+        >
           <div className="demo-title">
             <div>
               <span className="demo-product">L</span>

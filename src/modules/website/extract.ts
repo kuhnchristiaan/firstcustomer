@@ -3,6 +3,8 @@ import { createHash } from "node:crypto";
 import robotsParser from "robots-parser";
 import { normalizeUrl, safeFetch } from "./safe-fetch";
 import { AppError } from "@/lib/errors";
+import { classifyHtml } from "./classify-html";
+import { limitDocument } from "./document";
 export type Source = {
   url: string;
   title: string;
@@ -16,21 +18,13 @@ export function extract(html: string, url: string) {
   const links = $("a[href]")
     .map((_, e) => $(e).attr("href"))
     .get();
-  $("script,style,nav,header,footer,noscript,svg,iframe,form").remove();
-  const root = $("main").length ? $("main") : $("body");
-  const content = [
-    ...new Set(
-      root
-        .text()
-        .split(/\n+/)
-        .map((s) => s.replace(/\s+/g, " ").trim())
-        .filter((s) => s.length > 20),
-    ),
-  ].join("\n");
+  const document = classifyHtml($, url, title);
+  const content = JSON.stringify(document);
   return {
     url,
     title,
     content,
+    document,
     links,
     contentHash: createHash("sha256").update(content).digest("hex"),
     status: "SUCCESS",
@@ -86,9 +80,16 @@ export async function crawl(
       const page = extract(response.body, response.url);
       if (!page.content || hashes.has(page.contentHash)) continue;
       hashes.add(page.contentHash);
+      const document = limitDocument(
+        page.document,
+        Math.min(9000, maxChars - chars),
+      );
+      if (!document.blocks.some((b) => b.text.length >= 12)) continue;
+      const content = JSON.stringify(document);
       results.push({
         ...page,
-        content: page.content.slice(0, Math.min(9000, maxChars - chars)),
+        content,
+        contentHash: createHash("sha256").update(content).digest("hex"),
       });
       chars += results.at(-1)!.content.length;
       const candidates = page.links.flatMap((href) => {
