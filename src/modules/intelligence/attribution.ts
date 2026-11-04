@@ -121,3 +121,31 @@ export function generationProductContext(profile: ProductProfile) {
     ),
   };
 }
+
+// Shared by safe rendering and confidence badges. Only exact publisher wording
+// with the previously captured quote attribution can be called a website claim.
+export function quotedProductStatements(profile: ProductProfile) {
+  return [
+    ...(profile.identity.certainty === "Website-supported"
+      ? [
+          {
+            text: profile.identity.summary,
+            kind: "Owner product claim",
+            evidence: profile.identity.evidence,
+          },
+        ]
+      : []),
+    ...profile.statements.filter(
+      (s) =>
+        s.subject === "Owner product" &&
+        ["Owner product claim", "Website observation"].includes(s.kind),
+    ),
+  ].filter((s) =>
+    s.evidence.some(
+      (ref) =>
+        normalizeText(ref.quote) === normalizeText(s.text) &&
+        ref.blockId &&
+        /^https?:\/\//.test(ref.sourceUrl),
+    ),
+  );
+}

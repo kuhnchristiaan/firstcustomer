@@ -50,6 +50,10 @@ try {
     productIntelligence: attributedFixture.profile,
     recommendationBasis: attributedFixture.basis,
   };
+  const { publisherClaimFixture } = await server.ssrLoadModule(
+    "/tests/fixtures/publisher-claims.ts",
+  );
+  const publisherStored = publisherClaimFixture().stored;
   const home = await (await fetch("http://localhost:3100")).text();
   const headAssets = [...home.matchAll(/<link\b[^>]*>/g)]
     .map((x) => x[0])
@@ -121,7 +125,13 @@ try {
   await mkdir("artifacts/ui", { recursive: true });
   await writeFile(
     "artifacts/ui/fixtures.json",
-    JSON.stringify({ report: mockReport, strategy, context, attributed }),
+    JSON.stringify({
+      report: mockReport,
+      strategy,
+      context,
+      attributed,
+      publisherStored,
+    }),
   );
   await writeFile(
     "artifacts/ui/workspace.html",

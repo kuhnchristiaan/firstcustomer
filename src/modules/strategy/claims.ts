@@ -1,3 +1,4 @@
+import { quotedProductStatements } from "@/modules/intelligence/attribution";
 import type { z } from "zod";
 import type { claimSchema } from "./critique-schema";
 import type { FounderContext } from "./schema";
@@ -17,6 +18,8 @@ const capability =
 const qualified =
   /^(?:if\b|ask\b|confirm\b|whether\b|unknown\b|unverified\b|do not\b|no (?:evidence|verified|confirmed)\b|test whether\b)/i;
 const normalize = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();
+const missingClaimText =
+  "Ask the buyer about their current workflow and validate the relevant product capabilities before making a claim.";
 export function verifyClaims<T>(
   input: T,
   reviews: ClaimReview[],
@@ -90,10 +93,7 @@ export function verifyClaims<T>(
         return allowed;
       });
       if (kept.length === sentences.length) return v;
-      return (
-        kept.join("\n").trim() ||
-        "Ask the buyer about their current workflow and validate the relevant product capabilities before making a claim."
-      );
+      return kept.join("\n").trim() || missingClaimText;
     }
     if (Array.isArray(v))
       return v.map((x, i) => walk(x, path ? `${path}.${i}` : String(i)));
@@ -113,6 +113,68 @@ export function safeInitialReport(
   evidence: { url: string; content: string }[],
 ) {
   const next = structuredClone(report);
+  // These quotations were bound to fetched owner blocks before persistence.
+  // A publisher's statement is attributable evidence, never independent proof.
+  const ownerClaims =
+    report.schemaVersion === "1.1"
+      ? quotedProductStatements(report.productIntelligence)
+      : [];
+  const bind = (statement: (typeof ownerClaims)[number]) => ({
+    text: statement.text,
+    confidence: "Verified" as const,
+    sources: [...new Set(statement.evidence.map((ref) => ref.sourceUrl))],
+  });
+  // Repair only recognizable outputs of the old sanitizer in display copies.
+  // Keep original runs and founder-authored text intact in persistent storage.
+  const matchesOld = (
+    text: string,
+    statement: (typeof ownerClaims)[number],
+  ) => {
+    if (normalize(text) === normalize(statement.text)) return true;
+    const prior = verifyClaims({ text: statement.text }, [], [], {}, false)
+      .value.text;
+    return prior !== missingClaimText && normalize(text) === normalize(prior);
+  };
+  if (report.schemaVersion === "1.1") {
+    const identity = ownerClaims.find(
+      (s) => s.text === report.productIntelligence.identity.summary,
+    );
+    if (
+      identity &&
+      next.overview.confidence === "Unknown" &&
+      matchesOld(next.overview.text, identity)
+    )
+      next.overview = bind(identity);
+    next.offerings = next.offerings.map((claim) => {
+      const statement = ownerClaims.find((s) => matchesOld(claim.text, s));
+      return claim.confidence === "Unknown" && statement
+        ? bind(statement)
+        : claim;
+    });
+  }
+  const cleanFact = (value: unknown): unknown => {
+    if (Array.isArray(value)) return value.map(cleanFact);
+    if (value && typeof value === "object") {
+      const obj = value as Record<string, unknown>;
+      if ("confidence" in obj && typeof obj.text === "string") {
+        const attributed = ownerClaims.find(
+          (s) => normalize(s.text) === normalize(String(obj.text)),
+        );
+        if (obj.confidence === "Verified" && attributed)
+          return { ...obj, ...bind(attributed) };
+        const clean = verifyClaims(obj, [], evidence, {}, false).value;
+        return JSON.stringify(clean) !== JSON.stringify(obj)
+          ? { ...clean, confidence: "Unknown", sources: [] }
+          : clean;
+      }
+      return Object.fromEntries(
+        Object.entries(obj).map(([key, child]) => [key, cleanFact(child)]),
+      );
+    }
+    return typeof value === "string"
+      ? verifyClaims(value, [], evidence, {}, false).value
+      : value;
+  };
   for (const key of [
     "overview",
     "offerings",
@@ -127,21 +189,7 @@ export function safeInitialReport(
     "buyingSignals",
     "missingInformation",
   ] as const) {
-    const before = JSON.stringify(next[key]);
-    const clean = verifyClaims(next[key], [], evidence, {}, false).value;
-    if (JSON.stringify(clean) !== before) {
-      const downgrade = (v: unknown): unknown =>
-        Array.isArray(v)
-          ? v.map(downgrade)
-          : v && typeof v === "object"
-            ? "confidence" in v && "text" in v
-              ? { ...v, confidence: "Unknown", sources: [] }
-              : Object.fromEntries(
-                  Object.entries(v).map(([k, x]) => [k, downgrade(x)]),
-                )
-            : v;
-      (next as unknown as Record<string, unknown>)[key] = downgrade(clean);
-    }
+    (next as unknown as Record<string, unknown>)[key] = cleanFact(next[key]);
   }
   for (const key of [
     "positioning",

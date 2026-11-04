@@ -9,6 +9,7 @@ import {
   EvidenceLinks,
   SourceReferences,
   ProductAttribution,
+  ClaimBadge,
 } from "./evidence";
 import { reportSchema, type Report } from "@/modules/intelligence/schema";
 type Claim = { text: string; confidence: string; sources: string[] };
@@ -261,13 +262,7 @@ export function Value({
       const c = obj as Claim;
       return (
         <div className="claim">
-          <span className={`badge ${c.confidence.toLowerCase()}`}>
-            {c.confidence === "Inferred"
-              ? "Hypothesis — needs validation"
-              : c.confidence === "Unknown"
-                ? "Not established yet"
-                : "Website-supported"}
-          </span>
+          <ClaimBadge confidence={c.confidence} text={c.text} />
           {editing && (
             <select
               aria-label={`${label} confidence`}
@@ -421,10 +416,10 @@ export function ReportView({
             </h1>
           )}
           <p className="report-intro mt-4 mb-7">
-            A focused starting point for finding your first customers. Verified
-            means supported by the website; inferred means a hypothesis to test;
-            unknown means more information is needed. Targets are experiments,
-            not forecasts.
+            A focused starting point for finding your first customers. Website
+            claims describe what the publisher says, not independently verified
+            results. Hypotheses need testing; “Not established yet” means
+            information is missing. Targets are experiments, not forecasts.
           </p>
           {!mock && report.schemaVersion === "1.0" && (
             <p className="legacy-attribution-note no-print">

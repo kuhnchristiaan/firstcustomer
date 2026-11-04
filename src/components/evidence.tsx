@@ -1,7 +1,9 @@
 "use client";
 import { createContext, useContext, type ReactNode } from "react";
+import { quotedProductStatements } from "@/modules/intelligence/attribution";
 import type { Report } from "@/modules/intelligence/schema";
 const EvidenceContext = createContext<string[]>([]);
+const ClaimContext = createContext<{ text: string; kind: string }[]>([]);
 function sourcesOf(value: unknown): string[] {
   if (Array.isArray(value)) return value.flatMap(sourcesOf);
   if (!value || typeof value !== "object") return [];
@@ -29,7 +31,15 @@ export function EvidenceProvider({
 }) {
   return (
     <EvidenceContext.Provider value={[...new Set(sourcesOf(report))]}>
-      {children}
+      <ClaimContext.Provider
+        value={
+          report.schemaVersion === "1.1"
+            ? quotedProductStatements(report.productIntelligence)
+            : []
+        }
+      >
+        {children}
+      </ClaimContext.Provider>
     </EvidenceContext.Provider>
   );
 }
@@ -114,5 +124,40 @@ export function ProductAttribution({ report }: { report: Report }) {
         </div>
       )}
     </details>
+  );
+}
+
+export function ClaimBadge({
+  confidence,
+  text,
+}: {
+  confidence: string;
+  text: string;
+}) {
+  const claims = useContext(ClaimContext);
+  const normalize = (value: string) => value.replace(/\s+/g, " ").trim();
+  const ownerClaim = claims.some(
+    (s) =>
+      s.kind === "Owner product claim" && normalize(s.text) === normalize(text),
+  );
+  const label =
+    confidence === "Inferred"
+      ? "Hypothesis — needs validation"
+      : confidence === "Unknown"
+        ? "Not established yet"
+        : ownerClaim
+          ? "Website claim"
+          : "Website-supported";
+  return (
+    <span
+      className={`badge ${confidence.toLowerCase()}`}
+      title={
+        ownerClaim && confidence === "Verified"
+          ? "Quoted from the publisher’s website; not independently verified."
+          : undefined
+      }
+    >
+      {label}
+    </span>
   );
 }

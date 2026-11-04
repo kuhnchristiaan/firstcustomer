@@ -565,3 +565,57 @@ test("mobile workspace labels failed, active and preserved strategies accurately
     .analyze();
   expect(scan.violations.map((v) => v.id)).toEqual([]);
 });
+
+test("Plausible publisher claims retain evidence labels in existing report display and print", async ({
+  page,
+}) => {
+  await setup(page);
+  await page.route("**/api/guest/report", (route) =>
+    route.fulfill({
+      json: {
+        status: "SUCCEEDED",
+        output: fixture.publisherStored,
+        mock: false,
+        expiresAt: "2026-11-06T12:00:00Z",
+        websiteUrl: "https://plausible.io/",
+      },
+    }),
+  );
+  await page.route("**/api/guest/refinement", (route) =>
+    route.fulfill({ json: { defaultContext: fixture.context, revisions: [] } }),
+  );
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/guest/report");
+  const overview = page.locator("#overview"),
+    offerings = page.locator("#offerings");
+  await expect(overview).toContainText("Website claim");
+  await expect(overview).not.toContainText("Not established yet");
+  await expect(offerings).not.toContainText("Not established yet");
+  await expect(offerings).toContainText("1 to 100 percent");
+  await expect(
+    overview.getByRole("link", { name: /Evidence source/ }),
+  ).toHaveAttribute("href", "https://plausible.io/");
+  await expect(page.locator("#geographicFocus")).toContainText(
+    "Not established yet",
+  );
+  await page.screenshot({
+    path: "artifacts/ui/publisher-claims-390.png",
+    fullPage: true,
+  });
+  await offerings.screenshot({
+    path: "artifacts/ui/publisher-capabilities-390.png",
+  });
+  const scan = await new AxeBuilder({ page })
+    .withTags(["wcag2a", "wcag2aa", "wcag22aa"])
+    .analyze();
+  expect(scan.violations.map((v) => v.id)).toEqual([]);
+  await page.emulateMedia({ media: "print" });
+  await expect(overview).toContainText("Website claim");
+  await expect(overview).not.toContainText("Not established yet");
+  await page.pdf({
+    path: "artifacts/ui/publisher-claims-A4.pdf",
+    format: "A4",
+    preferCSSPageSize: true,
+    printBackground: true,
+  });
+});
