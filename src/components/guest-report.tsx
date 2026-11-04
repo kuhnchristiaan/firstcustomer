@@ -12,6 +12,7 @@ export function GuestReport() {
   const [error, setError] = useState("");
   const [expires, setExpires] = useState("");
   const [mock, setMock] = useState(false);
+  const [websiteUrl, setWebsiteUrl] = useState("");
   useEffect(() => {
     let live = true;
     let timer: ReturnType<typeof setTimeout>;
@@ -29,6 +30,7 @@ export function GuestReport() {
           return;
         }
         setStatus(data.status);
+        setWebsiteUrl(data.websiteUrl ?? "");
         setExpires(data.expiresAt);
         setMock(data.mock);
         if (data.output) {
@@ -126,7 +128,9 @@ export function GuestReport() {
               : error ||
                 "Enter your SaaS website to get started. No account is required."}
           </p>
-          {!["RUNNING", "LOADING"].includes(status) && <UrlForm />}
+          {!["RUNNING", "LOADING"].includes(status) && (
+            <UrlForm initialUrl={websiteUrl} />
+          )}
         </section>
       )}
     </main>

@@ -26,6 +26,44 @@ const labels: Record<string, string> = {
 function humanize(s: string) {
   return s.replace(/([A-Z])/g, " $1").replace(/^./, (s) => s.toUpperCase());
 }
+function OutreachCard({
+  message,
+}: {
+  message: { channel: string; subject: string; body: string };
+}) {
+  const [status, setStatus] = useState("");
+  return (
+    <article className="rounded-xl border p-5">
+      <h3 className="font-semibold">{message.channel}</h3>
+      <p className="my-3 text-sm font-semibold">{message.subject}</p>
+      <p className="whitespace-pre-wrap text-sm leading-7">
+        {message.body.replace(/\\n/g, "\n")}
+      </p>
+      <p className="mt-3 text-sm muted">
+        Replace every placeholder and verify your product claims before sending.
+      </p>
+      <Button
+        variant="outline"
+        className="no-print mt-3"
+        onClick={async () => {
+          try {
+            await navigator.clipboard.writeText(
+              `${message.subject}\n\n${message.body.replace(/\\n/g, "\n")}`,
+            );
+            setStatus("Copied");
+          } catch {
+            setStatus("Copy unavailable. Select and copy the message text.");
+          }
+        }}
+      >
+        Copy message
+      </Button>
+      <span role="status" className="ml-3 text-sm">
+        {status}
+      </span>
+    </article>
+  );
+}
 export function Value({
   value,
   onChange,
@@ -37,6 +75,107 @@ export function Value({
   editing: boolean;
   label?: string;
 }): React.ReactNode {
+  if (
+    !editing &&
+    Array.isArray(value) &&
+    value.length &&
+    value.every(
+      (v) => v && typeof v === "object" && "name" in v && "buyerRoles" in v,
+    )
+  )
+    return (
+      <div className="grid gap-4">
+        {(value as Report["segments"]).map((s, i) => (
+          <article key={i} className="rounded-xl border p-5">
+            <h3 className="text-lg font-semibold">
+              {s.priority}. {s.name}
+            </h3>
+            <p className="my-2 text-sm muted">
+              {s.industry} · {s.customerType} · {s.buyerRoles.join(", ")}
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div>
+                <h4 className="font-semibold text-sm">Pain to investigate</h4>
+                <p className="text-sm leading-7">{s.problems.join("; ")}</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-sm">Why they might buy</h4>
+                <p className="text-sm leading-7">{s.motivations.join("; ")}</p>
+              </div>
+            </div>
+            <p className="my-3 text-sm leading-7">
+              Potential signals: {s.buyingSignals.join("; ")}
+            </p>
+            <details>
+              <summary className="cursor-pointer text-sm underline">
+                Evidence and assumptions
+              </summary>
+              <Value value={s.evidence} editing={false} onChange={() => {}} />
+            </details>
+          </article>
+        ))}
+      </div>
+    );
+  if (
+    !editing &&
+    Array.isArray(value) &&
+    value.length &&
+    value.every(
+      (v) => v && typeof v === "object" && "week" in v && "rationale" in v,
+    )
+  )
+    return (
+      <div className="grid gap-4">
+        {(value as Report["thirtyDayPlan"]).map((w) => (
+          <article key={w.week} className="rounded-xl border p-5">
+            <h3 className="font-semibold">
+              Week {w.week} · {w.objective}
+            </h3>
+            <ul className="my-3 list-disc pl-5 text-sm leading-7">
+              {w.actions.map((a) => (
+                <li key={a}>{a}</li>
+              ))}
+            </ul>
+            <p className="text-sm leading-7">Review: {w.successMetric}</p>
+            <details>
+              <summary className="mt-3 cursor-pointer text-sm underline">
+                Planning assumptions
+              </summary>
+              <Value value={w.rationale} editing={false} onChange={() => {}} />
+            </details>
+          </article>
+        ))}
+      </div>
+    );
+  if (
+    !editing &&
+    Array.isArray(value) &&
+    value.length &&
+    value.every(
+      (v) => v && typeof v === "object" && "subject" in v && "body" in v,
+    )
+  )
+    return (
+      <div className="grid gap-4">
+        {(value as Report["outreachTemplates"]).map((m, i) => (
+          <div key={i}>
+            <OutreachCard message={m} />
+            {m.rationale && (
+              <details className="my-3">
+                <summary className="cursor-pointer text-sm underline">
+                  Message rationale
+                </summary>
+                <Value
+                  value={m.rationale}
+                  editing={false}
+                  onChange={() => {}}
+                />
+              </details>
+            )}
+          </div>
+        ))}
+      </div>
+    );
   if (typeof value === "string")
     return editing ? (
       <textarea
@@ -182,6 +321,8 @@ export function ReportView({
   const [pending, setPending] = useState(false);
   const [message, setMessage] = useState("");
   const [savedVersion, setSavedVersion] = useState(version);
+  const displayLabel = (key: string) =>
+    sections ? (labels[key] ?? key).replace(/^\d+ · /, "") : labels[key];
   const keys =
     sections ??
     (preview
@@ -251,7 +392,7 @@ export function ReportView({
           <div className="mt-4 grid gap-3">
             {keys.map((k) => (
               <a key={k} href={`#${k}`} className="text-sm underline">
-                {labels[k]}
+                {displayLabel(k)}
               </a>
             ))}
           </div>
@@ -267,26 +408,32 @@ export function ReportView({
                 href={`#${k}`}
                 className="block text-xs leading-5 muted hover:text-teal-800"
               >
-                {labels[k]}
+                {displayLabel(k)}
               </a>
             ))}
           </nav>
         </aside>
         <div>
           <p className="eyebrow mb-3">SAAS SALES STRATEGY</p>
-          <h1 className="text-4xl font-semibold tracking-tight">
-            {editing ? (
-              <input
-                aria-label="Product name"
-                value={report.businessName}
-                onChange={(e) =>
-                  setReport({ ...report, businessName: e.target.value })
-                }
-              />
-            ) : (
-              report.businessName
-            )}
-          </h1>
+          {sections ? (
+            <h2 className="text-3xl font-semibold tracking-tight">
+              {report.businessName}
+            </h2>
+          ) : (
+            <h1 className="text-4xl font-semibold tracking-tight">
+              {editing ? (
+                <input
+                  aria-label="Product name"
+                  value={report.businessName}
+                  onChange={(e) =>
+                    setReport({ ...report, businessName: e.target.value })
+                  }
+                />
+              ) : (
+                report.businessName
+              )}
+            </h1>
+          )}
           <p className="mt-4 mb-7 text-sm leading-7 muted">
             A focused starting point for finding your first customers. Verified
             means supported by the website; inferred means a hypothesis to test;
@@ -295,11 +442,11 @@ export function ReportView({
           </p>
           {keys.map((key) => (
             <section id={key} key={key} className="report-section panel">
-              <h2>{labels[key]}</h2>
+              <h2>{displayLabel(key)}</h2>
               <Value
                 value={report[key as keyof Report]}
                 editing={editing}
-                label={labels[key]}
+                label={displayLabel(key)}
                 onChange={(v) => setReport({ ...report, [key]: v })}
               />
             </section>

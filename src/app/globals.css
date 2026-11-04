@@ -213,3 +213,47 @@ a {
     overflow-wrap: anywhere;
   }
 }
+
+@media print {
+  details::details-content {
+    display: block !important;
+    content-visibility: visible !important;
+  }
+  details summary {
+    font-weight: 600;
+  }
+  .report-section li {
+    break-inside: avoid;
+  }
+}
+
+@media (max-width: 639px) {
+  header .container {
+    height: auto;
+    min-height: 80px;
+    flex-wrap: wrap;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  header nav {
+    width: 100%;
+  }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .panel {
+    padding: 20px;
+  }
+}
+
+main {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 639px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}

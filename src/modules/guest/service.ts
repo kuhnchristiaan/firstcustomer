@@ -237,6 +237,7 @@ export async function readGuest(token: string | undefined) {
   if (!run)
     return {
       status: "EMPTY",
+      websiteUrl: session.websiteUrl,
       output: null,
       expiresAt: session.expiresAt,
       error: null,
@@ -245,6 +246,7 @@ export async function readGuest(token: string | undefined) {
   const stale = run.status === "RUNNING" && run.leaseExpiresAt <= new Date();
   return {
     status: stale ? "FAILED" : run.status,
+    websiteUrl: session.websiteUrl,
     output: run.status === "SUCCEEDED" ? run.output : null,
     expiresAt: session.expiresAt,
     error: stale ? "Processing timed out. Please try again." : run.error,

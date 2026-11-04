@@ -138,7 +138,7 @@ export default async function Home({
               [
                 Target,
                 "Know who needs you",
-                "Three prioritized ICPs, their problems, buying motivations and signs worth investigating.",
+                "Three prioritized ideal customer profiles, their problems, buying motivations and signs worth investigating.",
               ],
               [
                 MessageSquare,

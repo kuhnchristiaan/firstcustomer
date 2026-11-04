@@ -55,6 +55,13 @@ export default async function Preview({
           have been discovered.
         </p>
       </section>
+      <p className="mb-6 text-sm leading-7 muted">
+        Decision gate: proceed to the next week only when the earlier experiment
+        confirms an urgent problem and an agreed next step. Counts below are
+        optional planning targets; stop and narrow the segment if the first two
+        conversations show low priority. A trial or free signup is not a paying
+        customer.
+      </p>
       <ReportView
         initial={mockReport}
         mock

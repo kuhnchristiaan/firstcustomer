@@ -271,6 +271,9 @@ describe.skipIf(!connection)(
       expect(failed.status).toBe("FAILED");
       expect(failed.inputTokens).toBe(100);
       expect(failed.output).toBeNull();
+      const retryState=await readGuest(s.token);
+      expect(retryState.status).toBe("FAILED");
+      expect(new URL(retryState.websiteUrl).hostname).toBe("example.com");
       await generateGuest(s.token, "https://example.com", randomUUID());
       expect((await readGuest(s.token)).status).toBe("SUCCEEDED");
       expect(

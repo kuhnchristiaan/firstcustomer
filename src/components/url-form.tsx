@@ -102,7 +102,7 @@ export function UrlForm({
             ? "Building your report…"
             : authenticated
               ? "Generate free report"
-              : "Generate My Free Sales Strategy"}
+              : "Generate my free strategy"}
         </Button>
       </div>
       {!authenticated && (
@@ -110,8 +110,8 @@ export function UrlForm({
       )}
       <p className="mt-3 text-xs muted">
         {authenticated
-          ? "Usually 30–120 seconds. Keep this page open while we analyze your site."
-          : "No account required. No credit card needed."}
+          ? "Generation can take a few minutes. Keep this page open while we analyse your site."
+          : "No account required. No credit card needed. Generation can take a few minutes."}
       </p>
       <p role="status" className="mt-3 text-sm text-red-700">
         {error}

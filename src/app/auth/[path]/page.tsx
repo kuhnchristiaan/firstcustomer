@@ -1,3 +1,5 @@
+import { RecoveryForm } from "@/components/recovery-form";
+import { notFound } from "next/navigation";
 import { AuthForm } from "@/components/auth-form";
 import { configured } from "@/modules/config/env";
 export default async function AuthPage({
@@ -5,27 +7,52 @@ export default async function AuthPage({
   searchParams,
 }: {
   params: Promise<{ path: string }>;
-  searchParams: Promise<{ url?: string; save?: string }>;
+  searchParams: Promise<{
+    url?: string;
+    save?: string;
+    token?: string;
+    error?: string;
+  }>;
 }) {
   const { path } = await params;
-  const { url = "", save } = await searchParams;
+  const { url = "", save, token, error } = await searchParams;
   const signup = path === "sign-up";
+  if (
+    !["sign-up", "sign-in", "forgot-password", "reset-password"].includes(path)
+  )
+    notFound();
+  const recovery = path === "forgot-password" || path === "reset-password";
   return (
     <main className="container py-16">
       <div className="panel mx-auto max-w-md">
         <p className="eyebrow">YOUR NEXT CHAPTER</p>
         <h1 className="mb-3 mt-4 text-3xl font-semibold tracking-tight">
-          {signup ? "Your sales plan starts here." : "Welcome back."}
+          {recovery
+            ? path === "forgot-password"
+              ? "Reset your password"
+              : "Choose a new password"
+            : signup
+              ? "Your sales plan starts here."
+              : "Welcome back."}
         </h1>
         <p className="mb-7 text-sm leading-6 muted">
           A free account keeps your reports and approved strategy in one place.
         </p>
         {configured() ? (
-          <AuthForm
-            signup={signup}
-            website={url}
-            saveGuest={save === "guest"}
-          />
+          recovery ? (
+            <RecoveryForm
+              reset={path === "reset-password"}
+              token={token}
+              invalid={Boolean(error)}
+              saveGuest={save === "guest"}
+            />
+          ) : (
+            <AuthForm
+              signup={signup}
+              website={url}
+              saveGuest={save === "guest"}
+            />
+          )
         ) : (
           <p className="rounded-lg bg-amber-50 p-4 text-sm leading-6">
             Account registration needs this application’s Neon Auth and

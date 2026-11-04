@@ -39,7 +39,11 @@ export default function RootLayout({
           <span>
             FirstCustomers · A clearer path to your first 10 customers.
           </span>
-          <span>Free to start. Built for focused experiments.</span>
+          <nav aria-label="Footer" className="flex flex-wrap gap-5 text-sm">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Beta terms</Link>
+            <Link href="/support">Support</Link>
+          </nav>
         </footer>
       </body>
     </html>

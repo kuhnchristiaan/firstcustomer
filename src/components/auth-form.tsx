@@ -6,7 +6,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { FunnelView } from "./funnel";
-const client = createAuthClient();
+export const authClient = createAuthClient();
+const client = authClient;
 export function AuthForm({
   signup,
   website,
@@ -19,6 +20,7 @@ export function AuthForm({
   const router = useRouter();
   const [pending, setPending] = useState(false);
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   return (
     <form
       className="space-y-4"
@@ -73,7 +75,7 @@ export function AuthForm({
       <label className="block text-sm">
         Password
         <input
-          type="password"
+          type={showPassword ? "text" : "password"}
           name="password"
           minLength={8}
           maxLength={128}
@@ -82,12 +84,42 @@ export function AuthForm({
           className="mt-2"
         />
       </label>
+      <button
+        type="button"
+        aria-pressed={showPassword}
+        className="text-sm underline"
+        onClick={() => setShowPassword((v) => !v)}
+      >
+        {showPassword ? "Hide password" : "Show password"}
+      </button>
+      {signup && (
+        <p className="text-sm muted">
+          Use 8–128 characters. Choose a unique password.
+        </p>
+      )}
+      {!signup && (
+        <Link
+          className="block text-sm underline"
+          href={`/auth/forgot-password${saveGuest ? "?save=guest" : ""}`}
+        >
+          Forgot password?
+        </Link>
+      )}
+      {signup && (
+        <p className="text-sm leading-6 muted">
+          Read our{" "}
+          <Link href="/privacy" className="underline">
+            privacy notice
+          </Link>{" "}
+          and{" "}
+          <Link href="/terms" className="underline">
+            beta terms
+          </Link>
+          . Your guest report stays in this browser until saved or expired.
+        </p>
+      )}
       <Button className="w-full" disabled={pending}>
-        {pending
-          ? "Please waitâ€¦"
-          : signup
-            ? "Create free account"
-            : "Sign in"}
+        {pending ? "Please wait…" : signup ? "Create free account" : "Sign in"}
       </Button>
       <p role="alert" className="text-sm text-red-700">
         {error}
