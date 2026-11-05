@@ -1,5 +1,7 @@
+import { strategyConsistency } from "@/modules/intelligence/strategy-consistency";
 import {
   acquisitionSchema,
+  acquisitionWireSchema,
   acquisitionInstructions,
 } from "@/modules/intelligence/acquisition-contract";
 import { assembleAcquisition } from "@/modules/intelligence/acquisition-strategy";
@@ -226,7 +228,7 @@ export function provider(): AnalysisProvider {
         const ids = generationProductProfile(profile).statements.map(
           (s) => s.id,
         ) as [string, ...string[]];
-        const generationSchema = acquisitionSchema(ids);
+        const generationSchema = acquisitionWireSchema(ids);
         stage = "report_generation";
         const generated = generationSchema.parse(
           await call(
@@ -247,6 +249,25 @@ export function provider(): AnalysisProvider {
         );
         stage = "quality_gate";
         const inspect = (value: typeof generated) => {
+          const factIssues = verifyClaims(
+            value,
+            [],
+            productEvidence(sources),
+            {},
+            true,
+            {
+              productName: profile.identity.name,
+              deferCapabilities: true,
+            },
+          )
+            .actions.filter((a) => a.action === "removed")
+            .map((a) => ({
+              section: a.path.split(".")[0],
+              path: a.path,
+              reason: `Unsupported assertion: ${a.path}`,
+            }));
+          const consistency = strategyConsistency(value, profile);
+          if (consistency.length) return [...consistency, ...factIssues];
           const report = assembleAcquisition(value, profile);
           const leaves = leafFields(value);
           const reportLeaves = leafFields(report);
@@ -276,16 +297,7 @@ export function provider(): AnalysisProvider {
                 const path = i.reason.match(/: ([\w]+(?:\.\w+)+)$/)?.[1];
                 return path ? translate(path, i.reason) : [i];
               }),
-              ...verifyClaims(value, [], productEvidence(sources), {}, true, {
-                productName: profile.identity.name,
-                deferCapabilities: true,
-              })
-                .actions.filter((a) => a.action === "removed")
-                .map((a) => ({
-                  section: a.path.split(".")[0],
-                  path: a.path,
-                  reason: `Unsupported assertion: ${a.path}`,
-                })),
+              ...factIssues,
             ];
           if (
             !/\b(?:urgenc|urgent|pay|purchas|buy|budget|authority|commercial|paid)\w*/i.test(
@@ -320,7 +332,7 @@ export function provider(): AnalysisProvider {
           },
           call,
           validate: (value) => {
-            const parsed = generationSchema.parse(value);
+            const parsed = acquisitionSchema(ids).parse(value);
             validateEvidence(
               assembleAcquisition(parsed, profile),
               sources.map((s) => s.url),

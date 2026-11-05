@@ -1,0 +1,283 @@
+{
+  "rows": [
+    {
+      "site": "senja",
+      "model": "gpt-4.1-mini",
+      "label": "sample-faa8f0fd",
+      "requestedModel": "gpt-4.1-mini",
+      "resolvedModel": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "incompleteDetails": null,
+      "latencyMs": 9180,
+      "actualInput": 1163,
+      "actualOutput": 774,
+      "reasoningTokens": 0,
+      "cachedInput": 0,
+      "cacheWrites": 0,
+      "estimatedCostUsd": 0.0017036000000000002,
+      "serviceTier": "default",
+      "jsonValid": true,
+      "schemaValid": true,
+      "assembled": true,
+      "completeStrategy": true,
+      "diagnostics": {
+        "deterministicFindings": [],
+        "publication": "Not attempted; diagnostic assembly only"
+      },
+      "quality": {
+        "A": 11,
+        "B": 10,
+        "C": 9,
+        "D": 8,
+        "E": 5,
+        "F": 3
+      },
+      "qualityTotal": 46,
+      "commerciallyAcceptable": false,
+      "contentComplete": true,
+      "readableArtifact": "docs/model-intelligence-benchmark-2026-11-05/senja/gpt-4.1-mini/strategy.md",
+      "assessmentClarification": "assessment-clarifications.json; original blind scores unchanged",
+      "fieldsAtCharacterCap": [
+        {
+          "path": "firstBuyerWhy",
+          "characters": 220,
+          "cap": 220,
+          "ending": "o-paid tools quickly; startup managers take longer to decide"
+        }
+      ]
+    },
+    {
+      "site": "senja",
+      "model": "gpt-6.1-sol",
+      "label": "sample-c5a66ad2",
+      "requestedModel": "gpt-6.1-sol",
+      "resolvedModel": "gpt-6.1-sol",
+      "status": "completed",
+      "incompleteDetails": null,
+      "latencyMs": 66484,
+      "actualInput": 1161,
+      "actualOutput": 2178,
+      "reasoningTokens": 516,
+      "cachedInput": 0,
+      "cacheWrites": 1158,
+      "estimatedCostUsd": 0.024681,
+      "serviceTier": "default",
+      "jsonValid": true,
+      "schemaValid": true,
+      "assembled": true,
+      "completeStrategy": true,
+      "diagnostics": {
+        "deterministicFindings": [
+          {
+            "section": "firstExperiment",
+            "path": "firstExperiment.resources.assumedMinutes",
+            "reason": "Activity scope leaves insufficient assumed time for qualification, preparation and replies"
+          }
+        ],
+        "publication": "Not attempted; diagnostic assembly only"
+      },
+      "quality": {
+        "A": 14,
+        "B": 18,
+        "C": 20,
+        "D": 13,
+        "E": 9,
+        "F": 3
+      },
+      "qualityTotal": 77,
+      "commerciallyAcceptable": false,
+      "contentComplete": false,
+      "readableArtifact": "docs/model-intelligence-benchmark-2026-11-05/senja/gpt-6.1-sol/strategy.md",
+      "fieldsAtCharacterCap": [
+        {
+          "path": "segments.2.market",
+          "characters": 100,
+          "cap": 100,
+          "ending": "customers and a publicly discussed launch or website refresh"
+        },
+        {
+          "path": "firstBuyerWhy",
+          "characters": 220,
+          "cap": 220,
+          "ending": "sis, not established demand. Agency owners win instead if a "
+        },
+        {
+          "path": "paymentPath",
+          "characters": 220,
+          "cap": 220,
+          "ending": "nality. Confirm the buyer's required capability, acceptable "
+        },
+        {
+          "path": "firstExperiment.channelRationale",
+          "characters": 300,
+          "cap": 300,
+          "ending": "ompared with partner recruitment, access requires fewer gate"
+        },
+        {
+          "path": "alternatives.0.comparison",
+          "characters": 220,
+          "cap": 220,
+          "ending": "idence is slower without existing traffic; community access,"
+        },
+        {
+          "path": "positioning",
+          "characters": 220,
+          "cap": 220,
+          "ending": "st workflow fit and paid value; do not promise conversion or"
+        }
+      ]
+    },
+    {
+      "site": "tally",
+      "model": "gpt-4.1-mini",
+      "label": "sample-f5838bb2",
+      "requestedModel": "gpt-4.1-mini",
+      "resolvedModel": "gpt-4.1-mini-2025-04-14",
+      "status": "completed",
+      "incompleteDetails": null,
+      "latencyMs": 8479,
+      "actualInput": 1221,
+      "actualOutput": 800,
+      "reasoningTokens": 0,
+      "cachedInput": 0,
+      "cacheWrites": 0,
+      "estimatedCostUsd": 0.0017684,
+      "serviceTier": "default",
+      "jsonValid": true,
+      "schemaValid": true,
+      "assembled": true,
+      "completeStrategy": true,
+      "diagnostics": {
+        "deterministicFindings": [],
+        "publication": "Not attempted; diagnostic assembly only"
+      },
+      "quality": {
+        "A": 10,
+        "B": 10,
+        "C": 7,
+        "D": 7,
+        "E": 1,
+        "F": 2
+      },
+      "qualityTotal": 37,
+      "commerciallyAcceptable": false,
+      "contentComplete": false,
+      "readableArtifact": "docs/model-intelligence-benchmark-2026-11-05/tally/gpt-4.1-mini/strategy.md",
+      "fieldsAtCharacterCap": [
+        {
+          "path": "firstBuyerWhy",
+          "characters": 220,
+          "cap": 220,
+          "ending": "ers. Startup founders come second when validation demands is"
+        }
+      ]
+    },
+    {
+      "site": "tally",
+      "model": "gpt-6.1-sol",
+      "label": "sample-81369703",
+      "requestedModel": "gpt-6.1-sol",
+      "resolvedModel": "gpt-6.1-sol",
+      "status": "completed",
+      "incompleteDetails": null,
+      "latencyMs": 63992,
+      "actualInput": 1219,
+      "actualOutput": 2024,
+      "reasoningTokens": 479,
+      "cachedInput": 0,
+      "cacheWrites": 1216,
+      "estimatedCostUsd": 0.023286,
+      "serviceTier": "default",
+      "jsonValid": true,
+      "schemaValid": true,
+      "assembled": false,
+      "completeStrategy": true,
+      "diagnostics": {
+        "error": "ZodError",
+        "issues": [
+          {
+            "path": "outreachTemplates.0.channel",
+            "code": "too_big"
+          },
+          {
+            "path": "outreachTemplates.1.channel",
+            "code": "too_big"
+          }
+        ]
+      },
+      "quality": {
+        "A": 13,
+        "B": 13,
+        "C": 10,
+        "D": 11,
+        "E": 6,
+        "F": 3
+      },
+      "qualityTotal": 56,
+      "commerciallyAcceptable": false,
+      "contentComplete": false,
+      "readableArtifact": "docs/model-intelligence-benchmark-2026-11-05/tally/gpt-6.1-sol/strategy.md",
+      "fieldsAtCharacterCap": [
+        {
+          "path": "segments.0.market",
+          "characters": 100,
+          "cap": 100,
+          "ending": "te projects with client questionnaires and asset collection."
+        },
+        {
+          "path": "firstBuyerWhy",
+          "characters": 220,
+          "cap": 220,
+          "ending": "kickoff, not agencies generally. Solo designers win instead,"
+        },
+        {
+          "path": "paymentPath",
+          "characters": 220,
+          "cap": 220,
+          "ending": "e. If authorized, test a clearly scoped €49 pilot: configure"
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "gpt-4.1-mini": {
+      "runs": 2,
+      "completeStructuredContracts": 2,
+      "contentComplete": 1,
+      "commerciallyAcceptable": 0,
+      "costUsd": 0.0034720000000000003,
+      "costPerCompleteStructuredContractUsd": 0.0017360000000000001,
+      "costPerContentCompleteStrategyUsd": 0.0034720000000000003,
+      "costPerCommerciallyAcceptableUsd": null,
+      "meanScore": 41.5,
+      "meanLatencySeconds": 8.8295
+    },
+    "gpt-6.1-sol": {
+      "runs": 2,
+      "completeStructuredContracts": 2,
+      "contentComplete": 0,
+      "commerciallyAcceptable": 0,
+      "costUsd": 0.047967,
+      "costPerCompleteStructuredContractUsd": 0.0239835,
+      "costPerContentCompleteStrategyUsd": null,
+      "costPerCommerciallyAcceptableUsd": null,
+      "meanScore": 66.5,
+      "meanLatencySeconds": 65.238
+    }
+  },
+  "overall": {
+    "paidCalls": 4,
+    "totalInputTokens": 4764,
+    "totalOutputTokens": 5776,
+    "reasoningTokens": 995,
+    "cachedInputTokens": 0,
+    "cacheWriteTokens": 2374,
+    "costUsd": 0.051439000000000006,
+    "apiLatencySeconds": 148.135,
+    "meanQualityImprovementPoints": 25.0,
+    "meanQualityImprovementPercent": 60.24096385542168,
+    "relativeCostFactor": 13.815380184331797,
+    "relativeLatencyFactor": 7.388640353360893
+  },
+  "recommendation": "D: neither current model/contract combination is commercially acceptable without targeted fixes. Sol demonstrates better reasoning, but no production model change is justified yet."
+}

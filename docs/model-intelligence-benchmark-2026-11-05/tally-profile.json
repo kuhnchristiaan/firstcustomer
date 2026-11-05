@@ -1,0 +1,76 @@
+{
+  "version": "1.0",
+  "identity": {
+    "name": "Tally",
+    "summary": "Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions",
+    "category": "Customer acquisition",
+    "primaryJob": {
+      "actor": "Anyone needing to create online forms",
+      "problem": "Creating professional, customizable forms without coding or cost barriers",
+      "outcome": "Easily build unlimited forms that collect data securely and provide tailored respondent experiences"
+    },
+    "certainty": "Website-supported",
+    "evidence": [
+      {
+        "sourceUrl": "https://tally.so/",
+        "blockId": "e4a93feeb310",
+        "quote": "Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions"
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "s1",
+      "text": "The simplest way to create beautiful, professional forms in seconds. Unlimited forms, unlimited submissions, forever free. Just start typing - no coding needed.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://tally.so/",
+          "blockId": "8527fe5a6cd2",
+          "quote": "The simplest way to create beautiful, professional forms in seconds. Unlimited forms, unlimited submissions, forever free. Just start typing - no coding needed."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "text": "Easily create online forms using our wide range of free input blocks. Collect contact info, files, signatures, payments, and much more. Build everything from surveys to quizzes to lead generation forms.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://tally.so/",
+          "blockId": "c214f7a2708e",
+          "quote": "Easily create online forms using our wide range of free input blocks. Collect contact info, files, signatures, payments, and much more. Build everything from surveys to quizzes to lead generation forms."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "text": "Our smart features make it easy to turn your forms into a tailored experience for every respondent.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://tally.so/",
+          "blockId": "21413e41d7ca",
+          "quote": "Our smart features make it easy to turn your forms into a tailored experience for every respondent."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "text": "Your data privacy and security are our top priorities. We are GDPR compliant and treat your data with care and confidentiality. Tally is hosted in Europe, we don’t use cookie-tracking, and all form data is securely stored, and encrypted both in transit and at rest. Learn more about Tally & GDPR.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://tally.so/",
+          "blockId": "dc5fcd7806b1",
+          "quote": "Your data privacy and security are our top priorities. We are GDPR compliant and treat your data with care and confidentiality. Tally is hosted in Europe, we don’t use cookie-tracking, and all form data is securely stored, and encrypted both in transit and at rest. Learn more about Tally & GDPR."
+        }
+      ]
+    }
+  ],
+  "limitations": []
+}

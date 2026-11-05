@@ -1,0 +1,24 @@
+[
+  {
+    "requested": "gpt-4.1-mini",
+    "accessible": true,
+    "metadata": {
+      "id": "gpt-4.1-mini",
+      "object": "model",
+      "created": 1744318173,
+      "owned_by": "system",
+      "shutdown_date": "2027-01-14"
+    }
+  },
+  {
+    "requested": "gpt-6.1-sol",
+    "accessible": true,
+    "metadata": {
+      "id": "gpt-6.1-sol",
+      "object": "model",
+      "created": 1790552874,
+      "owned_by": "system",
+      "shutdown_date": null
+    }
+  }
+]

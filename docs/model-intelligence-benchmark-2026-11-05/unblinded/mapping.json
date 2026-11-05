@@ -1,0 +1,22 @@
+[
+  {
+    "site": "tally",
+    "model": "gpt-6.1-sol",
+    "label": "sample-81369703"
+  },
+  {
+    "site": "senja",
+    "model": "gpt-6.1-sol",
+    "label": "sample-c5a66ad2"
+  },
+  {
+    "site": "senja",
+    "model": "gpt-4.1-mini",
+    "label": "sample-faa8f0fd"
+  },
+  {
+    "site": "tally",
+    "model": "gpt-4.1-mini",
+    "label": "sample-f5838bb2"
+  }
+]

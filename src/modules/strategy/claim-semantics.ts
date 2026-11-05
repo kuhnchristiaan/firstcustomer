@@ -18,7 +18,7 @@ export function hasProspectObservation(text: string) {
     /\[(?!name\b|sender\b)[^\]]*(?:observation|verified|public|research|confirmed)[^\]]*\]|\{\{(?:verified|specific|public)[^}]*\}\}/i;
   const observations = [
     ...text.matchAll(
-      /\b(?:I|we) (?:noticed|saw|researched|learned|understand)\b([^.!?\n]+)/gi,
+      /\b(?:(?:I|we)\s+(?:noticed|saw|researched|learned|understand)|noticed|saw)\b([^.!?\n]+)/gi,
     ),
   ];
   return (

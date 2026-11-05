@@ -167,11 +167,13 @@ it("supports a Tally self-service workflow and conditional product-led distribut
   });
   const s = compactFixture(f.report);
   s.buyingMotion = "Self-service";
-  s.paymentPath =
-    "Observe completed real registrations, ask about paid workflow requirements, and count only confirmed purchases as paying customers.";
+  s.paymentPath.activation =
+    "Observe completed real registrations in the intended workflow.";
   const r = assembleAcquisition(s, f.profile);
   expect(r.acquisitionChannels[0].title).toContain("template");
-  expect(r.firstTenPlaybook[1].recommendation.text).toBe(s.paymentPath);
+  expect(r.firstTenPlaybook[1].recommendation.text).toContain(
+    s.paymentPath.activation,
+  );
   expect(r.segments[0].customerType).toBe("Self-service");
   for (const name of ["Tally", "Senja", "Greensighter", "FirstCustomers"])
     expect(acquisitionInstructions).not.toContain(name);

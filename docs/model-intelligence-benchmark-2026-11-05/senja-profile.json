@@ -1,0 +1,80 @@
+{
+  "version": "1.0",
+  "identity": {
+    "name": "Senja",
+    "summary": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+    "category": "Customer acquisition",
+    "primaryJob": {
+      "actor": "Marketers, business owners, and sales teams",
+      "problem": "Difficulty collecting and utilizing customer testimonials to build trust and increase sales",
+      "outcome": "Easily collect, organize, and share testimonials to win customer trust and boost sales"
+    },
+    "certainty": "Website-supported",
+    "evidence": [
+      {
+        "sourceUrl": "https://senja.io/",
+        "blockId": "21e09887a3aa",
+        "quote": "The easiest way to collect testimonials and add them to your website. Get started for free."
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "s1",
+      "text": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "21e09887a3aa",
+          "quote": "The easiest way to collect testimonials and add them to your website. Get started for free."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "text": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "8088337baf9d",
+          "quote": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "text": "✓Automate video and text collection",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "b8c2fac70e98",
+          "quote": "✓Automate video and text collection"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "text": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "1224993c1e20",
+          "quote": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No direct information about pricing models or trial options.",
+    "No detailed description of user roles or permission settings.",
+    "No mention of analytics or reporting capabilities."
+  ]
+}

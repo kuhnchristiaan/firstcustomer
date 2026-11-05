@@ -1,4 +1,5 @@
-import { acquisitionSchema } from "./acquisition-contract";
+import { legacyAcquisitionSchema } from "./acquisition-legacy";
+import { acquisitionWireSchema } from "./acquisition-contract";
 import { z } from "zod";
 import { productProfileSchema, basisSchema } from "./product-profile";
 import { qualityRecordSchema } from "./quality";
@@ -15,7 +16,7 @@ export const segmentSchema = z.object({
   name: z.string().min(1).max(200),
   industry: z.string().max(200),
   customerType: z.string().max(200),
-  buyerRoles: z.array(z.string().max(200)).max(10),
+  buyerRoles: z.array(z.string().max(220)).max(10),
   problems: z.array(z.string().max(500)).max(10),
   motivations: z.array(z.string().max(500)).max(10),
   buyingSignals: z.array(z.string().max(500)).max(10),
@@ -48,7 +49,7 @@ export const reportV1Schema = z.object({
   outreachTemplates: z
     .array(
       z.object({
-        channel: z.string().max(100),
+        channel: z.string().max(200),
         subject: z.string().max(200),
         body: z.string().max(2000),
         rationale: recommendationSchema,
@@ -74,7 +75,9 @@ export const reportV11Schema = reportV1Schema.extend({
   productIntelligence: productProfileSchema,
   recommendationBasis: basisSchema,
   quality: qualityRecordSchema.optional(),
-  acquisitionStrategy: acquisitionSchema().optional(),
+  acquisitionStrategy: z
+    .union([legacyAcquisitionSchema(), acquisitionWireSchema()])
+    .optional(),
   firstExperiment: firstExperimentSchema.optional(),
 });
 export const reportSchema = z.union([reportV1Schema, reportV11Schema]);

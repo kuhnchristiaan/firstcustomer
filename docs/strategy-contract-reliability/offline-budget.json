@@ -1,0 +1,6 @@
+{
+  "mode": "Hand-authored transport fixture; no model call",
+  "lexicalOutputTokens": 996,
+  "productionGenerationMaxOutputTokens": 2000,
+  "modelDefaultUnchanged": true
+}

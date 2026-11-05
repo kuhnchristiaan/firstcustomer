@@ -1,0 +1,648 @@
+{
+  "schemaVersion": "1.1",
+  "businessName": "Tally",
+  "overview": {
+    "text": "Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions",
+    "confidence": "Verified",
+    "sources": [
+      "https://tally.so/"
+    ]
+  },
+  "offerings": [
+    {
+      "text": "The simplest way to create beautiful, professional forms in seconds. Unlimited forms, unlimited submissions, forever free. Just start typing - no coding needed.",
+      "confidence": "Verified",
+      "sources": [
+        "https://tally.so/"
+      ]
+    },
+    {
+      "text": "Easily create online forms using our wide range of free input blocks. Collect contact info, files, signatures, payments, and much more. Build everything from surveys to quizzes to lead generation forms.",
+      "confidence": "Verified",
+      "sources": [
+        "https://tally.so/"
+      ]
+    },
+    {
+      "text": "Our smart features make it easy to turn your forms into a tailored experience for every respondent.",
+      "confidence": "Verified",
+      "sources": [
+        "https://tally.so/"
+      ]
+    },
+    {
+      "text": "Your data privacy and security are our top priorities. We are GDPR compliant and treat your data with care and confidentiality. Tally is hosted in Europe, we don’t use cookie-tracking, and all form data is securely stored, and encrypted both in transit and at rest. Learn more about Tally & GDPR.",
+      "confidence": "Verified",
+      "sources": [
+        "https://tally.so/"
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "text": "Need professional forms for client intake and surveys without coding or expense",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Quickly build professional surveys and feedback forms for user research without coding",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Need customizable registration and feedback forms without complex tools",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "valueProposition": {
+    "text": "Tally empowers freelance graphic designers to create customizable, professional client intake and survey forms without any coding or costs, enhancing their workflow and client experience.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  "differentiators": [
+    {
+      "text": "Comparative advantage is unvalidated. Test Tally empowers freelance graphic designers to create customizable, professional client intake and survey forms without any coding or costs, enhancing their workflow and client experience. against the buyer's current workaround.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "idealCustomers": [
+    {
+      "text": "Freelance graphic designers",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Startup founders in early product validation",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Event planners organizing medium-sized events",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "industries": [
+    {
+      "text": "Creative services market",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Tech startup ecosystem",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Events and meetings industry",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "buyerPersonas": [
+    {
+      "text": "Freelance graphic designer owner",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Founder of pre-launch startup",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Independent event planner",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "geographicFocus": {
+    "text": "Geography is unknown; check buyer access, language and purchasing requirements before outreach.",
+    "confidence": "Unknown",
+    "sources": []
+  },
+  "segments": [
+    {
+      "name": "Freelance graphic designers",
+      "industry": "Creative services market",
+      "customerType": "Self-service",
+      "buyerRoles": [
+        "Freelance graphic designer owner"
+      ],
+      "problems": [
+        "Need professional forms for client intake and surveys without coding or expense"
+      ],
+      "motivations": [
+        "Hypothesis to validate: willingness to resolve Need professional forms for client intake and surveys without coding or expense"
+      ],
+      "buyingSignals": [
+        "Accessible via freelance platforms like Upwork and Behance public profiles"
+      ],
+      "priority": 1,
+      "evidence": {
+        "text": "Lower volume but highly motivated, direct communication possible Accessible via freelance platforms like Upwork and Behance public profiles Freelance graphic designers combine urgent workflow needs, self-service comfort, and ready authority over vendor tool decisions, making them ideal initial adopters. Startup founders come second when validation demands is",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "name": "Startup founders in early product validation",
+      "industry": "Tech startup ecosystem",
+      "customerType": "Self-service",
+      "buyerRoles": [
+        "Founder of pre-launch startup"
+      ],
+      "problems": [
+        "Quickly build professional surveys and feedback forms for user research without coding"
+      ],
+      "motivations": [
+        "Hypothesis to validate: willingness to resolve Quickly build professional surveys and feedback forms for user research without coding"
+      ],
+      "buyingSignals": [
+        "Accessible through startup community platforms and LinkedIn entrepreneur groups"
+      ],
+      "priority": 2,
+      "evidence": {
+        "text": "Moderate access cost, higher payoff if product fits urgent research needs Accessible through startup community platforms and LinkedIn entrepreneur groups",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "name": "Event planners organizing medium-sized events",
+      "industry": "Events and meetings industry",
+      "customerType": "Self-service",
+      "buyerRoles": [
+        "Independent event planner"
+      ],
+      "problems": [
+        "Need customizable registration and feedback forms without complex tools"
+      ],
+      "motivations": [
+        "Hypothesis to validate: willingness to resolve Need customizable registration and feedback forms without complex tools"
+      ],
+      "buyingSignals": [
+        "Public event planning groups on Facebook and Meetup, event vendor lists"
+      ],
+      "priority": 3,
+      "evidence": {
+        "text": "Easy access but buying urgency varies based on event timing Public event planning groups on Facebook and Meetup, event vendor lists",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "buyingSignals": [
+    {
+      "text": "Potential qualification signal to investigate: Freelancers struggle to build attractive client intake forms without coding Confirm urgency and buying authority; demand is unverified.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "missingInformation": [
+    {
+      "text": "Actual demand urgency among freelancers",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Preferred outreach channel effectiveness",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Trial to paid conversion rates",
+      "confidence": "Unknown",
+      "sources": []
+    }
+  ],
+  "positioning": {
+    "text": "Tally empowers freelance graphic designers to create customizable, professional client intake and survey forms without any coding or costs, enhancing their workflow and client experience.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  "acquisitionChannels": [
+    {
+      "title": "Direct email outreach using platform contact info",
+      "recommendation": {
+        "text": "Freelance graphic designers: Email allows personalized invitations showing form ease and design benefits",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Search Upwork profiles marked graphic design and active past months; confirm portfolio includes client communication needs",
+        "Send introductory email to 10 freelance graphic designers",
+        "Activity cap: 10 Emails sent",
+        "Provisional assumption: 120 minutes; zero direct spend; Email client, LinkedIn or Upwork. No paid ads budget; only cold email and manual profiling"
+      ],
+      "successMetric": "Understand freelancers’ urgency for form creation, acceptance of self-service pricing, initial activation and feedback"
+    },
+    {
+      "title": "LinkedIn messaging",
+      "recommendation": {
+        "text": "Conditional alternative: More personal but slower and requires platform familiarity Prefer only when: Email yields no engagement but LinkedIn profiles are rich and active",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Send personalized LinkedIn InMail to 10 freelancers"
+      ],
+      "successMetric": "Record evidence of this condition before switching: Email yields no engagement but LinkedIn profiles are rich and active"
+    },
+    {
+      "title": "Freelance platform bid proposals",
+      "recommendation": {
+        "text": "Conditional alternative: High effort, lower evidence speed, but direct platform access Prefer only when: Cold email and LinkedIn fail; platform bids allow proactive engagement",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Submit tailored proposals to 5 freelance graphic design jobs"
+      ],
+      "successMetric": "Record evidence of this condition before switching: Cold email and LinkedIn fail; platform bids allow proactive engagement"
+    }
+  ],
+  "outreachTemplates": [
+    {
+      "channel": "Direct email outreach using platform contact info",
+      "subject": "Quick way to create stunning client forms — free & no code",
+      "body": "Hi [Name], noticed your great design work. Would you try Tally to create beautiful client intake forms easily? No coding, unlimited free forms. Can I share a link?",
+      "rationale": {
+        "text": "Freelance graphic designers: Freelancers struggle to build attractive client intake forms without coding",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "channel": "Direct email outreach using platform contact info",
+      "subject": "Following up: can Tally simplify your client forms?",
+      "body": "Hi [Name], just checking if you saw my note about Tally’s free easy form builder? Happy to help you get started for your client projects?",
+      "rationale": {
+        "text": "Use only following an actual response and permission to continue.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "firstTenPlaybook": [
+    {
+      "title": "Test the first buyer",
+      "recommendation": {
+        "text": "Freelance graphic designers combine urgent workflow needs, self-service comfort, and ready authority over vendor tool decisions, making them ideal initial adopters. Startup founders come second when validation demands is",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Search Upwork profiles marked graphic design and active past months; confirm portfolio includes client communication needs",
+        "Send introductory email to 10 freelance graphic designers",
+        "Activity cap: 10 Emails sent",
+        "Provisional assumption: 120 minutes; zero direct spend; Email client, LinkedIn or Upwork. No paid ads budget; only cold email and manual profiling"
+      ],
+      "successMetric": "Understand freelancers’ urgency for form creation, acceptance of self-service pricing, initial activation and feedback"
+    },
+    {
+      "title": "Test the buying next step",
+      "recommendation": {
+        "text": "Trial to paid subscription upgrade after form volume or feature use justifies payment",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "At least 2 recipients respond with interest or request trial",
+        "Trial to paid subscription upgrade after form volume or feature use justifies payment"
+      ],
+      "successMetric": "Understand freelancers’ urgency for form creation, acceptance of self-service pricing, initial activation and feedback"
+    },
+    {
+      "title": "Repeat only after evidence",
+      "recommendation": {
+        "text": "The first ten paying customers are a goal, not a forecast or conversion promise.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Continue: At least 2 recipients respond with interest or request trial",
+        "Adjust: No responses after 10 emails; consider LinkedIn messaging alternative",
+        "Stop: No response after 20 emails or negative feedback on self-service preference",
+        "Retain Freelance graphic designers and Direct email outreach using platform contact info unless the evidence supports a conditional alternative."
+      ],
+      "successMetric": "Record confirmed payments separately from replies, downloads and free users."
+    }
+  ],
+  "thirtyDayPlan": [
+    {
+      "week": 1,
+      "objective": "Prepare and run the primary test",
+      "actions": [
+        "Search Upwork profiles marked graphic design and active past months; confirm portfolio includes client communication needs",
+        "Send introductory email to 10 freelance graphic designers",
+        "Activity cap: 10 Emails sent",
+        "Provisional assumption: 120 minutes; zero direct spend; Email client, LinkedIn or Upwork. No paid ads budget; only cold email and manual profiling"
+      ],
+      "successMetric": "Understand freelancers’ urgency for form creation, acceptance of self-service pricing, initial activation and feedback",
+      "rationale": {
+        "text": "Freelance graphic designers combine urgent workflow needs, self-service comfort, and ready authority over vendor tool decisions, making them ideal initial adopters. Startup founders come second when validation demands is",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 2,
+      "objective": "Review the primary test evidence",
+      "actions": [
+        "Understand freelancers’ urgency for form creation, acceptance of self-service pricing, initial activation and feedback",
+        "Continue: At least 2 recipients respond with interest or request trial",
+        "Adjust: No responses after 10 emails; consider LinkedIn messaging alternative",
+        "Stop: No response after 20 emails or negative feedback on self-service preference"
+      ],
+      "successMetric": "Understand freelancers’ urgency for form creation, acceptance of self-service pricing, initial activation and feedback",
+      "rationale": {
+        "text": "Email allows personalized invitations showing form ease and design benefits",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 3,
+      "objective": "Pursue a buying step only after evidence",
+      "actions": [
+        "At least 2 recipients respond with interest or request trial",
+        "Trial to paid subscription upgrade after form volume or feature use justifies payment"
+      ],
+      "successMetric": "Understand freelancers’ urgency for form creation, acceptance of self-service pricing, initial activation and feedback",
+      "rationale": {
+        "text": "Trial to paid subscription upgrade after form volume or feature use justifies payment",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 4,
+      "objective": "Decide whether to repeat, adjust or stop",
+      "actions": [
+        "Continue: At least 2 recipients respond with interest or request trial",
+        "Adjust: No responses after 10 emails; consider LinkedIn messaging alternative",
+        "Stop: No response after 20 emails or negative feedback on self-service preference",
+        "Switch only when an alternative's stated condition is observed; otherwise retain Direct email outreach using platform contact info."
+      ],
+      "successMetric": "Understand freelancers’ urgency for form creation, acceptance of self-service pricing, initial activation and feedback",
+      "rationale": {
+        "text": "Use observed commercial evidence; no assumed conversion rate or automatic scaling.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "productIntelligence": {
+    "version": "1.0",
+    "identity": {
+      "name": "Tally",
+      "summary": "Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions",
+      "category": "Customer acquisition",
+      "primaryJob": {
+        "actor": "Anyone needing to create online forms",
+        "problem": "Creating professional, customizable forms without coding or cost barriers",
+        "outcome": "Easily build unlimited forms that collect data securely and provide tailored respondent experiences"
+      },
+      "certainty": "Website-supported",
+      "evidence": [
+        {
+          "sourceUrl": "https://tally.so/",
+          "blockId": "e4a93feeb310",
+          "quote": "Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions"
+        }
+      ]
+    },
+    "statements": [
+      {
+        "id": "s1",
+        "text": "The simplest way to create beautiful, professional forms in seconds. Unlimited forms, unlimited submissions, forever free. Just start typing - no coding needed.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://tally.so/",
+            "blockId": "8527fe5a6cd2",
+            "quote": "The simplest way to create beautiful, professional forms in seconds. Unlimited forms, unlimited submissions, forever free. Just start typing - no coding needed."
+          }
+        ]
+      },
+      {
+        "id": "s2",
+        "text": "Easily create online forms using our wide range of free input blocks. Collect contact info, files, signatures, payments, and much more. Build everything from surveys to quizzes to lead generation forms.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://tally.so/",
+            "blockId": "c214f7a2708e",
+            "quote": "Easily create online forms using our wide range of free input blocks. Collect contact info, files, signatures, payments, and much more. Build everything from surveys to quizzes to lead generation forms."
+          }
+        ]
+      },
+      {
+        "id": "s3",
+        "text": "Our smart features make it easy to turn your forms into a tailored experience for every respondent.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://tally.so/",
+            "blockId": "21413e41d7ca",
+            "quote": "Our smart features make it easy to turn your forms into a tailored experience for every respondent."
+          }
+        ]
+      },
+      {
+        "id": "s4",
+        "text": "Your data privacy and security are our top priorities. We are GDPR compliant and treat your data with care and confidentiality. Tally is hosted in Europe, we don’t use cookie-tracking, and all form data is securely stored, and encrypted both in transit and at rest. Learn more about Tally & GDPR.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://tally.so/",
+            "blockId": "dc5fcd7806b1",
+            "quote": "Your data privacy and security are our top priorities. We are GDPR compliant and treat your data with care and confidentiality. Tally is hosted in Europe, we don’t use cookie-tracking, and all form data is securely stored, and encrypted both in transit and at rest. Learn more about Tally & GDPR."
+          }
+        ]
+      }
+    ],
+    "limitations": []
+  },
+  "recommendationBasis": [
+    {
+      "section": "segments",
+      "statementIds": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "section": "acquisitionChannels",
+      "statementIds": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "section": "outreachTemplates",
+      "statementIds": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "section": "firstTenPlaybook",
+      "statementIds": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "section": "thirtyDayPlan",
+      "statementIds": [
+        "s1",
+        "s2"
+      ]
+    }
+  ],
+  "acquisitionStrategy": {
+    "segments": [
+      {
+        "name": "Freelance graphic designers",
+        "buyer": "Freelance graphic designer owner",
+        "market": "Creative services market",
+        "problem": "Need professional forms for client intake and surveys without coding or expense",
+        "access": "Accessible via freelance platforms like Upwork and Behance public profiles",
+        "tradeoff": "Lower volume but highly motivated, direct communication possible"
+      },
+      {
+        "name": "Startup founders in early product validation",
+        "buyer": "Founder of pre-launch startup",
+        "market": "Tech startup ecosystem",
+        "problem": "Quickly build professional surveys and feedback forms for user research without coding",
+        "access": "Accessible through startup community platforms and LinkedIn entrepreneur groups",
+        "tradeoff": "Moderate access cost, higher payoff if product fits urgent research needs"
+      },
+      {
+        "name": "Event planners organizing medium-sized events",
+        "buyer": "Independent event planner",
+        "market": "Events and meetings industry",
+        "problem": "Need customizable registration and feedback forms without complex tools",
+        "access": "Public event planning groups on Facebook and Meetup, event vendor lists",
+        "tradeoff": "Easy access but buying urgency varies based on event timing"
+      }
+    ],
+    "firstBuyerWhy": "Freelance graphic designers combine urgent workflow needs, self-service comfort, and ready authority over vendor tool decisions, making them ideal initial adopters. Startup founders come second when validation demands is",
+    "buyingMotion": "Self-service",
+    "paymentPath": "Trial to paid subscription upgrade after form volume or feature use justifies payment",
+    "firstExperiment": {
+      "problem": "Freelancers struggle to build attractive client intake forms without coding",
+      "identifyProspects": "Search Upwork profiles marked graphic design and active past months; confirm portfolio includes client communication needs",
+      "channel": "Direct email outreach using platform contact info",
+      "channelRationale": "Email allows personalized invitations showing form ease and design benefits",
+      "firstAction": "Send introductory email to 10 freelance graphic designers",
+      "activityTarget": {
+        "quantity": 10,
+        "activity": "Emails sent"
+      },
+      "resources": {
+        "assumedMinutes": 120,
+        "tools": [
+          "Email client",
+          "LinkedIn or Upwork"
+        ],
+        "directSpend": 0,
+        "assumptions": "No paid ads budget; only cold email and manual profiling"
+      },
+      "commercialLearning": "Understand freelancers’ urgency for form creation, acceptance of self-service pricing, initial activation and feedback",
+      "continueWhen": "At least 2 recipients respond with interest or request trial",
+      "adjustWhen": "No responses after 10 emails; consider LinkedIn messaging alternative",
+      "stopWhen": "No response after 20 emails or negative feedback on self-service preference"
+    },
+    "alternatives": [
+      {
+        "channel": "LinkedIn messaging",
+        "comparison": "More personal but slower and requires platform familiarity",
+        "preferWhen": "Email yields no engagement but LinkedIn profiles are rich and active",
+        "firstAction": "Send personalized LinkedIn InMail to 10 freelancers"
+      },
+      {
+        "channel": "Freelance platform bid proposals",
+        "comparison": "High effort, lower evidence speed, but direct platform access",
+        "preferWhen": "Cold email and LinkedIn fail; platform bids allow proactive engagement",
+        "firstAction": "Submit tailored proposals to 5 freelance graphic design jobs"
+      }
+    ],
+    "messages": [
+      {
+        "subject": "Quick way to create stunning client forms — free & no code",
+        "body": "Hi [Name], noticed your great design work. Would you try Tally to create beautiful client intake forms easily? No coding, unlimited free forms. Can I share a link?"
+      },
+      {
+        "subject": "Following up: can Tally simplify your client forms?",
+        "body": "Hi [Name], just checking if you saw my note about Tally’s free easy form builder? Happy to help you get started for your client projects?"
+      }
+    ],
+    "positioning": "Tally empowers freelance graphic designers to create customizable, professional client intake and survey forms without any coding or costs, enhancing their workflow and client experience.",
+    "unknowns": [
+      "Actual demand urgency among freelancers",
+      "Preferred outreach channel effectiveness",
+      "Trial to paid conversion rates"
+    ],
+    "recommendationBasis": {
+      "segments": [
+        "s1",
+        "s2"
+      ],
+      "acquisitionChannels": [
+        "s1",
+        "s2"
+      ],
+      "outreachTemplates": [
+        "s1",
+        "s2"
+      ],
+      "firstTenPlaybook": [
+        "s1",
+        "s2"
+      ],
+      "thirtyDayPlan": [
+        "s1",
+        "s2"
+      ]
+    }
+  },
+  "firstExperiment": {
+    "segment": "Freelance graphic designers",
+    "problem": "Freelancers struggle to build attractive client intake forms without coding",
+    "identifyProspects": "Search Upwork profiles marked graphic design and active past months; confirm portfolio includes client communication needs",
+    "channel": "Direct email outreach using platform contact info",
+    "channelRationale": "Email allows personalized invitations showing form ease and design benefits",
+    "firstAction": "Send introductory email to 10 freelance graphic designers",
+    "activityTarget": {
+      "quantity": 10,
+      "activity": "Emails sent"
+    },
+    "resources": {
+      "assumedMinutes": 120,
+      "tools": [
+        "Email client",
+        "LinkedIn or Upwork"
+      ],
+      "directSpend": 0,
+      "assumptions": "No paid ads budget; only cold email and manual profiling"
+    },
+    "commercialLearning": "Understand freelancers’ urgency for form creation, acceptance of self-service pricing, initial activation and feedback",
+    "continueWhen": "At least 2 recipients respond with interest or request trial",
+    "adjustWhen": "No responses after 10 emails; consider LinkedIn messaging alternative",
+    "stopWhen": "No response after 20 emails or negative feedback on self-service preference",
+    "strongestAlternative": {
+      "channel": "LinkedIn messaging",
+      "whyNotSelected": "More personal but slower and requires platform familiarity",
+      "preferWhen": "Email yields no engagement but LinkedIn profiles are rich and active"
+    }
+  }
+}

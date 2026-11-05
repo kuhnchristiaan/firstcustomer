@@ -1,0 +1,46 @@
+{
+  "site": "senja",
+  "model": "gpt-4.1-mini",
+  "label": "sample-faa8f0fd",
+  "requestedModel": "gpt-4.1-mini",
+  "resolvedModel": "gpt-4.1-mini-2025-04-14",
+  "status": "completed",
+  "incompleteDetails": null,
+  "latencyMs": 9180,
+  "actualInput": 1163,
+  "actualOutput": 774,
+  "reasoningTokens": 0,
+  "cachedInput": 0,
+  "cacheWrites": 0,
+  "estimatedCostUsd": 0.0017036000000000002,
+  "serviceTier": "default",
+  "jsonValid": true,
+  "schemaValid": true,
+  "assembled": true,
+  "completeStrategy": true,
+  "diagnostics": {
+    "deterministicFindings": [],
+    "publication": "Not attempted; diagnostic assembly only"
+  },
+  "quality": {
+    "A": 11,
+    "B": 10,
+    "C": 9,
+    "D": 8,
+    "E": 5,
+    "F": 3
+  },
+  "qualityTotal": 46,
+  "commerciallyAcceptable": false,
+  "contentComplete": true,
+  "readableArtifact": "docs/model-intelligence-benchmark-2026-11-05/senja/gpt-4.1-mini/strategy.md",
+  "assessmentClarification": "assessment-clarifications.json; original blind scores unchanged",
+  "fieldsAtCharacterCap": [
+    {
+      "path": "firstBuyerWhy",
+      "characters": 220,
+      "cap": 220,
+      "ending": "o-paid tools quickly; startup managers take longer to decide"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "site": "senja",
+  "model": "gpt-6.1-sol",
+  "label": "sample-c5a66ad2",
+  "requestedModel": "gpt-6.1-sol",
+  "resolvedModel": "gpt-6.1-sol",
+  "status": "completed",
+  "incompleteDetails": null,
+  "latencyMs": 66484,
+  "actualInput": 1161,
+  "actualOutput": 2178,
+  "reasoningTokens": 516,
+  "cachedInput": 0,
+  "cacheWrites": 1158,
+  "estimatedCostUsd": 0.024681,
+  "serviceTier": "default",
+  "jsonValid": true,
+  "schemaValid": true,
+  "assembled": true,
+  "completeStrategy": true,
+  "diagnostics": {
+    "deterministicFindings": [
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.resources.assumedMinutes",
+        "reason": "Activity scope leaves insufficient assumed time for qualification, preparation and replies"
+      }
+    ],
+    "publication": "Not attempted; diagnostic assembly only"
+  },
+  "quality": {
+    "A": 14,
+    "B": 18,
+    "C": 20,
+    "D": 13,
+    "E": 9,
+    "F": 3
+  },
+  "qualityTotal": 77,
+  "commerciallyAcceptable": false,
+  "contentComplete": false,
+  "readableArtifact": "docs/model-intelligence-benchmark-2026-11-05/senja/gpt-6.1-sol/strategy.md",
+  "fieldsAtCharacterCap": [
+    {
+      "path": "segments.2.market",
+      "characters": 100,
+      "cap": 100,
+      "ending": "customers and a publicly discussed launch or website refresh"
+    },
+    {
+      "path": "firstBuyerWhy",
+      "characters": 220,
+      "cap": 220,
+      "ending": "sis, not established demand. Agency owners win instead if a "
+    },
+    {
+      "path": "paymentPath",
+      "characters": 220,
+      "cap": 220,
+      "ending": "nality. Confirm the buyer's required capability, acceptable "
+    },
+    {
+      "path": "firstExperiment.channelRationale",
+      "characters": 300,
+      "cap": 300,
+      "ending": "ompared with partner recruitment, access requires fewer gate"
+    },
+    {
+      "path": "alternatives.0.comparison",
+      "characters": 220,
+      "cap": 220,
+      "ending": "idence is slower without existing traffic; community access,"
+    },
+    {
+      "path": "positioning",
+      "characters": 220,
+      "cap": 220,
+      "ending": "st workflow fit and paid value; do not promise conversion or"
+    }
+  ]
+}

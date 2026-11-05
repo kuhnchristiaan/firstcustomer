@@ -1,0 +1,69 @@
+{
+  "label": "sample-faa8f0fd",
+  "product": "senja",
+  "scores": {
+    "A": 11,
+    "B": 10,
+    "C": 9,
+    "D": 8,
+    "E": 5,
+    "F": 3
+  },
+  "components": {
+    "A": [
+      7,
+      4
+    ],
+    "B": [
+      3,
+      3,
+      1,
+      2,
+      1
+    ],
+    "C": [
+      4,
+      2,
+      1,
+      2
+    ],
+    "D": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "E": [
+      2,
+      3
+    ],
+    "F": [
+      2,
+      1,
+      0
+    ]
+  },
+  "total": 46,
+  "commerciallyAcceptable": false,
+  "contentComplete": false,
+  "reasons": {
+    "A": "Understands testimonial collection/share workflow and avoids the owner's multiplier promise. Treats a free trial and monthly plan as established without verifying pricing; claimed time/trust benefits are not independently established.",
+    "B": "Freelancers, store owners and startup marketers have different roles, but urgency/budgets/adoption speed are asserted rather than tested. First buyer lacks a concrete trigger and an actual purchasing-path check.",
+    "C": "Groups may be usable, but direct access and active tool-seeking are assumed. Alternatives are mostly another platform carrying the same outreach, without credible comparison to workflow templates or partners. No moderator-permission gate.",
+    "D": "Ten posts or personal invitations conflates different work units. Two hours may cover a small batch, but qualification and access are vague. Continue on free-tier use and low-interest adjustments are not commercially decisive.",
+    "E": "Mentions willingness to pay, but proceeds from free use to a monthly plan without a real buying trigger. Avoids explicit conversion percentages, yet success still means vague interest rather than a paid next step.",
+    "F": "First-buyer rationale ends abruptly. Initial outreach fabricates knowledge that the prospect manages multiple clients; the only placeholder is a name. Follow-up is generic."
+  },
+  "excerpts": [
+    "Direct access to target buyers actively seeking marketing tools, low cost, fast feedback",
+    "outreach posts or personal invitations",
+    "Freelancers respond to relevant solutions posted in their groups",
+    "Multiple freelancers express needs matching assumptions and use free tier",
+    "Hi [Name], noticed you manage multiple clients"
+  ],
+  "criticalBlockers": [
+    "Fabricated prospect observation",
+    "No defensible paid conversion test",
+    "Unfinished first-buyer rationale"
+  ]
+}

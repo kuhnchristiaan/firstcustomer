@@ -1,0 +1,66 @@
+{
+  "site": "tally",
+  "model": "gpt-6.1-sol",
+  "label": "sample-81369703",
+  "requestedModel": "gpt-6.1-sol",
+  "resolvedModel": "gpt-6.1-sol",
+  "status": "completed",
+  "incompleteDetails": null,
+  "latencyMs": 63992,
+  "actualInput": 1219,
+  "actualOutput": 2024,
+  "reasoningTokens": 479,
+  "cachedInput": 0,
+  "cacheWrites": 1216,
+  "estimatedCostUsd": 0.023286,
+  "serviceTier": "default",
+  "jsonValid": true,
+  "schemaValid": true,
+  "assembled": false,
+  "completeStrategy": true,
+  "diagnostics": {
+    "error": "ZodError",
+    "issues": [
+      {
+        "path": "outreachTemplates.0.channel",
+        "code": "too_big"
+      },
+      {
+        "path": "outreachTemplates.1.channel",
+        "code": "too_big"
+      }
+    ]
+  },
+  "quality": {
+    "A": 13,
+    "B": 13,
+    "C": 10,
+    "D": 11,
+    "E": 6,
+    "F": 3
+  },
+  "qualityTotal": 56,
+  "commerciallyAcceptable": false,
+  "contentComplete": false,
+  "readableArtifact": "docs/model-intelligence-benchmark-2026-11-05/tally/gpt-6.1-sol/strategy.md",
+  "fieldsAtCharacterCap": [
+    {
+      "path": "segments.0.market",
+      "characters": 100,
+      "cap": 100,
+      "ending": "te projects with client questionnaires and asset collection."
+    },
+    {
+      "path": "firstBuyerWhy",
+      "characters": 220,
+      "cap": 220,
+      "ending": "kickoff, not agencies generally. Solo designers win instead,"
+    },
+    {
+      "path": "paymentPath",
+      "characters": 220,
+      "cap": 220,
+      "ending": "e. If authorized, test a clearly scoped €49 pilot: configure"
+    }
+  ]
+}

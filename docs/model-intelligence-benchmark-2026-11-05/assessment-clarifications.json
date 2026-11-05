@@ -1,0 +1,12 @@
+{
+  "timing": "After opening model mapping; original blind-assessment.json is preserved unchanged",
+  "corrections": [
+    {
+      "label": "sample-faa8f0fd",
+      "field": "contentComplete",
+      "correctedValue": true,
+      "reason": "The Senja Mini firstBuyerWhy reaches 220 characters but ends with a complete clause ('startup managers take longer to decide'). Lack of final punctuation is not proof of truncation. The blind notes overstated that specific defect. Its conditional runner-up reasoning remains weak, and the prospect-observation/payment blockers remain. No quality score was changed after unblinding."
+    }
+  ],
+  "scoreChanges": false
+}

@@ -273,7 +273,7 @@ it("reserves repair AND final review after a semantic defect at actual productio
   rejected.scores.commercialRealism = 0;
   rejected.issues = [
     {
-      section: "paymentPath",
+      section: "paymentPath.paidConversion",
       reason: "Clarify how engagement leads to payment",
     },
   ];
@@ -285,7 +285,12 @@ it("reserves repair AND final review after a semantic defect at actual productio
     .mockResolvedValueOnce(billed(selectionOf(f.profile), 600))
     .mockResolvedValueOnce(billed(s, 2000))
     .mockResolvedValueOnce(billed(rejected, 650))
-    .mockResolvedValueOnce(billed({ paymentPath: s.paymentPath }, 600))
+    .mockResolvedValueOnce(
+      billed(
+        { "paymentPath.paidConversion": s.paymentPath.paidConversion },
+        600,
+      ),
+    )
     .mockResolvedValueOnce(billed(passingReview, 650));
   const result = await provider().analyze(
     [f.source],
@@ -296,6 +301,49 @@ it("reserves repair AND final review after a semantic defect at actual productio
   expect(transport.create.mock.calls.map(([r]) => r.max_output_tokens)).toEqual(
     [600, 2000, 650, 600, 650],
   );
+  expect(
+    result.report.schemaVersion === "1.1" && result.report.quality?.repairs,
+  ).toBe(1);
+});
+
+it("repairs dependent numeric phase estimates together, rebuilds every week, then requires semantic review", async () => {
+  const f = commercialFixture(),
+    s = compactFixture(f.report);
+  s.firstExperiment.resources.assumedMinutes = 30;
+  s.firstExperiment.resources.researchMinutesPerActivity = 1;
+  transport.create
+    .mockResolvedValueOnce(response(selectionOf(f.profile)))
+    .mockResolvedValueOnce(response(s))
+    .mockResolvedValueOnce(
+      response({
+        "firstExperiment.resources.assumedMinutes": 60,
+        "firstExperiment.resources.researchMinutesPerActivity": 5,
+      }),
+    )
+    .mockResolvedValueOnce(response(passingReview));
+  const result = await provider().analyze(
+    [f.source],
+    AbortSignal.timeout(3000),
+    { inputTokens: 20000, outputTokens: 4500 },
+  );
+  expect(transport.create.mock.calls.map(([r]) => r.text.format.name)).toEqual([
+    "attributed_product_profile",
+    "acquisition_strategy",
+    "quality_repair",
+    "quality_review",
+  ]);
+  expect(
+    Object.keys(
+      transport.create.mock.calls[2][0].text.format.schema.properties,
+    ).sort(),
+  ).toEqual([
+    "firstExperiment.resources.assumedMinutes",
+    "firstExperiment.resources.researchMinutesPerActivity",
+  ]);
+  for (const week of result.report.thirtyDayPlan)
+    expect(
+      week.actions.some((a) => a.includes("budget 60 min; planned 36 min")),
+    ).toBe(true);
   expect(
     result.report.schemaVersion === "1.1" && result.report.quality?.repairs,
   ).toBe(1);

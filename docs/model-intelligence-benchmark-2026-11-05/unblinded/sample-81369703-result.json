@@ -1,0 +1,34 @@
+{
+  "site": "tally",
+  "model": "gpt-6.1-sol",
+  "label": "sample-81369703",
+  "requestedModel": "gpt-6.1-sol",
+  "resolvedModel": "gpt-6.1-sol",
+  "status": "completed",
+  "incompleteDetails": null,
+  "latencyMs": 63992,
+  "actualInput": 1219,
+  "actualOutput": 2024,
+  "reasoningTokens": 479,
+  "cachedInput": 0,
+  "cacheWrites": 1216,
+  "estimatedCostUsd": 0.023286,
+  "serviceTier": "default",
+  "jsonValid": true,
+  "schemaValid": true,
+  "assembled": false,
+  "completeStrategy": true,
+  "diagnostics": {
+    "error": "ZodError",
+    "issues": [
+      {
+        "path": "outreachTemplates.0.channel",
+        "code": "too_big"
+      },
+      {
+        "path": "outreachTemplates.1.channel",
+        "code": "too_big"
+      }
+    ]
+  }
+}

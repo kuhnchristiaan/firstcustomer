@@ -1,0 +1,70 @@
+{
+  "label": "sample-f5838bb2",
+  "product": "tally",
+  "scores": {
+    "A": 10,
+    "B": 10,
+    "C": 7,
+    "D": 7,
+    "E": 1,
+    "F": 2
+  },
+  "components": {
+    "A": [
+      6,
+      4
+    ],
+    "B": [
+      4,
+      3,
+      1,
+      2,
+      0
+    ],
+    "C": [
+      5,
+      1,
+      0,
+      1
+    ],
+    "D": [
+      2,
+      3,
+      1,
+      1
+    ],
+    "E": [
+      1,
+      0
+    ],
+    "F": [
+      1,
+      1,
+      0
+    ]
+  },
+  "total": 37,
+  "commerciallyAcceptable": false,
+  "contentComplete": false,
+  "reasons": {
+    "A": "Correct no-code/free forms concept, but assumes volume-based paid upgrade despite supplied unlimited-free forms/submissions. Paid-plan conditions and trials are not established by evidence.",
+    "B": "Three distinct broad groups, but no narrow first-workflow timing trigger. Describes freelancers as highly motivated and access as ready without research; willingness to pay is particularly weak for a free offering.",
+    "C": "Self-service label does not translate into product-led strategy. Cold email, LinkedIn InMail and bidding on design jobs are outbound variants, not a useful comparison against templates/use-case distribution. Public profiles do not establish available email access or free InMail/bids.",
+    "D": "Ten emails in two hours is bounded, but prospect permissions/access, personalisation and activation steps are underdeveloped. Adjust after ten, stop after twenty and switch channels on silence without diagnosing access. Two interested replies is an arbitrary success threshold.",
+    "E": "Free activation versus actual payment is not operationally separated. Volume-upgrade monetisation conflicts with the supplied free/unlimited proposition, and interest/trial requests are used as success.",
+    "F": "First-buyer sentence is unfinished. The initial message invents a positive observation about the recipient's work; no verified-research placeholder. Conditional channels can add unacknowledged costs."
+  },
+  "excerpts": [
+    "Trial to paid subscription upgrade after form volume or feature use justifies payment",
+    "Direct email outreach using platform contact info",
+    "At least 2 recipients respond with interest or request trial",
+    "Send personalized LinkedIn InMail to 10 freelancers",
+    "Hi [Name], noticed your great design work."
+  ],
+  "criticalBlockers": [
+    "Unsupported volume-paywall assumption",
+    "Fabricated prospect observation",
+    "Arbitrary response threshold",
+    "Unfinished first-buyer rationale"
+  ]
+}

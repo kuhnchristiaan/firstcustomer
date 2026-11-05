@@ -1,0 +1,198 @@
+[
+  {
+    "site": "senja",
+    "model": "gpt-4.1-mini",
+    "originalLegacySchemaValid": true,
+    "newContractAccepted": false,
+    "diagnosticAssemblyCompatible": true,
+    "commercialIssues": [
+      {
+        "section": "paymentPath",
+        "path": "paymentPath",
+        "reason": "Unsupported SaaS monetization assumption: verify the actual offer first"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.firstAction",
+        "reason": "Activity quantity contradicts the numeric primary scope"
+      },
+      {
+        "section": "messages",
+        "path": "messages.0.body",
+        "reason": "Unresearched prospect observation requires a verified research placeholder"
+      }
+    ]
+  },
+  {
+    "site": "senja",
+    "model": "gpt-6.1-sol",
+    "originalLegacySchemaValid": true,
+    "newContractAccepted": false,
+    "diagnosticAssemblyCompatible": true,
+    "commercialIssues": [
+      {
+        "section": "firstBuyerWhy",
+        "path": "firstBuyerWhy",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "paymentPath",
+        "path": "paymentPath",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.resources.assumptions",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.resources.assumptions",
+        "reason": "Prose work estimates exceed the numeric time allowance"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.commercialLearning",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "alternatives",
+        "path": "alternatives.0.comparison",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "positioning",
+        "path": "positioning",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.resources.assumedMinutes",
+        "reason": "Researched outreach volume is unrealistic within the numeric time allowance"
+      }
+    ]
+  },
+  {
+    "site": "tally",
+    "model": "gpt-4.1-mini",
+    "originalLegacySchemaValid": true,
+    "newContractAccepted": false,
+    "diagnosticAssemblyCompatible": true,
+    "commercialIssues": [
+      {
+        "section": "firstBuyerWhy",
+        "path": "firstBuyerWhy",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "paymentPath",
+        "path": "paymentPath",
+        "reason": "Unsupported SaaS monetization assumption: verify the actual offer first"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.continueWhen",
+        "reason": "Arbitrary numeric commercial threshold; test observed buying evidence instead"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.adjustWhen",
+        "reason": "Arbitrary numeric commercial threshold; test observed buying evidence instead"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.stopWhen",
+        "reason": "Arbitrary numeric commercial threshold; test observed buying evidence instead"
+      },
+      {
+        "section": "messages",
+        "path": "messages.0.body",
+        "reason": "Unresearched prospect observation requires a verified research placeholder"
+      },
+      {
+        "section": "messages",
+        "path": "messages.1.body",
+        "reason": "Unresearched prospect observation requires a verified research placeholder"
+      },
+      {
+        "section": "alternatives",
+        "path": "alternatives.0.firstAction",
+        "reason": "Potentially paid alternative lacks a verified budget/access condition"
+      },
+      {
+        "section": "alternatives",
+        "path": "alternatives.1.firstAction",
+        "reason": "Potentially paid alternative lacks a verified budget/access condition"
+      }
+    ]
+  },
+  {
+    "site": "tally",
+    "model": "gpt-6.1-sol",
+    "originalLegacySchemaValid": true,
+    "newContractAccepted": false,
+    "diagnosticAssemblyCompatible": true,
+    "commercialIssues": [
+      {
+        "section": "firstBuyerWhy",
+        "path": "firstBuyerWhy",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "paymentPath",
+        "path": "paymentPath",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "paymentPath",
+        "path": "paymentPath",
+        "reason": "Primary paid offer changes the existing SaaS into a services business"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.identifyProspects",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.activityTarget.activity",
+        "reason": "Activity quantity contradicts the numeric primary scope"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.resources.assumptions",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "alternatives",
+        "path": "alternatives.0.comparison",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "messages",
+        "path": "messages.0.body",
+        "reason": "Primary paid offer changes the existing SaaS into a services business"
+      },
+      {
+        "section": "messages",
+        "path": "messages.1.body",
+        "reason": "Primary paid offer changes the existing SaaS into a services business"
+      },
+      {
+        "section": "positioning",
+        "path": "positioning",
+        "reason": "Primary paid offer changes the existing SaaS into a services business"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.resources.assumedMinutes",
+        "reason": "Researched outreach volume is unrealistic within the numeric time allowance"
+      },
+      {
+        "section": "segments",
+        "path": "segments.1.tradeoff",
+        "reason": "Overlapping buyer/workflow groups need a distinct buying process or a different segment"
+      }
+    ]
+  }
+]

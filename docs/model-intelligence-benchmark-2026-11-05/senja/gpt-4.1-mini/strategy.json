@@ -1,0 +1,102 @@
+{
+  "segments": [
+    {
+      "name": "Solo digital marketing freelancers",
+      "buyer": "Solo digital marketing freelancer managing multiple small clients",
+      "market": "Small business marketing service providers",
+      "problem": "Spending too much time manually collecting and formatting client testimonials",
+      "access": "Accessible via freelance platforms and LinkedIn groups",
+      "tradeoff": "Lower budget but high urgency for efficiency tools"
+    },
+    {
+      "name": "Small ecommerce store owners",
+      "buyer": "Owner of a small ecommerce store on Shopify or WooCommerce",
+      "market": "Small online retailers with direct customer feedback",
+      "problem": "Difficulty leveraging customer reviews effectively on their websites",
+      "access": "Accessible via ecommerce forums and Facebook business groups",
+      "tradeoff": "Moderate budget, self-service preferred"
+    },
+    {
+      "name": "Startup marketing managers",
+      "buyer": "Marketing manager at an early-stage startup looking to boost conversions",
+      "market": "Early-stage startups with digital presence",
+      "problem": "Lack of consolidated, easy testimonial collection slowing marketing efforts",
+      "access": "Accessible via startup communities and LinkedIn",
+      "tradeoff": "Higher budget but longer sales cycle"
+    }
+  ],
+  "firstBuyerWhy": "The solo digital marketing freelancer is best due to urgent workflow need to save time, direct buying authority, ease of access, and willingness to adopt free-to-paid tools quickly; startup managers take longer to decide",
+  "buyingMotion": "Self-service",
+  "paymentPath": "Start free trial, then convert to monthly paid plan after seeing improved testimonial collection and display",
+  "firstExperiment": {
+    "problem": "Freelancers manually collecting testimonials takes too long",
+    "identifyProspects": "Search LinkedIn freelance marketing groups and Upwork profiles with testimonial-related keywords",
+    "channel": "LinkedIn groups outreach",
+    "channelRationale": "Direct access to target buyers actively seeking marketing tools, low cost, fast feedback",
+    "firstAction": "Join targeted LinkedIn groups and post an invitation to try Senja for free",
+    "activityTarget": {
+      "quantity": 10,
+      "activity": "outreach posts or personal invitations"
+    },
+    "resources": {
+      "assumedMinutes": 120,
+      "tools": [
+        "LinkedIn",
+        "Email"
+      ],
+      "directSpend": 0,
+      "assumptions": "Freelancers respond to relevant solutions posted in their groups"
+    },
+    "commercialLearning": "Learn urgency of testimonial collection pain, typical workarounds like manual approaches, decision authority, and initial willingness to pay for convenience",
+    "continueWhen": "Multiple freelancers express needs matching assumptions and use free tier",
+    "adjustWhen": "Low interest or no uptake after repeated outreach",
+    "stopWhen": "No meaningful engagement or interest after two weeks"
+  },
+  "alternatives": [
+    {
+      "channel": "Freelance platforms direct outreach",
+      "comparison": "More targeted but higher effort and slower feedback than LinkedIn groups",
+      "preferWhen": "More precise buyer profiles needed or LinkedIn group access fails",
+      "firstAction": "Send personalized messages to freelancers on Upwork requesting product trial"
+    },
+    {
+      "channel": "Facebook business groups",
+      "comparison": "Broader reach but lower engagement and more noise than LinkedIn",
+      "preferWhen": "Poor LinkedIn response or to expand reach beyond LinkedIn",
+      "firstAction": "Post and engage in relevant Facebook groups with testimonial pain points content"
+    }
+  ],
+  "messages": [
+    {
+      "subject": "Boost your clients' trust with easier testimonials",
+      "body": "Hi [Name], noticed you manage multiple clients—Senja helps you collect and share testimonials effortlessly. Interested in trying it free for your projects?"
+    },
+    {
+      "subject": "Following up on simplifying your testimonial collection",
+      "body": "Hi [Name], just checking if you had a chance to explore Senja? Happy to answer questions or help you get started for free."
+    }
+  ],
+  "positioning": "Senja is a simple self-serve tool enabling solo marketers to quickly collect and organize testimonials, saving time and boosting client trust without complex setup.",
+  "unknowns": [
+    "Actual willingness to pay after free use",
+    "Preferred testimonial formats (video vs text)",
+    "Best messages that trigger engagement"
+  ],
+  "recommendationBasis": {
+    "segments": [
+      "s1"
+    ],
+    "acquisitionChannels": [
+      "s1"
+    ],
+    "outreachTemplates": [
+      "s1"
+    ],
+    "firstTenPlaybook": [
+      "s1"
+    ],
+    "thirtyDayPlan": [
+      "s1"
+    ]
+  }
+}

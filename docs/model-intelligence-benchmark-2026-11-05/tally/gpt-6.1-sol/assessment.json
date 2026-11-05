@@ -1,0 +1,69 @@
+{
+  "label": "sample-81369703",
+  "product": "tally",
+  "scores": {
+    "A": 13,
+    "B": 13,
+    "C": 10,
+    "D": 11,
+    "E": 6,
+    "F": 3
+  },
+  "components": {
+    "A": [
+      7,
+      6
+    ],
+    "B": [
+      3,
+      3,
+      3,
+      3,
+      1
+    ],
+    "C": [
+      2,
+      4,
+      3,
+      1
+    ],
+    "D": [
+      4,
+      2,
+      0,
+      5
+    ],
+    "E": [
+      3,
+      3
+    ],
+    "F": [
+      0,
+      1,
+      2
+    ]
+  },
+  "total": 56,
+  "commerciallyAcceptable": false,
+  "contentComplete": false,
+  "reasons": {
+    "A": "Understands form intake and free software; no security/performance guarantees. Explicitly distinguishes a proposed setup price from existing product pricing.",
+    "B": "Agency owners have authority, repeated intake and a kickoff trigger. Solo brand designers substantially overlap in workflow and buying process. Evidence of urgency is rightly requested rather than assumed.",
+    "C": "Chooses a sales-assisted paid setup service instead of explaining Tally's self-service software monetisation. Templates are a relevant alternative, but the plan tests a different offer/business model. Authorization caveat is honest and necessary, yet unresolved.",
+    "D": "Public directories and permitted business routes are concrete. Eight researched, qualified, personalised invitations in 24 minutes are not credible; the paid pilot scope and several important notes are unfinished. Decision branches test urgency/approval and stop if the free workaround suffices.",
+    "E": "Separates activation and payment and admits paid-plan uncertainty. The €49 price is explicitly a test, not a claimed Tally tariff, but has no delivery economics or defined finished scope. No arbitrary response-rate benchmark.",
+    "F": "Several fields end abruptly, including first-buyer rationale, payment scope and commercial learning. Time allocation is unrealistic. Messages are usable questions and avoid fabricated observations; the overall contract remains incomplete."
+  },
+  "excerpts": [
+    "The supplied product claims describe free forms, not a verified paid plan.",
+    "If authorized, test a clearly scoped €49 pilot: configure",
+    "Research and qualify eight agency owners, sending one personalized invitation wherever an appropriate public contact route exists.",
+    "resources.assumedMinutes = 24",
+    "Solo designers win instead,"
+  ],
+  "criticalBlockers": [
+    "Unfinished strategic fields",
+    "Unachievable research/outreach scope within numeric time allowance",
+    "Proposed service revenue is not a demonstrated path to paying SaaS customers"
+  ]
+}
