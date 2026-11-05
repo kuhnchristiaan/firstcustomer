@@ -106,6 +106,9 @@ export function AdvisorClient({ initial }: { initial: Data }) {
   const s = data.strategy?.output;
   const completed = data.strategy?.tasks.filter((t) => t.completed).length ?? 0;
   const plannedMinutes = s?.tasks.reduce((n, t) => n + t.minutes, 0) ?? 0;
+  const nextTaskIndex =
+    data.strategy?.tasks.findIndex((task) => !task.completed) ?? -1;
+  const nextTask = s && nextTaskIndex >= 0 ? s.tasks[nextTaskIndex] : null;
   return (
     <div className="advisor-page">
       <header className="advisor-intro">
@@ -342,6 +345,32 @@ export function AdvisorClient({ initial }: { initial: Data }) {
         </form>
       ) : (
         <>
+          {nextTask && (
+            <section
+              className="panel advisor-next-action"
+              aria-label="Next action"
+            >
+              <span className="eyebrow">YOUR NEXT ACTION</span>
+              <h2>{nextTask.title}</h2>
+              <p className="text-sm muted">
+                {nextTask.minutes} minutes · Start here when you are ready.
+              </p>
+              <a
+                className="button button-primary px-4 py-2.5 mt-3 inline-flex"
+                href={`#advisor-task-${nextTaskIndex}`}
+                onClick={() => {
+                  const details = document.getElementById(
+                    `advisor-task-${nextTaskIndex}`,
+                  );
+                  if (details instanceof HTMLDetailsElement)
+                    details.open = true;
+                }}
+              >
+                Open task instructions{" "}
+                <ArrowRight size={15} aria-hidden="true" />
+              </a>
+            </section>
+          )}
           <section
             className="advisor-strategy-grid"
             aria-label="Current strategy"
@@ -349,9 +378,10 @@ export function AdvisorClient({ initial }: { initial: Data }) {
             <article className="panel">
               <div className="advisor-card-label">
                 <Compass size={17} aria-hidden="true" />
-                START WITH THIS BUYER
+                WHO TO REACH
               </div>
-              <h2>{s.buyer.segment}</h2>
+              <h2>Target buyer</h2>
+              <p className="advisor-strategy-value">{s.buyer.segment}</p>
               <p>{s.buyer.buyingProblemOrTrigger}</p>
               <details>
                 <summary>Why this buyer</summary>
@@ -361,9 +391,10 @@ export function AdvisorClient({ initial }: { initial: Data }) {
             <article className="panel">
               <div className="advisor-card-label">
                 <ArrowRight size={17} aria-hidden="true" />
-                FIND THEM HERE
+                WHERE TO START
               </div>
-              <h2>{s.channel.name}</h2>
+              <h2>Primary channel</h2>
+              <p className="advisor-strategy-value">{s.channel.name}</p>
               <p>{s.channel.whereAndHow}</p>
               <details>
                 <summary>Why this channel</summary>
@@ -486,7 +517,7 @@ export function AdvisorClient({ initial }: { initial: Data }) {
                         </span>
                       </div>
                     </div>
-                    <details>
+                    <details id={`advisor-task-${index}`}>
                       <summary>Task instructions</summary>
                       <p>{task.instruction}</p>
                       <p className="text-sm muted">

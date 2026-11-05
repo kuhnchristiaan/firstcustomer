@@ -1,0 +1,25 @@
+{
+  "productId": "cmw3l5en80002zosg0hfy786d",
+  "url": "http://localhost:3100/products/cmw3l5en80002zosg0hfy786d/advisor",
+  "strategyId": "cmw3l6hbw0005zosgoxz50q17",
+  "strategyHash": "e3baa2aaf18ad9061f60787c330fff8c94aaba9a7d00860f80dd3feb17eaf95b",
+  "realAi": true,
+  "localAuthUpstream": true,
+  "fixtureAiCalls": 0,
+  "contractAcceptedByApplication": true,
+  "savedStrategySurvivedRefresh": true,
+  "completedTaskSurvivedRefresh": true,
+  "nextActionAdvanced": true,
+  "explanationWasRealAndUncached": true,
+  "explanationDidNotChangeStrategy": true,
+  "navigationHeightPx": 48,
+  "mobileAxeViolations": [],
+  "browserErrors": [],
+  "ledger": {
+    "ceilingUsd": 0.4,
+    "settledUpperUsd": 0.020368999999999998,
+    "uncertainReservedUsd": 0,
+    "calls": 3,
+    "stopped": false
+  }
+}

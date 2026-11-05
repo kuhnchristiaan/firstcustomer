@@ -1,0 +1,301 @@
+{
+  "id": "resp_0ec59e548ad2c3a1016aec858d773c87d29a7f6f89cb938c2a",
+  "object": "response",
+  "created_at": 1793885581,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793885618,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 12000,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_0ec59e548ad2c3a1016aec858f0c9887d2863c655411be49c3",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq7IWyjmWeHKSrCss2YBAgGAf1zO-vSYof_xX0qhlv9K-3etCmVqrbPvv9qzWfnzIuO88ydVkU9b7As7MtBcGSGGLg5ZbQM2YI5QICPfu6y6vaOc-HZiXwqy9W3UfuvaayKyCYZKicltBsH5F94rvKZFNqsAduuW_ViNyr0URY2M68HXBRZ0VaUApiDHA3JjkvBEveuTHTIIbYakHR29UqfJEWsYK4x7jSt1sxF3ebi3BSdh9esJEfXETN-_QYYK799_rCQJrL1dSvtGGyt0KO3krD8ufrDzNxpLJ8bi2gQA1M34Oelt2Gd1Izq7SPpI_meA37HtLuy1KGzsjLcPKC2rtYFnXMDks7ACwMBjAgsG3Ew8P83qseLxHfmkeVLW8MU1q9XVgMlNu_lDmwCDHFWzyQ3PodXdDoT48EaPFp5pIz-1Q6tEvCcSSWuskbFV10N8GemJtDg6TY8TZ5P_C7fVJX6zxUtKpEOzWN42B27UUktxf6gTo-Px_IY_R0wfnJVGc5-3Cn7OaUQH8dK0n5qwctlIYDCHuRCaprJeYlsw_kHTb9VIEelL7kQojw61nsbg1j7tEJ2M8NPOkmLL1MLc9EOlJu1Giqq_Dug5C7FwT4fVlWoJBmDRamBTTNY7lTa2qheCT5Uqn5-3F4Jex6SJPENJWTUIMbm3yZyxuSTn72TeCYCYG02W2R2uxQnLBtVebrnITBIw1PYW5waWym2k2OdvuOf6at1XAOmi4p39UI4dcbb2c6MSXQ1A2H_PQRXKeoM-Ahdc5tkj9vF3DYVdzZsIyu5iCH_dRXtSknYaO_TMYxk-sW9PSlwaFqBUyr-kOsxFWg2wglD4hxinJn2moE1iHVN2i0gfxpdCqxPCQzH_AmC1Lks7P3hdJrlOilxZZoWhsNnFPdL3g47g7VjymyuUUTUr1EMyBo8HCfL4G5-ifIsZR_HF2NbTjN2dFgDxMdpYkly6mLjjDt9zrN6Hn6V13_LAl0ynmw_ivSlN7P_GVSjQNiLtcpBJoyaiRlPAzoQNe34xv7d1jUh_g23d1zzBR-6s7mImTL0WXhpa32t5C0NncqjOZOn6syi6aqyVR8OUqqdSqaW58bPvqXuQFIY_fQlxPaClgPe3PJLiEPayS3iPhWOpJU-kmDWtRFPawGqugWaM5-7A7fjYFmMusTUpyEzpWrNwnCyw0A_TK-iGRi7A-ua5Q0ElBMDqOtO_jMFcTvFAiyWS6v0pJpjmbMWCz4Bun5W-sAf1AwltBtmalPBjdw-O794UDhMPsjrq_SIYWsdDrmTOnqm588NAO5IBggP5Nk-Vwgvc6tIbU6qxqlPxKRGDqjMnFUrC8NrSr6EKBC4TvE14TVgzndFC-4bcodV8KCuHmLuheuAp964erpGAQFijn9iNaPQYS1-KIjFERzIh3YeoBz8BoglS3POfje042B7XiIfg1o7o4NOpPTpNwg9NSnnO3fSPpW5MJzTFrqZAGYR1mqgBoA336mP7QucpS3QBr1XNQqRSyoWAoW1WnJqnqZranFxLOgD2lvrNVzLvyLdJDoYJUECEXwzjaHt1G1LcQbRZ2rwBxMIonEUSdaghnPWN5pkvAQ22CicaYwpFZLZ4MI2yw0_IssiOcVkGwzJ5ksskqwq0aMJv3ByTQxCLN4IffUCoSjlXWmyhHzjuwA7b2B6nsD0UaBojHJt_dGu9qqNDTL8rDrWtgB0UGFNX8RVT2kAlko2qckDDzvHnikbckJPizKRFz3ARsHX4PH06jdHv8UIkwiTUOqmKk50RybD_IB_SMTDfwbALKweAIOBgn38CdpDdu84Vdn6aj-Bp6ZjQQgPZlvnm4ezHA7uhGz7xv_M9_bh1tfiAYhz46GlZOjng-WF1z7ZnJytt3sx0LWW4DOlkcl6qqncANEKuI-V75sC8ycPrHONJmmnNJeuDxax84Y_QN3U-getPSJKaJVaPnBcPLjVIalcCDBE3CXTaTHD15ylpy0uQxTR6GTyodQjfdk5MTk0wjsSv-8b2NqUtvLXCAMQ9o7kB0dECEpYWCwJgRorqLAzGrs9lgiTzboPHlYvIj-RsRxYr9-UiiOA_U4qCqJyHv7KJgOVBWD-R1ZPCWq9G4xtAqC-xSFNaxb2FKHYgJRqleoCyR4XS0mgijPSKpnCIWKu08OtOovzkWkYDKE_OgaMwOfMx8ZM799twYgnbMV0G0pWCZooq9HUCgyQEvRDBhIYdkK1SAVrQzI7HwxVT7jHx8UoVxbsHjJ9sPIqi-LF83fODTm8yWVP_HUbx_i9erm3hLtVQNgqDTIb5Y71XlcC_8lrIaext9-lP5zT8DfHX2TVjCpsLpqEJDR0so6LdxaZABYi-C0ga9X-avjSnoMV_3n_ys1ZoHq9ZEpeyNLDz5WpUFKpx7QtuD5uL08RT5szCcRKDDdWYc0fz2JTbLHPJs7dimIfwBXOCumEnLOqAXenR-bJM4oHSqRNCAd9jLfKdKqzJSy1wxSHFO-JYwnfFdn0NCoNsxQMqTyUPGKNdGMxa29J5QRWLUdJJewYJgWF7jsKzk939seza_XlCaLDZjDVDjRHgLlQN3T0VRg6ptb90Y1BSp4DbUFcAGMeezOeDryVDbA_WClE9kY2nai_aFP9km5NFDH3Y6Nr_aagl4fGaX-E7pPJhBasDXtR0G2QOnZ3tsOWKbIHfGtLYNWZ3vNZBvwc6hJ_A8T5hMXpa4Zw0CpTfqf3IZwjluALFap4ZU6xkCJarBUcrM-rVfUfkIqgf9Bde9L-4_x0PA0OzWBamLzrvegSktSQPLS8tLCphaBRCkFwE60oo9F2E8viopnP1IVOUwAhLrfnIhCIH03UYzyvX9GCU4pjbGJkeH4YoKE4clsxpIY6Mxe0zMyXpAi76bzfANZo2xJT_1Ebo2Vda6YeyQAOlDmii9VWw1uoS4U5hOVQCH-JI2CtxCa7_0lnrtBCuHprnSttjXyQpaDS4lqzXf2ilz3LLmvl7Ssug2RSTLEIn4wz6VbBl7Z21SfH2wQjbl2F7ZuQg3KeHzWllliS9FjomJLv4tyI1ozuQPiRYIDWlhOyBvDGPHiAzEd3sKbDtPGSHah5Q7Pav2w7rYrx7YBhqW-m95_0KYZ4CQYgTqJMJquBwQEiLrgZhO0XP2tW---657izNInSsFPhq-rRfdRxTW7g1EW4j0qyKYLjVgBs81-b1aHj3tqTeHLg6zf9k5KMo-OIoFM19UYv-6FIjE5nG0wx6o4YwthYwNil0U4xzHzgknf3rXDuUdc_94b_UH7zfHwp7HYNPG-_3U04QEq4SqK21ScfgQtIE7-AYVDFQCAzOTetI9-GTkfWTqLTLwiocunQEl_IarVZ9-0uhheybCQVx1Ps0e0XgdPSUafXltjvaJ_T8HV5JGSiujbSCPPEsdgku-8-vjBk_JtpnJR_o8r68LJ1ntaPHutSKP4ewwdtHiSOLhANVPHHu4oY9u6XX8f_yLKZb-QaJ_Sj1UpDkNH2KwNWwYE8QhLFwweGv2OgKPutZX1UhZeFkMusWEBrFhAaCRLS49sieqQ6kzu4xczRTPUQNUhnj26DPilfjM2Y5nr0OrhuH9ht-IjZcPAhWO3KkqlVTiK9beAGbLIv4Nk-GuPV2O5p14Zq1yW1xcaZMVKIM0NS45UA16VtBrsyjmL9y-h2-8tpJZsCLuJMK05j4FHUHBsg8vDZ5uJ8Fmn_3SLeeZ6C_bYak6ekv_kgob478ubPopkrzX5NKv1l_zIDQ_IwHqYsdiSfhrhrqN0-hlQNbtvc20cuiabIr8ZSPonYXziZMMzYXsNoWvju5ZAoQfzBdh1y3OJPW_dFtYjmyNkFtibtm2Fh2lVcmQCYY5VpLfup0UlW7YCn2hoSav1vSNtiUGL0h02XdoX1dAdFtuKGw04zxPhwYhhaIjIROXFp4B3M4-F7Bv45l7sVfylK8Vb8PFHBwD4hi8hyD8336mEppJ2EB0abOQhfrTvJOu0_uV18UT9pKOrEEduGKw7OOjWwH6dGM_HhIFLPK9-_CGpeTUCmQLEReyuqSiipoWTArCmH6IkIlGm9c06tdQpS54xQqnGugfdITja5KeKCG2_1yGXY9DhpH03-1uYI7SuQ987D8MuRfeat_-YO-9CLlGKaXmkIIGlMXsgRoipEvFCGPKRekfFh0HhIqCAfJFY7O8VQf64ZgWe58DRzOZDXS9Mb9mf10I__8zJB81J5RBaQ7o0J8uhCtVZlFyF0okWPHRXNgYbLuR8YUtgvf3-6Qejc9viZqF-W4eMJmEuZU4YtOsgD8ydDyqez8_C59JIWoUVSF8w82d_MK2bOccssVy_R30dSJYvsRX2xR0RfiiK86gWPrTEr6FHhKjLT2dnEjn33g356BTKsGiDUbQsuAFVCvZYo6dFlm2CDrZyl8Oe4bnl-IGWE1ePt63FJfYg59poT9cdxwNp4Wf9Isd3v42qoAwfPuXNkVuMhPmZdtcz9GfELZOxWOODITmnR7kONxMds31BTUDJDCT22RWeHcWWcx1hSOddQj7LqOl6a3dwXq2OLmjfcYqLIaQkE5kdLfsQKrIBBBkl-JivreGD35HGq5Ejlx6OHfM1F7tydzyg0nsAUWW-OEKsZMbi0OjVMLzUexCqsqln7kplvklNHfu_jMkmerDhVXdcLUzCKdLZbGxodbe_vjxoKTgicpKAzhZQuWNCDbFrIaPgj0GlkiwlXlbJ_oIphADB8QegsmYNSbi0QA9o4hxgOHSftO9eYljZwovpUTnGOzqF-ocRqOWw2Rz0C99rtgI_10siqXmzHOxEe6viL13_-QCSPZzITr1uaHGtx_P5tO27wz_BZsRXF08I3b50Yh-IdZZYzO2JbnpJYBpTAkdqqT8qJZQIHLodXNvFnIArYf1j9LnjWGgCm0Q93rNBjD37KsUV9SAcvSRl6BCLZfKrUmx9WK7aqevBN3fXWd25-8MRqDQkYcEsqJeOsBlSONenIitoaUw_mFfVPNOqk1ACy9f8zl9vkPkXsl0oP1fFaMspMZs8l3qdNWD3V8TArwjrAlj7N_8_VAivPVNm61BACwUVqYyBeXSoEtZmhYh2gyKgFeqOnfIWgk8yQYoYYgDIMeTZO3ghn1oPuFXlLFZglsL0lzVfzc4XkSOxV5gwpBAO0Grii8x7_AVJRcxpgpIolPUkjJs4C6B0WSHz6LMmDOn_VH85RtkbUh5NcCig8RDcd1NgoZrAZfiUwxg0aythfYrjCAXefCaCRrBSx1jOGPTP1WxVQhwvEsMeoyhbbvdHyyZhd4zZ8BYH-DyQtNF4h3iaY8_u0P_jgZU4zRWWWI7npTqeTA72dRcgAQO_WsJkGvZ0sWlLQ3lWuUl8ETN-QU__-NVElzc2z-n8sDsXE30x2BrSoSxK3ceaAqDQC6E0nbu-IKelclE0RXrLsoieU6gY-LWBpQ3-GgIA48cNFw1qUDxLrZddrwiwI76VLDGo2JdMRKYhmI_5FelxUSspVrae6Z114agRjFV_qE14B1beINIRWTNabycy6RtmlYzxnGTjLBfeOmrPze9tJtYK6WJFJyTM4f3C5nhl79TvRj_sxmRJvFGHIxKkywWQdjLIJiMg7nmKNjV5o_vM63i-uUDQXtXQU21da4HKOipTr-jmXYHOj11RNov_nMPrRe7jlCAZr77dujAflDlwFYB9aGQekbajMt0b",
+      "summary": []
+    },
+    {
+      "id": "msg_0ec59e548ad2c3a1016aec859cb87487d2bc2b9dc652ea9bee",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\n  \"schemaVersion\": \"advisor/1\",\n  \"buyer\": {\n    \"segment\": \"Bootstrapped SaaS founders with happy paying users who are preparing a launch or sales-page refresh.\",\n    \"buyingProblemOrTrigger\": \"They need customer proof for an upcoming selling moment and can authorize a software purchase themselves.\",\n    \"whyChosen\": \"Existing customers make testimonial collection actionable. This narrower buyer is preferable to pre-revenue founders without customer evidence.\"\n  },\n  \"channel\": {\n    \"name\": \"Permission-based participation in Indie Hackers discussions\",\n    \"whereAndHow\": \"Find recent founder milestone and launch posts; contribute relevant public replies and introduce Senja only where permitted and useful.\",\n    \"whyChosen\": \"Posts can reveal an immediate trigger before contact, unlike broad cold outreach. With no previous acquisition efforts, no paying customers, and no budget, this tests problem relevance without building a prospect database.\",\n    \"accessCheck\": \"Read current community rules and search recent posts for 'first customers', 'launch', and 'testimonials'. Identify three suitable founders and confirm a free, permitted reply route before preparing promotion.\",\n    \"fallback\": \"If access fails, check r/SaaS for a current, explicitly permitted feedback or promotion thread serving the same buyer. Proceed only if suitable founders and posting permission are evident; otherwise pause publication.\"\n  },\n  \"tasks\": [\n    {\n      \"instruction\": \"Perform the access check and inspect Senja's actual plans, paid capabilities, and purchase path. Do not propose payment until the offer is verified.\",\n      \"activityToRecord\": \"Suitable discussions, applicable rules, and verified paid offer.\",\n      \"minutes\": 30,\n      \"directCost\": 0,\n      \"title\": \"Validate access and offer\"\n    },\n    {\n      \"instruction\": \"Prepare one short walkthrough showing how a founder could create a collection form and gather a customer testimonial. Use sample content clearly marked as such.\",\n      \"activityToRecord\": \"Walkthrough and any activation friction.\",\n      \"minutes\": 20,\n      \"directCost\": 0,\n      \"title\": \"Prepare a useful demonstration\"\n    },\n    {\n      \"instruction\": \"Review up to ten recent discussions and make up to five individually relevant replies where rules allow. Ask about their collection obstacle; offer the walkthrough without promising sales gains.\",\n      \"activityToRecord\": \"Posts reviewed, buyer fit, replies published, and responses.\",\n      \"minutes\": 45,\n      \"directCost\": 0,\n      \"title\": \"Participate selectively\"\n    },\n    {\n      \"instruction\": \"Answer responses. Invite interested founders to collect one real testimonial in Senja; discuss the verified paid offer only when it meets their stated need.\",\n      \"activityToRecord\": \"Buying needs, activation, objections, and checkout outcomes.\",\n      \"minutes\": 35,\n      \"directCost\": 0,\n      \"title\": \"Support interested founders\"\n    },\n    {\n      \"instruction\": \"Review evidence after seven days and choose whether to repeat, revise, or pause.\",\n      \"activityToRecord\": \"Separate engagement, usage, and revenue evidence.\",\n      \"minutes\": 20,\n      \"directCost\": 0,\n      \"title\": \"Make the next decision\"\n    }\n  ],\n  \"resources\": {\n    \"availableMinutes\": 180,\n    \"experimentBudget\": 0,\n    \"currency\": \"USD\",\n    \"basis\": \"Founder supplied three hours weekly and zero monthly budget. Tasks allocate 150 minutes, reserving 30 for interruptions and follow-up.\"\n  },\n  \"successCriteria\": {\n    \"evidenceToCollect\": \"Record replies separately from qualified interest: an authorized founder with a current need considering Senja. Activation is collecting a real testimonial; adoption requires repeated use. Only completed payment confirms revenue.\",\n    \"continueWhen\": \"Provisionally continue if two qualified conversations emerge and one founder activates; test the verified paid offer where appropriate.\",\n    \"adjustWhen\": \"Relevant replies without activation warrant examining onboarding or offer fit; insufficient permitted exposure warrants changing execution.\",\n    \"reconsiderWhen\": \"Reconsider if suitable buyers cannot be reached permissibly or qualified conversations repeatedly reveal no collection need. Silence or one week alone does not establish absent demand.\"\n  },\n  \"importantUnknowns\": [\n    \"Actual pricing and paid value relative to the buyer's need.\",\n    \"Whether active, relevant discussions permit product participation.\"\n  ],\n  \"productEvidenceIds\": [\n    \"s1\",\n    \"s2\"\n  ]\n}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "advisor_strategy",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "schemaVersion": {
+            "type": "string",
+            "const": "advisor/1"
+          },
+          "buyer": {
+            "type": "object",
+            "properties": {
+              "segment": {
+                "type": "string",
+                "minLength": 1
+              },
+              "buyingProblemOrTrigger": {
+                "type": "string",
+                "minLength": 1
+              },
+              "whyChosen": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "segment",
+              "buyingProblemOrTrigger",
+              "whyChosen"
+            ],
+            "additionalProperties": false
+          },
+          "channel": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "whereAndHow": {
+                "type": "string",
+                "minLength": 1
+              },
+              "whyChosen": {
+                "type": "string",
+                "minLength": 1
+              },
+              "accessCheck": {
+                "type": "string",
+                "minLength": 1
+              },
+              "fallback": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "name",
+              "whereAndHow",
+              "whyChosen",
+              "accessCheck",
+              "fallback"
+            ],
+            "additionalProperties": false
+          },
+          "tasks": {
+            "minItems": 3,
+            "maxItems": 5,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "instruction": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "activityToRecord": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minutes": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "directCost": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "title": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "instruction",
+                "activityToRecord",
+                "minutes",
+                "directCost",
+                "title"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "resources": {
+            "type": "object",
+            "properties": {
+              "availableMinutes": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 9007199254740991
+              },
+              "experimentBudget": {
+                "type": "number",
+                "minimum": 0
+              },
+              "currency": {
+                "type": "string",
+                "minLength": 1
+              },
+              "basis": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "availableMinutes",
+              "experimentBudget",
+              "currency",
+              "basis"
+            ],
+            "additionalProperties": false
+          },
+          "successCriteria": {
+            "type": "object",
+            "properties": {
+              "evidenceToCollect": {
+                "type": "string",
+                "minLength": 1
+              },
+              "continueWhen": {
+                "type": "string",
+                "minLength": 1
+              },
+              "adjustWhen": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reconsiderWhen": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "evidenceToCollect",
+              "continueWhen",
+              "adjustWhen",
+              "reconsiderWhen"
+            ],
+            "additionalProperties": false
+          },
+          "importantUnknowns": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "productEvidenceIds": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "s1",
+                "s2",
+                "s3",
+                "s4"
+              ]
+            }
+          }
+        },
+        "required": [
+          "schemaVersion",
+          "buyer",
+          "channel",
+          "tasks",
+          "resources",
+          "successCriteria",
+          "importantUnknowns",
+          "productEvidenceIds"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 1386,
+    "input_tokens_details": {
+      "cache_write_tokens": 1383,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1243,
+    "output_tokens_details": {
+      "reasoning_tokens": 309
+    },
+    "total_tokens": 2629
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\n  \"schemaVersion\": \"advisor/1\",\n  \"buyer\": {\n    \"segment\": \"Bootstrapped SaaS founders with happy paying users who are preparing a launch or sales-page refresh.\",\n    \"buyingProblemOrTrigger\": \"They need customer proof for an upcoming selling moment and can authorize a software purchase themselves.\",\n    \"whyChosen\": \"Existing customers make testimonial collection actionable. This narrower buyer is preferable to pre-revenue founders without customer evidence.\"\n  },\n  \"channel\": {\n    \"name\": \"Permission-based participation in Indie Hackers discussions\",\n    \"whereAndHow\": \"Find recent founder milestone and launch posts; contribute relevant public replies and introduce Senja only where permitted and useful.\",\n    \"whyChosen\": \"Posts can reveal an immediate trigger before contact, unlike broad cold outreach. With no previous acquisition efforts, no paying customers, and no budget, this tests problem relevance without building a prospect database.\",\n    \"accessCheck\": \"Read current community rules and search recent posts for 'first customers', 'launch', and 'testimonials'. Identify three suitable founders and confirm a free, permitted reply route before preparing promotion.\",\n    \"fallback\": \"If access fails, check r/SaaS for a current, explicitly permitted feedback or promotion thread serving the same buyer. Proceed only if suitable founders and posting permission are evident; otherwise pause publication.\"\n  },\n  \"tasks\": [\n    {\n      \"instruction\": \"Perform the access check and inspect Senja's actual plans, paid capabilities, and purchase path. Do not propose payment until the offer is verified.\",\n      \"activityToRecord\": \"Suitable discussions, applicable rules, and verified paid offer.\",\n      \"minutes\": 30,\n      \"directCost\": 0,\n      \"title\": \"Validate access and offer\"\n    },\n    {\n      \"instruction\": \"Prepare one short walkthrough showing how a founder could create a collection form and gather a customer testimonial. Use sample content clearly marked as such.\",\n      \"activityToRecord\": \"Walkthrough and any activation friction.\",\n      \"minutes\": 20,\n      \"directCost\": 0,\n      \"title\": \"Prepare a useful demonstration\"\n    },\n    {\n      \"instruction\": \"Review up to ten recent discussions and make up to five individually relevant replies where rules allow. Ask about their collection obstacle; offer the walkthrough without promising sales gains.\",\n      \"activityToRecord\": \"Posts reviewed, buyer fit, replies published, and responses.\",\n      \"minutes\": 45,\n      \"directCost\": 0,\n      \"title\": \"Participate selectively\"\n    },\n    {\n      \"instruction\": \"Answer responses. Invite interested founders to collect one real testimonial in Senja; discuss the verified paid offer only when it meets their stated need.\",\n      \"activityToRecord\": \"Buying needs, activation, objections, and checkout outcomes.\",\n      \"minutes\": 35,\n      \"directCost\": 0,\n      \"title\": \"Support interested founders\"\n    },\n    {\n      \"instruction\": \"Review evidence after seven days and choose whether to repeat, revise, or pause.\",\n      \"activityToRecord\": \"Separate engagement, usage, and revenue evidence.\",\n      \"minutes\": 20,\n      \"directCost\": 0,\n      \"title\": \"Make the next decision\"\n    }\n  ],\n  \"resources\": {\n    \"availableMinutes\": 180,\n    \"experimentBudget\": 0,\n    \"currency\": \"USD\",\n    \"basis\": \"Founder supplied three hours weekly and zero monthly budget. Tasks allocate 150 minutes, reserving 30 for interruptions and follow-up.\"\n  },\n  \"successCriteria\": {\n    \"evidenceToCollect\": \"Record replies separately from qualified interest: an authorized founder with a current need considering Senja. Activation is collecting a real testimonial; adoption requires repeated use. Only completed payment confirms revenue.\",\n    \"continueWhen\": \"Provisionally continue if two qualified conversations emerge and one founder activates; test the verified paid offer where appropriate.\",\n    \"adjustWhen\": \"Relevant replies without activation warrant examining onboarding or offer fit; insufficient permitted exposure warrants changing execution.\",\n    \"reconsiderWhen\": \"Reconsider if suitable buyers cannot be reached permissibly or qualified conversations repeatedly reveal no collection need. Silence or one week alone does not establish absent demand.\"\n  },\n  \"importantUnknowns\": [\n    \"Actual pricing and paid value relative to the buyer's need.\",\n    \"Whether active, relevant discussions permit product participation.\"\n  ],\n  \"productEvidenceIds\": [\n    \"s1\",\n    \"s2\"\n  ]\n}"
+}

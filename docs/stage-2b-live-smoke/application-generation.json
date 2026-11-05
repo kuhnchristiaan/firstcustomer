@@ -1,0 +1,136 @@
+{
+  "status": 200,
+  "latencyMs": 46360,
+  "body": {
+    "productId": "cmw3l5en80002zosg0hfy786d",
+    "name": "Senja",
+    "websiteUrl": "https://senja.io/",
+    "context": {
+      "productStage": "Launched, no paying customers",
+      "resources": {
+        "hoursPerWeek": 3,
+        "monthlyBudget": {
+          "amount": 0,
+          "currency": "USD"
+        }
+      },
+      "previousEfforts": {
+        "channels": [
+          "None"
+        ],
+        "other": null
+      }
+    },
+    "contextVersion": 1,
+    "strategy": {
+      "id": "cmw3l6hbw0005zosgoxz50q17",
+      "version": 1,
+      "output": {
+        "schemaVersion": "advisor/1",
+        "buyer": {
+          "segment": "Bootstrapped SaaS founders with happy paying users who are preparing a launch or sales-page refresh.",
+          "buyingProblemOrTrigger": "They need customer proof for an upcoming selling moment and can authorize a software purchase themselves.",
+          "whyChosen": "Existing customers make testimonial collection actionable. This narrower buyer is preferable to pre-revenue founders without customer evidence."
+        },
+        "channel": {
+          "name": "Permission-based participation in Indie Hackers discussions",
+          "whereAndHow": "Find recent founder milestone and launch posts; contribute relevant public replies and introduce Senja only where permitted and useful.",
+          "whyChosen": "Posts can reveal an immediate trigger before contact, unlike broad cold outreach. With no previous acquisition efforts, no paying customers, and no budget, this tests problem relevance without building a prospect database.",
+          "accessCheck": "Read current community rules and search recent posts for 'first customers', 'launch', and 'testimonials'. Identify three suitable founders and confirm a free, permitted reply route before preparing promotion.",
+          "fallback": "If access fails, check r/SaaS for a current, explicitly permitted feedback or promotion thread serving the same buyer. Proceed only if suitable founders and posting permission are evident; otherwise pause publication."
+        },
+        "tasks": [
+          {
+            "instruction": "Perform the access check and inspect Senja's actual plans, paid capabilities, and purchase path. Do not propose payment until the offer is verified.",
+            "activityToRecord": "Suitable discussions, applicable rules, and verified paid offer.",
+            "minutes": 30,
+            "directCost": 0,
+            "title": "Validate access and offer"
+          },
+          {
+            "instruction": "Prepare one short walkthrough showing how a founder could create a collection form and gather a customer testimonial. Use sample content clearly marked as such.",
+            "activityToRecord": "Walkthrough and any activation friction.",
+            "minutes": 20,
+            "directCost": 0,
+            "title": "Prepare a useful demonstration"
+          },
+          {
+            "instruction": "Review up to ten recent discussions and make up to five individually relevant replies where rules allow. Ask about their collection obstacle; offer the walkthrough without promising sales gains.",
+            "activityToRecord": "Posts reviewed, buyer fit, replies published, and responses.",
+            "minutes": 45,
+            "directCost": 0,
+            "title": "Participate selectively"
+          },
+          {
+            "instruction": "Answer responses. Invite interested founders to collect one real testimonial in Senja; discuss the verified paid offer only when it meets their stated need.",
+            "activityToRecord": "Buying needs, activation, objections, and checkout outcomes.",
+            "minutes": 35,
+            "directCost": 0,
+            "title": "Support interested founders"
+          },
+          {
+            "instruction": "Review evidence after seven days and choose whether to repeat, revise, or pause.",
+            "activityToRecord": "Separate engagement, usage, and revenue evidence.",
+            "minutes": 20,
+            "directCost": 0,
+            "title": "Make the next decision"
+          }
+        ],
+        "resources": {
+          "availableMinutes": 180,
+          "experimentBudget": 0,
+          "currency": "USD",
+          "basis": "Founder supplied three hours weekly and zero monthly budget. Tasks allocate 150 minutes, reserving 30 for interruptions and follow-up."
+        },
+        "successCriteria": {
+          "evidenceToCollect": "Record replies separately from qualified interest: an authorized founder with a current need considering Senja. Activation is collecting a real testimonial; adoption requires repeated use. Only completed payment confirms revenue.",
+          "continueWhen": "Provisionally continue if two qualified conversations emerge and one founder activates; test the verified paid offer where appropriate.",
+          "adjustWhen": "Relevant replies without activation warrant examining onboarding or offer fit; insufficient permitted exposure warrants changing execution.",
+          "reconsiderWhen": "Reconsider if suitable buyers cannot be reached permissibly or qualified conversations repeatedly reveal no collection need. Silence or one week alone does not establish absent demand."
+        },
+        "importantUnknowns": [
+          "Actual pricing and paid value relative to the buyer's need.",
+          "Whether active, relevant discussions permit product participation."
+        ],
+        "productEvidenceIds": [
+          "s1",
+          "s2"
+        ]
+      },
+      "fixture": false,
+      "createdAt": "2026-11-05T13:33:37.724Z",
+      "tasks": [
+        {
+          "id": "cmw3l6hcc0006zosgexoouppe",
+          "position": 0,
+          "completed": false,
+          "version": 0
+        },
+        {
+          "id": "cmw3l6hcc0007zosgfn5h6ds4",
+          "position": 1,
+          "completed": false,
+          "version": 0
+        },
+        {
+          "id": "cmw3l6hcc0008zosggx9d0kxv",
+          "position": 2,
+          "completed": false,
+          "version": 0
+        },
+        {
+          "id": "cmw3l6hcc0009zosgato746zm",
+          "position": 3,
+          "completed": false,
+          "version": 0
+        },
+        {
+          "id": "cmw3l6hcc000azosg0dcx24rd",
+          "position": 4,
+          "completed": false,
+          "version": 0
+        }
+      ]
+    }
+  }
+}

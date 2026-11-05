@@ -18,7 +18,9 @@ export function WorkspaceShell({
   advisor?: boolean;
 }) {
   return (
-    <div className="container workspace-shell">
+    <div
+      className={`container workspace-shell${advisor ? " advisor-shell" : ""}`}
+    >
       <aside className="workspace-sidebar no-print">
         <nav aria-label="Workspace">
           {advisorEnabled() && (

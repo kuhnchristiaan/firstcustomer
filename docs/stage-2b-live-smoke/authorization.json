@@ -1,0 +1,26 @@
+{
+  "website": "https://senja.io/",
+  "founderContext": {
+    "productStage": "Launched, no paying customers",
+    "resources": {
+      "hoursPerWeek": 3,
+      "monthlyBudget": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "previousEfforts": {
+      "channels": [
+        "None"
+      ],
+      "other": null
+    }
+  },
+  "maxCalls": 3,
+  "totalCeilingUsd": 0.4,
+  "retryCount": 0,
+  "repairCount": 0,
+  "auth": "Existing adapter with loopback auth upstream; isolated local account",
+  "aiAndWebsite": "Real OpenAI Responses API and real SSRF-protected website crawl",
+  "startedAt": "2026-11-05T13:32:03.398Z"
+}

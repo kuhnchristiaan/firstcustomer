@@ -1,0 +1,37 @@
+{
+  "calls": 3,
+  "ceilingUsd": 0.4,
+  "usageBasedEstimatedCostUsd": 0.0203675,
+  "conservativeCostUpperUsd": 0.020369,
+  "inputTokens": 9835,
+  "outputTokensIncludingReasoning": 1927,
+  "reasoningTokens": 309,
+  "operations": [
+    {
+      "name": "advisor_product_identification",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "inputTokens": 7004,
+      "outputTokens": 473,
+      "latencyMs": 5995,
+      "costUsd": 0.0035584000000000006
+    },
+    {
+      "name": "advisor_strategy",
+      "model": "gpt-6.1-sol",
+      "inputTokens": 1386,
+      "outputTokens": 1243,
+      "latencyMs": 37214,
+      "costUsd": 0.0158935
+    },
+    {
+      "name": "advisor_assistance",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "inputTokens": 1445,
+      "outputTokens": 211,
+      "latencyMs": 2794,
+      "costUsd": 0.0009156
+    }
+  ],
+  "errors": [],
+  "note": "Actual provider usage priced at approved Standard rates; not an invoice. Reasoning already included in output. No retry/repair."
+}

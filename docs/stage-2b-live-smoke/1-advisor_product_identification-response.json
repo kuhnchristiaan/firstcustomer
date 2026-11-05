@@ -1,0 +1,504 @@
+{
+  "id": "resp_07fae6c7bb0f0887016aec85889ba887d2a4175e37a5e64651",
+  "object": "response",
+  "created_at": 1793885576,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793885580,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 2000,
+  "max_tool_calls": null,
+  "model": "gpt-4.1-mini-2025-04-14",
+  "moderation": null,
+  "output": [
+    {
+      "id": "msg_07fae6c7bb0f0887016aec8589c5d887d296fa56639fb5d5f6",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"version\":\"1.0\",\"identity\":{\"name\":\"Senja\",\"summary\":\"Senja is a SaaS tool to collect, manage, and share social proof such as testimonials, video testimonials, reviews, and social shoutouts. It helps users automatically collect and display social proof across websites, sales pages, emails, and\" ,\"category\":\"Customer acquisition\",\"primaryJob\":{\"actor\":\"Businesses, creators, SaaS operators, and niche sellers\",\"problem\":\"Difficulty building trust and converting customers due to lack of social proof\",\"outcome\":\"Easily collect, manage, and display testimonials and social proof to win customer trust and boost sales\"},\"certainty\":\"Website-supported\",\"evidence\":[{\"blockId\":\"cae551e2b6e4\"}]},\"statements\":[{\"id\":\"s1\",\"text\":\"Senja is a tool to collect, manage, and share testimonials and social proof.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"cae551e2b6e4\"}]},{\"id\":\"s2\",\"text\":\"It provides features like creation of simple and multistep testimonial collection forms, automation of video and text testimonial collection, and the ability to share or embed forms anywhere.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"bf0d9b91c6ba\"}]},{\"id\":\"s3\",\"text\":\"Senja can import testimonials from over 30 platforms and CSV files, automate workflows with Zapier, API & webhooks, and integrates with Stripe to identify and thank paying customers.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"d31a29723b2c\"}]},{\"id\":\"s4\",\"text\":\"Users can analyze testimonials, generate case studies, create various testimonial widgets and Walls of Love to display social proof, and remix video testimonials into social media clips called Reels.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"8df44b72b22f\"}]  }]  ,\"limitations\":[\"Exact pricing details and feature limits beyond free tier and general descriptions are not provided in the data.\",\"No user testimonials or independent reviews are included to validate the product claims.\",\"Technical specifics of API or integration capabilities are not detailed.\" ]}"
+        }
+      ],
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "in_memory",
+  "reasoning": {
+    "context": null,
+    "effort": null,
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "advisor_product_identification",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "1.0"
+          },
+          "identity": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 150
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240
+              },
+              "category": {
+                "type": "string",
+                "enum": [
+                  "Customer acquisition",
+                  "Product analytics",
+                  "Finance operations",
+                  "Developer tools",
+                  "Commerce",
+                  "People operations",
+                  "Security",
+                  "Infrastructure",
+                  "Other",
+                  "Unclear"
+                ]
+              },
+              "primaryJob": {
+                "type": "object",
+                "properties": {
+                  "actor": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  },
+                  "problem": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  },
+                  "outcome": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  }
+                },
+                "required": [
+                  "actor",
+                  "problem",
+                  "outcome"
+                ],
+                "additionalProperties": false
+              },
+              "certainty": {
+                "type": "string",
+                "enum": [
+                  "Website-supported",
+                  "Uncertain"
+                ]
+              },
+              "evidence": {
+                "maxItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "blockId": {
+                      "type": "string",
+                      "enum": [
+                        "cae551e2b6e4",
+                        "21e09887a3aa",
+                        "03cd34fc856f",
+                        "2c982934e88c",
+                        "3a3b6c7867f4",
+                        "d5ed9b4d6396",
+                        "0cc9391227c4",
+                        "36bb6c9839a0",
+                        "185420153522",
+                        "76847a8c4bd1",
+                        "c405b10b7dc9",
+                        "8a6e61d64bfa",
+                        "49630dc6a0cc",
+                        "8cacd7327864",
+                        "560e4f1f3e96",
+                        "bf0d9b91c6ba",
+                        "8088337baf9d",
+                        "b8c2fac70e98",
+                        "7dc0005f6f52",
+                        "049c67802093",
+                        "d31a29723b2c",
+                        "ded279332e6a",
+                        "62f58d67f0df",
+                        "e8aadd46ea4d",
+                        "a2167a5571ef",
+                        "ff7c1311cb40",
+                        "1224993c1e20",
+                        "24bbf17872ac",
+                        "bcabc017cea9",
+                        "85dbf7ba497e",
+                        "11fd7b5a0d04",
+                        "63a7e5175543",
+                        "e5c70794a7df",
+                        "070b03be02b3",
+                        "267fcb35bdcf",
+                        "1c28302da932",
+                        "342cb48a535c",
+                        "1282124eb6f0",
+                        "5a2fe340a182",
+                        "08cafccae402",
+                        "5f68e41b8656",
+                        "6a0ca18cdea2",
+                        "58b01dcebec4",
+                        "07240311e1af",
+                        "bc0d4042bf93",
+                        "dbb603cdc086",
+                        "1ff12da71318",
+                        "a8243d5e1864",
+                        "97b65448a222",
+                        "d40761b29c01",
+                        "fb86b578eb5a",
+                        "874780474a18",
+                        "cef9a6659494",
+                        "fd70eaf5bf68",
+                        "549d17775fc1",
+                        "5948fb46c322",
+                        "3206d84c1a5a",
+                        "19d9eae8356b",
+                        "e45004104a4d",
+                        "8159ed98ccb9",
+                        "b3125fa25dbd",
+                        "9aab17d65b12",
+                        "afb6f6f05834",
+                        "a3caff5aba39",
+                        "7a015d22c354",
+                        "8df44b72b22f",
+                        "3c7fb57a67ec",
+                        "6bd93ea22d90",
+                        "ede6bb714b38",
+                        "8e9b127b4f34",
+                        "df34bf227a73",
+                        "d9025b277294",
+                        "b2287a75e62e",
+                        "e27e86ca316c",
+                        "17020c9ca75e",
+                        "b1787fe493be",
+                        "5aa0ff5ca81b",
+                        "e6982c06a65d",
+                        "83bd03558d64",
+                        "d91efabfb9f2",
+                        "290bf353e7b6",
+                        "437eccf33e5e",
+                        "6dc5e438da8b",
+                        "7e9b10b561ed",
+                        "d5f7c32766ef",
+                        "19919d7ce35f",
+                        "3962a0bca98f",
+                        "7b091bcdc5cb",
+                        "f52c7ad0583a",
+                        "3881ab376a91",
+                        "de67109980e9",
+                        "919cb0c64d9e",
+                        "05c17c18cd4f",
+                        "abd81ecd104b",
+                        "5ba2790a0a5e",
+                        "ed57c0686391",
+                        "dfcc132b36a7",
+                        "4a9d66ecaa38",
+                        "efdd6a5f0173",
+                        "7ae5c3e4a5ac",
+                        "6bda2dcd8560",
+                        "3b4c1e81744a",
+                        "9c25b0707116",
+                        "f199bf8bee4d",
+                        "8f1c2beccfe6",
+                        "af58d76a7843",
+                        "20f23e3b54da",
+                        "b0fac6b0bc58",
+                        "158ee79f07ca",
+                        "3f43fd2540e8",
+                        "2ec71ecdd688",
+                        "1dff7f94a875",
+                        "8b3cd50e0ed8",
+                        "9da6c182f0ca"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "blockId"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "name",
+              "summary",
+              "category",
+              "primaryJob",
+              "certainty",
+              "evidence"
+            ],
+            "additionalProperties": false
+          },
+          "statements": {
+            "maxItems": 4,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 20
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "Website observation",
+                    "Owner product claim",
+                    "Inference",
+                    "Unknown"
+                  ]
+                },
+                "subject": {
+                  "type": "string",
+                  "enum": [
+                    "Owner product",
+                    "Unclear"
+                  ]
+                },
+                "evidence": {
+                  "maxItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "blockId": {
+                        "type": "string",
+                        "enum": [
+                          "cae551e2b6e4",
+                          "21e09887a3aa",
+                          "03cd34fc856f",
+                          "2c982934e88c",
+                          "3a3b6c7867f4",
+                          "d5ed9b4d6396",
+                          "0cc9391227c4",
+                          "36bb6c9839a0",
+                          "185420153522",
+                          "76847a8c4bd1",
+                          "c405b10b7dc9",
+                          "8a6e61d64bfa",
+                          "49630dc6a0cc",
+                          "8cacd7327864",
+                          "560e4f1f3e96",
+                          "bf0d9b91c6ba",
+                          "8088337baf9d",
+                          "b8c2fac70e98",
+                          "7dc0005f6f52",
+                          "049c67802093",
+                          "d31a29723b2c",
+                          "ded279332e6a",
+                          "62f58d67f0df",
+                          "e8aadd46ea4d",
+                          "a2167a5571ef",
+                          "ff7c1311cb40",
+                          "1224993c1e20",
+                          "24bbf17872ac",
+                          "bcabc017cea9",
+                          "85dbf7ba497e",
+                          "11fd7b5a0d04",
+                          "63a7e5175543",
+                          "e5c70794a7df",
+                          "070b03be02b3",
+                          "267fcb35bdcf",
+                          "1c28302da932",
+                          "342cb48a535c",
+                          "1282124eb6f0",
+                          "5a2fe340a182",
+                          "08cafccae402",
+                          "5f68e41b8656",
+                          "6a0ca18cdea2",
+                          "58b01dcebec4",
+                          "07240311e1af",
+                          "bc0d4042bf93",
+                          "dbb603cdc086",
+                          "1ff12da71318",
+                          "a8243d5e1864",
+                          "97b65448a222",
+                          "d40761b29c01",
+                          "fb86b578eb5a",
+                          "874780474a18",
+                          "cef9a6659494",
+                          "fd70eaf5bf68",
+                          "549d17775fc1",
+                          "5948fb46c322",
+                          "3206d84c1a5a",
+                          "19d9eae8356b",
+                          "e45004104a4d",
+                          "8159ed98ccb9",
+                          "b3125fa25dbd",
+                          "9aab17d65b12",
+                          "afb6f6f05834",
+                          "a3caff5aba39",
+                          "7a015d22c354",
+                          "8df44b72b22f",
+                          "3c7fb57a67ec",
+                          "6bd93ea22d90",
+                          "ede6bb714b38",
+                          "8e9b127b4f34",
+                          "df34bf227a73",
+                          "d9025b277294",
+                          "b2287a75e62e",
+                          "e27e86ca316c",
+                          "17020c9ca75e",
+                          "b1787fe493be",
+                          "5aa0ff5ca81b",
+                          "e6982c06a65d",
+                          "83bd03558d64",
+                          "d91efabfb9f2",
+                          "290bf353e7b6",
+                          "437eccf33e5e",
+                          "6dc5e438da8b",
+                          "7e9b10b561ed",
+                          "d5f7c32766ef",
+                          "19919d7ce35f",
+                          "3962a0bca98f",
+                          "7b091bcdc5cb",
+                          "f52c7ad0583a",
+                          "3881ab376a91",
+                          "de67109980e9",
+                          "919cb0c64d9e",
+                          "05c17c18cd4f",
+                          "abd81ecd104b",
+                          "5ba2790a0a5e",
+                          "ed57c0686391",
+                          "dfcc132b36a7",
+                          "4a9d66ecaa38",
+                          "efdd6a5f0173",
+                          "7ae5c3e4a5ac",
+                          "6bda2dcd8560",
+                          "3b4c1e81744a",
+                          "9c25b0707116",
+                          "f199bf8bee4d",
+                          "8f1c2beccfe6",
+                          "af58d76a7843",
+                          "20f23e3b54da",
+                          "b0fac6b0bc58",
+                          "158ee79f07ca",
+                          "3f43fd2540e8",
+                          "2ec71ecdd688",
+                          "1dff7f94a875",
+                          "8b3cd50e0ed8",
+                          "9da6c182f0ca"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "blockId"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "text",
+                "kind",
+                "subject",
+                "evidence"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "limitations": {
+            "maxItems": 4,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            }
+          }
+        },
+        "required": [
+          "version",
+          "identity",
+          "statements",
+          "limitations"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 1,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 7004,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 473,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 7477
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"version\":\"1.0\",\"identity\":{\"name\":\"Senja\",\"summary\":\"Senja is a SaaS tool to collect, manage, and share social proof such as testimonials, video testimonials, reviews, and social shoutouts. It helps users automatically collect and display social proof across websites, sales pages, emails, and\" ,\"category\":\"Customer acquisition\",\"primaryJob\":{\"actor\":\"Businesses, creators, SaaS operators, and niche sellers\",\"problem\":\"Difficulty building trust and converting customers due to lack of social proof\",\"outcome\":\"Easily collect, manage, and display testimonials and social proof to win customer trust and boost sales\"},\"certainty\":\"Website-supported\",\"evidence\":[{\"blockId\":\"cae551e2b6e4\"}]},\"statements\":[{\"id\":\"s1\",\"text\":\"Senja is a tool to collect, manage, and share testimonials and social proof.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"cae551e2b6e4\"}]},{\"id\":\"s2\",\"text\":\"It provides features like creation of simple and multistep testimonial collection forms, automation of video and text testimonial collection, and the ability to share or embed forms anywhere.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"bf0d9b91c6ba\"}]},{\"id\":\"s3\",\"text\":\"Senja can import testimonials from over 30 platforms and CSV files, automate workflows with Zapier, API & webhooks, and integrates with Stripe to identify and thank paying customers.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"d31a29723b2c\"}]},{\"id\":\"s4\",\"text\":\"Users can analyze testimonials, generate case studies, create various testimonial widgets and Walls of Love to display social proof, and remix video testimonials into social media clips called Reels.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"8df44b72b22f\"}]  }]  ,\"limitations\":[\"Exact pricing details and feature limits beyond free tier and general descriptions are not provided in the data.\",\"No user testimonials or independent reviews are included to validate the product claims.\",\"Technical specifics of API or integration capabilities are not detailed.\" ]}"
+}

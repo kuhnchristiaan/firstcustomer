@@ -19,6 +19,7 @@ import {
 import { advisorInstructions } from "@/modules/advisor-proof/contract";
 import { advisorConfig } from "./config";
 import { advisorSchema, checkResources, type FounderContext } from "./schema";
+import { auditedResponse } from "./smoke-audit";
 
 export type UsageEntry = {
   model: string;
@@ -80,7 +81,9 @@ export function createAdvisorTransport(
         "The advisor request exceeds its spending ceiling.",
         400,
       );
-    const response = await client.responses.create(request, { signal });
+    const response = await auditedResponse(request, reserved, () =>
+      client.responses.create(request, { signal }),
+    );
     if (!response.usage) throw new Error("AI usage unavailable");
     const u = response.usage;
     usage.push({

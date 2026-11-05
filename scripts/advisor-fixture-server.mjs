@@ -30,8 +30,18 @@ const server = createServer(async (req, res) => {
   try {
     const url = new URL(req.url, "http://127.0.0.1:3103");
     if (url.pathname === "/health")
-      return send(res, { fixture: true, aiCalls });
+      return send(res, {
+        fixture: true,
+        aiCalls,
+        authOnly: process.env.ADVISOR_AUTH_ONLY === "true",
+      });
     if (url.pathname === "/sources") {
+      if (process.env.ADVISOR_AUTH_ONLY === "true")
+        return send(
+          res,
+          { error: "Source fixtures disabled for live smoke" },
+          403,
+        );
       const host = new URL(url.searchParams.get("url")).hostname;
       const slug =
         host === "senja.io" ? "senja" : host === "tally.so" ? "tally" : null;
@@ -43,7 +53,11 @@ const server = createServer(async (req, res) => {
       if (url.pathname.endsWith("/sign-in/email")) {
         const body = await bodyJson(req);
         if (
-          !["alice@example.test", "bob@example.test"].includes(body.email) ||
+          ![
+            "alice@example.test",
+            "bob@example.test",
+            "smoke@example.test",
+          ].includes(body.email) ||
           body.password !== "fixture-password-123"
         )
           return send(
@@ -54,15 +68,22 @@ const server = createServer(async (req, res) => {
             },
             401,
           );
-        const id = body.email.startsWith("alice")
-          ? "fixture-alice"
-          : "fixture-bob";
+        const id = body.email.startsWith("smoke")
+          ? "local-live-smoke-founder"
+          : body.email.startsWith("alice")
+            ? "fixture-alice"
+            : "fixture-bob";
         const token = `fixture-token-${id}`;
         sessions.set(token, {
           user: {
             id,
             email: body.email,
-            name: id === "fixture-alice" ? "Alice Founder" : "Bob Founder",
+            name:
+              id === "local-live-smoke-founder"
+                ? "Smoke Founder"
+                : id === "fixture-alice"
+                  ? "Alice Founder"
+                  : "Bob Founder",
             emailVerified: true,
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString(),
@@ -98,6 +119,8 @@ const server = createServer(async (req, res) => {
       return send(res, sessions.get(token) ?? null);
     }
     if (url.pathname === "/v1/responses") {
+      if (process.env.ADVISOR_AUTH_ONLY === "true")
+        return send(res, { error: "AI fixtures disabled for live smoke" }, 403);
       const request = await bodyJson(req);
       aiCalls++;
       const data = JSON.parse(request.input[1].content);

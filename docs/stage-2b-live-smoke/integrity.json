@@ -1,0 +1,87 @@
+[
+  {
+    "file": "1-advisor_product_identification-metrics.json",
+    "bytes": 742,
+    "sha256": "e585b2070e0f4b54c5152068fb0fcddf0166b3c5ae305d2f386982e1a9b7b213"
+  },
+  {
+    "file": "1-advisor_product_identification-output.txt",
+    "bytes": 2126,
+    "sha256": "8cb8519f7ad16c2b0cfda49607a9ecc6d7fc3251b87bbe7f6bdfbe563b250c62"
+  },
+  {
+    "file": "1-advisor_product_identification-request.json",
+    "bytes": 36550,
+    "sha256": "02a990f4d1eb692a2db208c2d2ea3db1b83f74688944c9138baba75fd20e8a9a"
+  },
+  {
+    "file": "1-advisor_product_identification-response.json",
+    "bytes": 20997,
+    "sha256": "2056a142219e5008071da9a6bcf46f9aca2d71bf914425c83198135bb4a07663"
+  },
+  {
+    "file": "2-advisor_strategy-metrics.json",
+    "bytes": 695,
+    "sha256": "a4ec2eddf3ef1faa26117a9c3cb758c0c36cd8ea0feb586594efdd7544e1d2d8"
+  },
+  {
+    "file": "2-advisor_strategy-output.txt",
+    "bytes": 4527,
+    "sha256": "62916c2f3928a30b06cb811ed48da0d17cb817de8a5b74ed150c1ebeee23f4b8"
+  },
+  {
+    "file": "2-advisor_strategy-request.json",
+    "bytes": 11538,
+    "sha256": "f72a68f3fc71ede8950a1bcb62f1419ffcdf6896a5401cf0d344a17f45d8d052"
+  },
+  {
+    "file": "2-advisor_strategy-response.json",
+    "bytes": 22771,
+    "sha256": "b30133d2ce10148a734369e3eaab83164e5953e287279ad585bcf4c0245a7aee"
+  },
+  {
+    "file": "3-advisor_assistance-metrics.json",
+    "bytes": 707,
+    "sha256": "20c049e8f3d6617adf92c92f966b2b40a54af5d0a5481b1eabdb861338db78de"
+  },
+  {
+    "file": "3-advisor_assistance-output.txt",
+    "bytes": 1210,
+    "sha256": "44e5d4af47bf89d1a2df0643623e7e4ae40aab585c46dcd40c0137217c41a8a3"
+  },
+  {
+    "file": "3-advisor_assistance-request.json",
+    "bytes": 8138,
+    "sha256": "f97df45e3c44f4b135643c103aa74db08f8254191ae2570bfd690ff3b9d4a47f"
+  },
+  {
+    "file": "3-advisor_assistance-response.json",
+    "bytes": 4860,
+    "sha256": "8377fdc956f7a1de24790bab9640fc1944a17fd138c1b6870c39c98b7e99b0f2"
+  },
+  {
+    "file": "application-explanation.json",
+    "bytes": 1314,
+    "sha256": "e349403e951cb2be32a5ec898933f3859bf93aefe221d02844e952d6e43c688c"
+  },
+  {
+    "file": "application-generation.json",
+    "bytes": 6391,
+    "sha256": "7082bd5adec4b90bd3963bff0d21ef768f64f23970ef1b0d9da308f66d7dad0e"
+  },
+  {
+    "file": "browser-verification.json",
+    "bytes": 794,
+    "sha256": "17115310ef5f3b665fa6cdf7891815e6db96a3061004bec1ffb309a27a84c1f0"
+  },
+  {
+    "file": "cost-summary.json",
+    "bytes": 994,
+    "sha256": "b97cd74d589f4b925244c821a5fefd6d4db3c1b9396ae16281c906cf378b8bfd"
+  },
+  {
+    "file": "database-evidence.json",
+    "bytes": 119670,
+    "sha256": "c03609116c390d38e74c42a79d45c6f880080b6c74377c56ac49b0376bdf7153"
+  }
+]

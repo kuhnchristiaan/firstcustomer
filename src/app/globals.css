@@ -1,4 +1,53 @@
 @import "tailwindcss";
+.advisor-next-action {
+  margin-bottom: 20px;
+  border-left: 4px solid var(--lime);
+}
+.advisor-next-action h2 {
+  margin: 8px 0;
+}
+.advisor-strategy-value {
+  font-weight: 600;
+}
+.advisor-task details {
+  scroll-margin-top: 24px;
+}
+@media (max-width: 767px) {
+  body:has(.advisor-shell) .header-inner {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-height: 68px;
+    gap: 10px;
+  }
+  body:has(.advisor-shell) .site-nav {
+    width: auto;
+    margin: 0;
+  }
+  body:has(.advisor-shell) .site-nav a {
+    padding: 10px 0;
+    border: 0;
+  }
+  body:has(.advisor-shell) .site-nav a:nth-child(2) {
+    display: none;
+  }
+  .advisor-shell .workspace-sidebar {
+    margin-bottom: 18px;
+  }
+  .advisor-shell .workspace-sidebar nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 100%;
+    gap: 6px;
+    padding-bottom: 4px;
+  }
+  .advisor-shell .workspace-sidebar nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    min-height: 44px;
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}
 /* Signed-in advisor: existing paper, ink and lime identity. */
 .advisor-intro {
   margin-bottom: 28px;
