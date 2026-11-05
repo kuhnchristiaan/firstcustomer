@@ -71,13 +71,18 @@ export function fieldPatch(
   // Coordinated repairs can include several exact fields, but never a whole section.
   if (!paths.size || paths.size > 12)
     throw new Error("quality_patch_too_broad");
+  const wireShape: Record<string, z.ZodType> = {};
   const shape = Object.fromEntries(
     [...paths].sort().map((path) => {
       if (path === "paymentPath.pricingStatementIds") return [path, z.array(z.string()).length(0)];
       if (clearPricing && path === "paymentPath.monetizationStatus") return [path, z.literal("Unknown")];
       const original = schemaAt(path);
-      if (original instanceof z.ZodString && reasoningPath.test(path))
-        return [path, original.regex(completeRepairText, "Finish the reasoning component; no dangling clause").describe("Rewrite as one short complete sentence within the existing maxLength. Omit secondary detail instead of filling the character limit or cutting a clause.")];
+      if (original instanceof z.ZodString && reasoningPath.test(path)) {
+        // The provider's regex dialect rejects lookahead. Keep the strict
+        // completeness check locally; wire constraints retain original bounds.
+        wireShape[path] = original.describe("Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification.");
+        return [path, original.regex(completeRepairText, "Finish the reasoning component; no dangling clause")];
+      }
       if (original) return [path, original];
       const value = leaves[path];
       return [
@@ -93,6 +98,7 @@ export function fieldPatch(
   return {
     paths: [...paths].sort(),
     schema: z.strictObject(shape),
+    wireSchema: z.strictObject({ ...shape, ...wireShape }),
     apply(raw: unknown) {
       const patch = z.strictObject(shape).parse(raw);
       const next = structuredClone(candidate);

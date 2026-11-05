@@ -69,3 +69,16 @@ it('passes a complete saved candidate to semantic review unchanged without buyin
  expect(transport.create.mock.calls.map(([r])=>r.text.format.name)).toEqual(['attributed_product_profile','acquisition_strategy','quality_review']);
  if(result.report.schemaVersion!=='1.1')throw Error('Wrong schema');expect(result.report.acquisitionStrategy).toEqual(valid);expect(result.report.quality?.repairs).toBe(0);
 });
+import { zodTextFormat } from 'openai/helpers/zod';
+it('uses provider-compatible repair schemas while rejecting the real incomplete repair locally',()=>{
+ const p=fieldPatch(candidate,acquisitionWireSchema().shape,load('summary.json').failure.qualityFailure.issues);
+ const wire=zodTextFormat(p.wireSchema,'quality_repair');expect(JSON.stringify(wire)).not.toContain('?!');
+ expect(p.wireSchema.safeParse(repair).success).toBe(true);expect(p.schema.safeParse(repair).success).toBe(false);expect(()=>p.apply(repair)).toThrow();
+});
+it('accepts observable purchase-step wording from the latest genuine trace without a spurious repair',async()=>{
+ env();const read=(p:string)=>JSON.parse(readFileSync('docs/senja-committed-acceptance/'+p,'utf8'));
+ const real=read('2-output.txt');transport.create.mockResolvedValueOnce(response(read('1-output.txt'))).mockResolvedValueOnce(response(real)).mockResolvedValueOnce(response(passingReview));
+ const result=await provider().analyze(read('sources.json'),AbortSignal.timeout(3000));
+ expect(transport.create.mock.calls.map(([r])=>r.text.format.name)).toEqual(['attributed_product_profile','acquisition_strategy','quality_review']);
+ if(result.report.schemaVersion!=='1.1')throw Error('Wrong schema');expect(result.report.acquisitionStrategy).toEqual(real);
+});

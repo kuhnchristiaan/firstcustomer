@@ -1,0 +1,11 @@
+{
+  "ordinal": 3,
+  "stage": "quality_repair",
+  "reservedUsd": 0.0458325,
+  "maxOutputTokens": 1000,
+  "error": {
+    "name": "Error",
+    "status": 400,
+    "code": "invalid_json_schema"
+  }
+}

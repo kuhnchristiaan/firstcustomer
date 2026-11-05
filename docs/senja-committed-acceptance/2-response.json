@@ -1,0 +1,631 @@
+{
+  "id": "resp_0715767964bfa87e006aecd844d35887d29e1727dca1e83f05",
+  "object": "response",
+  "created_at": 1793906756,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793906789,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 3471,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "msg_0715767964bfa87e006aecd846513c87d285d8c08fd2581e47",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\n  \"segments\": [\n    {\n      \"name\": \"Independent course creators\",\n      \"buyer\": \"Creator who owns the course website and software budget.\",\n      \"market\": \"Small education businesses preparing an enrollment campaign.\",\n      \"problem\": \"Launch deadlines make collecting and reusing student testimonials urgent.\",\n      \"access\": \"Public course websites can expose an owner-operated business contact route.\",\n      \"tradeoff\": \"Purchasing authority is concentrated, but willingness to pay may be seasonal and remains unverified.\"\n    },\n    {\n      \"name\": \"Small B2B SaaS marketing teams\",\n      \"buyer\": \"Marketing lead with website responsibility and software purchasing authority.\",\n      \"market\": \"Software companies updating landing pages or campaign messaging.\",\n      \"problem\": \"Recurring campaigns need relevant customer proof without searching scattered sources.\",\n      \"access\": \"Company websites identify teams, but direct marketing contacts may be harder to reach.\",\n      \"tradeoff\": \"Recurring use could support willingness to pay, but competing priorities can reduce urgency.\"\n    },\n    {\n      \"name\": \"Client-facing marketing agencies\",\n      \"buyer\": \"Agency owner responsible for client website delivery and tool spending.\",\n      \"market\": \"Small agencies delivering websites and marketing campaigns.\",\n      \"problem\": \"Client deadlines create pressure to gather and place testimonials.\",\n      \"access\": \"Public agency directories and websites often provide business inquiry routes.\",\n      \"tradeoff\": \"Owners can authorize spending, but client permissions and unverified multi-client suitability add friction.\"\n    }\n  ],\n  \"firstBuyerWhy\": {\n    \"advantage\": \"An independent course creator can connect an enrollment deadline to a website change without cross-team approval.\",\n    \"risk\": \"A creator may need testimonials only during launches and see little reason for ongoing payment.\",\n    \"runnerUpWinsWhen\": \"Small B2B SaaS marketing teams win when recurring proof updates create a clearer ongoing purchase need.\"\n  },\n  \"buyingMotion\": \"Sales-assisted\",\n  \"paymentPath\": {\n    \"offerKind\": \"Existing SaaS\",\n    \"monetizationStatus\": \"Unknown\",\n    \"pricingStatementIds\": [],\n    \"verify\": \"Inspect Senja's current official offer, paid capabilities and checkout before proposing any paid conversion; the supplied free-start statement does not establish pricing.\",\n    \"activation\": \"The creator collects a genuine student testimonial through Senja and adds relevant proof to a course page.\",\n    \"adoption\": \"The creator returns to collect or reuse testimonials for another page, post or enrollment campaign.\",\n    \"paidConversion\": \"After offer verification, the creator completes a confirmed payment for Senja itself rather than for setup or consulting.\"\n  },\n  \"firstExperiment\": {\n    \"problem\": \"Course creators may struggle to obtain and publish relevant student testimonials before enrollment opens.\",\n    \"identifyProspects\": \"Manually find independent course websites with a publicly stated upcoming enrollment period and a public business contact route; record the deadline evidence without inferring a testimonial problem.\",\n    \"channel\": \"Direct email\",\n    \"channelRationale\": {\n      \"decision\": \"Researched outreach can test deadline-linked pain without requiring an existing audience or website traffic.\",\n      \"tradeoff\": \"Manual prospect research limits reach but produces more specific workflow evidence than publishing an undistributed template.\"\n    },\n    \"firstAction\": \"Verify Senja's current offer, then research eligible course owners and send the initial question through an appropriate public business email address.\",\n    \"activityTarget\": {\n      \"quantity\": 4,\n      \"activity\": \"Research eligible course owners and send individually relevant business emails.\"\n    },\n    \"resources\": {\n      \"assumedMinutes\": 75,\n      \"preparationMinutes\": 20,\n      \"researchMinutesPerActivity\": 8,\n      \"executionMinutesPerActivity\": 3,\n      \"responseMinutes\": 11,\n      \"activityKind\": \"Researched contacts\",\n      \"tools\": [\n        {\n          \"name\": \"Public search engine and business websites\",\n          \"access\": \"Free/public\"\n        },\n        {\n          \"name\": \"Free email account\",\n          \"access\": \"Free/public\"\n        }\n      ],\n      \"directSpend\": 0,\n      \"constraints\": \"Zero spend is an experiment assumption, not a founder fact; use public business contacts, respect opt-outs, and avoid paid databases or automated scraping.\"\n    },\n    \"commercialLearning\": \"Learn whether an enrollment deadline creates a real collection problem and whether the verified Senja offer merits a concrete purchase step.\",\n    \"continueWhen\": \"A creator confirms deadline-linked pain and agrees to collect a real testimonial in Senja.\",\n    \"adjustWhen\": \"Creators confirm the problem but identify a specific access, workflow or activation obstacle.\",\n    \"stopWhen\": \"Reached buyers demonstrate that their existing workflow resolves the problem or that a required capability is absent from Senja; treat silence as inconclusive.\",\n    \"channelDescription\": \"Find course owners through public enrollment pages, ask about their testimonial workflow, and offer a guided first product action only after interest.\"\n  },\n  \"alternatives\": [\n    {\n      \"channel\": \"Community template\",\n      \"comparison\": {\n        \"benefit\": \"A useful testimonial-request template can enable self-service discovery through a relevant creator community.\",\n        \"barrier\": \"Creating the asset and securing moderator-approved access adds effort, while discovery and buying evidence may arrive more slowly than direct conversations.\"\n      },\n      \"preferWhen\": \"A relevant public community permits useful resource sharing and members visibly discuss testimonial collection.\",\n      \"firstAction\": \"Check community rules and relevant discussions before creating a template that leads to Senja's existing collection workflow.\"\n    },\n    {\n      \"channel\": \"Ecosystem referrals\",\n      \"comparison\": {\n        \"benefit\": \"Course-platform consultants may introduce creators at the moment a sales page needs proof.\",\n        \"barrier\": \"Partner access and trust require effort, so evidence is slower without existing relationships or observed Senja user behavior.\"\n      },\n      \"preferWhen\": \"Public ecosystem participants confirm recurring requests, or permissioned existing-user evidence reveals a repeatable referral source.\",\n      \"firstAction\": \"Inspect public course-platform service directories for relevant practitioners and confirm whether an unpaid introduction route exists.\"\n    }\n  ],\n  \"messages\": [\n    {\n      \"subject\": \"Student testimonials before enrollment\",\n      \"body\": \"Hi [Name], I saw [verified public observation to research] about your course enrollment. How do you currently collect student testimonials and choose which ones go on the sales page? I’m exploring whether Senja fits that workflow.\"\n    },\n    {\n      \"subject\": \"Worth sharing a collection workflow?\",\n      \"body\": \"Hi [Name], following up on my question about student testimonials. Would it be useful if I sent a short example of collecting a testimonial with Senja and reusing it on a course page? No problem if this is not a priority.\"\n    }\n  ],\n  \"positioning\": \"For course creators preparing enrollment, Senja brings testimonial collection and reusable social proof into one place for course pages and marketing.\",\n  \"unknowns\": [\n    \"No market research or external verification has been performed.\",\n    \"Senja's current paid offer, pricing, checkout and capability restrictions are unverified.\",\n    \"Creator urgency, purchasing willingness and public-contact availability are hypotheses rather than findings measured in this market research exercise, which has not occurred.\"\n  ],\n  \"recommendationBasis\": {\n    \"segments\": [\"s1\", \"s3\"],\n    \"acquisitionChannels\": [\"s1\", \"s4\"],\n    \"outreachTemplates\": [\"s1\", \"s3\"],\n    \"firstTenPlaybook\": [\"s1\", \"s3\"],\n    \"thirtyDayPlan\": [\"s1\", \"s3\"]\n  },\n  \"contractVersion\": \"2\"\n}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "acquisition_strategy",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "segments": {
+            "minItems": 3,
+            "maxItems": 3,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "buyer": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 200
+                },
+                "market": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "problem": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 220
+                },
+                "access": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 220
+                },
+                "tradeoff": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 220
+                }
+              },
+              "required": [
+                "name",
+                "buyer",
+                "market",
+                "problem",
+                "access",
+                "tradeoff"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "firstBuyerWhy": {
+            "type": "object",
+            "properties": {
+              "advantage": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "risk": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "runnerUpWinsWhen": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              }
+            },
+            "required": [
+              "advantage",
+              "risk",
+              "runnerUpWinsWhen"
+            ],
+            "additionalProperties": false
+          },
+          "buyingMotion": {
+            "type": "string",
+            "enum": [
+              "Self-service",
+              "Sales-assisted"
+            ]
+          },
+          "paymentPath": {
+            "type": "object",
+            "properties": {
+              "offerKind": {
+                "type": "string",
+                "const": "Existing SaaS"
+              },
+              "monetizationStatus": {
+                "type": "string",
+                "enum": [
+                  "Unknown",
+                  "Website-supported"
+                ]
+              },
+              "pricingStatementIds": {
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              },
+              "verify": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "activation": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "adoption": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "paidConversion": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              }
+            },
+            "required": [
+              "offerKind",
+              "monetizationStatus",
+              "pricingStatementIds",
+              "verify",
+              "activation",
+              "adoption",
+              "paidConversion"
+            ],
+            "additionalProperties": false
+          },
+          "firstExperiment": {
+            "type": "object",
+            "properties": {
+              "problem": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "identifyProspects": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "channel": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "channelRationale": {
+                "type": "object",
+                "properties": {
+                  "decision": {
+                    "type": "string",
+                    "minLength": 8,
+                    "maxLength": 300
+                  },
+                  "tradeoff": {
+                    "type": "string",
+                    "minLength": 8,
+                    "maxLength": 300
+                  }
+                },
+                "required": [
+                  "decision",
+                  "tradeoff"
+                ],
+                "additionalProperties": false
+              },
+              "firstAction": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "activityTarget": {
+                "type": "object",
+                "properties": {
+                  "quantity": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10
+                  },
+                  "activity": {
+                    "type": "string",
+                    "minLength": 8,
+                    "maxLength": 300
+                  }
+                },
+                "required": [
+                  "quantity",
+                  "activity"
+                ],
+                "additionalProperties": false
+              },
+              "resources": {
+                "type": "object",
+                "properties": {
+                  "assumedMinutes": {
+                    "type": "integer",
+                    "minimum": 15,
+                    "maximum": 120
+                  },
+                  "preparationMinutes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 60
+                  },
+                  "researchMinutesPerActivity": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 30
+                  },
+                  "executionMinutesPerActivity": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 30
+                  },
+                  "responseMinutes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 60
+                  },
+                  "activityKind": {
+                    "type": "string",
+                    "enum": [
+                      "Researched contacts",
+                      "Access check",
+                      "Self-service asset"
+                    ]
+                  },
+                  "tools": {
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 60
+                        },
+                        "access": {
+                          "type": "string",
+                          "enum": [
+                            "Free/public",
+                            "Unconfirmed"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "access"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "directSpend": {
+                    "type": "number",
+                    "const": 0
+                  },
+                  "constraints": {
+                    "type": "string",
+                    "minLength": 8,
+                    "maxLength": 220
+                  }
+                },
+                "required": [
+                  "assumedMinutes",
+                  "preparationMinutes",
+                  "researchMinutesPerActivity",
+                  "executionMinutesPerActivity",
+                  "responseMinutes",
+                  "activityKind",
+                  "tools",
+                  "directSpend",
+                  "constraints"
+                ],
+                "additionalProperties": false
+              },
+              "commercialLearning": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "continueWhen": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "adjustWhen": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "stopWhen": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "channelDescription": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              }
+            },
+            "required": [
+              "problem",
+              "identifyProspects",
+              "channel",
+              "channelRationale",
+              "firstAction",
+              "activityTarget",
+              "resources",
+              "commercialLearning",
+              "continueWhen",
+              "adjustWhen",
+              "stopWhen",
+              "channelDescription"
+            ],
+            "additionalProperties": false
+          },
+          "alternatives": {
+            "minItems": 2,
+            "maxItems": 2,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "channel": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                },
+                "comparison": {
+                  "type": "object",
+                  "properties": {
+                    "benefit": {
+                      "type": "string",
+                      "minLength": 8,
+                      "maxLength": 300
+                    },
+                    "barrier": {
+                      "type": "string",
+                      "minLength": 8,
+                      "maxLength": 300
+                    }
+                  },
+                  "required": [
+                    "benefit",
+                    "barrier"
+                  ],
+                  "additionalProperties": false
+                },
+                "preferWhen": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 220
+                },
+                "firstAction": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 220
+                }
+              },
+              "required": [
+                "channel",
+                "comparison",
+                "preferWhen",
+                "firstAction"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "messages": {
+            "minItems": 2,
+            "maxItems": 2,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "subject": {
+                  "type": "string",
+                  "maxLength": 120
+                },
+                "body": {
+                  "type": "string",
+                  "minLength": 40,
+                  "maxLength": 450
+                }
+              },
+              "required": [
+                "subject",
+                "body"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "positioning": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220
+          },
+          "unknowns": {
+            "minItems": 1,
+            "maxItems": 3,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 220
+            }
+          },
+          "recommendationBasis": {
+            "type": "object",
+            "properties": {
+              "segments": {
+                "minItems": 1,
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              },
+              "acquisitionChannels": {
+                "minItems": 1,
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              },
+              "outreachTemplates": {
+                "minItems": 1,
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              },
+              "firstTenPlaybook": {
+                "minItems": 1,
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              },
+              "thirtyDayPlan": {
+                "minItems": 1,
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "segments",
+              "acquisitionChannels",
+              "outreachTemplates",
+              "firstTenPlaybook",
+              "thirtyDayPlan"
+            ],
+            "additionalProperties": false
+          },
+          "contractVersion": {
+            "type": "string",
+            "const": "2"
+          }
+        },
+        "required": [
+          "segments",
+          "firstBuyerWhy",
+          "buyingMotion",
+          "paymentPath",
+          "firstExperiment",
+          "alternatives",
+          "messages",
+          "positioning",
+          "unknowns",
+          "recommendationBasis",
+          "contractVersion"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 1637,
+    "input_tokens_details": {
+      "cache_write_tokens": 261,
+      "cached_tokens": 1373
+    },
+    "output_tokens": 1604,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 3241
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\n  \"segments\": [\n    {\n      \"name\": \"Independent course creators\",\n      \"buyer\": \"Creator who owns the course website and software budget.\",\n      \"market\": \"Small education businesses preparing an enrollment campaign.\",\n      \"problem\": \"Launch deadlines make collecting and reusing student testimonials urgent.\",\n      \"access\": \"Public course websites can expose an owner-operated business contact route.\",\n      \"tradeoff\": \"Purchasing authority is concentrated, but willingness to pay may be seasonal and remains unverified.\"\n    },\n    {\n      \"name\": \"Small B2B SaaS marketing teams\",\n      \"buyer\": \"Marketing lead with website responsibility and software purchasing authority.\",\n      \"market\": \"Software companies updating landing pages or campaign messaging.\",\n      \"problem\": \"Recurring campaigns need relevant customer proof without searching scattered sources.\",\n      \"access\": \"Company websites identify teams, but direct marketing contacts may be harder to reach.\",\n      \"tradeoff\": \"Recurring use could support willingness to pay, but competing priorities can reduce urgency.\"\n    },\n    {\n      \"name\": \"Client-facing marketing agencies\",\n      \"buyer\": \"Agency owner responsible for client website delivery and tool spending.\",\n      \"market\": \"Small agencies delivering websites and marketing campaigns.\",\n      \"problem\": \"Client deadlines create pressure to gather and place testimonials.\",\n      \"access\": \"Public agency directories and websites often provide business inquiry routes.\",\n      \"tradeoff\": \"Owners can authorize spending, but client permissions and unverified multi-client suitability add friction.\"\n    }\n  ],\n  \"firstBuyerWhy\": {\n    \"advantage\": \"An independent course creator can connect an enrollment deadline to a website change without cross-team approval.\",\n    \"risk\": \"A creator may need testimonials only during launches and see little reason for ongoing payment.\",\n    \"runnerUpWinsWhen\": \"Small B2B SaaS marketing teams win when recurring proof updates create a clearer ongoing purchase need.\"\n  },\n  \"buyingMotion\": \"Sales-assisted\",\n  \"paymentPath\": {\n    \"offerKind\": \"Existing SaaS\",\n    \"monetizationStatus\": \"Unknown\",\n    \"pricingStatementIds\": [],\n    \"verify\": \"Inspect Senja's current official offer, paid capabilities and checkout before proposing any paid conversion; the supplied free-start statement does not establish pricing.\",\n    \"activation\": \"The creator collects a genuine student testimonial through Senja and adds relevant proof to a course page.\",\n    \"adoption\": \"The creator returns to collect or reuse testimonials for another page, post or enrollment campaign.\",\n    \"paidConversion\": \"After offer verification, the creator completes a confirmed payment for Senja itself rather than for setup or consulting.\"\n  },\n  \"firstExperiment\": {\n    \"problem\": \"Course creators may struggle to obtain and publish relevant student testimonials before enrollment opens.\",\n    \"identifyProspects\": \"Manually find independent course websites with a publicly stated upcoming enrollment period and a public business contact route; record the deadline evidence without inferring a testimonial problem.\",\n    \"channel\": \"Direct email\",\n    \"channelRationale\": {\n      \"decision\": \"Researched outreach can test deadline-linked pain without requiring an existing audience or website traffic.\",\n      \"tradeoff\": \"Manual prospect research limits reach but produces more specific workflow evidence than publishing an undistributed template.\"\n    },\n    \"firstAction\": \"Verify Senja's current offer, then research eligible course owners and send the initial question through an appropriate public business email address.\",\n    \"activityTarget\": {\n      \"quantity\": 4,\n      \"activity\": \"Research eligible course owners and send individually relevant business emails.\"\n    },\n    \"resources\": {\n      \"assumedMinutes\": 75,\n      \"preparationMinutes\": 20,\n      \"researchMinutesPerActivity\": 8,\n      \"executionMinutesPerActivity\": 3,\n      \"responseMinutes\": 11,\n      \"activityKind\": \"Researched contacts\",\n      \"tools\": [\n        {\n          \"name\": \"Public search engine and business websites\",\n          \"access\": \"Free/public\"\n        },\n        {\n          \"name\": \"Free email account\",\n          \"access\": \"Free/public\"\n        }\n      ],\n      \"directSpend\": 0,\n      \"constraints\": \"Zero spend is an experiment assumption, not a founder fact; use public business contacts, respect opt-outs, and avoid paid databases or automated scraping.\"\n    },\n    \"commercialLearning\": \"Learn whether an enrollment deadline creates a real collection problem and whether the verified Senja offer merits a concrete purchase step.\",\n    \"continueWhen\": \"A creator confirms deadline-linked pain and agrees to collect a real testimonial in Senja.\",\n    \"adjustWhen\": \"Creators confirm the problem but identify a specific access, workflow or activation obstacle.\",\n    \"stopWhen\": \"Reached buyers demonstrate that their existing workflow resolves the problem or that a required capability is absent from Senja; treat silence as inconclusive.\",\n    \"channelDescription\": \"Find course owners through public enrollment pages, ask about their testimonial workflow, and offer a guided first product action only after interest.\"\n  },\n  \"alternatives\": [\n    {\n      \"channel\": \"Community template\",\n      \"comparison\": {\n        \"benefit\": \"A useful testimonial-request template can enable self-service discovery through a relevant creator community.\",\n        \"barrier\": \"Creating the asset and securing moderator-approved access adds effort, while discovery and buying evidence may arrive more slowly than direct conversations.\"\n      },\n      \"preferWhen\": \"A relevant public community permits useful resource sharing and members visibly discuss testimonial collection.\",\n      \"firstAction\": \"Check community rules and relevant discussions before creating a template that leads to Senja's existing collection workflow.\"\n    },\n    {\n      \"channel\": \"Ecosystem referrals\",\n      \"comparison\": {\n        \"benefit\": \"Course-platform consultants may introduce creators at the moment a sales page needs proof.\",\n        \"barrier\": \"Partner access and trust require effort, so evidence is slower without existing relationships or observed Senja user behavior.\"\n      },\n      \"preferWhen\": \"Public ecosystem participants confirm recurring requests, or permissioned existing-user evidence reveals a repeatable referral source.\",\n      \"firstAction\": \"Inspect public course-platform service directories for relevant practitioners and confirm whether an unpaid introduction route exists.\"\n    }\n  ],\n  \"messages\": [\n    {\n      \"subject\": \"Student testimonials before enrollment\",\n      \"body\": \"Hi [Name], I saw [verified public observation to research] about your course enrollment. How do you currently collect student testimonials and choose which ones go on the sales page? I’m exploring whether Senja fits that workflow.\"\n    },\n    {\n      \"subject\": \"Worth sharing a collection workflow?\",\n      \"body\": \"Hi [Name], following up on my question about student testimonials. Would it be useful if I sent a short example of collecting a testimonial with Senja and reusing it on a course page? No problem if this is not a priority.\"\n    }\n  ],\n  \"positioning\": \"For course creators preparing enrollment, Senja brings testimonial collection and reusable social proof into one place for course pages and marketing.\",\n  \"unknowns\": [\n    \"No market research or external verification has been performed.\",\n    \"Senja's current paid offer, pricing, checkout and capability restrictions are unverified.\",\n    \"Creator urgency, purchasing willingness and public-contact availability are hypotheses rather than findings measured in this market research exercise, which has not occurred.\"\n  ],\n  \"recommendationBasis\": {\n    \"segments\": [\"s1\", \"s3\"],\n    \"acquisitionChannels\": [\"s1\", \"s4\"],\n    \"outreachTemplates\": [\"s1\", \"s3\"],\n    \"firstTenPlaybook\": [\"s1\", \"s3\"],\n    \"thirtyDayPlan\": [\"s1\", \"s3\"]\n  },\n  \"contractVersion\": \"2\"\n}"
+}

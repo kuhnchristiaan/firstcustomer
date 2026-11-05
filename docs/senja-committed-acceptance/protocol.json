@@ -1,0 +1,27 @@
+{
+  "website": "https://senja.io/",
+  "head": "21b0827cb004544045c2ed09272b6b57cea761c1",
+  "configuredModel": "gpt-6.1-sol",
+  "mock": false,
+  "limits": {
+    "pages": 5,
+    "contentChars": 24000,
+    "inputTokens": 20000,
+    "outputTokens": 8000
+  },
+  "maximumAnalysisAttempts": 1,
+  "SDKRetries": 0,
+  "builtInRepairMaximum": 1,
+  "ceilingUsd": 0.1,
+  "wholeAnalysisTokenBoundUsd": 0.13,
+  "pricing": {
+    "input": 2,
+    "cachedInput": 0.1,
+    "cacheWrite": 2.5,
+    "output": 10,
+    "per": "million tokens",
+    "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+  },
+  "databaseWrites": false,
+  "applicationCodeChanges": false
+}

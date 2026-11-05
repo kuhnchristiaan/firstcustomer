@@ -1,0 +1,140 @@
+{
+  "accepted": false,
+  "elapsedMs": 46738,
+  "usage": null,
+  "failure": {
+    "name": "Error",
+    "message": "The provider returned an incomplete or invalid report.",
+    "reason": "quality_failed",
+    "inputTokens": 3657,
+    "outputTokens": 2133,
+    "stages": [
+      {
+        "stage": "attributed_product_profile",
+        "inputTokens": 2020,
+        "outputTokens": 529
+      },
+      {
+        "stage": "acquisition_strategy",
+        "inputTokens": 1637,
+        "outputTokens": 1604
+      }
+    ],
+    "qualityFailure": {
+      "code": "quality_repair_invalid",
+      "issues": [
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: acquisitionChannels.0.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: firstTenPlaybook.0.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: thirtyDayPlan.0.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: thirtyDayPlan.1.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: thirtyDayPlan.2.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+        }
+      ],
+      "repairFeasible": false
+    }
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "stage": "attributed_product_profile",
+      "reservedUsd": 0.0367475,
+      "maxOutputTokens": 1200,
+      "latencyMs": 9701,
+      "model": "gpt-6.1-sol",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 2020,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2017
+        },
+        "output_tokens": 529,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2549
+      },
+      "incompleteDetails": null,
+      "estimatedCostUsd": 0.0054976999999999995,
+      "conservativeCostUsd": 0.01034
+    },
+    {
+      "ordinal": 2,
+      "stage": "acquisition_strategy",
+      "reservedUsd": 0.0649,
+      "maxOutputTokens": 3471,
+      "latencyMs": 33931,
+      "model": "gpt-6.1-sol",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 1637,
+        "input_tokens_details": {
+          "cache_write_tokens": 261,
+          "cached_tokens": 1373
+        },
+        "output_tokens": 1604,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3241
+      },
+      "incompleteDetails": null,
+      "estimatedCostUsd": 0.016835799999999998,
+      "conservativeCostUsd": 0.0201325,
+      "cacheWriteTokens": 261
+    },
+    {
+      "ordinal": 3,
+      "stage": "quality_repair",
+      "reservedUsd": 0.0458325,
+      "maxOutputTokens": 1000,
+      "error": {
+        "name": "Error",
+        "status": 400,
+        "code": "invalid_json_schema"
+      }
+    }
+  ],
+  "ledger": {
+    "ceilingUsd": 0.1,
+    "attempts": 1,
+    "calls": 3,
+    "actualEstimatedUsd": 0.0223335,
+    "conservativeActualUsd": 0.0304725,
+    "uncertainReservationUsd": 0.0458325,
+    "stopped": true
+  },
+  "gitHeadUnchanged": true,
+  "trackedWorkingTreeClean": false,
+  "environmentFileUnchanged": true,
+  "databaseWrites": false
+}
