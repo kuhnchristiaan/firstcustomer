@@ -46,6 +46,9 @@ export function statementKind(
   productName?: string,
 ): StatementKind {
   if (hasProspectObservation(text)) return "prospect-observation";
+  // Remove only the explicitly disclaimed proposition for classification, not
+  // the rest of the sentence. A subsequent affirmative promise still counts.
+  text = text.replace(/\b(?:without repeating|do not repeat|do not claim|never claim)\s+(?:the owner[’']s unverified claim of\s+)?twice as many testimonials\b/gi, "disclaimed owner statement");
   if (
     /^(?:who|what|which|how|does|do|can|would|is|are)\b/i.test(text.trim()) &&
     /\?$/.test(text.trim())
@@ -63,8 +66,14 @@ export function statementKind(
   if (
     /^(?:unknown|unverified|no (?:independent |verified |confirmed )?evidence (?:of|that)|do not (?:claim|promise|assert))\b/i.test(
       text.trim(),
-    )
+    ) && !/[;]|\b(?:but|however|yet|nevertheless)\b/i.test(text)
   )
+    return "commercial-hypothesis";
+  // Comparative channel hypotheses are not product-performance promises.
+  if (!assertion && /firstExperiment\.channelRationale\.tradeoff$/.test(path) &&
+      /\b(?:manual research|researched outreach)\b/i.test(text) &&
+      /\b(?:can|may|could)\b/i.test(text) && /\bfaster than waiting for inbound discovery\b/i.test(text) &&
+      !risky.test(text.replace(/faster than waiting for inbound discovery/gi, "")))
     return "commercial-hypothesis";
   if (assertion)
     return risky.test(text) ? "promotional-claim" : "product-capability";

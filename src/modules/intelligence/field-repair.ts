@@ -1,3 +1,4 @@
+import { reasoningPath, completeRepairText } from "./completeness";
 import { z } from "zod";
 import type { QualityIssue } from "./quality";
 
@@ -52,11 +53,32 @@ export function fieldPatch(
     } else if (Object.hasOwn(leaves, issue.section)) paths.add(issue.section);
     else throw new Error("quality_requires_exact_field");
   }
+  // A pricing downgrade may remove invalid citations, never invent or replace evidence.
+  const clearPricing = paths.has("paymentPath.monetizationStatus") &&
+    Array.isArray((candidate.paymentPath as { pricingStatementIds?: unknown[] })?.pricingStatementIds) &&
+    ((candidate.paymentPath as { pricingStatementIds: unknown[] }).pricingStatementIds.length > 0);
+  if (clearPricing) paths.add("paymentPath.pricingStatementIds");
+  const schemaAt = (path: string): z.ZodType | undefined => {
+    const [root, ...keys] = path.split(".");
+    let node = fields[root];
+    for (const key of keys) {
+      if (node instanceof z.ZodObject) node = node.shape[key];
+      else if (node instanceof z.ZodArray) node = node.element as z.ZodType;
+      else return undefined;
+    }
+    return node;
+  };
   // Coordinated repairs can include several exact fields, but never a whole section.
   if (!paths.size || paths.size > 12)
     throw new Error("quality_patch_too_broad");
   const shape = Object.fromEntries(
     [...paths].sort().map((path) => {
+      if (path === "paymentPath.pricingStatementIds") return [path, z.array(z.string()).length(0)];
+      if (clearPricing && path === "paymentPath.monetizationStatus") return [path, z.literal("Unknown")];
+      const original = schemaAt(path);
+      if (original instanceof z.ZodString && reasoningPath.test(path))
+        return [path, original.regex(completeRepairText, "Finish the reasoning component; no dangling clause").describe("Rewrite as one short complete sentence within the existing maxLength. Omit secondary detail instead of filling the character limit or cutting a clause.")];
+      if (original) return [path, original];
       const value = leaves[path];
       return [
         path,

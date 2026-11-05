@@ -1,0 +1,69 @@
+{
+  "offlineOnly": true,
+  "additionalPaidCalls": 0,
+  "profile": {
+    "version": "1.0",
+    "identity": {
+      "name": "Senja",
+      "summary": "Senja - Collect, Manage and Share Testimonials",
+      "category": "Customer acquisition",
+      "primaryJob": {
+        "actor": "Businesses and marketing teams",
+        "problem": "Collecting customer testimonials and finding relevant social proof for marketing",
+        "outcome": "Centralize testimonials and share relevant proof across websites, pitches, and posts"
+      },
+      "certainty": "Website-supported",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "cae551e2b6e4",
+          "quote": "Senja - Collect, Manage and Share Testimonials"
+        }
+      ]
+    },
+    "statements": [
+      {
+        "id": "s1",
+        "text": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://senja.io/",
+            "blockId": "8088337baf9d",
+            "quote": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials."
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "Capabilities are owner claims, not independently verified.",
+      "The category and primary job are AI interpretations of the supplied product passages."
+    ]
+  },
+  "initialWireValid": true,
+  "repairWireValid": true,
+  "patchedContractValid": false,
+  "patchedContractErrors": [
+    {
+      "code": "custom",
+      "path": [
+        "positioning"
+      ],
+      "message": "Incomplete strategic explanation: finish the reasoning component"
+    }
+  ],
+  "initialRequiredWorkMinutes": 68,
+  "initialAssumedMinutes": 75,
+  "patchedRequiredWorkMinutes": 68,
+  "patchedAssumedMinutes": 75,
+  "remainingConsistencyIssues": [
+    {
+      "section": "positioning",
+      "path": "positioning",
+      "reason": "Incomplete strategic explanation: finish the reasoning component"
+    }
+  ],
+  "semanticAIQualityReviewExecuted": false,
+  "acceptedReportExists": false
+}

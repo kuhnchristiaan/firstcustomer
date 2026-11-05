@@ -1,3 +1,4 @@
+import { reasoningPath, incompleteEnding } from "./completeness";
 import type { QualityIssue } from "./quality";
 import type { ProductProfile } from "./product-profile";
 import { hasProspectObservation } from "@/modules/strategy/claim-semantics";
@@ -68,14 +69,7 @@ export function strategyConsistency(
       )
     )
       return;
-    if (
-      /^(?:firstBuyerWhy|paymentPath|positioning|alternatives\.\d+\.comparison|firstExperiment\.(?:channelDescription|channelRationale|commercialLearning|identifyProspects|resources\.(?:assumptions|constraints)))(?:\.|$)/.test(
-        path,
-      ) &&
-      /(?:[,;:]|\b(?:and|or|if|when|because|although|despite|the|a|an|to|from|with|without|before|after|for|by|is|are|configure|acceptable))\s*$/i.test(
-        value,
-      )
-    )
+    if (reasoningPath.test(path) && incompleteEnding.test(value))
       add(
         path,
         "Incomplete strategic explanation: finish the reasoning component",

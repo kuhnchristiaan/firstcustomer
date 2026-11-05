@@ -1,0 +1,25 @@
+{
+  "ordinal": 3,
+  "stage": "quality_repair",
+  "reservedUsd": 0.04163,
+  "maxOutputTokens": 1000,
+  "latencyMs": 7331,
+  "model": "gpt-6.1-sol",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1932,
+    "input_tokens_details": {
+      "cache_write_tokens": 1929,
+      "cached_tokens": 0
+    },
+    "output_tokens": 161,
+    "output_tokens_details": {
+      "reasoning_tokens": 41
+    },
+    "total_tokens": 2093
+  },
+  "incompleteDetails": null,
+  "estimatedCostUsd": 0.0064385,
+  "conservativeCostUsd": 0.00644,
+  "cacheWriteTokens": 1929
+}

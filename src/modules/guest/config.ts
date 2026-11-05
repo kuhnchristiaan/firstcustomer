@@ -50,7 +50,7 @@ export function guestConfig() {
       e.GUEST_MAX_OUTPUT_TOKENS * e.GUEST_OUTPUT_USD_PER_MILLION) /
     1000000;
   if (
-    e.GUEST_PRICED_MODEL !== (process.env.OPENAI_MODEL || "gpt-4.1-mini") ||
+    e.GUEST_PRICED_MODEL !== (process.env.OPENAI_MODEL || "gpt-6.1-sol") ||
     upper > e.GUEST_MAX_COST_USD
   )
     throw new AppError(

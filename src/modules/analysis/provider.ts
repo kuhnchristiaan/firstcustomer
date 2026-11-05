@@ -61,6 +61,7 @@ export function analysisRequest(
 ) {
   return {
     model,
+    ...(model === "gpt-6.1-sol" ? { reasoning: { effort: "low" as const }, service_tier: "default" as const } : {}),
     max_output_tokens: maxOutput,
     input: [
       { role: "system" as const, content: instructions },
@@ -116,10 +117,13 @@ export function provider(): AnalysisProvider {
         input: limits?.inputTokens ?? e.MAX_INPUT_TOKENS,
         output: limits?.outputTokens ?? e.MAX_OUTPUT_TOKENS,
       };
+      const qualityOutput = e.OPENAI_MODEL === "gpt-6.1-sol"
+        ? { review: 1500, repair: 1000 }
+        : { review: 650, repair: 700 };
       const client = new OpenAI({
         apiKey: e.OPENAI_API_KEY,
         maxRetries: 0,
-        timeout: 50000,
+        timeout: 120000,
       });
       let inputTokens = 0,
         outputTokens = 0;
@@ -146,7 +150,7 @@ export function provider(): AnalysisProvider {
             maxOutput,
             budget.output -
               outputTokens -
-              (name === "quality_repair" ? 650 : 0),
+              (name === "quality_repair" ? qualityOutput.review : 0),
           ),
         );
         if (
@@ -213,7 +217,7 @@ export function provider(): AnalysisProvider {
                 .map((b) => ({ id: b.id, kind: b.kind, context: b.context })),
             })),
           },
-          Math.min(600, Math.floor(budget.output * 0.2)),
+          Math.min(e.OPENAI_MODEL === "gpt-6.1-sol" ? 1200 : 600, Math.floor(budget.output * 0.2)),
         );
         const profile = hydrateProductProfile(rawProfile, sources);
         if (
@@ -244,7 +248,7 @@ export function provider(): AnalysisProvider {
             },
             // Reserve both possible reviews and a granular repair, even when the
             // initial review identifies the first defect. Never expand the cap.
-            Math.min(2000, budget.output - outputTokens - 1300 - 600),
+            Math.min(e.OPENAI_MODEL === "gpt-6.1-sol" ? 3500 : 2000, budget.output - outputTokens - 2 * qualityOutput.review - (e.OPENAI_MODEL === "gpt-6.1-sol" ? qualityOutput.repair : 600)),
           ),
         );
         stage = "quality_gate";
@@ -314,6 +318,7 @@ export function provider(): AnalysisProvider {
         };
         const checked = await qualityGate({
           candidate: generated,
+          outputAllowances: qualityOutput,
           fields: Object.fromEntries(
             Object.entries(generationSchema.shape).filter(
               ([k]) => k !== "recommendationBasis",

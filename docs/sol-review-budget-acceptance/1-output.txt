@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "identity": {
+    "name": "Senja",
+    "summary": "Senja helps businesses collect, organize, and share customer testimonials, including adding them to websites.",
+    "category": "Customer acquisition",
+    "primaryJob": {
+      "actor": "Businesses and marketing teams",
+      "problem": "Collecting customer testimonials and finding relevant social proof for marketing",
+      "outcome": "Centralize testimonials and share relevant proof across websites, pitches, and posts"
+    },
+    "certainty": "Website-supported",
+    "evidence": [
+      {
+        "blockId": "cae551e2b6e4"
+      }
+     		]
+  }
+ 	,
+  "statements": [
+    {
+      "id": "s1",
+      "text": "Senja offers customizable testimonial collection forms with personalized intro videos and automated video and text collection.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "blockId": "8088337baf9d"
+        }
+       		]
+    }
+   	]
+ 	,
+  "limitations": [
+    "Capabilities are owner claims, not independently verified.",
+    "The category and primary job are AI interpretations of the supplied product passages."
+  ]
+}

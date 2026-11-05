@@ -118,6 +118,7 @@ export async function refineStrategy(
   });
   const request = {
     model: e.OPENAI_MODEL,
+    ...(e.OPENAI_MODEL === "gpt-6.1-sol" ? { reasoning: { effort: "low" as const }, service_tier: "default" as const } : {}),
     max_output_tokens: Math.floor(limits.output * (4 / 9)),
     input: [
       {
@@ -240,6 +241,7 @@ export async function refineStrategy(
     });
     const critiqueRequest = {
       model: e.OPENAI_MODEL,
+    ...(e.OPENAI_MODEL === "gpt-6.1-sol" ? { reasoning: { effort: "low" as const }, service_tier: "default" as const } : {}),
       max_output_tokens: Math.min(
         limits.output - Math.floor(limits.output * (4 / 9)),
         limits.output - outputTokens,
@@ -329,7 +331,11 @@ export async function refineStrategy(
         review.assessment.verdict === "keep"
           ? candidate
           : review.finalStrategy!;
+      const qualityOutput = e.OPENAI_MODEL === "gpt-6.1-sol"
+        ? { review: 1500, repair: 1000 }
+        : { review: 650, repair: 700 };
       const gate = await qualityGate({
+        outputAllowances: qualityOutput,
         candidate: final,
         fields: Object.fromEntries(
           Object.entries(boundedSchema.shape).filter(
@@ -361,10 +367,11 @@ export async function refineStrategy(
             limits.output -
               outputTokens -
               critiqueOutput -
-              (stage === "quality_repair" ? 650 : 0),
+              (stage === "quality_repair" ? qualityOutput.review : 0),
           );
           const r = {
             model: e.OPENAI_MODEL,
+    ...(e.OPENAI_MODEL === "gpt-6.1-sol" ? { reasoning: { effort: "low" as const }, service_tier: "default" as const } : {}),
             max_output_tokens: tokens,
             input: [
               { role: "system" as const, content: instructions },

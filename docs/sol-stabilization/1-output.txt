@@ -1,0 +1,56 @@
+{
+  "version": "1.0",
+  "identity": {
+    "name": "Senja",
+    "summary": "Senja helps businesses collect, organize, and share customer testimonials, including adding them to websites.",
+    "category": "Customer acquisition",
+    "primaryJob": {
+      "actor": "Businesses and marketing teams",
+      "problem": "Customer testimonials are scattered and difficult to collect and reuse.",
+      "outcome": "Centralize testimonials and share relevant social proof across websites and marketing."
+    },
+    "certainty": "Website-supported",
+    "evidence": [
+      {"blockId": "cae551e2b6e4"      	  
+     	   	 			
+     	   	 		  	  		   		  	 		 		 	  	  	 		 	  	 		 		 	  	}  	 		 	 		 	  	 	 	 	 	]	  		 	  		   	 	 	 	 	 	}	 	 		 	 	   	 	 	 	  	 	,
+  "statements": [
+    {
+      "id": "s1",
+      "text": "Senja says users can customize testimonial collection forms, add personalized intro videos, and automate video and text collection.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "8088337baf9d"
+       		}		]		},
+    {
+      "id": "s2",
+      "text": "Senja says collection forms can be shared or embedded, and testimonials can be imported from more than 30 platforms or CSV.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "7dc0005f6f52"
+       		}		]		},
+    {
+      "id": "s3",
+      "text": "Senja offers automation through Zapier, an API, and webhooks.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "62f58d67f0df"
+       		}		]		},
+    {
+      "id": "s4",
+      "text": "Senja says teams can centralize testimonials, search using natural language, and filter by offer, buyer, industry, product, or plan.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "1224993c1e20"
+       		}		]		}
+  ],
+  "limitations": [
+    "Capabilities are owner claims, not independently verified.",
+    "Category and primary job are AI interpretations of the supplied product descriptions.",
+    "The supplied content does not establish pricing or plan-specific feature availability."
+  ]
+}

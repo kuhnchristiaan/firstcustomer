@@ -1,1 +1,5 @@
 * text=auto eol=lf
+# Genuine provider text is immutable evidence, including original whitespace.
+docs/sol-final-acceptance/*-output.txt -text -whitespace
+docs/sol-review-budget-acceptance/*-output.txt -text -whitespace
+docs/sol-stabilization/*-output.txt -text -whitespace

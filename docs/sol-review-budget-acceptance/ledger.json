@@ -1,0 +1,9 @@
+{
+  "ceilingUsd": 0.2,
+  "attempts": 1,
+  "calls": 3,
+  "actualEstimatedUsd": 0.030434700000000002,
+  "conservativeActualUsd": 0.03528,
+  "uncertainReservationUsd": 0,
+  "stopped": false
+}

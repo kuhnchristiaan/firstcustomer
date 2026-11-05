@@ -1,0 +1,130 @@
+{
+  "accepted": false,
+  "elapsedMs": 71621,
+  "usage": null,
+  "failure": {
+    "name": "Error",
+    "message": "The provider returned an incomplete or invalid report.",
+    "reason": "quality_failed",
+    "inputTokens": 10211,
+    "outputTokens": 2751,
+    "stages": [
+      {
+        "stage": "attributed_product_profile",
+        "inputTokens": 2020,
+        "outputTokens": 537
+      },
+      {
+        "stage": "acquisition_strategy",
+        "inputTokens": 1633,
+        "outputTokens": 1564
+      },
+      {
+        "stage": "quality_review",
+        "inputTokens": 6558,
+        "outputTokens": 650
+      }
+    ],
+    "qualityFailure": {
+      "code": "quality_review_invalid",
+      "issues": [
+        {
+          "section": "qualityReview",
+          "reason": "Semantic review could not complete within its schema and budget"
+        }
+      ],
+      "repairFeasible": false
+    }
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "stage": "attributed_product_profile",
+      "reservedUsd": 0.0367475,
+      "maxOutputTokens": 1200,
+      "latencyMs": 12715,
+      "model": "gpt-6.1-sol",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 2020,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2017
+        },
+        "output_tokens": 537,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2557
+      },
+      "incompleteDetails": null,
+      "estimatedCostUsd": 0.0055777,
+      "conservativeCostUsd": 0.01042
+    },
+    {
+      "ordinal": 2,
+      "stage": "acquisition_strategy",
+      "reservedUsd": 0.0651325,
+      "maxOutputTokens": 3500,
+      "latencyMs": 35535,
+      "model": "gpt-6.1-sol",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 1633,
+        "input_tokens_details": {
+          "cache_write_tokens": 257,
+          "cached_tokens": 1373
+        },
+        "output_tokens": 1564,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3197
+      },
+      "incompleteDetails": null,
+      "estimatedCostUsd": 0.0164258,
+      "conservativeCostUsd": 0.0197225,
+      "cacheWriteTokens": 257
+    },
+    {
+      "ordinal": 3,
+      "stage": "quality_review",
+      "reservedUsd": 0.094285,
+      "maxOutputTokens": 650,
+      "latencyMs": 19120,
+      "model": "gpt-6.1-sol",
+      "status": "incomplete",
+      "usage": {
+        "input_tokens": 6558,
+        "input_tokens_details": {
+          "cache_write_tokens": 6555,
+          "cached_tokens": 0
+        },
+        "output_tokens": 650,
+        "output_tokens_details": {
+          "reasoning_tokens": 277
+        },
+        "total_tokens": 7208
+      },
+      "incompleteDetails": {
+        "reason": "max_output_tokens"
+      },
+      "estimatedCostUsd": 0.0228935,
+      "conservativeCostUsd": 0.022895,
+      "cacheWriteTokens": 6555
+    }
+  ],
+  "ledger": {
+    "ceilingUsd": 0.2,
+    "attempts": 1,
+    "calls": 3,
+    "actualEstimatedUsd": 0.044897000000000006,
+    "conservativeActualUsd": 0.0530375,
+    "uncertainReservationUsd": 0,
+    "stopped": true
+  },
+  "gitHeadUnchanged": true,
+  "trackedWorkingTreeClean": false,
+  "environmentFileUnchanged": true,
+  "databaseWrites": false
+}

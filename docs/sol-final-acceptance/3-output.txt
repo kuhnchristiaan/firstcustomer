@@ -1,0 +1,41 @@
+{
+  "scores": {
+    "productRelevance": 2,
+    "segmentDifferentiation": 1,
+    "channelSuitability": 1,
+    "actionSpecificity": 2,
+    "commercialRealism": 1,
+    "claimSafety": 1,
+    "consistency": 1,
+    "repetition": 1,
+    "outreachCompleteness": 2,
+    "successCriteria": 0
+  },
+  "issues": [
+    {
+      "section": "firstExperiment.stopWhen",
+      "reason": "Add a review deadline and no-response branch; four unanswered emails cannot establish absence of recurring need."
+    },
+    {
+      "section": "firstExperiment.continueWhen",
+      "reason": "Specify minimum qualifying evidence and willingness to consider verified pricing; activation agreement alone does not validate paid demand."
+    },
+    {
+      "section": "firstExperiment.adjustWhen",
+      "reason": "Define observable adjustment thresholds and distinguish revising email targeting from switching channels."
+    },
+    {
+      "section": "firstExperiment.channelRationale.tradeoff",
+      "reason": "Explain how existing founder audience, community access, or limited email capacity could reverse the channel choice."
+    },
+    {
+      "section": "segments.1.tradeoff",
+      "reason": "Add a concrete validation method for seasonal spending, campaign urgency, and purchase authority."
+    },
+    {
+      "section": "segments.2.tradeoff",
+      "reason": "Validate who pays, whose approval is required, and whether client permissions block a small SaaS purchase."
+    },
+    {
+      "section": "unknowns.2",
+      "reason": "Explicitly qualify owner claims; assembled offerings incorrectly label the testimonial-doubling promise as verified
