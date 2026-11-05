@@ -1,0 +1,13 @@
+# Stage 2B baseline and migration target
+
+Written before schema/database changes, 5 November 2026.
+
+Baseline: `7ffd792` checkpoints the approved Stage 2A contract, prepared protocol and complete genuine outputs. `e288285` checkpoints the original 83 changed/untracked reliability files on `codex/stage-2b-signed-in-advisor`. The original checkout remains on `main`, unchanged; the Stage 2A branch remains at its checkpoint. Implementation changes are reviewed against `e288285`.
+
+Only development target authorized for this implementation: a new local PostgreSQL 18 cluster under this feature worktree's ignored `.local-test-db`, listening on **127.0.0.1:55441**, role `firstcustomers_test`, database **firstcustomers_advisor_dev**. The existing original test cluster on port 55439 is not reused. The development launcher injects this exact URL and refuses remote database hosts. No production environment file, Neon database or EDUCERT resource is a migration target. No provider setup, key creation or integration installation is required.
+
+Planned additive migration: four advisor tables linked to the existing Product. `AdvisorWorkspace` saves the three founder context groups and independently validated product-analysis/source snapshots. `AdvisorStrategy` stores the immutable compact strategy/context version. `AdvisorTask` stores completion separately. `AdvisorOperation` reserves/records bounded AI calls, usage and saved assistance. Existing report tables/JSON/contracts and historical migrations remain intact. No AnalysisRun discriminator is needed because advisor identification does not insert report-shaped runs. WeeklyPlan and review/history screens are deferred; one strategy owns its first seven-day task plan in this release.
+
+The schema changes only add tables, indexes, constraints and an inverse Product relation. Review the new SQL before applying it. Apply all migrations only to the named local database after validating `current_database()`, server address and port. Test old report reads and ownership alongside new advisor flows. A feature flag defaults off, preserving existing application behavior on deployments without the new migration/configuration. No migration command here authorizes production changes.
+
+Local end-to-end tests will use the unchanged Neon Auth adapter against an explicitly local upstream fixture, local AI/source fixtures, and real local Postgres. This exercises the app's session/ownership and persistence boundaries without paid AI calls or remote authentication. Fixture mode must reject production and remote database targets, and the UI must identify fixture data. Actual hosted Neon Auth and paid-model verification remain separate approval-dependent checks.

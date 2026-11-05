@@ -1,0 +1,15 @@
+{
+  "fixtureOnly": true,
+  "paidCalls": 0,
+  "productId": "cmw3khaoi0000wksgv7ynsqt2",
+  "persistedAfterReload": true,
+  "persistedAfterSignIn": true,
+  "assistanceCached": true,
+  "assistanceDidNotChangeStrategy": true,
+  "crossTenantDenied": true,
+  "staleWriteRejected": true,
+  "wrongOriginRejected": true,
+  "desktopAxeViolations": 0,
+  "mobileAxeViolations": 0,
+  "browserErrors": []
+}
