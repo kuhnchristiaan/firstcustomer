@@ -4,6 +4,7 @@ import { Check, Clock3, Sparkles, ArrowRight, Compass } from "lucide-react";
 import { Button } from "./ui/button";
 import type { advisorView } from "@/modules/advisor/service";
 import type { FounderContext } from "@/modules/advisor/schema";
+import { AdvisorWeekly } from "./advisor-weekly";
 type Data = ReturnType<typeof advisorView>;
 const channels = [
   "None",
@@ -599,11 +600,25 @@ export function AdvisorClient({ initial }: { initial: Data }) {
                   : help.cached
                     ? "Saved AI response"
                     : "AI-generated explanation"}{" "}
-                · Strategy v{data.strategy!.version}
+                · Strategy v{data.strategy!.strategyVersion} · Plan{" "}
+                {data.strategy!.version}
               </p>
               <p className="whitespace-pre-wrap mt-4">{help.answer}</p>
             </section>
           )}
+          <AdvisorWeekly
+            key={data.strategy!.id}
+            productId={data.productId}
+            planId={data.strategy!.id}
+            tasks={data.strategy!.tasks}
+            current={s}
+            onResultsSaved={async () => {
+              const response = await fetch(endpoint, { cache: "no-store" });
+              const latest = await response.json();
+              if (!response.ok) throw new Error(latest.error);
+              setData(latest);
+            }}
+          />
         </>
       )}
     </div>

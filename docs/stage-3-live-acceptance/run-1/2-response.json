@@ -1,0 +1,334 @@
+{
+  "id": "resp_065785fb38e0ce49016aecc006672487d2b68c0c8f17e8ef8b",
+  "object": "response",
+  "created_at": 1793900550,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793900583,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 12000,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_065785fb38e0ce49016aecc007ac0087d28a54e8ba200f5a53",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq7MAn11OCzb7eoDlJcppUdvNSIFh0Olv0XTB6BTpGZ2Q3yy1NQHv4_8r3vCd6-88SGSKSQik8pd_m4LgweWKl2S1sVdNQT-uqTC1YsthBjBJ_0Ld0V1_Xi6I_3kIGEJ66XtaEV2lTD4bSd76iz1JBCuT2UaDchYESM7I10IB-A6XZqniR6_ICDJ_npAE6vNUxazYfXvgmU6OPZVvb5baOrPoia1sPJZDK8PgDJc3r586DpQjK4Y5d4W7xYiIJT4IavfcwtGVgqDcIxFXYuEHLZwa8RlWbsh9LU5nwAexTylbVBrY19bYbzVDH5U3wzcQzj8thJxwRHb-jUEkcUDoo9ngdMl-kRzk4S3A7x0rXgUqH0ZesCQvIeLpknxf6NXqGrAmBi2Z558gdOqPbF4n8KN8bQwDol8phof1b3etwz-wtzJYDGM05Nky14fDlzQLFkBygvNdV7UCAE4bhJWucehrciNmmJqQHWhLeECj-oQlyF_tLe2Yhbx0y31nlwV_tzBRZQRQkzwsO9_WdzX_UTaPV0iyPXpsY3trRdoTrqQh82VAj3vI-BSwt4etAQ5DENRXAYTiMveB0tzX5KqnG0csx1GHujxyrJ5b8CDDMezhSZl9ooNypzwHhNwvi3k9K3E98JAIOTE5UtzDkGx16gK6if_IqMaH5I7icIp2T6OSyqYH6NsaVI54vk69nrldZz0v0vz0StrsNgxS0WVtO7umMyUpy3KZugBOk2g-yd3iICT2hxUudJdime_nZ-qExyWB4bVjZcfP5o34OKtikbGvrmdL19YJ5ZjGIWpu3A4Mgo1ndbHe9_KQMWbj3Mhnod_bE0VpLcClzLndviEur5ct85DRSK_sdR0h1-30VVGlpeuay3kzl3DmXDm8SvQWgcOcb0ds1tVlHJxHZNFgGASZETTJd1FMFdBqKxreaB7-5CAex4mW2KkNGnbuIVkZt3EWKUxchwO4MkZlyC7NgyJI-C726oktA_XUZPfMSIKgZJ7mzvfbqwe0T6rEIjY3rBkD5FtLCf0TNZBHcebv8Cd2BZ_TwfwusHLyOfL_YCx77bUdChoC9ASEvCagYEkapggJYVijcTLCidyfj-yPXMNAOYw97yu-k9HXlULf446-y7shbKwSJ7chLdExxMEASWWFfDkuYWTAvvutZiS4EISR2HU3Ot4rS1N3gB0i3ZV4YNSu-UWWnFoh6ZaIygm1lNndhfKrzN4fNcSuJwfVrCCHkdpfb7L5sxcyh2wHymt_01x4K2HqUD1pahTSk2w6CI9ZKjwgef3iIZ2bdRKLCsoBs4IY-jbmVGF5ZXu9oDQdS9y9ridST3WStjOujKdIgFzJ9mma6aNFCWbQttkIqX_sGR0ErulmOpCwvTWcttYdxBMVKfIsKIsplNCzeeUB-h00c4joBCPutIcuzA6synZg4aSD0wvCV_RmGoLMuse-JXNFnWHAzmPJulwGCDY4iimItqL9gxl1wGkpdIWgX7JoUaU1M3230fpw4TRVyz9q6pLC_LjIwOeGjsW-KpBCaFtbbsIdB8-6g_AcHUQbxCpyv0HWba8-ACboSgQCJ5zDKeLXpMfntk8I425dLesoljsU7Ztaw7tbFKOVE5EbebKLCIOi_2mtpEw_NjOVWy92odSDT2xWNRTR5EDhreFNuv47OAT0rc5nGVDoFADcpF3iRiDHPRzaHFS-1qiIL0NniCIBKbGy_u9EmMEhxJ8UKFiucEY1HduAZf7PBreJ43grCxRchKbU30rzMIYgNvSKEz_azijK6XkpB8eMUmZvD-dcu2hmQpSB5zWrSutXOhKjllVeYvISG0qAI2qXz3WtSraKaeWBKXV7eVcujRA69ZYMfixRJzT6YZgNv_aiGoUxxVKa-lQPX7A7Zw8gHXsqg4UL1jIuCauYRFZQLtK8s1guHYyOBmdLaPCbhUzjGY06L0I3HvMvBUvhrs4ojQabmg-tXvQ88VIrA-kxc0NlMdGy2crw2iEd5FKMnIl2Wfu1rDuOQeiHEDAtGrYEKGik_ckR2B_v-6AOiwsIA3sqP3EtzkliAnb7H72Dg98MgSBKcv8F_kk06K4BiJeiz4pr2SK6fj848JdPjhFPgfGrcg7blfNQzO8TETkTZfeFbvgqaPI6IxgAnOGjPmFjBn1Jsp6w5NNdTxvK_ObsHp4AYG0jaM80xOKnmElSyEunSgkkTe1RF0EUf_HVu-tFDcVUyW8mwsG-Pm1_PK3rne9tXewR2huN7WCTa09MhbWvfI9Gahj3x0sNA-3bl-XnXnRaeIVDRLyC4_pp-pAeskCW6RMaBJoyb5b3ltWv7ghQt0fgs7yktn3vyS5nbXpI-_sBEDNJilq1X0xCcOSR8R9t1mLkO_uYw6JTx0kC87h_rOHSlA9LdnggcNlNrBoYNv1MA7OjDNZS1E5eh8NZDFM0ELMURQC0CTxBwSB328sjyMTlHMPG7tw6Cn-hW0AvCrtfOf_PTQAUHxVu-Ty_lZkAMpT4n35uLkgkizA5erAQWi5a-lsZZHdO1JQNNDo37sGKGa6RVy1YGiYq8OJpkCFUGbgw9YwOnE5-Amth_TRKWgK0RN5xRXVyKKuDiacQMr3WEe3vGPiZ0gALFe2C4irMi-9uzEjzhmOCMn7IUik8-1WCks4OOu5oFQgi-Hh3Eug22w8I7j5dWi7hMzLHd9o7SKJOilpg7zn_lIZY2Szp0kQao_UQBwNXoBipzh5M5NYJzEja-ZQO-x8YLCxxu1C1Ne2V2HCjl-M_RievoUmNM9a8GvFZ4YRhuC0urkYuxObNs_1EnalhdqUTMwljtndszMA0qXtmx3uh1dPNNS7Zeqe9e_Snv0lqIUM7IeM24a2bcSOyaTEv59K_BbJ6bwGPvpgWfEDtQFEJ8gg0FjSplKjwHNWcGQc1anRSmsPasf7_zuU6pTgQ1YFidxvH1yZzNfvzEtcmvpQJF4qaoG_HEpYHrHcvCN61o-2wm_1XkpLAyqjtQ2QV3vRrg2o4bOWkeQbqG2InIWY1L9DieTrBCO_FbLaHWwpDgp0XCt-MPjBk-SpKaconqFgLjGI1EeQzTu7FV1ncq-IvH17dr6cwwahWLHP-MudkAn5FOkBufcbVhmqqBSnuvXOF8yr8xGh6N2Mv4babL4HK_-kR9d_DZPWL-xefrmIa3yPrK934HwYv_J3XV7vJ6sj_EqQw9nAv8_QXLvy1o31S2Xq1AdeDoEB6RC0C-LMCaRv-t8zAudkowEzCewkIdMOnRe7KiU200iwjr1Z_n9EzYmmL0IemzFgLZYW9u92C9EXAHAqo9sOw5ebbVzaGAN_5WOh19Nj3GpEz7CTxCDNhZVBDeqJqzC1oAcYOA_zMmV8GO6we2W6z26fY=",
+      "summary": []
+    },
+    {
+      "id": "msg_065785fb38e0ce49016aecc00c9ec087d2ada937ea9f88c6be",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\n  \"decision\": \"Adjust\",\n  \"evidenceAssessment\": \"The report records 15 prospects contacted, zero replies, zero qualified conversations, zero activations, and zero paying customers. This shows no observed progression from the reported outreach, but delivery, buyer fit, message quality, and permission to participate remain unverified. No task completions were confirmed, so access validation, paid-offer verification, and demonstration preparation cannot be assumed complete. The evidence supports auditing execution, not rejecting the buyer or channel.\",\n  \"remainingUncertainty\": \"It is unknown whether the 15 contacts reached suitable founders through permitted Indie Hackers participation, whether they saw the messages, and how long they had to respond. The counts may describe different cohorts. Senja's actual pricing, paid capabilities, purchase path, and relevant free-use limits remain unverified. There are no prior reviews establishing a repeated pattern.\",\n  \"changeReason\": \"Adjust execution by checking the reported outreach and completing missing prerequisites before further participation. Keep the buyer and acquisition channel unchanged: one report of silence with unverified execution is insufficient evidence for a strategic switch. This proposed plan requires founder approval before activation.\",\n  \"proposedPlan\": {\n    \"schemaVersion\": \"advisor/1\",\n    \"buyer\": {\n      \"segment\": \"Bootstrapped SaaS founders with happy paying users who are preparing a launch or sales-page refresh.\",\n      \"buyingProblemOrTrigger\": \"They need customer proof for an upcoming selling moment and can authorize a software purchase themselves.\",\n      \"whyChosen\": \"Existing customers make testimonial collection actionable. This narrower buyer is preferable to pre-revenue founders without customer evidence.\"\n    },\n    \"channel\": {\n      \"name\": \"Permission-based participation in Indie Hackers discussions\",\n      \"whereAndHow\": \"Find recent founder milestone and launch posts; contribute relevant public replies and introduce Senja only where permitted and useful.\",\n      \"whyChosen\": \"Posts can reveal an immediate trigger before contact, unlike broad cold outreach. With no previous acquisition efforts, no paying customers, and no budget, this tests problem relevance without building a prospect database.\",\n      \"accessCheck\": \"Read current community rules and search recent posts for 'first customers', 'launch', and 'testimonials'. Identify three suitable founders and confirm a free, permitted reply route before preparing promotion.\",\n      \"fallback\": \"If access fails, check r/SaaS for a current, explicitly permitted feedback or promotion thread serving the same buyer. Proceed only if suitable founders and posting permission are evident; otherwise pause publication.\"\n    },\n    \"tasks\": [\n      {\n        \"instruction\": \"Audit the 15 reported contacts using available post links and message records. Record the channel, date, exact message, visible publication status, permission basis, and evidence of paying users plus an upcoming launch or sales-page refresh. Mark missing information unknown; do not infer delivery from a contact count.\",\n        \"activityToRecord\": \"Audited contacts, verified buyer fit, publication evidence, message wording, elapsed response time, and unknowns.\",\n        \"minutes\": 20,\n        \"directCost\": 0,\n        \"title\": \"Audit reported outreach\"\n      },\n      {\n        \"instruction\": \"Complete or verify the existing access check: inspect current Indie Hackers rules, identify three suitable recent discussions, and confirm that relevant replies are permitted and free. Inspect Senja's official pricing and purchase path to record actual paid plans, capabilities, and relevant free-use limits; mark anything unverifiable unknown. Do not recommend a purchase before verification. If Indie Hackers access fails, pause publication; any fallback channel switch requires a separate Reconsider proposal and founder approval.\",\n        \"activityToRecord\": \"Rule links, suitable discussion links, confirmed free access, verified SaaS offer details, and unresolved restrictions.\",\n        \"minutes\": 30,\n        \"directCost\": 0,\n        \"title\": \"Verify access and offer\"\n      },\n      {\n        \"instruction\": \"Check whether a walkthrough already exists and reuse it if suitable. Otherwise prepare a short walkthrough of the collection workflow using clearly labeled sample content and confirmed free access only. Ground claims in Senja's supplied collection-form claim rather than promising sales gains. If demonstrating requires payment, use a brief explanation based on official product material instead.\",\n        \"activityToRecord\": \"Reusable walkthrough or explanation, sources used, and any observed setup friction.\",\n        \"minutes\": 15,\n        \"directCost\": 0,\n        \"title\": \"Finish the demonstration\"\n      },\n      {\n        \"instruction\": \"Only after access is confirmed, review up to ten recent Indie Hackers discussions and publish up to five individually relevant replies where permitted. Prioritize founders with evidence of happy paying users and a current selling trigger. Address their stated situation, ask one concrete question about collecting customer proof, and offer the walkthrough only when useful and allowed. Do not duplicate unanswered outreach or introduce paid tools.\",\n        \"activityToRecord\": \"Discussions reviewed, buyer-fit evidence, replies published, exact wording, links, dates, and subsequent responses.\",\n        \"minutes\": 45,\n        \"directCost\": 0,\n        \"title\": \"Test focused replies\"\n      },\n      {\n        \"instruction\": \"During the next seven days, answer any responses and clarify the founder's current collection need. Where relevant and feasible through confirmed free access, invite them to collect one real testimonial in Senja; discuss the verified paid SaaS offer only if it addresses their stated need. If there are no responses, use this time to review exposure and unresolved execution gaps rather than sending repeated nudges. At day seven, summarize outcomes by contact cohort and recommend the next decision.\",\n        \"activityToRecord\": \"Replies, qualified conversations, real-testimonial activations, repeated use, objections, verified completed payments, and cohort-specific observation windows.\",\n        \"minutes\": 40,\n        \"directCost\": 0,\n        \"title\": \"Follow up and review\"\n      }\n    ],\n    \"resources\": {\n      \"availableMinutes\": 180,\n      \"experimentBudget\": 0,\n      \"currency\": \"USD\",\n      \"basis\": \"Founder supplied three hours weekly and a zero USD monthly budget. Tasks allocate 150 minutes, below the 153-minute maximum, leaving 30 minutes unallocated. All direct costs are zero; execution requires confirmed free access. No paid tools, sponsorships, or unreported resources are assumed.\"\n    },\n    \"successCriteria\": {\n      \"evidenceToCollect\": \"Track verified permitted exposure and buyer fit separately from responses. Qualified interest requires an authorized founder with a current collection need considering Senja. Activation means collecting one real testimonial; repeated adoption requires subsequent use. Only verified completed payment establishes revenue. Keep cohorts and observation windows distinct.\",\n      \"continueWhen\": \"Provisionally continue if two qualified conversations emerge and at least one founder collects a real testimonial. Treat this as early relevance and activation evidence, not proof of repeated adoption or willingness to pay.\",\n      \"adjustWhen\": \"Refine execution if delivery, permission, targeting, or messaging remains unverified. If qualified conversations occur without activation, investigate the stated obstacle before revising the walkthrough or invitation. Silence alone does not establish absent demand.\",\n      \"reconsiderWhen\": \"Propose reconsideration if the selected channel cannot provide free, permitted access to suitable buyers, or repeated qualified conversations reveal no relevant collection need. Any buyer-segment or acquisition-channel change requires an explicit reason and founder approval.\"\n    },\n    \"importantUnknowns\": [\n      \"Whether the 15 reported contacts used the selected channel and reached the intended buyer.\",\n      \"Whether messages were published permissibly and had sufficient time to receive responses.\",\n      \"Whether access validation, offer verification, or a reusable walkthrough already exists.\",\n      \"Actual paid SaaS pricing, capabilities, purchase path, and relevant free-use limits.\",\n      \"Whether suitable founders have an immediate collection obstacle and will progress from interest to real use and payment.\"\n    ],\n    \"productEvidenceIds\": [\n      \"s1\",\n      \"s2\"\n    ]\n  }\n}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "medium",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": false,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "advisor_weekly_review",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "decision": {
+            "type": "string",
+            "enum": [
+              "Continue",
+              "Adjust",
+              "Reconsider"
+            ]
+          },
+          "evidenceAssessment": {
+            "type": "string",
+            "minLength": 1
+          },
+          "remainingUncertainty": {
+            "type": "string",
+            "minLength": 1
+          },
+          "changeReason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "proposedPlan": {
+            "type": "object",
+            "properties": {
+              "schemaVersion": {
+                "type": "string",
+                "const": "advisor/1"
+              },
+              "buyer": {
+                "type": "object",
+                "properties": {
+                  "segment": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "buyingProblemOrTrigger": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "whyChosen": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "segment",
+                  "buyingProblemOrTrigger",
+                  "whyChosen"
+                ],
+                "additionalProperties": false
+              },
+              "channel": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "whereAndHow": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "whyChosen": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "accessCheck": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "fallback": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "name",
+                  "whereAndHow",
+                  "whyChosen",
+                  "accessCheck",
+                  "fallback"
+                ],
+                "additionalProperties": false
+              },
+              "tasks": {
+                "minItems": 3,
+                "maxItems": 5,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "instruction": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "activityToRecord": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "minutes": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 9007199254740991
+                    },
+                    "directCost": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "title": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "instruction",
+                    "activityToRecord",
+                    "minutes",
+                    "directCost",
+                    "title"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "resources": {
+                "type": "object",
+                "properties": {
+                  "availableMinutes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  },
+                  "experimentBudget": {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  "currency": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "basis": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "availableMinutes",
+                  "experimentBudget",
+                  "currency",
+                  "basis"
+                ],
+                "additionalProperties": false
+              },
+              "successCriteria": {
+                "type": "object",
+                "properties": {
+                  "evidenceToCollect": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "continueWhen": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "adjustWhen": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "reconsiderWhen": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "evidenceToCollect",
+                  "continueWhen",
+                  "adjustWhen",
+                  "reconsiderWhen"
+                ],
+                "additionalProperties": false
+              },
+              "importantUnknowns": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "productEvidenceIds": {
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "schemaVersion",
+              "buyer",
+              "channel",
+              "tasks",
+              "resources",
+              "successCriteria",
+              "importantUnknowns",
+              "productEvidenceIds"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "decision",
+          "evidenceAssessment",
+          "remainingUncertainty",
+          "changeReason",
+          "proposedPlan"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 3049,
+    "input_tokens_details": {
+      "cache_write_tokens": 3046,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1785,
+    "output_tokens_details": {
+      "reasoning_tokens": 136
+    },
+    "total_tokens": 4834
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\n  \"decision\": \"Adjust\",\n  \"evidenceAssessment\": \"The report records 15 prospects contacted, zero replies, zero qualified conversations, zero activations, and zero paying customers. This shows no observed progression from the reported outreach, but delivery, buyer fit, message quality, and permission to participate remain unverified. No task completions were confirmed, so access validation, paid-offer verification, and demonstration preparation cannot be assumed complete. The evidence supports auditing execution, not rejecting the buyer or channel.\",\n  \"remainingUncertainty\": \"It is unknown whether the 15 contacts reached suitable founders through permitted Indie Hackers participation, whether they saw the messages, and how long they had to respond. The counts may describe different cohorts. Senja's actual pricing, paid capabilities, purchase path, and relevant free-use limits remain unverified. There are no prior reviews establishing a repeated pattern.\",\n  \"changeReason\": \"Adjust execution by checking the reported outreach and completing missing prerequisites before further participation. Keep the buyer and acquisition channel unchanged: one report of silence with unverified execution is insufficient evidence for a strategic switch. This proposed plan requires founder approval before activation.\",\n  \"proposedPlan\": {\n    \"schemaVersion\": \"advisor/1\",\n    \"buyer\": {\n      \"segment\": \"Bootstrapped SaaS founders with happy paying users who are preparing a launch or sales-page refresh.\",\n      \"buyingProblemOrTrigger\": \"They need customer proof for an upcoming selling moment and can authorize a software purchase themselves.\",\n      \"whyChosen\": \"Existing customers make testimonial collection actionable. This narrower buyer is preferable to pre-revenue founders without customer evidence.\"\n    },\n    \"channel\": {\n      \"name\": \"Permission-based participation in Indie Hackers discussions\",\n      \"whereAndHow\": \"Find recent founder milestone and launch posts; contribute relevant public replies and introduce Senja only where permitted and useful.\",\n      \"whyChosen\": \"Posts can reveal an immediate trigger before contact, unlike broad cold outreach. With no previous acquisition efforts, no paying customers, and no budget, this tests problem relevance without building a prospect database.\",\n      \"accessCheck\": \"Read current community rules and search recent posts for 'first customers', 'launch', and 'testimonials'. Identify three suitable founders and confirm a free, permitted reply route before preparing promotion.\",\n      \"fallback\": \"If access fails, check r/SaaS for a current, explicitly permitted feedback or promotion thread serving the same buyer. Proceed only if suitable founders and posting permission are evident; otherwise pause publication.\"\n    },\n    \"tasks\": [\n      {\n        \"instruction\": \"Audit the 15 reported contacts using available post links and message records. Record the channel, date, exact message, visible publication status, permission basis, and evidence of paying users plus an upcoming launch or sales-page refresh. Mark missing information unknown; do not infer delivery from a contact count.\",\n        \"activityToRecord\": \"Audited contacts, verified buyer fit, publication evidence, message wording, elapsed response time, and unknowns.\",\n        \"minutes\": 20,\n        \"directCost\": 0,\n        \"title\": \"Audit reported outreach\"\n      },\n      {\n        \"instruction\": \"Complete or verify the existing access check: inspect current Indie Hackers rules, identify three suitable recent discussions, and confirm that relevant replies are permitted and free. Inspect Senja's official pricing and purchase path to record actual paid plans, capabilities, and relevant free-use limits; mark anything unverifiable unknown. Do not recommend a purchase before verification. If Indie Hackers access fails, pause publication; any fallback channel switch requires a separate Reconsider proposal and founder approval.\",\n        \"activityToRecord\": \"Rule links, suitable discussion links, confirmed free access, verified SaaS offer details, and unresolved restrictions.\",\n        \"minutes\": 30,\n        \"directCost\": 0,\n        \"title\": \"Verify access and offer\"\n      },\n      {\n        \"instruction\": \"Check whether a walkthrough already exists and reuse it if suitable. Otherwise prepare a short walkthrough of the collection workflow using clearly labeled sample content and confirmed free access only. Ground claims in Senja's supplied collection-form claim rather than promising sales gains. If demonstrating requires payment, use a brief explanation based on official product material instead.\",\n        \"activityToRecord\": \"Reusable walkthrough or explanation, sources used, and any observed setup friction.\",\n        \"minutes\": 15,\n        \"directCost\": 0,\n        \"title\": \"Finish the demonstration\"\n      },\n      {\n        \"instruction\": \"Only after access is confirmed, review up to ten recent Indie Hackers discussions and publish up to five individually relevant replies where permitted. Prioritize founders with evidence of happy paying users and a current selling trigger. Address their stated situation, ask one concrete question about collecting customer proof, and offer the walkthrough only when useful and allowed. Do not duplicate unanswered outreach or introduce paid tools.\",\n        \"activityToRecord\": \"Discussions reviewed, buyer-fit evidence, replies published, exact wording, links, dates, and subsequent responses.\",\n        \"minutes\": 45,\n        \"directCost\": 0,\n        \"title\": \"Test focused replies\"\n      },\n      {\n        \"instruction\": \"During the next seven days, answer any responses and clarify the founder's current collection need. Where relevant and feasible through confirmed free access, invite them to collect one real testimonial in Senja; discuss the verified paid SaaS offer only if it addresses their stated need. If there are no responses, use this time to review exposure and unresolved execution gaps rather than sending repeated nudges. At day seven, summarize outcomes by contact cohort and recommend the next decision.\",\n        \"activityToRecord\": \"Replies, qualified conversations, real-testimonial activations, repeated use, objections, verified completed payments, and cohort-specific observation windows.\",\n        \"minutes\": 40,\n        \"directCost\": 0,\n        \"title\": \"Follow up and review\"\n      }\n    ],\n    \"resources\": {\n      \"availableMinutes\": 180,\n      \"experimentBudget\": 0,\n      \"currency\": \"USD\",\n      \"basis\": \"Founder supplied three hours weekly and a zero USD monthly budget. Tasks allocate 150 minutes, below the 153-minute maximum, leaving 30 minutes unallocated. All direct costs are zero; execution requires confirmed free access. No paid tools, sponsorships, or unreported resources are assumed.\"\n    },\n    \"successCriteria\": {\n      \"evidenceToCollect\": \"Track verified permitted exposure and buyer fit separately from responses. Qualified interest requires an authorized founder with a current collection need considering Senja. Activation means collecting one real testimonial; repeated adoption requires subsequent use. Only verified completed payment establishes revenue. Keep cohorts and observation windows distinct.\",\n      \"continueWhen\": \"Provisionally continue if two qualified conversations emerge and at least one founder collects a real testimonial. Treat this as early relevance and activation evidence, not proof of repeated adoption or willingness to pay.\",\n      \"adjustWhen\": \"Refine execution if delivery, permission, targeting, or messaging remains unverified. If qualified conversations occur without activation, investigate the stated obstacle before revising the walkthrough or invitation. Silence alone does not establish absent demand.\",\n      \"reconsiderWhen\": \"Propose reconsideration if the selected channel cannot provide free, permitted access to suitable buyers, or repeated qualified conversations reveal no relevant collection need. Any buyer-segment or acquisition-channel change requires an explicit reason and founder approval.\"\n    },\n    \"importantUnknowns\": [\n      \"Whether the 15 reported contacts used the selected channel and reached the intended buyer.\",\n      \"Whether messages were published permissibly and had sufficient time to receive responses.\",\n      \"Whether access validation, offer verification, or a reusable walkthrough already exists.\",\n      \"Actual paid SaaS pricing, capabilities, purchase path, and relevant free-use limits.\",\n      \"Whether suitable founders have an immediate collection obstacle and will progress from interest to real use and payment.\"\n    ],\n    \"productEvidenceIds\": [\n      \"s1\",\n      \"s2\"\n    ]\n  }\n}"
+}

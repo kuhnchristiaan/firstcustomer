@@ -169,7 +169,7 @@ export async function saveContext(
   return advisorWorkspace(t, productId);
 }
 
-async function reserve(
+export async function reserve(
   t: Tenant,
   workspaceId: string,
   kind: string,
@@ -279,7 +279,10 @@ async function reserve(
           "Advisor request limit reached. Wait before requesting more help.",
           429,
         );
-      const ceiling = kind === "strategy" ? a.strategyCeiling : a.assistCeiling;
+      const ceiling =
+        kind === "strategy" || kind === "review"
+          ? a.strategyCeiling
+          : a.assistCeiling;
       const key = `advisor:daily:${now.toISOString().slice(0, 10)}`;
       await tx.$executeRaw`INSERT INTO "UsageBucket" ("key","count","expiresAt") VALUES (${key},0,${new Date(now.getTime() + 172800000)}) ON CONFLICT ("key") DO NOTHING`;
       await tx.$queryRaw`SELECT key FROM "UsageBucket" WHERE key=${key} FOR UPDATE`;
@@ -300,7 +303,7 @@ async function reserve(
           kind,
           requestKey,
           model:
-            kind === "strategy"
+            kind === "strategy" || kind === "review"
               ? a.ADVISOR_STRATEGY_MODEL
               : a.ADVISOR_ASSIST_MODEL,
           reservedUsd: ceiling,
@@ -313,7 +316,7 @@ async function reserve(
   );
 }
 
-async function failOperation(id: string, usage: UsageEntry[]) {
+export async function failOperation(id: string, usage: UsageEntry[]) {
   await db().advisorOperation.updateMany({
     where: { id, status: "RUNNING" },
     data: {
@@ -467,8 +470,15 @@ export async function assist(
     (input.action === "explain" && input.taskId)
   )
     throw new AppError("Choose a task from this saved plan.", 400);
+  const recordedReviews = await db().advisorWeeklyReview.findMany({
+    where: { workspaceId: w.id },
+    orderBy: { createdAt: "desc" },
+    take: 6,
+    select: { results: true, proposal: true, status: true },
+  });
   const requestKey = hash({
     ...input,
+    recordedReviews,
     completion: strategy.tasks.map((x) => ({ id: x.id, version: x.version })),
   });
   const reserved = await reserve(t, w.id, input.action, requestKey);
@@ -490,7 +500,9 @@ export async function assist(
         completedActivities: strategy.tasks
           .filter((x) => x.completed)
           .map((x) => x.position),
-        recordedOutcomes: "No outcome metrics recorded",
+        recordedOutcomes: recordedReviews.length
+          ? recordedReviews
+          : "No outcome metrics recorded",
       },
       usage,
     );
@@ -513,7 +525,7 @@ export async function assist(
         "This assistance request expired. Your plan is unchanged.",
         409,
       );
-    return { ...output, cached: false, fixture: strategy.fixture };
+    return { ...output, cached: false, fixture: advisorConfig().fixture };
   } catch (error) {
     await failOperation(reserved.operation.id, usage);
     if (error instanceof AppError) throw error;
@@ -539,6 +551,7 @@ export function advisorView(w: Awaited<ReturnType<typeof advisorWorkspace>>) {
       ? {
           id: s.id,
           version: s.version,
+          strategyVersion: s.strategyVersion,
           output: advisorSchema(ids as [string, ...string[]]).parse(s.output),
           fixture: s.fixture,
           createdAt: s.createdAt.toISOString(),

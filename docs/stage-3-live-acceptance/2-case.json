@@ -1,0 +1,34 @@
+{
+  "synthetic": true,
+  "productId": "cmw3u04g9000dccsgymudxvja",
+  "workspaceId": "cmw3u04gd000eccsgtc8nfzbp",
+  "planId": "cmw3u04gv000fccsg8rbwhdwk",
+  "reviewId": "cmw3u04hf000lccsgssthapat",
+  "context": {
+    "resources": {
+      "hoursPerWeek": 3,
+      "monthlyBudget": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "productStage": "Launched, no paying customers",
+    "previousEfforts": {
+      "other": null,
+      "channels": [
+        "None"
+      ]
+    }
+  },
+  "results": {
+    "planId": "cmw3u04gv000fccsg8rbwhdwk",
+    "replies": 0,
+    "feedback": "Synthetic report: no responses observed. Message quality, targeting accuracy and delivery are unverified. Task-completion confirmations were not supplied; no tasks are marked completed.",
+    "activations": 0,
+    "submissionKey": "a69ccb1b-ac3b-4cf9-86d1-f056a105c7a7",
+    "payingCustomers": 0,
+    "completedTaskIds": [],
+    "prospectsContacted": 15,
+    "qualifiedConversations": 0
+  }
+}

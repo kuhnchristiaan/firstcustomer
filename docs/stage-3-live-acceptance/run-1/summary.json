@@ -1,0 +1,57 @@
+{
+  "totalEstimatedCostUsd": 0.0771305,
+  "paidCalls": 3,
+  "retries": 0,
+  "repairs": 0,
+  "ceilingUsd": 0.9,
+  "rows": [
+    {
+      "scenario": 1,
+      "decision": "Adjust",
+      "status": "PROPOSED",
+      "applicationFailure": null,
+      "activePlanUnchanged": true,
+      "noProposalApplied": true,
+      "staleApprovalDenied": true,
+      "minutes": 150,
+      "spend": 0,
+      "input": 3055,
+      "output": 1846,
+      "reasoning": 137,
+      "latencyMs": 38276,
+      "cost": 0.026096
+    },
+    {
+      "scenario": 2,
+      "decision": "Adjust",
+      "status": "PROPOSED",
+      "applicationFailure": null,
+      "activePlanUnchanged": true,
+      "noProposalApplied": true,
+      "staleApprovalDenied": true,
+      "minutes": 150,
+      "spend": 0,
+      "input": 3049,
+      "output": 1785,
+      "reasoning": 136,
+      "latencyMs": 33385,
+      "cost": 0.025471
+    },
+    {
+      "scenario": 3,
+      "decision": "Reconsider",
+      "status": "PROPOSED",
+      "applicationFailure": null,
+      "activePlanUnchanged": true,
+      "noProposalApplied": true,
+      "staleApprovalDenied": true,
+      "minutes": 150,
+      "spend": 0,
+      "input": 3054,
+      "output": 1793,
+      "reasoning": 177,
+      "latencyMs": 37635,
+      "cost": 0.0255635
+    }
+  ]
+}

@@ -215,29 +215,32 @@ model AuditEvent {
 }
 
 model AdvisorWorkspace {
-  id             String             @id @default(cuid())
-  productId      String             @unique
-  product        Product            @relation(fields: [productId], references: [id], onDelete: Restrict)
+  id             String                @id @default(cuid())
+  productId      String                @unique
+  product        Product               @relation(fields: [productId], references: [id], onDelete: Restrict)
   founderContext Json
   profile        Json?
   sources        Json?
-  version        Int                @default(0)
-  createdAt      DateTime           @default(now())
-  updatedAt      DateTime           @updatedAt
+  version        Int                   @default(0)
+  createdAt      DateTime              @default(now())
+  updatedAt      DateTime              @updatedAt
   strategies     AdvisorStrategy[]
   operations     AdvisorOperation[]
+  weeklyReviews  AdvisorWeeklyReview[]
 }
 
 model AdvisorStrategy {
-  id             String           @id @default(cuid())
-  workspaceId    String
-  workspace      AdvisorWorkspace @relation(fields: [workspaceId], references: [id], onDelete: Restrict)
-  version        Int
-  founderContext Json
-  output         Json
-  fixture        Boolean          @default(false)
-  createdAt      DateTime         @default(now())
-  tasks          AdvisorTask[]
+  id              String               @id @default(cuid())
+  workspaceId     String
+  workspace       AdvisorWorkspace     @relation(fields: [workspaceId], references: [id], onDelete: Restrict)
+  version         Int
+  strategyVersion Int                  @default(1)
+  founderContext  Json
+  output          Json
+  fixture         Boolean              @default(false)
+  createdAt       DateTime             @default(now())
+  tasks           AdvisorTask[]
+  weeklyReview    AdvisorWeeklyReview?
 
   @@unique([workspaceId, version])
 }
@@ -252,6 +255,28 @@ model AdvisorTask {
   version     Int             @default(0)
 
   @@unique([strategyId, position])
+}
+
+model AdvisorWeeklyReview {
+  id            String           @id @default(cuid())
+  workspaceId   String
+  workspace     AdvisorWorkspace @relation(fields: [workspaceId], references: [id], onDelete: Restrict)
+  planId        String           @unique
+  plan          AdvisorStrategy  @relation(fields: [planId], references: [id], onDelete: Restrict)
+  submissionKey String
+  results       Json
+  resultsHash   String
+  status        String           @default("SUBMITTED")
+  proposal      Json?
+  fixture       Boolean          @default(false)
+  createdAt     DateTime         @default(now())
+  reviewedAt    DateTime?
+  acceptedAt    DateTime?
+  acceptedBy    String?
+  nextPlanId    String?          @unique
+
+  @@unique([workspaceId, submissionKey])
+  @@index([workspaceId, createdAt])
 }
 
 model AdvisorOperation {

@@ -1,0 +1,32 @@
+{
+  "review": {
+    "id": "cmw3u04k2000wccsg9sr7xbri",
+    "workspaceId": "cmw3u04jm000pccsgp4xk0ev8",
+    "planId": "cmw3u04js000qccsgww5v7emr",
+    "submissionKey": "e30525a0-e0af-40fe-ba5a-fdb902aebcb1",
+    "results": {
+      "planId": "cmw3u04js000qccsgww5v7emr",
+      "replies": null,
+      "feedback": "Synthetic report: the founder cannot realistically access the recommended Indie Hackers channel. No meaningful customer response data exists. This is an execution access blocker. Task-completion confirmations were not supplied; no tasks are marked completed.",
+      "activations": null,
+      "submissionKey": "e30525a0-e0af-40fe-ba5a-fdb902aebcb1",
+      "payingCustomers": null,
+      "completedTaskIds": [],
+      "prospectsContacted": 0,
+      "qualifiedConversations": null
+    },
+    "resultsHash": "b9a499f97c6b35af39d2ece8e3c0e794e6e153640c9e42f77079bc2cf2f98697",
+    "status": "SUBMITTED",
+    "proposal": null,
+    "fixture": false,
+    "createdAt": "2026-11-05T17:40:37.778Z",
+    "reviewedAt": null,
+    "acceptedAt": null,
+    "acceptedBy": null,
+    "nextPlanId": null
+  },
+  "applicationFailure": "The advisor's daily spending allowance has been reserved. Try tomorrow.",
+  "activePlanUnchanged": true,
+  "noProposalApplied": true,
+  "staleApprovalDenied": false
+}

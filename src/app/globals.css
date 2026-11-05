@@ -1,4 +1,50 @@
 @import "tailwindcss";
+.advisor-results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.advisor-results-grid label {
+  font-size: 13px;
+}
+.advisor-results-grid input {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+}
+.advisor-confirm-task {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+.advisor-confirm-task input {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  accent-color: var(--ink);
+}
+.advisor-results-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  font-size: 13px;
+  margin-top: 12px;
+}
+.advisor-weekly textarea {
+  width: 100%;
+  display: block;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid var(--control-border);
+  border-radius: 8px;
+}
+@media (max-width: 600px) {
+  .advisor-results-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .advisor-next-action {
   margin-bottom: 20px;
   border-left: 4px solid var(--lime);

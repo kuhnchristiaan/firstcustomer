@@ -178,6 +178,83 @@ const server = createServer(async (req, res) => {
           slug === "senja"
             ? "If free LinkedIn contact is unavailable, inspect those same owners’ public course sites for a business inquiry route that permits relevant introductions. If neither route is available, pause contact and record the access barrier."
             : "If there are no eligible permitted threads, inspect the same agencies’ public project-help requests in a web-design community that permits disclosed recommendations. Verify relevance and permission before posting; otherwise pause promotion.";
+      } else if (format === "advisor_weekly_review") {
+        const current = data.currentPlan;
+        const results = data.results;
+        const blocked = /access unavailable|no permitted|blocked/i.test(
+          results.feedback,
+        );
+        const adjust =
+          !blocked &&
+          (results.qualifiedConversations > 0 ||
+            /objection|pricing|friction/i.test(results.feedback));
+        const proposedPlan = structuredClone(current);
+        const decision = blocked
+          ? "Reconsider"
+          : adjust
+            ? "Adjust"
+            : "Continue";
+        if (blocked) {
+          proposedPlan.channel = {
+            ...current.channel,
+            name: "Permission-based public business inquiries",
+            whereAndHow:
+              "Find the same buyer on public business sites and use an explicitly permitted inquiry route.",
+            whyChosen:
+              "Reported channel access was blocked; test a verified free business contact route for the same buyer.",
+          };
+        }
+        const title = blocked
+          ? "Verify a permitted free contact route"
+          : adjust
+            ? "Address the reported objection"
+            : "Build on the completed preparation";
+        const instruction = blocked
+          ? "Check public business inquiry permissions for the same buyer before contacting anyone. Pause if no permitted route exists."
+          : adjust
+            ? "Use the recorded feedback to clarify the actual paid SaaS offer and address the objection without inventing pricing or paid features."
+            : "Use the existing preparation to run a small relevant test; do not repeat already completed setup work.";
+        const cap = Math.floor(current.resources.availableMinutes * 0.8);
+        proposedPlan.tasks = [
+          {
+            title,
+            instruction,
+            activityToRecord:
+              "Record the observed access condition or objection and the action taken.",
+            minutes: Math.floor(cap / 3),
+            directCost: 0,
+          },
+          {
+            title: "Follow up on qualified interest",
+            instruction:
+              "Follow up only where permission and relevance are confirmed. Help the buyer take one useful step in the actual SaaS.",
+            activityToRecord:
+              "Record replies, qualified conversations, activation and confirmed payment separately.",
+            minutes: Math.floor(cap / 3),
+            directCost: 0,
+          },
+          {
+            title: "Compare evidence with this week's results",
+            instruction:
+              "Review the next observations against the reported baseline and note what remains unknown. Do not infer sales from completed tasks.",
+            activityToRecord:
+              "Record actual outcomes and unresolved uncertainties.",
+            minutes: Math.floor(cap / 3),
+            directCost: 0,
+          },
+        ];
+        output = {
+          decision,
+          evidenceAssessment: `Local review fixture: ${results.prospectsContacted ?? "unknown"} prospects contacted, ${results.replies ?? "unknown"} replies, ${results.qualifiedConversations ?? "unknown"} qualified conversations, ${results.activations ?? "unknown"} activations, ${results.payingCustomers ?? "unknown"} paying customers. Completed tasks are activity only. Feedback: ${results.feedback || "None supplied."}`,
+          remainingUncertainty:
+            "A single week and incomplete exposure do not establish demand or its absence. Unknown metrics remain unknown.",
+          changeReason: blocked
+            ? "Reported access barriers justify proposing another permitted route for the same buyer; this requires explicit approval."
+            : adjust
+              ? "Reported qualified interest and objections justify refining execution while keeping the buyer and channel."
+              : "The available evidence supports another scoped test, preserving the buyer and channel rather than changing strategy because a week passed.",
+          proposedPlan,
+        };
       } else {
         const selected = data.selectedTaskPosition;
         output = {

@@ -1,0 +1,52 @@
+{
+  "target": {
+    "database": "firstcustomers_advisor_dev",
+    "host": "127.0.0.1",
+    "port": 55441
+  },
+  "before": [
+    {
+      "table": "AnalysisRun",
+      "rows": 1,
+      "hash": "59a535f0a29b082a0b682ffd7a2864de"
+    },
+    {
+      "table": "ProductProfile",
+      "rows": 0,
+      "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    {
+      "table": "AdvisorStrategy",
+      "rows": 6,
+      "hash": "e4f38389e3ca24fc082f20dcd6796c52"
+    },
+    {
+      "table": "AdvisorTask",
+      "rows": 30,
+      "hash": "8dd8db476e881593378196fe2253cd82"
+    }
+  ],
+  "after": [
+    {
+      "table": "AnalysisRun",
+      "rows": 1,
+      "hash": "59a535f0a29b082a0b682ffd7a2864de"
+    },
+    {
+      "table": "ProductProfile",
+      "rows": 0,
+      "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    {
+      "table": "AdvisorStrategy",
+      "rows": 6,
+      "hash": "e4f38389e3ca24fc082f20dcd6796c52"
+    },
+    {
+      "table": "AdvisorTask",
+      "rows": 30,
+      "hash": "8dd8db476e881593378196fe2253cd82"
+    }
+  ],
+  "preserved": true
+}
