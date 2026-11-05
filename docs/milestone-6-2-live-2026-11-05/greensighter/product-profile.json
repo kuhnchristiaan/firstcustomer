@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "identity": {
+    "name": "Greensighter AI Designer",
+    "summary": "Assign design tickets in Jira, Linear, Asana or ClickUp and get designs in your Figma in 24–48 hours, with a human reviewer in the loop.",
+    "category": "Developer tools",
+    "primaryJob": {
+      "actor": "Product teams or UX/UI designers using Jira, Linear, Asana, or ClickUp",
+      "problem": "Need to quickly generate consistent, high-quality UI/UX design screens that fit their existing design system",
+      "outcome": "Receive senior-level quality designs in Figma reviewed by a human designer within 24–48 hours"
+    },
+    "certainty": "Website-supported",
+    "evidence": [
+      {
+        "sourceUrl": "https://ai.greensighter.com/",
+        "blockId": "bb71a2fcf8fb",
+        "quote": "Assign design tickets in Jira, Linear, Asana or ClickUp and get designs in your Figma in 24–48 hours, with a human reviewer in the loop."
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "s1",
+      "text": "Assign design tickets in Jira, Linear, Asana or ClickUp and get designs in your Figma in 24–48 hours, with a human reviewer in the loop.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://ai.greensighter.com/",
+          "blockId": "bb71a2fcf8fb",
+          "quote": "Assign design tickets in Jira, Linear, Asana or ClickUp and get designs in your Figma in 24–48 hours, with a human reviewer in the loop."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "text": "Our AI designer researches top products, designs in your Figma with your design system, and a senior designer reviews every screen.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://ai.greensighter.com/",
+          "blockId": "981f75ba805d",
+          "quote": "Our AI designer researches top products, designs in your Figma with your design system, and a senior designer reviews every screen."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "text": "Clear hierarchy, real content and every edge case covered: empty, loading and error states included, not only the “happy path.”",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://ai.greensighter.com/",
+          "blockId": "89e1de7aec9c",
+          "quote": "Clear hierarchy, real content and every edge case covered: empty, loading and error states included, not only the “happy path.”"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "text": "New screens look like they've always been part of your app. Same patterns, same tone, same logic.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://ai.greensighter.com/",
+          "blockId": "5dda908a26f3",
+          "quote": "New screens look like they've always been part of your app. Same patterns, same tone, same logic."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No explicit mention of integration beyond design tickets and Figma output; not a standalone design software but an AI-assisted design service.",
+    "Relies on human senior designer review for quality assurance rather than fully autonomous AI design."
+  ]
+}

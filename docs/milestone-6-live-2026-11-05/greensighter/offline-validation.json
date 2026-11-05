@@ -1,0 +1,79 @@
+{
+  "mode": "offline reconstruction, zero API calls; original artifacts unchanged",
+  "qualityReviewWasCalled": false,
+  "pendingQualityReview": {
+    "requestBytes": 17108,
+    "overheadReservation": 1024,
+    "alreadyBilledInputTokens": 3229,
+    "totalInputReservation": 21361,
+    "inputCap": 20000,
+    "overInputCapBy": 1361,
+    "requestedOutputTokens": 650,
+    "remainingOutputTokens": 5034
+  },
+  "deterministicIssues": [
+    {
+      "section": "outreachTemplates",
+      "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+    },
+    {
+      "section": "thirtyDayPlan",
+      "reason": "No observable success measure: thirtyDayPlan.0.successMetric"
+    },
+    {
+      "section": "thirtyDayPlan",
+      "reason": "No observable success measure: thirtyDayPlan.2.successMetric"
+    }
+  ],
+  "sanitiserDifferences": [
+    {
+      "path": "differentiators.2.text",
+      "original": "Human-in-the-loop review guarantees quality, not just AI output.",
+      "sanitised": ""
+    },
+    {
+      "path": "segments.2.problems.1",
+      "original": "Guarantee senior-reviewed quality",
+      "sanitised": ""
+    },
+    {
+      "path": "acquisitionChannels.0.recommendation.text",
+      "original": "Use LinkedIn to target Product Managers and Lead Developers in tech startups for initial trial offers, testing messaging around speed and design system consistency.",
+      "sanitised": ""
+    },
+    {
+      "path": "acquisitionChannels.0.successMetric",
+      "original": "Response rate >10%, demo scheduling >5% of contacts",
+      "sanitised": ""
+    },
+    {
+      "path": "acquisitionChannels.2.successMetric",
+      "original": "Engagement post interaction rate >8%, trial signups >5%",
+      "sanitised": ""
+    },
+    {
+      "path": "firstTenPlaybook.0.successMetric",
+      "original": ">5% demo interest rate from 50 contacts",
+      "sanitised": ""
+    },
+    {
+      "path": "firstTenPlaybook.2.title",
+      "original": "Figma Community Posts and Offers",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.0.successMetric",
+      "original": "Connect with at least 30% of targeted contacts",
+      "sanitised": ""
+    }
+  ],
+  "oldFallbackSentenceOccurrences": 0
+}

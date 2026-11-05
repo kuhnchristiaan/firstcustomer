@@ -3,6 +3,11 @@ import { ProviderOutputError } from "./provider";
 export function analysisFailure(error: unknown): AppError {
   if (error instanceof AppError) return error;
   if (error instanceof ProviderOutputError) {
+    if (error.reason === "quality_failed")
+      return new AppError(
+        "The analysis is incomplete: its strategy did not pass the final quality review within the available budget. Please try again. Existing reports are unchanged.",
+        422,
+      );
     if (error.reason === "input_budget")
       return new AppError(
         "This website contains more information than we can process in one report. Try the main product page or a shorter features page.",

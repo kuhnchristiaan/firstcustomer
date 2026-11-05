@@ -375,6 +375,8 @@ export async function generateRevision(a: Access, input: unknown) {
       console.error(
         JSON.stringify({
           event: "refinement_rejected",
+          stages: error.stages,
+          qualityFailure: error.qualityFailure,
           code: Object.hasOwn(reasons, error.reason)
             ? error.reason
             : "invalid_output",
@@ -467,19 +469,30 @@ export async function approveRevision(
         reviews,
         base.sources,
         founderSchema.parse(revision.founderContext),
+        true,
+        { productName: reportSchema.parse(base.output).businessName },
       );
       // An edited rationale is publication content too; raw review metadata stays separate.
       const safeIntelligence =
         output.schemaVersion === "3.0"
           ? (() => {
-              const { claims, claimActions, generation, ...assessment } =
-                output.intelligence;
+              const {
+                claims,
+                claimActions,
+                generation,
+                quality,
+                ...assessment
+              } = output.intelligence;
+              // The generated-text score does not certify subsequent founder edits.
+              void quality;
               return {
                 ...verifyClaims(
                   assessment,
                   [],
                   base.sources,
                   founderSchema.parse(revision.founderContext),
+                  true,
+                  { productName: reportSchema.parse(base.output).businessName },
                 ).value,
                 claims,
                 claimActions: [...claimActions, ...checked.actions],

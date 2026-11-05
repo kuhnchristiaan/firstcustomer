@@ -1,0 +1,137 @@
+{
+  "url": "https://senja.io/",
+  "startedAt": "2026-11-05T06:25:13.177Z",
+  "completedAt": "2026-11-05T06:25:38.594Z",
+  "elapsedMs": 25399,
+  "crawlMs": 3164,
+  "model": "gpt-4.1-mini",
+  "limits": {
+    "inputTokens": 20000,
+    "outputTokens": 8000
+  },
+  "analysisAttempts": 1,
+  "pages": 1,
+  "analysisSucceeded": false,
+  "finalAccepted": false,
+  "firstCandidateAvailable": true,
+  "repairAttempted": false,
+  "firstCandidatePassed": false,
+  "reviews": [],
+  "candidateDiagnostics": {
+    "first": {
+      "deterministic": [
+        {
+          "section": "acquisitionChannels",
+          "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Empty field: outreachTemplates.1.subject"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsubstantiated prospect observation: outreachTemplates.1.body"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+        }
+      ],
+      "claimSectionsChangedBySanitiser": [
+        "acquisitionChannels",
+        "outreachTemplates",
+        "firstTenPlaybook",
+        "thirtyDayPlan"
+      ]
+    },
+    "final": {
+      "deterministic": [
+        {
+          "section": "acquisitionChannels",
+          "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Empty field: outreachTemplates.1.subject"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsubstantiated prospect observation: outreachTemplates.1.body"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+        }
+      ],
+      "claimSectionsChangedBySanitiser": [
+        "acquisitionChannels",
+        "outreachTemplates",
+        "firstTenPlaybook",
+        "thirtyDayPlan"
+      ]
+    }
+  },
+  "failure": {
+    "name": "Error",
+    "status": null,
+    "code": null,
+    "reason": "quality_failed",
+    "providerUsage": {
+      "inputTokens": 3481,
+      "outputTokens": 2852,
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "inputTokens": 2022,
+          "outputTokens": 371
+        },
+        {
+          "stage": "business_intelligence",
+          "inputTokens": 1459,
+          "outputTokens": 2481
+        }
+      ]
+    }
+  },
+  "usage": {
+    "inputTokens": 3481,
+    "outputTokens": 2852,
+    "cachedInputTokens": 0,
+    "estimatedCostUsd": 0.0059556,
+    "uncachedCostUsd": 0.0059556
+  },
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "startedAt": "2026-11-05T06:25:16.356Z",
+      "requestBytes": 8822,
+      "maxOutputTokens": 1200,
+      "elapsedMs": 5685,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_02e27b35a658ac89006aec214f5cf887d2a8191e98691511a4",
+      "inputTokens": 2022,
+      "outputTokens": 371,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0014024,
+      "uncachedCostUsd": 0.0014024,
+      "incompleteDetails": null
+    },
+    {
+      "stage": "business_intelligence",
+      "startedAt": "2026-11-05T06:25:22.053Z",
+      "requestBytes": 9057,
+      "maxOutputTokens": 6150,
+      "elapsedMs": 16511,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_0430d4dc6f2bc8d2006aec215474b887d288248405aa244b84",
+      "inputTokens": 1459,
+      "outputTokens": 2481,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0045532,
+      "uncachedCostUsd": 0.0045532,
+      "incompleteDetails": null
+    }
+  ]
+}

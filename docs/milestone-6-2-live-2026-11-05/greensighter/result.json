@@ -1,0 +1,121 @@
+{
+  "url": "https://ai.greensighter.com/",
+  "startedAt": "2026-11-05T07:22:54.213Z",
+  "completedAt": "2026-11-05T07:23:21.109Z",
+  "elapsedMs": 26893,
+  "crawlMs": 4759,
+  "model": "gpt-4.1-mini",
+  "testedLimits": {
+    "inputTokens": 20000,
+    "outputTokens": 4500
+  },
+  "configuredLimits": {
+    "inputTokens": 20000,
+    "outputTokens": 8000
+  },
+  "matrix": "lower4500",
+  "analysisAttempts": 1,
+  "pages": 1,
+  "analysisSucceeded": false,
+  "finalAccepted": false,
+  "productProfileAvailable": true,
+  "firstCandidateAvailable": false,
+  "firstChecks": null,
+  "finalChecks": null,
+  "repairAttempted": false,
+  "repairSuccessful": false,
+  "semanticReviewExecuted": false,
+  "reviews": [],
+  "failure": {
+    "name": "Error",
+    "status": null,
+    "code": null,
+    "reason": "invalid_attribution_or_output",
+    "providerUsage": {
+      "inputTokens": 3730,
+      "outputTokens": 3056,
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "inputTokens": 1758,
+          "outputTokens": 479
+        },
+        {
+          "stage": "business_intelligence",
+          "inputTokens": 1972,
+          "outputTokens": 2577
+        }
+      ]
+    }
+  },
+  "reconstruction": {
+    "name": "Error",
+    "status": null,
+    "code": null,
+    "schemaIssues": null
+  },
+  "usage": {
+    "inputTokens": 3730,
+    "outputTokens": 3056,
+    "cachedInputTokens": 0,
+    "estimatedCostUsd": 0.006381599999999999
+  },
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "requestBytes": 8350,
+      "maxOutputTokens": 900,
+      "startedAt": "2026-11-05T07:22:58.981Z",
+      "conservativeCostReservation": 0.0051896,
+      "elapsedMs": 4816,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_022d05a9dd6db7d0006aec2ed5257087d2b45591d596ba24af",
+      "inputTokens": 1758,
+      "outputTokens": 479,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0014696000000000002,
+      "usage": {
+        "input_tokens": 1758,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 479,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2237
+      },
+      "incompleteDetails": null
+    },
+    {
+      "stage": "business_intelligence",
+      "requestBytes": 12551,
+      "maxOutputTokens": 3371,
+      "startedAt": "2026-11-05T07:23:03.810Z",
+      "conservativeCostReservation": 0.010823600000000001,
+      "elapsedMs": 17294,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_0638350c8e7f9c16006aec2ed9b53087d2a6822412d3bf7ece",
+      "inputTokens": 1972,
+      "outputTokens": 2577,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.004912,
+      "usage": {
+        "input_tokens": 1972,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2577,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4549
+      },
+      "incompleteDetails": null
+    }
+  ]
+}

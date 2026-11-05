@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { qualityRecordSchema } from "@/modules/intelligence/quality";
 const note = z.string().min(1).max(500);
 const rating = z.enum(["low", "medium", "high", "unknown"]);
 export const claimSchema = z.strictObject({
@@ -79,6 +80,7 @@ export const assessmentSchema = z.strictObject({
   claims: z.array(claimSchema).max(40),
 });
 export const intelligenceSchema = assessmentSchema.extend({
+  quality: qualityRecordSchema.optional(),
   claimActions: z.array(
     z.strictObject({
       path: z.string(),

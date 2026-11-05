@@ -1,0 +1,80 @@
+{
+  "version": "1.0",
+  "identity": {
+    "name": "FirstCustomers",
+    "summary": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan.",
+    "category": "Customer acquisition",
+    "primaryJob": {
+      "actor": "Solo founders and small SaaS teams with a product",
+      "problem": "Difficulty in finding first customers and planning sales outreach",
+      "outcome": "A concrete 30-day sales plan with prioritized customer profiles, experiments, and adaptive outreach actions"
+    },
+    "certainty": "Website-supported",
+    "evidence": [
+      {
+        "sourceUrl": "https://www.firstcustomers.app/",
+        "blockId": "e467de7a2c24",
+        "quote": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan."
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "s1",
+      "text": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://www.firstcustomers.app/",
+          "blockId": "e467de7a2c24",
+          "quote": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "text": "Three prioritized customer profiles. Their likely problems, buying motivations, and the trade-offs that make one a better starting point.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://www.firstcustomers.app/",
+          "blockId": "0ea540525512",
+          "quote": "Three prioritized customer profiles. Their likely problems, buying motivations, and the trade-offs that make one a better starting point."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "text": "A practical weekly sales plan. Add your time, budget, and traction to refine it around the business you’re actually building.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://www.firstcustomers.app/",
+          "blockId": "bf64c8d06aaf",
+          "quote": "A practical weekly sales plan. Add your time, budget, and traction to refine it around the business you’re actually building."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "text": "Positioning and outreach you can adapt. Clear experiments with concrete actions, assumptions, and decisions to make.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://www.firstcustomers.app/",
+          "blockId": "d8addcb05b2d",
+          "quote": "Positioning and outreach you can adapt. Clear experiments with concrete actions, assumptions, and decisions to make."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No claims of market demand validation or competitor research are made.",
+    "The recommendations are experiments to test, not guaranteed solutions.",
+    "Focus is on early customer acquisition strategy, not general marketing or later-stage sales operations."
+  ]
+}

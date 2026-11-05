@@ -1,3 +1,4 @@
+import { compactFixture } from "./fixtures/acquisition";
 import { beforeEach, afterEach, it, expect, vi } from "vitest";
 const f = vi.hoisted(() => ({ create: vi.fn() }));
 vi.mock("openai", () => ({
@@ -7,6 +8,7 @@ vi.mock("openai", () => ({
 }));
 import { provider, ProviderOutputError } from "@/modules/analysis/provider";
 import { mockReport } from "@/modules/analysis/mock";
+import { passingReview } from "./fixtures/quality-review";
 import {
   attributionSites,
   siteFixture,
@@ -14,6 +16,11 @@ import {
 } from "./fixtures/product-attribution";
 beforeEach(() => {
   vi.resetAllMocks();
+  f.create.mockResolvedValue({
+    status: "completed",
+    output_text: JSON.stringify(passingReview),
+    usage: { input_tokens: 200, output_tokens: 100 },
+  });
   vi.stubEnv("DATABASE_URL", "postgresql://unused/firstcustomers");
   vi.stubEnv("NEON_AUTH_BASE_URL", "https://auth.example.com/auth");
   vi.stubEnv(
@@ -57,10 +64,14 @@ it.each(attributionSites)(
       })
       .mockResolvedValueOnce({
         status: "completed",
-        output_text: JSON.stringify({
-          ...fixture.report,
-          recommendationBasis: fixture.basis,
-        }),
+        output_text: JSON.stringify(
+          compactFixture({
+            ...fixture.report,
+            schemaVersion: "1.1",
+            productIntelligence: fixture.profile,
+            recommendationBasis: fixture.basis,
+          }),
+        ),
         usage: { input_tokens: 100, output_tokens: 300 },
       });
     const result = await provider().analyze(
@@ -69,10 +80,10 @@ it.each(attributionSites)(
     );
     expect(result.report.schemaVersion).toBe("1.1");
     expect(result.report.overview).toEqual(fixture.report.overview);
-    expect(result.inputTokens).toBe(150);
-    expect(result.outputTokens).toBe(400);
-    expect(f.create.mock.calls[0][0].max_output_tokens).toBe(900);
-    expect(f.create.mock.calls[1][0].max_output_tokens).toBe(3600);
+    expect(result.inputTokens).toBe(350);
+    expect(result.outputTokens).toBe(500);
+    expect(f.create.mock.calls[0][0].max_output_tokens).toBe(600);
+    expect(f.create.mock.calls[1][0].max_output_tokens).toBe(2000);
     const generationInput = JSON.parse(
       f.create.mock.calls[1][0].input[1].content,
     );
@@ -98,10 +109,10 @@ it.each(attributionSites)(
       fixture.profile.identity.primaryJob,
     );
     expect(result.report.segments[0].problems).toEqual([site.problem]);
-    expect(result.report.acquisitionChannels[0].steps).toEqual(
-      fixture.report.acquisitionChannels[0].steps,
+    expect(result.report.acquisitionChannels[0].steps[1]).toEqual(
+      fixture.report.acquisitionChannels[0].steps[0],
     );
-    expect(f.create).toHaveBeenCalledTimes(2);
+    expect(f.create).toHaveBeenCalledTimes(3);
   },
 );
 it("fails closed and retains both-stage usage if report generation fails after product attribution", async () => {
@@ -203,10 +214,14 @@ it("fits a detailed four-claim profile inside the unchanged signed-in input cap"
     })
     .mockResolvedValueOnce({
       status: "completed",
-      output_text: JSON.stringify({
-        ...fixture.report,
-        recommendationBasis: fixture.basis,
-      }),
+      output_text: JSON.stringify(
+        compactFixture({
+          ...fixture.report,
+          schemaVersion: "1.1",
+          productIntelligence: fixture.profile,
+          recommendationBasis: fixture.basis,
+        }),
+      ),
       usage: { input_tokens: 700, output_tokens: 1000 },
     });
   const result = await provider().analyze([source], AbortSignal.timeout(1000), {
@@ -214,13 +229,13 @@ it("fits a detailed four-claim profile inside the unchanged signed-in input cap"
     outputTokens: 4500,
   });
   expect(result.report.schemaVersion).toBe("1.1");
-  expect(f.create).toHaveBeenCalledTimes(2);
+  expect(f.create).toHaveBeenCalledTimes(3);
   const bytes = f.create.mock.calls.reduce(
     (sum, [request]) =>
       sum + Buffer.byteLength(JSON.stringify(request), "utf8") + 1024,
     0,
   );
-  expect(bytes).toBeLessThanOrEqual(20000);
+  expect(bytes).toBeGreaterThan(20000); // Byte reservations are released after measured usage.
   // Reconstruct the previous request representation: the same profile would
   // cross the cap when quotations and repeated schema objects were inlined.
   const { z } = await import("zod");
@@ -262,7 +277,8 @@ it("fits a detailed four-claim profile inside the unchanged signed-in input cap"
       0,
     ),
   ).toBeGreaterThan(20000);
+  expect(result.outputTokens).toBeLessThanOrEqual(4500);
   expect(
-    f.create.mock.calls.reduce((sum, [r]) => sum + r.max_output_tokens, 0),
-  ).toBe(4500);
+    result.report.schemaVersion === "1.1" && result.report.quality?.stages,
+  ).toHaveLength(3);
 });

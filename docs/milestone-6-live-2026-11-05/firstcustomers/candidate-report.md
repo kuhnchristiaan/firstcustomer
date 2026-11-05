@@ -1,0 +1,628 @@
+# FirstCustomers: genuine model candidate
+
+**Rejected by the application; never published.** This is a readable copy of the complete recorded candidate, not a manually authored replacement. No repair occurred. Owner quotations describe publisher claims, not independent verification.
+
+## schemaVersion
+
+1.1
+
+## businessName
+
+FirstCustomers
+
+## overview
+
+```json
+{
+  "text": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan.",
+  "confidence": "Verified",
+  "sources": [
+    "https://www.firstcustomers.app/"
+  ]
+}
+```
+
+## offerings
+
+```json
+[
+  {
+    "text": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan.",
+    "confidence": "Verified",
+    "sources": [
+      "https://www.firstcustomers.app/"
+    ]
+  },
+  {
+    "text": "For solo founders and small SaaS teams with a product — and customers to find.",
+    "confidence": "Verified",
+    "sources": [
+      "https://www.firstcustomers.app/"
+    ]
+  },
+  {
+    "text": "Three prioritized customer profiles. Their likely problems, buying motivations, and the trade-offs that make one a better starting point.",
+    "confidence": "Verified",
+    "sources": [
+      "https://www.firstcustomers.app/"
+    ]
+  },
+  {
+    "text": "A practical weekly sales plan. Add your time, budget, and traction to refine it around the business you’re actually building.",
+    "confidence": "Verified",
+    "sources": [
+      "https://www.firstcustomers.app/"
+    ]
+  }
+]
+```
+
+## problems
+
+```json
+[
+  {
+    "text": "Difficulty for solo founders and small SaaS teams in identifying and engaging the right initial customers.",
+    "confidence": "Unknown",
+    "sources": []
+  }
+]
+```
+
+## valueProposition
+
+```json
+{
+  "text": "Delivers a clear, actionable, and adaptable SaaS sales strategy tailored for solo founders and small SaaS teams to find and engage initial customers effectively.",
+  "confidence": "Inferred",
+  "sources": []
+}
+```
+
+## differentiators
+
+```json
+[
+  {
+    "text": "Free and practical, generated directly from your website data to produce actionable results.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  {
+    "text": "Focuses specifically on solo founders and small SaaS teams with existing products yet to gain customers.",
+    "confidence": "Unknown",
+    "sources": []
+  }
+]
+```
+
+## idealCustomers
+
+```json
+[
+  {
+    "text": "Solo founders and small SaaS teams who have a product but face difficulty finding customers.",
+    "confidence": "Unknown",
+    "sources": []
+  },
+  {
+    "text": "Early-stage SaaS companies needing prioritized customer profiles and a structured 30-day sales plan.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  {
+    "text": "Founders seeking a clear, customizable sales strategy based on real-time business constraints (time, budget, traction).",
+    "confidence": "Inferred",
+    "sources": []
+  }
+]
+```
+
+## industries
+
+```json
+[
+  {
+    "text": "SaaS and Customer acquisition tools.",
+    "confidence": "Inferred",
+    "sources": []
+  }
+]
+```
+
+## buyerPersonas
+
+```json
+[
+  {
+    "text": "Solo founder - seeker of early customers, motivated by clear guidance; obstacle is lack of structured strategy; easy access via website usage.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  {
+    "text": "Small SaaS team lead - desires prioritized customer insights; obstacle in deciding where to focus resources, accessible digitally.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  {
+    "text": "Product marketer in a small SaaS company - needs adaptable plans with time/budget tradeoffs; obstacle in internal alignment, reachable through content.",
+    "confidence": "Inferred",
+    "sources": []
+  }
+]
+```
+
+## geographicFocus
+
+```json
+{
+  "text": "No geographic limitation indicated; presumed global SaaS market.",
+  "confidence": "Unknown",
+  "sources": []
+}
+```
+
+## segments
+
+```json
+[
+  {
+    "name": "Solo Founders of Early SaaS Products",
+    "industry": "SaaS",
+    "customerType": "Small Business",
+    "buyerRoles": [
+      "Founder/CEO"
+    ],
+    "problems": [
+      "Difficulty finding initial customers",
+      "Lack of clear sales strategy"
+    ],
+    "motivations": [
+      "Desire actionable sales plans",
+      "Need to prioritize customer profiles"
+    ],
+    "buyingSignals": [
+      "Seeking customer acquisition help",
+      "Using website-based solutions"
+    ],
+    "priority": 1,
+    "evidence": {
+      "text": "For solo founders and small SaaS teams with a product — and customers to find.",
+      "confidence": "Verified",
+      "sources": [
+        "https://www.firstcustomers.app/"
+      ]
+    }
+  },
+  {
+    "name": "Small SaaS Teams Needing Customer Prioritization",
+    "industry": "SaaS",
+    "customerType": "Small Business",
+    "buyerRoles": [
+      "Team Lead",
+      "Product Manager"
+    ],
+    "problems": [
+      "Uncertainty on target customers",
+      "Resource allocation challenges"
+    ],
+    "motivations": [
+      "Want prioritized profiles",
+      "Structured sales experiments"
+    ],
+    "buyingSignals": [
+      "Interest in customer profiling",
+      "Adoption of practical plans"
+    ],
+    "priority": 2,
+    "evidence": {
+      "text": "Three prioritized customer profiles. Their likely problems, buying motivations, and the trade-offs that make one a better starting point.",
+      "confidence": "Verified",
+      "sources": [
+        "https://www.firstcustomers.app/"
+      ]
+    }
+  },
+  {
+    "name": "Product Marketers in Small SaaS Companies",
+    "industry": "SaaS",
+    "customerType": "Small Business",
+    "buyerRoles": [
+      "Product Marketer"
+    ],
+    "problems": [
+      "Need for adaptable sales plans",
+      "Time and budget constraints"
+    ],
+    "motivations": [
+      "Customized weekly plans",
+      "Integration of traction data into plans"
+    ],
+    "buyingSignals": [
+      "Planning sales campaigns",
+      "Adjusting strategy based on resources"
+    ],
+    "priority": 3,
+    "evidence": {
+      "text": "A practical weekly sales plan. Add your time, budget, and traction to refine it around the business you’re actually building.",
+      "confidence": "Verified",
+      "sources": [
+        "https://www.firstcustomers.app/"
+      ]
+    }
+  }
+]
+```
+
+## buyingSignals
+
+```json
+[
+  {
+    "text": "Website visits from solo founders and small SaaS teams.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  {
+    "text": "Requests for customer profiling or prioritization.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  {
+    "text": "Engagement with adaptable sales plans or 30-day strategy templates.",
+    "confidence": "Inferred",
+    "sources": []
+  }
+]
+```
+
+## missingInformation
+
+```json
+[
+  {
+    "text": "Specific budget, time, and traction metrics for refining the sales plan.",
+    "confidence": "Unknown",
+    "sources": []
+  },
+  {
+    "text": "Market demand validation for the customer profiles and sales experiments.",
+    "confidence": "Unknown",
+    "sources": []
+  }
+]
+```
+
+## positioning
+
+```json
+{
+  "text": "Position FirstCustomers as a free, easy-to-use, website-powered sales strategy tool tailored specifically for solo founders and small SaaS teams seeking early customer acquisition solutions with actionable customer profiles and adaptable plans.",
+  "confidence": "Inferred",
+  "sources": []
+}
+```
+
+## acquisitionChannels
+
+```json
+[
+  {
+    "title": "Website Signup Funnel Experiment",
+    "recommendation": {
+      "text": "Start with website signup funnel to capture solo founders and small SaaS teams actively visiting and trying to find customers.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    "steps": [
+      "Optimize landing page messaging for solo founders.",
+      "Add clear CTA to start generating customer profiles.",
+      "Track signup conversion and time on page."
+    ],
+    "successMetric": "Increase in conversion rate of visitors to registered users."
+  },
+  {
+    "title": "Content Marketing for Customer Profiles",
+    "recommendation": {
+      "text": "If signup funnel underperforms, test content marketing providing insights on customer prioritization to attract small SaaS teams.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    "steps": [
+      "Create blog posts and guides about prioritizing customer profiles.",
+      "Promote via social media channels targeting SaaS professionals.",
+      "Measure content engagement and signup lift."
+    ],
+    "successMetric": "Growth in user signups tied to content engagement."
+  },
+  {
+    "title": "Webinar Series on Adaptive 30-day Plans",
+    "recommendation": {
+      "text": "Upon limited results from prior tests, run webinars focused on building practical weekly sales plans to engage product marketers in small SaaS companies.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    "steps": [
+      "Develop webinar content on adaptive 30-day plans.",
+      "Invite product marketers via email and social media.",
+      "Evaluate attendee feedback and conversion to users."
+    ],
+    "successMetric": "Number of webinar attendees who register use of the tool."
+  }
+]
+```
+
+## outreachTemplates
+
+```json
+[
+  {
+    "channel": "Email",
+    "subject": "Unlock Your SaaS Growth with a Free Custom Sales Strategy",
+    "body": "Hi {{name}},\n\nAre you a solo founder or part of a small SaaS team struggling to find your first customers? FirstCustomers creates free, tailored sales strategies directly from your website data, giving you prioritized customer profiles and a practical 30-day plan.\n\nWould you like a quick walkthrough or access to start? Let me know!\n\nBest,\n{{sender}}",
+    "rationale": {
+      "text": "Targets solo founders and small teams identified as ideal customers, invites engagement with clear value proposition.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  },
+  {
+    "channel": "LinkedIn",
+    "subject": "Get Your SaaS Sales Strategy in 30 Days",
+    "body": "Hello {{name}},\n\nMany small SaaS founders face challenges in early customer acquisition. Our free tool, FirstCustomers, provides you with three prioritized customer profiles and a tailored weekly sales plan based on your own website.\n\nWould you like to explore how this fits your startup? Happy to connect!\n\nCheers,\n{{sender}}",
+    "rationale": {
+      "text": "Engages product marketers and team leads on LinkedIn with relevant content highlighting adaptable plans and customer profiles.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  }
+]
+```
+
+## firstTenPlaybook
+
+```json
+[
+  {
+    "title": "Website Signup Funnel Optimization",
+    "recommendation": {
+      "text": "Focus first on optimizing the website signup funnel to attract solo founders and small SaaS teams, offering them fast value and capturing users.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    "steps": [
+      "Review and refine landing page copy for founder clarity.",
+      "Implement signup tracking and A/B test CTAs.",
+      "Analyze drop-off points and user feedback."
+    ],
+    "successMetric": "Achieve at least 10% increase in signup conversion rates over baseline."
+  },
+  {
+    "title": "Create Prioritized Customer Profile Content",
+    "recommendation": {
+      "text": "If initial signup funnel shows limited gains, produce and distribute content focused on customer profile prioritization for small SaaS teams.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    "steps": [
+      "Develop blog series on customer profiles.",
+      "Promote through SaaS forums and social media.",
+      "Track content engagement and resulting signups."
+    ],
+    "successMetric": "Doubling of signup rates linked to content marketing."
+  },
+  {
+    "title": "Host Live Webinar Workshop",
+    "recommendation": {
+      "text": "If content marketing is moderately successful, host live webinars on adapting 30-day sales plans to engage higher intent users.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    "steps": [
+      "Schedule webinars and invite audience.",
+      "Prepare interactive materials addressing time and budget constraints.",
+      "Measure attendee conversion to user registrations."
+    ],
+    "successMetric": "20% of attendees sign up for the tool after webinars."
+  }
+]
+```
+
+## thirtyDayPlan
+
+```json
+[
+  {
+    "week": 1,
+    "objective": "Optimize website signup funnel for solo founders and small SaaS teams.",
+    "actions": [
+      "Refine landing page messaging.",
+      "Add clear call-to-action for profile generation.",
+      "Set up signup tracking and analytics."
+    ],
+    "successMetric": "Increase signup conversion rate by 10%.",
+    "rationale": {
+      "text": "Start with website funnel as it matches the main product audience and provides measurable, immediate feedback.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  },
+  {
+    "week": 2,
+    "objective": "Analyze week 1 results and prepare content marketing if needed.",
+    "actions": [
+      "Review signup data and user feedback.",
+      "Create blog content on customer profile prioritization.",
+      "Plan social media promotion."
+    ],
+    "successMetric": "Decision to launch content marketing if signup growth <10%.",
+    "rationale": {
+      "text": "Content marketing targets small SaaS teams needing prioritization if initial funnel underperforms.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  },
+  {
+    "week": 3,
+    "objective": "Launch content marketing and promote via social channels.",
+    "actions": [
+      "Publish blog posts.",
+      "Engage SaaS groups on social media.",
+      "Monitor signup impact."
+    ],
+    "successMetric": "Signup rate increase measurable within the week.",
+    "rationale": {
+      "text": "Content serves as alternative approach to attract second priority segment if needed.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  },
+  {
+    "week": 4,
+    "objective": "If content marketing success is limited, organize and host webinar series.",
+    "actions": [
+      "Develop webinar content focused on adaptive 30-day plans.",
+      "Promote event via email and social.",
+      "Host webinars and collect feedback."
+    ],
+    "successMetric": "Achieve 20% conversion of attendees to signups.",
+    "rationale": {
+      "text": "Webinars address third segment of product marketers needing adaptable plans, offering interactive engagement.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  }
+]
+```
+
+## productIntelligence
+
+```json
+{
+  "version": "1.0",
+  "identity": {
+    "name": "FirstCustomers",
+    "summary": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan.",
+    "category": "Customer acquisition",
+    "primaryJob": {
+      "actor": "solo founders and small SaaS teams with a product and customers to find",
+      "problem": "difficulty in identifying and engaging the right initial customers",
+      "outcome": "a clear, actionable, and adaptable sales strategy with customer profiles, experiments, and a practical 30-day plan"
+    },
+    "certainty": "Website-supported",
+    "evidence": [
+      {
+        "sourceUrl": "https://www.firstcustomers.app/",
+        "blockId": "e467de7a2c24",
+        "quote": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan."
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "s1",
+      "text": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://www.firstcustomers.app/",
+          "blockId": "e467de7a2c24",
+          "quote": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "text": "For solo founders and small SaaS teams with a product — and customers to find.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://www.firstcustomers.app/",
+          "blockId": "96b4078aba99",
+          "quote": "For solo founders and small SaaS teams with a product — and customers to find."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "text": "Three prioritized customer profiles. Their likely problems, buying motivations, and the trade-offs that make one a better starting point.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://www.firstcustomers.app/",
+          "blockId": "0ea540525512",
+          "quote": "Three prioritized customer profiles. Their likely problems, buying motivations, and the trade-offs that make one a better starting point."
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "text": "A practical weekly sales plan. Add your time, budget, and traction to refine it around the business you’re actually building.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://www.firstcustomers.app/",
+          "blockId": "bf64c8d06aaf",
+          "quote": "A practical weekly sales plan. Add your time, budget, and traction to refine it around the business you’re actually building."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "The product does not invent or guarantee market demand or real prospect results; recommendations are intended as experiments.",
+    "Effectiveness depends on user input and actual market validation, which the product does not perform."
+  ]
+}
+```
+
+## recommendationBasis
+
+```json
+[
+  {
+    "section": "segments",
+    "statementIds": [
+      "s2",
+      "s3",
+      "s4"
+    ]
+  },
+  {
+    "section": "acquisitionChannels",
+    "statementIds": [
+      "s2",
+      "s3",
+      "s4"
+    ]
+  },
+  {
+    "section": "outreachTemplates",
+    "statementIds": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ]
+  },
+  {
+    "section": "firstTenPlaybook",
+    "statementIds": [
+      "s2",
+      "s3",
+      "s4"
+    ]
+  },
+  {
+    "section": "thirtyDayPlan",
+    "statementIds": [
+      "s2",
+      "s3",
+      "s4"
+    ]
+  }
+]
+```

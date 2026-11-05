@@ -1,0 +1,641 @@
+# Senja — actual generated report
+
+**Rejected; never published.** This copy includes the application's normal immutable product binding. The attempted repair was incomplete and was not applied. Publisher claims are not independent proof.
+
+## schemaVersion
+
+1.1
+
+## businessName
+
+Senja
+
+## overview
+
+```json
+{
+  "text": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+  "confidence": "Verified",
+  "sources": [
+    "https://senja.io/"
+  ]
+}
+```
+
+## offerings
+
+```json
+[
+  {
+    "text": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+    "confidence": "Verified",
+    "sources": [
+      "https://senja.io/"
+    ]
+  },
+  {
+    "text": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials.",
+    "confidence": "Verified",
+    "sources": [
+      "https://senja.io/"
+    ]
+  },
+  {
+    "text": "✓Automate video and text collection",
+    "confidence": "Verified",
+    "sources": [
+      "https://senja.io/"
+    ]
+  },
+  {
+    "text": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share.",
+    "confidence": "Verified",
+    "sources": [
+      "https://senja.io/"
+    ]
+  }
+]
+```
+
+## problems
+
+```json
+[
+  {
+    "text": "Difficulty collecting and utilizing customer testimonials to build trust and increase sales.",
+    "confidence": "Unknown",
+    "sources": []
+  }
+]
+```
+
+## valueProposition
+
+```json
+{
+  "text": "Senja enables users to collect twice as many testimonials easily and have them readily available to boost sales and trust.",
+  "confidence": "Unknown",
+  "sources": []
+}
+```
+
+## differentiators
+
+```json
+[
+  {
+    "text": "Easiest interface to create, customize forms and add intro videos for testimonial collection.",
+    "confidence": "Unknown",
+    "sources": []
+  },
+  {
+    "text": "Automation of both video and text testimonial collection.",
+    "confidence": "Unknown",
+    "sources": []
+  },
+  {
+    "text": "Centralized proof repository to access perfect testimonials for any pitch or marketing asset.",
+    "confidence": "Unknown",
+    "sources": []
+  }
+]
+```
+
+## idealCustomers
+
+```json
+[
+  {
+    "text": "Marketers, business owners, and sales teams who rely on social proof for customer acquisition.",
+    "confidence": "Unknown",
+    "sources": []
+  },
+  {
+    "text": "Marketers managing content marketing efforts to build trust and increase conversions.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  {
+    "text": "Sales team leaders seeking efficient testimonial collection to support sales pitches.",
+    "confidence": "Inferred",
+    "sources": []
+  }
+]
+```
+
+## industries
+
+```json
+[
+  {
+    "text": "SaaS companies focused on customer acquisition.",
+    "confidence": "Inferred",
+    "sources": []
+  }
+]
+```
+
+## buyerPersonas
+
+```json
+[
+  {
+    "text": "Marketing Manager concerned with streamlining testimonial management.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  {
+    "text": "Sales Director looking to enhance pitch effectiveness with social proof.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  {
+    "text": "Small Business Owner wanting simplified testimonial collection.",
+    "confidence": "Inferred",
+    "sources": []
+  }
+]
+```
+
+## geographicFocus
+
+```json
+{
+  "text": "Not specified — potentially global via website delivery.",
+  "confidence": "Unknown",
+  "sources": []
+}
+```
+
+## segments
+
+```json
+[
+  {
+    "name": "Marketing Managers",
+    "industry": "SaaS",
+    "customerType": "Mid-market",
+    "buyerRoles": [
+      "Marketing Manager"
+    ],
+    "problems": [
+      "Difficulty collecting and showcasing testimonials efficiently."
+    ],
+    "motivations": [
+      "Drive conversion through trust signals."
+    ],
+    "buyingSignals": [
+      "Interest in testimonial management tools."
+    ],
+    "priority": 1,
+    "evidence": {
+      "text": "Primary actor stated as marketers; form customization and automation features suit marketing teams.",
+      "confidence": "Unknown",
+      "sources": []
+    }
+  },
+  {
+    "name": "Sales Teams",
+    "industry": "SaaS",
+    "customerType": "Mid-market",
+    "buyerRoles": [
+      "Sales Manager",
+      "Sales Rep"
+    ],
+    "problems": [
+      "Lack of centralized testimonial resources for pitching."
+    ],
+    "motivations": [
+      "Quick access to proof to close deals."
+    ],
+    "buyingSignals": [
+      "Need for testimonial storage and sharing."
+    ],
+    "priority": 2,
+    "evidence": {
+      "text": "Claims about a perfect testimonial store for team sharing applies to sales teams.",
+      "confidence": "Unknown",
+      "sources": []
+    }
+  },
+  {
+    "name": "Small Business Owners",
+    "industry": "Various",
+    "customerType": "Small Business",
+    "buyerRoles": [
+      "Owner"
+    ],
+    "problems": [
+      "Time constraints collecting testimonials."
+    ],
+    "motivations": [
+      "Simple setup and quick testimonial gathering."
+    ],
+    "buyingSignals": [
+      "Looking for easy-to-use, free-start testimonial tools."
+    ],
+    "priority": 3,
+    "evidence": {
+      "text": "The product is easy and free to start, fitting small business needs.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  }
+]
+```
+
+## buyingSignals
+
+```json
+[
+  {
+    "text": "Interest expressed through trial sign-ups and website engagement.",
+    "confidence": "Unknown",
+    "sources": []
+  }
+]
+```
+
+## missingInformation
+
+```json
+[
+  {
+    "text": "Detailed user personas and pain point validation.",
+    "confidence": "Unknown",
+    "sources": []
+  }
+]
+```
+
+## positioning
+
+```json
+{
+  "text": "Position Senja as 'The easiest way to collect and manage testimonials with no cost barrier for trial and strong automation features for marketers and sales teams.'",
+  "confidence": "Inferred",
+  "sources": []
+}
+```
+
+## acquisitionChannels
+
+```json
+[
+  {
+    "title": "LinkedIn outreach",
+    "recommendation": {
+      "text": "LinkedIn outreach targets marketing and sales professionals effectively for SaaS testimonial tools with readily identifiable job roles.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    "steps": [
+      "Identify marketing managers and sales team leaders on LinkedIn.",
+      "Send personalized connection requests.",
+      "Follow-up with value-focused messages about testimonial automation and ease.",
+      "Invite to trial Senja for free testimonial collection."
+    ],
+    "successMetric": "At least 3 positive responses from 10 outreach attempts."
+  },
+  {
+    "title": "Content marketing",
+    "recommendation": {
+      "text": "Content marketing can educate prospects on the value of testimonials and attract inbound interest over time.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    "steps": [
+      "Publish blog posts about testimonial importance.",
+      "Share tips on collecting effective testimonials.",
+      "Highlight Senja's ease of use and automation features."
+    ],
+    "successMetric": "Generate 5 trial sign-ups within one month."
+  },
+  {
+    "title": "Email marketing",
+    "recommendation": {
+      "text": "Email marketing engages prospects already familiar with testimonial challenges but requires list building.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    "steps": [
+      "Build or acquire targeted email list of marketers and sales professionals.",
+      "Send segmented campaigns focusing on Senja benefits.",
+      "Track open and conversion rates."
+    ],
+    "successMetric": "Email CTR >5% and trial sign-up."
+  }
+]
+```
+
+## outreachTemplates
+
+```json
+[
+  {
+    "channel": "LinkedIn outreach",
+    "subject": "Boost Your Sales with Twice as Many Testimonials",
+    "body": "Hi {FirstName},\n\nI noticed your work in marketing/sales and wanted to share how Senja helps teams collect twice as many testimonials easily through automated video and text forms. Could we connect to explore how it can help your team?\n\nBest,\n{YourName}",
+    "rationale": {
+      "text": "Personalized LinkedIn outreach suits direct engagement with defined buyer roles.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  },
+  {
+    "channel": "Email marketing",
+    "subject": "Make Your Testimonial Collection Twice as Effective",
+    "body": "Hello {FirstName},\n\nCollecting and sharing testimonials is challenging. Senja's automated system doubles your testimonial collection and centralizes them in one place. Start for free and build customer trust effortlessly.\n\nInterested in a quick call? \n\nRegards,\n{YourName}",
+    "rationale": {
+      "text": "Email nurtures leads interested in testimonial tools; allows call to action.",
+      "confidence": "Unknown",
+      "sources": []
+    }
+  }
+]
+```
+
+## firstTenPlaybook
+
+```json
+[
+  {
+    "title": "LinkedIn outreach",
+    "recommendation": {
+      "text": "LinkedIn outreach to marketing and sales roles enables targeted engagement with decision-makers for testimonial tools.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    "steps": [
+      "Identify 10 Marketing Managers and Sales Managers on LinkedIn.",
+      "Send personalized connection requests at a rate of 2 per day.",
+      "Send value messages explaining Senja benefits.",
+      "Track responses and schedule demos where possible."
+    ],
+    "successMetric": "3 positive replies from 10 contacts."
+  },
+  {
+    "title": "Content marketing",
+    "recommendation": {
+      "text": "Publishing targeted blog content can build inbound interest but requires time before payoff.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    "steps": [
+      "Write 4 blog posts about testimonial best practices and Senja features.",
+      "Publish once per week.",
+      "Promote via social media.",
+      "Measure trial sign-ups."
+    ],
+    "successMetric": "5 new trials in first month."
+  },
+  {
+    "title": "Email marketing",
+    "recommendation": {
+      "text": "Email campaigns engage a warm audience but depend on list quality and deliverability.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    "steps": [
+      "Compile targeted email list.",
+      "Send segmented testimonial tool benefits campaign.",
+      "Measure open and click rates."
+    ],
+    "successMetric": "CTR >5% and trials."
+  }
+]
+```
+
+## thirtyDayPlan
+
+```json
+[
+  {
+    "week": 1,
+    "objective": "Validate interest with LinkedIn outreach to Marketing Managers segment.",
+    "actions": [
+      "Identify 10 marketing managers on LinkedIn.",
+      "Send 2 personalized connection requests.",
+      "Send value messages about Senja's automation and ease.",
+      "Track responses."
+    ],
+    "successMetric": "3 positive responses from 10 contacts.",
+    "rationale": {
+      "text": "LinkedIn outreach efficiently targets accessible decision-makers in Marketing.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  },
+  {
+    "week": 2,
+    "objective": "Expand outreach to Sales Teams using LinkedIn if Marketing test positive.",
+    "actions": [
+      "Identify 10 sales managers on LinkedIn.",
+      "Send personalized connection requests.",
+      "Message about centralized testimonial sharing benefits.",
+      "Track responses."
+    ],
+    "successMetric": "2 positive responses from 10 contacts.",
+    "rationale": {
+      "text": "Sales Teams also benefit from Senja’s testimonial centralization; expand if Marketing interest confirmed.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  },
+  {
+    "week": 3,
+    "objective": "Initiate Content Marketing to educate and attract inbound interest.",
+    "actions": [
+      "Publish blog post on testimonial best practices.",
+      "Share on social media.",
+      "Measure trial sign-ups."
+    ],
+    "successMetric": "At least 1 trial sign-up generated.",
+    "rationale": {
+      "text": "Content supports inbound lead generation after positive outreach signals.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  },
+  {
+    "week": 4,
+    "objective": "Review results and decide on next phase of acquisition or refinement.",
+    "actions": [
+      "Analyze outreach and content metrics.",
+      "Plan scaling or pivoting based on evidence."
+    ],
+    "successMetric": "Clear decision based on accumulated data.",
+    "rationale": {
+      "text": "Data-driven approach prevents waste and guides next steps.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  }
+]
+```
+
+## productIntelligence
+
+```json
+{
+  "version": "1.0",
+  "identity": {
+    "name": "Senja",
+    "summary": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+    "category": "Customer acquisition",
+    "primaryJob": {
+      "actor": "Marketers, business owners, and sales teams",
+      "problem": "Difficulty collecting and utilizing customer testimonials to build trust and increase sales",
+      "outcome": "Easily collect, organize, and share testimonials to win customer trust and boost sales"
+    },
+    "certainty": "Website-supported",
+    "evidence": [
+      {
+        "sourceUrl": "https://senja.io/",
+        "blockId": "21e09887a3aa",
+        "quote": "The easiest way to collect testimonials and add them to your website. Get started for free."
+      }
+    ]
+  },
+  "statements": [
+    {
+      "id": "s1",
+      "text": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "21e09887a3aa",
+          "quote": "The easiest way to collect testimonials and add them to your website. Get started for free."
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "text": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "8088337baf9d",
+          "quote": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials."
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "text": "✓Automate video and text collection",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "b8c2fac70e98",
+          "quote": "✓Automate video and text collection"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "text": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "1224993c1e20",
+          "quote": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share."
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "No direct information about pricing models or trial options.",
+    "No detailed description of user roles or permission settings.",
+    "No mention of analytics or reporting capabilities."
+  ]
+}
+```
+
+## recommendationBasis
+
+```json
+[
+  {
+    "section": "segments",
+    "statementIds": [
+      "s1",
+      "s2",
+      "s4"
+    ]
+  },
+  {
+    "section": "acquisitionChannels",
+    "statementIds": [
+      "s1",
+      "s2",
+      "s4"
+    ]
+  },
+  {
+    "section": "outreachTemplates",
+    "statementIds": [
+      "s1",
+      "s2"
+    ]
+  },
+  {
+    "section": "firstTenPlaybook",
+    "statementIds": [
+      "s1",
+      "s2",
+      "s4"
+    ]
+  },
+  {
+    "section": "thirtyDayPlan",
+    "statementIds": [
+      "s1",
+      "s2",
+      "s4"
+    ]
+  }
+]
+```
+
+## firstExperiment
+
+```json
+{
+  "segment": "Marketing Managers",
+  "problem": "Difficulty collecting and showcasing testimonials efficiently.",
+  "identifyProspects": "Search LinkedIn for Marketing Managers in SaaS companies using filters for titles and industry.",
+  "channel": "LinkedIn outreach",
+  "channelRationale": "LinkedIn allows precise job role targeting and direct messaging to marketing professionals likely to need testimonial solutions.",
+  "firstAction": "Send 2 personalized LinkedIn connection requests to identified Marketing Managers.",
+  "activityTarget": {
+    "quantity": 2,
+    "activity": "LinkedIn connection requests"
+  },
+  "resources": {
+    "assumedMinutes": 90,
+    "tools": [
+      "LinkedIn free account",
+      "Google Sheets for tracking"
+    ],
+    "directSpend": 0,
+    "assumptions": "Time available to send and personalize messages; basic LinkedIn usage."
+  },
+  "commercialLearning": "Number of positive replies indicating interest or willingness to trial Senja.",
+  "continueWhen": "3 positive responses from 10 connection attempts (pro-rated from initial 2).",
+  "adjustWhen": "Fewer than 1 positive reply from 5 attempts suggests poor product-market fit or messaging needing revision.",
+  "stopWhen": "No positive replies from 10 attempts indicates need to pivot channel or segment.",
+  "strongestAlternative": {
+    "channel": "Content marketing",
+    "whyNotSelected": "Content takes longer to generate leads and requires content creation resources; less direct for initial validation.",
+    "preferWhen": "After initial product-market fit is validated and a repository of educational content is prepared."
+  }
+}
+```

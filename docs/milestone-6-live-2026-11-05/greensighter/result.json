@@ -1,0 +1,147 @@
+{
+  "url": "https://ai.greensighter.com/",
+  "startedAt": "2026-11-05T06:25:38.598Z",
+  "completedAt": "2026-11-05T06:26:03.874Z",
+  "elapsedMs": 25268,
+  "crawlMs": 4408,
+  "model": "gpt-4.1-mini",
+  "limits": {
+    "inputTokens": 20000,
+    "outputTokens": 8000
+  },
+  "analysisAttempts": 1,
+  "pages": 1,
+  "analysisSucceeded": false,
+  "finalAccepted": false,
+  "firstCandidateAvailable": true,
+  "repairAttempted": false,
+  "firstCandidatePassed": false,
+  "reviews": [],
+  "candidateDiagnostics": {
+    "first": {
+      "deterministic": [
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.0.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.2.successMetric"
+        }
+      ],
+      "claimSectionsChangedBySanitiser": [
+        "differentiators",
+        "segments",
+        "acquisitionChannels",
+        "firstTenPlaybook",
+        "thirtyDayPlan"
+      ]
+    },
+    "final": {
+      "deterministic": [
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.0.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.2.successMetric"
+        }
+      ],
+      "claimSectionsChangedBySanitiser": [
+        "differentiators",
+        "segments",
+        "acquisitionChannels",
+        "firstTenPlaybook",
+        "thirtyDayPlan"
+      ]
+    }
+  },
+  "failure": {
+    "name": "Error",
+    "status": null,
+    "code": null,
+    "reason": "quality_failed",
+    "providerUsage": {
+      "inputTokens": 3229,
+      "outputTokens": 2966,
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "inputTokens": 1758,
+          "outputTokens": 445
+        },
+        {
+          "stage": "business_intelligence",
+          "inputTokens": 1471,
+          "outputTokens": 2521
+        }
+      ]
+    }
+  },
+  "usage": {
+    "inputTokens": 3229,
+    "outputTokens": 2966,
+    "cachedInputTokens": 0,
+    "estimatedCostUsd": 0.0060372,
+    "uncachedCostUsd": 0.0060372
+  },
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "startedAt": "2026-11-05T06:25:43.010Z",
+      "requestBytes": 8351,
+      "maxOutputTokens": 1200,
+      "elapsedMs": 4587,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_078f0e74ed0063f6006aec216905e087d2b43c08c7264c3195",
+      "inputTokens": 1758,
+      "outputTokens": 445,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0014152000000000001,
+      "uncachedCostUsd": 0.0014152000000000001,
+      "incompleteDetails": null
+    },
+    {
+      "stage": "business_intelligence",
+      "startedAt": "2026-11-05T06:25:47.617Z",
+      "requestBytes": 9065,
+      "maxOutputTokens": 6150,
+      "elapsedMs": 16244,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_02036c23f2e85513006aec216dc15c87d2a07fb7c6e7ddfa30",
+      "inputTokens": 1471,
+      "outputTokens": 2521,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.004622,
+      "uncachedCostUsd": 0.004622,
+      "incompleteDetails": null
+    }
+  ]
+}

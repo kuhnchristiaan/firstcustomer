@@ -1,0 +1,101 @@
+{
+  "url": "https://www.firstcustomers.app/",
+  "startedAt": "2026-11-05T06:26:03.876Z",
+  "completedAt": "2026-11-05T06:26:24.672Z",
+  "elapsedMs": 20791,
+  "crawlMs": 1186,
+  "model": "gpt-4.1-mini",
+  "limits": {
+    "inputTokens": 20000,
+    "outputTokens": 8000
+  },
+  "analysisAttempts": 1,
+  "pages": 1,
+  "analysisSucceeded": false,
+  "finalAccepted": false,
+  "firstCandidateAvailable": true,
+  "repairAttempted": false,
+  "firstCandidatePassed": false,
+  "reviews": [],
+  "candidateDiagnostics": {
+    "first": {
+      "deterministic": [],
+      "claimSectionsChangedBySanitiser": [
+        "outreachTemplates",
+        "firstTenPlaybook",
+        "thirtyDayPlan"
+      ]
+    },
+    "final": {
+      "deterministic": [],
+      "claimSectionsChangedBySanitiser": [
+        "outreachTemplates",
+        "firstTenPlaybook",
+        "thirtyDayPlan"
+      ]
+    }
+  },
+  "failure": {
+    "name": "Error",
+    "status": null,
+    "code": null,
+    "reason": "quality_failed",
+    "providerUsage": {
+      "inputTokens": 3199,
+      "outputTokens": 2862,
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "inputTokens": 1719,
+          "outputTokens": 428
+        },
+        {
+          "stage": "business_intelligence",
+          "inputTokens": 1480,
+          "outputTokens": 2434
+        }
+      ]
+    }
+  },
+  "usage": {
+    "inputTokens": 3199,
+    "outputTokens": 2862,
+    "cachedInputTokens": 0,
+    "estimatedCostUsd": 0.0058588,
+    "uncachedCostUsd": 0.0058588
+  },
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "startedAt": "2026-11-05T06:26:05.065Z",
+      "requestBytes": 8281,
+      "maxOutputTokens": 1200,
+      "elapsedMs": 3733,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_03d4014ef379114d006aec217f060487d2998c38c2b13a89f0",
+      "inputTokens": 1719,
+      "outputTokens": 428,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0013724000000000002,
+      "uncachedCostUsd": 0.0013724000000000002,
+      "incompleteDetails": null
+    },
+    {
+      "stage": "business_intelligence",
+      "startedAt": "2026-11-05T06:26:08.803Z",
+      "requestBytes": 9172,
+      "maxOutputTokens": 6150,
+      "elapsedMs": 15861,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_0b99e17924fa0286006aec2182c09c87d2a7652e1ec6dfc761",
+      "inputTokens": 1480,
+      "outputTokens": 2434,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0044864,
+      "uncachedCostUsd": 0.0044864,
+      "incompleteDetails": null
+    }
+  ]
+}

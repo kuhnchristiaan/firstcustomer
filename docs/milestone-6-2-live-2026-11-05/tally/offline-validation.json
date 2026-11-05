@@ -1,0 +1,113 @@
+{
+  "mode": "Read-only diagnosis of genuine model output; no new calls or modifications to original evidence",
+  "attributionError": null,
+  "distinctBasisSections": [
+    "segments",
+    "acquisitionChannels",
+    "outreachTemplates",
+    "firstTenPlaybook",
+    "thirtyDayPlan"
+  ],
+  "deterministicQualityExecutedLive": true,
+  "diagnosticChecks": [
+    {
+      "section": "acquisitionChannels",
+      "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+    },
+    {
+      "section": "outreachTemplates",
+      "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+    },
+    {
+      "section": "thirtyDayPlan",
+      "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+    }
+  ],
+  "sanitiserDifferences": [
+    {
+      "path": "differentiators.1.text",
+      "original": "Strong emphasis on GDPR compliance and data security.",
+      "sanitised": ""
+    },
+    {
+      "path": "geographicFocus.text",
+      "original": "Europe-centric hosting and GDPR compliance suggest primary focus on EU markets but applicable worldwide.",
+      "sanitised": ""
+    },
+    {
+      "path": "geographicFocus.confidence",
+      "original": "Inferred",
+      "sanitised": "Unknown"
+    },
+    {
+      "path": "segments.2.motivations.1",
+      "original": "Privacy guarantees",
+      "sanitised": ""
+    },
+    {
+      "path": "segments.2.evidence.text",
+      "original": "GDPR compliance and hosted in Europe are key differentiators for compliance officers.",
+      "sanitised": ""
+    },
+    {
+      "path": "segments.2.evidence.confidence",
+      "original": "Inferred",
+      "sanitised": "Unknown"
+    },
+    {
+      "path": "positioning.text",
+      "original": "Position Tally as the easiest, free, professional form builder with superior privacy and smart response tailoring for small businesses and marketers concerned with GDPR compliance.",
+      "sanitised": ""
+    },
+    {
+      "path": "acquisitionChannels.2.title",
+      "original": "Partnerships with GDPR Consultants",
+      "sanitised": ""
+    },
+    {
+      "path": "outreachTemplates.0.body",
+      "original": "Hi [Name],\n\nI noticed your business might benefit from simple, unlimited online forms without coding or costs. Tally offers exactly that with GDPR-compliant security. Could I show you how it works in 10 minutes?\n\nLooking forward to your thoughts,\n[Your Name]",
+      "sanitised": "Hi [Name],\n\nCould I show you how it works in 10 minutes?\nLooking forward to your thoughts,\n[Your Name]"
+    },
+    {
+      "path": "outreachTemplates.2.subject",
+      "original": "Ensure GDPR Compliance with Secure Online Forms",
+      "sanitised": ""
+    },
+    {
+      "path": "outreachTemplates.2.body",
+      "original": "Dear [Name],\n\nTally provides GDPR-compliant, encrypted forms hosted in Europe. I’d love to discuss how this can assist your data privacy efforts.\n\nSincerely,\n[Your Name]",
+      "sanitised": "Dear [Name],\n\nI’d love to discuss how this can assist your data privacy efforts.\nSincerely,\n[Your Name]"
+    },
+    {
+      "path": "outreachTemplates.2.rationale.text",
+      "original": "Addresses compliance officers’ concerns regarding secure data handling and GDPR.",
+      "sanitised": ""
+    },
+    {
+      "path": "firstTenPlaybook.2.title",
+      "original": "GDPR Consultant Referral Program",
+      "sanitised": ""
+    },
+    {
+      "path": "firstTenPlaybook.2.recommendation.text",
+      "original": "Reach out to GDPR consultants with proposal for referrals to compliant form solutions.",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.3.objective",
+      "original": "Initiate GDPR consultant partnership outreach if content marketing insufficient.",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.3.rationale.text",
+      "original": "GDPR focus targets compliance-heavy buyers in a niche requiring credibility and trust.",
+      "sanitised": ""
+    }
+  ],
+  "oldFallbackSentenceOccurrences": 0
+}

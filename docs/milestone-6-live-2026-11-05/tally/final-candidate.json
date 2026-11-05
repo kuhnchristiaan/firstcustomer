@@ -1,0 +1,560 @@
+{
+  "schemaVersion": "1.1",
+  "businessName": "Tally",
+  "overview": {
+    "text": "Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions",
+    "confidence": "Verified",
+    "sources": [
+      "https://tally.so/"
+    ]
+  },
+  "offerings": [
+    {
+      "text": "Tally makes it simple for anyone to build free online forms. No need to code — just type your questions like you would in a doc.",
+      "confidence": "Verified",
+      "sources": [
+        "https://tally.so/"
+      ]
+    },
+    {
+      "text": "Unlimited forms and submissions for free",
+      "confidence": "Verified",
+      "sources": [
+        "https://tally.so/"
+      ]
+    },
+    {
+      "text": "Your data privacy and security are our top priorities. We are GDPR compliant and treat your data with care and confidentiality. Tally is hosted in Europe, we don’t use cookie-tracking, and all form data is securely stored, and encrypted both in transit and at rest. Learn more about Tally & GDPR.",
+      "confidence": "Verified",
+      "sources": [
+        "https://tally.so/"
+      ]
+    },
+    {
+      "text": "Conditional logic",
+      "confidence": "Verified",
+      "sources": [
+        "https://tally.so/"
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "text": "Individuals and businesses need to rapidly create professional online forms without requiring coding skills.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Limited form submission limits and privacy concerns on other platforms.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "valueProposition": {
+    "text": "Tally offers free, unlimited, and customizable online form creation with strong emphasis on data privacy, empowering users without coding knowledge.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  "differentiators": [
+    {
+      "text": "Truly unlimited forms and submissions at no cost.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Strong user data privacy and GDPR compliance with European hosting.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Simple, code-free form creation using natural question typing.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Conditional logic features enabling advanced form customization.",
+      "confidence": "Unknown",
+      "sources": []
+    }
+  ],
+  "idealCustomers": [
+    {
+      "text": "Individuals and businesses requiring easy, professional, and privacy-conscious online form creation without developer resources.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Users who need to create multiple forms and collect numerous submissions without platform limits or added costs.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Organizations that prioritize GDPR compliance and data security in their digital interactions.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "industries": [
+    {
+      "text": "General across industries needing online data collection but with an emphasis on privacy sensitive sectors like healthcare, education, and legal.",
+      "confidence": "Unknown",
+      "sources": []
+    }
+  ],
+  "buyerPersonas": [
+    {
+      "text": "Marketing Managers needing lead capture forms without relying on IT resources, valuing ease and brand control.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Small Business Owners seeking cost-effective tools to build customer surveys and feedback forms with unlimited usage.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Data Protection Officers or Compliance Leaders focused on ensuring GDPR-aligned data collection methods.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "geographicFocus": {
+    "text": "European market prioritized due to GDPR compliance and European hosting; usable globally but strongest appeal in privacy-conscious regions.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  "segments": [
+    {
+      "name": "Small & Medium Business Owners",
+      "industry": "Various",
+      "customerType": "SMB",
+      "buyerRoles": [
+        "Owner",
+        "Marketing Manager"
+      ],
+      "problems": [
+        "Need unlimited, easy form creation without coding",
+        "Concerned about form platform costs and limits"
+      ],
+      "motivations": [
+        "Cost savings",
+        "Easy deployment"
+      ],
+      "buyingSignals": [
+        "Seeking no-code tools",
+        "Complaints about form submission limits"
+      ],
+      "priority": 1,
+      "evidence": {
+        "text": "Unlimited forms and submissions for free, no coding required (s1, s2); strong appeal to SMBs for cost and ease (Inferred).",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "name": "Privacy-Conscious Enterprises",
+      "industry": "Healthcare, Legal, Education",
+      "customerType": "Enterprise",
+      "buyerRoles": [
+        "Data Protection Officer",
+        "IT Manager"
+      ],
+      "problems": [
+        "Require GDPR compliance and secure data handling",
+        "Need reliable sensitive data collection"
+      ],
+      "motivations": [
+        "Regulatory compliance",
+        "Data security"
+      ],
+      "buyingSignals": [
+        "Looking for GDPR-compliant SaaS",
+        "Security audits"
+      ],
+      "priority": 2,
+      "evidence": {
+        "text": "GDPR compliance and European hosting with encryption (s3) highly relevant for privacy-sensitive sectors.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "name": "Marketing Teams at Mid-Large Companies",
+      "industry": "Various",
+      "customerType": "Mid-Large",
+      "buyerRoles": [
+        "Marketing Manager",
+        "Product Manager"
+      ],
+      "problems": [
+        "Need sophisticated form logic without IT dependency",
+        "Desire conditional logic to tailor user experience"
+      ],
+      "motivations": [
+        "Increased conversion rates",
+        "Form customization"
+      ],
+      "buyingSignals": [
+        "Searching for conditional logic capabilities",
+        "Looking to optimize lead capture"
+      ],
+      "priority": 3,
+      "evidence": {
+        "text": "Conditional logic feature (s4) appeals to marketing teams looking for advanced forms without coding.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "buyingSignals": [
+    {
+      "text": "Requests for no-code form tools with unlimited submissions.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Interest in GDPR-compliant SaaS solutions with strong security features.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Inquiry about advanced form features such as conditional logic.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "missingInformation": [
+    {
+      "text": "Customer acquisition costs and typical sales cycle length.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Competitive landscape specifics and pricing benchmarks in target markets.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Current traction and user feedback on feature adoption.",
+      "confidence": "Unknown",
+      "sources": []
+    }
+  ],
+  "positioning": {
+    "text": "Position Tally as a free, easy, and secure online form builder targeting SMBs first, leveraging no-code ease and unlimited usage as hooks; then expand by addressing privacy-sensitive enterprises emphasizing GDPR and security; marketing teams seeking advanced features will follow as third priority.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  "acquisitionChannels": [
+    {
+      "title": "Cold Email Outreach to SMB Owners",
+      "recommendation": {
+        "text": "Start with targeted cold email campaigns to small and medium business owners and marketing managers emphasizing ease, unlimited free forms, and no-coding benefits.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Develop targeted email list of SMBs",
+        "Craft messaging highlighting unlimited free forms and simple no-code creation",
+        "Send personalized introductory emails",
+        "Measure open and reply rates"
+      ],
+      "successMetric": "Achieve a reply rate >5% indicating interest for follow-up"
+    },
+    {
+      "title": "Content Marketing Campaign for Privacy-Conscious Enterprises",
+      "recommendation": {
+        "text": "Develop educational blog posts and whitepapers on GDPR compliance and secure data collection to attract privacy-conscious sectors.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Create GDPR-focused content",
+        "Distribute via LinkedIn groups and industry forums",
+        "Capture leads through gated downloads",
+        "Measure download and inquiry volume"
+      ],
+      "successMetric": "Generate at least 50 qualified leads per month"
+    },
+    {
+      "title": "LinkedIn Ads Targeting Marketing Teams",
+      "recommendation": {
+        "text": "Run LinkedIn ads promoting Tally's conditional logic and customization for marketing and product teams.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Create ad creatives focusing on conditional logic",
+        "Target mid to large company marketing and product managers",
+        "Monitor click-through and conversion rates",
+        "Optimize based on performance"
+      ],
+      "successMetric": "CTR above 2% with cost per lead under $15"
+    }
+  ],
+  "outreachTemplates": [
+    {
+      "channel": "Email",
+      "subject": "Boost Your Business with Unlimited, Easy Online Forms at No Cost",
+      "body": "Hi [Name],\n\nAre you tired of limitations on your current form tools? Tally lets you create unlimited professional forms with no coding skills required and collects unlimited submissions—all for free. Would you like to see a quick demo? \n\nBest,\n[Your Name]",
+      "rationale": {
+        "text": "The email highlights Tally's key differentiators appealing to SMB owners who value cost-free and easy-to-use tools.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "channel": "Email",
+      "subject": "Ensure GDPR Compliance in Your Online Forms",
+      "body": "Hello [Name],\n\nIf you're looking for a secure, GDPR-compliant online form solution, Tally offers encrypted forms hosted in Europe without cookie tracking. Let's discuss how Tally fits your compliance needs.\n\nRegards,\n[Your Name]",
+      "rationale": {
+        "text": "Focuses on security and compliance to attract privacy-conscious enterprise buyers.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "channel": "Email",
+      "subject": "Enhance Your Lead Capture with Advanced Form Logic",
+      "body": "Dear [Name],\n\nTally's conditional logic lets you create smarter forms that adapt to your customers, boosting conversion rates without any coding required. Interested in a quick walkthrough?\n\nCheers,\n[Your Name]",
+      "rationale": {
+        "text": "Targets marketing managers interested in form customization and advanced features.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "firstTenPlaybook": [
+    {
+      "title": "Test Cold Email to SMB Owners",
+      "recommendation": {
+        "text": "Send a small batch of cold emails emphasizing free, unlimited, no-code form benefits to validate demand among SMBs.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Build SMB targeted email list of ~50 prospects",
+        "Send personalized emails using template",
+        "Track replies and intents",
+        "Adjust messaging based on feedback"
+      ],
+      "successMetric": "At least 3 positive engagement responses"
+    },
+    {
+      "title": "Test GDPR Content for Privacy-Conscious Leads",
+      "recommendation": {
+        "text": "Publish and share GDPR-focused content to validate demand among privacy-sensitive enterprises.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Publish a GDPR compliance blog post",
+        "Distribute in relevant channels",
+        "Monitor traffic and lead capture",
+        "Survey leads for fit"
+      ],
+      "successMetric": "Minimum 20 lead captures"
+    },
+    {
+      "title": "Test LinkedIn Ads for Marketing Teams",
+      "recommendation": {
+        "text": "Run a small LinkedIn ad campaign focused on conditional logic features to assess interest from marketing professionals.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Develop ad creatives",
+        "Run ads targeting marketing roles",
+        "Monitor CTR and conversions",
+        "Adjust targeting or creatives"
+      ],
+      "successMetric": "CTR >1.5% and 5 leads generated"
+    }
+  ],
+  "thirtyDayPlan": [
+    {
+      "week": 1,
+      "objective": "Prepare and execute initial cold email campaign to SMB owners",
+      "actions": [
+        "Compile SMB email list",
+        "Customize email template",
+        "Send initial 50 emails",
+        "Track open and reply rates"
+      ],
+      "successMetric": "Reply rate ≥5%",
+      "rationale": {
+        "text": "Starting with SMBs leverages strongest product-market fit, simplest prospect identification and highest reversibility for no-spend test.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 2,
+      "objective": "Analyze SMB campaign results and decide next step",
+      "actions": [
+        "Review email engagement metrics",
+        "Qualify interested prospects",
+        "Plan follow-up outreach or pivot"
+      ],
+      "successMetric": "Decision made to continue or pivot based on engagement",
+      "rationale": {
+        "text": "Early evaluation minimizes wasted effort; SMB owners easiest to reach and deliver quickest feedback.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 3,
+      "objective": "Based on SMB results, either scale SMB outreach or test privacy-focused content marketing",
+      "actions": [
+        "If SMBs engaged: increase email send volume or initiate demos",
+        "If SMBs not engaged: create GDPR content and share in forums"
+      ],
+      "successMetric": "Lead volume meets or missed targets to guide scaling or pivot",
+      "rationale": {
+        "text": "Branching maintains resource focus, avoids spreading thin, tests second priority segment if needed.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 4,
+      "objective": "Evaluate second-step performance and plan next acquisition channel",
+      "actions": [
+        "Assess content or scaled SMB outreach success",
+        "Plan LinkedIn ads targeting marketing for conditional logic demo"
+      ],
+      "successMetric": "Clear decision on channel prioritization for next 30 days",
+      "rationale": {
+        "text": "Adds broader segment with conditional logic focus if early steps succeed, ensuring sequential learning and resource efficiency.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "productIntelligence": {
+    "version": "1.0",
+    "identity": {
+      "name": "Tally",
+      "summary": "Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions",
+      "category": "Customer acquisition",
+      "primaryJob": {
+        "actor": "Individuals and businesses",
+        "problem": "Need to create professional, customizable online forms without coding",
+        "outcome": "Ability to quickly build unlimited forms and collect unlimited submissions with data privacy"
+      },
+      "certainty": "Website-supported",
+      "evidence": [
+        {
+          "sourceUrl": "https://tally.so/",
+          "blockId": "e4a93feeb310",
+          "quote": "Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions"
+        }
+      ]
+    },
+    "statements": [
+      {
+        "id": "s1",
+        "text": "Tally makes it simple for anyone to build free online forms. No need to code — just type your questions like you would in a doc.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://tally.so/",
+            "blockId": "65688e7cbb37",
+            "quote": "Tally makes it simple for anyone to build free online forms. No need to code — just type your questions like you would in a doc."
+          }
+        ]
+      },
+      {
+        "id": "s2",
+        "text": "Unlimited forms and submissions for free",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://tally.so/",
+            "blockId": "f810401f6046",
+            "quote": "Unlimited forms and submissions for free"
+          }
+        ]
+      },
+      {
+        "id": "s3",
+        "text": "Your data privacy and security are our top priorities. We are GDPR compliant and treat your data with care and confidentiality. Tally is hosted in Europe, we don’t use cookie-tracking, and all form data is securely stored, and encrypted both in transit and at rest. Learn more about Tally & GDPR.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://tally.so/",
+            "blockId": "dc5fcd7806b1",
+            "quote": "Your data privacy and security are our top priorities. We are GDPR compliant and treat your data with care and confidentiality. Tally is hosted in Europe, we don’t use cookie-tracking, and all form data is securely stored, and encrypted both in transit and at rest. Learn more about Tally & GDPR."
+          }
+        ]
+      },
+      {
+        "id": "s4",
+        "text": "Conditional logic",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://tally.so/",
+            "blockId": "90a4721b5e42",
+            "quote": "Conditional logic"
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "No explicit mention of integrations with third-party software or analytics.",
+      "No detailed description of pricing tiers beyond unlimited free usage within fair usage guidelines.",
+      "No stated support for offline data collection or mobile SDKs.",
+      "No specific security certifications beyond GDPR compliance mentioned."
+    ]
+  },
+  "recommendationBasis": [
+    {
+      "section": "segments",
+      "statementIds": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "section": "acquisitionChannels",
+      "statementIds": [
+        "s1",
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "section": "outreachTemplates",
+      "statementIds": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "section": "firstTenPlaybook",
+      "statementIds": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "section": "thirtyDayPlan",
+      "statementIds": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ]
+    }
+  ]
+}

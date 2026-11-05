@@ -1,0 +1,275 @@
+{
+  "url": "https://www.firstcustomers.app/",
+  "startedAt": "2026-11-05T07:23:21.128Z",
+  "completedAt": "2026-11-05T07:23:49.435Z",
+  "elapsedMs": 28299,
+  "crawlMs": 867,
+  "model": "gpt-4.1-mini",
+  "testedLimits": {
+    "inputTokens": 20000,
+    "outputTokens": 4500
+  },
+  "configuredLimits": {
+    "inputTokens": 20000,
+    "outputTokens": 8000
+  },
+  "matrix": "lower4500",
+  "analysisAttempts": 1,
+  "pages": 1,
+  "analysisSucceeded": false,
+  "finalAccepted": false,
+  "productProfileAvailable": true,
+  "firstCandidateAvailable": true,
+  "firstChecks": {
+    "deterministicIssues": [
+      {
+        "section": "acquisitionChannels",
+        "reason": "No observable success measure: acquisitionChannels.1.successMetric"
+      },
+      {
+        "section": "acquisitionChannels",
+        "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+      },
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "No observable success measure: firstTenPlaybook.0.successMetric"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.1.successMetric"
+      },
+      {
+        "section": "thirtyDayPlan",
+        "reason": "No observable success measure: thirtyDayPlan.1.successMetric"
+      },
+      {
+        "section": "thirtyDayPlan",
+        "reason": "Unsupported numeric outcome benchmark without an observed baseline: thirtyDayPlan.1.successMetric"
+      }
+    ],
+    "claimIssues": [
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      }
+    ]
+  },
+  "finalChecks": {
+    "deterministicIssues": [
+      {
+        "section": "acquisitionChannels",
+        "reason": "No observable success measure: acquisitionChannels.1.successMetric"
+      },
+      {
+        "section": "acquisitionChannels",
+        "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+      },
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "No observable success measure: firstTenPlaybook.0.successMetric"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.1.successMetric"
+      },
+      {
+        "section": "thirtyDayPlan",
+        "reason": "No observable success measure: thirtyDayPlan.1.successMetric"
+      },
+      {
+        "section": "thirtyDayPlan",
+        "reason": "Unsupported numeric outcome benchmark without an observed baseline: thirtyDayPlan.1.successMetric"
+      }
+    ],
+    "claimIssues": [
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      }
+    ]
+  },
+  "repairAttempted": true,
+  "repairSuccessful": false,
+  "semanticReviewExecuted": false,
+  "reviews": [],
+  "failure": {
+    "name": "Error",
+    "status": null,
+    "code": null,
+    "reason": "quality_failed",
+    "qualityFailure": {
+      "code": "quality_repair_invalid",
+      "issues": [
+        {
+          "section": "acquisitionChannels",
+          "reason": "No observable success measure: acquisitionChannels.1.successMetric"
+        },
+        {
+          "section": "acquisitionChannels",
+          "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.0.successMetric"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.1.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.1.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "Unsupported numeric outcome benchmark without an observed baseline: thirtyDayPlan.1.successMetric"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        }
+      ],
+      "repairFeasible": false
+    },
+    "providerUsage": {
+      "inputTokens": 6902,
+      "outputTokens": 3850,
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "inputTokens": 1719,
+          "outputTokens": 432
+        },
+        {
+          "stage": "business_intelligence",
+          "inputTokens": 1932,
+          "outputTokens": 2511
+        },
+        {
+          "stage": "quality_repair",
+          "inputTokens": 3251,
+          "outputTokens": 907
+        }
+      ]
+    }
+  },
+  "reconstruction": null,
+  "usage": {
+    "inputTokens": 6902,
+    "outputTokens": 3850,
+    "cachedInputTokens": 0,
+    "estimatedCostUsd": 0.008920800000000001
+  },
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "requestBytes": 8280,
+      "maxOutputTokens": 900,
+      "startedAt": "2026-11-05T07:23:22.003Z",
+      "conservativeCostReservation": 0.0051616000000000006,
+      "elapsedMs": 4035,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_0b175967ee836f3e006aec2eebe3a087d2911cb2f03ddce7a4",
+      "inputTokens": 1719,
+      "outputTokens": 432,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0013788000000000001,
+      "usage": {
+        "input_tokens": 1719,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 432,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2151
+      },
+      "incompleteDetails": null
+    },
+    {
+      "stage": "business_intelligence",
+      "requestBytes": 12519,
+      "maxOutputTokens": 3418,
+      "startedAt": "2026-11-05T07:23:26.055Z",
+      "conservativeCostReservation": 0.010886,
+      "elapsedMs": 16853,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_03f4ae121b3d3f03006aec2ef028a887d2851329d6f7a796af",
+      "inputTokens": 1932,
+      "outputTokens": 2511,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0047904,
+      "usage": {
+        "input_tokens": 1932,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2511,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4443
+      },
+      "incompleteDetails": null
+    },
+    {
+      "stage": "quality_repair",
+      "requestBytes": 18936,
+      "maxOutputTokens": 907,
+      "startedAt": "2026-11-05T07:23:42.939Z",
+      "conservativeCostReservation": 0.009435200000000001,
+      "elapsedMs": 6486,
+      "status": "incomplete",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_03fe07e3d8a60c1f006aec2f00e4a087d2a0a2c71874433145",
+      "inputTokens": 3251,
+      "outputTokens": 907,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0027516000000000003,
+      "usage": {
+        "input_tokens": 3251,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 907,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4158
+      },
+      "incompleteDetails": {
+        "reason": "max_output_tokens"
+      }
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "url": "https://senja.io/",
+  "startedAt": "2026-11-05T07:22:20.114Z",
+  "completedAt": "2026-11-05T07:22:54.190Z",
+  "elapsedMs": 34045,
+  "crawlMs": 2873,
+  "model": "gpt-4.1-mini",
+  "testedLimits": {
+    "inputTokens": 20000,
+    "outputTokens": 4500
+  },
+  "configuredLimits": {
+    "inputTokens": 20000,
+    "outputTokens": 8000
+  },
+  "matrix": "lower4500",
+  "analysisAttempts": 1,
+  "pages": 1,
+  "analysisSucceeded": false,
+  "finalAccepted": false,
+  "productProfileAvailable": true,
+  "firstCandidateAvailable": true,
+  "firstChecks": {
+    "deterministicIssues": [
+      {
+        "section": "acquisitionChannels",
+        "reason": "Unsupported numeric outcome benchmark without an observed baseline: acquisitionChannels.2.successMetric"
+      },
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.2.successMetric"
+      }
+    ],
+    "claimIssues": [
+      {
+        "section": "valueProposition",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      }
+    ]
+  },
+  "finalChecks": {
+    "deterministicIssues": [
+      {
+        "section": "acquisitionChannels",
+        "reason": "Unsupported numeric outcome benchmark without an observed baseline: acquisitionChannels.2.successMetric"
+      },
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.2.successMetric"
+      }
+    ],
+    "claimIssues": [
+      {
+        "section": "valueProposition",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      }
+    ]
+  },
+  "repairAttempted": true,
+  "repairSuccessful": false,
+  "semanticReviewExecuted": false,
+  "reviews": [],
+  "failure": {
+    "name": "Error",
+    "status": null,
+    "code": null,
+    "reason": "quality_failed",
+    "qualityFailure": {
+      "code": "quality_repair_invalid",
+      "issues": [
+        {
+          "section": "acquisitionChannels",
+          "reason": "Unsupported numeric outcome benchmark without an observed baseline: acquisitionChannels.2.successMetric"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.2.successMetric"
+        },
+        {
+          "section": "valueProposition",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        }
+      ],
+      "repairFeasible": false
+    },
+    "providerUsage": {
+      "inputTokens": 6843,
+      "outputTokens": 3850,
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "inputTokens": 2022,
+          "outputTokens": 381
+        },
+        {
+          "stage": "business_intelligence",
+          "inputTokens": 1907,
+          "outputTokens": 2962
+        },
+        {
+          "stage": "quality_repair",
+          "inputTokens": 2914,
+          "outputTokens": 507
+        }
+      ]
+    }
+  },
+  "reconstruction": null,
+  "usage": {
+    "inputTokens": 6843,
+    "outputTokens": 3850,
+    "cachedInputTokens": 0,
+    "estimatedCostUsd": 0.008897200000000001
+  },
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "requestBytes": 8821,
+      "maxOutputTokens": 900,
+      "startedAt": "2026-11-05T07:22:23.469Z",
+      "conservativeCostReservation": 0.005378,
+      "elapsedMs": 5190,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_0765020667df0a67006aec2eb27ad887d2a835b8528c3f727c",
+      "inputTokens": 2022,
+      "outputTokens": 381,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0014184,
+      "usage": {
+        "input_tokens": 2022,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 381,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2403
+      },
+      "incompleteDetails": null
+    },
+    {
+      "stage": "business_intelligence",
+      "requestBytes": 12337,
+      "maxOutputTokens": 3469,
+      "startedAt": "2026-11-05T07:22:28.690Z",
+      "conservativeCostReservation": 0.010894800000000001,
+      "elapsedMs": 21096,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_05d569c7e29c6db7006aec2eb70f2c87d2a6e4175c04458bdc",
+      "inputTokens": 1907,
+      "outputTokens": 2962,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.005502,
+      "usage": {
+        "input_tokens": 1907,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2962,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4869
+      },
+      "incompleteDetails": null
+    },
+    {
+      "stage": "quality_repair",
+      "requestBytes": 17015,
+      "maxOutputTokens": 507,
+      "startedAt": "2026-11-05T07:22:49.836Z",
+      "conservativeCostReservation": 0.0080268,
+      "elapsedMs": 4321,
+      "status": "incomplete",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_08659b69971136b0006aec2ecbb88487d29d75f2bc157429da",
+      "inputTokens": 2914,
+      "outputTokens": 507,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0019768000000000003,
+      "usage": {
+        "input_tokens": 2914,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 507,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3421
+      },
+      "incompleteDetails": {
+        "reason": "max_output_tokens"
+      }
+    }
+  ]
+}

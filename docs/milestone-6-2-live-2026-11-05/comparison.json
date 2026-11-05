@@ -1,0 +1,924 @@
+{
+  "evaluationDate": "2026-11-05",
+  "timeZone": "Africa/Johannesburg",
+  "configuredModel": "gpt-4.1-mini",
+  "resolvedModel": "gpt-4.1-mini-2025-04-14",
+  "configuredLocalOutputCap": 8000,
+  "testedOutputCap": 4500,
+  "testedInputCap": 20000,
+  "matrixAuthorization": "User explicitly selected all four at the existing 4,500-output default. Per-request limits used; environment files unchanged.",
+  "pricing": {
+    "inputUsdPerMillion": 0.4,
+    "cachedInputUsdPerMillion": 0.1,
+    "outputUsdPerMillion": 1.6,
+    "source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini"
+  },
+  "results": [
+    {
+      "site": "senja",
+      "url": "https://senja.io/",
+      "startedAt": "2026-11-05T07:22:20.114Z",
+      "elapsedMs": 34045,
+      "crawlMs": 2873,
+      "testedLimits": {
+        "inputTokens": 20000,
+        "outputTokens": 4500
+      },
+      "analysisAttempts": 1,
+      "identifiedProduct": "Senja",
+      "productIdentificationCorrect": true,
+      "productAssessmentProvenance": "Independent assistant inspection against actual owner quotations and intended job; not a model quality score",
+      "reportGenerationComplete": true,
+      "initialAttributionValid": true,
+      "deterministicQualityStatus": "failed",
+      "deterministicIssueCountLive": 3,
+      "claimIssueSectionsLive": [
+        {
+          "section": "valueProposition",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        }
+      ],
+      "targetedRepairNeeded": true,
+      "repairNeedProvenance": "Live local checks",
+      "repairAttempts": 1,
+      "repairSuccessful": false,
+      "repairOutputAllowance": 507,
+      "repairStatus": "incomplete",
+      "semanticReviewExecuted": false,
+      "semanticReviewScores": {
+        "productRelevance": null,
+        "segmentDifferentiation": null,
+        "channelSuitability": null,
+        "actionSpecificity": null,
+        "commercialRealism": null,
+        "claimSafety": null,
+        "consistency": null,
+        "repetition": null,
+        "outreachCompleteness": null,
+        "successCriteria": null
+      },
+      "finalAccepted": false,
+      "independentRubric": {
+        "assessor": "Independent assistant inspection of the entire genuine generated report; not the pipeline semantic reviewer and not human market validation",
+        "rubricVersion": "m6.1",
+        "scores": {
+          "productRelevance": 2,
+          "segmentDifferentiation": 1,
+          "channelSuitability": 1,
+          "actionSpecificity": 1,
+          "commercialRealism": 0,
+          "claimSafety": 0,
+          "consistency": 0,
+          "repetition": 1,
+          "outreachCompleteness": 2,
+          "successCriteria": 0
+        },
+        "totalOutOf20": 8,
+        "publishable": false
+      },
+      "failure": {
+        "name": "Error",
+        "status": null,
+        "code": null,
+        "reason": "quality_failed",
+        "qualityFailure": {
+          "code": "quality_repair_invalid",
+          "issues": [
+            {
+              "section": "acquisitionChannels",
+              "reason": "Unsupported numeric outcome benchmark without an observed baseline: acquisitionChannels.2.successMetric"
+            },
+            {
+              "section": "outreachTemplates",
+              "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+            },
+            {
+              "section": "firstTenPlaybook",
+              "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.2.successMetric"
+            },
+            {
+              "section": "valueProposition",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            },
+            {
+              "section": "outreachTemplates",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            }
+          ],
+          "repairFeasible": false
+        },
+        "providerUsage": {
+          "inputTokens": 6843,
+          "outputTokens": 3850,
+          "stages": [
+            {
+              "stage": "attributed_product_profile",
+              "inputTokens": 2022,
+              "outputTokens": 381
+            },
+            {
+              "stage": "business_intelligence",
+              "inputTokens": 1907,
+              "outputTokens": 2962
+            },
+            {
+              "stage": "quality_repair",
+              "inputTokens": 2914,
+              "outputTokens": 507
+            }
+          ]
+        }
+      },
+      "attributionError": null,
+      "usage": {
+        "inputTokens": 6843,
+        "outputTokens": 3850,
+        "cachedInputTokens": 0,
+        "estimatedCostUsd": 0.008897200000000001
+      },
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "requestBytes": 8821,
+          "maxOutputTokens": 900,
+          "startedAt": "2026-11-05T07:22:23.469Z",
+          "conservativeCostReservation": 0.005378,
+          "elapsedMs": 5190,
+          "status": "completed",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_0765020667df0a67006aec2eb27ad887d2a835b8528c3f727c",
+          "inputTokens": 2022,
+          "outputTokens": 381,
+          "cachedInputTokens": 0,
+          "estimatedCostUsd": 0.0014184,
+          "usage": {
+            "input_tokens": 2022,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 381,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 2403
+          },
+          "incompleteDetails": null
+        },
+        {
+          "stage": "business_intelligence",
+          "requestBytes": 12337,
+          "maxOutputTokens": 3469,
+          "startedAt": "2026-11-05T07:22:28.690Z",
+          "conservativeCostReservation": 0.010894800000000001,
+          "elapsedMs": 21096,
+          "status": "completed",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_05d569c7e29c6db7006aec2eb70f2c87d2a6e4175c04458bdc",
+          "inputTokens": 1907,
+          "outputTokens": 2962,
+          "cachedInputTokens": 0,
+          "estimatedCostUsd": 0.005502,
+          "usage": {
+            "input_tokens": 1907,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 2962,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 4869
+          },
+          "incompleteDetails": null
+        },
+        {
+          "stage": "quality_repair",
+          "requestBytes": 17015,
+          "maxOutputTokens": 507,
+          "startedAt": "2026-11-05T07:22:49.836Z",
+          "conservativeCostReservation": 0.0080268,
+          "elapsedMs": 4321,
+          "status": "incomplete",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_08659b69971136b0006aec2ecbb88487d29d75f2bc157429da",
+          "inputTokens": 2914,
+          "outputTokens": 507,
+          "cachedInputTokens": 0,
+          "estimatedCostUsd": 0.0019768000000000003,
+          "usage": {
+            "input_tokens": 2914,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 507,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 3421
+          },
+          "incompleteDetails": {
+            "reason": "max_output_tokens"
+          }
+        }
+      ],
+      "firstSegment": "Marketing Managers",
+      "firstChannel": "LinkedIn outreach",
+      "structuredActivityTarget": {
+        "quantity": 2,
+        "activity": "LinkedIn connection requests"
+      },
+      "completeReport": "senja/generated-report.md",
+      "rawReportJson": "senja/initial-generated.json"
+    },
+    {
+      "site": "greensighter",
+      "url": "https://ai.greensighter.com/",
+      "startedAt": "2026-11-05T07:22:54.213Z",
+      "elapsedMs": 26893,
+      "crawlMs": 4759,
+      "testedLimits": {
+        "inputTokens": 20000,
+        "outputTokens": 4500
+      },
+      "analysisAttempts": 1,
+      "identifiedProduct": "Greensighter AI Designer",
+      "productIdentificationCorrect": true,
+      "productAssessmentProvenance": "Independent assistant inspection against actual owner quotations and intended job; not a model quality score",
+      "reportGenerationComplete": true,
+      "initialAttributionValid": false,
+      "deterministicQualityStatus": "not reached: recommendation attribution rejected first",
+      "deterministicIssueCountLive": null,
+      "claimIssueSectionsLive": null,
+      "targetedRepairNeeded": true,
+      "repairNeedProvenance": "Offline inspection; application stopped before quality/repair gate",
+      "repairAttempts": 0,
+      "repairSuccessful": false,
+      "repairOutputAllowance": null,
+      "repairStatus": "not reached",
+      "semanticReviewExecuted": false,
+      "semanticReviewScores": {
+        "productRelevance": null,
+        "segmentDifferentiation": null,
+        "channelSuitability": null,
+        "actionSpecificity": null,
+        "commercialRealism": null,
+        "claimSafety": null,
+        "consistency": null,
+        "repetition": null,
+        "outreachCompleteness": null,
+        "successCriteria": null
+      },
+      "finalAccepted": false,
+      "independentRubric": {
+        "assessor": "Independent assistant inspection of the entire genuine generated report; not the pipeline semantic reviewer and not human market validation",
+        "rubricVersion": "m6.1",
+        "scores": {
+          "productRelevance": 2,
+          "segmentDifferentiation": 1,
+          "channelSuitability": 1,
+          "actionSpecificity": 2,
+          "commercialRealism": 0,
+          "claimSafety": 0,
+          "consistency": 0,
+          "repetition": 1,
+          "outreachCompleteness": 2,
+          "successCriteria": 0
+        },
+        "totalOutOf20": 9,
+        "publishable": false
+      },
+      "failure": {
+        "name": "Error",
+        "status": null,
+        "code": null,
+        "reason": "invalid_attribution_or_output",
+        "providerUsage": {
+          "inputTokens": 3730,
+          "outputTokens": 3056,
+          "stages": [
+            {
+              "stage": "attributed_product_profile",
+              "inputTokens": 1758,
+              "outputTokens": 479
+            },
+            {
+              "stage": "business_intelligence",
+              "inputTokens": 1972,
+              "outputTokens": 2577
+            }
+          ]
+        }
+      },
+      "attributionError": "Recommendation attribution is incomplete",
+      "usage": {
+        "inputTokens": 3730,
+        "outputTokens": 3056,
+        "cachedInputTokens": 0,
+        "estimatedCostUsd": 0.006381599999999999
+      },
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "requestBytes": 8350,
+          "maxOutputTokens": 900,
+          "startedAt": "2026-11-05T07:22:58.981Z",
+          "conservativeCostReservation": 0.0051896,
+          "elapsedMs": 4816,
+          "status": "completed",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_022d05a9dd6db7d0006aec2ed5257087d2b45591d596ba24af",
+          "inputTokens": 1758,
+          "outputTokens": 479,
+          "cachedInputTokens": 0,
+          "estimatedCostUsd": 0.0014696000000000002,
+          "usage": {
+            "input_tokens": 1758,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 479,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 2237
+          },
+          "incompleteDetails": null
+        },
+        {
+          "stage": "business_intelligence",
+          "requestBytes": 12551,
+          "maxOutputTokens": 3371,
+          "startedAt": "2026-11-05T07:23:03.810Z",
+          "conservativeCostReservation": 0.010823600000000001,
+          "elapsedMs": 17294,
+          "status": "completed",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_0638350c8e7f9c16006aec2ed9b53087d2a6822412d3bf7ece",
+          "inputTokens": 1972,
+          "outputTokens": 2577,
+          "cachedInputTokens": 0,
+          "estimatedCostUsd": 0.004912,
+          "usage": {
+            "input_tokens": 1972,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 2577,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 4549
+          },
+          "incompleteDetails": null
+        }
+      ],
+      "firstSegment": "Product teams using Jira or Linear managing complex app designs",
+      "firstChannel": "Email outreach to UX/UI and product leaders in target industries",
+      "structuredActivityTarget": {
+        "quantity": 5,
+        "activity": "Send personalized outreach emails"
+      },
+      "completeReport": "greensighter/generated-report.md",
+      "rawReportJson": "greensighter/initial-generated.json"
+    },
+    {
+      "site": "firstcustomers",
+      "url": "https://www.firstcustomers.app/",
+      "startedAt": "2026-11-05T07:23:21.128Z",
+      "elapsedMs": 28299,
+      "crawlMs": 867,
+      "testedLimits": {
+        "inputTokens": 20000,
+        "outputTokens": 4500
+      },
+      "analysisAttempts": 1,
+      "identifiedProduct": "FirstCustomers",
+      "productIdentificationCorrect": true,
+      "productAssessmentProvenance": "Independent assistant inspection against actual owner quotations and intended job; not a model quality score",
+      "reportGenerationComplete": true,
+      "initialAttributionValid": true,
+      "deterministicQualityStatus": "failed",
+      "deterministicIssueCountLive": 8,
+      "claimIssueSectionsLive": [
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        }
+      ],
+      "targetedRepairNeeded": true,
+      "repairNeedProvenance": "Live local checks",
+      "repairAttempts": 1,
+      "repairSuccessful": false,
+      "repairOutputAllowance": 907,
+      "repairStatus": "incomplete",
+      "semanticReviewExecuted": false,
+      "semanticReviewScores": {
+        "productRelevance": null,
+        "segmentDifferentiation": null,
+        "channelSuitability": null,
+        "actionSpecificity": null,
+        "commercialRealism": null,
+        "claimSafety": null,
+        "consistency": null,
+        "repetition": null,
+        "outreachCompleteness": null,
+        "successCriteria": null
+      },
+      "finalAccepted": false,
+      "independentRubric": {
+        "assessor": "Independent assistant inspection of the entire genuine generated report; not the pipeline semantic reviewer and not human market validation",
+        "rubricVersion": "m6.1",
+        "scores": {
+          "productRelevance": 2,
+          "segmentDifferentiation": 1,
+          "channelSuitability": 1,
+          "actionSpecificity": 2,
+          "commercialRealism": 0,
+          "claimSafety": 1,
+          "consistency": 0,
+          "repetition": 1,
+          "outreachCompleteness": 2,
+          "successCriteria": 0
+        },
+        "totalOutOf20": 10,
+        "publishable": false
+      },
+      "failure": {
+        "name": "Error",
+        "status": null,
+        "code": null,
+        "reason": "quality_failed",
+        "qualityFailure": {
+          "code": "quality_repair_invalid",
+          "issues": [
+            {
+              "section": "acquisitionChannels",
+              "reason": "No observable success measure: acquisitionChannels.1.successMetric"
+            },
+            {
+              "section": "acquisitionChannels",
+              "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+            },
+            {
+              "section": "outreachTemplates",
+              "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+            },
+            {
+              "section": "firstTenPlaybook",
+              "reason": "No observable success measure: firstTenPlaybook.0.successMetric"
+            },
+            {
+              "section": "firstTenPlaybook",
+              "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+            },
+            {
+              "section": "firstTenPlaybook",
+              "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.1.successMetric"
+            },
+            {
+              "section": "thirtyDayPlan",
+              "reason": "No observable success measure: thirtyDayPlan.1.successMetric"
+            },
+            {
+              "section": "thirtyDayPlan",
+              "reason": "Unsupported numeric outcome benchmark without an observed baseline: thirtyDayPlan.1.successMetric"
+            },
+            {
+              "section": "outreachTemplates",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            }
+          ],
+          "repairFeasible": false
+        },
+        "providerUsage": {
+          "inputTokens": 6902,
+          "outputTokens": 3850,
+          "stages": [
+            {
+              "stage": "attributed_product_profile",
+              "inputTokens": 1719,
+              "outputTokens": 432
+            },
+            {
+              "stage": "business_intelligence",
+              "inputTokens": 1932,
+              "outputTokens": 2511
+            },
+            {
+              "stage": "quality_repair",
+              "inputTokens": 3251,
+              "outputTokens": 907
+            }
+          ]
+        }
+      },
+      "attributionError": null,
+      "usage": {
+        "inputTokens": 6902,
+        "outputTokens": 3850,
+        "cachedInputTokens": 0,
+        "estimatedCostUsd": 0.008920800000000001
+      },
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "requestBytes": 8280,
+          "maxOutputTokens": 900,
+          "startedAt": "2026-11-05T07:23:22.003Z",
+          "conservativeCostReservation": 0.0051616000000000006,
+          "elapsedMs": 4035,
+          "status": "completed",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_0b175967ee836f3e006aec2eebe3a087d2911cb2f03ddce7a4",
+          "inputTokens": 1719,
+          "outputTokens": 432,
+          "cachedInputTokens": 0,
+          "estimatedCostUsd": 0.0013788000000000001,
+          "usage": {
+            "input_tokens": 1719,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 432,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 2151
+          },
+          "incompleteDetails": null
+        },
+        {
+          "stage": "business_intelligence",
+          "requestBytes": 12519,
+          "maxOutputTokens": 3418,
+          "startedAt": "2026-11-05T07:23:26.055Z",
+          "conservativeCostReservation": 0.010886,
+          "elapsedMs": 16853,
+          "status": "completed",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_03f4ae121b3d3f03006aec2ef028a887d2851329d6f7a796af",
+          "inputTokens": 1932,
+          "outputTokens": 2511,
+          "cachedInputTokens": 0,
+          "estimatedCostUsd": 0.0047904,
+          "usage": {
+            "input_tokens": 1932,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 2511,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 4443
+          },
+          "incompleteDetails": null
+        },
+        {
+          "stage": "quality_repair",
+          "requestBytes": 18936,
+          "maxOutputTokens": 907,
+          "startedAt": "2026-11-05T07:23:42.939Z",
+          "conservativeCostReservation": 0.009435200000000001,
+          "elapsedMs": 6486,
+          "status": "incomplete",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_03fe07e3d8a60c1f006aec2f00e4a087d2a0a2c71874433145",
+          "inputTokens": 3251,
+          "outputTokens": 907,
+          "cachedInputTokens": 0,
+          "estimatedCostUsd": 0.0027516000000000003,
+          "usage": {
+            "input_tokens": 3251,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 907,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 4158
+          },
+          "incompleteDetails": {
+            "reason": "max_output_tokens"
+          }
+        }
+      ],
+      "firstSegment": "Segment 1: Solo Founders with Pre-Launch SaaS",
+      "firstChannel": "LinkedIn Outreach",
+      "structuredActivityTarget": {
+        "quantity": 10,
+        "activity": "LinkedIn connection requests"
+      },
+      "completeReport": "firstcustomers/generated-report.md",
+      "rawReportJson": "firstcustomers/initial-generated.json"
+    },
+    {
+      "site": "tally",
+      "url": "https://tally.so/",
+      "startedAt": "2026-11-05T07:23:49.452Z",
+      "elapsedMs": 31948,
+      "crawlMs": 4680,
+      "testedLimits": {
+        "inputTokens": 20000,
+        "outputTokens": 4500
+      },
+      "analysisAttempts": 1,
+      "identifiedProduct": "Tally",
+      "productIdentificationCorrect": true,
+      "productAssessmentProvenance": "Independent assistant inspection against actual owner quotations and intended job; not a model quality score",
+      "reportGenerationComplete": true,
+      "initialAttributionValid": true,
+      "deterministicQualityStatus": "failed",
+      "deterministicIssueCountLive": 4,
+      "claimIssueSectionsLive": [
+        {
+          "section": "differentiators",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "geographicFocus",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "segments",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "positioning",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "acquisitionChannels",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        }
+      ],
+      "targetedRepairNeeded": true,
+      "repairNeedProvenance": "Live local checks",
+      "repairAttempts": 1,
+      "repairSuccessful": false,
+      "repairOutputAllowance": 975,
+      "repairStatus": "incomplete",
+      "semanticReviewExecuted": false,
+      "semanticReviewScores": {
+        "productRelevance": null,
+        "segmentDifferentiation": null,
+        "channelSuitability": null,
+        "actionSpecificity": null,
+        "commercialRealism": null,
+        "claimSafety": null,
+        "consistency": null,
+        "repetition": null,
+        "outreachCompleteness": null,
+        "successCriteria": null
+      },
+      "finalAccepted": false,
+      "independentRubric": {
+        "assessor": "Independent assistant inspection of the entire genuine generated report; not the pipeline semantic reviewer and not human market validation",
+        "rubricVersion": "m6.1",
+        "scores": {
+          "productRelevance": 2,
+          "segmentDifferentiation": 1,
+          "channelSuitability": 0,
+          "actionSpecificity": 1,
+          "commercialRealism": 0,
+          "claimSafety": 0,
+          "consistency": 0,
+          "repetition": 1,
+          "outreachCompleteness": 2,
+          "successCriteria": 0
+        },
+        "totalOutOf20": 7,
+        "publishable": false
+      },
+      "failure": {
+        "name": "Error",
+        "status": null,
+        "code": null,
+        "reason": "quality_failed",
+        "qualityFailure": {
+          "code": "quality_repair_invalid",
+          "issues": [
+            {
+              "section": "acquisitionChannels",
+              "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+            },
+            {
+              "section": "outreachTemplates",
+              "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+            },
+            {
+              "section": "firstTenPlaybook",
+              "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+            },
+            {
+              "section": "thirtyDayPlan",
+              "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+            },
+            {
+              "section": "differentiators",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            },
+            {
+              "section": "geographicFocus",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            },
+            {
+              "section": "segments",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            },
+            {
+              "section": "positioning",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            },
+            {
+              "section": "acquisitionChannels",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            },
+            {
+              "section": "outreachTemplates",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            },
+            {
+              "section": "firstTenPlaybook",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            },
+            {
+              "section": "thirtyDayPlan",
+              "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+            }
+          ],
+          "repairFeasible": false
+        },
+        "providerUsage": {
+          "inputTokens": 7317,
+          "outputTokens": 3850,
+          "stages": [
+            {
+              "stage": "attributed_product_profile",
+              "inputTokens": 1795,
+              "outputTokens": 353
+            },
+            {
+              "stage": "business_intelligence",
+              "inputTokens": 1965,
+              "outputTokens": 2522
+            },
+            {
+              "stage": "quality_repair",
+              "inputTokens": 3557,
+              "outputTokens": 975
+            }
+          ]
+        }
+      },
+      "attributionError": null,
+      "usage": {
+        "inputTokens": 7317,
+        "outputTokens": 3850,
+        "cachedInputTokens": 1664,
+        "estimatedCostUsd": 0.0085876
+      },
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "requestBytes": 8502,
+          "maxOutputTokens": 900,
+          "startedAt": "2026-11-05T07:23:54.150Z",
+          "conservativeCostReservation": 0.0052504,
+          "elapsedMs": 3467,
+          "status": "completed",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_07e3130d3d0a8a0f006aec2f0c1b8487d2acb766b71da2d8b0",
+          "inputTokens": 1795,
+          "outputTokens": 353,
+          "cachedInputTokens": 1664,
+          "estimatedCostUsd": 0.0007836000000000002,
+          "usage": {
+            "input_tokens": 1795,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 1664
+            },
+            "output_tokens": 353,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 2148
+          },
+          "incompleteDetails": null
+        },
+        {
+          "stage": "business_intelligence",
+          "requestBytes": 12668,
+          "maxOutputTokens": 3497,
+          "startedAt": "2026-11-05T07:23:57.627Z",
+          "conservativeCostReservation": 0.011072,
+          "elapsedMs": 16838,
+          "status": "completed",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_0b49e163d3691350006aec2f0f910087d2a053e4fb6b2ff5ba",
+          "inputTokens": 1965,
+          "outputTokens": 2522,
+          "cachedInputTokens": 0,
+          "estimatedCostUsd": 0.0048212,
+          "usage": {
+            "input_tokens": 1965,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 2522,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 4487
+          },
+          "incompleteDetails": null
+        },
+        {
+          "stage": "quality_repair",
+          "requestBytes": 21091,
+          "maxOutputTokens": 975,
+          "startedAt": "2026-11-05T07:24:14.497Z",
+          "conservativeCostReservation": 0.010406,
+          "elapsedMs": 6901,
+          "status": "incomplete",
+          "model": "gpt-4.1-mini-2025-04-14",
+          "responseId": "resp_0910c85467d34e35006aec2f20696487d290743e391e74446c",
+          "inputTokens": 3557,
+          "outputTokens": 975,
+          "cachedInputTokens": 0,
+          "estimatedCostUsd": 0.0029828000000000003,
+          "usage": {
+            "input_tokens": 3557,
+            "input_tokens_details": {
+              "cache_write_tokens": 0,
+              "cached_tokens": 0
+            },
+            "output_tokens": 975,
+            "output_tokens_details": {
+              "reasoning_tokens": 0
+            },
+            "total_tokens": 4532
+          },
+          "incompleteDetails": {
+            "reason": "max_output_tokens"
+          }
+        }
+      ],
+      "firstSegment": "Small Business Owners",
+      "firstChannel": "Direct Email Outreach",
+      "structuredActivityTarget": {
+        "quantity": 5,
+        "activity": "Personalized emails"
+      },
+      "completeReport": "tally/generated-report.md",
+      "rawReportJson": "tally/initial-generated.json"
+    }
+  ],
+  "totals": {
+    "analyses": 4,
+    "completeModelCandidates": 4,
+    "modelCalls": 11,
+    "acceptedReports": 0,
+    "repairAttempts": 3,
+    "successfulRepairs": 0,
+    "semanticReviews": 0,
+    "inputTokens": 24792,
+    "outputTokens": 14606,
+    "cachedInputTokens": 1664,
+    "estimatedCostUsd": 0.0327872,
+    "sumExecutionMs": 121185
+  },
+  "integrity": {
+    "codeUnchanged": true,
+    "environmentFilesUnchanged": true,
+    "thresholdsUnchanged": true,
+    "modelConfigurationUnchanged": true
+  }
+}

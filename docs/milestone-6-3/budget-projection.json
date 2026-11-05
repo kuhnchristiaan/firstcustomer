@@ -1,0 +1,30 @@
+[
+  {
+    "site": "senja",
+    "actualProfileOutput": 381,
+    "actualOldGenerationOutput": 2962,
+    "projectedDecisionTextTokens": 882,
+    "projectionStatus": "Offline size estimate only; preserves old defects, does not add new required reasoning and is not a valid new model result"
+  },
+  {
+    "site": "greensighter",
+    "actualProfileOutput": 479,
+    "actualOldGenerationOutput": 2577,
+    "projectedDecisionTextTokens": 1007,
+    "projectionStatus": "Offline size estimate only; preserves old defects, does not add new required reasoning and is not a valid new model result"
+  },
+  {
+    "site": "firstcustomers",
+    "actualProfileOutput": 432,
+    "actualOldGenerationOutput": 2511,
+    "projectedDecisionTextTokens": 941,
+    "projectionStatus": "Offline size estimate only; preserves old defects, does not add new required reasoning and is not a valid new model result"
+  },
+  {
+    "site": "tally",
+    "actualProfileOutput": 353,
+    "actualOldGenerationOutput": 2522,
+    "projectedDecisionTextTokens": 937,
+    "projectionStatus": "Offline size estimate only; preserves old defects, does not add new required reasoning and is not a valid new model result"
+  }
+]

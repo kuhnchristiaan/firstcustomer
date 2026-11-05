@@ -1,0 +1,311 @@
+{
+  "url": "https://tally.so/",
+  "startedAt": "2026-11-05T07:23:49.452Z",
+  "completedAt": "2026-11-05T07:24:21.424Z",
+  "elapsedMs": 31948,
+  "crawlMs": 4680,
+  "model": "gpt-4.1-mini",
+  "testedLimits": {
+    "inputTokens": 20000,
+    "outputTokens": 4500
+  },
+  "configuredLimits": {
+    "inputTokens": 20000,
+    "outputTokens": 8000
+  },
+  "matrix": "lower4500",
+  "analysisAttempts": 1,
+  "pages": 1,
+  "analysisSucceeded": false,
+  "finalAccepted": false,
+  "productProfileAvailable": true,
+  "firstCandidateAvailable": true,
+  "firstChecks": {
+    "deterministicIssues": [
+      {
+        "section": "acquisitionChannels",
+        "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+      },
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+      },
+      {
+        "section": "thirtyDayPlan",
+        "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+      }
+    ],
+    "claimIssues": [
+      {
+        "section": "differentiators",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "geographicFocus",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "segments",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "positioning",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "acquisitionChannels",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "thirtyDayPlan",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      }
+    ]
+  },
+  "finalChecks": {
+    "deterministicIssues": [
+      {
+        "section": "acquisitionChannels",
+        "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+      },
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+      },
+      {
+        "section": "thirtyDayPlan",
+        "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+      }
+    ],
+    "claimIssues": [
+      {
+        "section": "differentiators",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "geographicFocus",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "segments",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "positioning",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "acquisitionChannels",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "outreachTemplates",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "firstTenPlaybook",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      },
+      {
+        "section": "thirtyDayPlan",
+        "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+      }
+    ]
+  },
+  "repairAttempted": true,
+  "repairSuccessful": false,
+  "semanticReviewExecuted": false,
+  "reviews": [],
+  "failure": {
+    "name": "Error",
+    "status": null,
+    "code": null,
+    "reason": "quality_failed",
+    "qualityFailure": {
+      "code": "quality_repair_invalid",
+      "issues": [
+        {
+          "section": "acquisitionChannels",
+          "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+        },
+        {
+          "section": "differentiators",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "geographicFocus",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "segments",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "positioning",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "acquisitionChannels",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "outreachTemplates",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "Unsupported factual assertion; rewrite this section without losing its intended purpose"
+        }
+      ],
+      "repairFeasible": false
+    },
+    "providerUsage": {
+      "inputTokens": 7317,
+      "outputTokens": 3850,
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "inputTokens": 1795,
+          "outputTokens": 353
+        },
+        {
+          "stage": "business_intelligence",
+          "inputTokens": 1965,
+          "outputTokens": 2522
+        },
+        {
+          "stage": "quality_repair",
+          "inputTokens": 3557,
+          "outputTokens": 975
+        }
+      ]
+    }
+  },
+  "reconstruction": null,
+  "usage": {
+    "inputTokens": 7317,
+    "outputTokens": 3850,
+    "cachedInputTokens": 1664,
+    "estimatedCostUsd": 0.0085876
+  },
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "requestBytes": 8502,
+      "maxOutputTokens": 900,
+      "startedAt": "2026-11-05T07:23:54.150Z",
+      "conservativeCostReservation": 0.0052504,
+      "elapsedMs": 3467,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_07e3130d3d0a8a0f006aec2f0c1b8487d2acb766b71da2d8b0",
+      "inputTokens": 1795,
+      "outputTokens": 353,
+      "cachedInputTokens": 1664,
+      "estimatedCostUsd": 0.0007836000000000002,
+      "usage": {
+        "input_tokens": 1795,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 1664
+        },
+        "output_tokens": 353,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2148
+      },
+      "incompleteDetails": null
+    },
+    {
+      "stage": "business_intelligence",
+      "requestBytes": 12668,
+      "maxOutputTokens": 3497,
+      "startedAt": "2026-11-05T07:23:57.627Z",
+      "conservativeCostReservation": 0.011072,
+      "elapsedMs": 16838,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_0b49e163d3691350006aec2f0f910087d2a053e4fb6b2ff5ba",
+      "inputTokens": 1965,
+      "outputTokens": 2522,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0048212,
+      "usage": {
+        "input_tokens": 1965,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2522,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4487
+      },
+      "incompleteDetails": null
+    },
+    {
+      "stage": "quality_repair",
+      "requestBytes": 21091,
+      "maxOutputTokens": 975,
+      "startedAt": "2026-11-05T07:24:14.497Z",
+      "conservativeCostReservation": 0.010406,
+      "elapsedMs": 6901,
+      "status": "incomplete",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_0910c85467d34e35006aec2f20696487d290743e391e74446c",
+      "inputTokens": 3557,
+      "outputTokens": 975,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0029828000000000003,
+      "usage": {
+        "input_tokens": 3557,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 0
+        },
+        "output_tokens": 975,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4532
+      },
+      "incompleteDetails": {
+        "reason": "max_output_tokens"
+      }
+    }
+  ]
+}

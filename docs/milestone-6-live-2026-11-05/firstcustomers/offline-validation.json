@@ -1,0 +1,53 @@
+{
+  "mode": "offline reconstruction, zero API calls; original artifacts unchanged",
+  "qualityReviewWasCalled": false,
+  "pendingQualityReview": {
+    "requestBytes": 17306,
+    "overheadReservation": 1024,
+    "alreadyBilledInputTokens": 3199,
+    "totalInputReservation": 21529,
+    "inputCap": 20000,
+    "overInputCapBy": 1529,
+    "requestedOutputTokens": 650,
+    "remainingOutputTokens": 5138
+  },
+  "deterministicIssues": [],
+  "sanitiserDifferences": [
+    {
+      "path": "outreachTemplates.1.body",
+      "original": "Hello {{name}},\n\nMany small SaaS founders face challenges in early customer acquisition. Our free tool, FirstCustomers, provides you with three prioritized customer profiles and a tailored weekly sales plan based on your own website.\n\nWould you like to explore how this fits your startup? Happy to connect!\n\nCheers,\n{{sender}}",
+      "sanitised": "Hello {{name}},\n\nMany small SaaS founders face challenges in early customer acquisition.\nWould you like to explore how this fits your startup?\nHappy to connect!\nCheers,\n{{sender}}"
+    },
+    {
+      "path": "firstTenPlaybook.0.successMetric",
+      "original": "Achieve at least 10% increase in signup conversion rates over baseline.",
+      "sanitised": ""
+    },
+    {
+      "path": "firstTenPlaybook.2.successMetric",
+      "original": "20% of attendees sign up for the tool after webinars.",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.0.successMetric",
+      "original": "Increase signup conversion rate by 10%.",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.0.rationale.text",
+      "original": "Start with website funnel as it matches the main product audience and provides measurable, immediate feedback.",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.1.successMetric",
+      "original": "Decision to launch content marketing if signup growth <10%.",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.3.successMetric",
+      "original": "Achieve 20% conversion of attendees to signups.",
+      "sanitised": ""
+    }
+  ],
+  "oldFallbackSentenceOccurrences": 0
+}

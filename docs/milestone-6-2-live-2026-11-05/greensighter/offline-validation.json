@@ -1,0 +1,61 @@
+{
+  "mode": "Read-only diagnosis of genuine model output; no new calls or modifications to original evidence",
+  "attributionError": "Recommendation attribution is incomplete",
+  "distinctBasisSections": [
+    "segments",
+    "acquisitionChannels",
+    "firstTenPlaybook",
+    "thirtyDayPlan"
+  ],
+  "deterministicQualityExecutedLive": false,
+  "diagnosticChecks": [
+    {
+      "section": "acquisitionChannels",
+      "reason": "Unsupported numeric outcome benchmark without an observed baseline: acquisitionChannels.0.successMetric"
+    },
+    {
+      "section": "acquisitionChannels",
+      "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+    },
+    {
+      "section": "outreachTemplates",
+      "reason": "Unsubstantiated prospect observation: outreachTemplates.1.body"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.0.successMetric"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+    },
+    {
+      "section": "thirtyDayPlan",
+      "reason": "Unsupported numeric outcome benchmark without an observed baseline: thirtyDayPlan.0.successMetric"
+    },
+    {
+      "section": "thirtyDayPlan",
+      "reason": "No observable success measure: thirtyDayPlan.2.successMetric"
+    },
+    {
+      "section": "firstExperiment",
+      "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstExperiment.continueWhen"
+    },
+    {
+      "section": "firstExperiment",
+      "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstExperiment.adjustWhen"
+    }
+  ],
+  "sanitiserDifferences": [
+    {
+      "path": "outreachTemplates.1.body",
+      "original": "Hi [Name],\n\nI noticed your team uses Asana for design tasks. Greensighter AI Designer might help speed up your UI/UX delivery with AI designs reviewed by senior designers.\n\nWould you be interested in a brief chat?",
+      "sanitised": "Hi [Name],\n\nGreensighter AI Designer might help speed up your UI/UX delivery with AI designs reviewed by senior designers.\nWould you be interested in a brief chat?"
+    }
+  ],
+  "oldFallbackSentenceOccurrences": 0
+}

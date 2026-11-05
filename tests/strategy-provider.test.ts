@@ -9,6 +9,8 @@ import { refineStrategy } from "@/modules/strategy/provider";
 import { mockReport } from "@/modules/analysis/mock";
 import { mockIntelligence } from "@/modules/strategy/mock-intelligence";
 import { mockStrategy } from "@/modules/strategy/mock";
+import { passingReview } from "./fixtures/quality-review";
+import { writeFileSync } from "node:fs";
 beforeEach(() => {
   vi.resetAllMocks();
   for (const [k, v] of Object.entries({
@@ -42,7 +44,7 @@ function reviewFixture() {
   void effortBreakdown;
   return assessment;
 }
-it("publishes a corrected strategy only after a valid revise verdict and removes unsafe final copy", async () => {
+it("rejects unsupported final copy instead of silently publishing a sanitized summary", async () => {
   const candidate = mockStrategy(mockReport, context);
   const finalStrategy = structuredClone(candidate);
   finalStrategy.executiveSummary = "We reduce admin time by 50%.";
@@ -57,17 +59,23 @@ it("publishes a corrected strategy only after a valid revise verdict and removes
     })
     .mockResolvedValueOnce({
       status: "completed",
-      output_text: JSON.stringify({ assessment, finalStrategy }),
+      output_text: JSON.stringify({
+        assessment,
+        finalStrategy,
+        quality: passingReview,
+      }),
       usage: { input_tokens: 800, output_tokens: 500 },
     });
-  const result = await refineStrategy(mockReport, context, [], null, {
-    input: 40000,
-    output: 8000,
+  await expect(
+    refineStrategy(mockReport, context, [], null, {
+      input: 40000,
+      output: 8000,
+    }),
+  ).rejects.toMatchObject({
+    reason: "critique_failed",
+    inputTokens: 1500,
+    outputTokens: 900,
   });
-  expect(result.strategy.executiveSummary).not.toContain("50%");
-  expect(result.inputTokens).toBe(1500);
-  expect(result.outputTokens).toBe(900);
-  expect(result.strategy.schemaVersion).toBe("3.0");
 });
 it.each(["malformed", "inconsistent"])(
   "rejects %s critique and preserves usage from both calls",
@@ -84,7 +92,11 @@ it.each(["malformed", "inconsistent"])(
         output_text: JSON.stringify(
           kind === "malformed"
             ? {}
-            : { assessment, finalStrategy: mockStrategy(mockReport, context) },
+            : {
+                assessment,
+                finalStrategy: mockStrategy(mockReport, context),
+                quality: passingReview,
+              },
         ),
         usage: { input_tokens: 800, output_tokens: 500 },
       });
@@ -123,7 +135,11 @@ it("uses stored facts, evidence and founder context in bounded structured output
     })
     .mockResolvedValueOnce({
       status: "completed",
-      output_text: JSON.stringify({ assessment, finalStrategy: null }),
+      output_text: JSON.stringify({
+        assessment,
+        finalStrategy: null,
+        quality: passingReview,
+      }),
       usage: { input_tokens: 1200, output_tokens: 700 },
     });
   const original = JSON.stringify(mockReport);
@@ -167,6 +183,35 @@ it("uses stored facts, evidence and founder context in bounded structured output
   expect(calls.create).toHaveBeenCalledTimes(2);
   expect(request.text.format.type).toBe("json_schema");
   expect(JSON.stringify(mockReport)).toBe(original);
+  if (process.env.M6_MEASUREMENTS_DIR) {
+    const requests = calls.create.mock.calls.map(([r]) => ({
+      stage: r.text.format.name,
+      requestBytes: Buffer.byteLength(JSON.stringify(r)),
+      systemBytes: Buffer.byteLength(r.input[0].content),
+      maxOutputTokens: r.max_output_tokens,
+    }));
+    const schema = calls.create.mock.calls[1][0].text.format.schema;
+    const baseline = structuredClone(schema);
+    delete baseline.properties.quality;
+    baseline.required = baseline.required.filter(
+      (k: string) => k !== "quality",
+    );
+    writeFileSync(
+      `${process.env.M6_MEASUREMENTS_DIR}/refinement-requests.json`,
+      JSON.stringify(
+        {
+          mode: "mock-transport; measured UTF-8 bytes; no real model token counts",
+          model: "gpt-4.1-mini",
+          requests,
+          addedQualitySchemaBytes:
+            Buffer.byteLength(JSON.stringify(schema)) -
+            Buffer.byteLength(JSON.stringify(baseline)),
+        },
+        null,
+        2,
+      ),
+    );
+  }
 });
 it("retains a safe diagnostic and usage when total channel effort exceeds the cap", async () => {
   const output = mockStrategy(mockReport, context);
@@ -182,6 +227,7 @@ it("retains a safe diagnostic and usage when total channel effort exceeds the ca
       status: "completed",
       output_text: JSON.stringify({
         assessment: reviewFixture(),
+        quality: passingReview,
         finalStrategy: null,
       }),
       usage: { input_tokens: 100, output_tokens: 200 },
@@ -230,7 +276,7 @@ it("does not make a paid critique call when its combined input bound is exceeded
     usage: { input_tokens: 700, output_tokens: 400 },
   });
   const response = refineStrategy(mockReport, context, [], null, {
-    input: 22000,
+    input: 8000,
     output: 8000,
   });
   await expect(response).rejects.toMatchObject({
@@ -279,6 +325,14 @@ it("uses the same attributed owner profile for candidate and critical review", a
   void effortBreakdown;
   assessment.verdict = "revise";
   assessment.corrections = ["Confirm owner product context."];
+  assessment.claims = candidate.prioritizedSegments.map((s, i) => ({
+    path: `prioritizedSegments.${i}.rationale`,
+    claim: s.rationale,
+    classification: "Website-supported" as const,
+    sourceUrl: f.source.url,
+    quote: f.profile.statements[0].text,
+    founderCapability: null,
+  }));
   calls.create
     .mockResolvedValueOnce({
       status: "completed",
@@ -287,7 +341,11 @@ it("uses the same attributed owner profile for candidate and critical review", a
     })
     .mockResolvedValueOnce({
       status: "completed",
-      output_text: JSON.stringify({ assessment, finalStrategy: candidate }),
+      output_text: JSON.stringify({
+        assessment,
+        finalStrategy: candidate,
+        quality: passingReview,
+      }),
       usage: { input_tokens: 100, output_tokens: 100 },
     });
   await refineStrategy(report, context, profileEvidence(f.profile), null, {

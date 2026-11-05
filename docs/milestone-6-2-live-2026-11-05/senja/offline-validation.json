@@ -1,0 +1,49 @@
+{
+  "mode": "Read-only diagnosis of genuine model output; no new calls or modifications to original evidence",
+  "attributionError": null,
+  "distinctBasisSections": [
+    "segments",
+    "acquisitionChannels",
+    "outreachTemplates",
+    "firstTenPlaybook",
+    "thirtyDayPlan"
+  ],
+  "deterministicQualityExecutedLive": true,
+  "diagnosticChecks": [
+    {
+      "section": "acquisitionChannels",
+      "reason": "Unsupported numeric outcome benchmark without an observed baseline: acquisitionChannels.2.successMetric"
+    },
+    {
+      "section": "outreachTemplates",
+      "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.2.successMetric"
+    }
+  ],
+  "sanitiserDifferences": [
+    {
+      "path": "valueProposition.text",
+      "original": "Senja enables users to collect twice as many testimonials easily and have them readily available to boost sales and trust.",
+      "sanitised": ""
+    },
+    {
+      "path": "outreachTemplates.0.subject",
+      "original": "Boost Your Sales with Twice as Many Testimonials",
+      "sanitised": ""
+    },
+    {
+      "path": "outreachTemplates.0.body",
+      "original": "Hi {FirstName},\n\nI noticed your work in marketing/sales and wanted to share how Senja helps teams collect twice as many testimonials easily through automated video and text forms. Could we connect to explore how it can help your team?\n\nBest,\n{YourName}",
+      "sanitised": "Hi {FirstName},\n\nCould we connect to explore how it can help your team?\nBest,\n{YourName}"
+    },
+    {
+      "path": "outreachTemplates.1.body",
+      "original": "Hello {FirstName},\n\nCollecting and sharing testimonials is challenging. Senja's automated system doubles your testimonial collection and centralizes them in one place. Start for free and build customer trust effortlessly.\n\nInterested in a quick call? \n\nRegards,\n{YourName}",
+      "sanitised": "Hello {FirstName},\n\nCollecting and sharing testimonials is challenging.\nStart for free and build customer trust effortlessly.\nInterested in a quick call?\nRegards,\n{YourName}"
+    }
+  ],
+  "oldFallbackSentenceOccurrences": 0
+}

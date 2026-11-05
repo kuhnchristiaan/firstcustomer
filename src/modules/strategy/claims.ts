@@ -1,3 +1,4 @@
+import { statementKind } from "./claim-semantics";
 import { quotedProductStatements } from "@/modules/intelligence/attribution";
 import type { z } from "zod";
 import type { claimSchema } from "./critique-schema";
@@ -9,91 +10,136 @@ export type ClaimAction = {
   classification: ClaimReview["classification"];
   action: "retained" | "removed";
 };
-const highRisk =
-  /(?:\d\s*%|\bpercent(?:age)?\b|\bhalv(?:e|es|ed|ing)\b|\b\d+(?:x|×)\b|\b(?:saves?|reduces?|cuts?|increases?|improves?)\b.{0,60}(?:\d|half|hours?|days?|costs?|time|revenue)|\b(?:POPIA|GDPR|HIPAA|ISO\s*\d+|compliant|accredited|certified|testimonial|market.lead(?:er|ing)|best.in.class|guarantee[ds]?|risk.free)\b|\b(?:trusted|used) by\b|\bcustomers? (?:say|said|report|achieved|saved)\b|\bindustry.leading\b|\b\d+\s+paying customers\b|\b(?:we|has|have|serves?)\s+\d+\s+(?:paying\s+)?customers\b)/i;
-const comparative =
-  /\b(?:better|faster|cheaper|more secure|superior) than\b|\b(?:bank.grade|military.grade|unhackable|fully secure)\b/i;
-const capability =
-  /\b(?:supports|integrates|provides|offers|automates|enables|helps)\b|\b(?:we|I) (?:support|integrate|provide|offer|automate|enable|help)\b/i;
-const qualified =
-  /^(?:if\b|ask\b|confirm\b|whether\b|unknown\b|unverified\b|do not\b|no (?:evidence|verified|confirmed)\b|test whether\b)/i;
 const normalize = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();
 const missingClaimText =
   "Ask the buyer about their current workflow and validate the relevant product capabilities before making a claim.";
+export type ClaimPolicy = {
+  productName?: string;
+  pathPrefix?: string;
+  /** Only for the semantic-gated path: do not delete ambiguous paraphrases. */
+  deferCapabilities?: boolean;
+  /** Server-supplied independent evidence; never populate from model labels. */
+  independentEvidence?: { url: string; content: string }[];
+};
 export function verifyClaims<T>(
   input: T,
   reviews: ClaimReview[],
   evidence: { url: string; content: string }[],
   context: FounderContext,
   capabilities = true,
+  policy: ClaimPolicy = {},
 ): { value: T; actions: ClaimAction[] } {
   const actions: ClaimAction[] = [];
-  function supported(r: ClaimReview) {
-    if (r.classification === "Website-supported")
-      return Boolean(
-        r.quote &&
-        r.quote.trim().length >= 12 &&
-        evidence.some(
-          (s) =>
-            s.url === r.sourceUrl &&
-            normalize(s.content).includes(normalize(r.quote!)),
-        ),
-      );
+  const productName =
+    policy.productName ??
+    (input && typeof input === "object" && "businessName" in input
+      ? String(input.businessName)
+      : undefined);
+  const quoted = (r: ClaimReview, sources: typeof evidence) =>
+    Boolean(
+      r.quote &&
+      r.quote.trim().length >= 12 &&
+      sources.some(
+        (s) =>
+          s.url === r.sourceUrl &&
+          normalize(s.content).includes(normalize(r.quote!)) &&
+          normalize(r.quote!).includes(normalize(r.claim)),
+      ),
+    );
+  const support = (
+    r: ClaimReview,
+    kind: ReturnType<typeof statementKind>,
+    sentence: string,
+  ) => {
+    if (r.classification === "Independently verified")
+      return quoted(r, policy.independentEvidence ?? []);
     if (r.classification === "Founder-confirmed")
-      return Boolean(
-        r.founderCapability &&
-        context.confirmedCapabilities?.includes(r.founderCapability) &&
-        normalize(r.claim) === normalize(r.founderCapability),
+      return (
+        kind !== "promotional-claim" &&
+        Boolean(
+          r.founderCapability &&
+          context.confirmedCapabilities?.includes(r.founderCapability) &&
+          normalize(r.claim) === normalize(r.founderCapability),
+        )
       );
-    return false; // No independent research is performed in this milestone.
-  }
+    if (r.classification === "Website-supported")
+      return (
+        quoted(r, evidence) &&
+        (kind !== "promotional-claim" ||
+          /\b(?:according to|the (?:website|publisher) (?:says|claims|states)|publisher.claim)\b/i.test(
+            sentence,
+          ))
+      );
+    return (
+      r.classification === "Inferred or hypothetical" &&
+      [
+        "buyer-requirement",
+        "commercial-hypothesis",
+        "recommended-action",
+        "experimental-target",
+      ].includes(kind)
+    );
+  };
   function walk(v: unknown, path: string): unknown {
     if (typeof v === "string") {
       if (
-        path.endsWith("schemaVersion") ||
-        /(?:^|\.)(?:url|sourceUrl|sources\.\d+)$/.test(path)
+        /(?:^|\.)(?:schemaVersion|confidence|url|sourceUrl|sources\.\d+)$/.test(
+          path,
+        )
       )
         return v;
-      const fieldReviews = reviews.filter((r) => r.path === path);
       const sentences = v.split(/(?<=[.!?])\s+|\n/);
       const kept = sentences.filter((sentence) => {
         if (!sentence.trim()) return true;
-        const matches = fieldReviews.filter((r) => sentence.includes(r.claim));
-        const riskText = sentence.replace(
-          /\bno guaranteed (?:conversions|replies|results|sales|outcomes)\b/gi,
-          "",
+        const kind = statementKind(sentence, path, productName);
+        const matches = reviews.filter(
+          (r) => r.path === path && sentence.includes(r.claim),
         );
-        const risky =
-          (highRisk.test(riskText) || comparative.test(riskText)) &&
-          !qualified.test(sentence.trim());
-        const factual =
-          capabilities &&
-          capability.test(sentence) &&
-          !qualified.test(sentence.trim()) &&
-          !/^(?:who|what|which|how|does|can)\b/i.test(sentence.trim());
+        const supported =
+          matches.length > 0 &&
+          matches.every((r) => support(r, kind, sentence));
+        const quotedOwnerText = sentence
+          .replace(
+            /^(?:according to (?:the )?(?:publisher|website)|the (?:publisher|website) (?:says|claims|states)),?\s*/i,
+            "",
+          )
+          .replace(/^["“]|["”]$/g, "");
+        const attributedPublisher =
+          quotedOwnerText !== sentence &&
+          quotedOwnerText.length >= 12 &&
+          evidence.some((s) =>
+            normalize(s.content).includes(normalize(quotedOwnerText)),
+          );
+        const needsCheck =
+          kind === "promotional-claim" ||
+          kind === "prospect-observation" ||
+          (capabilities && kind === "product-capability");
         const allowed =
-          !risky &&
-          (matches.length
-            ? matches.every(
-                (r) =>
-                  supported(r) ||
-                  (r.classification === "Inferred or hypothetical" &&
-                    qualified.test(sentence.trim())),
-              )
-            : !factual);
-        if (risky || factual || matches.length)
+          kind !== "prospect-observation" &&
+          (!needsCheck ||
+            supported ||
+            attributedPublisher ||
+            (kind === "product-capability" &&
+              policy.deferCapabilities === true &&
+              !matches.length));
+        if (needsCheck || matches.length)
           actions.push({
             path,
-            classification: allowed
-              ? (matches.find(supported)?.classification ??
-                "Inferred or hypothetical")
-              : "Unsupported",
+            classification: !allowed
+              ? "Unsupported"
+              : needsCheck
+                ? (matches.find((r) => support(r, kind, sentence))
+                    ?.classification ??
+                  (attributedPublisher
+                    ? "Website-supported"
+                    : "Inferred or hypothetical"))
+                : "Inferred or hypothetical",
             action: allowed ? "retained" : "removed",
           });
         return allowed;
       });
-      if (kept.length === sentences.length) return v;
-      return kept.join("\n").trim() || missingClaimText;
+      // No replacement text and no rewrite of valid sentences.
+      return kept.length === sentences.length ? v : kept.join("\n").trim();
     }
     if (Array.isArray(v))
       return v.map((x, i) => walk(x, path ? `${path}.${i}` : String(i)));
@@ -106,7 +152,7 @@ export function verifyClaims<T>(
       );
     return v;
   }
-  return { value: walk(input, "") as T, actions };
+  return { value: walk(input, policy.pathPrefix ?? "") as T, actions };
 }
 export function safeInitialReport(
   report: Report,
@@ -152,8 +198,9 @@ export function safeInitialReport(
         : claim;
     });
   }
-  const cleanFact = (value: unknown): unknown => {
-    if (Array.isArray(value)) return value.map(cleanFact);
+  const cleanFact = (value: unknown, path: string): unknown => {
+    if (Array.isArray(value))
+      return value.map((v, i) => cleanFact(v, `${path}.${i}`));
     if (value && typeof value === "object") {
       const obj = value as Record<string, unknown>;
       if ("confidence" in obj && typeof obj.text === "string") {
@@ -162,17 +209,26 @@ export function safeInitialReport(
         );
         if (obj.confidence === "Verified" && attributed)
           return { ...obj, ...bind(attributed) };
-        const clean = verifyClaims(obj, [], evidence, {}, false).value;
+        const clean = verifyClaims(obj, [], evidence, {}, false, {
+          productName: report.businessName,
+          pathPrefix: path,
+        }).value;
         return JSON.stringify(clean) !== JSON.stringify(obj)
           ? { ...clean, confidence: "Unknown", sources: [] }
           : clean;
       }
       return Object.fromEntries(
-        Object.entries(obj).map(([key, child]) => [key, cleanFact(child)]),
+        Object.entries(obj).map(([key, child]) => [
+          key,
+          cleanFact(child, `${path}.${key}`),
+        ]),
       );
     }
     return typeof value === "string"
-      ? verifyClaims(value, [], evidence, {}, false).value
+      ? verifyClaims(value, [], evidence, {}, false, {
+          productName: report.businessName,
+          pathPrefix: path,
+        }).value
       : value;
   };
   for (const key of [
@@ -189,7 +245,10 @@ export function safeInitialReport(
     "buyingSignals",
     "missingInformation",
   ] as const) {
-    (next as unknown as Record<string, unknown>)[key] = cleanFact(next[key]);
+    (next as unknown as Record<string, unknown>)[key] = cleanFact(
+      next[key],
+      key,
+    );
   }
   for (const key of [
     "positioning",
@@ -204,6 +263,24 @@ export function safeInitialReport(
       evidence,
       {},
       true,
+      {
+        productName: report.businessName,
+        pathPrefix: key,
+        deferCapabilities: true,
+      },
+    ).value;
+  if (next.schemaVersion === "1.1" && next.firstExperiment)
+    next.firstExperiment = verifyClaims(
+      next.firstExperiment,
+      [],
+      evidence,
+      {},
+      true,
+      {
+        productName: report.businessName,
+        pathPrefix: "firstExperiment",
+        deferCapabilities: true,
+      },
     ).value;
   return next;
 }

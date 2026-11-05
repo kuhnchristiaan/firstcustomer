@@ -1,0 +1,75 @@
+{
+  "mode": "offline reconstruction, zero API calls; original artifacts unchanged",
+  "qualityReviewWasCalled": false,
+  "pendingQualityReview": {
+    "requestBytes": 17092,
+    "overheadReservation": 1024,
+    "alreadyBilledInputTokens": 3481,
+    "totalInputReservation": 21597,
+    "inputCap": 20000,
+    "overInputCapBy": 1597,
+    "requestedOutputTokens": 650,
+    "remainingOutputTokens": 5148
+  },
+  "deterministicIssues": [
+    {
+      "section": "acquisitionChannels",
+      "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+    },
+    {
+      "section": "outreachTemplates",
+      "reason": "Empty field: outreachTemplates.1.subject"
+    },
+    {
+      "section": "outreachTemplates",
+      "reason": "Unsubstantiated prospect observation: outreachTemplates.1.body"
+    },
+    {
+      "section": "thirtyDayPlan",
+      "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+    }
+  ],
+  "sanitiserDifferences": [
+    {
+      "path": "acquisitionChannels.0.successMetric",
+      "original": "At least 10% positive replies or demo requests",
+      "sanitised": ""
+    },
+    {
+      "path": "acquisitionChannels.2.successMetric",
+      "original": "Connect and engage 20% of contacted leads",
+      "sanitised": ""
+    },
+    {
+      "path": "outreachTemplates.1.body",
+      "original": "Hi {{name}},\n\nI noticed your role in sales at a B2B SaaS company. Senja helps sales teams by centralizing customer testimonials for quick access during client pitches. Could we discuss how this might help your team?\n\nBest,\n{{sender}}",
+      "sanitised": "Hi {{name}},\n\nI noticed your role in sales at a B2B SaaS company.\nCould we discuss how this might help your team?\nBest,\n{{sender}}"
+    },
+    {
+      "path": "firstTenPlaybook.0.successMetric",
+      "original": "10% positive response rate or scheduling demos",
+      "sanitised": ""
+    },
+    {
+      "path": "firstTenPlaybook.2.successMetric",
+      "original": "20% connection and engagement rate",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.0.successMetric",
+      "original": "Achieve at least 10% positive reply or demo booking",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.1.rationale.text",
+      "original": "Content marketing supports Marketing Managers segment who seek organized testimonial management (s4)",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.2.successMetric",
+      "original": "20% engagement rate on LinkedIn outreach",
+      "sanitised": ""
+    }
+  ],
+  "oldFallbackSentenceOccurrences": 0
+}

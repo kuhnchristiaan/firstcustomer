@@ -1,6 +1,7 @@
 import { extract } from "@/modules/website/extract";
 import { mockReport } from "@/modules/analysis/mock";
 import type { ProductProfile } from "@/modules/intelligence/product-profile";
+import { experimentFor } from "./experiment";
 export function selectionOf(profile: ProductProfile) {
   const strip = (ref: ProductProfile["identity"]["evidence"][number]) => ({
     blockId: ref.blockId,
@@ -159,13 +160,13 @@ export function siteFixture(site = attributionSites[0]) {
   }));
   report.firstTenPlaybook = report.acquisitionChannels;
   report.positioning = {
-    text: `For ${site.audience}: ${site.summary}`,
+    text: `For ${site.audience}, test whether addressing ${site.problem} warrants a buying conversation.`,
     confidence: "Inferred",
     sources: [],
   };
   report.outreachTemplates = report.outreachTemplates.map((m) => ({
     ...m,
-    body: `How do you currently handle ${site.problem}?`,
+    body: `Hi [name], how do you currently handle ${site.problem}? Would you be open to discussing what makes this difficult and whether it deserves attention?`,
     subject: `Question about ${site.name}`,
     rationale: report.positioning,
   }));
@@ -187,5 +188,11 @@ export function siteFixture(site = attributionSites[0]) {
       "thirtyDayPlan",
     ] as const
   ).map((section) => ({ section, statementIds: ["owner-capability"] }));
-  return { html, source, profile, report, basis };
+  return {
+    html,
+    source,
+    profile,
+    report: { ...report, firstExperiment: experimentFor(report) },
+    basis,
+  };
 }

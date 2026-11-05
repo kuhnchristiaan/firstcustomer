@@ -1,0 +1,269 @@
+[
+  {
+    "url": "https://www.firstcustomers.app/",
+    "title": "FirstCustomers — Your first customers start with a plan",
+    "content": "{\"extractionVersion\":\"2.0\",\"url\":\"https://www.firstcustomers.app/\",\"title\":\"FirstCustomers — Your first customers start with a plan\",\"blocks\":[{\"id\":\"914a210d074a\",\"text\":\"FirstCustomers — Your first customers start with a plan\",\"kind\":\"Owner candidate\",\"context\":\"Website title\"},{\"id\":\"e467de7a2c24\",\"text\":\"A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan.\",\"kind\":\"Owner candidate\",\"context\":\"Website description\"},{\"id\":\"f860335141e8\",\"text\":\"Less guesswork. A better first move.\",\"kind\":\"Owner candidate\",\"context\":\"A strategy you can actually put to work.\"},{\"id\":\"3a1119b09995\",\"text\":\"A strategy you can actually put to work.\",\"kind\":\"Owner candidate\",\"context\":\"A strategy you can actually put to work. / A strategy you can actually put to work.\"},{\"id\":\"d2a4993e0c87\",\"text\":\"Not another list of marketing channels. A starting point, a small experiment, and a reason to keep going — or change course.\",\"kind\":\"Owner candidate\",\"context\":\"A strategy you can actually put to work.\"},{\"id\":\"bf67c19cc605\",\"text\":\"From “who needs this?” to “here’s my next move.”\",\"kind\":\"Owner candidate\",\"context\":\"From “who needs this?” to “here’s my next move.” / From “who needs this?” to “here’s my next move.”\"},{\"id\":\"96b4078aba99\",\"text\":\"For solo founders and small SaaS teams with a product — and customers to find.\",\"kind\":\"Owner candidate\",\"context\":\"From “who needs this?” to “here’s my next move.” / From “who needs this?” to “here’s my next move.”\"},{\"id\":\"46551bbcf73d\",\"text\":\"Find your people.\",\"kind\":\"Owner candidate\",\"context\":\"From “who needs this?” to “here’s my next move.” / Find your people.\"},{\"id\":\"0ea540525512\",\"text\":\"Three prioritized customer profiles. Their likely problems, buying motivations, and the trade-offs that make one a better starting point.\",\"kind\":\"Owner candidate\",\"context\":\"From “who needs this?” to “here’s my next move.” / Find your people.\"},{\"id\":\"4e5afeeb1d8c\",\"text\":\"Start the right conversation.\",\"kind\":\"Owner candidate\",\"context\":\"From “who needs this?” to “here’s my next move.” / Start the right conversation.\"},{\"id\":\"d8addcb05b2d\",\"text\":\"Positioning and outreach you can adapt. Clear experiments with concrete actions, assumptions, and decisions to make.\",\"kind\":\"Owner candidate\",\"context\":\"From “who needs this?” to “here’s my next move.” / Start the right conversation.\"},{\"id\":\"484064e79564\",\"text\":\"Make the next 30 days count.\",\"kind\":\"Owner candidate\",\"context\":\"From “who needs this?” to “here’s my next move.” / Make the next 30 days count.\"},{\"id\":\"bf64c8d06aaf\",\"text\":\"A practical weekly sales plan. Add your time, budget, and traction to refine it around the business you’re actually building.\",\"kind\":\"Owner candidate\",\"context\":\"From “who needs this?” to “here’s my next move.” / Make the next 30 days count.\"},{\"id\":\"f2f90618b88c\",\"text\":\"Useful advice starts with honesty.\",\"kind\":\"Owner candidate\",\"context\":\"Evidence where we have it. Questions where we don’t.\"},{\"id\":\"657323ce6fad\",\"text\":\"Evidence where we have it. Questions where we don’t.\",\"kind\":\"Owner candidate\",\"context\":\"Evidence where we have it. Questions where we don’t. / Evidence where we have it. Questions where we don’t.\"},{\"id\":\"9afab8909aaf\",\"text\":\"Your website tells part of the story. Your context makes it sharper. FirstCustomers keeps website-supported information, founder answers, hypotheses, and unknowns distinct.\",\"kind\":\"Owner candidate\",\"context\":\"Evidence where we have it. Questions where we don’t.\"},{\"id\":\"0c6106585563\",\"text\":\"Recommendations are experiments to test. We don’t invent market demand, customer results, competitor research, or real prospects.\",\"kind\":\"Owner candidate\",\"context\":\"Evidence where we have it. Questions where we don’t.\"},{\"id\":\"2ceeb467d32c\",\"text\":\"You built your SaaS. Now find your first customers.\",\"kind\":\"Illustrative\",\"context\":\"You built your SaaS. Now find your first customers. / You built your SaaS. Now find your first customers.\"}]}",
+    "document": {
+      "extractionVersion": "2.0",
+      "url": "https://www.firstcustomers.app/",
+      "title": "FirstCustomers — Your first customers start with a plan",
+      "blocks": [
+        {
+          "id": "914a210d074a",
+          "text": "FirstCustomers — Your first customers start with a plan",
+          "kind": "Owner candidate",
+          "context": "Website title"
+        },
+        {
+          "id": "e467de7a2c24",
+          "text": "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan.",
+          "kind": "Owner candidate",
+          "context": "Website description"
+        },
+        {
+          "id": "2ceeb467d32c",
+          "text": "You built your SaaS. Now find your first customers.",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / You built your SaaS. Now find your first customers."
+        },
+        {
+          "id": "b5aac74ee002",
+          "text": "A sharper target. A message worth sending. A practical sales strategy built from your website — so you can stop guessing and start a conversation.",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers."
+        },
+        {
+          "id": "cc1b42284b83",
+          "text": "An illustrative first move",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / Illustrative first move for fictional Launchboard onboarding analytics, not FirstCustomers capabilities · A smaller experiment. A clearer next ste"
+        },
+        {
+          "id": "a519b8610522",
+          "text": "A smaller experiment. A clearer next step.",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / Illustrative first move for fictional Launchboard onboarding analytics, not FirstCustomers capabilities · A smaller experiment. A clearer next ste"
+        },
+        {
+          "id": "799ff47e9337",
+          "text": "Founder-led SaaS teams with active trials.",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / Illustrative first move for fictional Launchboard onboarding analytics, not FirstCustomers capabilities · A smaller experiment. A clearer next ste"
+        },
+        {
+          "id": "d204f58af2c9",
+          "text": "Invite two reachable founders to discuss the last trial that stalled.",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / Illustrative first move for fictional Launchboard onboarding analytics, not FirstCustomers capabilities · A smaller experiment. A clearer next ste"
+        },
+        {
+          "id": "bf80aaa73055",
+          "text": "45 minutes · no paid tools assumed.",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / Illustrative first move for fictional Launchboard onboarding analytics, not FirstCustomers capabilities · A smaller experiment. A clearer next ste"
+        },
+        {
+          "id": "e9dc2ea468a2",
+          "text": "Positive result",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / Illustrative first move for fictional Launchboard onboarding analytics, not FirstCustomers capabilities · A smaller experiment. A clearer next ste"
+        },
+        {
+          "id": "9b508bfb77b0",
+          "text": "A buyer confirms an urgent problem and agrees on a next step.",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / Illustrative first move for fictional Launchboard onboarding analytics, not FirstCustomers capabilities · A smaller experiment. A clearer next ste"
+        },
+        {
+          "id": "aa68414a477e",
+          "text": "Example for a fictional onboarding analytics SaaS. A planning target, never a forecast.",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / Illustrative first move for fictional Launchboard onboarding analytics, not FirstCustomers capabilities · A smaller experiment. A clearer next ste"
+        },
+        {
+          "id": "23faedae73bb",
+          "text": "Start with your website.",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / Start with your website."
+        },
+        {
+          "id": "8807fb5b85ff",
+          "text": "We’ll help you find your next move.",
+          "kind": "Illustrative",
+          "context": "You built your SaaS. Now find your first customers. / Start with your website."
+        },
+        {
+          "id": "f860335141e8",
+          "text": "Less guesswork. A better first move.",
+          "kind": "Owner candidate",
+          "context": "A strategy you can actually put to work."
+        },
+        {
+          "id": "3a1119b09995",
+          "text": "A strategy you can actually put to work.",
+          "kind": "Owner candidate",
+          "context": "A strategy you can actually put to work. / A strategy you can actually put to work."
+        },
+        {
+          "id": "d2a4993e0c87",
+          "text": "Not another list of marketing channels. A starting point, a small experiment, and a reason to keep going — or change course.",
+          "kind": "Owner candidate",
+          "context": "A strategy you can actually put to work."
+        },
+        {
+          "id": "2e590d77bc44",
+          "text": "Onboarding analytics SaaS · Illustrative example",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard / Launchboard"
+        },
+        {
+          "id": "d213c89c5bfb",
+          "text": "Your recommended first move",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard"
+        },
+        {
+          "id": "5490039b1ded",
+          "text": "Find the founders whose trials get stuck.",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard / Find the founders whose trials get stuck."
+        },
+        {
+          "id": "e0dbdb6d6d8b",
+          "text": "Start with small, founder-led SaaS teams that have active trials but don’t know why users fail to activate.",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard / Find the founders whose trials get stuck."
+        },
+        {
+          "id": "98ab1eb3c14c",
+          "text": "Make it small.",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard / Make it small."
+        },
+        {
+          "id": "005338b73209",
+          "text": "Choose two relevant founders you can already reach. Ask about the last trial that went quiet.",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard / Make it small."
+        },
+        {
+          "id": "4ce7add34f58",
+          "text": "Learn something that matters.",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard / Learn something that matters."
+        },
+        {
+          "id": "b57f34e79730",
+          "text": "Look for an urgent onboarding problem and an agreed next buying step, not likes or free signups.",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard / Learn something that matters."
+        },
+        {
+          "id": "5c35240234fb",
+          "text": "Let the evidence decide.",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard / Let the evidence decide."
+        },
+        {
+          "id": "bd8644eb81f8",
+          "text": "If the problem is low priority, narrow the audience before contacting more people.",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard / Let the evidence decide."
+        },
+        {
+          "id": "7ac6f0b47bba",
+          "text": "Assumes access to relevant founders. No prospects discovered. Two contacts is a planning target, not a forecast.",
+          "kind": "Illustrative",
+          "context": "A strategy you can actually put to work. / Illustrative strategy for fictional Launchboard, not FirstCustomers product capabilities · Launchboard"
+        },
+        {
+          "id": "bf67c19cc605",
+          "text": "From “who needs this?” to “here’s my next move.”",
+          "kind": "Owner candidate",
+          "context": "From “who needs this?” to “here’s my next move.” / From “who needs this?” to “here’s my next move.”"
+        },
+        {
+          "id": "96b4078aba99",
+          "text": "For solo founders and small SaaS teams with a product — and customers to find.",
+          "kind": "Owner candidate",
+          "context": "From “who needs this?” to “here’s my next move.” / From “who needs this?” to “here’s my next move.”"
+        },
+        {
+          "id": "46551bbcf73d",
+          "text": "Find your people.",
+          "kind": "Owner candidate",
+          "context": "From “who needs this?” to “here’s my next move.” / Find your people."
+        },
+        {
+          "id": "0ea540525512",
+          "text": "Three prioritized customer profiles. Their likely problems, buying motivations, and the trade-offs that make one a better starting point.",
+          "kind": "Owner candidate",
+          "context": "From “who needs this?” to “here’s my next move.” / Find your people."
+        },
+        {
+          "id": "4e5afeeb1d8c",
+          "text": "Start the right conversation.",
+          "kind": "Owner candidate",
+          "context": "From “who needs this?” to “here’s my next move.” / Start the right conversation."
+        },
+        {
+          "id": "d8addcb05b2d",
+          "text": "Positioning and outreach you can adapt. Clear experiments with concrete actions, assumptions, and decisions to make.",
+          "kind": "Owner candidate",
+          "context": "From “who needs this?” to “here’s my next move.” / Start the right conversation."
+        },
+        {
+          "id": "484064e79564",
+          "text": "Make the next 30 days count.",
+          "kind": "Owner candidate",
+          "context": "From “who needs this?” to “here’s my next move.” / Make the next 30 days count."
+        },
+        {
+          "id": "bf64c8d06aaf",
+          "text": "A practical weekly sales plan. Add your time, budget, and traction to refine it around the business you’re actually building.",
+          "kind": "Owner candidate",
+          "context": "From “who needs this?” to “here’s my next move.” / Make the next 30 days count."
+        },
+        {
+          "id": "f2f90618b88c",
+          "text": "Useful advice starts with honesty.",
+          "kind": "Owner candidate",
+          "context": "Evidence where we have it. Questions where we don’t."
+        },
+        {
+          "id": "657323ce6fad",
+          "text": "Evidence where we have it. Questions where we don’t.",
+          "kind": "Owner candidate",
+          "context": "Evidence where we have it. Questions where we don’t. / Evidence where we have it. Questions where we don’t."
+        },
+        {
+          "id": "9afab8909aaf",
+          "text": "Your website tells part of the story. Your context makes it sharper. FirstCustomers keeps website-supported information, founder answers, hypotheses, and unknowns distinct.",
+          "kind": "Owner candidate",
+          "context": "Evidence where we have it. Questions where we don’t."
+        },
+        {
+          "id": "0c6106585563",
+          "text": "Recommendations are experiments to test. We don’t invent market demand, customer results, competitor research, or real prospects.",
+          "kind": "Owner candidate",
+          "context": "Evidence where we have it. Questions where we don’t."
+        }
+      ]
+    },
+    "links": [
+      "#main-content",
+      "/",
+      "/preview",
+      "/auth/sign-in",
+      "#strategy-example",
+      "/preview",
+      "/preview",
+      "#generate",
+      "/privacy",
+      "/terms",
+      "/support"
+    ],
+    "contentHash": "00abe31e9a8d10fda7b406108eccb411a65dff72ce55d0ec99c1ef4f76417d94",
+    "status": "SUCCESS"
+  }
+]

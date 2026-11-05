@@ -1,0 +1,19 @@
+{
+  "mode": "mock-transport; measured UTF-8 bytes; no real model token counts",
+  "model": "gpt-4.1-mini",
+  "requests": [
+    {
+      "stage": "sales_strategy_candidate",
+      "requestBytes": 13999,
+      "systemBytes": 3130,
+      "maxOutputTokens": 3555
+    },
+    {
+      "stage": "strategy_critique",
+      "requestBytes": 25033,
+      "systemBytes": 3181,
+      "maxOutputTokens": 4445
+    }
+  ],
+  "addedQualitySchemaBytes": 1257
+}

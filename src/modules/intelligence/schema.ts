@@ -1,5 +1,8 @@
+import { acquisitionSchema } from "./acquisition-contract";
 import { z } from "zod";
 import { productProfileSchema, basisSchema } from "./product-profile";
+import { qualityRecordSchema } from "./quality";
+import { firstExperimentSchema } from "./experiment";
 export const claimSchema = z.object({
   text: z.string().min(1).max(2000),
   confidence: z.enum(["Verified", "Inferred", "Unknown"]),
@@ -70,6 +73,9 @@ export const reportV11Schema = reportV1Schema.extend({
   schemaVersion: z.literal("1.1"),
   productIntelligence: productProfileSchema,
   recommendationBasis: basisSchema,
+  quality: qualityRecordSchema.optional(),
+  acquisitionStrategy: acquisitionSchema().optional(),
+  firstExperiment: firstExperimentSchema.optional(),
 });
 export const reportSchema = z.union([reportV1Schema, reportV11Schema]);
 export type Report = z.infer<typeof reportSchema>;

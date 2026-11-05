@@ -1,0 +1,21 @@
+{
+  "mode": "mock-transport; measured UTF-8 bytes; no real model token counts",
+  "model": "gpt-4.1-mini",
+  "requests": [
+    {
+      "stage": "attributed_product_profile",
+      "requestBytes": 4864,
+      "maxOutputTokens": 900
+    },
+    {
+      "stage": "business_intelligence",
+      "requestBytes": 8528,
+      "maxOutputTokens": 2950
+    },
+    {
+      "stage": "quality_review",
+      "requestBytes": 16654,
+      "maxOutputTokens": 650
+    }
+  ]
+}

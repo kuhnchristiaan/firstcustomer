@@ -1,0 +1,24 @@
+{
+  "startedAt": "2026-11-05T06:26:24.688Z",
+  "url": "https://tally.so/",
+  "model": "gpt-4.1-mini",
+  "analysisOrdinal": 1,
+  "maxWholeAnalysisAttempts": 1,
+  "limits": {
+    "inputTokens": 20000,
+    "outputTokens": 8000
+  },
+  "pricing": {
+    "inputUsdPerMillion": 0.4,
+    "cachedInputUsdPerMillion": 0.1,
+    "outputUsdPerMillion": 1.6,
+    "source": "https://developers.openai.com/api/docs/models/gpt-4.1-mini",
+    "verifiedDate": "2026-11-05"
+  },
+  "implementationHashes": {
+    "src/modules/analysis/provider.ts": "a719e1594154c4de06bb227efa94a0a61b1c95c3aa62deb3a50353002d2b018f",
+    "src/modules/intelligence/quality.ts": "dc21245a8a4048966014b09b587178d426e756f8eff85039fc6be6c6aa247468",
+    "src/modules/strategy/claims.ts": "835ab141f83ce4107315e1ef0b5f24c27536e52e68b2fe594d2ebb79c6b46d49",
+    "src/modules/intelligence/schema.ts": "3b20ad16dbf47ad714de75368db43348b9b925a38c3b279f03e78d919dde9506"
+  }
+}

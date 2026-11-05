@@ -1,0 +1,46 @@
+[
+  {
+    "site": "senja",
+    "priorActualInputTokens": 3481,
+    "priorActualOutputTokens": 2852,
+    "oldInputReservation": 21597,
+    "reviewBytes": 16133,
+    "newReviewReservation": 4560,
+    "totalInputReservation": 8041,
+    "cap": 20000,
+    "reviewOutputCap": 650
+  },
+  {
+    "site": "greensighter",
+    "priorActualInputTokens": 3229,
+    "priorActualOutputTokens": 2966,
+    "oldInputReservation": 21361,
+    "reviewBytes": 16219,
+    "newReviewReservation": 4562,
+    "totalInputReservation": 7791,
+    "cap": 20000,
+    "reviewOutputCap": 650
+  },
+  {
+    "site": "firstcustomers",
+    "priorActualInputTokens": 3199,
+    "priorActualOutputTokens": 2862,
+    "oldInputReservation": 21529,
+    "reviewBytes": 16200,
+    "newReviewReservation": 4704,
+    "totalInputReservation": 7903,
+    "cap": 20000,
+    "reviewOutputCap": 650
+  },
+  {
+    "site": "tally",
+    "priorActualInputTokens": 3253,
+    "priorActualOutputTokens": 3013,
+    "oldInputReservation": 22052,
+    "reviewBytes": 16842,
+    "newReviewReservation": 4721,
+    "totalInputReservation": 7974,
+    "cap": 20000,
+    "reviewOutputCap": 650
+  }
+]

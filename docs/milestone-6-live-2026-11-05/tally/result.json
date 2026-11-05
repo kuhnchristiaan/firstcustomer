@@ -1,0 +1,159 @@
+{
+  "url": "https://tally.so/",
+  "startedAt": "2026-11-05T06:26:24.688Z",
+  "completedAt": "2026-11-05T06:26:51.010Z",
+  "elapsedMs": 26313,
+  "crawlMs": 5105,
+  "model": "gpt-4.1-mini",
+  "limits": {
+    "inputTokens": 20000,
+    "outputTokens": 8000
+  },
+  "analysisAttempts": 1,
+  "pages": 1,
+  "analysisSucceeded": false,
+  "finalAccepted": false,
+  "firstCandidateAvailable": true,
+  "repairAttempted": false,
+  "firstCandidatePassed": false,
+  "reviews": [],
+  "candidateDiagnostics": {
+    "first": {
+      "deterministic": [
+        {
+          "section": "acquisitionChannels",
+          "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.0.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.2.successMetric"
+        }
+      ],
+      "claimSectionsChangedBySanitiser": [
+        "differentiators",
+        "idealCustomers",
+        "buyerPersonas",
+        "geographicFocus",
+        "segments",
+        "buyingSignals",
+        "positioning",
+        "acquisitionChannels",
+        "outreachTemplates",
+        "firstTenPlaybook",
+        "thirtyDayPlan"
+      ]
+    },
+    "final": {
+      "deterministic": [
+        {
+          "section": "acquisitionChannels",
+          "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+        },
+        {
+          "section": "firstTenPlaybook",
+          "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.0.successMetric"
+        },
+        {
+          "section": "thirtyDayPlan",
+          "reason": "No observable success measure: thirtyDayPlan.2.successMetric"
+        }
+      ],
+      "claimSectionsChangedBySanitiser": [
+        "differentiators",
+        "idealCustomers",
+        "buyerPersonas",
+        "geographicFocus",
+        "segments",
+        "buyingSignals",
+        "positioning",
+        "acquisitionChannels",
+        "outreachTemplates",
+        "firstTenPlaybook",
+        "thirtyDayPlan"
+      ]
+    }
+  },
+  "failure": {
+    "name": "Error",
+    "status": null,
+    "code": null,
+    "reason": "quality_failed",
+    "providerUsage": {
+      "inputTokens": 3253,
+      "outputTokens": 3013,
+      "stages": [
+        {
+          "stage": "attributed_product_profile",
+          "inputTokens": 1795,
+          "outputTokens": 419
+        },
+        {
+          "stage": "business_intelligence",
+          "inputTokens": 1458,
+          "outputTokens": 2594
+        }
+      ]
+    }
+  },
+  "usage": {
+    "inputTokens": 3253,
+    "outputTokens": 3013,
+    "cachedInputTokens": 0,
+    "estimatedCostUsd": 0.006122000000000001,
+    "uncachedCostUsd": 0.006122000000000001
+  },
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "startedAt": "2026-11-05T06:26:29.796Z",
+      "requestBytes": 8503,
+      "maxOutputTokens": 1200,
+      "elapsedMs": 4193,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_02ed12c1476ee3b0006aec2197d8bc87d2938751cf23d0d862",
+      "inputTokens": 1795,
+      "outputTokens": 419,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0013884000000000001,
+      "uncachedCostUsd": 0.0013884000000000001,
+      "incompleteDetails": null
+    },
+    {
+      "stage": "business_intelligence",
+      "startedAt": "2026-11-05T06:26:33.994Z",
+      "requestBytes": 9031,
+      "maxOutputTokens": 6150,
+      "elapsedMs": 17003,
+      "status": "completed",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "responseId": "resp_071b528f353dfd05006aec219bfdfc87d2a127e56dd914d335",
+      "inputTokens": 1458,
+      "outputTokens": 2594,
+      "cachedInputTokens": 0,
+      "estimatedCostUsd": 0.0047336,
+      "uncachedCostUsd": 0.0047336,
+      "incompleteDetails": null
+    }
+  ]
+}

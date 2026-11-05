@@ -1,0 +1,54 @@
+{
+  "mode": "Read-only diagnosis of genuine model output; no new calls or modifications to original evidence",
+  "attributionError": null,
+  "distinctBasisSections": [
+    "segments",
+    "acquisitionChannels",
+    "outreachTemplates",
+    "firstTenPlaybook",
+    "thirtyDayPlan"
+  ],
+  "deterministicQualityExecutedLive": true,
+  "diagnosticChecks": [
+    {
+      "section": "acquisitionChannels",
+      "reason": "No observable success measure: acquisitionChannels.1.successMetric"
+    },
+    {
+      "section": "acquisitionChannels",
+      "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+    },
+    {
+      "section": "outreachTemplates",
+      "reason": "Unsubstantiated prospect observation: outreachTemplates.0.body"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "No observable success measure: firstTenPlaybook.0.successMetric"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "Unsupported numeric outcome benchmark without an observed baseline: firstTenPlaybook.1.successMetric"
+    },
+    {
+      "section": "thirtyDayPlan",
+      "reason": "No observable success measure: thirtyDayPlan.1.successMetric"
+    },
+    {
+      "section": "thirtyDayPlan",
+      "reason": "Unsupported numeric outcome benchmark without an observed baseline: thirtyDayPlan.1.successMetric"
+    }
+  ],
+  "sanitiserDifferences": [
+    {
+      "path": "outreachTemplates.0.body",
+      "original": "Hi [Name], I noticed your work on [SaaS product]. I’d love to share a free, practical sales strategy generator that crafts your first 30-day plan including ideal customer profiles and experiments tailored to your startup. Interested?",
+      "sanitised": "I’d love to share a free, practical sales strategy generator that crafts your first 30-day plan including ideal customer profiles and experiments tailored to your startup.\nInterested?"
+    }
+  ],
+  "oldFallbackSentenceOccurrences": 0
+}

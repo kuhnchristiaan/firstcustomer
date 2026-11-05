@@ -131,6 +131,8 @@ export async function executeAnalysis(
           event: "analysis_output_rejected",
           runId,
           reason: error.reason.slice(0, 2000),
+          stages: error.stages,
+          qualityFailure: error.qualityFailure,
         }),
       );
     }

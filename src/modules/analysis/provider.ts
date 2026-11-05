@@ -1,4 +1,10 @@
-import { safeInitialReport } from "@/modules/strategy/claims";
+import {
+  acquisitionSchema,
+  acquisitionInstructions,
+} from "@/modules/intelligence/acquisition-contract";
+import { assembleAcquisition } from "@/modules/intelligence/acquisition-strategy";
+import { leafFields } from "@/modules/intelligence/field-repair";
+import { verifyClaims } from "@/modules/strategy/claims";
 import OpenAI from "openai";
 import { z } from "zod";
 import { AppError } from "@/lib/errors";
@@ -11,11 +17,8 @@ import {
 import {
   productSelectionSchema,
   hydrateProductProfile,
-  validateBasis,
-  basisSchema,
 } from "@/modules/intelligence/product-profile";
 import {
-  groundReport,
   generationProductProfile,
   generationProductContext,
 } from "@/modules/intelligence/attribution";
@@ -23,6 +26,12 @@ import { readDocument, productEvidence } from "@/modules/website/document";
 import { config } from "@/modules/config/env";
 import type { Source } from "@/modules/website/extract";
 import { mockReport } from "./mock";
+import {
+  qualityGate,
+  deterministicQuality,
+  QualityGateError,
+} from "@/modules/intelligence/quality";
+import { fitsInputBudget, assertActualUsage } from "./token-budget";
 // Reuse the SDK's strict schema conversion, retaining every constraint while
 // sharing repeated claim/experiment definitions across report fields.
 export function reportTextFormat(schema: z.ZodType, name: string) {
@@ -40,11 +49,44 @@ export function reportTextFormat(schema: z.ZodType, name: string) {
     schema: json_schema.schema!,
   };
 }
+export function analysisRequest(
+  schema: z.ZodType,
+  name: string,
+  instructions: string,
+  data: unknown,
+  model: string,
+  maxOutput: number,
+) {
+  return {
+    model,
+    max_output_tokens: maxOutput,
+    input: [
+      { role: "system" as const, content: instructions },
+      { role: "user" as const, content: JSON.stringify(data) },
+    ],
+    text: {
+      format:
+        name === "business_intelligence"
+          ? reportTextFormat(schema, name)
+          : zodTextFormat(schema, name),
+    },
+  };
+}
 export class ProviderOutputError extends Error {
   constructor(
     public inputTokens: number,
     public outputTokens: number,
     public reason = "invalid_output",
+    public stages: {
+      stage: string;
+      inputTokens: number;
+      outputTokens: number;
+    }[] = [],
+    public qualityFailure?: {
+      code?: string;
+      issues: { section: string; reason: string }[];
+      repairFeasible: boolean;
+    },
   ) {
     super("The provider returned an incomplete or invalid report.");
   }
@@ -78,9 +120,13 @@ export function provider(): AnalysisProvider {
         timeout: 50000,
       });
       let inputTokens = 0,
-        outputTokens = 0,
-        requestBytes = 0;
+        outputTokens = 0;
       let stage = "product_identification";
+      const stages: {
+        stage: string;
+        inputTokens: number;
+        outputTokens: number;
+      }[] = [];
       const call = async (
         schema: z.ZodType,
         name: string,
@@ -88,30 +134,37 @@ export function provider(): AnalysisProvider {
         data: unknown,
         maxOutput: number,
       ) => {
-        const request = {
-          model: e.OPENAI_MODEL,
-          max_output_tokens: maxOutput,
-          input: [
-            { role: "system" as const, content: instructions },
-            { role: "user" as const, content: JSON.stringify(data) },
-          ],
-          text: {
-            format:
-              name === "business_intelligence"
-                ? reportTextFormat(schema, name)
-                : zodTextFormat(schema, name),
-          },
-        };
-        const size = Buffer.byteLength(JSON.stringify(request), "utf8") + 1024;
-        if (requestBytes + size > budget.input)
+        const request = analysisRequest(
+          schema,
+          name,
+          instructions,
+          data,
+          e.OPENAI_MODEL,
+          Math.min(
+            maxOutput,
+            budget.output -
+              outputTokens -
+              (name === "quality_repair" ? 650 : 0),
+          ),
+        );
+        if (
+          request.max_output_tokens < 200 ||
+          !fitsInputBudget(request, e.OPENAI_MODEL, inputTokens, budget.input)
+        )
           throw new AppError(
             "This website exceeds the bounded report input budget.",
             400,
           );
-        requestBytes += size;
         const result = await client.responses.create(request, { signal });
         inputTokens += result.usage?.input_tokens ?? 0;
         outputTokens += result.usage?.output_tokens ?? 0;
+        stages.push({
+          stage: name,
+          inputTokens: result.usage?.input_tokens ?? 0,
+          outputTokens: result.usage?.output_tokens ?? 0,
+        });
+        if (!result.usage) throw new Error("missing_usage");
+        assertActualUsage({ input: inputTokens, output: outputTokens }, budget);
         if (result.status !== "completed") throw new Error("incomplete_output");
         return JSON.parse(result.output_text);
       };
@@ -158,7 +211,7 @@ export function provider(): AnalysisProvider {
                 .map((b) => ({ id: b.id, kind: b.kind, context: b.context })),
             })),
           },
-          Math.min(1200, Math.floor(budget.output * 0.2)),
+          Math.min(600, Math.floor(budget.output * 0.2)),
         );
         const profile = hydrateProductProfile(rawProfile, sources);
         if (
@@ -173,39 +226,121 @@ export function provider(): AnalysisProvider {
         const ids = generationProductProfile(profile).statements.map(
           (s) => s.id,
         ) as [string, ...string[]];
-        const generationSchema = reportV1Schema.extend({
-          recommendationBasis: z
-            .array(
-              basisSchema.element.extend({
-                statementIds: z.array(z.enum(ids)).min(1).max(4),
-              }),
-            )
-            .length(5),
-        });
+        const generationSchema = acquisitionSchema(ids);
         stage = "report_generation";
-        const generated = await call(
-          generationSchema,
-          "business_intelligence",
-          "Generate a comprehensive, specific SaaS sales strategy from ONLY this attributed owner-product profile. Do not re-interpret raw website text, examples or excluded materials. Exactly three prioritized ICPs/segments and four weeks; at least three acquisition experiments. Use the owner's primaryJob and actual capabilities as the basis for every target, recommendation and outreach message. A problem the audience experiences is relevant only if this owner's product can address it; do not recommend solving an unrelated problem just because the same people experience it. For each of the five recommendation sections return the supporting owner statement IDs; these IDs establish the product context, not validated market demand. Do not copy an illustrative company's problem into this business. Website-supported product wording must exactly reuse a supplied product statement or identity summary; otherwise mark it Inferred or Unknown, not Verified. No live prospects, invented research, validated demand, performance metrics, compliance or security guarantees. Unknown prices/geography/traction remain unknown. All recommendations are Inferred experiments with steps and decision criteria. Keep each field concise (typically under 30 words), outreach under 70 words. Return schemaVersion 1.0; the server owns the final version and attributed product metadata.",
-          {
-            product: generationProductContext(profile),
-            marketResearch: "Not performed",
-            externalVerification: "Not performed",
-          },
-          budget.output - Math.min(1200, Math.floor(budget.output * 0.2)),
+        const generated = generationSchema.parse(
+          await call(
+            generationSchema,
+            "acquisition_strategy",
+            acquisitionInstructions,
+            {
+              product: generationProductContext(profile),
+              marketResearch: "Not performed",
+              externalVerification: "Not performed",
+              founderResources:
+                "Unknown; use explicit conservative assumptions",
+            },
+            // Reserve both possible reviews and a granular repair, even when the
+            // initial review identifies the first defect. Never expand the cap.
+            Math.min(2000, budget.output - outputTokens - 1300 - 600),
+          ),
         );
-        validateBasis(generated.recommendationBasis, profile);
-        const parsed = reportV1Schema.parse(generated);
-        const bound = groundReport(parsed, profile, true);
-        const report = reportV11Schema.parse({
-          ...bound,
-          schemaVersion: "1.1",
-          productIntelligence: profile,
-          recommendationBasis: generated.recommendationBasis,
+        stage = "quality_gate";
+        const inspect = (value: typeof generated) => {
+          const report = assembleAcquisition(value, profile);
+          const leaves = leafFields(value);
+          const reportLeaves = leafFields(report);
+          const translate = (path: string, reason: string) => {
+            const text = reportLeaves[path];
+            const exact = Object.keys(leaves).filter((p) => leaves[p] === text);
+            const embedded = exact.length
+              ? exact
+              : Object.keys(leaves).filter(
+                  (p) =>
+                    typeof leaves[p] === "string" &&
+                    String(leaves[p]).length >= 8 &&
+                    String(text).includes(String(leaves[p])),
+                );
+            return embedded.length
+              ? embedded.map((p) => ({
+                  section: p.split(".")[0],
+                  path: p,
+                  reason,
+                }))
+              : [{ section: "assembly", reason }];
+          };
+          const issues: import("@/modules/intelligence/quality").QualityIssue[] =
+            [
+              ...deterministicQuality(report).flatMap((i) => {
+                if (i.path && Object.hasOwn(leaves, i.path)) return [i];
+                const path = i.reason.match(/: ([\w]+(?:\.\w+)+)$/)?.[1];
+                return path ? translate(path, i.reason) : [i];
+              }),
+              ...verifyClaims(value, [], productEvidence(sources), {}, true, {
+                productName: profile.identity.name,
+                deferCapabilities: true,
+              })
+                .actions.filter((a) => a.action === "removed")
+                .map((a) => ({
+                  section: a.path.split(".")[0],
+                  path: a.path,
+                  reason: `Unsupported assertion: ${a.path}`,
+                })),
+            ];
+          if (
+            !/\b(?:urgenc|urgent|pay|purchas|buy|budget|authority|commercial|paid)\w*/i.test(
+              value.firstExperiment.commercialLearning,
+            )
+          )
+            issues.push({
+              section: "firstExperiment",
+              path: "firstExperiment.commercialLearning",
+              reason:
+                "Measurable engagement alone does not test a buying outcome",
+            });
+          return issues;
+        };
+        const checked = await qualityGate({
+          candidate: generated,
+          fields: Object.fromEntries(
+            Object.entries(generationSchema.shape).filter(
+              ([k]) => k !== "recommendationBasis",
+            ),
+          ),
+          inspect,
+          reviewValue: (value) => ({
+            contract: value,
+            assembledReport: assembleAcquisition(value, profile),
+          }),
+          product: generationProductContext(profile),
+          context: {
+            status: "Not supplied",
+            budget: "Unknown",
+            time: "Unknown",
+          },
+          call,
+          validate: (value) => {
+            const parsed = generationSchema.parse(value);
+            validateEvidence(
+              assembleAcquisition(parsed, profile),
+              sources.map((s) => s.url),
+            );
+            return parsed;
+          },
+          claimIssues: () => [],
         });
         return {
           report: validateEvidence(
-            safeInitialReport(report, productEvidence(sources)),
+            reportV11Schema.parse({
+              ...assembleAcquisition(checked.value, profile),
+              quality: {
+                ...checked.review,
+                rubricVersion: "m6.1",
+                repairs: checked.repairs,
+                initialIssues: checked.initialIssues,
+                stages,
+              },
+            }),
             sources.map((s) => s.url),
           ),
           inputTokens,
@@ -237,14 +372,24 @@ export function provider(): AnalysisProvider {
         throw new ProviderOutputError(
           inputTokens,
           outputTokens,
-          error instanceof AppError
-            ? "input_budget"
-            : error instanceof Error &&
-                ["incomplete_output", "product_identity_uncertain"].includes(
-                  error.message,
-                )
-              ? error.message
-              : "invalid_attribution_or_output",
+          stage === "quality_gate"
+            ? "quality_failed"
+            : error instanceof AppError
+              ? "input_budget"
+              : error instanceof Error &&
+                  ["incomplete_output", "product_identity_uncertain"].includes(
+                    error.message,
+                  )
+                ? error.message
+                : "invalid_attribution_or_output",
+          stages,
+          error instanceof QualityGateError
+            ? {
+                code: error.message,
+                issues: error.issues,
+                repairFeasible: error.repairFeasible,
+              }
+            : undefined,
         );
       }
     },

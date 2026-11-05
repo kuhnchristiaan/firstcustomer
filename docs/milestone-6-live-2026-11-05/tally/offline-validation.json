@@ -1,0 +1,159 @@
+{
+  "mode": "offline reconstruction, zero API calls; original artifacts unchanged",
+  "qualityReviewWasCalled": false,
+  "pendingQualityReview": {
+    "requestBytes": 17775,
+    "overheadReservation": 1024,
+    "alreadyBilledInputTokens": 3253,
+    "totalInputReservation": 22052,
+    "inputCap": 20000,
+    "overInputCapBy": 2052,
+    "requestedOutputTokens": 650,
+    "remainingOutputTokens": 4987
+  },
+  "deterministicIssues": [
+    {
+      "section": "acquisitionChannels",
+      "reason": "No observable success measure: acquisitionChannels.2.successMetric"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+    },
+    {
+      "section": "firstTenPlaybook",
+      "reason": "No observable success measure: firstTenPlaybook.2.successMetric"
+    },
+    {
+      "section": "thirtyDayPlan",
+      "reason": "No observable success measure: thirtyDayPlan.0.successMetric"
+    },
+    {
+      "section": "thirtyDayPlan",
+      "reason": "No observable success measure: thirtyDayPlan.2.successMetric"
+    }
+  ],
+  "sanitiserDifferences": [
+    {
+      "path": "differentiators.1.text",
+      "original": "Strong user data privacy and GDPR compliance with European hosting.",
+      "sanitised": ""
+    },
+    {
+      "path": "idealCustomers.2.text",
+      "original": "Organizations that prioritize GDPR compliance and data security in their digital interactions.",
+      "sanitised": ""
+    },
+    {
+      "path": "idealCustomers.2.confidence",
+      "original": "Inferred",
+      "sanitised": "Unknown"
+    },
+    {
+      "path": "buyerPersonas.2.text",
+      "original": "Data Protection Officers or Compliance Leaders focused on ensuring GDPR-aligned data collection methods.",
+      "sanitised": ""
+    },
+    {
+      "path": "buyerPersonas.2.confidence",
+      "original": "Inferred",
+      "sanitised": "Unknown"
+    },
+    {
+      "path": "geographicFocus.text",
+      "original": "European market prioritized due to GDPR compliance and European hosting; usable globally but strongest appeal in privacy-conscious regions.",
+      "sanitised": ""
+    },
+    {
+      "path": "geographicFocus.confidence",
+      "original": "Inferred",
+      "sanitised": "Unknown"
+    },
+    {
+      "path": "segments.1.problems.0",
+      "original": "Require GDPR compliance and secure data handling",
+      "sanitised": ""
+    },
+    {
+      "path": "segments.1.buyingSignals.0",
+      "original": "Looking for GDPR-compliant SaaS",
+      "sanitised": ""
+    },
+    {
+      "path": "segments.1.evidence.text",
+      "original": "GDPR compliance and European hosting with encryption (s3) highly relevant for privacy-sensitive sectors.",
+      "sanitised": ""
+    },
+    {
+      "path": "segments.1.evidence.confidence",
+      "original": "Inferred",
+      "sanitised": "Unknown"
+    },
+    {
+      "path": "buyingSignals.1.text",
+      "original": "Interest in GDPR-compliant SaaS solutions with strong security features.",
+      "sanitised": ""
+    },
+    {
+      "path": "buyingSignals.1.confidence",
+      "original": "Inferred",
+      "sanitised": "Unknown"
+    },
+    {
+      "path": "positioning.text",
+      "original": "Position Tally as a free, easy, and secure online form builder targeting SMBs first, leveraging no-code ease and unlimited usage as hooks; then expand by addressing privacy-sensitive enterprises emphasizing GDPR and security; marketing teams seeking advanced features will follow as third priority.",
+      "sanitised": ""
+    },
+    {
+      "path": "acquisitionChannels.0.successMetric",
+      "original": "Achieve a reply rate >5% indicating interest for follow-up",
+      "sanitised": ""
+    },
+    {
+      "path": "acquisitionChannels.1.recommendation.text",
+      "original": "Develop educational blog posts and whitepapers on GDPR compliance and secure data collection to attract privacy-conscious sectors.",
+      "sanitised": ""
+    },
+    {
+      "path": "acquisitionChannels.1.steps.0",
+      "original": "Create GDPR-focused content",
+      "sanitised": ""
+    },
+    {
+      "path": "acquisitionChannels.2.successMetric",
+      "original": "CTR above 2% with cost per lead under $15",
+      "sanitised": ""
+    },
+    {
+      "path": "outreachTemplates.1.subject",
+      "original": "Ensure GDPR Compliance in Your Online Forms",
+      "sanitised": ""
+    },
+    {
+      "path": "firstTenPlaybook.1.title",
+      "original": "Test GDPR Content for Privacy-Conscious Leads",
+      "sanitised": ""
+    },
+    {
+      "path": "firstTenPlaybook.1.recommendation.text",
+      "original": "Publish and share GDPR-focused content to validate demand among privacy-sensitive enterprises.",
+      "sanitised": ""
+    },
+    {
+      "path": "firstTenPlaybook.1.steps.0",
+      "original": "Publish a GDPR compliance blog post",
+      "sanitised": ""
+    },
+    {
+      "path": "firstTenPlaybook.2.successMetric",
+      "original": "CTR >1.5% and 5 leads generated",
+      "sanitised": ""
+    },
+    {
+      "path": "thirtyDayPlan.0.successMetric",
+      "original": "Reply rate ≥5%",
+      "sanitised": ""
+    }
+  ],
+  "oldFallbackSentenceOccurrences": 0
+}
