@@ -262,7 +262,7 @@ it("accounts for an incomplete field repair and never reviews or publishes its p
     reason: "quality_failed",
     inputTokens: 600,
     outputTokens: 900,
-    qualityFailure: { code: "quality_repair_invalid" },
+    qualityFailure: { code: "quality_repair_invalid", diagnostic: { phase: "response", kind: "incomplete_output", violations: [] } },
   });
   expect(transport.create).toHaveBeenCalledTimes(3);
 });

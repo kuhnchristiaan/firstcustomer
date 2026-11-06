@@ -32,6 +32,7 @@ import {
   qualityGate,
   deterministicQuality,
   QualityGateError,
+  type RepairDiagnostic,
 } from "@/modules/intelligence/quality";
 import { fitsInputBudget, assertActualUsage } from "./token-budget";
 // Reuse the SDK's strict schema conversion, retaining every constraint while
@@ -87,6 +88,7 @@ export class ProviderOutputError extends Error {
     }[] = [],
     public qualityFailure?: {
       code?: string;
+      diagnostic?: RepairDiagnostic;
       issues: { section: string; reason: string }[];
       repairFeasible: boolean;
     },
@@ -403,6 +405,7 @@ export function provider(): AnalysisProvider {
           error instanceof QualityGateError
             ? {
                 code: error.message,
+                diagnostic: error.diagnostic,
                 issues: error.issues,
                 repairFeasible: error.repairFeasible,
               }

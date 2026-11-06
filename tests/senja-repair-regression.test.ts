@@ -97,3 +97,25 @@ it('rejects a genuine complete-looking repair that duplicates numeric resource e
  const issues=strategyConsistency(real).filter(i=>i.reason.startsWith('Incomplete strategic'));const p=fieldPatch(real,acquisitionWireSchema().shape,issues);
  const invalid=p.apply(raw);expect(acquisitionSchema().safeParse(invalid).success).toBe(false);expect(strategyConsistency(invalid).some(i=>i.path==='firstExperiment.resources.constraints')).toBe(true);
 });
+
+import {qualityGate} from '@/modules/intelligence/quality';
+it('reports safe patch diagnostics for the saved genuine incomplete repair without leaking its text',async()=>{
+ const issues=load('summary.json').failure.qualityFailure.issues;
+ const call=vi.fn().mockResolvedValue(repair);
+ const failure=await qualityGate({candidate,fields:acquisitionWireSchema().shape,product:{},context:{},call,
+ validate:v=>acquisitionSchema().parse(v),claimIssues:()=>[],inspect:()=>issues}).catch(e=>e);
+ expect(failure.diagnostic).toMatchObject({phase:'patch',kind:'schema',violations:expect.arrayContaining([{path:'positioning',code:'invalid_format'}])});
+ expect(JSON.stringify(failure.diagnostic)).not.toContain(repair.positioning);
+ expect(call).toHaveBeenCalledTimes(1);
+});
+it('distinguishes full-candidate rejection from patch rejection using the saved genuine repair',async()=>{
+ const read=(p:string)=>JSON.parse(readFileSync('docs/senja-continuation/improved-prefix/'+p,'utf8'));
+ const real=JSON.parse(read('2-response.json').output_text);
+ const raw=JSON.parse(readFileSync('docs/senja-continuation/combined-repair-failure/3-output.txt','utf8'));
+ const issues=strategyConsistency(real).filter(i=>i.reason.startsWith('Incomplete strategic'));
+ const call=vi.fn().mockResolvedValue(raw);
+ const failure=await qualityGate({candidate:real,fields:acquisitionWireSchema().shape,product:{},context:{},call,
+ validate:v=>acquisitionSchema().parse(v),claimIssues:()=>[],inspect:()=>issues}).catch(e=>e);
+ expect(failure.diagnostic).toMatchObject({phase:'candidate',kind:'schema',violations:expect.arrayContaining([{path:'firstExperiment.resources.constraints',code:'custom'}])});
+ expect(call).toHaveBeenCalledTimes(1);
+});
