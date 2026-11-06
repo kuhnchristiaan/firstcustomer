@@ -3,7 +3,13 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
-export function AdvisorStart({ initialUrl = "" }: { initialUrl?: string }) {
+export function AdvisorStart({
+  initialUrl = "",
+  guest = false,
+}: {
+  initialUrl?: string;
+  guest?: boolean;
+}) {
   const [url, setUrl] = useState(initialUrl);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState("");
@@ -16,6 +22,10 @@ export function AdvisorStart({ initialUrl = "" }: { initialUrl?: string }) {
         setPending(true);
         setError("");
         try {
+          if (guest) {
+            router.push(`/guest/advisor?url=${encodeURIComponent(url)}`);
+            return;
+          }
           const response = await fetch("/api/advisor", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -53,7 +63,9 @@ export function AdvisorStart({ initialUrl = "" }: { initialUrl?: string }) {
         </Button>
       </div>
       <p className="mt-3 text-sm muted">
-        One buyer. One channel. A practical plan for the next seven days.
+        One buyer. One channel. A practical plan for the next seven days. No
+        lengthy report.
+        {guest && " No account or credit card required."}
       </p>
       {error && (
         <p role="alert" className="mt-3 text-red-800">

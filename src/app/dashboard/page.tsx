@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { tenant, AppError } from "@/modules/auth/tenant";
 import { configured, config } from "@/modules/config/env";
 import { db } from "@/lib/db";
-import { UrlForm } from "@/components/url-form";
+import { AdvisorStart } from "@/components/advisor-start";
 import {
   WorkspaceShell,
   WorkspaceOverview,
@@ -135,18 +135,7 @@ export default async function Dashboard({
         }))}
         monthly={monthly}
         quota={e.MONTHLY_ANALYSIS_QUOTA}
-        form={
-          <UrlForm
-            authenticated
-            initialUrl={url}
-            processing={Boolean(processingProduct)}
-            processingHref={
-              processingProduct
-                ? `/products/${processingProduct.id}`
-                : undefined
-            }
-          />
-        }
+        form={<AdvisorStart initialUrl={url} />}
         signOut={<SignOut />}
         nextAction={
           nextStep && nextProduct

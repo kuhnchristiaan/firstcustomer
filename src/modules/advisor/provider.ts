@@ -21,6 +21,17 @@ import { advisorConfig } from "./config";
 import { advisorSchema, checkResources, type FounderContext } from "./schema";
 import { auditedResponse } from "./smoke-audit";
 import { weeklyReviewSchema } from "./weekly-schema";
+import {
+  fitsInputBudget,
+  assertActualUsage,
+} from "@/modules/analysis/token-budget";
+export type AdvisorLimits = {
+  cost: number;
+  inputTokens: number;
+  outputTokens: number;
+  pages: number;
+  chars: number;
+};
 
 export type UsageEntry = {
   model: string;
@@ -33,6 +44,7 @@ export function createAdvisorTransport(
   ceiling: number,
   usage: UsageEntry[],
   signal: AbortSignal,
+  limits?: AdvisorLimits,
 ) {
   const a = advisorConfig();
   if (!a.fixture && a.ADVISOR_LIVE_ENABLED !== "true")
@@ -60,7 +72,12 @@ export function createAdvisorTransport(
       model,
       store: false,
       service_tier: "default",
-      max_output_tokens: maxOutput,
+      max_output_tokens: limits
+        ? Math.min(
+            maxOutput,
+            limits.outputTokens - usage.reduce((n, u) => n + u.outputTokens, 0),
+          )
+        : maxOutput,
       ...(reasoning ? { reasoning: { effort: "medium" } } : {}),
       input: [
         { role: "system", content: instructions },
@@ -72,9 +89,17 @@ export function createAdvisorTransport(
     const reserved =
       ((Buffer.byteLength(JSON.stringify(request), "utf8") + 2048) *
         rates.input +
-        maxOutput * rates.output) /
+        request.max_output_tokens! * rates.output) /
       1e6;
     if (
+      request.max_output_tokens! < 200 ||
+      (limits &&
+        !fitsInputBudget(
+          request,
+          model,
+          usage.reduce((n, u) => n + u.inputTokens, 0),
+          limits.inputTokens,
+        )) ||
       ++calls > 2 ||
       usage.reduce((n, u) => n + u.estimatedCost, 0) + reserved > ceiling
     )
@@ -95,6 +120,14 @@ export function createAdvisorTransport(
       estimatedCost:
         (u.input_tokens * rates.input + u.output_tokens * rates.output) / 1e6,
     });
+    if (limits)
+      assertActualUsage(
+        {
+          input: usage.reduce((n, u) => n + u.inputTokens, 0),
+          output: usage.reduce((n, u) => n + u.outputTokens, 0),
+        },
+        { input: limits.inputTokens, output: limits.outputTokens },
+      );
     if (
       response.status !== "completed" ||
       usage.reduce((n, v) => n + v.estimatedCost, 0) > ceiling
@@ -113,10 +146,16 @@ export async function generateAdvisor(
   },
   usage: UsageEntry[],
   saveProfile: (p: ProductProfile, s: Source[]) => Promise<void>,
+  limits?: AdvisorLimits,
 ) {
   const a = advisorConfig();
   const signal = AbortSignal.timeout(155000);
-  const call = createAdvisorTransport(a.strategyCeiling, usage, signal);
+  const call = createAdvisorTransport(
+    limits?.cost ?? a.strategyCeiling,
+    usage,
+    signal,
+    limits,
+  );
   let sources: Source[];
   let profile: ProductProfile;
   if (input.profile && input.sources) {
@@ -134,7 +173,13 @@ export async function generateAdvisor(
           400,
         );
       sources = await response.json();
-    } else sources = await crawl(input.url, 3, 20000, signal);
+    } else
+      sources = await crawl(
+        input.url,
+        limits?.pages ?? 3,
+        limits?.chars ?? 20000,
+        signal,
+      );
     const documents = sources.map(readDocument).filter((d) => d !== null);
     const ids = documents.flatMap((d) =>
       d.blocks.filter((b) => b.kind === "Owner candidate").map((b) => b.id),
@@ -187,10 +232,10 @@ export async function generateAdvisor(
   const instructions =
     advisorInstructions.replace(
       "These evaluation contexts are explicitly hypothetical, not statements from a real founder.",
-      "Founder inputs are supplied by the signed-in founder, not external market evidence.",
+      "Founder inputs are supplied by the founder, not external market evidence.",
     ) +
     `
-This is the compact signed-in advisor. Use task titles for scanning, with full instructions separately. Allocate at most 85% of available weekly minutes; reserve the rest for interruptions and follow-up. Do not fill time simply to use it all. Unknown weekly time: explicitly assume 60 available minutes, with headroom.
+This is the compact acquisition advisor. Use task titles for scanning, with full instructions separately. Allocate at most 85% of available weekly minutes; reserve the rest for interruptions and follow-up. Do not fill time simply to use it all. Unknown weekly time: explicitly assume 60 available minutes, with headroom.
 channel.accessCheck must be an executable first-step check that suitable buyers and permitted free contact/publication routes actually exist. channel.fallback must state what to do if the access check fails: a concrete alternative access route for the SAME buyer, conditional on permission and resources. It is not a second parallel strategy or an automatic change to the saved strategy. Put access validation early in the task sequence. Explain how qualified interest could lead to confirmed payment for the actual SaaS; if the paid offer is unknown, make its verification explicit. Do not invent free-to-paid restrictions. Avoid repetitive instructions and repeated labels.`;
   const strategy = await call(
     advisorSchema(statementIds),

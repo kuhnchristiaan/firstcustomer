@@ -21,7 +21,7 @@ const interfaceFont = localFont({
 export const metadata: Metadata = {
   title: "FirstCustomers — Your first customers start with a plan",
   description:
-    "A free, practical SaaS sales strategy generated from your website. Three ideal customer profiles, acquisition experiments and a 30-day plan.",
+    "A free SaaS acquisition advisor. One buyer, one channel and a practical seven-day plan, with expandable reasoning. Start without an account.",
 };
 export default function RootLayout({
   children,

@@ -46,14 +46,14 @@ export function AuthForm({
             throw new Error(r.error.message || "Authentication failed");
           if (signup && r.data && "token" in r.data && !r.data.token) {
             setNotice(
-              "Check your email to verify your account, then sign in here. If you are saving a guest report, use this same browser before the report expires.",
+              "Check your email to verify your account, then sign in here. If you are saving a guest plan, use this same browser before the report expires.",
             );
             return;
           }
           router.push(
             saveGuest
               ? "/guest/claim"
-              : `/dashboard${website ? `?url=${encodeURIComponent(website)}` : ""}`,
+              : `/advisor${website ? `?url=${encodeURIComponent(website)}` : ""}`,
           );
           router.refresh();
         } catch (e) {
@@ -123,7 +123,7 @@ export function AuthForm({
           <Link href="/terms" className="underline">
             beta terms
           </Link>
-          . Your guest report stays in this browser until saved or expired.
+          . Your guest plan stays in this browser until saved or expired.
         </p>
       )}
       <Button className="w-full" disabled={pending}>

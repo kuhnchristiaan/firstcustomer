@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ProgressiveReport } from "./progressive-report";
 import { reportSchema, type Report } from "@/modules/intelligence/schema";
@@ -7,6 +8,7 @@ import { UrlForm } from "./url-form";
 import { Button } from "./ui/button";
 import { track } from "./funnel";
 export function GuestReport() {
+  const router = useRouter();
   const [report, setReport] = useState<Report | null>(null);
   const [status, setStatus] = useState("LOADING");
   const [error, setError] = useState("");
@@ -33,6 +35,10 @@ export function GuestReport() {
         setWebsiteUrl(data.websiteUrl ?? "");
         setExpires(data.expiresAt);
         setMock(data.mock);
+        if (data.output?.kind === "guest-advisor/1") {
+          router.replace("/guest/advisor");
+          return;
+        }
         if (data.output) {
           setReport(reportSchema.parse(data.output));
           if (!counted) {
@@ -56,7 +62,7 @@ export function GuestReport() {
       live = false;
       clearTimeout(timer);
     };
-  }, []);
+  }, [router]);
   return (
     <main className="container py-10">
       {report ? (

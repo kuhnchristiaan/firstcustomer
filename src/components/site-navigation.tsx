@@ -13,9 +13,7 @@ export async function SiteNavigation() {
     } catch {}
   return (
     <nav aria-label="Main navigation" className="site-nav">
-      <Link href={signedIn ? "/dashboard" : "/preview"}>
-        {signedIn ? "Workspace" : "View sample report"}
-      </Link>
+      <Link href={"/advisor"}>{signedIn ? "Advisor" : "Free advisor"}</Link>
       <Link href={signedIn ? "/dashboard" : "/auth/sign-in"}>
         {signedIn ? "My reports" : "Sign in"}
         <span aria-hidden="true"> ↗</span>

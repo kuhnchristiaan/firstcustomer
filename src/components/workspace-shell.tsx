@@ -34,7 +34,7 @@ export function WorkspaceShell({
             aria-current={!product && !advisor ? "page" : undefined}
           >
             <LayoutDashboard size={17} />
-            Overview
+            Historical reports
           </Link>
           <Link
             href="/dashboard#products"
@@ -137,7 +137,7 @@ export function WorkspaceOverview({
         </section>
       )}
       <section className="workspace-create">
-        <h2>Build your next sales strategy.</h2>
+        <h2>Start your acquisition advisor.</h2>
         {form}
       </section>
       <section className="mt-10" id="products">

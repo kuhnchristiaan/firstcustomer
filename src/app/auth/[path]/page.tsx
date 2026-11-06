@@ -37,8 +37,8 @@ export default async function AuthPage({
               <span>A better next move.</span>
             </h2>
             <p>
-              Your product intelligence, sales experiments, and next 30 days.
-              One place to turn your strategy into a starting point.
+              Your buyer, acquisition channel and next seven days.
+              Keep your plan, track progress and learn from real results.
             </p>
           </div>
           <p>Built for SaaS founders. Free to get started.</p>
@@ -55,7 +55,7 @@ export default async function AuthPage({
                 : "Welcome back."}
           </h1>
           <p className="mb-7 text-sm leading-6 muted">
-            A free account keeps your reports and approved strategy in one
+            A free account keeps your plan, completed tasks and weekly results in one
             place.
           </p>
           {configured() ? (

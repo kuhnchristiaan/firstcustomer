@@ -1,4 +1,6 @@
 "use client";
+import Link from "next/link";
+import { Turnstile } from "./turnstile";
 import { useState } from "react";
 import { Check, Clock3, Sparkles, ArrowRight, Compass } from "lucide-react";
 import { Button } from "./ui/button";
@@ -20,7 +22,15 @@ const stages = [
   "Already have paying customers",
 ] as const;
 
-export function AdvisorClient({ initial }: { initial: Data }) {
+export function AdvisorClient({
+  initial,
+  guest = false,
+}: {
+  initial: Data;
+  guest?: boolean;
+}) {
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [resetKey, setResetKey] = useState(0);
   const [data, setData] = useState(initial);
   const [context, setContext] = useState<FounderContext>(initial.context);
   const [pending, setPending] = useState("");
@@ -49,6 +59,23 @@ export function AdvisorClient({ initial }: { initial: Data }) {
     setError("");
     setNotice("");
     try {
+      if (guest) {
+        const response = await fetch("/api/guest/advisor", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            url: data.websiteUrl,
+            context,
+            turnstileToken,
+          }),
+        });
+        const result = await response.json();
+        if (!response.ok)
+          throw new Error(result.error ?? "Could not prepare your plan.");
+        setData(result.data);
+        setNotice("Your plan is ready. No account is required to read it.");
+        return;
+      }
       const saved: Data = await request("PATCH", {
         context,
         expectedVersion: data.contextVersion,
@@ -72,9 +99,19 @@ export function AdvisorClient({ initial }: { initial: Data }) {
       );
     } finally {
       setPending("");
+      if (guest) {
+        setTurnstileToken("");
+        setResetKey((k) => k + 1);
+      }
     }
   }
   async function assistance(taskId?: string) {
+    if (guest) {
+      setNotice(
+        "Create a free account to save this plan and request additional AI help.",
+      );
+      return;
+    }
     const strategy = data.strategy;
     if (!strategy) return;
     setPending(taskId ?? "explain");
@@ -123,10 +160,22 @@ export function AdvisorClient({ initial }: { initial: Data }) {
             : "Tell us what you can work with. Every question is optional."}
         </p>
       </header>
+      {guest && s && (
+        <section className="panel advisor-learning" aria-label="Keep your plan">
+          <h2>Your plan is free to read.</h2>
+          <p>
+            Keep it across devices, track completed tasks and review your
+            results with a free account.
+          </p>
+          <Link href="/guest/claim" className="button button-primary mt-4">
+            Save my plan with a free account →
+          </Link>
+        </section>
+      )}
       {data.strategy?.fixture && (
         <div className="advisor-fixture" role="note">
           Local fixture data · No live AI call. This plan demonstrates the
-          signed-in flow.
+          advisor flow.
         </div>
       )}
       {error && (
@@ -136,7 +185,7 @@ export function AdvisorClient({ initial }: { initial: Data }) {
       )}
       <p role="status" aria-live="polite" className="advisor-status">
         {pending === "generate"
-          ? "Reading product evidence and preparing your plan. Your answers are saved…"
+          ? "Reading product evidence and preparing your plan…"
           : pending && pending !== "save"
             ? "Saving progress or preparing help…"
             : notice}
@@ -150,7 +199,10 @@ export function AdvisorClient({ initial }: { initial: Data }) {
           className="panel advisor-onboarding"
         >
           <p className="text-sm muted mb-6">
-            {data.websiteUrl} · Saved answers are filled in when you return.
+            {data.websiteUrl} ·{" "}
+            {guest
+              ? "Your plan is private to this browser until you save it with an account."
+              : "Saved answers are filled in when you return."}
           </p>
           <fieldset>
             <legend>
@@ -327,21 +379,27 @@ export function AdvisorClient({ initial }: { initial: Data }) {
               </label>
             )}
           </fieldset>
+          {guest && <div className="mt-7"><Turnstile onToken={setTurnstileToken} resetKey={resetKey} /></div>}
           <div className="flex flex-wrap gap-3 mt-7">
-            <Button disabled={!!pending} type="submit">
+            <Button
+              disabled={!!pending || (guest && !turnstileToken)}
+              type="submit"
+            >
               {pending === "generate"
                 ? "Preparing your plan…"
                 : "Create my seven-day plan"}
               <ArrowRight size={16} aria-hidden="true" />
             </Button>
-            <Button
-              type="button"
-              variant="outline"
-              disabled={!!pending}
-              onClick={() => void save(false)}
-            >
-              Save answers for later
-            </Button>
+            {!guest && (
+              <Button
+                type="button"
+                variant="outline"
+                disabled={!!pending}
+                onClick={() => void save(false)}
+              >
+                Save answers for later
+              </Button>
+            )}
           </div>
         </form>
       ) : (
@@ -446,7 +504,7 @@ export function AdvisorClient({ initial }: { initial: Data }) {
                         type="checkbox"
                         aria-label={`Complete: ${task.title}`}
                         checked={state.completed}
-                        disabled={!!pending}
+                        disabled={guest || !!pending}
                         onChange={async (e) => {
                           const next = e.target.checked;
                           setPending(state.id);
@@ -524,20 +582,33 @@ export function AdvisorClient({ initial }: { initial: Data }) {
                       <p className="text-sm muted">
                         {task.activityToRecord.replace(/^Record:\s*/i, "")}
                       </p>
-                      <Button
-                        type="button"
-                        variant="outline"
-                        disabled={!!pending}
-                        onClick={() => void assistance(state.id)}
-                      >
-                        <Sparkles size={15} aria-hidden="true" />
-                        Help me with this task
-                      </Button>
+                      {guest ? (
+                        <Link href="/guest/claim" className="text-sm underline">
+                          Save plan for additional AI task help
+                        </Link>
+                      ) : (
+                        <Button
+                          type="button"
+                          variant="outline"
+                          disabled={!!pending}
+                          onClick={() => void assistance(state.id)}
+                        >
+                          <Sparkles size={15} aria-hidden="true" />
+                          Help me with this task
+                        </Button>
+                      )}
                     </details>
                   </article>
                 );
               })}
             </div>
+            {guest && (
+              <p className="mt-4 text-sm">
+                <Link href="/guest/claim" className="underline">
+                  Save your plan to track completed tasks
+                </Link>
+              </p>
+            )}
             <p className="text-xs muted mt-4">
               Checkboxes track activities. Replies, trials and paying customers
               are separate outcomes.
@@ -566,15 +637,21 @@ export function AdvisorClient({ initial }: { initial: Data }) {
             </details>
           </section>
           <div className="advisor-help-trigger">
-            <Button
-              type="button"
-              variant="outline"
-              disabled={!!pending}
-              onClick={() => void assistance()}
-            >
-              <Sparkles size={16} aria-hidden="true" />
-              Explain this recommendation
-            </Button>
+            {guest ? (
+              <Link href="/guest/claim" className="button button-outline">
+                Save plan for additional AI help
+              </Link>
+            ) : (
+              <Button
+                type="button"
+                variant="outline"
+                disabled={!!pending}
+                onClick={() => void assistance()}
+              >
+                <Sparkles size={16} aria-hidden="true" />
+                Explain this recommendation
+              </Button>
+            )}
             <span className="text-xs muted">
               Ask when you need it. Your saved plan stays in place.
             </span>
@@ -606,19 +683,21 @@ export function AdvisorClient({ initial }: { initial: Data }) {
               <p className="whitespace-pre-wrap mt-4">{help.answer}</p>
             </section>
           )}
-          <AdvisorWeekly
-            key={data.strategy!.id}
-            productId={data.productId}
-            planId={data.strategy!.id}
-            tasks={data.strategy!.tasks}
-            current={s}
-            onResultsSaved={async () => {
-              const response = await fetch(endpoint, { cache: "no-store" });
-              const latest = await response.json();
-              if (!response.ok) throw new Error(latest.error);
-              setData(latest);
-            }}
-          />
+          {!guest && (
+            <AdvisorWeekly
+              key={data.strategy!.id}
+              productId={data.productId}
+              planId={data.strategy!.id}
+              tasks={data.strategy!.tasks}
+              current={s}
+              onResultsSaved={async () => {
+                const response = await fetch(endpoint, { cache: "no-store" });
+                const latest = await response.json();
+                if (!response.ok) throw new Error(latest.error);
+                setData(latest);
+              }}
+            />
+          )}
         </>
       )}
     </div>

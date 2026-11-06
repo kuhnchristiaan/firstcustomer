@@ -1,3 +1,5 @@
+import { advisorConfig } from "@/modules/advisor/config";
+import { parseGuestAdvisor } from "@/modules/advisor/guest-contract";
 import { strategyEnabled } from "@/modules/strategy/feature";
 import { db } from "@/lib/db";
 import { AppError } from "@/lib/errors";
@@ -88,6 +90,7 @@ export async function reserveGuestAnalysis(
   token: string | undefined,
   input: string,
   ipHash: string,
+  advisor?: { cost: number; model: string },
 ) {
   const e = guestConfig();
   const settings = config();
@@ -110,7 +113,7 @@ export async function reserveGuestAnalysis(
           "Your strategy is already saved. Open it from your workspace.",
           409,
         );
-      if (session.expiresAt.getTime() - Date.now() < 150000)
+      if (session.expiresAt.getTime() - Date.now() < (advisor ? 180000 : 150000))
         throw new AppError(
           "This guest session is about to expire. Please try again after it expires.",
           409,
@@ -193,14 +196,38 @@ export async function reserveGuestAnalysis(
         where: { id: session.id },
         data: { websiteUrl },
       });
+      if (advisor) {
+        const a = advisorConfig();
+        const key = `advisor:daily:${day}`;
+        await tx.$executeRaw`INSERT INTO "UsageBucket" ("key","count","expiresAt") VALUES (${key},0,${expiry}) ON CONFLICT ("key") DO NOTHING`;
+        await tx.$queryRaw`SELECT key FROM "UsageBucket" WHERE key=${key} FOR UPDATE`;
+        const bucket = await tx.usageBucket.findUniqueOrThrow({
+          where: { key },
+        });
+        const micros = Math.ceil(advisor.cost * 1e6);
+        if (bucket.count + micros > a.ADVISOR_DAILY_USD * 1e6)
+          throw new AppError(
+            "The advisor's daily spending allowance has been reserved. Try tomorrow.",
+            429,
+          );
+        await tx.usageBucket.update({
+          where: { key },
+          data: { count: { increment: micros } },
+        });
+      }
       const run = await tx.analysisRun.create({
         data: {
           guestSessionId: session.id,
           status: "RUNNING",
-          leaseExpiresAt: new Date(now.getTime() + 140000),
-          provider: settings.MOCK_ANALYSIS === "true" ? "mock" : "openai",
-          model:
-            settings.MOCK_ANALYSIS === "true"
+          leaseExpiresAt: new Date(now.getTime() + (advisor ? 170000 : 140000)),
+          provider: advisor
+            ? "guest-advisor"
+            : settings.MOCK_ANALYSIS === "true"
+              ? "mock"
+              : "openai",
+          model: advisor
+            ? advisor.model
+            : settings.MOCK_ANALYSIS === "true"
               ? "fixture-v1"
               : settings.OPENAI_MODEL,
         },
@@ -286,11 +313,18 @@ export async function claimGuest(
         const run = await tx.analysisRun.findFirstOrThrow({
           where: {
             guestSessionId: session.id,
-            productId: session.claimedProductId,
+            OR: [
+              { productId: session.claimedProductId },
+              { productId: null, provider: "guest-advisor" },
+            ],
             status: "SUCCEEDED",
           },
         });
-        return { productId: session.claimedProductId!, analysisId: run.id };
+        return {
+          productId: session.claimedProductId!,
+          analysisId: run.id,
+          advisor: run.provider === "guest-advisor",
+        };
       }
       const run = await tx.analysisRun.findFirst({
         where: {
@@ -302,12 +336,15 @@ export async function claimGuest(
       });
       if (!run?.output)
         throw new AppError("Your strategy is not ready to save yet.", 409);
+      const compact =
+        run.provider === "guest-advisor" ? parseGuestAdvisor(run.output) : null;
       const name =
-        typeof run.output === "object" &&
+        compact?.profile.identity.name ??
+        (typeof run.output === "object" &&
         !Array.isArray(run.output) &&
         typeof run.output.businessName === "string"
           ? run.output.businessName
-          : new URL(session.websiteUrl).hostname;
+          : new URL(session.websiteUrl).hostname);
       await tx.$queryRaw`SELECT id FROM "Organization" WHERE id=${t.organizationId} FOR UPDATE`;
       const product = await tx.product.upsert({
         where: {
@@ -323,10 +360,71 @@ export async function claimGuest(
         },
         update: {},
       });
-      await tx.analysisRun.update({
-        where: { id: run.id },
-        data: { productId: product.id },
-      });
+      if (compact) {
+        const existing = await tx.advisorWorkspace.findUnique({
+          where: { productId: product.id },
+          include: { strategies: { take: 1 } },
+        });
+        if (existing?.strategies.length)
+          throw new AppError(
+            "This product already has a saved advisor. Your guest plan has not overwritten it.",
+            409,
+          );
+        const workspace = await tx.advisorWorkspace.upsert({
+          where: { productId: product.id },
+          create: {
+            productId: product.id,
+            founderContext: compact.context,
+            profile: compact.profile as unknown as Prisma.InputJsonValue,
+            sources: compact.sources as unknown as Prisma.InputJsonValue,
+            version: 1,
+          },
+          update: {
+            founderContext: compact.context,
+            profile: compact.profile as unknown as Prisma.InputJsonValue,
+            sources: compact.sources as unknown as Prisma.InputJsonValue,
+            version: { increment: 1 },
+          },
+        });
+        const strategy = await tx.advisorStrategy.create({
+          data: {
+            workspaceId: workspace.id,
+            version: 1,
+            founderContext: compact.context,
+            output: compact.strategy as unknown as Prisma.InputJsonValue,
+            fixture: compact.fixture,
+            tasks: {
+              create: compact.strategy.tasks.map((_, position) => ({
+                position,
+              })),
+            },
+          },
+        });
+        await tx.advisorOperation.create({
+          data: {
+            workspaceId: workspace.id,
+            kind: "strategy",
+            requestKey: `guest-${run.id}`,
+            status: "SUCCEEDED",
+            leaseExpiresAt: run.leaseExpiresAt,
+            createdAt: run.startedAt,
+            completedAt: run.completedAt,
+            model: run.model,
+            reservedUsd: Math.min(
+              guestConfig().GUEST_MAX_COST_USD,
+              advisorConfig().strategyCeiling,
+            ),
+            estimatedCost: run.estimatedCost,
+            usage: compact.usage,
+            output: { strategyId: strategy.id },
+          },
+        });
+      } else {
+        await tx.analysisRun.update({
+          where: { id: run.id },
+          data: { productId: product.id },
+        });
+      }
       await tx.websiteSource.updateMany({
         where: { analysisId: run.id, productId: null },
         data: { productId: product.id },
@@ -344,12 +442,16 @@ export async function claimGuest(
         data: {
           organizationId: t.organizationId,
           actorId: t.userId,
-          action: "GUEST_REPORT_CLAIMED",
+          action: compact ? "GUEST_ADVISOR_CLAIMED" : "GUEST_REPORT_CLAIMED",
           resourceId: run.id,
         },
       });
       await metric("report_claimed", tx);
-      return { productId: product.id, analysisId: run.id };
+      return {
+        productId: product.id,
+        analysisId: run.id,
+        advisor: Boolean(compact),
+      };
     },
     { maxWait: 10000, timeout: 15000 },
   );

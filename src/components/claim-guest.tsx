@@ -18,7 +18,11 @@ export function ClaimGuest() {
         });
         const data = await response.json();
         if (!response.ok) throw new Error(data.error);
-        router.replace(`/products/${data.productId}?run=${data.analysisId}`);
+        router.replace(
+          data.advisor
+            ? `/products/${data.productId}/advisor`
+            : `/products/${data.productId}?run=${data.analysisId}`,
+        );
         router.refresh();
       } catch (e) {
         setError(
@@ -34,12 +38,12 @@ export function ClaimGuest() {
       </h1>
       <p role="status" className="my-5 text-sm leading-7 muted">
         {error ||
-          "We are moving the report you already generated into your private workspace. No new AI analysis will run."}
+          "We are moving the plan you already generated into your private workspace. No new AI analysis will run."}
       </p>
       {error && (
         <div className="flex gap-5 text-sm underline">
-          <Link href="/guest/report">Return to guest report</Link>
-          <Link href="/dashboard">Open workspace</Link>
+          <Link href="/guest/advisor">Return to guest advisor</Link>
+          <Link href="/advisor">Open advisor</Link>
         </div>
       )}
     </div>
