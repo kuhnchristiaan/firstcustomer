@@ -206,6 +206,11 @@ describe.skipIf(!connection)("strategy revision PostgreSQL integration", () => {
     edited.messages[0].body = "We reduce admin time by 50%.";
     if (edited.schemaVersion === "3.0")
       edited.intelligence.firstMoveTradeoff = "We are POPIA-compliant.";
+    await expect(approveRevision(a, second, edited)).rejects.toMatchObject({ status: 400 });
+    expect((await readRevisions(a)).revisions).toHaveLength(2);
+    edited.messages[0].body = "How do you currently handle this workflow, and would a relevant example be useful?";
+    if (edited.schemaVersion === "3.0")
+      edited.intelligence.firstMoveTradeoff = "This route tests buyer interest; paid acquisition needs a verified budget.";
     const third = await approveRevision(a, second, edited);
     const final = await readRevisions(a);
     expect(final.revisions).toHaveLength(3);

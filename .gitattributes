@@ -6,3 +6,8 @@ docs/sol-stabilization/*-output.txt -text -whitespace
 docs/senja-committed-acceptance/*-output.txt -text -whitespace
 docs/senja-continuation/**/*-output.txt -text -whitespace
 docs/senja-continuation/**/output.txt -text -whitespace
+
+# Preserve original historical evidence bytes across Windows and Linux.
+docs/milestone-6-live-2026-11-05/** -text -whitespace
+docs/milestone-6-2-live-2026-11-05/** -text -whitespace
+docs/model-intelligence-benchmark-2026-11-05/** -text -whitespace

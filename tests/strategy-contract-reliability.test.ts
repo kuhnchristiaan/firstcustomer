@@ -395,7 +395,7 @@ it("preserves every original benchmark artifact hash", () => {
   for (const [p, hash] of Object.entries(load("evidence-sha256.json")))
     expect(
       createHash("sha256")
-        .update(readFileSync(`${root}/${p}`))
+        .update(readFileSync(`${root}/${p.split("\\").join("/")}`))
         .digest("hex"),
     ).toBe(hash);
 });

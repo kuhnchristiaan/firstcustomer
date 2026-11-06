@@ -500,6 +500,7 @@ export async function approveRevision(
               };
             })()
           : null;
+      try {
       output = validateStrategy(
         {
           ...checked.value,
@@ -514,6 +515,9 @@ export async function approveRevision(
         },
         founderSchema.parse(revision.founderContext),
       );
+      } catch {
+        throw new AppError("Replace unsupported claims with complete, evidence-safe text before approving.", 400);
+      }
       const latest = await tx.strategyRevision.findFirst({
         where: { analysisId: base.id },
         orderBy: { version: "desc" },

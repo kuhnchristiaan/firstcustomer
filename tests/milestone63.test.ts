@@ -399,7 +399,7 @@ it("historic 1.0 and actual rejected 1.1 candidates remain readable; original ev
   for (const [path, hash] of Object.entries(hashes))
     expect(
       createHash("sha256")
-        .update(readFileSync(`${root}/${path}`))
+        .update(readFileSync(`${root}/${path.split("\\").join("/")}`))
         .digest("hex"),
     ).toBe(hash);
 });
