@@ -237,10 +237,16 @@ export async function generateAdvisor(
     `
 This is the compact acquisition advisor. Use task titles for scanning, with full instructions separately. Allocate at most 85% of available weekly minutes; reserve the rest for interruptions and follow-up. Do not fill time simply to use it all. Unknown weekly time: explicitly assume 60 available minutes, with headroom.
 channel.accessCheck must be an executable first-step check that suitable buyers and permitted free contact/publication routes actually exist. channel.fallback must state what to do if the access check fails: a concrete alternative access route for the SAME buyer, conditional on permission and resources. It is not a second parallel strategy or an automatic change to the saved strategy. Put access validation early in the task sequence. Explain how qualified interest could lead to confirmed payment for the actual SaaS; if the paid offer is unknown, make its verification explicit. Do not invent free-to-paid restrictions. Avoid repetitive instructions and repeated labels.`;
+  const practicalInstructions = `${instructions}
+Choose an initial route where the founder can identify suitable prospects and reasonably obtain exposure within the week. A single unconfirmed group, moderator or association approval is a fragile dependency: time-box the access check, specify what the founder can observe, and give a genuinely distinct, permitted fallback for the same buyer, such as a relevant public business contact route where appropriate. If neither route is accessible, pause and record the blocker rather than infer rejection. Do not assume any particular platform grants access.
+For an outreach or invitation task, include a short editable example in that task's instruction: a relevant question, an honest description grounded in supplied evidence, and a clear low-pressure next step. Use placeholders for facts the founder must establish. Avoid invented personal observations, outcomes or product guarantees. For other channels give an equally concrete example of the initial action or asset.
+Use supplied attributed or founder-confirmed offer information. If pricing or purchase terms are unknown, ask the founder to confirm the actual offer and payment path; do not imply a pricing model, feature, plan or volume threshold that the evidence does not establish. Keep unknowns distinct from product claims.
+Describe an observation window and decision rules based on the quality of evidence, access, objections, activation barriers and a credible buying next step. Do not present arbitrary numbers of replies, conversations or activations as required success thresholds or benchmarks. A single informative conversation can inform an adjustment; silence and small samples do not establish absence of demand. Keep confirmed payments separate from expressions of interest and activation.
+Estimate each task's actual work, including research, permission delays, individual responses, onboarding and payment follow-through. Scale response volume to the available minutes. Prioritize the strongest opportunity and defer additional conversations or onboarding when time is unavailable; do not promise several detailed interactions in a few minutes. Preserve the founder's budget and leave the stated time headroom.`;
   const strategy = await call(
     advisorSchema(statementIds),
     "advisor_strategy",
-    instructions,
+    practicalInstructions,
     {
       product: {
         ...generationProductContext(profile),

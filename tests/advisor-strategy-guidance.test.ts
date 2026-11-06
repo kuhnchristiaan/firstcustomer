@@ -1,0 +1,27 @@
+import { it, expect, vi, afterEach } from "vitest";
+import { readFileSync } from "node:fs";
+const transport = vi.hoisted(() => ({ create: vi.fn() }));
+vi.mock("openai", () => ({ default: class { responses = { create: transport.create }; } }));
+import { generateAdvisor, type UsageEntry } from "@/modules/advisor/provider";
+const read = (name: string) => JSON.parse(readFileSync(`docs/stage-2b-live-smoke/${name}`, "utf8"));
+afterEach(() => { vi.unstubAllEnvs(); vi.resetAllMocks(); });
+it("sends the revised commercial guidance while preserving evidence, founder resources and the original plan contract", async () => {
+  for (const [k,v] of Object.entries({ ADVISOR_ENABLED:"true", ADVISOR_FIXTURES:"false", ADVISOR_LIVE_ENABLED:"true", OPENAI_API_KEY:"mock-only", DATABASE_URL:"postgresql://test@localhost/test", APP_URL:"http://localhost:3100", NEON_AUTH_BASE_URL:"http://localhost/auth", NEON_AUTH_COOKIE_SECRET:"test-cookie-secret-longer-than-32-characters" })) vi.stubEnv(k,v);
+  const saved = read("database-evidence.json");
+  const plan = read("2-advisor_strategy-output.txt");
+  const context = saved.workspace.founderContext;
+  transport.create.mockResolvedValue({ status:"completed", model:"gpt-6.1-sol", output_text:JSON.stringify(plan), usage:{input_tokens:100,output_tokens:100,output_tokens_details:{reasoning_tokens:0}} });
+  const usage: UsageEntry[] = [];
+  const result = await generateAdvisor({url:"https://senja.io/",context,profile:saved.workspace.profile,sources:saved.workspace.sources}, usage, async () => { throw Error("existing evidence must not be replaced"); });
+  expect(result).toEqual(plan);
+  expect(transport.create).toHaveBeenCalledTimes(1);
+  const request = transport.create.mock.calls[0][0];
+  const instructions = request.input[0].content;
+  expect(instructions).toContain("genuinely distinct, permitted fallback");
+  expect(instructions).toContain("short editable example");
+  expect(instructions).toContain("do not imply a pricing model");
+  expect(instructions).toContain("Do not present arbitrary numbers");
+  expect(instructions).toContain("defer additional conversations or onboarding");
+  expect(JSON.parse(request.input[1].content).founderContext).toEqual(context);
+  expect(request.model).toBe("gpt-6.1-sol");
+});
