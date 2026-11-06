@@ -1,0 +1,123 @@
+{
+  "id": "resp_0cd76817ebb24be0006aecd174f41887d2a10f9fcafa6039d2",
+  "object": "response",
+  "created_at": 1793905012,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793905016,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 700,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_0cd76817ebb24be0006aecd176014487d2bdb473ded7486699",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq7NF5QgJXg6iKtFzVzdmrL533trd5mWWegJDwBJp3NIqTIKvrHdAqI8-a_5KHAtcEXoD8sXb9GiChfcGWuwO3Ua6q8WHKawDu_ttaPn7nEiZGmUGkIiHVPCSRAM1HNro_gLYTlDVQr9TqQ_tYGYVvVXJUdGk0wy5Ldo71URfuHSWkSvI8ZpHDuBz4vS9mEYteh1YVMkP0a2tyWTG2WkMNHAXujPsXx_hingzKA24fDszITi3Wx1bpOHVf31NrT2lAZVvI9cStBia5OWJ7jnldhagkx3_0NwAp3Sk6wTjiFTJ6hSoK7JJoeRSGtOTybDgFMeqWpgnFXY-NVZD_AmmlhT-rUHvpfb9KBonBu-70xJ7j9WluP2jebqSny1UuzieH--AjZOoRbAhO-rmNpeLj2rCrmmYHLDMmndkOzpZimw_vnknFIBFoPy-jaOpTxoE3dq7vPq8SiDOmn6Ybw_bhVUP_nTJCAbJ0myQbOwPu1IMKObHAvNF76HekkQ66GuqK93xZf8lBKKnl9gFf_nSb4J_pxDD1pDQ-DWXeWG83sWz2qnn2DFy6G4snQbjGKpn9VxRryGCDr-NKWylrzmdJgo_Y2FzG0hmtEu_3PN8Tn8N0HodAC7vXYcTvaSv7JWbr48ntRU2d0oZ4y3wa_gH4hltT7zAhmxcPtPEmpUFLIyQae9Q_6Ly9wmvtsi0W_ooggsW1VjYifOuBgeCyISpZyRGUgKc8Gptj9z9FkxHVw5pUOQdpfAHQ6TscRdtrProSsc-EWDTSWrNYszszojNKSmedwHW7AMn-hHQR3zNu_lRGFdsxP_3rYomxLAeUiZhBlzbLVcfTRZLv33_ZSka1ybDqU3xXt1pfHRcrh9CKS2Xs_EXNvbk_2oCJFrUnRFKfViulSfuvH3OGNmnOijE3KRPELeTx-WoJ8b4wECls9uEkoGEeALhFfLj53PXuY2HCW_lcZOMdUQrj757tNBo1cOcdOb47KwuO2vbGhTJuGPkfTuL1-nFkQbRJdB1Y2VP9DlEa_p2NJBQjFM85WixT1NvFAQI9dZJyiPVJleCIoJUYI_4L51-oBu4lHcZamMzc0OmAzDm4ie92xv1vlPJQRwday_f5kuuai_VvWXEAfmceKnh7XUskUlsFk0W8ge5FABzqEmPDq2UMsfepI_lAzXfrpcN9Ts27CEDICjXL9zyYt5MsmNTXbXzR-pCHU6IL0v-wX8vCBCfCVdqCdXMNyiSXWbd3jRZYjKe4vOfpesPpiI48RF0tPmYEhbvzPUEiOQILKD5n1o9lAQytxg-llvBVN8dCzFZuh9nP3LhkgNTVet73-Ggqw-Rm2rV0MRtUuMdSwE-hzklKt20D4CTjfdlwCILEAHqZrITQhv4MbQI_4Idbqn_azAgR4ambWfCF48I7dEHLwsF-VetDGfW89b1lxUEW_8kqUQkUA_XWU2Uy-ZI3qOstkR56JYtFcUXWVDz8RboFO_CHhK38mwopOfHu-cMZ-jealKausKtZpJ5ADTB8g66oTJDAigTNIVOu3qbAokmN18JC_xDyEsW2iPRWRCulc9mTW78BNaYbENNQsoXhPbiqEBiN06nfUo1lRg9Udzo2CzKEBk2KvoNndXMSolEA3aZQJHA0EKz2hxj1zBgkqr-SktKTupiJ8sal8V1-ycdAs2xudHS93sdahB35ZpdJRc2gHxOui74Ey8B5PX3QVKPSUuXA6u73mtECWi-wn889yFnp2czn15dop6DlWC9MGhcCjItCN7pDBRb5p9CF3y9I_DSi-Ub94Aj396O5wVjq9DSd05mLeAxfjm7-sw==",
+      "summary": []
+    },
+    {
+      "id": "msg_0cd76817ebb24be0006aecd177020887d299fcae33ca1da53f",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"firstExperiment.continueWhen\":\"Continue when an engaged founder confirms a current collection bottleneck, creates a Senja form and receives a genuine customer testimonial for the page update, then takes an observable step toward purchase through Senja’s verified payment path. Treat stated interest or agreement to try as learning,\" }"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "quality_repair",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "firstExperiment.continueWhen": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 300
+          }
+        },
+        "required": [
+          "firstExperiment.continueWhen"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 2007,
+    "input_tokens_details": {
+      "cache_write_tokens": 2004,
+      "cached_tokens": 0
+    },
+    "output_tokens": 99,
+    "output_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "total_tokens": 2106
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"firstExperiment.continueWhen\":\"Continue when an engaged founder confirms a current collection bottleneck, creates a Senja form and receives a genuine customer testimonial for the page update, then takes an observable step toward purchase through Senja’s verified payment path. Treat stated interest or agreement to try as learning,\" }"
+}

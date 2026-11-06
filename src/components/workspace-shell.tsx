@@ -7,24 +7,38 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import type { ReactNode } from "react";
+import { advisorEnabled } from "@/modules/advisor/config";
 export function WorkspaceShell({
   children,
   product = false,
+  advisor = false,
 }: {
   children: ReactNode;
   product?: boolean;
+  advisor?: boolean;
 }) {
   return (
-    <div className="container workspace-shell">
+    <div
+      className={`container workspace-shell${advisor ? " advisor-shell" : ""}`}
+    >
       <aside className="workspace-sidebar no-print">
         <nav aria-label="Workspace">
-          <Link href="/dashboard" aria-current={!product ? "page" : undefined}>
+          {advisorEnabled() && (
+            <Link href="/advisor" aria-current={advisor ? "page" : undefined}>
+              <LayoutDashboard size={17} />
+              Acquisition advisor
+            </Link>
+          )}
+          <Link
+            href="/dashboard"
+            aria-current={!product && !advisor ? "page" : undefined}
+          >
             <LayoutDashboard size={17} />
             Overview
           </Link>
           <Link
             href="/dashboard#products"
-            aria-current={product ? "page" : undefined}
+            aria-current={product && !advisor ? "page" : undefined}
           >
             <Layers2 size={17} />
             Products & strategies

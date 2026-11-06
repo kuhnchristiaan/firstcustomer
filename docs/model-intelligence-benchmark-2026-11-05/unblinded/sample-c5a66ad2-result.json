@@ -1,0 +1,31 @@
+{
+  "site": "senja",
+  "model": "gpt-6.1-sol",
+  "label": "sample-c5a66ad2",
+  "requestedModel": "gpt-6.1-sol",
+  "resolvedModel": "gpt-6.1-sol",
+  "status": "completed",
+  "incompleteDetails": null,
+  "latencyMs": 66484,
+  "actualInput": 1161,
+  "actualOutput": 2178,
+  "reasoningTokens": 516,
+  "cachedInput": 0,
+  "cacheWrites": 1158,
+  "estimatedCostUsd": 0.024681,
+  "serviceTier": "default",
+  "jsonValid": true,
+  "schemaValid": true,
+  "assembled": true,
+  "completeStrategy": true,
+  "diagnostics": {
+    "deterministicFindings": [
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.resources.assumedMinutes",
+        "reason": "Activity scope leaves insufficient assumed time for qualification, preparation and replies"
+      }
+    ],
+    "publication": "Not attempted; diagnostic assembly only"
+  }
+}

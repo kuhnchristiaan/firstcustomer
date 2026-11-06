@@ -1,0 +1,55 @@
+{
+  "approvedProtocolSha256": "1870bbc6d538254c00dc326bcf453fe77b5938bba0c5eb1ba6da0c9db9b0851a",
+  "calls": 2,
+  "retries": 0,
+  "repairs": 0,
+  "paidGraderCalls": 0,
+  "ceilingUsd": 0.4,
+  "usageBasedEstimatedTotalUsd": 0.029152,
+  "conservativeRecordedUpperUsd": 0.029155,
+  "uncertainReservedUsd": 0,
+  "pricingPerMillionUsd": {
+    "cachedInput": 0.1,
+    "ordinaryInput": 2,
+    "cacheWrite": 2.5,
+    "outputIncludingReasoning": 10
+  },
+  "costNote": "Calculated from actual API-reported usage and approved Standard model rates; not an invoice. Reasoning is included in output tokens and is not charged twice.",
+  "cases": [
+    {
+      "product": "senja",
+      "model": "gpt-6.1-sol",
+      "status": "completed",
+      "inputTokens": 1226,
+      "ordinaryInputTokens": 3,
+      "cacheWriteTokens": 1223,
+      "cachedInputTokens": 0,
+      "outputTokensIncludingReasoning": 1231,
+      "reasoningTokens": 349,
+      "latencyMs": 38144,
+      "usageBasedEstimatedCostUsd": 0.0153735,
+      "conservativeRecordedCostUpperUsd": 0.015375,
+      "words": 512,
+      "plannedMinutes": 180,
+      "plannedDirectSpendUsd": 0
+    },
+    {
+      "product": "tally",
+      "model": "gpt-6.1-sol",
+      "status": "completed",
+      "inputTokens": 1284,
+      "ordinaryInputTokens": 3,
+      "cacheWriteTokens": 1281,
+      "cachedInputTokens": 0,
+      "outputTokensIncludingReasoning": 1057,
+      "reasoningTokens": 184,
+      "latencyMs": 29741,
+      "usageBasedEstimatedCostUsd": 0.0137785,
+      "conservativeRecordedCostUpperUsd": 0.01378,
+      "words": 500,
+      "plannedMinutes": 180,
+      "plannedDirectSpendUsd": 0
+    }
+  ],
+  "reviewStatus": "Pending owner commercial review. Both strategies exceed the 250-450 word target and remain unchanged."
+}

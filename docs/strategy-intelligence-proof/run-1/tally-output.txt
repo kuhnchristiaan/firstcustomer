@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "advisor-proof/1",
+  "buyer": {
+    "segment": "Owner-operators of small web-design agencies with a live client-intake form project.",
+    "buyingProblemOrTrigger": "They need to publish a professional inquiry form for an upcoming site launch without custom coding.",
+    "whyChosen": "Owners can select software directly, and an active launch supplies urgency. Contact collection and no-code building match the stated product. Prioritize them over general survey creators because the form supports their revenue workflow, although willingness to pay remains unproven."
+  },
+  "channel": {
+    "name": "Helpful public replies in Reddit’s r/web_design",
+    "whereAndHow": "Check community rules, then search recent posts for “client intake,” “contact form,” and “form builder.” Select explicit agency-owner requests connected to current projects; disclose affiliation and reply only where promotion is permitted.",
+    "whyChosen": "Existing requests expose immediate problems without assuming an audience or relationships. This is preferable to cold email within three hours and no budget: less time goes into finding addresses, and advice answers an expressed need. Suitable threads and permission are not yet verified."
+  },
+  "tasks": [
+    {
+      "instruction": "Check the live SaaS signup, publishing, and purchase paths. Identify actual paid capabilities and prices before proposing any payment test.",
+      "activityToRecord": "Record the free-to-paid boundary, purchase steps, and unresolved offer questions.",
+      "minutes": 30,
+      "directCost": 0
+    },
+    {
+      "instruction": "Read subreddit rules and inspect up to 12 relevant threads from the past 30 days using the specified searches.",
+      "activityToRecord": "Record relevant requests, owner/project evidence, dates, and posting restrictions; do not infer demand from unrelated posts.",
+      "minutes": 35,
+      "directCost": 0
+    },
+    {
+      "instruction": "Build one fictional agency-inquiry example and write up to three tailored public replies addressing eligible requests. Include a disclosed example link only if allowed; otherwise do not promote.",
+      "activityToRecord": "Save preparation, published replies, and any access barriers.",
+      "minutes": 45,
+      "directCost": 0
+    },
+    {
+      "instruction": "Monitor replies during the week, answer questions publicly, and invite interested owners to try their own form. Discuss payment only for a verified relevant paid offer.",
+      "activityToRecord": "Separate replies, qualified interest, activation, repeated use, and confirmed SaaS payment.",
+      "minutes": 45,
+      "directCost": 0
+    },
+    {
+      "instruction": "Review results and choose whether to repeat, change the example, or reconsider access.",
+      "activityToRecord": "Summarize objections, observable funnel steps, and the next decision.",
+      "minutes": 25,
+      "directCost": 0
+    }
+  ],
+  "resources": {
+    "availableMinutes": 180,
+    "experimentBudget": 0,
+    "currency": "USD",
+    "basis": "The hypothetical context supplies three hours weekly, zero monthly budget, no paying customers, and no previous channels. All five tasks fit the next seven days."
+  },
+  "successCriteria": {
+    "evidenceToCollect": "Activation means a published form receiving its first genuine inquiry; adoption means subsequent real use. Record these separately from replies and verified payment.",
+    "continueWhen": "Provisionally repeat if two owners describe live needs and one activates; this supports learning, not proven monetization.",
+    "adjustWhen": "Relevant replies without activation warrant examining setup friction or example relevance.",
+    "reconsiderWhen": "No permitted relevant threads challenges channel access. Consistent lack of fit challenges buyer choice; silence after one week does not disprove demand."
+  },
+  "importantUnknowns": [
+    "Does the actual paid offer solve a problem these owners would purchase beyond unlimited free forms?",
+    "Are relevant owner requests accessible under current subreddit rules?"
+  ],
+  "productEvidenceIds": [
+    "s1",
+    "s2"
+  ]
+}

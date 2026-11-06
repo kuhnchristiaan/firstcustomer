@@ -460,7 +460,7 @@ it("requires complete structured experiment semantics and keeps old genuine evid
   for (const [file, hash] of Object.entries(manifest))
     expect(
       createHash("sha256")
-        .update(readFileSync(`${root}/${file}`))
+        .update(readFileSync(`${root}/${file.split("\\").join("/")}`))
         .digest("hex"),
     ).toBe(hash);
 });

@@ -1,0 +1,44 @@
+{
+  "accepted": false,
+  "failure": {
+    "name": "Error",
+    "reason": "quality_failed",
+    "qualityFailure": {
+      "code": "quality_failed",
+      "issues": [
+        {
+          "section": "firstExperiment.resources.constraints",
+          "reason": "Separate resource assumptions from operating guidance; repeated compound wording obscures later-week approval requirements."
+        }
+      ],
+      "repairFeasible": false
+    },
+    "message": "The provider returned an incomplete or invalid report."
+  },
+  "ledger": {
+    "ceilingUsd": 0.3,
+    "actualEstimatedUsd": 0.2253167,
+    "conservativeKnownUsd": 0.2383175,
+    "uncertainReservedUsd": 0,
+    "newPaidCalls": 1
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "attributed_product_profile"
+    },
+    {
+      "ordinal": 2,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "acquisition_strategy"
+    },
+    {
+      "ordinal": 3,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "quality_repair"
+    }
+  ],
+  "head": "98ab24cbd48a9e2907f3332a028cc26c2b1ea323",
+  "note": "First three responses reused byte-for-byte after exact request matching. Only final review dispatched. No additional repair or altered decisions."
+}

@@ -1,0 +1,766 @@
+# Accepted genuine Senja report
+
+Full structured report, including attribution, plan and quality review:
+
+```json
+{
+  "schemaVersion": "1.1",
+  "businessName": "Senja",
+  "overview": {
+    "text": "Senja - Collect, Manage and Share Testimonials",
+    "confidence": "Verified",
+    "sources": [
+      "https://senja.io/"
+    ]
+  },
+  "offerings": [
+    {
+      "text": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials.",
+      "confidence": "Verified",
+      "sources": [
+        "https://senja.io/"
+      ]
+    },
+    {
+      "text": "✓Import from 30+ platforms or CSV",
+      "confidence": "Verified",
+      "sources": [
+        "https://senja.io/"
+      ]
+    },
+    {
+      "text": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share.",
+      "confidence": "Verified",
+      "sources": [
+        "https://senja.io/"
+      ]
+    },
+    {
+      "text": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+      "confidence": "Verified",
+      "sources": [
+        "https://senja.io/"
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "text": "Testimonials are scattered when the owner updates a course sales page; validate whether a live page update creates urgent proof-collection work.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Campaign teams need relevant customer proof repeatedly; validate which upcoming campaign is blocked by finding or collecting testimonials.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Client testimonial collection delays delivery; validate whether the agency controls collection and publishing rather than merely requesting assets.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "valueProposition": {
+    "text": "For course owners collecting or finding student proof for a sales-page update, Senja offers testimonial collection, import and centralized reuse; its fit and commercial value still need buyer validation.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  "differentiators": [
+    {
+      "text": "Comparative advantage is unvalidated. Test Owner-led course businesses can evaluate Senja against a current sales-page task and authorize purchase without cross-team approval. against the buyer's current workaround.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "idealCustomers": [
+    {
+      "text": "Owner-led course businesses",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Small SaaS marketing teams",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Multi-client marketing agencies",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "industries": [
+    {
+      "text": "Small businesses selling established paid courses",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "SaaS companies maintaining product and campaign pages",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Agencies managing client websites and campaigns",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "buyerPersonas": [
+    {
+      "text": "Course creator who controls the marketing budget",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Marketing lead with budget approval from the founder or finance",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Agency owner or delivery director",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "geographicFocus": {
+    "text": "Geography is unknown; check buyer access, language and purchasing requirements before outreach.",
+    "confidence": "Unknown",
+    "sources": []
+  },
+  "segments": [
+    {
+      "name": "Owner-led course businesses",
+      "industry": "Small businesses selling established paid courses",
+      "customerType": "Sales-assisted",
+      "buyerRoles": [
+        "Course creator who controls the marketing budget"
+      ],
+      "problems": [
+        "Testimonials are scattered when the owner updates a course sales page; validate whether a live page update creates urgent proof-collection work."
+      ],
+      "motivations": [
+        "Hypothesis to validate: willingness to resolve Testimonials are scattered when the owner updates a course sales page; validate whether a live page update creates urgent proof-collection work."
+      ],
+      "buyingSignals": [
+        "Research public course sites and use published business contact routes; the owner can evaluate and purchase directly, but willingness to pay needs validation."
+      ],
+      "priority": 1,
+      "evidence": {
+        "text": "Purchasing is simpler than a team evaluation, but infrequent launches may weaken recurring value; ask what they use today and what would justify paying. Research public course sites and use published business contact routes; the owner can evaluate and purchase directly, but willingness to pay needs validation. Owner-led course businesses can evaluate Senja against a current sales-page task and authorize purchase without cross-team approval. Risk: Launch-driven usage may not create enough recurring value to justify payment. Prefer the runner-up when: Small SaaS marketing teams become preferable when a reachable budget owner confirms recurring campaign-proof work and a clear approval path.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "name": "Small SaaS marketing teams",
+      "industry": "SaaS companies maintaining product and campaign pages",
+      "customerType": "Sales-assisted",
+      "buyerRoles": [
+        "Marketing lead with budget approval from the founder or finance"
+      ],
+      "problems": [
+        "Campaign teams need relevant customer proof repeatedly; validate which upcoming campaign is blocked by finding or collecting testimonials."
+      ],
+      "motivations": [
+        "Hypothesis to validate: willingness to resolve Campaign teams need relevant customer proof repeatedly; validate which upcoming campaign is blocked by finding or collecting testimonials."
+      ],
+      "buyingSignals": [
+        "Public company sites identify teams, but reaching the budget owner may require internal routing and a team evaluation."
+      ],
+      "priority": 2,
+      "evidence": {
+        "text": "Recurring workflow may support stronger willingness to pay, but approval is slower; ask who approves software and which recurring proof task has a budget. Public company sites identify teams, but reaching the budget owner may require internal routing and a team evaluation.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "name": "Multi-client marketing agencies",
+      "industry": "Agencies managing client websites and campaigns",
+      "customerType": "Sales-assisted",
+      "buyerRoles": [
+        "Agency owner or delivery director"
+      ],
+      "problems": [
+        "Client testimonial collection delays delivery; validate whether the agency controls collection and publishing rather than merely requesting assets."
+      ],
+      "motivations": [
+        "Hypothesis to validate: willingness to resolve Client testimonial collection delays delivery; validate whether the agency controls collection and publishing rather than merely requesting assets."
+      ],
+      "buyingSignals": [
+        "Agency sites offer public contact routes, but evaluation may require both agency and client approval."
+      ],
+      "priority": 3,
+      "evidence": {
+        "text": "Repeated client work could support payment, but permissions and workflow fit are uncertain; ask who owns the accounts and who would pay for Senja. Agency sites offer public contact routes, but evaluation may require both agency and client approval.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "buyingSignals": [
+    {
+      "text": "Potential qualification signal to investigate: Test whether owner-led course businesses with a current sales-page update struggle to collect or retrieve relevant testimonials. Confirm urgency and buying authority; demand is unverified.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "missingInformation": [
+    {
+      "text": "No market research or external verification was performed.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Senja's current paid offer, capabilities, price and checkout require verification.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Founder availability, product access, prospect access and existing-user data access are unconfirmed; none is assumed as an initial dependency beyond the stated resource assumption.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "SaaS monetization is unverified. Inspect Senja's current official offer, paid capabilities and checkout before proposing paid conversion; s4 supports a free starting point but does not establish paid terms.",
+      "confidence": "Unknown",
+      "sources": []
+    }
+  ],
+  "positioning": {
+    "text": "For course owners collecting or finding student proof for a sales-page update, Senja offers testimonial collection, import and centralized reuse; its fit and commercial value still need buyer validation.",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  "acquisitionChannels": [
+    {
+      "title": "Direct email",
+      "recommendation": {
+        "text": "Owner-led course businesses: Send researched emails to published business addresses, ask about testimonial workflows before offering evaluation, and respect opt-outs. Researched direct outreach can expose the owner's workflow and purchase authority without assuming existing traffic, users or community access. Tradeoff: Manual research limits reach and unsolicited messages may be ignored, but replies can reveal a concrete task sooner than waiting for asset discovery.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Use public course websites to identify owner-operated businesses, verify a relevant public observation and locate a published business contact route; ask about urgency rather than inferring it.",
+        "Verify Senja's official offer, then research an eligible course business and send the initial question through its published business email.",
+        "Activity cap: 6 Research eligible owner-led course businesses and send individually relevant business emails where an appropriate public route exists.",
+        "Provisional budget 90 min; planned 90 min: preparation 10, research 7/activity, execution 3/activity, responses 20. Zero direct spend. No weekly reset; re-scope further work. Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval.",
+        "Free/public tools: Public web search and company websites, Free email account."
+      ],
+      "successMetric": "Log contact source, delivery status, replies, current task, workaround, authority and buying conditions; track activation separately and label payment confirmed only with transaction evidence."
+    },
+    {
+      "title": "Template-led discovery",
+      "recommendation": {
+        "text": "Conditional alternative: A self-service testimonial-request template could support independent evaluation with less ongoing contact work. Barrier: Creating a useful asset takes upfront effort, and neither search traffic nor distribution access is established, so qualified evidence may arrive slowly. Prefer only when: Prefer this when relevant discovery traffic or a permitted distribution route is verified and buyers repeatedly request collection guidance.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Check public search results and accessible creator communities for recurring testimonial-request questions before building an asset."
+      ],
+      "successMetric": "Record evidence of this condition before switching: Prefer this when relevant discovery traffic or a permitted distribution route is verified and buyers repeatedly request collection guidance."
+    },
+    {
+      "title": "Community and ecosystem",
+      "recommendation": {
+        "text": "Conditional alternative: Use-case communities and course-platform ecosystems could expose repeated workflow questions and offer contextual access to buyers. Barrier: Participation and partner eligibility require verification, promotion may be restricted, and access-building can delay evidence compared with direct outreach. Prefer only when: Prefer this when relevant community participation or ecosystem distribution is permitted, or authorized user data identifies reachable active buyers.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Inspect public community rules and course-platform directory requirements, and ask whether authorized existing-user workflow evidence is available."
+      ],
+      "successMetric": "Record evidence of this condition before switching: Prefer this when relevant community participation or ecosystem distribution is permitted, or authorized user data identifies reachable active buyers."
+    }
+  ],
+  "outreachTemplates": [
+    {
+      "channel": "Direct email",
+      "subject": "Finding proof for a course page",
+      "body": "Hi [name], I found [verified public observation to research]. When updating your course page, how do you collect or find relevant student testimonials? I'm exploring whether Senja fits this workflow, rather than assuming you need another tool.",
+      "rationale": {
+        "text": "Owner-led course businesses: Test whether owner-led course businesses with a current sales-page update struggle to collect or retrieve relevant testimonials.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "channel": "Direct email",
+      "subject": "Worth exploring?",
+      "body": "Hi [name], may I send a brief example of using Senja to organize existing testimonials for a course page? If this is not a current task, no problem; knowing your present approach would still help me assess fit.",
+      "rationale": {
+        "text": "Use only following an actual response and permission to continue.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "firstTenPlaybook": [
+    {
+      "title": "Test the first buyer",
+      "recommendation": {
+        "text": "Owner-led course businesses can evaluate Senja against a current sales-page task and authorize purchase without cross-team approval. Risk: Launch-driven usage may not create enough recurring value to justify payment. Prefer the runner-up when: Small SaaS marketing teams become preferable when a reachable budget owner confirms recurring campaign-proof work and a clear approval path.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Use public course websites to identify owner-operated businesses, verify a relevant public observation and locate a published business contact route; ask about urgency rather than inferring it.",
+        "Verify Senja's official offer, then research an eligible course business and send the initial question through its published business email.",
+        "Activity cap: 6 Research eligible owner-led course businesses and send individually relevant business emails where an appropriate public route exists.",
+        "Provisional budget 90 min; planned 90 min: preparation 10, research 7/activity, execution 3/activity, responses 20. Zero direct spend. No weekly reset; re-scope further work. Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval.",
+        "Free/public tools: Public web search and company websites, Free email account."
+      ],
+      "successMetric": "Log contact source, delivery status, replies, current task, workaround, authority and buying conditions; track activation separately and label payment confirmed only with transaction evidence."
+    },
+    {
+      "title": "Test the buying next step",
+      "recommendation": {
+        "text": "Verify monetization: Inspect Senja's current official offer, paid capabilities and checkout before proposing paid conversion; s4 supports a free starting point but does not establish paid terms. Activation: After a prospect agrees, validate a first useful event such as importing an existing testimonial into Senja for a named sales-page task. Adoption: Observe whether the buyer returns to collect or select additional testimonials for another real marketing task. Paid conversion: Record confirmed payment for the verified existing Senja offer, not interest, free signup or payment for assistance.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "During a seven-calendar-day observation window, an owner confirms a current proof task and agrees to evaluate Senja; schedule any activation help or payment follow-through only after separate founder time approval.",
+        "Verify monetization: Inspect Senja's current official offer, paid capabilities and checkout before proposing paid conversion; s4 supports a free starting point but does not establish paid terms.",
+        "Activation: After a prospect agrees, validate a first useful event such as importing an existing testimonial into Senja for a named sales-page task.",
+        "Adoption: Observe whether the buyer returns to collect or select additional testimonials for another real marketing task.",
+        "Paid conversion: Record confirmed payment for the verified existing Senja offer, not interest, free signup or payment for assistance.",
+        "Provisional budget 90 min; planned 90 min: preparation 10, research 7/activity, execution 3/activity, responses 20. Zero direct spend. No weekly reset; re-scope further work. Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval.",
+        "Free/public tools: Public web search and company websites, Free email account."
+      ],
+      "successMetric": "Log contact source, delivery status, replies, current task, workaround, authority and buying conditions; track activation separately and label payment confirmed only with transaction evidence."
+    },
+    {
+      "title": "Repeat only after evidence",
+      "recommendation": {
+        "text": "The first ten paying customers are a goal, not a forecast or conversion promise.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Continue: During a seven-calendar-day observation window, an owner confirms a current proof task and agrees to evaluate Senja; schedule any activation help or payment follow-through only after separate founder time approval.",
+        "Adjust: If replies reveal another buyer or workflow, revise targeting; if silent after the observation window, audit delivery, public-route suitability and message relevance before a permission-based follow-up where appropriate.",
+        "Stop: Pause this route if appropriate public access cannot be established or reachable owners consistently describe no relevant task; do not treat a small silent sample as rejection.",
+        "Retain Owner-led course businesses and Direct email unless the evidence supports a conditional alternative."
+      ],
+      "successMetric": "Record confirmed payments separately from replies, downloads and free users."
+    }
+  ],
+  "thirtyDayPlan": [
+    {
+      "week": 1,
+      "objective": "Prepare and run the primary test",
+      "actions": [
+        "Use public course websites to identify owner-operated businesses, verify a relevant public observation and locate a published business contact route; ask about urgency rather than inferring it.",
+        "Verify Senja's official offer, then research an eligible course business and send the initial question through its published business email.",
+        "Activity cap: 6 Research eligible owner-led course businesses and send individually relevant business emails where an appropriate public route exists.",
+        "Provisional budget 90 min; planned 90 min: preparation 10, research 7/activity, execution 3/activity, responses 20. Zero direct spend. No weekly reset; re-scope further work. Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval.",
+        "Free/public tools: Public web search and company websites, Free email account."
+      ],
+      "successMetric": "Log contact source, delivery status, replies, current task, workaround, authority and buying conditions; track activation separately and label payment confirmed only with transaction evidence.",
+      "rationale": {
+        "text": "Owner-led course businesses can evaluate Senja against a current sales-page task and authorize purchase without cross-team approval. Risk: Launch-driven usage may not create enough recurring value to justify payment. Prefer the runner-up when: Small SaaS marketing teams become preferable when a reachable budget owner confirms recurring campaign-proof work and a clear approval path.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 2,
+      "objective": "Review the primary test evidence",
+      "actions": [
+        "Log contact source, delivery status, replies, current task, workaround, authority and buying conditions; track activation separately and label payment confirmed only with transaction evidence.",
+        "Continue: During a seven-calendar-day observation window, an owner confirms a current proof task and agrees to evaluate Senja; schedule any activation help or payment follow-through only after separate founder time approval.",
+        "Adjust: If replies reveal another buyer or workflow, revise targeting; if silent after the observation window, audit delivery, public-route suitability and message relevance before a permission-based follow-up where appropriate.",
+        "Stop: Pause this route if appropriate public access cannot be established or reachable owners consistently describe no relevant task; do not treat a small silent sample as rejection.",
+        "Provisional budget 90 min; planned 90 min: preparation 10, research 7/activity, execution 3/activity, responses 20. Zero direct spend. No weekly reset; re-scope further work. Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval.",
+        "Free/public tools: Public web search and company websites, Free email account."
+      ],
+      "successMetric": "Log contact source, delivery status, replies, current task, workaround, authority and buying conditions; track activation separately and label payment confirmed only with transaction evidence.",
+      "rationale": {
+        "text": "Researched direct outreach can expose the owner's workflow and purchase authority without assuming existing traffic, users or community access.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 3,
+      "objective": "Verify SaaS monetization before a payment test",
+      "actions": [
+        "During a seven-calendar-day observation window, an owner confirms a current proof task and agrees to evaluate Senja; schedule any activation help or payment follow-through only after separate founder time approval.",
+        "Verify monetization: Inspect Senja's current official offer, paid capabilities and checkout before proposing paid conversion; s4 supports a free starting point but does not establish paid terms.",
+        "Activation: After a prospect agrees, validate a first useful event such as importing an existing testimonial into Senja for a named sales-page task.",
+        "Adoption: Observe whether the buyer returns to collect or select additional testimonials for another real marketing task.",
+        "Paid conversion: Record confirmed payment for the verified existing Senja offer, not interest, free signup or payment for assistance.",
+        "Provisional budget 90 min; planned 90 min: preparation 10, research 7/activity, execution 3/activity, responses 20. Zero direct spend. No weekly reset; re-scope further work. Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval.",
+        "Free/public tools: Public web search and company websites, Free email account."
+      ],
+      "successMetric": "Log contact source, delivery status, replies, current task, workaround, authority and buying conditions; track activation separately and label payment confirmed only with transaction evidence.",
+      "rationale": {
+        "text": "Verify monetization: Inspect Senja's current official offer, paid capabilities and checkout before proposing paid conversion; s4 supports a free starting point but does not establish paid terms. Activation: After a prospect agrees, validate a first useful event such as importing an existing testimonial into Senja for a named sales-page task. Adoption: Observe whether the buyer returns to collect or select additional testimonials for another real marketing task. Paid conversion: Record confirmed payment for the verified existing Senja offer, not interest, free signup or payment for assistance.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 4,
+      "objective": "Decide whether to repeat, adjust or stop",
+      "actions": [
+        "Continue: During a seven-calendar-day observation window, an owner confirms a current proof task and agrees to evaluate Senja; schedule any activation help or payment follow-through only after separate founder time approval.",
+        "Adjust: If replies reveal another buyer or workflow, revise targeting; if silent after the observation window, audit delivery, public-route suitability and message relevance before a permission-based follow-up where appropriate.",
+        "Stop: Pause this route if appropriate public access cannot be established or reachable owners consistently describe no relevant task; do not treat a small silent sample as rejection.",
+        "Switch only when an alternative's stated condition is observed; otherwise retain Direct email.",
+        "Provisional budget 90 min; planned 90 min: preparation 10, research 7/activity, execution 3/activity, responses 20. Zero direct spend. No weekly reset; re-scope further work. Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval.",
+        "Free/public tools: Public web search and company websites, Free email account."
+      ],
+      "successMetric": "Log contact source, delivery status, replies, current task, workaround, authority and buying conditions; track activation separately and label payment confirmed only with transaction evidence.",
+      "rationale": {
+        "text": "Use observed commercial evidence; no assumed conversion rate or automatic scaling.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "productIntelligence": {
+    "version": "1.0",
+    "identity": {
+      "name": "Senja",
+      "summary": "Senja - Collect, Manage and Share Testimonials",
+      "category": "Customer acquisition",
+      "primaryJob": {
+        "actor": "Businesses and marketing teams",
+        "problem": "Collecting customer testimonials and finding relevant proof to share across marketing channels",
+        "outcome": "Centralize testimonials and reuse them to support customer trust and marketing"
+      },
+      "certainty": "Website-supported",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "cae551e2b6e4",
+          "quote": "Senja - Collect, Manage and Share Testimonials"
+        }
+      ]
+    },
+    "statements": [
+      {
+        "id": "s1",
+        "text": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://senja.io/",
+            "blockId": "8088337baf9d",
+            "quote": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials."
+          }
+        ]
+      },
+      {
+        "id": "s2",
+        "text": "✓Import from 30+ platforms or CSV",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://senja.io/",
+            "blockId": "d31a29723b2c",
+            "quote": "✓Import from 30+ platforms or CSV"
+          }
+        ]
+      },
+      {
+        "id": "s3",
+        "text": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://senja.io/",
+            "blockId": "1224993c1e20",
+            "quote": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share."
+          }
+        ]
+      },
+      {
+        "id": "s4",
+        "text": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+        "kind": "Website observation",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://senja.io/",
+            "blockId": "21e09887a3aa",
+            "quote": "The easiest way to collect testimonials and add them to your website. Get started for free."
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "Capabilities are owner claims, not independently verified.",
+      "The supplied content does not establish free-plan limits or paid pricing."
+    ]
+  },
+  "recommendationBasis": [
+    {
+      "section": "segments",
+      "statementIds": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "section": "acquisitionChannels",
+      "statementIds": [
+        "s3",
+        "s4"
+      ]
+    },
+    {
+      "section": "outreachTemplates",
+      "statementIds": [
+        "s2",
+        "s3"
+      ]
+    },
+    {
+      "section": "firstTenPlaybook",
+      "statementIds": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "section": "thirtyDayPlan",
+      "statementIds": [
+        "s3",
+        "s4"
+      ]
+    }
+  ],
+  "quality": {
+    "scores": {
+      "productRelevance": 2,
+      "segmentDifferentiation": 2,
+      "channelSuitability": 2,
+      "actionSpecificity": 2,
+      "commercialRealism": 2,
+      "claimSafety": 2,
+      "consistency": 2,
+      "repetition": 1,
+      "outreachCompleteness": 2,
+      "successCriteria": 2
+    },
+    "issues": [],
+    "rubricVersion": "m6.1",
+    "repairs": 1,
+    "initialIssues": [
+      {
+        "section": "firstExperiment",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "firstExperiment",
+        "reason": "Keep channel execution mechanics distinct from resource approval and continuation conditions"
+      },
+      {
+        "section": "alternatives",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      }
+    ],
+    "stages": [
+      {
+        "stage": "attributed_product_profile",
+        "inputTokens": 2043,
+        "outputTokens": 416
+      },
+      {
+        "stage": "acquisition_strategy",
+        "inputTokens": 1816,
+        "outputTokens": 1592
+      },
+      {
+        "stage": "quality_repair",
+        "inputTokens": 2533,
+        "outputTokens": 130
+      },
+      {
+        "stage": "quality_review",
+        "inputTokens": 7230,
+        "outputTokens": 377
+      }
+    ]
+  },
+  "acquisitionStrategy": {
+    "segments": [
+      {
+        "name": "Owner-led course businesses",
+        "buyer": "Course creator who controls the marketing budget",
+        "market": "Small businesses selling established paid courses",
+        "problem": "Testimonials are scattered when the owner updates a course sales page; validate whether a live page update creates urgent proof-collection work.",
+        "access": "Research public course sites and use published business contact routes; the owner can evaluate and purchase directly, but willingness to pay needs validation.",
+        "tradeoff": "Purchasing is simpler than a team evaluation, but infrequent launches may weaken recurring value; ask what they use today and what would justify paying."
+      },
+      {
+        "name": "Small SaaS marketing teams",
+        "buyer": "Marketing lead with budget approval from the founder or finance",
+        "market": "SaaS companies maintaining product and campaign pages",
+        "problem": "Campaign teams need relevant customer proof repeatedly; validate which upcoming campaign is blocked by finding or collecting testimonials.",
+        "access": "Public company sites identify teams, but reaching the budget owner may require internal routing and a team evaluation.",
+        "tradeoff": "Recurring workflow may support stronger willingness to pay, but approval is slower; ask who approves software and which recurring proof task has a budget."
+      },
+      {
+        "name": "Multi-client marketing agencies",
+        "buyer": "Agency owner or delivery director",
+        "market": "Agencies managing client websites and campaigns",
+        "problem": "Client testimonial collection delays delivery; validate whether the agency controls collection and publishing rather than merely requesting assets.",
+        "access": "Agency sites offer public contact routes, but evaluation may require both agency and client approval.",
+        "tradeoff": "Repeated client work could support payment, but permissions and workflow fit are uncertain; ask who owns the accounts and who would pay for Senja."
+      }
+    ],
+    "firstBuyerWhy": {
+      "advantage": "Owner-led course businesses can evaluate Senja against a current sales-page task and authorize purchase without cross-team approval.",
+      "risk": "Launch-driven usage may not create enough recurring value to justify payment.",
+      "runnerUpWinsWhen": "Small SaaS marketing teams become preferable when a reachable budget owner confirms recurring campaign-proof work and a clear approval path."
+    },
+    "buyingMotion": "Sales-assisted",
+    "paymentPath": {
+      "offerKind": "Existing SaaS",
+      "monetizationStatus": "Unknown",
+      "pricingStatementIds": [],
+      "verify": "Inspect Senja's current official offer, paid capabilities and checkout before proposing paid conversion; s4 supports a free starting point but does not establish paid terms.",
+      "activation": "After a prospect agrees, validate a first useful event such as importing an existing testimonial into Senja for a named sales-page task.",
+      "adoption": "Observe whether the buyer returns to collect or select additional testimonials for another real marketing task.",
+      "paidConversion": "Record confirmed payment for the verified existing Senja offer, not interest, free signup or payment for assistance."
+    },
+    "firstExperiment": {
+      "problem": "Test whether owner-led course businesses with a current sales-page update struggle to collect or retrieve relevant testimonials.",
+      "identifyProspects": "Use public course websites to identify owner-operated businesses, verify a relevant public observation and locate a published business contact route; ask about urgency rather than inferring it.",
+      "channel": "Direct email",
+      "channelRationale": {
+        "decision": "Researched direct outreach can expose the owner's workflow and purchase authority without assuming existing traffic, users or community access.",
+        "tradeoff": "Manual research limits reach and unsolicited messages may be ignored, but replies can reveal a concrete task sooner than waiting for asset discovery."
+      },
+      "firstAction": "Verify Senja's official offer, then research an eligible course business and send the initial question through its published business email.",
+      "activityTarget": {
+        "quantity": 6,
+        "activity": "Research eligible owner-led course businesses and send individually relevant business emails where an appropriate public route exists."
+      },
+      "resources": {
+        "assumedMinutes": 90,
+        "preparationMinutes": 10,
+        "researchMinutesPerActivity": 7,
+        "executionMinutesPerActivity": 3,
+        "responseMinutes": 20,
+        "activityKind": "Researched contacts",
+        "tools": [
+          {
+            "name": "Public web search and company websites",
+            "access": "Free/public"
+          },
+          {
+            "name": "Free email account",
+            "access": "Free/public"
+          }
+        ],
+        "directSpend": 0,
+        "constraints": "Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval."
+      },
+      "commercialLearning": "Log contact source, delivery status, replies, current task, workaround, authority and buying conditions; track activation separately and label payment confirmed only with transaction evidence.",
+      "continueWhen": "During a seven-calendar-day observation window, an owner confirms a current proof task and agrees to evaluate Senja; schedule any activation help or payment follow-through only after separate founder time approval.",
+      "adjustWhen": "If replies reveal another buyer or workflow, revise targeting; if silent after the observation window, audit delivery, public-route suitability and message relevance before a permission-based follow-up where appropriate.",
+      "stopWhen": "Pause this route if appropriate public access cannot be established or reachable owners consistently describe no relevant task; do not treat a small silent sample as rejection.",
+      "channelDescription": "Send researched emails to published business addresses, ask about testimonial workflows before offering evaluation, and respect opt-outs."
+    },
+    "alternatives": [
+      {
+        "channel": "Template-led discovery",
+        "comparison": {
+          "benefit": "A self-service testimonial-request template could support independent evaluation with less ongoing contact work.",
+          "barrier": "Creating a useful asset takes upfront effort, and neither search traffic nor distribution access is established, so qualified evidence may arrive slowly."
+        },
+        "preferWhen": "Prefer this when relevant discovery traffic or a permitted distribution route is verified and buyers repeatedly request collection guidance.",
+        "firstAction": "Check public search results and accessible creator communities for recurring testimonial-request questions before building an asset."
+      },
+      {
+        "channel": "Community and ecosystem",
+        "comparison": {
+          "benefit": "Use-case communities and course-platform ecosystems could expose repeated workflow questions and offer contextual access to buyers.",
+          "barrier": "Participation and partner eligibility require verification, promotion may be restricted, and access-building can delay evidence compared with direct outreach."
+        },
+        "preferWhen": "Prefer this when relevant community participation or ecosystem distribution is permitted, or authorized user data identifies reachable active buyers.",
+        "firstAction": "Inspect public community rules and course-platform directory requirements, and ask whether authorized existing-user workflow evidence is available."
+      }
+    ],
+    "messages": [
+      {
+        "subject": "Finding proof for a course page",
+        "body": "Hi [name], I found [verified public observation to research]. When updating your course page, how do you collect or find relevant student testimonials? I'm exploring whether Senja fits this workflow, rather than assuming you need another tool."
+      },
+      {
+        "subject": "Worth exploring?",
+        "body": "Hi [name], may I send a brief example of using Senja to organize existing testimonials for a course page? If this is not a current task, no problem; knowing your present approach would still help me assess fit."
+      }
+    ],
+    "positioning": "For course owners collecting or finding student proof for a sales-page update, Senja offers testimonial collection, import and centralized reuse; its fit and commercial value still need buyer validation.",
+    "unknowns": [
+      "No market research or external verification was performed.",
+      "Senja's current paid offer, capabilities, price and checkout require verification.",
+      "Founder availability, product access, prospect access and existing-user data access are unconfirmed; none is assumed as an initial dependency beyond the stated resource assumption."
+    ],
+    "recommendationBasis": {
+      "segments": [
+        "s1",
+        "s3"
+      ],
+      "acquisitionChannels": [
+        "s3",
+        "s4"
+      ],
+      "outreachTemplates": [
+        "s2",
+        "s3"
+      ],
+      "firstTenPlaybook": [
+        "s1",
+        "s2"
+      ],
+      "thirtyDayPlan": [
+        "s3",
+        "s4"
+      ]
+    },
+    "contractVersion": "2"
+  },
+  "firstExperiment": {
+    "segment": "Owner-led course businesses",
+    "problem": "Test whether owner-led course businesses with a current sales-page update struggle to collect or retrieve relevant testimonials.",
+    "identifyProspects": "Use public course websites to identify owner-operated businesses, verify a relevant public observation and locate a published business contact route; ask about urgency rather than inferring it.",
+    "channel": "Direct email",
+    "channelRationale": "Researched direct outreach can expose the owner's workflow and purchase authority without assuming existing traffic, users or community access.",
+    "firstAction": "Verify Senja's official offer, then research an eligible course business and send the initial question through its published business email.",
+    "activityTarget": {
+      "quantity": 6,
+      "activity": "Research eligible owner-led course businesses and send individually relevant business emails where an appropriate public route exists."
+    },
+    "resources": {
+      "assumedMinutes": 90,
+      "tools": [
+        "Public web search and company websites",
+        "Free email account"
+      ],
+      "directSpend": 0,
+      "assumptions": "Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval. No weekly reset; re-scope further work."
+    },
+    "commercialLearning": "Log contact source, delivery status, replies, current task, workaround, authority and buying conditions; track activation separately and label payment confirmed only with transaction evidence.",
+    "continueWhen": "During a seven-calendar-day observation window, an owner confirms a current proof task and agrees to evaluate Senja; schedule any activation help or payment follow-through only after separate founder time approval.",
+    "adjustWhen": "If replies reveal another buyer or workflow, revise targeting; if silent after the observation window, audit delivery, public-route suitability and message relevance before a permission-based follow-up where appropriate.",
+    "stopWhen": "Pause this route if appropriate public access cannot be established or reachable owners consistently describe no relevant task; do not treat a small silent sample as rejection.",
+    "strongestAlternative": {
+      "channel": "Alternative: Template-led discovery",
+      "whyNotSelected": "Creating a useful asset takes upfront effort, and neither search traffic nor distribution access is established, so qualified evidence may arrive slowly.",
+      "preferWhen": "Prefer this when relevant discovery traffic or a permitted distribution route is verified and buyers repeatedly request collection guidance."
+    }
+  }
+}
+```

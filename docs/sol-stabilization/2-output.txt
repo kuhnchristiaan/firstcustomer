@@ -1,0 +1,126 @@
+{
+  "segments": [
+    {
+      "name": "Founder-led B2B SaaS",
+      "buyer": "Founder who owns website messaging and purchasing",
+      "market": "Small SaaS businesses with a publicly announced launch or website refresh",
+      "problem": "An upcoming page update creates urgency to collect and reuse customer proof.",
+      "access": "Public launch posts and business contact forms provide potential access without an existing audience.",
+      "tradeoff": "Purchasing authority is concentrated, but willingness to pay depends on whether testimonial work is a current priority."
+    },
+    {
+      "name": "Client-facing marketing agencies",
+      "buyer": "Agency owner or account lead responsible for client website delivery",
+      "market": "Agencies repeatedly building landing pages for clients",
+      "problem": "Client testimonials arrive inconsistently and must be reused across deliverables.",
+      "access": "Agency websites expose services and business contact routes.",
+      "tradeoff": "Recurring delivery creates potential willingness to pay, but client approvals can delay activation and account leads may lack purchasing authority."
+    },
+    {
+      "name": "Established marketing teams",
+      "buyer": "Customer marketing manager with budget approval from a marketing leader",
+      "market": "Companies coordinating customer proof across multiple campaigns",
+      "problem": "Scattered testimonials slow campaign preparation and internal reuse.",
+      "access": "Public team information can identify roles, but direct access and procurement requirements are uncertain.",
+      "tradeoff": "Broader reuse may support higher willingness to pay, but urgency competes with other campaigns and purchasing authority is distributed."
+    }
+  ],
+  "firstBuyerWhy": {
+    "advantage": "Founder-led SaaS combines a visible messaging deadline with direct purchasing authority.",
+    "risk": "An upcoming launch does not establish that collecting testimonials is painful enough to justify payment.",
+    "runnerUpWinsWhen": "Agencies become preferable when recurring client-proof work is confirmed and the owner can authorize a shared workflow."
+  },
+  "buyingMotion": "Sales-assisted",
+  "paymentPath": {
+    "offerKind": "Existing SaaS",
+    "monetizationStatus": "Unknown",
+    "pricingStatementIds": [],
+    "verify": "Inspect Senja's current official offer, account requirements, pricing and payment flow before testing paid conversion; the supplied statements establish none of these.",
+    "activation": "After confirming product access, the prospect creates a Senja collection form and receives a genuine customer testimonial.",
+    "adoption": "The prospect repeatedly collects testimonials and reuses relevant proof in subsequent website or marketing work.",
+    "paidConversion": "Confirm an actual payment for Senja through its verified purchase path, rather than counting interest or payment for assistance."
+  },
+  "firstExperiment": {
+    "problem": "Founder-led SaaS businesses preparing a website update may struggle to obtain usable customer testimonials before publishing.",
+    "identifyProspects": "Find public founder launch or website-refresh announcements, verify business relevance, and record an explicitly published business contact route without inferring private contact details.",
+    "channel": "Direct outreach",
+    "channelRationale": {
+      "decision": "Researched outreach tests a visible workflow trigger without requiring existing traffic, community membership or users.",
+      "tradeoff": "Manual research limits reach but produces more attributable pain and buying evidence than an undistributed template."
+    },
+    "firstAction": "Verify Senja's current offer, then research an eligible founder and send the initial question through an appropriate public business contact route.",
+    "activityTarget": {
+      "quantity": 5,
+      "activity": "Research eligible founders and send individually relevant questions."
+    },
+    "resources": {
+      "assumedMinutes": 90,
+      "preparationMinutes": 10,
+      "researchMinutesPerActivity": 10,
+      "executionMinutesPerActivity": 3,
+      "responseMinutes": 10,
+      "activityKind": "Researched contacts",
+      "tools": [
+        {
+          "name": "Browser and public search",
+          "access": "Free/public"
+        },
+        {
+          "name": "Public business contact forms",
+          "access": "Free/public"
+        }
+      ],
+      "directSpend": 0,
+      "constraints": "Zero direct spend is an experiment assumption; use only appropriate public contact routes, respect solicitation restrictions, and do not depend on paid databases or unverified product access."
+    },
+    "commercialLearning": "Learn whether a founder describes a current collection bottleneck, completes a useful Senja event, and considers the verified SaaS purchase path.",
+    "continueWhen": "A prospect confirms an active proof-collection problem and agrees to use Senja for the current page update.",
+    "adjustWhen": "Prospects confirm the problem but reveal that buyer ownership, timing or the collection workflow differs from the targeting hypothesis.",
+    "stopWhen": "Public contact routes are unsuitable or engaged prospects demonstrate that Senja cannot support their required workflow; treat silence as inconclusive.",
+    "channelDescription": "Use public launch signals to find relevant founders, ask about their current testimonial workflow, and invite interested prospects into the existing Senja product."
+  },
+  "alternatives": [
+    {
+      "channel": "Templates and communities",
+      "comparison": {
+        "benefit": "A testimonial-request template shared in a relevant use-case community could let buyers discover and evaluate the workflow independently.",
+        "barrier": "Creating the asset and securing posting permission require effort, while audience access and evidence speed remain unverified."
+      },
+      "preferWhen": "A relevant community explicitly permits useful resource sharing and members visibly discuss testimonial collection.",
+      "firstAction": "Check community rules and public discussions before creating a template tied to Senja's existing collection workflow."
+    },
+    {
+      "channel": "Ecosystems and users",
+      "comparison": {
+        "benefit": "Verified integration communities or existing users with repeated proof-sharing behaviour could provide more contextual access than cold outreach.",
+        "barrier": "Integration-related claims do not establish distribution rights, and access to users or behavioural data is unknown, delaying evidence until access is verified."
+      },
+      "preferWhen": "Permissioned user access or an ecosystem contribution route is available and reveals a concrete collection or reuse need.",
+      "firstAction": "Check public ecosystem participation rules and whether permissioned existing-user feedback is actually available."
+    }
+  ],
+  "messages": [
+    {
+      "subject": "Customer proof for your next page",
+      "body": "Hi, I saw [verified public observation to research]. How are you collecting customer testimonials for that update? I’m exploring whether Senja’s collection and sharing workflow fits this problem. Is gathering usable proof currently a bottleneck?"
+    },
+    {
+      "subject": "Would a Senja example help?",
+      "body": "Hi, following up on my question about collecting customer proof. Would you like a short example of how Senja’s form and sharing workflow could fit your page update? If it is not relevant, I’ll leave it there."
+    }
+  ],
+  "positioning": "Senja helps businesses collect testimonials through customizable forms and keep customer proof in one place for reuse across pages, pitches and posts.",
+  "unknowns": [
+    "No market research or external verification was performed.",
+    "Current pricing, paid capabilities, account access requirements and checkout remain unverified.",
+    "Founder availability, existing audience, user access and distribution relationships are unknown, so the experiment assumes none of them exist jointly or individually as acquisition advantages beyond public access routes."
+  ],
+  "recommendationBasis": {
+    "segments": ["s1", "s4"],
+    "acquisitionChannels": ["s2", "s3"],
+    "outreachTemplates": ["s1", "s4"],
+    "firstTenPlaybook": ["s1", "s2"],
+    "thirtyDayPlan": ["s1", "s4"]
+  },
+  "contractVersion": "2"
+}

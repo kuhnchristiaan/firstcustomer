@@ -1,0 +1,45 @@
+{
+  "site": "tally",
+  "model": "gpt-4.1-mini",
+  "label": "sample-f5838bb2",
+  "requestedModel": "gpt-4.1-mini",
+  "resolvedModel": "gpt-4.1-mini-2025-04-14",
+  "status": "completed",
+  "incompleteDetails": null,
+  "latencyMs": 8479,
+  "actualInput": 1221,
+  "actualOutput": 800,
+  "reasoningTokens": 0,
+  "cachedInput": 0,
+  "cacheWrites": 0,
+  "estimatedCostUsd": 0.0017684,
+  "serviceTier": "default",
+  "jsonValid": true,
+  "schemaValid": true,
+  "assembled": true,
+  "completeStrategy": true,
+  "diagnostics": {
+    "deterministicFindings": [],
+    "publication": "Not attempted; diagnostic assembly only"
+  },
+  "quality": {
+    "A": 10,
+    "B": 10,
+    "C": 7,
+    "D": 7,
+    "E": 1,
+    "F": 2
+  },
+  "qualityTotal": 37,
+  "commerciallyAcceptable": false,
+  "contentComplete": false,
+  "readableArtifact": "docs/model-intelligence-benchmark-2026-11-05/tally/gpt-4.1-mini/strategy.md",
+  "fieldsAtCharacterCap": [
+    {
+      "path": "firstBuyerWhy",
+      "characters": 220,
+      "cap": 220,
+      "ending": "ers. Startup founders come second when validation demands is"
+    }
+  ]
+}

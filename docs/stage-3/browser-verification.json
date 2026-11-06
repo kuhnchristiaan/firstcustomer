@@ -1,0 +1,15 @@
+{
+  "fixtureOnly": true,
+  "paidCalls": 0,
+  "productId": "cmw3upcwx0000jcsg3zseuhk7",
+  "initialPlanId": "cmw3upgbe0003jcsg8hy9h0u1",
+  "nextPlanId": "cmw3upmi5000cjcsgelbya4cw",
+  "proposalDidNotChangeActivePlan": true,
+  "explicitApprovalApplied": true,
+  "strategyPreserved": true,
+  "nextTasksFresh": true,
+  "historyRetained": true,
+  "unknownPreserved": true,
+  "mobileAxeViolations": [],
+  "browserErrors": []
+}

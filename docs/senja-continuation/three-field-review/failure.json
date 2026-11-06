@@ -1,0 +1,15 @@
+{
+  "name": "Error",
+  "reason": "quality_failed",
+  "qualityFailure": {
+    "code": "quality_failed",
+    "issues": [
+      {
+        "section": "positioning",
+        "reason": "Repeated across value proposition, positioning and differentiators; consolidate repeated wording and keep the differentiator focused on comparison."
+      }
+    ],
+    "repairFeasible": false
+  },
+  "message": "The provider returned an incomplete or invalid report."
+}

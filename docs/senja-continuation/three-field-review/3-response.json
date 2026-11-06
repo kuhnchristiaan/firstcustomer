@@ -1,0 +1,131 @@
+{
+  "id": "resp_080f180c5375ce7c006aecde80640087d285a19d5dac524334",
+  "object": "response",
+  "created_at": 1793908352,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793908356,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 1000,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "msg_080f180c5375ce7c006aecde82ccf487d2b32c6b9321f36d32",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"alternatives.1.preferWhen\":\"Prefer this when relevant communities permit participation or ecosystems offer accessible distribution, especially if authorized user data confirms reachable active buyers.\",\"firstExperiment.channelDescription\":\"Send individually researched emails to published business addresses asking about current testimonial workflows before offering a Senja evaluation.\",\"firstExperiment.resources.constraints\":\"Assume unconfirmed capacity and no spend, use published business routes, respect opt-outs, limit initial replies to brief qualification and permission-based text, and require separate founder time approval for later work\"}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "quality_repair",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "alternatives.1.preferWhen": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          },
+          "firstExperiment.channelDescription": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 300,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          },
+          "firstExperiment.resources.constraints": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          }
+        },
+        "required": [
+          "alternatives.1.preferWhen",
+          "firstExperiment.channelDescription",
+          "firstExperiment.resources.constraints"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 2504,
+    "input_tokens_details": {
+      "cache_write_tokens": 2501,
+      "cached_tokens": 0
+    },
+    "output_tokens": 110,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2614
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"alternatives.1.preferWhen\":\"Prefer this when relevant communities permit participation or ecosystems offer accessible distribution, especially if authorized user data confirms reachable active buyers.\",\"firstExperiment.channelDescription\":\"Send individually researched emails to published business addresses asking about current testimonial workflows before offering a Senja evaluation.\",\"firstExperiment.resources.constraints\":\"Assume unconfirmed capacity and no spend, use published business routes, respect opt-outs, limit initial replies to brief qualification and permission-based text, and require separate founder time approval for later work\"}"
+}

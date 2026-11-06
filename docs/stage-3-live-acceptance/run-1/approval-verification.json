@@ -1,0 +1,27 @@
+{
+  "paidCalls": 0,
+  "materialChangeWithoutConfirmationDenied": true,
+  "states": [
+    {
+      "scenario": 1,
+      "planCount": 1,
+      "status": "PROPOSED",
+      "nextPlanId": null,
+      "acceptedAt": null
+    },
+    {
+      "scenario": 2,
+      "planCount": 1,
+      "status": "PROPOSED",
+      "nextPlanId": null,
+      "acceptedAt": null
+    },
+    {
+      "scenario": 3,
+      "planCount": 1,
+      "status": "PROPOSED",
+      "nextPlanId": null,
+      "acceptedAt": null
+    }
+  ]
+}

@@ -8,7 +8,7 @@ let encoder: Tiktoken | undefined;
  */
 export function estimateRequestTokens(request: unknown, model: string) {
   const text = JSON.stringify(request);
-  if (!/^gpt-(?:4\.1|4o)(?:-|$)/.test(model))
+  if (!/^gpt-(?:4\.1|4o|6\.1-sol)(?:-|$)/.test(model))
     return {
       method: "utf8-bound" as const,
       tokens: Buffer.byteLength(text, "utf8") + 1024,

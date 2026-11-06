@@ -1,0 +1,211 @@
+{
+  "id": "resp_043627ec7b16f275006aecdc5a20d087d2ab0a5142241e1694",
+  "object": "response",
+  "created_at": 1793907802,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793907810,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 1439,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_043627ec7b16f275006aecdc5bb00087d2b63d3ed4d55f6103",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq7NxjeNEnDgSU3RxPrw3j9BMIBGlXRJV4BJM4aoPpG4AZHFReUoxQS6gtW3bR1qfEBG7ZZzfK4Jzkf3gPNBk6DYgBWeui99VE6utUXB_75xoArHf33h2-D-wb3pgBply3Yd-6bN0LdbKg3Nw_IurVhK41dLcmlAJrEQ4f4XhY19DJ6yh5Lx8G9vS3vpKZGka8AHR-A8E1jrzviKne6hkihzIfUXcANXbU9xDAt8fcGULL1QTXKo7Oc3jCHws8e56xkMzYkQaQ2SDQq0Ux2JJKi50rfIxXhNgFltqqG8iaJ-QvdzP7zQpGW4iLmM_ciw0UbwbE1Gsxey1hcBtp2wYZzQCCrWUrdxGjChi6Ziewx2cREdGXZc6WPFncyz-m--NYyOQRUnLGzmz1yZy1MQevDjkjuHT7fEDJRbD5wlrTq3O9Pw7-gZp9TvpDd1Xm31IZ3mlcQIBaUC-9d_1qr5z2FdB_xkLq0KrTmI-Br2Qr49JDora9Rh_irAHH9oaI0KvIaqIuiyUDsLY1XWE6wz6A_ptlirB23JOSDN-kVu_pyWZBHanpwNQT6GinKKmTpmiUqLEeurIU6W2XuJs_Ac_rYiJRvN6BqL6UIYhbl3GY3OGR-YFCQQPFmJ058s5_4aW1SWKN3C85otbstnjdc23qf5s-8i-B42pauOS1iqunhOCFjGgnzFvvlz34w-HU2muNX0Xa9vQWBfbTfjzvCuE6hGi0-QbcOguSWirX-BWlitVO2xWf9lQG4YttVKhhyb7KxgdGpBog5GbI8aH_aq7BvIi26qWdP3Sco_xQ5s4Aef3pOFQr2c5RdInZHroragXZAwdXaAOj8628s_JVqORVKrEsgcMVr-IbUPCF8VLkDQmsZMOYOrYfa-6iLAfuup5XJzRCGzo7mMS3srjJ3BxVdSSLjE_zHL8jQUWNwe9XR8X0M8fRFri_Y9jJ7L1xwMRKurI-TyvXixaKD1e1QCPrCKUAOg6Fps44tLW5apb5Ev1TF_APpI-6babSaJ_8BXnsWFamNSZK6_CUIoDNFxpywI8g47Eux0qj0b2uMUu5kst-E7tNg5OLDkixIJ4HL8FckS6Vja_a9_zooDi_uSe-BcJHPhhqfVJVoEHczCFYsTLB1GteGY50doBy6qCaUM-LEbjwSg_YgwRAy0E2F1FJPDPj8wpLc3Zh2xtoGFYXs5KAcTX7SETK2yjtCOElkghmnXsQ_x5d9kHRng1fALSqlUOhZZwpbpaAVSXclAeiai2X98nuKhpCzdrj21vp7gsHmPjbFQE9cVEtzDhlfDGhQysLfJTQoPp78x4iZm0byH4rekb1nECI8t4qTYYPIBFSZnP4SIM0t2WNx1L9wk0F0Rsr_EFcFh89cphQXzGW9E1DIFLjwtgX4s_EpJ-r551NjQ26ABiWVwaFEiLv1eAsbgFjCvWOjNHo463Upsyt3tPc1lXq__gLo0zW7gRtb238UUxAf8wQV7Hc6FKqFpHL9azfZFGL--JEAy6u6i66mMKd9fMFnJIXfEUre5MIrq-wi0M4ER38HjVl4DPd0vIZhjWaFed_dAkeiSICb1y2aVcNWxmk2-a1iGdqpjhQd4_HEPRohRLCDNYbW3NRc_aQmDbdD6LdV3eTt_W-7Vybi_8q-f46ooT2_jBCpkoqqX3ENebPR7ijIBecRyI53tUdY5ltOsCyX4yHW_KNWz3TYYqNLDuEdtRqH634Ksfl3BrJ4sgyRZgNgg1SpqV8_zx4gNwVvXkGmXrsv_ckrni4FhB5CmZjRbNW423vLdgIor5px-73ZFTpvq1W7tzVekz2SBy5vrzz9Amn1AD9Ly3QE4cED3hsuM3PdrRyVEWmudeWqBidXfBqDRwyZ4TH2CCuMA2R5eAGI2agonjcAJGleW_rGIhqF2xICsr-K6Wb8ULIMQB4Kt1Mp00HqvIrZB3mScaKOsdUWZfahTVTWODQlkJX9l5ogLfeMqaYfLAnQOWjr75oEHTcd20Rs9xvp_BiVj1XuFgnWtTfXSUoseKIhhMX9nldX4vzH538bVxJ7KC8DZEuEcSiZ8EUDhi9N2w0OTrRucWh84gRRBpfvySUS6WED5d4vl0vIfOhtBKvVHcyQjY--PnuI580tsJ88tuvK2G5lLLF_QnIp8FwxZflrbcywIx6GZovRNHtYletYgJmqU_lMJKD6nN0Wa2woFvOX1xRr9t9mgsPsusZH1hEPHnEW5XfBYAT76hh_He-gpPSQ2PKzCxH7mAUnpYjEPYRwGXmqI5veLryOeLdmZIUueDUOHZljwh6sHlVFT_pimevCQYg5TxkeZZdKW3SvMQ0-suel6wTqEvKVyID6wNosHOjnDa60hM3ouLv5oLlD87comCnCVB45kEo6LSMUwhBTWg8wBw6D34F-Ng8d2lRwsGi31Ys3F-boj5p8tEUS287RnGnYBqsIdcplF6ZWdBKshvwDqPEaIK2wVE9yBbg0BEOgiR2Zgs_8iAbFzcERlRkFYUNvuBqyqWk4Qb42WUrG-Fu4BHTn_mLHlIZ21zVFVLPVXqadV9Kbcg_zH3X4vu8No7Oe7BWbuy1ky6QGIdtPSwHPBnZRIQ68Uqe_sEvyQop2T7hOFVVDnNucCrlzkwsNWZNNw-7KausPFCEXcwE-YFx8SPo1Yw4kWS1EBJA71ZurzJlpXoJ4uGAdF6FdJulUNAn2CP360h5IcxXU0NNiEEGy2M316VAKENxPxA4CkGjiD_W0Ipn5jJDkHBsBxsgWSEqujF7E9Kzo7rD3Si4wzoo3twx7Ah2ZLDjXlB42nLIqLUYqekj_NxnaZFpHU2sAl92wsaZe1BsEgBzfhWNtQWjxpz9DrkT4dWSuWBDkOtjf361kCDdZb6ND4pCmkPXLpe74bM45Awl-c6nRm3aggg1xLZJjxwGeJqI2wfh8Au0UEV3Atni6exPV0VYnX5BzksWyOet7F6RZ371eeetoRML1JlnQtIpVlqlKTkuylGqSZhQVURSZP-nX7Fjgv0s8gIA55nI0bP-2AJnjHLk7L74fkxfFBdFEAr2BvA1uerM_1j8GwIE63VRzGHWMDNdPtGJoGWpHxTMwTWQdUbxsgsu617SlmECjuGUKyZBPiiR6wPYrqQ5RWVuS9CsSd5_1vFbqEbv5thEki6jdxvSb_aqNrO6xOomq625h4qMROeYjJb_6xHZ2B88UT_iWI0a_y0U0HbaO-zAhLyWUeMNL0fKWDPqRW2NN1sOR6AYsTTg8PSMB3ufVFmlCu21Ggc4EbX_lE-Wji4WfXWkHaZEvdse6JrRHembabnFKwSlMkNjTHzf9naPJ2fWd31E1oAoJfPHZW1h8OukQEcHa_ezh_6-OMdFBWkUqTjnex59I5uDh1AGRHqnfrtMQ-DOv-0NFnsZ12P5BJaDjGnviIECFWmm1WP51GgJQKjMvCqU4DN2FIUN-rLTyOETAc73ul0itS-aMfh8sw6APIa8G56UvLIYwSvtDFEjLDICZWucoHs1uyI=",
+      "summary": []
+    },
+    {
+      "id": "msg_043627ec7b16f275006aecdc6183a087d2baa1ffb9ed7b5f02",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"scores\":{\"productRelevance\":2,\"segmentDifferentiation\":2,\"channelSuitability\":2,\"actionSpecificity\":2,\"commercialRealism\":2,\"claimSafety\":2,\"consistency\":1,\"repetition\":1,\"outreachCompleteness\":2,\"successCriteria\":2},\"issues\":[{\"section\":\"alternatives.1.preferWhen\",\"reason\":\"Complete the truncated condition; distinguish community access from authorized existing-user evidence as separate switching triggers.\"}]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "quality_review",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "scores": {
+            "type": "object",
+            "properties": {
+              "productRelevance": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "segmentDifferentiation": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "channelSuitability": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "actionSpecificity": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "commercialRealism": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "claimSafety": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "consistency": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "repetition": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "outreachCompleteness": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "successCriteria": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              }
+            },
+            "required": [
+              "productRelevance",
+              "segmentDifferentiation",
+              "channelSuitability",
+              "actionSpecificity",
+              "commercialRealism",
+              "claimSafety",
+              "consistency",
+              "repetition",
+              "outreachCompleteness",
+              "successCriteria"
+            ],
+            "additionalProperties": false
+          },
+          "issues": {
+            "maxItems": 12,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "section": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 220
+                }
+              },
+              "required": [
+                "section",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "scores",
+          "issues"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 7262,
+    "input_tokens_details": {
+      "cache_write_tokens": 7259,
+      "cached_tokens": 0
+    },
+    "output_tokens": 248,
+    "output_tokens_details": {
+      "reasoning_tokens": 142
+    },
+    "total_tokens": 7510
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"scores\":{\"productRelevance\":2,\"segmentDifferentiation\":2,\"channelSuitability\":2,\"actionSpecificity\":2,\"commercialRealism\":2,\"claimSafety\":2,\"consistency\":1,\"repetition\":1,\"outreachCompleteness\":2,\"successCriteria\":2},\"issues\":[{\"section\":\"alternatives.1.preferWhen\",\"reason\":\"Complete the truncated condition; distinguish community access from authorized existing-user evidence as separate switching triggers.\"}]}"
+}

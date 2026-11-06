@@ -1,0 +1,72 @@
+{
+  "accepted": false,
+  "failure": {
+    "name": "Error",
+    "reason": "quality_failed",
+    "qualityFailure": {
+      "code": "quality_failed",
+      "issues": [
+        {
+          "section": "unknowns.0",
+          "reason": "Reconcile “Verified” offering labels with unverified owner claims; explicitly attribute the doubled-testimonial promise."
+        },
+        {
+          "section": "segments.2.tradeoff",
+          "reason": "Specify this buyer’s distinct evaluation, approval process, and validation questions; fragmented-proof needs overlap other segments."
+        },
+        {
+          "section": "firstExperiment.resources.responseMinutes",
+          "reason": "Twelve minutes lacks credible allowance for conversations, activation support, and purchasing follow-through; scope or budget these separately."
+        },
+        {
+          "section": "firstExperiment.resources.constraints",
+          "reason": "Define evidence-gated weekly tasks and additional resource approvals; repeating the exhausted initial budget leaves later execution unspecified."
+        },
+        {
+          "section": "firstExperiment.continueWhen",
+          "reason": "Set an observation window and minimum qualifying evidence count; distinguish purchasing interest from confirmed SaaS payment."
+        },
+        {
+          "section": "firstExperiment.adjustWhen",
+          "reason": "Specify a bounded access-repair test for silence and an observable threshold for changing approach."
+        },
+        {
+          "section": "firstExperiment.stopWhen",
+          "reason": "Define how many reached buyers constitute consistent rejection and when to conclude the test."
+        },
+        {
+          "section": "firstExperiment.commercialLearning",
+          "reason": "Replace repeated generic learning language with a concise recording protocol covering replies, activation, buying steps, and payments."
+        }
+      ],
+      "repairFeasible": false
+    },
+    "message": "The provider returned an incomplete or invalid report."
+  },
+  "ledger": {
+    "ceilingUsd": 0.15,
+    "actualEstimatedUsd": 0.0908677,
+    "conservativeKnownUsd": 0.103855,
+    "uncertainReservedUsd": 0,
+    "newPaidCalls": 1
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "attributed_product_profile"
+    },
+    {
+      "ordinal": 2,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "acquisition_strategy"
+    },
+    {
+      "ordinal": 3,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "quality_repair"
+    }
+  ],
+  "head": "98ab24cbd48a9e2907f3332a028cc26c2b1ea323",
+  "note": "First three responses reused byte-for-byte after exact request matching. Only final review dispatched. No additional repair or altered decisions."
+}

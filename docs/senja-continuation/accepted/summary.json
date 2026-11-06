@@ -1,0 +1,25 @@
+{
+  "accepted": true,
+  "failure": null,
+  "ledger": {
+    "ceilingUsd": 0.3,
+    "actualEstimatedUsd": 0.2547912,
+    "conservativeKnownUsd": 0.267795,
+    "uncertainReservedUsd": 0,
+    "newPaidCalls": 2
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "attributed_product_profile"
+    },
+    {
+      "ordinal": 2,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "acquisition_strategy"
+    }
+  ],
+  "head": "98ab24cbd48a9e2907f3332a028cc26c2b1ea323",
+  "note": "Genuine profile and fresh strategy reused after exact request matching; one bounded repair and mandatory semantic review."
+}

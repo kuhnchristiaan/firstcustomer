@@ -1,0 +1,631 @@
+{
+  "id": "resp_0c370ba583a00800006aecd347509c87d28c8915c7e2fc804d",
+  "object": "response",
+  "created_at": 1793905479,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793905513,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 3500,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "msg_0c370ba583a00800006aecd3494d5487d299ea6a99d59b9535",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\n  \"segments\": [\n    {\n      \"name\": \"Founder-led B2B SaaS\",\n      \"buyer\": \"Founder responsible for marketing\",\n      \"market\": \"Small SaaS businesses preparing a public launch or website update\",\n      \"problem\": \"An upcoming launch makes collecting and publishing relevant customer proof urgent.\",\n      \"access\": \"Public launch posts and company websites can identify founders, but a permitted contact route must be verified.\",\n      \"tradeoff\": \"Founders can approve purchases directly, but willingness to pay depends on an immediate proof gap.\"\n    },\n    {\n      \"name\": \"Independent course businesses\",\n      \"buyer\": \"Course creator or business owner\",\n      \"market\": \"Businesses selling cohort courses\",\n      \"problem\": \"Enrollment campaigns create a deadline for collecting and sharing learner testimonials.\",\n      \"access\": \"Public course pages can expose owner contact routes, although campaign timing may be unclear.\",\n      \"tradeoff\": \"Owners control spending, but willingness to pay may be seasonal.\"\n    },\n    {\n      \"name\": \"Agency account teams\",\n      \"buyer\": \"Agency owner or account director\",\n      \"market\": \"Agencies managing client marketing materials\",\n      \"problem\": \"Repeated client campaigns require finding the right testimonial across scattered sources.\",\n      \"access\": \"Agency sites identify decision-makers, but client permissions complicate product evaluation.\",\n      \"tradeoff\": \"Recurring workflows may support spending, but purchasing and adoption can require client approval.\"\n    }\n  ],\n  \"firstBuyerWhy\": {\n    \"advantage\": \"A founder with an upcoming launch combines an observable deadline with direct purchasing authority.\",\n    \"risk\": \"A launch may require only a few existing quotes rather than a recurring testimonial workflow.\",\n    \"runnerUpWinsWhen\": \"Course owners become the better first buyer when a live enrollment campaign coincides with an accessible pool of recent learners.\"\n  },\n  \"buyingMotion\": \"Sales-assisted\",\n  \"paymentPath\": {\n    \"offerKind\": \"Existing SaaS\",\n    \"monetizationStatus\": \"Unknown\",\n    \"pricingStatementIds\": [],\n    \"verify\": \"Check Senja's current official offer, paid capabilities, price and checkout before requesting a paid conversion.\",\n    \"activation\": \"The prospect receives a genuine customer testimonial through a Senja collection form and makes it ready to share.\",\n    \"adoption\": \"The prospect repeatedly collects testimonials and retrieves relevant proof for subsequent marketing work.\",\n    \"paidConversion\": \"Confirm an actual payment for Senja through its verified purchase path, distinct from interest or product usage.\"\n  },\n  \"firstExperiment\": {\n    \"problem\": \"Test whether an approaching SaaS launch creates a concrete need to collect and reuse customer testimonials.\",\n    \"identifyProspects\": \"Research public launch announcements for founder-led B2B SaaS businesses, then verify the founder's role and a public business contact route.\",\n    \"channel\": \"Direct email\",\n    \"channelRationale\": {\n      \"decision\": \"Researched email tests deadline-driven pain without requiring an existing audience or integration distribution.\",\n      \"tradeoff\": \"Manual research limits reach but produces clearer workflow evidence than publishing an asset without known traffic.\"\n    },\n    \"firstAction\": \"Verify Senja's current offer, then research a public launch announcement and send a relevant permission-based question through a published business contact route.\",\n    \"activityTarget\": {\n      \"quantity\": 4,\n      \"activity\": \"Research eligible founders and send individually relevant business emails.\"\n    },\n    \"resources\": {\n      \"assumedMinutes\": 60,\n      \"preparationMinutes\": 15,\n      \"researchMinutesPerActivity\": 6,\n      \"executionMinutesPerActivity\": 3,\n      \"responseMinutes\": 9,\n      \"activityKind\": \"Researched contacts\",\n      \"tools\": [\n        {\n          \"name\": \"Public search and company websites\",\n          \"access\": \"Free/public\"\n        },\n        {\n          \"name\": \"Free email account\",\n          \"access\": \"Free/public\"\n        }\n      ],\n      \"directSpend\": 0,\n      \"constraints\": \"Assume zero direct spend for this experiment; use published business contact routes, avoid scraping, and honor opt-outs.\"\n    },\n    \"commercialLearning\": \"Learn whether the founder owns the proof workflow, has customers available to ask, and would consider purchasing the verified Senja offer.\",\n    \"continueWhen\": \"A founder confirms a current collection problem and agrees to use Senja for an actual customer request.\",\n    \"adjustWhen\": \"Prospects confirm the problem but reveal a different decision-maker, campaign moment or preferred contact route.\",\n    \"stopWhen\": \"Pause this segment if conversations establish that existing quotes solve the launch need without a recurring collection workflow.\",\n    \"channelDescription\": \"Find prospects through public launch signals and contact them individually by business email; acquisition is the conversation, not the subsequent product event.\"\n  },\n  \"alternatives\": [\n    {\n      \"channel\": \"Community template\",\n      \"comparison\": {\n        \"benefit\": \"A useful testimonial-request template shared in a relevant founder community can support self-service discovery with less individual outreach.\",\n        \"barrier\": \"Creating the asset and earning posting permission require effort, while unknown community access makes evidence slower.\"\n      },\n      \"preferWhen\": \"A relevant community permits useful resource sharing and members visibly discuss testimonial collection.\",\n      \"firstAction\": \"Check community rules and current discussions before creating a Senja-linked collection workflow template.\"\n    },\n    {\n      \"channel\": \"Integration ecosystem\",\n      \"comparison\": {\n        \"benefit\": \"Senja's stated automation capabilities offer a plausible route to workflow-specific discovery and repeated use.\",\n        \"barrier\": \"Integration access and existing user behavior are unverified, so validating distribution requires more effort and yields slower evidence than direct conversations.\"\n      },\n      \"preferWhen\": \"Verified user behavior shows a recurring automation workflow and an ecosystem offers an accessible distribution route.\",\n      \"firstAction\": \"Check official integration documentation and public ecosystem participation requirements before proposing a workflow resource.\"\n    }\n  ],\n  \"messages\": [\n    {\n      \"subject\": \"Customer proof for your launch\",\n      \"body\": \"Hi [name], I came across [verified public observation to research]. How are you collecting customer testimonials for the launch? I'm exploring whether Senja's collection forms and shared proof library fit that workflow. Is this something you handle?\"\n    },\n    {\n      \"subject\": \"Worth sending a collection workflow?\",\n      \"body\": \"Hi [name], may I send a short example of collecting a customer testimonial with Senja and preparing it for your marketing? If collecting proof is not a current priority, no problem; I won't keep following up.\"\n    }\n  ],\n  \"positioning\": \"Senja helps teams collect customer testimonials and keep relevant proof in one place for pitches, pages and posts.\",\n  \"unknowns\": [\n    \"Current pricing, paid capabilities and checkout are unverified.\",\n    \"Founder time, email access and product access are unknown; the experiment uses conservative resource assumptions.\",\n    \"No market research or external verification was performed; segment urgency and willingness to pay remain hypotheses you must test through conversations and purchase behavior.\"\n  ],\n  \"recommendationBasis\": {\n    \"segments\": [\"s1\", \"s4\"],\n    \"acquisitionChannels\": [\"s2\", \"s3\"],\n    \"outreachTemplates\": [\"s1\", \"s4\"],\n    \"firstTenPlaybook\": [\"s1\", \"s2\"],\n    \"thirtyDayPlan\": [\"s3\", \"s4\"]\n  },\n  \"contractVersion\": \"2\"\n}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "acquisition_strategy",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "segments": {
+            "minItems": 3,
+            "maxItems": 3,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "buyer": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 200
+                },
+                "market": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 100
+                },
+                "problem": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 220
+                },
+                "access": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 220
+                },
+                "tradeoff": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 220
+                }
+              },
+              "required": [
+                "name",
+                "buyer",
+                "market",
+                "problem",
+                "access",
+                "tradeoff"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "firstBuyerWhy": {
+            "type": "object",
+            "properties": {
+              "advantage": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "risk": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "runnerUpWinsWhen": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              }
+            },
+            "required": [
+              "advantage",
+              "risk",
+              "runnerUpWinsWhen"
+            ],
+            "additionalProperties": false
+          },
+          "buyingMotion": {
+            "type": "string",
+            "enum": [
+              "Self-service",
+              "Sales-assisted"
+            ]
+          },
+          "paymentPath": {
+            "type": "object",
+            "properties": {
+              "offerKind": {
+                "type": "string",
+                "const": "Existing SaaS"
+              },
+              "monetizationStatus": {
+                "type": "string",
+                "enum": [
+                  "Unknown",
+                  "Website-supported"
+                ]
+              },
+              "pricingStatementIds": {
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              },
+              "verify": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "activation": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "adoption": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "paidConversion": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              }
+            },
+            "required": [
+              "offerKind",
+              "monetizationStatus",
+              "pricingStatementIds",
+              "verify",
+              "activation",
+              "adoption",
+              "paidConversion"
+            ],
+            "additionalProperties": false
+          },
+          "firstExperiment": {
+            "type": "object",
+            "properties": {
+              "problem": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "identifyProspects": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "channel": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 80
+              },
+              "channelRationale": {
+                "type": "object",
+                "properties": {
+                  "decision": {
+                    "type": "string",
+                    "minLength": 8,
+                    "maxLength": 300
+                  },
+                  "tradeoff": {
+                    "type": "string",
+                    "minLength": 8,
+                    "maxLength": 300
+                  }
+                },
+                "required": [
+                  "decision",
+                  "tradeoff"
+                ],
+                "additionalProperties": false
+              },
+              "firstAction": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "activityTarget": {
+                "type": "object",
+                "properties": {
+                  "quantity": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10
+                  },
+                  "activity": {
+                    "type": "string",
+                    "minLength": 8,
+                    "maxLength": 300
+                  }
+                },
+                "required": [
+                  "quantity",
+                  "activity"
+                ],
+                "additionalProperties": false
+              },
+              "resources": {
+                "type": "object",
+                "properties": {
+                  "assumedMinutes": {
+                    "type": "integer",
+                    "minimum": 15,
+                    "maximum": 120
+                  },
+                  "preparationMinutes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 60
+                  },
+                  "researchMinutesPerActivity": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 30
+                  },
+                  "executionMinutesPerActivity": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 30
+                  },
+                  "responseMinutes": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 60
+                  },
+                  "activityKind": {
+                    "type": "string",
+                    "enum": [
+                      "Researched contacts",
+                      "Access check",
+                      "Self-service asset"
+                    ]
+                  },
+                  "tools": {
+                    "minItems": 1,
+                    "maxItems": 2,
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 60
+                        },
+                        "access": {
+                          "type": "string",
+                          "enum": [
+                            "Free/public",
+                            "Unconfirmed"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "access"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "directSpend": {
+                    "type": "number",
+                    "const": 0
+                  },
+                  "constraints": {
+                    "type": "string",
+                    "minLength": 8,
+                    "maxLength": 220
+                  }
+                },
+                "required": [
+                  "assumedMinutes",
+                  "preparationMinutes",
+                  "researchMinutesPerActivity",
+                  "executionMinutesPerActivity",
+                  "responseMinutes",
+                  "activityKind",
+                  "tools",
+                  "directSpend",
+                  "constraints"
+                ],
+                "additionalProperties": false
+              },
+              "commercialLearning": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "continueWhen": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "adjustWhen": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "stopWhen": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              },
+              "channelDescription": {
+                "type": "string",
+                "minLength": 8,
+                "maxLength": 300
+              }
+            },
+            "required": [
+              "problem",
+              "identifyProspects",
+              "channel",
+              "channelRationale",
+              "firstAction",
+              "activityTarget",
+              "resources",
+              "commercialLearning",
+              "continueWhen",
+              "adjustWhen",
+              "stopWhen",
+              "channelDescription"
+            ],
+            "additionalProperties": false
+          },
+          "alternatives": {
+            "minItems": 2,
+            "maxItems": 2,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "channel": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                },
+                "comparison": {
+                  "type": "object",
+                  "properties": {
+                    "benefit": {
+                      "type": "string",
+                      "minLength": 8,
+                      "maxLength": 300
+                    },
+                    "barrier": {
+                      "type": "string",
+                      "minLength": 8,
+                      "maxLength": 300
+                    }
+                  },
+                  "required": [
+                    "benefit",
+                    "barrier"
+                  ],
+                  "additionalProperties": false
+                },
+                "preferWhen": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 220
+                },
+                "firstAction": {
+                  "type": "string",
+                  "minLength": 8,
+                  "maxLength": 220
+                }
+              },
+              "required": [
+                "channel",
+                "comparison",
+                "preferWhen",
+                "firstAction"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "messages": {
+            "minItems": 2,
+            "maxItems": 2,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "subject": {
+                  "type": "string",
+                  "maxLength": 120
+                },
+                "body": {
+                  "type": "string",
+                  "minLength": 40,
+                  "maxLength": 450
+                }
+              },
+              "required": [
+                "subject",
+                "body"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "positioning": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220
+          },
+          "unknowns": {
+            "minItems": 1,
+            "maxItems": 3,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 220
+            }
+          },
+          "recommendationBasis": {
+            "type": "object",
+            "properties": {
+              "segments": {
+                "minItems": 1,
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              },
+              "acquisitionChannels": {
+                "minItems": 1,
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              },
+              "outreachTemplates": {
+                "minItems": 1,
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              },
+              "firstTenPlaybook": {
+                "minItems": 1,
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              },
+              "thirtyDayPlan": {
+                "minItems": 1,
+                "maxItems": 2,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "s1",
+                    "s2",
+                    "s3",
+                    "s4"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "segments",
+              "acquisitionChannels",
+              "outreachTemplates",
+              "firstTenPlaybook",
+              "thirtyDayPlan"
+            ],
+            "additionalProperties": false
+          },
+          "contractVersion": {
+            "type": "string",
+            "const": "2"
+          }
+        },
+        "required": [
+          "segments",
+          "firstBuyerWhy",
+          "buyingMotion",
+          "paymentPath",
+          "firstExperiment",
+          "alternatives",
+          "messages",
+          "positioning",
+          "unknowns",
+          "recommendationBasis",
+          "contractVersion"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 1633,
+    "input_tokens_details": {
+      "cache_write_tokens": 257,
+      "cached_tokens": 1373
+    },
+    "output_tokens": 1564,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 3197
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\n  \"segments\": [\n    {\n      \"name\": \"Founder-led B2B SaaS\",\n      \"buyer\": \"Founder responsible for marketing\",\n      \"market\": \"Small SaaS businesses preparing a public launch or website update\",\n      \"problem\": \"An upcoming launch makes collecting and publishing relevant customer proof urgent.\",\n      \"access\": \"Public launch posts and company websites can identify founders, but a permitted contact route must be verified.\",\n      \"tradeoff\": \"Founders can approve purchases directly, but willingness to pay depends on an immediate proof gap.\"\n    },\n    {\n      \"name\": \"Independent course businesses\",\n      \"buyer\": \"Course creator or business owner\",\n      \"market\": \"Businesses selling cohort courses\",\n      \"problem\": \"Enrollment campaigns create a deadline for collecting and sharing learner testimonials.\",\n      \"access\": \"Public course pages can expose owner contact routes, although campaign timing may be unclear.\",\n      \"tradeoff\": \"Owners control spending, but willingness to pay may be seasonal.\"\n    },\n    {\n      \"name\": \"Agency account teams\",\n      \"buyer\": \"Agency owner or account director\",\n      \"market\": \"Agencies managing client marketing materials\",\n      \"problem\": \"Repeated client campaigns require finding the right testimonial across scattered sources.\",\n      \"access\": \"Agency sites identify decision-makers, but client permissions complicate product evaluation.\",\n      \"tradeoff\": \"Recurring workflows may support spending, but purchasing and adoption can require client approval.\"\n    }\n  ],\n  \"firstBuyerWhy\": {\n    \"advantage\": \"A founder with an upcoming launch combines an observable deadline with direct purchasing authority.\",\n    \"risk\": \"A launch may require only a few existing quotes rather than a recurring testimonial workflow.\",\n    \"runnerUpWinsWhen\": \"Course owners become the better first buyer when a live enrollment campaign coincides with an accessible pool of recent learners.\"\n  },\n  \"buyingMotion\": \"Sales-assisted\",\n  \"paymentPath\": {\n    \"offerKind\": \"Existing SaaS\",\n    \"monetizationStatus\": \"Unknown\",\n    \"pricingStatementIds\": [],\n    \"verify\": \"Check Senja's current official offer, paid capabilities, price and checkout before requesting a paid conversion.\",\n    \"activation\": \"The prospect receives a genuine customer testimonial through a Senja collection form and makes it ready to share.\",\n    \"adoption\": \"The prospect repeatedly collects testimonials and retrieves relevant proof for subsequent marketing work.\",\n    \"paidConversion\": \"Confirm an actual payment for Senja through its verified purchase path, distinct from interest or product usage.\"\n  },\n  \"firstExperiment\": {\n    \"problem\": \"Test whether an approaching SaaS launch creates a concrete need to collect and reuse customer testimonials.\",\n    \"identifyProspects\": \"Research public launch announcements for founder-led B2B SaaS businesses, then verify the founder's role and a public business contact route.\",\n    \"channel\": \"Direct email\",\n    \"channelRationale\": {\n      \"decision\": \"Researched email tests deadline-driven pain without requiring an existing audience or integration distribution.\",\n      \"tradeoff\": \"Manual research limits reach but produces clearer workflow evidence than publishing an asset without known traffic.\"\n    },\n    \"firstAction\": \"Verify Senja's current offer, then research a public launch announcement and send a relevant permission-based question through a published business contact route.\",\n    \"activityTarget\": {\n      \"quantity\": 4,\n      \"activity\": \"Research eligible founders and send individually relevant business emails.\"\n    },\n    \"resources\": {\n      \"assumedMinutes\": 60,\n      \"preparationMinutes\": 15,\n      \"researchMinutesPerActivity\": 6,\n      \"executionMinutesPerActivity\": 3,\n      \"responseMinutes\": 9,\n      \"activityKind\": \"Researched contacts\",\n      \"tools\": [\n        {\n          \"name\": \"Public search and company websites\",\n          \"access\": \"Free/public\"\n        },\n        {\n          \"name\": \"Free email account\",\n          \"access\": \"Free/public\"\n        }\n      ],\n      \"directSpend\": 0,\n      \"constraints\": \"Assume zero direct spend for this experiment; use published business contact routes, avoid scraping, and honor opt-outs.\"\n    },\n    \"commercialLearning\": \"Learn whether the founder owns the proof workflow, has customers available to ask, and would consider purchasing the verified Senja offer.\",\n    \"continueWhen\": \"A founder confirms a current collection problem and agrees to use Senja for an actual customer request.\",\n    \"adjustWhen\": \"Prospects confirm the problem but reveal a different decision-maker, campaign moment or preferred contact route.\",\n    \"stopWhen\": \"Pause this segment if conversations establish that existing quotes solve the launch need without a recurring collection workflow.\",\n    \"channelDescription\": \"Find prospects through public launch signals and contact them individually by business email; acquisition is the conversation, not the subsequent product event.\"\n  },\n  \"alternatives\": [\n    {\n      \"channel\": \"Community template\",\n      \"comparison\": {\n        \"benefit\": \"A useful testimonial-request template shared in a relevant founder community can support self-service discovery with less individual outreach.\",\n        \"barrier\": \"Creating the asset and earning posting permission require effort, while unknown community access makes evidence slower.\"\n      },\n      \"preferWhen\": \"A relevant community permits useful resource sharing and members visibly discuss testimonial collection.\",\n      \"firstAction\": \"Check community rules and current discussions before creating a Senja-linked collection workflow template.\"\n    },\n    {\n      \"channel\": \"Integration ecosystem\",\n      \"comparison\": {\n        \"benefit\": \"Senja's stated automation capabilities offer a plausible route to workflow-specific discovery and repeated use.\",\n        \"barrier\": \"Integration access and existing user behavior are unverified, so validating distribution requires more effort and yields slower evidence than direct conversations.\"\n      },\n      \"preferWhen\": \"Verified user behavior shows a recurring automation workflow and an ecosystem offers an accessible distribution route.\",\n      \"firstAction\": \"Check official integration documentation and public ecosystem participation requirements before proposing a workflow resource.\"\n    }\n  ],\n  \"messages\": [\n    {\n      \"subject\": \"Customer proof for your launch\",\n      \"body\": \"Hi [name], I came across [verified public observation to research]. How are you collecting customer testimonials for the launch? I'm exploring whether Senja's collection forms and shared proof library fit that workflow. Is this something you handle?\"\n    },\n    {\n      \"subject\": \"Worth sending a collection workflow?\",\n      \"body\": \"Hi [name], may I send a short example of collecting a customer testimonial with Senja and preparing it for your marketing? If collecting proof is not a current priority, no problem; I won't keep following up.\"\n    }\n  ],\n  \"positioning\": \"Senja helps teams collect customer testimonials and keep relevant proof in one place for pitches, pages and posts.\",\n  \"unknowns\": [\n    \"Current pricing, paid capabilities and checkout are unverified.\",\n    \"Founder time, email access and product access are unknown; the experiment uses conservative resource assumptions.\",\n    \"No market research or external verification was performed; segment urgency and willingness to pay remain hypotheses you must test through conversations and purchase behavior.\"\n  ],\n  \"recommendationBasis\": {\n    \"segments\": [\"s1\", \"s4\"],\n    \"acquisitionChannels\": [\"s2\", \"s3\"],\n    \"outreachTemplates\": [\"s1\", \"s4\"],\n    \"firstTenPlaybook\": [\"s1\", \"s2\"],\n    \"thirtyDayPlan\": [\"s3\", \"s4\"]\n  },\n  \"contractVersion\": \"2\"\n}"
+}

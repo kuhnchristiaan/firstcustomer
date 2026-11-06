@@ -1,0 +1,124 @@
+{
+  "id": "resp_0240a6cc23a40004006aecddbd712887d280a70bd517b97d2a",
+  "object": "response",
+  "created_at": 1793908157,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793908160,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 1000,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "msg_0240a6cc23a40004006aecddbefa7487d2a373c33de57db9e0",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"alternatives.1.preferWhen\":\"Prefer this when community rules permit buyer conversations or a relevant ecosystem provides accessible distribution.\",\"firstExperiment.resources.constraints\":\"Capacity and zero spend are assumptions; use published business routes, respect opt-outs and limit response work to brief qualification.\"}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "quality_repair",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "alternatives.1.preferWhen": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          },
+          "firstExperiment.resources.constraints": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          }
+        },
+        "required": [
+          "alternatives.1.preferWhen",
+          "firstExperiment.resources.constraints"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 2403,
+    "input_tokens_details": {
+      "cache_write_tokens": 2400,
+      "cached_tokens": 0
+    },
+    "output_tokens": 63,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2466
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"alternatives.1.preferWhen\":\"Prefer this when community rules permit buyer conversations or a relevant ecosystem provides accessible distribution.\",\"firstExperiment.resources.constraints\":\"Capacity and zero spend are assumptions; use published business routes, respect opt-outs and limit response work to brief qualification.\"}"
+}

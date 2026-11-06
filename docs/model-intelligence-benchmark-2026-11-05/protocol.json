@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-05",
+  "models": [
+    {
+      "id": "gpt-4.1-mini",
+      "maxOutput": 6000,
+      "input": 0.4,
+      "cached": 0.1,
+      "output": 1.6,
+      "write": 0.4
+    },
+    {
+      "id": "gpt-6.1-sol",
+      "maxOutput": 25000,
+      "input": 2,
+      "cached": 0.1,
+      "output": 10,
+      "write": 2.5
+    }
+  ],
+  "packets": [
+    {
+      "slug": "senja",
+      "url": "https://senja.io/",
+      "sharedSha256": "9be6a4833c221aa52fcf0b15e5ea7f7056ae0784e2e1c99a060aa08c4109a185",
+      "evidenceSha256": "94916194f3ce7976c541f98c816c2c656269b80529a6a7296789c2ef45e8a293",
+      "profileSha256": "97c95950d775a8b58e716d655188ed0b0262e4a99a23a719768bae7fdf5d39c2"
+    },
+    {
+      "slug": "tally",
+      "url": "https://tally.so/",
+      "sharedSha256": "8c435bacdd862e7815bc8b5983f6b8c1a5e4f60cfb3931a3b87445c29762dec5",
+      "evidenceSha256": "f3a7ba6ad5a06c2ad4a44dd3e318066bfe9b4553fa51d320e47a0a733adb6364",
+      "profileSha256": "92cf3d3cd0de5de5de950c57168dd6a96625495068fcd57f6db27a0a374dd3ca"
+    }
+  ],
+  "maxStrategyCalls": 4,
+  "spendCeilingUsd": 0.75,
+  "worstCaseUsd": 0.5777515,
+  "reservations": [
+    {
+      "label": "sample-81369703",
+      "reservedInput": 10265,
+      "upperCost": 0.2756625
+    },
+    {
+      "label": "sample-c5a66ad2",
+      "reservedInput": 9934,
+      "upperCost": 0.274835
+    },
+    {
+      "label": "sample-faa8f0fd",
+      "reservedInput": 9902,
+      "upperCost": 0.0135608
+    },
+    {
+      "label": "sample-f5838bb2",
+      "reservedInput": 10233,
+      "upperCost": 0.0136932
+    }
+  ],
+  "retries": 0,
+  "visibleInstructionsIdentical": true,
+  "sharedAttribution": "Existing genuine 6.2 owner profile, revalidated against the fresh homepage snapshot; no paid identification calls",
+  "semanticReviewCalls": 0,
+  "repairs": 0
+}

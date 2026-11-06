@@ -166,6 +166,7 @@ it("returns incomplete analysis and all billed usage when the repaired output st
 });
 
 it("rejects exhausted output budget before attempting a paid review or publishing a candidate", async () => {
+  vi.stubEnv("OPENAI_MODEL", "gpt-4.1-mini");
   const f = commercialFixture();
   // A semantic defect requires repair after a review exhausts the output cap.
   const failedReview = structuredClone(passingReview);
@@ -266,14 +267,15 @@ it("accounts for an incomplete field repair and never reviews or publishes its p
   expect(transport.create).toHaveBeenCalledTimes(3);
 });
 
-it("reserves repair AND final review after a semantic defect at actual production stage ceilings", async () => {
+it("reserves repair AND final review after a semantic defect at legacy production stage ceilings", async () => {
+  vi.stubEnv("OPENAI_MODEL", "gpt-4.1-mini");
   const f = commercialFixture(),
     s = compactFixture(f.report),
     rejected = structuredClone(passingReview);
   rejected.scores.commercialRealism = 0;
   rejected.issues = [
     {
-      section: "paymentPath",
+      section: "paymentPath.paidConversion",
       reason: "Clarify how engagement leads to payment",
     },
   ];
@@ -285,7 +287,12 @@ it("reserves repair AND final review after a semantic defect at actual productio
     .mockResolvedValueOnce(billed(selectionOf(f.profile), 600))
     .mockResolvedValueOnce(billed(s, 2000))
     .mockResolvedValueOnce(billed(rejected, 650))
-    .mockResolvedValueOnce(billed({ paymentPath: s.paymentPath }, 600))
+    .mockResolvedValueOnce(
+      billed(
+        { "paymentPath.paidConversion": s.paymentPath.paidConversion },
+        600,
+      ),
+    )
     .mockResolvedValueOnce(billed(passingReview, 650));
   const result = await provider().analyze(
     [f.source],
@@ -299,4 +306,70 @@ it("reserves repair AND final review after a semantic defect at actual productio
   expect(
     result.report.schemaVersion === "1.1" && result.report.quality?.repairs,
   ).toBe(1);
+});
+
+it("repairs dependent numeric phase estimates together, rebuilds every week, then requires semantic review", async () => {
+  const f = commercialFixture(),
+    s = compactFixture(f.report);
+  s.firstExperiment.resources.assumedMinutes = 30;
+  s.firstExperiment.resources.researchMinutesPerActivity = 1;
+  transport.create
+    .mockResolvedValueOnce(response(selectionOf(f.profile)))
+    .mockResolvedValueOnce(response(s))
+    .mockResolvedValueOnce(
+      response({
+        "firstExperiment.resources.assumedMinutes": 60,
+        "firstExperiment.resources.researchMinutesPerActivity": 5,
+      }),
+    )
+    .mockResolvedValueOnce(response(passingReview));
+  const result = await provider().analyze(
+    [f.source],
+    AbortSignal.timeout(3000),
+    { inputTokens: 20000, outputTokens: 4500 },
+  );
+  expect(transport.create.mock.calls.map(([r]) => r.text.format.name)).toEqual([
+    "attributed_product_profile",
+    "acquisition_strategy",
+    "quality_repair",
+    "quality_review",
+  ]);
+  expect(
+    Object.keys(
+      transport.create.mock.calls[2][0].text.format.schema.properties,
+    ).sort(),
+  ).toEqual([
+    "firstExperiment.resources.assumedMinutes",
+    "firstExperiment.resources.researchMinutesPerActivity",
+  ]);
+  for (const week of result.report.thirtyDayPlan)
+    expect(
+      week.actions.some((a) => a.includes("budget 60 min; planned 36 min")),
+    ).toBe(true);
+  expect(
+    result.report.schemaVersion === "1.1" && result.report.quality?.repairs,
+  ).toBe(1);
+});
+it('reserves Sol reasoning-aware reviews, one repair and final review within exactly 8000 tokens', async()=>{
+ vi.stubEnv('OPENAI_MODEL','gpt-6.1-sol');vi.stubEnv('MAX_OUTPUT_TOKENS','8000');
+ const f=commercialFixture(),s=compactFixture(f.report),rejected=structuredClone(passingReview);
+ rejected.scores.commercialRealism=0;rejected.issues=[{section:'paymentPath.paidConversion',reason:'Clarify actual buying step'}];
+ const billed=(v:unknown,n:number)=>({...response(v),usage:{input_tokens:200,output_tokens:n,output_tokens_details:{reasoning_tokens:277}}});
+ transport.create.mockResolvedValueOnce(billed(selectionOf(f.profile),1200))
+ .mockResolvedValueOnce(billed(s,2800)).mockResolvedValueOnce(billed(rejected,1500))
+ .mockResolvedValueOnce(billed({'paymentPath.paidConversion':s.paymentPath.paidConversion},1000))
+ .mockResolvedValueOnce(billed(passingReview,1500));
+ const result=await provider().analyze([f.source],AbortSignal.timeout(3000));
+ expect(result.outputTokens).toBe(8000);
+ expect(transport.create.mock.calls.map(([r])=>r.max_output_tokens)).toEqual([1200,2800,1500,1000,1500]);
+ expect(transport.create.mock.calls.every(([r])=>r.model==='gpt-6.1-sol')).toBe(true);
+ expect(result.report.schemaVersion==='1.1'&&result.report.quality?.repairs).toBe(1);
+});
+it('rejects an incomplete Sol quality review without retrying or publishing',async()=>{
+ vi.stubEnv('OPENAI_MODEL','gpt-6.1-sol');vi.stubEnv('MAX_OUTPUT_TOKENS','8000');
+ const f=commercialFixture();transport.create.mockResolvedValueOnce(response(selectionOf(f.profile)))
+ .mockResolvedValueOnce(response(compactFixture(f.report)))
+ .mockResolvedValueOnce({...response(passingReview),status:'incomplete',output_text:'{"scores":',usage:{input_tokens:200,output_tokens:1500}});
+ await expect(provider().analyze([f.source],AbortSignal.timeout(3000))).rejects.toMatchObject({reason:'quality_failed',qualityFailure:{code:'quality_review_invalid'}});
+ expect(transport.create).toHaveBeenCalledTimes(3);expect(transport.create.mock.calls[2][0].max_output_tokens).toBe(1500);
 });

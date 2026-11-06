@@ -1,0 +1,1 @@
+{"firstExperiment.resources.constraints":"The 90-minute, no-spend test assumes unconfirmed founder capacity and covers outreach and brief qualification, not activation support."}

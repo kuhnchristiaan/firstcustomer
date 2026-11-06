@@ -1,0 +1,60 @@
+{
+  "name": "Error",
+  "message": "The provider returned an incomplete or invalid report.",
+  "reason": "quality_failed",
+  "inputTokens": 3657,
+  "outputTokens": 2133,
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "inputTokens": 2020,
+      "outputTokens": 529
+    },
+    {
+      "stage": "acquisition_strategy",
+      "inputTokens": 1637,
+      "outputTokens": 1604
+    }
+  ],
+  "qualityFailure": {
+    "code": "quality_repair_invalid",
+    "issues": [
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.commercialLearning",
+        "reason": "No observable success measure: acquisitionChannels.0.successMetric"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.commercialLearning",
+        "reason": "No observable success measure: firstTenPlaybook.0.successMetric"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.commercialLearning",
+        "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.commercialLearning",
+        "reason": "No observable success measure: thirtyDayPlan.0.successMetric"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.commercialLearning",
+        "reason": "No observable success measure: thirtyDayPlan.1.successMetric"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.commercialLearning",
+        "reason": "No observable success measure: thirtyDayPlan.2.successMetric"
+      },
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.commercialLearning",
+        "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+      }
+    ],
+    "repairFeasible": false
+  }
+}

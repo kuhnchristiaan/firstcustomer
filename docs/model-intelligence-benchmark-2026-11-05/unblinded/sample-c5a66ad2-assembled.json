@@ -1,0 +1,652 @@
+{
+  "schemaVersion": "1.1",
+  "businessName": "Senja",
+  "overview": {
+    "text": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+    "confidence": "Verified",
+    "sources": [
+      "https://senja.io/"
+    ]
+  },
+  "offerings": [
+    {
+      "text": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+      "confidence": "Verified",
+      "sources": [
+        "https://senja.io/"
+      ]
+    },
+    {
+      "text": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials.",
+      "confidence": "Verified",
+      "sources": [
+        "https://senja.io/"
+      ]
+    },
+    {
+      "text": "✓Automate video and text collection",
+      "confidence": "Verified",
+      "sources": [
+        "https://senja.io/"
+      ]
+    },
+    {
+      "text": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share.",
+      "confidence": "Verified",
+      "sources": [
+        "https://senja.io/"
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "text": "Needs fresh alumni testimonials for the next enrollment page; collection competes with launch preparation.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Needs client testimonials after project completion, before clients become difficult to reengage.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Needs usable customer proof before publishing a new landing page or launch announcement.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "valueProposition": {
+    "text": "For founder-instructors preparing their next cohort, Senja offers a way to collect alumni testimonials and prepare proof for course pages and launch content. Test workflow fit and paid value; do not promise conversion or",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  "differentiators": [
+    {
+      "text": "Comparative advantage is unvalidated. Test For founder-instructors preparing their next cohort, Senja offers a way to collect alumni testimonials and prepare proof for course pages and launch content. Test workflow fit and paid value; do not promise conversion or against the buyer's current workaround.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "idealCustomers": [
+    {
+      "text": "1. Founder-instructor preparing the next cohort of a paid course",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "2. Owner of a small web-design agency completing client projects",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "3. Bootstrapped software founder preparing a launch-page refresh",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "industries": [
+    {
+      "text": "Paid cohort-based courses with previous students and a publicly announced upcoming cohort.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Agencies publishing recent client launches and maintaining their own portfolio websites.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Small software businesses with existing customers and a publicly discussed launch or website refresh",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "buyerPersonas": [
+    {
+      "text": "Independent founder-instructor who controls the course website and purchasing decisions.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Owner of a two-to-ten-person web-design agency who manages project handoffs and marketing purchases.",
+      "confidence": "Inferred",
+      "sources": []
+    },
+    {
+      "text": "Founder who owns website changes and software purchases for an early paid software product.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "geographicFocus": {
+    "text": "Geography is unknown; check buyer access, language and purchasing requirements before outreach.",
+    "confidence": "Unknown",
+    "sources": []
+  },
+  "segments": [
+    {
+      "name": "1. Founder-instructor preparing the next cohort of a paid course",
+      "industry": "Paid cohort-based courses with previous students and a publicly announced upcoming cohort.",
+      "customerType": "Sales-assisted",
+      "buyerRoles": [
+        "Independent founder-instructor who controls the course website and purchasing decisions."
+      ],
+      "problems": [
+        "Needs fresh alumni testimonials for the next enrollment page; collection competes with launch preparation."
+      ],
+      "motivations": [
+        "Hypothesis to validate: willingness to resolve Needs fresh alumni testimonials for the next enrollment page; collection competes with launch preparation."
+      ],
+      "buyingSignals": [
+        "Check public Maven listings, then instructor websites for launch dates, previous cohorts, and published business emails."
+      ],
+      "priority": 1,
+      "evidence": {
+        "text": "Clear deadline and direct authority; willingness to pay remains unverified, and launches may be infrequent. Check public Maven listings, then instructor websites for launch dates, previous cohorts, and published business emails. Start with course founder-instructors: an upcoming enrollment deadline, reachable alumni, and purchasing authority can converge in one person. This is a hypothesis, not established demand. Agency owners win instead if a ",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "name": "2. Owner of a small web-design agency completing client projects",
+      "industry": "Agencies publishing recent client launches and maintaining their own portfolio websites.",
+      "customerType": "Sales-assisted",
+      "buyerRoles": [
+        "Owner of a two-to-ten-person web-design agency who manages project handoffs and marketing purchases."
+      ],
+      "problems": [
+        "Needs client testimonials after project completion, before clients become difficult to reengage."
+      ],
+      "motivations": [
+        "Hypothesis to validate: willingness to resolve Needs client testimonials after project completion, before clients become difficult to reengage."
+      ],
+      "buyingSignals": [
+        "Find agencies through public agency directories; verify recent launches and owner contact details on their websites."
+      ],
+      "priority": 2,
+      "evidence": {
+        "text": "Repeated project handoffs could support recurring payment, but client approvals complicate activation and ownership. Find agencies through public agency directories; verify recent launches and owner contact details on their websites.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "name": "3. Bootstrapped software founder preparing a launch-page refresh",
+      "industry": "Small software businesses with existing customers and a publicly discussed launch or website refresh",
+      "customerType": "Sales-assisted",
+      "buyerRoles": [
+        "Founder who owns website changes and software purchases for an early paid software product."
+      ],
+      "problems": [
+        "Needs usable customer proof before publishing a new landing page or launch announcement."
+      ],
+      "motivations": [
+        "Hypothesis to validate: willingness to resolve Needs usable customer proof before publishing a new landing page or launch announcement."
+      ],
+      "buyingSignals": [
+        "Review public founder launch posts and product websites; verify existing customers and an explicit launch trigger."
+      ],
+      "priority": 3,
+      "evidence": {
+        "text": "Direct purchasing authority and self-service familiarity, but limited customer evidence and free-tool preferences may constrain payment. Review public founder launch posts and product websites; verify existing customers and an explicit launch trigger.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "buyingSignals": [
+    {
+      "text": "Potential qualification signal to investigate: Determine whether an upcoming course launch makes alumni testimonial collection urgent enough to purchase. Confirm urgency and buying authority; demand is unverified.",
+      "confidence": "Inferred",
+      "sources": []
+    }
+  ],
+  "missingInformation": [
+    {
+      "text": "No market research or external verification establishes demand, buyer accessibility, or willingness to pay.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Public directory access, contact availability, and relevant outreach requirements need checking before sending.",
+      "confidence": "Unknown",
+      "sources": []
+    },
+    {
+      "text": "Current pricing, free-tier boundaries, checkout availability, and necessary paid capabilities remain unverified.",
+      "confidence": "Unknown",
+      "sources": []
+    }
+  ],
+  "positioning": {
+    "text": "For founder-instructors preparing their next cohort, Senja offers a way to collect alumni testimonials and prepare proof for course pages and launch content. Test workflow fit and paid value; do not promise conversion or",
+    "confidence": "Inferred",
+    "sources": []
+  },
+  "acquisitionChannels": [
+    {
+      "title": "Individual, relevant emails to publicly listed business addresses.",
+      "recommendation": {
+        "text": "1. Founder-instructor preparing the next cohort of a paid course: Direct email tests deadline, authority, and payment questions without assuming traffic or an audience. It requires manual research but no initial media spend. Compared with community templates, conversations can surface objections sooner; compared with partner recruitment, access requires fewer gate",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Use public Maven listings as a candidate source, subject to an access check. Qualify on the instructor's own website: previous students, an upcoming cohort date, founder control, and a published business contact. Exclude first-cohort courses and contacts requiring guessed or private addresses.",
+        "Check whether public course listings and instructor websites yield qualified buyers with published business emails. Also verify current product pricing and checkout. If access fails, revise the prospect source before sending; do not treat inaccessible prospects as rejected demand.",
+        "Activity cap: 8 Research, qualify, and send individual invitations to up to eight founder-instructors; record exclusions and access barriers.",
+        "Provisional assumption: 30 minutes; zero direct spend; Browser, Spreadsheet for qualification and learning notes. Assume a browser, existing email account, and founder time. Allow three hours for access checks, research, and invitations, plus one hour reserved for consented conversations. No paid database, audience, automation, or "
+      ],
+      "successMetric": "Ask about the launch deadline, current testimonial workaround, consequences of delay, purchase authority, and acceptable price. Test activation through creating a collection form, requesting permissioned alumni proof, and publishing one usable testimonial where feasible. Establish whether a "
+    },
+    {
+      "title": "Self-service testimonial-request template in a relevant course-creator community",
+      "recommendation": {
+        "text": "Conditional alternative: Lower marginal delivery effort but requires useful content and moderator permission. Can use free tools, although product access must be verified. Commercial evidence is slower without existing traffic; community access, Prefer only when: Qualified buyers explicitly prefer independent setup, and an accessible community permits relevant resource sharing.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Inspect a public course-creator community's rules and request permission to share a practical alumni-testimonial request template."
+      ],
+      "successMetric": "Record evidence of this condition before switching: Qualified buyers explicitly prefer independent setup, and an accessible community permits relevant resource sharing."
+    },
+    {
+      "title": "Referral distribution through independent course-website designers",
+      "recommendation": {
+        "text": "Conditional alternative: Higher relationship-building effort and slower payment evidence because a partner sits between seller and buyer. Initial conversations require no spend; any referral economics remain unverified. Public designer port Prefer only when: Buyer conversations show website designers control testimonial publishing, and a designer expresses concrete interest in introducing a suitable client.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Find a designer publicly specializing in course websites and ask how clients currently collect and publish testimonials."
+      ],
+      "successMetric": "Record evidence of this condition before switching: Buyer conversations show website designers control testimonial publishing, and a designer expresses concrete interest in introducing a suitable client."
+    }
+  ],
+  "outreachTemplates": [
+    {
+      "channel": "Individual, relevant emails to publicly listed business addresses.",
+      "subject": "Alumni testimonials for your next cohort?",
+      "body": "Are you gathering alumni testimonials for an upcoming course launch? I’m testing whether Senja fits that workflow. Would a brief walkthrough using your current process be useful? If it fits, we can discuss a paid plan before you commit.",
+      "rationale": {
+        "text": "1. Founder-instructor preparing the next cohort of a paid course: Determine whether an upcoming course launch makes alumni testimonial collection urgent enough to purchase.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "channel": "Individual, relevant emails to publicly listed business addresses.",
+      "subject": "May I send a collection-workflow outline?",
+      "body": "May I send a short outline for requesting alumni testimonials and publishing them on a course page? If this is a current priority, we could compare it with your existing process. If not, I won’t follow up again.",
+      "rationale": {
+        "text": "Use only following an actual response and permission to continue.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "firstTenPlaybook": [
+    {
+      "title": "Test the first buyer",
+      "recommendation": {
+        "text": "Start with course founder-instructors: an upcoming enrollment deadline, reachable alumni, and purchasing authority can converge in one person. This is a hypothesis, not established demand. Agency owners win instead if a ",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Use public Maven listings as a candidate source, subject to an access check. Qualify on the instructor's own website: previous students, an upcoming cohort date, founder control, and a published business contact. Exclude first-cohort courses and contacts requiring guessed or private addresses.",
+        "Check whether public course listings and instructor websites yield qualified buyers with published business emails. Also verify current product pricing and checkout. If access fails, revise the prospect source before sending; do not treat inaccessible prospects as rejected demand.",
+        "Activity cap: 8 Research, qualify, and send individual invitations to up to eight founder-instructors; record exclusions and access barriers.",
+        "Provisional assumption: 30 minutes; zero direct spend; Browser, Spreadsheet for qualification and learning notes. Assume a browser, existing email account, and founder time. Allow three hours for access checks, research, and invitations, plus one hour reserved for consented conversations. No paid database, audience, automation, or "
+      ],
+      "successMetric": "Ask about the launch deadline, current testimonial workaround, consequences of delay, purchase authority, and acceptable price. Test activation through creating a collection form, requesting permissioned alumni proof, and publishing one usable testimonial where feasible. Establish whether a "
+    },
+    {
+      "title": "Test the buying next step",
+      "recommendation": {
+        "text": "Verify current pricing, paid-plan boundaries, and checkout before outreach. Offer a brief workflow walkthrough, then buyer-operated setup using existing functionality. Confirm the buyer's required capability, acceptable ",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "A buyer describes a consequential launch deadline, owns the decision, completes a meaningful activation step, and agrees to a concrete paid next step at a verified price. Continue buyer-led onboarding; count a customer only after payment confirmation.",
+        "Verify current pricing, paid-plan boundaries, and checkout before outreach. Offer a brief workflow walkthrough, then buyer-operated setup using existing functionality. Confirm the buyer's required capability, acceptable "
+      ],
+      "successMetric": "Ask about the launch deadline, current testimonial workaround, consequences of delay, purchase authority, and acceptable price. Test activation through creating a collection form, requesting permissioned alumni proof, and publishing one usable testimonial where feasible. Establish whether a "
+    },
+    {
+      "title": "Repeat only after evidence",
+      "recommendation": {
+        "text": "The first ten paying customers are a goal, not a forecast or conversion promise.",
+        "confidence": "Inferred",
+        "sources": []
+      },
+      "steps": [
+        "Continue: A buyer describes a consequential launch deadline, owns the decision, completes a meaningful activation step, and agrees to a concrete paid next step at a verified price. Continue buyer-led onboarding; count a customer only after payment confirmation.",
+        "Adjust: A buyer has urgent need but identifies a specific blocker such as alumni permission, setup effort, or unclear paid value. Change that part of the test. For silence, inspect access, delivery, and relevance before drawing demand conclusions.",
+        "Stop: Stop this segment-channel combination if qualified conversations consistently show no consequential deadline, an adequate existing workaround, or no reason to pay for available capabilities. If public contact access fails, stop outreach through that source rather than inferring absent demand.",
+        "Retain 1. Founder-instructor preparing the next cohort of a paid course and Individual, relevant emails to publicly listed business addresses. unless the evidence supports a conditional alternative."
+      ],
+      "successMetric": "Record confirmed payments separately from replies, downloads and free users."
+    }
+  ],
+  "thirtyDayPlan": [
+    {
+      "week": 1,
+      "objective": "Prepare and run the primary test",
+      "actions": [
+        "Use public Maven listings as a candidate source, subject to an access check. Qualify on the instructor's own website: previous students, an upcoming cohort date, founder control, and a published business contact. Exclude first-cohort courses and contacts requiring guessed or private addresses.",
+        "Check whether public course listings and instructor websites yield qualified buyers with published business emails. Also verify current product pricing and checkout. If access fails, revise the prospect source before sending; do not treat inaccessible prospects as rejected demand.",
+        "Activity cap: 8 Research, qualify, and send individual invitations to up to eight founder-instructors; record exclusions and access barriers.",
+        "Provisional assumption: 30 minutes; zero direct spend; Browser, Spreadsheet for qualification and learning notes. Assume a browser, existing email account, and founder time. Allow three hours for access checks, research, and invitations, plus one hour reserved for consented conversations. No paid database, audience, automation, or "
+      ],
+      "successMetric": "Ask about the launch deadline, current testimonial workaround, consequences of delay, purchase authority, and acceptable price. Test activation through creating a collection form, requesting permissioned alumni proof, and publishing one usable testimonial where feasible. Establish whether a ",
+      "rationale": {
+        "text": "Start with course founder-instructors: an upcoming enrollment deadline, reachable alumni, and purchasing authority can converge in one person. This is a hypothesis, not established demand. Agency owners win instead if a ",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 2,
+      "objective": "Review the primary test evidence",
+      "actions": [
+        "Ask about the launch deadline, current testimonial workaround, consequences of delay, purchase authority, and acceptable price. Test activation through creating a collection form, requesting permissioned alumni proof, and publishing one usable testimonial where feasible. Establish whether a ",
+        "Continue: A buyer describes a consequential launch deadline, owns the decision, completes a meaningful activation step, and agrees to a concrete paid next step at a verified price. Continue buyer-led onboarding; count a customer only after payment confirmation.",
+        "Adjust: A buyer has urgent need but identifies a specific blocker such as alumni permission, setup effort, or unclear paid value. Change that part of the test. For silence, inspect access, delivery, and relevance before drawing demand conclusions.",
+        "Stop: Stop this segment-channel combination if qualified conversations consistently show no consequential deadline, an adequate existing workaround, or no reason to pay for available capabilities. If public contact access fails, stop outreach through that source rather than inferring absent demand."
+      ],
+      "successMetric": "Ask about the launch deadline, current testimonial workaround, consequences of delay, purchase authority, and acceptable price. Test activation through creating a collection form, requesting permissioned alumni proof, and publishing one usable testimonial where feasible. Establish whether a ",
+      "rationale": {
+        "text": "Direct email tests deadline, authority, and payment questions without assuming traffic or an audience. It requires manual research but no initial media spend. Compared with community templates, conversations can surface objections sooner; compared with partner recruitment, access requires fewer gate",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 3,
+      "objective": "Pursue a buying step only after evidence",
+      "actions": [
+        "A buyer describes a consequential launch deadline, owns the decision, completes a meaningful activation step, and agrees to a concrete paid next step at a verified price. Continue buyer-led onboarding; count a customer only after payment confirmation.",
+        "Verify current pricing, paid-plan boundaries, and checkout before outreach. Offer a brief workflow walkthrough, then buyer-operated setup using existing functionality. Confirm the buyer's required capability, acceptable "
+      ],
+      "successMetric": "Ask about the launch deadline, current testimonial workaround, consequences of delay, purchase authority, and acceptable price. Test activation through creating a collection form, requesting permissioned alumni proof, and publishing one usable testimonial where feasible. Establish whether a ",
+      "rationale": {
+        "text": "Verify current pricing, paid-plan boundaries, and checkout before outreach. Offer a brief workflow walkthrough, then buyer-operated setup using existing functionality. Confirm the buyer's required capability, acceptable ",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    },
+    {
+      "week": 4,
+      "objective": "Decide whether to repeat, adjust or stop",
+      "actions": [
+        "Continue: A buyer describes a consequential launch deadline, owns the decision, completes a meaningful activation step, and agrees to a concrete paid next step at a verified price. Continue buyer-led onboarding; count a customer only after payment confirmation.",
+        "Adjust: A buyer has urgent need but identifies a specific blocker such as alumni permission, setup effort, or unclear paid value. Change that part of the test. For silence, inspect access, delivery, and relevance before drawing demand conclusions.",
+        "Stop: Stop this segment-channel combination if qualified conversations consistently show no consequential deadline, an adequate existing workaround, or no reason to pay for available capabilities. If public contact access fails, stop outreach through that source rather than inferring absent demand.",
+        "Switch only when an alternative's stated condition is observed; otherwise retain Individual, relevant emails to publicly listed business addresses.."
+      ],
+      "successMetric": "Ask about the launch deadline, current testimonial workaround, consequences of delay, purchase authority, and acceptable price. Test activation through creating a collection form, requesting permissioned alumni proof, and publishing one usable testimonial where feasible. Establish whether a ",
+      "rationale": {
+        "text": "Use observed commercial evidence; no assumed conversion rate or automatic scaling.",
+        "confidence": "Inferred",
+        "sources": []
+      }
+    }
+  ],
+  "productIntelligence": {
+    "version": "1.0",
+    "identity": {
+      "name": "Senja",
+      "summary": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+      "category": "Customer acquisition",
+      "primaryJob": {
+        "actor": "Marketers, business owners, and sales teams",
+        "problem": "Difficulty collecting and utilizing customer testimonials to build trust and increase sales",
+        "outcome": "Easily collect, organize, and share testimonials to win customer trust and boost sales"
+      },
+      "certainty": "Website-supported",
+      "evidence": [
+        {
+          "sourceUrl": "https://senja.io/",
+          "blockId": "21e09887a3aa",
+          "quote": "The easiest way to collect testimonials and add them to your website. Get started for free."
+        }
+      ]
+    },
+    "statements": [
+      {
+        "id": "s1",
+        "text": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://senja.io/",
+            "blockId": "21e09887a3aa",
+            "quote": "The easiest way to collect testimonials and add them to your website. Get started for free."
+          }
+        ]
+      },
+      {
+        "id": "s2",
+        "text": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://senja.io/",
+            "blockId": "8088337baf9d",
+            "quote": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials."
+          }
+        ]
+      },
+      {
+        "id": "s3",
+        "text": "✓Automate video and text collection",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://senja.io/",
+            "blockId": "b8c2fac70e98",
+            "quote": "✓Automate video and text collection"
+          }
+        ]
+      },
+      {
+        "id": "s4",
+        "text": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share.",
+        "kind": "Owner product claim",
+        "subject": "Owner product",
+        "evidence": [
+          {
+            "sourceUrl": "https://senja.io/",
+            "blockId": "1224993c1e20",
+            "quote": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share."
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "No direct information about pricing models or trial options.",
+      "No detailed description of user roles or permission settings.",
+      "No mention of analytics or reporting capabilities."
+    ]
+  },
+  "recommendationBasis": [
+    {
+      "section": "segments",
+      "statementIds": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "section": "acquisitionChannels",
+      "statementIds": [
+        "s1",
+        "s2"
+      ]
+    },
+    {
+      "section": "outreachTemplates",
+      "statementIds": [
+        "s1",
+        "s4"
+      ]
+    },
+    {
+      "section": "firstTenPlaybook",
+      "statementIds": [
+        "s1",
+        "s3"
+      ]
+    },
+    {
+      "section": "thirtyDayPlan",
+      "statementIds": [
+        "s1",
+        "s3"
+      ]
+    }
+  ],
+  "acquisitionStrategy": {
+    "segments": [
+      {
+        "name": "1. Founder-instructor preparing the next cohort of a paid course",
+        "buyer": "Independent founder-instructor who controls the course website and purchasing decisions.",
+        "market": "Paid cohort-based courses with previous students and a publicly announced upcoming cohort.",
+        "problem": "Needs fresh alumni testimonials for the next enrollment page; collection competes with launch preparation.",
+        "access": "Check public Maven listings, then instructor websites for launch dates, previous cohorts, and published business emails.",
+        "tradeoff": "Clear deadline and direct authority; willingness to pay remains unverified, and launches may be infrequent."
+      },
+      {
+        "name": "2. Owner of a small web-design agency completing client projects",
+        "buyer": "Owner of a two-to-ten-person web-design agency who manages project handoffs and marketing purchases.",
+        "market": "Agencies publishing recent client launches and maintaining their own portfolio websites.",
+        "problem": "Needs client testimonials after project completion, before clients become difficult to reengage.",
+        "access": "Find agencies through public agency directories; verify recent launches and owner contact details on their websites.",
+        "tradeoff": "Repeated project handoffs could support recurring payment, but client approvals complicate activation and ownership."
+      },
+      {
+        "name": "3. Bootstrapped software founder preparing a launch-page refresh",
+        "buyer": "Founder who owns website changes and software purchases for an early paid software product.",
+        "market": "Small software businesses with existing customers and a publicly discussed launch or website refresh",
+        "problem": "Needs usable customer proof before publishing a new landing page or launch announcement.",
+        "access": "Review public founder launch posts and product websites; verify existing customers and an explicit launch trigger.",
+        "tradeoff": "Direct purchasing authority and self-service familiarity, but limited customer evidence and free-tool preferences may constrain payment."
+      }
+    ],
+    "firstBuyerWhy": "Start with course founder-instructors: an upcoming enrollment deadline, reachable alumni, and purchasing authority can converge in one person. This is a hypothesis, not established demand. Agency owners win instead if a ",
+    "buyingMotion": "Sales-assisted",
+    "paymentPath": "Verify current pricing, paid-plan boundaries, and checkout before outreach. Offer a brief workflow walkthrough, then buyer-operated setup using existing functionality. Confirm the buyer's required capability, acceptable ",
+    "firstExperiment": {
+      "problem": "Determine whether an upcoming course launch makes alumni testimonial collection urgent enough to purchase.",
+      "identifyProspects": "Use public Maven listings as a candidate source, subject to an access check. Qualify on the instructor's own website: previous students, an upcoming cohort date, founder control, and a published business contact. Exclude first-cohort courses and contacts requiring guessed or private addresses.",
+      "channel": "Individual, relevant emails to publicly listed business addresses.",
+      "channelRationale": "Direct email tests deadline, authority, and payment questions without assuming traffic or an audience. It requires manual research but no initial media spend. Compared with community templates, conversations can surface objections sooner; compared with partner recruitment, access requires fewer gate",
+      "firstAction": "Check whether public course listings and instructor websites yield qualified buyers with published business emails. Also verify current product pricing and checkout. If access fails, revise the prospect source before sending; do not treat inaccessible prospects as rejected demand.",
+      "activityTarget": {
+        "quantity": 8,
+        "activity": "Research, qualify, and send individual invitations to up to eight founder-instructors; record exclusions and access barriers."
+      },
+      "resources": {
+        "assumedMinutes": 30,
+        "tools": [
+          "Browser",
+          "Spreadsheet for qualification and learning notes"
+        ],
+        "directSpend": 0,
+        "assumptions": "Assume a browser, existing email account, and founder time. Allow three hours for access checks, research, and invitations, plus one hour reserved for consented conversations. No paid database, audience, automation, or "
+      },
+      "commercialLearning": "Ask about the launch deadline, current testimonial workaround, consequences of delay, purchase authority, and acceptable price. Test activation through creating a collection form, requesting permissioned alumni proof, and publishing one usable testimonial where feasible. Establish whether a ",
+      "continueWhen": "A buyer describes a consequential launch deadline, owns the decision, completes a meaningful activation step, and agrees to a concrete paid next step at a verified price. Continue buyer-led onboarding; count a customer only after payment confirmation.",
+      "adjustWhen": "A buyer has urgent need but identifies a specific blocker such as alumni permission, setup effort, or unclear paid value. Change that part of the test. For silence, inspect access, delivery, and relevance before drawing demand conclusions.",
+      "stopWhen": "Stop this segment-channel combination if qualified conversations consistently show no consequential deadline, an adequate existing workaround, or no reason to pay for available capabilities. If public contact access fails, stop outreach through that source rather than inferring absent demand."
+    },
+    "alternatives": [
+      {
+        "channel": "Self-service testimonial-request template in a relevant course-creator community",
+        "comparison": "Lower marginal delivery effort but requires useful content and moderator permission. Can use free tools, although product access must be verified. Commercial evidence is slower without existing traffic; community access,",
+        "preferWhen": "Qualified buyers explicitly prefer independent setup, and an accessible community permits relevant resource sharing.",
+        "firstAction": "Inspect a public course-creator community's rules and request permission to share a practical alumni-testimonial request template."
+      },
+      {
+        "channel": "Referral distribution through independent course-website designers",
+        "comparison": "Higher relationship-building effort and slower payment evidence because a partner sits between seller and buyer. Initial conversations require no spend; any referral economics remain unverified. Public designer port",
+        "preferWhen": "Buyer conversations show website designers control testimonial publishing, and a designer expresses concrete interest in introducing a suitable client.",
+        "firstAction": "Find a designer publicly specializing in course websites and ask how clients currently collect and publish testimonials."
+      }
+    ],
+    "messages": [
+      {
+        "subject": "Alumni testimonials for your next cohort?",
+        "body": "Are you gathering alumni testimonials for an upcoming course launch? I’m testing whether Senja fits that workflow. Would a brief walkthrough using your current process be useful? If it fits, we can discuss a paid plan before you commit."
+      },
+      {
+        "subject": "May I send a collection-workflow outline?",
+        "body": "May I send a short outline for requesting alumni testimonials and publishing them on a course page? If this is a current priority, we could compare it with your existing process. If not, I won’t follow up again."
+      }
+    ],
+    "positioning": "For founder-instructors preparing their next cohort, Senja offers a way to collect alumni testimonials and prepare proof for course pages and launch content. Test workflow fit and paid value; do not promise conversion or",
+    "unknowns": [
+      "No market research or external verification establishes demand, buyer accessibility, or willingness to pay.",
+      "Public directory access, contact availability, and relevant outreach requirements need checking before sending.",
+      "Current pricing, free-tier boundaries, checkout availability, and necessary paid capabilities remain unverified."
+    ],
+    "recommendationBasis": {
+      "segments": [
+        "s1",
+        "s3"
+      ],
+      "acquisitionChannels": [
+        "s1",
+        "s2"
+      ],
+      "outreachTemplates": [
+        "s1",
+        "s4"
+      ],
+      "firstTenPlaybook": [
+        "s1",
+        "s3"
+      ],
+      "thirtyDayPlan": [
+        "s1",
+        "s3"
+      ]
+    }
+  },
+  "firstExperiment": {
+    "segment": "1. Founder-instructor preparing the next cohort of a paid course",
+    "problem": "Determine whether an upcoming course launch makes alumni testimonial collection urgent enough to purchase.",
+    "identifyProspects": "Use public Maven listings as a candidate source, subject to an access check. Qualify on the instructor's own website: previous students, an upcoming cohort date, founder control, and a published business contact. Exclude first-cohort courses and contacts requiring guessed or private addresses.",
+    "channel": "Individual, relevant emails to publicly listed business addresses.",
+    "channelRationale": "Direct email tests deadline, authority, and payment questions without assuming traffic or an audience. It requires manual research but no initial media spend. Compared with community templates, conversations can surface objections sooner; compared with partner recruitment, access requires fewer gate",
+    "firstAction": "Check whether public course listings and instructor websites yield qualified buyers with published business emails. Also verify current product pricing and checkout. If access fails, revise the prospect source before sending; do not treat inaccessible prospects as rejected demand.",
+    "activityTarget": {
+      "quantity": 8,
+      "activity": "Research, qualify, and send individual invitations to up to eight founder-instructors; record exclusions and access barriers."
+    },
+    "resources": {
+      "assumedMinutes": 30,
+      "tools": [
+        "Browser",
+        "Spreadsheet for qualification and learning notes"
+      ],
+      "directSpend": 0,
+      "assumptions": "Assume a browser, existing email account, and founder time. Allow three hours for access checks, research, and invitations, plus one hour reserved for consented conversations. No paid database, audience, automation, or "
+    },
+    "commercialLearning": "Ask about the launch deadline, current testimonial workaround, consequences of delay, purchase authority, and acceptable price. Test activation through creating a collection form, requesting permissioned alumni proof, and publishing one usable testimonial where feasible. Establish whether a ",
+    "continueWhen": "A buyer describes a consequential launch deadline, owns the decision, completes a meaningful activation step, and agrees to a concrete paid next step at a verified price. Continue buyer-led onboarding; count a customer only after payment confirmation.",
+    "adjustWhen": "A buyer has urgent need but identifies a specific blocker such as alumni permission, setup effort, or unclear paid value. Change that part of the test. For silence, inspect access, delivery, and relevance before drawing demand conclusions.",
+    "stopWhen": "Stop this segment-channel combination if qualified conversations consistently show no consequential deadline, an adequate existing workaround, or no reason to pay for available capabilities. If public contact access fails, stop outreach through that source rather than inferring absent demand.",
+    "strongestAlternative": {
+      "channel": "Self-service testimonial-request template in a relevant course-creator community",
+      "whyNotSelected": "Lower marginal delivery effort but requires useful content and moderator permission. Can use free tools, although product access must be verified. Commercial evidence is slower without existing traffic; community access,",
+      "preferWhen": "Qualified buyers explicitly prefer independent setup, and an accessible community permits relevant resource sharing."
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Error",
+  "reason": "quality_failed",
+  "qualityFailure": {
+    "code": "quality_failed",
+    "issues": [
+      {
+        "section": "alternatives.1.preferWhen",
+        "reason": "Complete the truncated condition; distinguish community access from authorized existing-user evidence as separate switching triggers."
+      }
+    ],
+    "repairFeasible": false
+  },
+  "message": "The provider returned an incomplete or invalid report."
+}

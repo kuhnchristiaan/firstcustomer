@@ -1,0 +1,45 @@
+{
+  "accepted": false,
+  "failure": {
+    "name": "Error",
+    "reason": "quality_failed",
+    "qualityFailure": {
+      "code": "quality_repair_invalid",
+      "issues": [
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.resources.constraints",
+          "reason": "Incomplete strategic explanation: finish the reasoning component"
+        },
+        {
+          "section": "alternatives",
+          "path": "alternatives.1.preferWhen",
+          "reason": "Incomplete strategic explanation: finish the reasoning component"
+        }
+      ],
+      "repairFeasible": false
+    },
+    "message": "The provider returned an incomplete or invalid report."
+  },
+  "ledger": {
+    "ceilingUsd": 0.2,
+    "actualEstimatedUsd": 0.1446992,
+    "conservativeKnownUsd": 0.15769249999999999,
+    "uncertainReservedUsd": 0,
+    "newPaidCalls": 1
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "attributed_product_profile"
+    },
+    {
+      "ordinal": 2,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "acquisition_strategy"
+    }
+  ],
+  "head": "98ab24cbd48a9e2907f3332a028cc26c2b1ea323",
+  "note": "Genuine profile and fresh strategy reused after exact request matching; one bounded repair and mandatory semantic review."
+}

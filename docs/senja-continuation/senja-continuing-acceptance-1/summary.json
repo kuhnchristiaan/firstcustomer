@@ -1,0 +1,61 @@
+{
+  "accepted": false,
+  "elapsedMs": 24172,
+  "usage": null,
+  "failure": {
+    "name": "Error",
+    "message": "The provider returned an incomplete or invalid report.",
+    "reason": "incomplete_output",
+    "inputTokens": 2020,
+    "outputTokens": 1200,
+    "stages": [
+      {
+        "stage": "attributed_product_profile",
+        "inputTokens": 2020,
+        "outputTokens": 1200
+      }
+    ],
+    "qualityFailure": null
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "stage": "attributed_product_profile",
+      "reservedUsd": 0.0206375,
+      "maxOutputTokens": 1200,
+      "latencyMs": 21650,
+      "model": "gpt-6.1-sol",
+      "status": "incomplete",
+      "usage": {
+        "input_tokens": 2020,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 2017
+        },
+        "output_tokens": 1200,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3220
+      },
+      "incompleteDetails": {
+        "reason": "max_output_tokens"
+      },
+      "estimatedCostUsd": 0.0122077,
+      "conservativeCostUsd": 0.01705
+    }
+  ],
+  "ledger": {
+    "ceilingUsd": 0.1,
+    "attempts": 1,
+    "calls": 1,
+    "actualEstimatedUsd": 0.0345412,
+    "conservativeActualUsd": 0.047522499999999995,
+    "uncertainReservationUsd": 0,
+    "stopped": true
+  },
+  "gitHeadUnchanged": true,
+  "trackedWorkingTreeClean": false,
+  "environmentFileUnchanged": true,
+  "databaseWrites": false
+}

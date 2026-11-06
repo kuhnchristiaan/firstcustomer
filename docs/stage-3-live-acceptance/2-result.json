@@ -1,0 +1,32 @@
+{
+  "review": {
+    "id": "cmw3u04hf000lccsgssthapat",
+    "workspaceId": "cmw3u04gd000eccsgtc8nfzbp",
+    "planId": "cmw3u04gv000fccsg8rbwhdwk",
+    "submissionKey": "a69ccb1b-ac3b-4cf9-86d1-f056a105c7a7",
+    "results": {
+      "planId": "cmw3u04gv000fccsg8rbwhdwk",
+      "replies": 0,
+      "feedback": "Synthetic report: no responses observed. Message quality, targeting accuracy and delivery are unverified. Task-completion confirmations were not supplied; no tasks are marked completed.",
+      "activations": 0,
+      "submissionKey": "a69ccb1b-ac3b-4cf9-86d1-f056a105c7a7",
+      "payingCustomers": 0,
+      "completedTaskIds": [],
+      "prospectsContacted": 15,
+      "qualifiedConversations": 0
+    },
+    "resultsHash": "5809f45372922831c5562c203a660340bc103378a744964b45b998251816cf52",
+    "status": "SUBMITTED",
+    "proposal": null,
+    "fixture": false,
+    "createdAt": "2026-11-05T17:40:37.683Z",
+    "reviewedAt": null,
+    "acceptedAt": null,
+    "acceptedBy": null,
+    "nextPlanId": null
+  },
+  "applicationFailure": "The advisor's daily spending allowance has been reserved. Try tomorrow.",
+  "activePlanUnchanged": true,
+  "noProposalApplied": true,
+  "staleApprovalDenied": false
+}

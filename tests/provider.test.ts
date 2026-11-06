@@ -30,6 +30,7 @@ beforeEach(() => {
   vi.stubEnv("APP_URL", "http://localhost:3000");
   vi.stubEnv("OPENAI_API_KEY", "test-key-not-a-real-secret");
   vi.stubEnv("MOCK_ANALYSIS", "false");
+  vi.stubEnv("OPENAI_MODEL", "gpt-4.1-mini");
 });
 afterEach(() => vi.unstubAllEnvs());
 it("enforces the guest token bound including the structured schema before calling OpenAI", async () => {

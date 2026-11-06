@@ -1,0 +1,138 @@
+{
+  "id": "resp_02d6e44f8edebdc0006aed687bee6c87d29f2a90bb2645e91d",
+  "object": "response",
+  "created_at": 1793943675,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793943680,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 1000,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_02d6e44f8edebdc0006aed687dea7087d2a01faaefa7bb32ed",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq7WiBbGgPyTCFkya04NX7TLRMTDb4Rq_o-ApyTqXIOT_ID0h5uBwRStZo1VK5NfJCZnlmvr3W8tncdb-4_qC_0E1LzW-CeJ4boFeBkA3wMadb6kJhHFkPs-zciWv4asZnU18Cufq8phuXWmhiIJJllAqHnept_Ny3WJPGlAISD6JuBjqiL26WY-yFfdvcge2oqIBo34gh4zc_AuAn1bbokznf3Ahue3YHZ8g1wwWxYhODDfPUcYlChfM8Oyp80qHgPmTVO7jwI2krnF90xYA-7LiUHqzh7DMJtJ9ZadW-B8SRA61bPFRCVwHReyvAy4boX_cqHzFQqCcO92oHii4cf_hiexhAfs-urXxDOCFBxJSh9oIecuCXLjBPWkT-Fdb-kOMAKP1bLM66vb4YskriyAXTmoGSwsrn6kNrNeDaWEvZgkzkS9TfYoJHkYpDbFcVf9VYU4VVxDE_4adprtxZQ5F1Ga_Na5We7gucJdiWCyB6MuQe5PrFWGSRnutofja8BNd7aypeSZwff58ZALDyFJoVe2qvpca0zTbclmhzCEQyQg-i27J7IALQycliZ2A8zl3FpHZrUOBNurQvFJkNtiOqgHSX_U1VGGwWVfNH2oZFRPatJ9tK3DIdhOUtfAF6ZT2P8Qq2PadW3fuKAyGKvjxWpv5MAVf_UUU0jWqXAPKyEVQgx5lgLFvsno4vNOz3cKk9YuOA-bLPvsXZtukCccaFTrO3rdScFSPaPaPvZPKzXbkGyxUk14YgfF-pSN3RuMzNuDL0nG9J8OJwWwAF90GkzcNzUIuRwWtQpSMHsyZKDbTh3Bmhmshimt9y768n_A8bfkTO9cgx20Uqb7Xqo0DbR_MjENZ7WSjEYO7ClbaAOpXEaHC7fZIEvEFxFGb1JgskPqHEyRyHpOYSD_jZGpH3WQgDAE7Za15I4tJvzvdD3JTPN_9dWpoEJbPkUJoCo4OF1zD9x4mwJq0uockHSlTqUvSPq8Ho1_shzWz1lw7FVSOtmibe6Zk8ppgvR7q8pPGh0m745c43u7tXe6giM0K9EFL7lnix7gKDosXsXh8zuYFmesmzfYE20kvOjpYPT8dcGscbN2Ca4yAG6OBaCRCLNyI2usiChsr02yaCD8zSxAgjMjLPOgqR-7dRMGOOhTbnENK30tduxret9dDT8CbZcPmFyJXIG3JEEILDDSEjANglFwAkx9poPIYBt-hnodhN9KzsuWFOUNQXWahdGgRry9sghWxH_esFzVgPBYjpeb4Mt4JoPQXX7P_PbTYSQlnQ_ofSmMP9ijGW6vI_hotyBjx3IypLowN5fh05CRyYtZyaJACK0PoaawCcyLiUacn82JPglL-Bmww_iNGzZFtTfc7-7IUrxz5V7d56iRXWDo3_bOTLnDCqOc7pl1k0HxWCT2euO7689MogFRabFxyff39pVHrfAfVOcb20zS3BKp8-9JVgwDGb1p7JK5Zwou1NL6G6uW7-UWbs9-KsKOwGpJDz3ZVDFdOA7aNf7Dt4jK5GRtwU5lEXCkHPH-lWKlWtpmAbr75sYrYLL1BFuPAwKmDehJkkFOHBQE9MBOTXcDlYwjVxVHWJ8q2M47HonWScD5so4bDDQcg_XLUQJJ6_xd3Zc7NB1sN7Go8A9cEi1eHPBCfIypmUdHNWAVLhjILmmWGB7rji2hnqrt2xUTNaTEJsQraWnltxe2nzLGyTMxE0Xp-Tz5RghYKm1Spehf5ekciqpGTgs5bDaO8cBmcnzNwmXMMGS8oas4h9-gj5Hu8ufhqNGco7TQGgpRZCHUgwUZVHMnGmXWt88mKvQIz8gbKRrseM8Z0alEa07gxFZoInhQgdceURDEh6AWDsYoyM1KnjvIA3Zf407J93ULP_I7esnUG75Ij6yTnY7VqkoxfK1V6O0LbcSK116kdcoZ0G",
+      "summary": []
+    },
+    {
+      "id": "msg_02d6e44f8edebdc0006aed687f31f087d2ab973e5db7acab30",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"alternatives.1.preferWhen\":\"Prefer this when relevant community participation or ecosystem distribution is permitted, or authorized user data identifies reachable active buyers.\",\"firstExperiment.channelDescription\":\"Send researched emails to published business addresses, ask about testimonial workflows before offering evaluation, and respect opt-outs.\",\"firstExperiment.resources.constraints\":\"Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval.\"}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "quality_repair",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "alternatives.1.preferWhen": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          },
+          "firstExperiment.channelDescription": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 300,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          },
+          "firstExperiment.resources.constraints": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          }
+        },
+        "required": [
+          "alternatives.1.preferWhen",
+          "firstExperiment.channelDescription",
+          "firstExperiment.resources.constraints"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 2533,
+    "input_tokens_details": {
+      "cache_write_tokens": 2530,
+      "cached_tokens": 0
+    },
+    "output_tokens": 130,
+    "output_tokens_details": {
+      "reasoning_tokens": 33
+    },
+    "total_tokens": 2663
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"alternatives.1.preferWhen\":\"Prefer this when relevant community participation or ecosystem distribution is permitted, or authorized user data identifies reachable active buyers.\",\"firstExperiment.channelDescription\":\"Send researched emails to published business addresses, ask about testimonial workflows before offering evaluation, and respect opt-outs.\",\"firstExperiment.resources.constraints\":\"Capacity and no spend are test assumptions; later-week execution, activation help and payment follow-through require separate founder time approval.\"}"
+}

@@ -6,8 +6,12 @@ import {
 import { reportV11Schema } from "./schema";
 import {
   basisSections,
+  acquisitionSchema,
+  buyerReason,
+  resourceMinutes,
   type AcquisitionStrategy,
 } from "./acquisition-contract";
+import { strategyConsistency } from "./strategy-consistency";
 
 const inferred = (text: string) => ({
   text,
@@ -19,6 +23,17 @@ export function assembleAcquisition(
   s: AcquisitionStrategy,
   profile: ProductProfile,
 ) {
+  s = acquisitionSchema().parse(s);
+  const evidenceIssues = strategyConsistency(s, profile);
+  if (evidenceIssues.length) throw new Error(evidenceIssues[0].reason);
+  const reason = buyerReason(s);
+  const paymentSteps = [
+    `Verify monetization: ${s.paymentPath.verify}`,
+    `Activation: ${s.paymentPath.activation}`,
+    `Adoption: ${s.paymentPath.adoption}`,
+    `Paid conversion: ${s.paymentPath.paidConversion}`,
+  ];
+  const payment = paymentSteps.join(" ");
   const basis = basisSchema.parse(
     basisSections.map((section) => ({
       section,
@@ -26,26 +41,40 @@ export function assembleAcquisition(
     })),
   );
   validateBasis(basis, profile);
-  const primary = s.firstExperiment;
+  const r = s.firstExperiment.resources;
+  const { channelDescription, ...experiment } = s.firstExperiment;
+  const primary = {
+    ...experiment,
+    channelRationale: s.firstExperiment.channelRationale.decision,
+    resources: {
+      assumedMinutes: r.assumedMinutes,
+      tools: r.tools.map((t) => t.name),
+      directSpend: r.directSpend,
+      assumptions: `${r.constraints} No weekly reset; re-scope further work.`,
+    },
+  };
   const decisions = [
     `Continue: ${primary.continueWhen}`,
     `Adjust: ${primary.adjustWhen}`,
     `Stop: ${primary.stopWhen}`,
   ];
-  const resources = `Provisional assumption: ${primary.resources.assumedMinutes} minutes; zero direct spend; ${primary.resources.tools.join(", ")}. ${primary.resources.assumptions}`;
+  const resources = `Provisional budget ${r.assumedMinutes} min; planned ${resourceMinutes(s)} min: preparation ${r.preparationMinutes}, research ${r.researchMinutesPerActivity}/activity, execution ${r.executionMinutesPerActivity}/activity, responses ${r.responseMinutes}. Zero direct spend. No weekly reset; re-scope further work. ${r.constraints}`;
+  const tools = `Free/public tools: ${r.tools.map((t) => t.name).join(", ")}.`;
+
   const scope = `Activity cap: ${primary.activityTarget.quantity} ${primary.activityTarget.activity}`;
   const primarySteps = [
     primary.identifyProspects,
     primary.firstAction,
     scope,
     resources,
+    tools,
   ];
   const metric = primary.commercialLearning;
   const steps = [
     {
       title: primary.channel,
       recommendation: inferred(
-        `${s.segments[0].name}: ${primary.channelRationale}`,
+        `${s.segments[0].name}: ${channelDescription} ${primary.channelRationale} Tradeoff: ${s.firstExperiment.channelRationale.tradeoff}`,
       ),
       steps: primarySteps,
       successMetric: metric,
@@ -53,7 +82,7 @@ export function assembleAcquisition(
     ...s.alternatives.map((a) => ({
       title: a.channel,
       recommendation: inferred(
-        `Conditional alternative: ${a.comparison} Prefer only when: ${a.preferWhen}`,
+        `Conditional alternative: ${a.comparison.benefit} Barrier: ${a.comparison.barrier} Prefer only when: ${a.preferWhen}`,
       ),
       steps: [a.firstAction],
       successMetric: `Record evidence of this condition before switching: ${a.preferWhen}`,
@@ -62,14 +91,14 @@ export function assembleAcquisition(
   const playbook = [
     {
       title: "Test the first buyer",
-      recommendation: inferred(s.firstBuyerWhy),
+      recommendation: inferred(reason),
       steps: primarySteps,
       successMetric: metric,
     },
     {
       title: "Test the buying next step",
-      recommendation: inferred(s.paymentPath),
-      steps: [primary.continueWhen, s.paymentPath],
+      recommendation: inferred(payment),
+      steps: [primary.continueWhen, ...paymentSteps, resources, tools],
       successMetric: primary.commercialLearning,
     },
     {
@@ -113,7 +142,7 @@ export function assembleAcquisition(
     valueProposition: inferred(s.positioning),
     differentiators: [
       inferred(
-        `Comparative advantage is unvalidated. Test ${s.positioning} against the buyer's current workaround.`,
+        `Comparative advantage is unvalidated. Test ${s.firstBuyerWhy.advantage} against the buyer's current workaround.`,
       ),
     ],
     idealCustomers: s.segments.map((p) => inferred(p.name)),
@@ -136,7 +165,7 @@ export function assembleAcquisition(
       buyingSignals: [p.access],
       priority: i + 1,
       evidence: inferred(
-        `${p.tradeoff} ${p.access}${i === 0 ? ` ${s.firstBuyerWhy}` : ""}`,
+        `${p.tradeoff} ${p.access}${i === 0 ? ` ${reason}` : ""}`,
       ),
     })),
     buyingSignals: [
@@ -144,7 +173,12 @@ export function assembleAcquisition(
         `Potential qualification signal to investigate: ${primary.problem} Confirm urgency and buying authority; demand is unverified.`,
       ),
     ],
-    missingInformation: s.unknowns.map((text) => ({
+    missingInformation: [
+      ...s.unknowns,
+      ...(s.paymentPath.monetizationStatus === "Unknown"
+        ? [`SaaS monetization is unverified. ${s.paymentPath.verify}`]
+        : []),
+    ].map((text) => ({
       text,
       confidence: "Unknown",
       sources: [],
@@ -166,25 +200,30 @@ export function assembleAcquisition(
         objective: "Prepare and run the primary test",
         actions: primarySteps,
         successMetric: metric,
-        rationale: inferred(s.firstBuyerWhy),
+        rationale: inferred(reason),
       },
       {
         objective: "Review the primary test evidence",
-        actions: [primary.commercialLearning, ...decisions],
+        actions: [primary.commercialLearning, ...decisions, resources, tools],
         successMetric: metric,
         rationale: inferred(primary.channelRationale),
       },
       {
-        objective: "Pursue a buying step only after evidence",
-        actions: [primary.continueWhen, s.paymentPath],
+        objective:
+          s.paymentPath.monetizationStatus === "Unknown"
+            ? "Verify SaaS monetization before a payment test"
+            : "Pursue a buying step only after evidence",
+        actions: [primary.continueWhen, ...paymentSteps, resources, tools],
         successMetric: primary.commercialLearning,
-        rationale: inferred(s.paymentPath),
+        rationale: inferred(payment),
       },
       {
         objective: "Decide whether to repeat, adjust or stop",
         actions: [
           ...decisions,
           `Switch only when an alternative's stated condition is observed; otherwise retain ${primary.channel}.`,
+          resources,
+          tools,
         ],
         successMetric: metric,
         rationale: inferred(
@@ -198,8 +237,8 @@ export function assembleAcquisition(
       ...primary,
       segment: s.segments[0].name,
       strongestAlternative: {
-        channel: s.alternatives[0].channel,
-        whyNotSelected: s.alternatives[0].comparison,
+        channel: `Alternative: ${s.alternatives[0].channel}`,
+        whyNotSelected: s.alternatives[0].comparison.barrier,
         preferWhen: s.alternatives[0].preferWhen,
       },
     },

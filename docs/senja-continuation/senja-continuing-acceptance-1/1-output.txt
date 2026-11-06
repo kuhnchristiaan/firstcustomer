@@ -1,0 +1,95 @@
+{
+  "version": "1.0",
+  "identity": {
+    "name": "Senja",
+    "summary": "Senja helps businesses collect video and text testimonials, organize social proof, and share testimonials or add them to their websites.",
+    "category": "Customer acquisition",
+    "primaryJob": {
+      "actor": "Businesses and marketing teams",
+      "problem": "Customer testimonials are scattered and difficult to collect, find, and reuse.",
+      "outcome": "Centralize testimonials and use relevant social proof across websites and marketing."
+    },
+    "certainty": "Website-supported",
+    "evidence": [
+      {"blockId": "cae551e2b6e4"      				
+     	   				  	  		}
+	 	  			  	 	 				 						
+				
+    	
+     	 	  			   	 	  	  			   	   					 		  		 		      	         		 	      	 	  	 	 		  
+  	  
+  	  	         		 	  	 	  	 	   	 		         		    	     	 
+    	  	 		 		    	 			  	  	 	 	  	  			 	 		 	  		  	 		     	   	  
+  	   				 	 	  	  	  	    	 	 		 	 	 		  	  
+ 	  	 		 	  	 		  	  			  	 	 	        	 	 	 	 	     			
+ 	 	 	 	 	 	  	 	 	    	  	 	   		    	 		 	 	 	 	  		 	        				    	    					 	  		  	 	 	  	  
+ 	 	 	 	 	 	 	 	     	 	 	 	  	  
+ 	 	 	 	 	 	 	 		 	 	  
+ 	 	 	 	 	 	 	 	  	 	 	 	 	  	 	 	 	 	 	    	  	 	 	    	 	 	 	       		]
+  },
+  "statements": [
+    {
+      "id": "s1",
+      "text": "Senja offers customizable testimonial collection forms with personalized intro videos, automated video and text collection, and shareable or embeddable forms.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "8088337baf9d"      				
+     	   				  	  		}
+	 	  			  	 	 				 						
+				
+    	
+     	 	  			   	 	  	  			   	   					 		  		 		      	         		 	      	 	  	 	 		  
+  	  
+  	  	         		 	  	 	  	 	   	 		         		    	     	 
+    	  	 		 		    	 			  	  	 	 	  	  			 	 		 	  		  	 		     	   	  
+  	   				 	 	  	  	  	    	 	 		 	 	 		  	  
+ 	  	 		 	  	 		  	  			  	 	 	        	 	 	 	 	     			
+ 	 	 	 	 	 	  	 	 	    	  	 	   		    	 		 	 	 	 	  		 	        				    	    					 	  		  	 	 	  	  
+ 	 	 	 	 	 	 	 	     	 	 	 	  	  
+ 	 	 	 	 	 	 	 		 	 	  
+ 	 	 	 	 	 	 	 	  	 	 	 	 	  	 	 	 	 	 	    	  	 	 	    	 	 	 	       		]
+    },
+    {
+      "id": "s2",
+      "text": "Senja supports importing testimonials from more than 30 platforms or CSV, plus automation through Zapier, an API, and webhooks.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "d31a29723b2c"      				
+     	   				  	  		}
+	 	  			  	 	 				 						
+				
+    	
+     	 	  			   	 	  	  			   	   					 		  		 		      	         		 	      	 	  	 	 		  
+  	  
+  	  	         		 	  	 	  	 	   	 		         		    	     	 
+    	  	 		 		    	 			  	  	 	 	  	  			 	 		 	  		  	 		     	   	  
+  	   				 	 	  	  	  	    	 	 		 	 	 		  	  
+ 	  	 		 	  	 		  	  			  	 	 	        	 	 	 	 	     			
+ 	 	 	 	 	 	  	 	 	    	  	 	   		    	 		 	 	 	 	  		 	        				    	    					 	  		  	 	 	  	  
+ 	 	 	 	 	 	 	 	     	 	 	 	  	  
+ 	 	 	 	 	 	 	 		 	 	  
+ 	 	 	 	 	 	 	 	  	 	 	 	 	  	 	 	 	 	 	    	  	 	 	    	 	 	 	       		]
+    },
+    {
+      "id": "s3",
+      "text": "Senja centralizes social proof for team sharing, with natural-language search and filters by offer, buyer, industry, product, and plan.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "1224993c1e20"      				
+     	   				  	  		}
+	 	  			  	 	 				 						
+				
+    	
+     	 	  			   	 	  	  			   	   					 		  		 		      	         		 	      	 	  	 	 		  
+  	  
+  	  	         		 	  	 	  	 	   	 		         		    	     	 
+    	  	 		 		    	 			  	  	 	 	  	  			 	 		 	  		  	 		     	   	  
+  	   				 	 	  	  	  	    	 	 		 	 	 		  	  
+ 	  	 		 	  	 		  	  			  	 	 	        	 	 	 	 	     			
+ 	 	 	 	 	 	  	 	 	    	  	 	   		    	 		 	 	 	 	  		 	        				    	    					 	  		  	 	 	  	  
+ 	 	 	 	 	 	 	 	     	 	 	 	  	  
+ 	 	 	 	 	 	 	 		 	 	  
+ 	 	 	 	 	 	 	 	  	 	 	 	 	  	 	 	 	 	 	    	  	 	 	    	 	 	 	       	

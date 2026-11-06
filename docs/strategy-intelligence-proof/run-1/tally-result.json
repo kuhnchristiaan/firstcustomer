@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "requestedModel": "gpt-6.1-sol",
+  "returnedModel": "gpt-6.1-sol",
+  "serviceTier": "default",
+  "latencyMs": 29741,
+  "usage": {
+    "input_tokens": 1284,
+    "input_tokens_details": {
+      "cache_write_tokens": 1281,
+      "cached_tokens": 0
+    },
+    "output_tokens": 1057,
+    "output_tokens_details": {
+      "reasoning_tokens": 184
+    },
+    "total_tokens": 2341
+  },
+  "costUpperUsd": 0.01378,
+  "reservedUsd": 0.1447425,
+  "completeStructuredOutput": true,
+  "commerciallyApproved": false,
+  "observations": {
+    "words": 500,
+    "withinReadingTarget": false,
+    "plannedMinutes": 180,
+    "plannedCost": 0,
+    "withinStatedResources": true,
+    "note": "Observations for human review only. No repair, rejection, quality score or claim of commercial acceptance."
+  },
+  "incompleteDetails": null
+}

@@ -15,6 +15,7 @@ import { safeInitialReport } from "@/modules/strategy/claims";
 import { WorkspaceRefresh } from "@/components/workspace-refresh";
 import { activeAnalysis, analysisStatus } from "@/modules/analysis/status";
 import { SignOut } from "@/components/auth-form";
+import { advisorEnabled } from "@/modules/advisor/config";
 export const dynamic = "force-dynamic";
 export default async function Dashboard({
   searchParams,
@@ -104,6 +105,19 @@ export default async function Dashboard({
         : undefined;
   return (
     <WorkspaceShell>
+      {advisorEnabled() && (
+        <div className="panel mb-6 flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <h2 className="text-xl font-semibold">A focused next move.</h2>
+            <p className="text-sm muted">
+              Your buyer, channel and seven-day acquisition plan.
+            </p>
+          </div>
+          <Link href="/advisor" className="button button-primary px-4 py-3">
+            Open acquisition advisor →
+          </Link>
+        </div>
+      )}
       <WorkspaceRefresh active={Boolean(processingProduct)} />
       <WorkspaceOverview
         products={products.map((p) => ({

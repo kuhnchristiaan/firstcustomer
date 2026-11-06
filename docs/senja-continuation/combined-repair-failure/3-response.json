@@ -1,0 +1,124 @@
+{
+  "id": "resp_016e562965c5c342006aecdd4fb26887d2ac905478cc6da17c",
+  "object": "response",
+  "created_at": 1793908047,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793908051,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 1000,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "msg_016e562965c5c342006aecdd51887487d2a21a80e986e9b00b",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"alternatives.1.preferWhen\":\"Prefer this when verified community permissions or ecosystem access provide a practical route to course owners with current testimonial needs.\",\"firstExperiment.resources.constraints\":\"Assume 90 minutes and no direct spend, subject to founder approval, for public-route outreach, brief qualification and opt-out handling.\"}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "quality_repair",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "alternatives.1.preferWhen": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          },
+          "firstExperiment.resources.constraints": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          }
+        },
+        "required": [
+          "alternatives.1.preferWhen",
+          "firstExperiment.resources.constraints"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 2357,
+    "input_tokens_details": {
+      "cache_write_tokens": 2354,
+      "cached_tokens": 0
+    },
+    "output_tokens": 72,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2429
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"alternatives.1.preferWhen\":\"Prefer this when verified community permissions or ecosystem access provide a practical route to course owners with current testimonial needs.\",\"firstExperiment.resources.constraints\":\"Assume 90 minutes and no direct spend, subject to founder approval, for public-route outreach, brief qualification and opt-out handling.\"}"
+}

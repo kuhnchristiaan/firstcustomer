@@ -1,0 +1,112 @@
+{
+  "review": {
+    "id": "cmw3u2gt3000mwcsgwec0akpa",
+    "workspaceId": "cmw3u2gsb000fwcsg5hudz5zm",
+    "planId": "cmw3u2gsj000gwcsgybocbvkh",
+    "submissionKey": "99f56d49-31b2-4d1e-98bd-3b90e91a1155",
+    "results": {
+      "planId": "cmw3u2gsj000gwcsgybocbvkh",
+      "replies": 0,
+      "feedback": "Synthetic report: no responses observed. Message quality, targeting accuracy and delivery are unverified. Task-completion confirmations were not supplied; no tasks are marked completed.",
+      "activations": 0,
+      "submissionKey": "99f56d49-31b2-4d1e-98bd-3b90e91a1155",
+      "payingCustomers": 0,
+      "completedTaskIds": [],
+      "prospectsContacted": 15,
+      "qualifiedConversations": 0
+    },
+    "resultsHash": "b9bc176affde9c41202bdc0144dd80d898c931aa96a5859ec70a9f782b8c5ec6",
+    "status": "PROPOSED",
+    "proposal": {
+      "decision": "Adjust",
+      "changeReason": "Adjust execution by checking the reported outreach and completing missing prerequisites before further participation. Keep the buyer and acquisition channel unchanged: one report of silence with unverified execution is insufficient evidence for a strategic switch. This proposed plan requires founder approval before activation.",
+      "proposedPlan": {
+        "buyer": {
+          "segment": "Bootstrapped SaaS founders with happy paying users who are preparing a launch or sales-page refresh.",
+          "whyChosen": "Existing customers make testimonial collection actionable. This narrower buyer is preferable to pre-revenue founders without customer evidence.",
+          "buyingProblemOrTrigger": "They need customer proof for an upcoming selling moment and can authorize a software purchase themselves."
+        },
+        "tasks": [
+          {
+            "title": "Audit reported outreach",
+            "minutes": 20,
+            "directCost": 0,
+            "instruction": "Audit the 15 reported contacts using available post links and message records. Record the channel, date, exact message, visible publication status, permission basis, and evidence of paying users plus an upcoming launch or sales-page refresh. Mark missing information unknown; do not infer delivery from a contact count.",
+            "activityToRecord": "Audited contacts, verified buyer fit, publication evidence, message wording, elapsed response time, and unknowns."
+          },
+          {
+            "title": "Verify access and offer",
+            "minutes": 30,
+            "directCost": 0,
+            "instruction": "Complete or verify the existing access check: inspect current Indie Hackers rules, identify three suitable recent discussions, and confirm that relevant replies are permitted and free. Inspect Senja's official pricing and purchase path to record actual paid plans, capabilities, and relevant free-use limits; mark anything unverifiable unknown. Do not recommend a purchase before verification. If Indie Hackers access fails, pause publication; any fallback channel switch requires a separate Reconsider proposal and founder approval.",
+            "activityToRecord": "Rule links, suitable discussion links, confirmed free access, verified SaaS offer details, and unresolved restrictions."
+          },
+          {
+            "title": "Finish the demonstration",
+            "minutes": 15,
+            "directCost": 0,
+            "instruction": "Check whether a walkthrough already exists and reuse it if suitable. Otherwise prepare a short walkthrough of the collection workflow using clearly labeled sample content and confirmed free access only. Ground claims in Senja's supplied collection-form claim rather than promising sales gains. If demonstrating requires payment, use a brief explanation based on official product material instead.",
+            "activityToRecord": "Reusable walkthrough or explanation, sources used, and any observed setup friction."
+          },
+          {
+            "title": "Test focused replies",
+            "minutes": 45,
+            "directCost": 0,
+            "instruction": "Only after access is confirmed, review up to ten recent Indie Hackers discussions and publish up to five individually relevant replies where permitted. Prioritize founders with evidence of happy paying users and a current selling trigger. Address their stated situation, ask one concrete question about collecting customer proof, and offer the walkthrough only when useful and allowed. Do not duplicate unanswered outreach or introduce paid tools.",
+            "activityToRecord": "Discussions reviewed, buyer-fit evidence, replies published, exact wording, links, dates, and subsequent responses."
+          },
+          {
+            "title": "Follow up and review",
+            "minutes": 40,
+            "directCost": 0,
+            "instruction": "During the next seven days, answer any responses and clarify the founder's current collection need. Where relevant and feasible through confirmed free access, invite them to collect one real testimonial in Senja; discuss the verified paid SaaS offer only if it addresses their stated need. If there are no responses, use this time to review exposure and unresolved execution gaps rather than sending repeated nudges. At day seven, summarize outcomes by contact cohort and recommend the next decision.",
+            "activityToRecord": "Replies, qualified conversations, real-testimonial activations, repeated use, objections, verified completed payments, and cohort-specific observation windows."
+          }
+        ],
+        "channel": {
+          "name": "Permission-based participation in Indie Hackers discussions",
+          "fallback": "If access fails, check r/SaaS for a current, explicitly permitted feedback or promotion thread serving the same buyer. Proceed only if suitable founders and posting permission are evident; otherwise pause publication.",
+          "whyChosen": "Posts can reveal an immediate trigger before contact, unlike broad cold outreach. With no previous acquisition efforts, no paying customers, and no budget, this tests problem relevance without building a prospect database.",
+          "accessCheck": "Read current community rules and search recent posts for 'first customers', 'launch', and 'testimonials'. Identify three suitable founders and confirm a free, permitted reply route before preparing promotion.",
+          "whereAndHow": "Find recent founder milestone and launch posts; contribute relevant public replies and introduce Senja only where permitted and useful."
+        },
+        "resources": {
+          "basis": "Founder supplied three hours weekly and a zero USD monthly budget. Tasks allocate 150 minutes, below the 153-minute maximum, leaving 30 minutes unallocated. All direct costs are zero; execution requires confirmed free access. No paid tools, sponsorships, or unreported resources are assumed.",
+          "currency": "USD",
+          "availableMinutes": 180,
+          "experimentBudget": 0
+        },
+        "schemaVersion": "advisor/1",
+        "successCriteria": {
+          "adjustWhen": "Refine execution if delivery, permission, targeting, or messaging remains unverified. If qualified conversations occur without activation, investigate the stated obstacle before revising the walkthrough or invitation. Silence alone does not establish absent demand.",
+          "continueWhen": "Provisionally continue if two qualified conversations emerge and at least one founder collects a real testimonial. Treat this as early relevance and activation evidence, not proof of repeated adoption or willingness to pay.",
+          "reconsiderWhen": "Propose reconsideration if the selected channel cannot provide free, permitted access to suitable buyers, or repeated qualified conversations reveal no relevant collection need. Any buyer-segment or acquisition-channel change requires an explicit reason and founder approval.",
+          "evidenceToCollect": "Track verified permitted exposure and buyer fit separately from responses. Qualified interest requires an authorized founder with a current collection need considering Senja. Activation means collecting one real testimonial; repeated adoption requires subsequent use. Only verified completed payment establishes revenue. Keep cohorts and observation windows distinct."
+        },
+        "importantUnknowns": [
+          "Whether the 15 reported contacts used the selected channel and reached the intended buyer.",
+          "Whether messages were published permissibly and had sufficient time to receive responses.",
+          "Whether access validation, offer verification, or a reusable walkthrough already exists.",
+          "Actual paid SaaS pricing, capabilities, purchase path, and relevant free-use limits.",
+          "Whether suitable founders have an immediate collection obstacle and will progress from interest to real use and payment."
+        ],
+        "productEvidenceIds": [
+          "s1",
+          "s2"
+        ]
+      },
+      "evidenceAssessment": "The report records 15 prospects contacted, zero replies, zero qualified conversations, zero activations, and zero paying customers. This shows no observed progression from the reported outreach, but delivery, buyer fit, message quality, and permission to participate remain unverified. No task completions were confirmed, so access validation, paid-offer verification, and demonstration preparation cannot be assumed complete. The evidence supports auditing execution, not rejecting the buyer or channel.",
+      "remainingUncertainty": "It is unknown whether the 15 contacts reached suitable founders through permitted Indie Hackers participation, whether they saw the messages, and how long they had to respond. The counts may describe different cohorts. Senja's actual pricing, paid capabilities, purchase path, and relevant free-use limits remain unverified. There are no prior reviews establishing a repeated pattern."
+    },
+    "fixture": false,
+    "createdAt": "2026-11-05T17:42:26.967Z",
+    "reviewedAt": "2026-11-05T17:43:00.475Z",
+    "acceptedAt": null,
+    "acceptedBy": null,
+    "nextPlanId": null
+  },
+  "applicationFailure": null,
+  "activePlanUnchanged": true,
+  "noProposalApplied": true,
+  "staleApprovalDenied": true
+}

@@ -1,0 +1,25 @@
+{
+  "ordinal": 1,
+  "stage": "attributed_product_profile",
+  "reservedUsd": 0.0207125,
+  "maxOutputTokens": 1200,
+  "latencyMs": 8440,
+  "model": "gpt-6.1-sol",
+  "status": "completed",
+  "usage": {
+    "input_tokens": 2043,
+    "input_tokens_details": {
+      "cache_write_tokens": 2040,
+      "cached_tokens": 0
+    },
+    "output_tokens": 416,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2459
+  },
+  "incompleteDetails": null,
+  "estimatedCostUsd": 0.009266,
+  "conservativeCostUsd": 0.0092675,
+  "cacheWriteTokens": 2040
+}

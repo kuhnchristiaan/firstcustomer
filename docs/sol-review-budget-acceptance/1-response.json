@@ -1,0 +1,334 @@
+{
+  "id": "resp_0286ad2dce767c78006aecd50e4ce487d2a5543f6ce45ea614",
+  "object": "response",
+  "created_at": 1793905934,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793905941,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 1200,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "msg_0286ad2dce767c78006aecd50ff39887d2b05596a7daf40de9",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\n  \"version\": \"1.0\",\n  \"identity\": {\n    \"name\": \"Senja\",\n    \"summary\": \"Senja helps businesses collect, organize, and share customer testimonials, including adding them to websites.\",\n    \"category\": \"Customer acquisition\",\n    \"primaryJob\": {\n      \"actor\": \"Businesses and marketing teams\",\n      \"problem\": \"Collecting customer testimonials and finding relevant social proof for marketing\",\n      \"outcome\": \"Centralize testimonials and share relevant proof across websites, pitches, and posts\"\n    },\n    \"certainty\": \"Website-supported\",\n    \"evidence\": [\n      {\n        \"blockId\": \"cae551e2b6e4\"\n      }\n     \t\t]\n  }\n \t,\n  \"statements\": [\n    {\n      \"id\": \"s1\",\n      \"text\": \"Senja offers customizable testimonial collection forms with personalized intro videos and automated video and text collection.\",\n      \"kind\": \"Owner product claim\",\n      \"subject\": \"Owner product\",\n      \"evidence\": [\n        {\n          \"blockId\": \"8088337baf9d\"\n        }\n       \t\t]\n    }\n   \t]\n \t,\n  \"limitations\": [\n    \"Capabilities are owner claims, not independently verified.\",\n    \"The category and primary job are AI interpretations of the supplied product passages.\"\n  ]\n}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "attributed_product_profile",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "1.0"
+          },
+          "identity": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 150
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240
+              },
+              "category": {
+                "type": "string",
+                "enum": [
+                  "Customer acquisition",
+                  "Product analytics",
+                  "Finance operations",
+                  "Developer tools",
+                  "Commerce",
+                  "People operations",
+                  "Security",
+                  "Infrastructure",
+                  "Other",
+                  "Unclear"
+                ]
+              },
+              "primaryJob": {
+                "type": "object",
+                "properties": {
+                  "actor": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  },
+                  "problem": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  },
+                  "outcome": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  }
+                },
+                "required": [
+                  "actor",
+                  "problem",
+                  "outcome"
+                ],
+                "additionalProperties": false
+              },
+              "certainty": {
+                "type": "string",
+                "enum": [
+                  "Website-supported",
+                  "Uncertain"
+                ]
+              },
+              "evidence": {
+                "maxItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "blockId": {
+                      "type": "string",
+                      "enum": [
+                        "cae551e2b6e4",
+                        "21e09887a3aa",
+                        "2c982934e88c",
+                        "3a3b6c7867f4",
+                        "d5ed9b4d6396",
+                        "0cc9391227c4",
+                        "36bb6c9839a0",
+                        "185420153522",
+                        "76847a8c4bd1",
+                        "c405b10b7dc9",
+                        "8a6e61d64bfa",
+                        "49630dc6a0cc",
+                        "8cacd7327864",
+                        "560e4f1f3e96",
+                        "bf0d9b91c6ba",
+                        "8088337baf9d",
+                        "b8c2fac70e98",
+                        "7dc0005f6f52",
+                        "049c67802093",
+                        "d31a29723b2c",
+                        "ded279332e6a",
+                        "62f58d67f0df",
+                        "e8aadd46ea4d",
+                        "a2167a5571ef",
+                        "ff7c1311cb40",
+                        "1224993c1e20",
+                        "24bbf17872ac",
+                        "bcabc017cea9"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "blockId"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "name",
+              "summary",
+              "category",
+              "primaryJob",
+              "certainty",
+              "evidence"
+            ],
+            "additionalProperties": false
+          },
+          "statements": {
+            "maxItems": 4,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 20
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "Website observation",
+                    "Owner product claim",
+                    "Inference",
+                    "Unknown"
+                  ]
+                },
+                "subject": {
+                  "type": "string",
+                  "enum": [
+                    "Owner product",
+                    "Unclear"
+                  ]
+                },
+                "evidence": {
+                  "maxItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "blockId": {
+                        "type": "string",
+                        "enum": [
+                          "cae551e2b6e4",
+                          "21e09887a3aa",
+                          "2c982934e88c",
+                          "3a3b6c7867f4",
+                          "d5ed9b4d6396",
+                          "0cc9391227c4",
+                          "36bb6c9839a0",
+                          "185420153522",
+                          "76847a8c4bd1",
+                          "c405b10b7dc9",
+                          "8a6e61d64bfa",
+                          "49630dc6a0cc",
+                          "8cacd7327864",
+                          "560e4f1f3e96",
+                          "bf0d9b91c6ba",
+                          "8088337baf9d",
+                          "b8c2fac70e98",
+                          "7dc0005f6f52",
+                          "049c67802093",
+                          "d31a29723b2c",
+                          "ded279332e6a",
+                          "62f58d67f0df",
+                          "e8aadd46ea4d",
+                          "a2167a5571ef",
+                          "ff7c1311cb40",
+                          "1224993c1e20",
+                          "24bbf17872ac",
+                          "bcabc017cea9"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "blockId"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "text",
+                "kind",
+                "subject",
+                "evidence"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "limitations": {
+            "maxItems": 4,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            }
+          }
+        },
+        "required": [
+          "version",
+          "identity",
+          "statements",
+          "limitations"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 2020,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 2017
+    },
+    "output_tokens": 291,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2311
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\n  \"version\": \"1.0\",\n  \"identity\": {\n    \"name\": \"Senja\",\n    \"summary\": \"Senja helps businesses collect, organize, and share customer testimonials, including adding them to websites.\",\n    \"category\": \"Customer acquisition\",\n    \"primaryJob\": {\n      \"actor\": \"Businesses and marketing teams\",\n      \"problem\": \"Collecting customer testimonials and finding relevant social proof for marketing\",\n      \"outcome\": \"Centralize testimonials and share relevant proof across websites, pitches, and posts\"\n    },\n    \"certainty\": \"Website-supported\",\n    \"evidence\": [\n      {\n        \"blockId\": \"cae551e2b6e4\"\n      }\n     \t\t]\n  }\n \t,\n  \"statements\": [\n    {\n      \"id\": \"s1\",\n      \"text\": \"Senja offers customizable testimonial collection forms with personalized intro videos and automated video and text collection.\",\n      \"kind\": \"Owner product claim\",\n      \"subject\": \"Owner product\",\n      \"evidence\": [\n        {\n          \"blockId\": \"8088337baf9d\"\n        }\n       \t\t]\n    }\n   \t]\n \t,\n  \"limitations\": [\n    \"Capabilities are owner claims, not independently verified.\",\n    \"The category and primary job are AI interpretations of the supplied product passages.\"\n  ]\n}"
+}

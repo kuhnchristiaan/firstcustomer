@@ -12,7 +12,7 @@ const schema = z.object({
     (value) => (value === "" ? undefined : value),
     z.string().min(1).optional(),
   ),
-  OPENAI_MODEL: z.string().default("gpt-4.1-mini"),
+  OPENAI_MODEL: z.string().default("gpt-6.1-sol"),
   MOCK_ANALYSIS: z.enum(["true", "false"]).default("false"),
   REFINEMENT_MAX_INPUT_TOKENS: z.coerce
     .number()
@@ -45,7 +45,11 @@ export function config() {
   const e = schema.parse(process.env);
   if (process.env.NODE_ENV === "production" && e.MOCK_ANALYSIS === "true")
     throw new Error("Mock analysis is forbidden in production");
-  return e;
+  return { ...e,
+    MAX_OUTPUT_TOKENS: process.env.MAX_OUTPUT_TOKENS === undefined && e.OPENAI_MODEL === "gpt-6.1-sol" ? 8000 : e.MAX_OUTPUT_TOKENS,
+    OPENAI_INPUT_USD_PER_MILLION: e.OPENAI_MODEL === "gpt-6.1-sol" ? 2.5 : e.OPENAI_INPUT_USD_PER_MILLION,
+    OPENAI_OUTPUT_USD_PER_MILLION: e.OPENAI_MODEL === "gpt-6.1-sol" ? 10 : e.OPENAI_OUTPUT_USD_PER_MILLION,
+  };
 }
 export function configured() {
   return Boolean(

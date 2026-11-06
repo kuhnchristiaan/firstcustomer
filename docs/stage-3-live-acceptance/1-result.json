@@ -1,0 +1,32 @@
+{
+  "review": {
+    "id": "cmw3u04d5000accsg2qv01ekz",
+    "workspaceId": "cmw3u047p0003ccsgugv5m07h",
+    "planId": "cmw3u048z0004ccsg49pyyxjw",
+    "submissionKey": "92132879-3a4a-43b0-8a28-35c29bda291a",
+    "results": {
+      "planId": "cmw3u048z0004ccsg49pyyxjw",
+      "replies": 2,
+      "feedback": "Synthetic report: founders expressed interest but raised pricing objections. No further pricing or customer-interaction details were supplied. Task-completion confirmations were not supplied; no tasks are marked completed.",
+      "activations": 0,
+      "submissionKey": "92132879-3a4a-43b0-8a28-35c29bda291a",
+      "payingCustomers": null,
+      "completedTaskIds": [],
+      "prospectsContacted": 6,
+      "qualifiedConversations": 2
+    },
+    "resultsHash": "b03b6b6abcb58d424dd596347a8affb9d37ef0c9e3b72b326a5fd992516e5fec",
+    "status": "SUBMITTED",
+    "proposal": null,
+    "fixture": false,
+    "createdAt": "2026-11-05T17:40:37.529Z",
+    "reviewedAt": null,
+    "acceptedAt": null,
+    "acceptedBy": null,
+    "nextPlanId": null
+  },
+  "applicationFailure": "The advisor's daily spending allowance has been reserved. Try tomorrow.",
+  "activePlanUnchanged": true,
+  "noProposalApplied": true,
+  "staleApprovalDenied": false
+}

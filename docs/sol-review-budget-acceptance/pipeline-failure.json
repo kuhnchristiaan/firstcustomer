@@ -1,0 +1,40 @@
+{
+  "name": "Error",
+  "message": "The provider returned an incomplete or invalid report.",
+  "reason": "quality_failed",
+  "inputTokens": 5424,
+  "outputTokens": 2172,
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "inputTokens": 2020,
+      "outputTokens": 291
+    },
+    {
+      "stage": "acquisition_strategy",
+      "inputTokens": 1472,
+      "outputTokens": 1720
+    },
+    {
+      "stage": "quality_repair",
+      "inputTokens": 1932,
+      "outputTokens": 161
+    }
+  ],
+  "qualityFailure": {
+    "code": "quality_repair_invalid",
+    "issues": [
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.channelRationale.tradeoff",
+        "reason": "Unsupported assertion: firstExperiment.channelRationale.tradeoff"
+      },
+      {
+        "section": "positioning",
+        "path": "positioning",
+        "reason": "Unsupported assertion: positioning"
+      }
+    ],
+    "repairFeasible": false
+  }
+}

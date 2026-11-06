@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "identity": {
+    "name": "Senja",
+    "summary": "Senja collects, organizes and shares customer testimonials, helping businesses add social proof to websites and marketing.",
+    "category": "Customer acquisition",
+    "primaryJob": {
+      "actor": "Businesses and marketing teams",
+      "problem": "Customer testimonials are difficult to collect, organize and reuse.",
+      "outcome": "Collect testimonials and find relevant social proof to share across websites and marketing."
+    },
+    "certainty": "Website-supported",
+    "evidence": [
+      {"blockId": "cae551e2b6e4"}
+      		]
+  },
+  "statements": [
+    {
+      "id": "s1",
+      "text": "Senja offers customizable testimonial collection forms with personalized intro videos, automated video and text collection, and options to share or embed forms.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "8088337baf9d"}
+        				]
+    },
+    {
+      "id": "s2",
+      "text": "Senja supports importing testimonials from more than 30 platforms or CSV, plus automation through Zapier, an API and webhooks.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "d31a29723b2c"}
+        				]
+    },
+    {
+      "id": "s3",
+      "text": "Senja centralizes testimonials for team sharing and offers natural-language search and filters by offer, buyer, industry, product and plan.",
+      "kind": "Owner product claim",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "1224993c1e20"}
+        				]
+    },
+    {
+      "id": "s4",
+      "text": "The website offers a free starting option.",
+      "kind": "Website observation",
+      "subject": "Owner product",
+      "evidence": [
+        {"blockId": "21e09887a3aa"}
+      ]
+    }
+  ],
+  "limitations": [
+    "Capabilities are owner claims, not independently verified.",
+    "The supplied content does not establish pricing, free-option limits or measured business outcomes.",
+    "Category and primary job are AI interpretations of the product descriptions."
+  ]
+}

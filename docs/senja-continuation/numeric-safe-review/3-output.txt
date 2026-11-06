@@ -1,0 +1,1 @@
+{"alternatives.1.preferWhen":"Prefer this when community rules permit buyer conversations or a relevant ecosystem provides accessible distribution.","firstExperiment.resources.constraints":"Capacity and zero spend are assumptions; use published business routes, respect opt-outs and limit response work to brief qualification."}

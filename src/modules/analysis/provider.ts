@@ -1,5 +1,7 @@
+import { strategyConsistency } from "@/modules/intelligence/strategy-consistency";
 import {
   acquisitionSchema,
+  acquisitionWireSchema,
   acquisitionInstructions,
 } from "@/modules/intelligence/acquisition-contract";
 import { assembleAcquisition } from "@/modules/intelligence/acquisition-strategy";
@@ -59,9 +61,10 @@ export function analysisRequest(
 ) {
   return {
     model,
+    ...(model === "gpt-6.1-sol" ? { reasoning: { effort: "low" as const }, service_tier: "default" as const } : {}),
     max_output_tokens: maxOutput,
     input: [
-      { role: "system" as const, content: instructions },
+      { role: "system" as const, content: instructions + (model === "gpt-6.1-sol" ? "\nEmit compact JSON without indentation, tabs or whitespace padding between fields. Complete all required fields; whitespace is not content." : "") },
       { role: "user" as const, content: JSON.stringify(data) },
     ],
     text: {
@@ -114,10 +117,13 @@ export function provider(): AnalysisProvider {
         input: limits?.inputTokens ?? e.MAX_INPUT_TOKENS,
         output: limits?.outputTokens ?? e.MAX_OUTPUT_TOKENS,
       };
+      const qualityOutput = e.OPENAI_MODEL === "gpt-6.1-sol"
+        ? { review: 1500, repair: 1000 }
+        : { review: 650, repair: 700 };
       const client = new OpenAI({
         apiKey: e.OPENAI_API_KEY,
         maxRetries: 0,
-        timeout: 50000,
+        timeout: 120000,
       });
       let inputTokens = 0,
         outputTokens = 0;
@@ -144,7 +150,7 @@ export function provider(): AnalysisProvider {
             maxOutput,
             budget.output -
               outputTokens -
-              (name === "quality_repair" ? 650 : 0),
+              (name === "quality_repair" ? qualityOutput.review : 0),
           ),
         );
         if (
@@ -211,7 +217,7 @@ export function provider(): AnalysisProvider {
                 .map((b) => ({ id: b.id, kind: b.kind, context: b.context })),
             })),
           },
-          Math.min(600, Math.floor(budget.output * 0.2)),
+          Math.min(e.OPENAI_MODEL === "gpt-6.1-sol" ? 1200 : 600, Math.floor(budget.output * 0.2)),
         );
         const profile = hydrateProductProfile(rawProfile, sources);
         if (
@@ -226,7 +232,7 @@ export function provider(): AnalysisProvider {
         const ids = generationProductProfile(profile).statements.map(
           (s) => s.id,
         ) as [string, ...string[]];
-        const generationSchema = acquisitionSchema(ids);
+        const generationSchema = acquisitionWireSchema(ids);
         stage = "report_generation";
         const generated = generationSchema.parse(
           await call(
@@ -242,11 +248,30 @@ export function provider(): AnalysisProvider {
             },
             // Reserve both possible reviews and a granular repair, even when the
             // initial review identifies the first defect. Never expand the cap.
-            Math.min(2000, budget.output - outputTokens - 1300 - 600),
+            Math.min(e.OPENAI_MODEL === "gpt-6.1-sol" ? 3500 : 2000, budget.output - outputTokens - 2 * qualityOutput.review - (e.OPENAI_MODEL === "gpt-6.1-sol" ? qualityOutput.repair : 600)),
           ),
         );
         stage = "quality_gate";
         const inspect = (value: typeof generated) => {
+          const factIssues = verifyClaims(
+            value,
+            [],
+            productEvidence(sources),
+            {},
+            true,
+            {
+              productName: profile.identity.name,
+              deferCapabilities: true,
+            },
+          )
+            .actions.filter((a) => a.action === "removed")
+            .map((a) => ({
+              section: a.path.split(".")[0],
+              path: a.path,
+              reason: `Unsupported assertion: ${a.path}`,
+            }));
+          const consistency = strategyConsistency(value, profile);
+          if (consistency.length) return [...consistency, ...factIssues];
           const report = assembleAcquisition(value, profile);
           const leaves = leafFields(value);
           const reportLeaves = leafFields(report);
@@ -276,16 +301,7 @@ export function provider(): AnalysisProvider {
                 const path = i.reason.match(/: ([\w]+(?:\.\w+)+)$/)?.[1];
                 return path ? translate(path, i.reason) : [i];
               }),
-              ...verifyClaims(value, [], productEvidence(sources), {}, true, {
-                productName: profile.identity.name,
-                deferCapabilities: true,
-              })
-                .actions.filter((a) => a.action === "removed")
-                .map((a) => ({
-                  section: a.path.split(".")[0],
-                  path: a.path,
-                  reason: `Unsupported assertion: ${a.path}`,
-                })),
+              ...factIssues,
             ];
           if (
             !/\b(?:urgenc|urgent|pay|purchas|buy|budget|authority|commercial|paid)\w*/i.test(
@@ -302,6 +318,7 @@ export function provider(): AnalysisProvider {
         };
         const checked = await qualityGate({
           candidate: generated,
+          outputAllowances: qualityOutput,
           fields: Object.fromEntries(
             Object.entries(generationSchema.shape).filter(
               ([k]) => k !== "recommendationBasis",
@@ -320,7 +337,7 @@ export function provider(): AnalysisProvider {
           },
           call,
           validate: (value) => {
-            const parsed = generationSchema.parse(value);
+            const parsed = acquisitionSchema(ids).parse(value);
             validateEvidence(
               assembleAcquisition(parsed, profile),
               sources.map((s) => s.url),

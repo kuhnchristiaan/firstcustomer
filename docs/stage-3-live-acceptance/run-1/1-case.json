@@ -1,0 +1,34 @@
+{
+  "synthetic": true,
+  "productId": "cmw3u1mud0002wcsgn4jogge8",
+  "workspaceId": "cmw3u1mup0003wcsg1kuqht94",
+  "planId": "cmw3u1mv90004wcsgl0ac9dru",
+  "reviewId": "cmw3u1n0m000awcsgi3j3wqth",
+  "context": {
+    "resources": {
+      "hoursPerWeek": 3,
+      "monthlyBudget": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "productStage": "Launched, no paying customers",
+    "previousEfforts": {
+      "other": null,
+      "channels": [
+        "None"
+      ]
+    }
+  },
+  "results": {
+    "planId": "cmw3u1mv90004wcsgl0ac9dru",
+    "replies": 2,
+    "feedback": "Synthetic report: founders expressed interest but raised pricing objections. No further pricing or customer-interaction details were supplied. Task-completion confirmations were not supplied; no tasks are marked completed.",
+    "activations": 0,
+    "submissionKey": "1271c370-bbda-4fdc-bd53-44c622c99cb0",
+    "payingCustomers": null,
+    "completedTaskIds": [],
+    "prospectsContacted": 6,
+    "qualifiedConversations": 2
+  }
+}

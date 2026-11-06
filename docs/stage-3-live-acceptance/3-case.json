@@ -1,0 +1,34 @@
+{
+  "synthetic": true,
+  "productId": "cmw3u04jh000occsgeck7janl",
+  "workspaceId": "cmw3u04jm000pccsgp4xk0ev8",
+  "planId": "cmw3u04js000qccsgww5v7emr",
+  "reviewId": "cmw3u04k2000wccsg9sr7xbri",
+  "context": {
+    "resources": {
+      "hoursPerWeek": 3,
+      "monthlyBudget": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "productStage": "Launched, no paying customers",
+    "previousEfforts": {
+      "other": null,
+      "channels": [
+        "None"
+      ]
+    }
+  },
+  "results": {
+    "planId": "cmw3u04js000qccsgww5v7emr",
+    "replies": null,
+    "feedback": "Synthetic report: the founder cannot realistically access the recommended Indie Hackers channel. No meaningful customer response data exists. This is an execution access blocker. Task-completion confirmations were not supplied; no tasks are marked completed.",
+    "activations": null,
+    "submissionKey": "e30525a0-e0af-40fe-ba5a-fdb902aebcb1",
+    "payingCustomers": null,
+    "completedTaskIds": [],
+    "prospectsContacted": 0,
+    "qualifiedConversations": null
+  }
+}

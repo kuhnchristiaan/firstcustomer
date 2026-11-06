@@ -1,0 +1,2225 @@
+{
+  "target": {
+    "database": "firstcustomers_advisor_dev",
+    "host": "127.0.0.1",
+    "port": 55441
+  },
+  "workspace": {
+    "id": "cmw3l5enn0003zosgwe77hr2k",
+    "productId": "cmw3l5en80002zosg0hfy786d",
+    "founderContext": {
+      "resources": {
+        "hoursPerWeek": 3,
+        "monthlyBudget": {
+          "amount": 0,
+          "currency": "USD"
+        }
+      },
+      "productStage": "Launched, no paying customers",
+      "previousEfforts": {
+        "other": null,
+        "channels": [
+          "None"
+        ]
+      }
+    },
+    "profile": {
+      "version": "1.0",
+      "identity": {
+        "name": "Senja",
+        "summary": "Senja - Collect, Manage and Share Testimonials",
+        "category": "Customer acquisition",
+        "evidence": [
+          {
+            "quote": "Senja - Collect, Manage and Share Testimonials",
+            "blockId": "cae551e2b6e4",
+            "sourceUrl": "https://senja.io/"
+          }
+        ],
+        "certainty": "Website-supported",
+        "primaryJob": {
+          "actor": "Businesses, creators, SaaS operators, and niche sellers",
+          "outcome": "Easily collect, manage, and display testimonials and social proof to win customer trust and boost sales",
+          "problem": "Difficulty building trust and converting customers due to lack of social proof"
+        }
+      },
+      "statements": [
+        {
+          "id": "s1",
+          "kind": "Owner product claim",
+          "text": "Senja - Collect, Manage and Share Testimonials",
+          "subject": "Owner product",
+          "evidence": [
+            {
+              "quote": "Senja - Collect, Manage and Share Testimonials",
+              "blockId": "cae551e2b6e4",
+              "sourceUrl": "https://senja.io/"
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "kind": "Owner product claim",
+          "text": "Create a simple collection form in 30 seconds",
+          "subject": "Owner product",
+          "evidence": [
+            {
+              "quote": "Create a simple collection form in 30 seconds",
+              "blockId": "bf0d9b91c6ba",
+              "sourceUrl": "https://senja.io/"
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "kind": "Owner product claim",
+          "text": "✓Import from 30+ platforms or CSV",
+          "subject": "Owner product",
+          "evidence": [
+            {
+              "quote": "✓Import from 30+ platforms or CSV",
+              "blockId": "d31a29723b2c",
+              "sourceUrl": "https://senja.io/"
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "kind": "Owner product claim",
+          "text": "✓Testimonial analysis",
+          "subject": "Owner product",
+          "evidence": [
+            {
+              "quote": "✓Testimonial analysis",
+              "blockId": "8df44b72b22f",
+              "sourceUrl": "https://senja.io/pricing"
+            }
+          ]
+        }
+      ],
+      "limitations": [
+        "Exact pricing details and feature limits beyond free tier and general descriptions are not provided in the data.",
+        "No user testimonials or independent reviews are included to validate the product claims.",
+        "Technical specifics of API or integration capabilities are not detailed."
+      ]
+    },
+    "sources": [
+      {
+        "url": "https://senja.io/",
+        "links": [
+          "#main-content",
+          "/resources/social-proof-score",
+          "/",
+          "/pricing",
+          "/testimonial-software/collect",
+          "/testimonial-software/import",
+          "/testimonial-software/manage",
+          "/testimonial-software/find",
+          "/testimonial-software/analysis",
+          "/testimonial-software/video",
+          "/testimonial-software/spin-the-wheel",
+          "/testimonial-widgets",
+          "/testimonial-images",
+          "/case-study-generator",
+          "/testimonial-software/share",
+          "/testimonial-software/wall-of-love",
+          "/blog/ai-testimonial-video-creator",
+          "/testimonial-software/chrome-extension",
+          "/customer-success-software/gifts",
+          "/customer-success-software/thank-yous",
+          "/customer-success-software",
+          "/resources/social-proof-score",
+          "/testimonial-software",
+          "/testimonial-software/coaches",
+          "/testimonial-software/communities",
+          "/testimonial-software/course-creators",
+          "/testimonial-software/creators",
+          "/testimonial-software/events",
+          "/testimonial-software/newsletters",
+          "/testimonial-software/agencies",
+          "/testimonial-software/ecommerce",
+          "/testimonial-software/employees",
+          "/testimonial-software/freelancers",
+          "/testimonial-software/real-estate-agents",
+          "/testimonial-software/saas",
+          "/testimonial-software/sales-teams",
+          "/use-cases",
+          "https://love.senja.io/",
+          "/blog/category/case-studies",
+          "/compare",
+          "/about",
+          "/world-tour",
+          "/blog",
+          "https://support.senja.io",
+          "/blog/category/office-hours",
+          "/use-cases",
+          "/testimonial-examples",
+          "/testimonial-questions",
+          "/case-study-templates",
+          "/resources/add-testimonials-to-website",
+          "/resources/social-proof-score",
+          "/swipe-files/newsletter-signup-page-examples",
+          "/resources/newsletter-landing-page-swipefile",
+          "/resources/creator-landing-pages",
+          "/resources",
+          "https://app.senja.io/signin",
+          "https://app.senja.io/signup",
+          "/pricing",
+          "https://app.senja.io/signin",
+          "/testimonial-software/collect",
+          "/testimonial-software/import",
+          "/testimonial-software/manage",
+          "/testimonial-software/find",
+          "/testimonial-software/analysis",
+          "/testimonial-software/video",
+          "/testimonial-software/spin-the-wheel",
+          "/testimonial-widgets",
+          "/testimonial-images",
+          "/case-study-generator",
+          "/testimonial-software/share",
+          "/testimonial-software/wall-of-love",
+          "/blog/ai-testimonial-video-creator",
+          "/testimonial-software/chrome-extension",
+          "/customer-success-software/gifts",
+          "/customer-success-software/thank-yous",
+          "/customer-success-software",
+          "/testimonial-software",
+          "/testimonial-software/coaches",
+          "/testimonial-software/communities",
+          "/testimonial-software/course-creators",
+          "/testimonial-software/creators",
+          "/testimonial-software/events",
+          "/testimonial-software/newsletters",
+          "/testimonial-software/agencies",
+          "/testimonial-software/ecommerce",
+          "/testimonial-software/employees",
+          "/testimonial-software/freelancers",
+          "/testimonial-software/real-estate-agents",
+          "/testimonial-software/saas",
+          "/testimonial-software/sales-teams",
+          "/use-cases",
+          "https://love.senja.io/",
+          "/blog/category/case-studies",
+          "/compare",
+          "/about",
+          "/world-tour",
+          "/blog",
+          "https://support.senja.io",
+          "/blog/category/office-hours",
+          "/use-cases",
+          "/testimonial-examples",
+          "/testimonial-questions",
+          "/case-study-templates",
+          "/resources/add-testimonials-to-website",
+          "/resources/social-proof-score",
+          "/swipe-files/newsletter-signup-page-examples",
+          "/resources/newsletter-landing-page-swipefile",
+          "/resources/creator-landing-pages",
+          "/resources",
+          "https://senja.io/p/senja/vt/78572a82-7db6-40b2-a8f7-3787b9837a65",
+          "https://app.senja.io/signup",
+          "https://app.senja.io/signup",
+          "https://senja.io/p/senja/vt/f267e4fd-448c-4c4e-8e29-29a57d72c7cb",
+          "https://senja.io/p/senja/vt/ba3d14da-f9b2-4b24-b5a6-e2bf8ecc26e0",
+          "/testimonial-software/creators",
+          "/testimonial-software/communities",
+          "/testimonial-software/saas",
+          "/testimonial-software/agencies",
+          "/testimonial-software/course-creators",
+          "/testimonial-software/newsletters",
+          "/testimonial-software/freelancers",
+          "/testimonial-software/employees",
+          "/testimonial-software/ecommerce",
+          "/testimonial-software/sales-teams",
+          "/testimonial-software/real-estate-agents",
+          "/testimonial-software/events",
+          "/testimonial-software/coaches",
+          "https://app.senja.io/signup",
+          "/",
+          "/testimonial-software/collect",
+          "/testimonial-software/import",
+          "/testimonial-software/video",
+          "/testimonial-widgets",
+          "/testimonial-software/wall-of-love",
+          "/case-study-generator",
+          "/customer-success-software/thank-yous",
+          "/testimonial-software/migration",
+          "/blog",
+          "/testimonial-examples",
+          "/testimonial-questions",
+          "/testimonial-templates",
+          "/use-cases",
+          "https://support.senja.io",
+          "/compare",
+          "/compare/boast-io-alternative",
+          "/compare/bonjoro-alternative",
+          "/compare/elfsight-alternative",
+          "/compare/famewall-alternative",
+          "/compare/testimonial-hero-alternative",
+          "/compare/testimonial-to-alternative",
+          "/compare/trustmary-alternative",
+          "/compare/videoask-alternative",
+          "/compare/vocalvideo-alternative",
+          "/compare/vouch-alternative",
+          "/about",
+          "/pricing",
+          "/blog/category/case-studies",
+          "https://love.senja.io/",
+          "/affiliates",
+          "/agency-resell",
+          "https://partnerkit.so/f/pitch-ana",
+          "/contact",
+          "https://feedback.senja.io/changelog",
+          "/testimonial-software/agencies",
+          "/testimonial-software/coaches",
+          "/testimonial-software/communities",
+          "/testimonial-software/course-creators",
+          "/testimonial-software/creators",
+          "/testimonial-software/ecommerce",
+          "/testimonial-software/employees",
+          "/testimonial-software/events",
+          "/testimonial-software/freelancers",
+          "/testimonial-software/newsletters",
+          "/testimonial-software/real-estate-agents",
+          "/testimonial-software/saas",
+          "/testimonial-software/sales-teams",
+          "/legal/terms-of-service",
+          "/legal/privacy-policy",
+          "/senja-discount-codes"
+        ],
+        "title": "Senja - Collect, Manage and Share Testimonials",
+        "status": "SUCCESS",
+        "content": "{\"extractionVersion\":\"2.0\",\"url\":\"https://senja.io/\",\"title\":\"Senja - Collect, Manage and Share Testimonials\",\"blocks\":[{\"id\":\"cae551e2b6e4\",\"text\":\"Senja - Collect, Manage and Share Testimonials\",\"kind\":\"Owner candidate\",\"context\":\"Website title\"},{\"id\":\"21e09887a3aa\",\"text\":\"The easiest way to collect testimonials and add them to your website. Get started for free.\",\"kind\":\"Owner candidate\",\"context\":\"Website description\"},{\"id\":\"03cd34fc856f\",\"text\":\"Senja\",\"kind\":\"Owner candidate\",\"context\":\"Site name\"},{\"id\":\"2c982934e88c\",\"text\":\"You Without Social Proof\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"3a3b6c7867f4\",\"text\":\"✕Struggling to build trust\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"d5ed9b4d6396\",\"text\":\"✕Watching sales trickle in\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"0cc9391227c4\",\"text\":\"✕Working overtime to prove yourself\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"36bb6c9839a0\",\"text\":\"✕Blending in with competitors\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"185420153522\",\"text\":\"✕Second-guessing yourself\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"76847a8c4bd1\",\"text\":\"You With Social Proof\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"c405b10b7dc9\",\"text\":\"✓Win customer trust instantly\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"8a6e61d64bfa\",\"text\":\"✓Sell like hotcakes\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"49630dc6a0cc\",\"text\":\"✓Turn your audience into advocates\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"8cacd7327864\",\"text\":\"✓Stand out from competitors\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"560e4f1f3e96\",\"text\":\"✓Market with confidence\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"bf0d9b91c6ba\",\"text\":\"Create a simple collection form in 30 seconds\",\"kind\":\"Owner candidate\",\"context\":\"Create a simple collection form in 30 seconds / Create a simple collection form in 30 seconds\"},{\"id\":\"8088337baf9d\",\"text\":\"Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials.\",\"kind\":\"Owner candidate\",\"context\":\"Create a simple collection form in 30 seconds / Create a simple collection form in 30 seconds\"},{\"id\":\"b8c2fac70e98\",\"text\":\"✓Automate video and text collection\",\"kind\":\"Owner candidate\",\"context\":\"Create a simple collection form in 30 seconds\"},{\"id\":\"7dc0005f6f52\",\"text\":\"✓Share or embed your form anywhere\",\"kind\":\"Owner candidate\",\"context\":\"Create a simple collection form in 30 seconds\"},{\"id\":\"049c67802093\",\"text\":\"✓Offer rewards to collect even more\",\"kind\":\"Owner candidate\",\"context\":\"Create a simple collection form in 30 seconds\"},{\"id\":\"d31a29723b2c\",\"text\":\"✓Import from 30+ platforms or CSV\",\"kind\":\"Owner candidate\",\"context\":\"Create a simple collection form in 30 seconds\"},{\"id\":\"ded279332e6a\",\"text\":\"✓See your paying customers and invite them in one click\",\"kind\":\"Owner candidate\",\"context\":\"Create a simple collection form in 30 seconds\"},{\"id\":\"62f58d67f0df\",\"text\":\"✓Automate with Zapier, API & webhooks\",\"kind\":\"Owner candidate\",\"context\":\"Create a simple collection form in 30 seconds\"},{\"id\":\"e8aadd46ea4d\",\"text\":\"Jamie Northrup\",\"kind\":\"Owner candidate\",\"context\":\"Create a simple collection form in 30 seconds\"},{\"id\":\"a2167a5571ef\",\"text\":\"Minimalist Hustler\",\"kind\":\"Owner candidate\",\"context\":\"Create a simple collection form in 30 seconds\"},{\"id\":\"ff7c1311cb40\",\"text\":\"Where the f*ck is that screenshot?\",\"kind\":\"Owner candidate\",\"context\":\"Where the f*ck is that screenshot? / Where the f*ck is that screenshot?\"},{\"id\":\"1224993c1e20\",\"text\":\"The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share.\",\"kind\":\"Owner candidate\",\"context\":\"Where the f*ck is that screenshot? / Where the f*ck is that screenshot?\"},{\"id\":\"24bbf17872ac\",\"text\":\"✓Search with natural language\",\"kind\":\"Owner candidate\",\"context\":\"Where the f*ck is that screenshot?\"},{\"id\":\"bcabc017cea9\",\"text\":\"✓Filter by offer, buyer, industry, product, plan\",\"kind\":\"Owner candidate\",\"context\":\"Where the f*ck is that screenshot?\"},{\"id\":\"85dbf7ba497e\",\"text\":\"✓Share everywhere from the Chrome Extension\",\"kind\":\"Owner candidate\",\"context\":\"Where the f*ck is that screenshot?\"},{\"id\":\"11fd7b5a0d04\",\"text\":\"✓Ask the Slack bot for recommendations\",\"kind\":\"Owner candidate\",\"context\":\"Where the f*ck is that screenshot?\"},{\"id\":\"63a7e5175543\",\"text\":\"✓Always-on access with the MCP\",\"kind\":\"Owner candidate\",\"context\":\"Where the f*ck is that screenshot?\"},{\"id\":\"e5c70794a7df\",\"text\":\"Thank every customer like it's still day one\",\"kind\":\"Owner candidate\",\"context\":\"Thank every customer like it's still day one / Thank every customer like it's still day one\"},{\"id\":\"070b03be02b3\",\"text\":\"You didn't grow by treating people like numbers. Connect your customers and Senja shows who's paying, who just bought and who's slipping away — so you can invite, thank and win them back in one click.\",\"kind\":\"Owner candidate\",\"context\":\"Thank every customer like it's still day one / Thank every customer like it's still day one\"},{\"id\":\"267fcb35bdcf\",\"text\":\"✓Find the customers you should thank\",\"kind\":\"Owner candidate\",\"context\":\"Thank every customer like it's still day one\"},{\"id\":\"1c28302da932\",\"text\":\"✓Send e-gifts, coupons and discounts\",\"kind\":\"Owner candidate\",\"context\":\"Thank every customer like it's still day one\"},{\"id\":\"342cb48a535c\",\"text\":\"✓Unlock features as a thank you\",\"kind\":\"Owner candidate\",\"context\":\"Thank every customer like it's still day one\"},{\"id\":\"1282124eb6f0\",\"text\":\"✓Record personal notes and videos\",\"kind\":\"Owner candidate\",\"context\":\"Thank every customer like it's still day one\"},{\"id\":\"5a2fe340a182\",\"text\":\"✓See who redeems every gift\",\"kind\":\"Owner candidate\",\"context\":\"Thank every customer like it's still day one\"},{\"id\":\"08cafccae402\",\"text\":\"✓Get an email when a loyal customer churns\",\"kind\":\"Owner candidate\",\"context\":\"Thank every customer like it's still day one\"},{\"id\":\"5f68e41b8656\",\"text\":\"Hi Maya 👋 A year of Brightleaf this week! Thank you for every order, every kind word, and for trusting us with your kitchen shelves. There's a little something extra in your next box. Ana\",\"kind\":\"Owner candidate\",\"context\":\"Thank every customer like it's still day one / Illustration: three sent thank-you emails — a video thank-you, a gift not\"},{\"id\":\"6a0ca18cdea2\",\"text\":\"Nathan Falceso\",\"kind\":\"Owner candidate\",\"context\":\"Thank every customer like it's still day one\"},{\"id\":\"58b01dcebec4\",\"text\":\"Built for you\",\"kind\":\"Owner candidate\",\"context\":\"Whatever you make, Senja fits how you work\"},{\"id\":\"07240311e1af\",\"text\":\"Whatever you make, Senja fits how you work\",\"kind\":\"Owner candidate\",\"context\":\"Whatever you make, Senja fits how you work / Whatever you make, Senja fits how you work\"},{\"id\":\"bc0d4042bf93\",\"text\":\"Whether you're a creator, run a SaaS, or sell your own kind of niche thing — Senja is the go-to tool for collecting, managing, and showing off your social proof.\",\"kind\":\"Owner candidate\",\"context\":\"Whatever you make, Senja fits how you work / Whatever you make, Senja fits how you work\"},{\"id\":\"dbb603cdc086\",\"text\":\"We know testimonials drive trust — here’s why people trust us\",\"kind\":\"Owner candidate\",\"context\":\"We know testimonials drive trust — here’s why people trust us\"},{\"id\":\"1ff12da71318\",\"text\":\"Testimonials made easy\",\"kind\":\"Owner candidate\",\"context\":\"Ready to boost your business with social proof?\"},{\"id\":\"a8243d5e1864\",\"text\":\"Ready to boost your business with social proof?\",\"kind\":\"Owner candidate\",\"context\":\"Ready to boost your business with social proof? / Ready to boost your business with social proof?\"},{\"id\":\"97b65448a222\",\"text\":\"Set up in minutes and discover how easy it is to collect, manage, and share the social proof that drives your business forward.\",\"kind\":\"Owner candidate\",\"context\":\"Ready to boost your business with social proof? / Ready to boost your business with social proof?\"},{\"id\":\"d40761b29c01\",\"text\":\"✓Collect text & video testimonials on autopilot\",\"kind\":\"Owner candidate\",\"context\":\"Ready to boost your business with social proof?\"},{\"id\":\"fb86b578eb5a\",\"text\":\"✓Import testimonials from over 30 platforms\",\"kind\":\"Owner candidate\",\"context\":\"Ready to boost your business with social proof?\"},{\"id\":\"874780474a18\",\"text\":\"✓Share proof on your website, sales pages, pitches, emails, & socials\",\"kind\":\"Owner candidate\",\"context\":\"Ready to boost your business with social proof?\"},{\"id\":\"658bc5473610\",\"text\":\"“Senja majorly increased our conversion rates with auto-updating social proof on our sales pages.”\",\"kind\":\"Third party\",\"context\":\"Meet Senja. The easiest way to collect verified customer testimonials and case studies, then share them everywhere to in\"},{\"id\":\"e61bfe7c9046\",\"text\":\"Gemma Bonham-Carter\",\"kind\":\"Third party\",\"context\":\"Meet Senja. The easiest way to collect verified customer testimonials and case studies, then share them everywhere to in\"}]}",
+        "document": {
+          "url": "https://senja.io/",
+          "title": "Senja - Collect, Manage and Share Testimonials",
+          "blocks": [
+            {
+              "id": "cae551e2b6e4",
+              "kind": "Owner candidate",
+              "text": "Senja - Collect, Manage and Share Testimonials",
+              "context": "Website title"
+            },
+            {
+              "id": "21e09887a3aa",
+              "kind": "Owner candidate",
+              "text": "The easiest way to collect testimonials and add them to your website. Get started for free.",
+              "context": "Website description"
+            },
+            {
+              "id": "03cd34fc856f",
+              "kind": "Owner candidate",
+              "text": "Senja",
+              "context": "Site name"
+            },
+            {
+              "id": "658bc5473610",
+              "kind": "Third party",
+              "text": "“Senja majorly increased our conversion rates with auto-updating social proof on our sales pages.”",
+              "context": "Meet Senja. The easiest way to collect verified customer testimonials and case studies, then share them everywhere to increase trust and sales."
+            },
+            {
+              "id": "e61bfe7c9046",
+              "kind": "Third party",
+              "text": "Gemma Bonham-Carter",
+              "context": "Meet Senja. The easiest way to collect verified customer testimonials and case studies, then share them everywhere to increase trust and sales."
+            },
+            {
+              "id": "f23c1d94d8e5",
+              "kind": "Third party",
+              "text": "Founder + Online Business Strategist",
+              "context": "Meet Senja. The easiest way to collect verified customer testimonials and case studies, then share them everywhere to increase trust and sales."
+            },
+            {
+              "id": "0ae6e892a648",
+              "kind": "Third party",
+              "text": "Meet Senja. The easiest way to collect verified customer testimonials and case studies, then share them everywhere to increase trust and sales.",
+              "context": "Meet Senja. The easiest way to collect verified customer testimonials and case studies, then share them everywhere to increase trust and sales. / Meet Senja. The easiest way to collect verified custom"
+            },
+            {
+              "id": "b04c1e5f76e4",
+              "kind": "Third party",
+              "text": "✓Collect text & video testimonials on autopilot, or import from 30+ platforms",
+              "context": "Meet Senja. The easiest way to collect verified customer testimonials and case studies, then share them everywhere to increase trust and sales."
+            },
+            {
+              "id": "70dc5fff18f8",
+              "kind": "Third party",
+              "text": "✓Find the perfect one in seconds - from Slack, any browser tab or the MCP",
+              "context": "Meet Senja. The easiest way to collect verified customer testimonials and case studies, then share them everywhere to increase trust and sales."
+            },
+            {
+              "id": "10c91d0dd158",
+              "kind": "Third party",
+              "text": "✓Turn it into a widget, video, image, popup, Wall of Love, or case study",
+              "context": "Meet Senja. The easiest way to collect verified customer testimonials and case studies, then share them everywhere to increase trust and sales."
+            },
+            {
+              "id": "2c982934e88c",
+              "kind": "Owner candidate",
+              "text": "You Without Social Proof",
+              "context": ""
+            },
+            {
+              "id": "3a3b6c7867f4",
+              "kind": "Owner candidate",
+              "text": "✕Struggling to build trust",
+              "context": ""
+            },
+            {
+              "id": "d5ed9b4d6396",
+              "kind": "Owner candidate",
+              "text": "✕Watching sales trickle in",
+              "context": ""
+            },
+            {
+              "id": "0cc9391227c4",
+              "kind": "Owner candidate",
+              "text": "✕Working overtime to prove yourself",
+              "context": ""
+            },
+            {
+              "id": "36bb6c9839a0",
+              "kind": "Owner candidate",
+              "text": "✕Blending in with competitors",
+              "context": ""
+            },
+            {
+              "id": "185420153522",
+              "kind": "Owner candidate",
+              "text": "✕Second-guessing yourself",
+              "context": ""
+            },
+            {
+              "id": "76847a8c4bd1",
+              "kind": "Owner candidate",
+              "text": "You With Social Proof",
+              "context": ""
+            },
+            {
+              "id": "c405b10b7dc9",
+              "kind": "Owner candidate",
+              "text": "✓Win customer trust instantly",
+              "context": ""
+            },
+            {
+              "id": "8a6e61d64bfa",
+              "kind": "Owner candidate",
+              "text": "✓Sell like hotcakes",
+              "context": ""
+            },
+            {
+              "id": "49630dc6a0cc",
+              "kind": "Owner candidate",
+              "text": "✓Turn your audience into advocates",
+              "context": ""
+            },
+            {
+              "id": "8cacd7327864",
+              "kind": "Owner candidate",
+              "text": "✓Stand out from competitors",
+              "context": ""
+            },
+            {
+              "id": "560e4f1f3e96",
+              "kind": "Owner candidate",
+              "text": "✓Market with confidence",
+              "context": ""
+            },
+            {
+              "id": "bf0d9b91c6ba",
+              "kind": "Owner candidate",
+              "text": "Create a simple collection form in 30 seconds",
+              "context": "Create a simple collection form in 30 seconds / Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "8088337baf9d",
+              "kind": "Owner candidate",
+              "text": "Create your form, customize it and add your personalized intro video. With Senja you'll collect twice as many testimonials.",
+              "context": "Create a simple collection form in 30 seconds / Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "b8c2fac70e98",
+              "kind": "Owner candidate",
+              "text": "✓Automate video and text collection",
+              "context": "Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "7dc0005f6f52",
+              "kind": "Owner candidate",
+              "text": "✓Share or embed your form anywhere",
+              "context": "Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "049c67802093",
+              "kind": "Owner candidate",
+              "text": "✓Offer rewards to collect even more",
+              "context": "Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "d31a29723b2c",
+              "kind": "Owner candidate",
+              "text": "✓Import from 30+ platforms or CSV",
+              "context": "Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "ded279332e6a",
+              "kind": "Owner candidate",
+              "text": "✓See your paying customers and invite them in one click",
+              "context": "Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "62f58d67f0df",
+              "kind": "Owner candidate",
+              "text": "✓Automate with Zapier, API & webhooks",
+              "context": "Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "7c0744c5c122",
+              "kind": "Third party",
+              "text": "Senja made it so easy and quick to collect testimonials. Took me less than 5 minutes to start collecting them, and adding them to my website was even quicker! Thanks for this awesome tool.",
+              "context": "Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "e8aadd46ea4d",
+              "kind": "Owner candidate",
+              "text": "Jamie Northrup",
+              "context": "Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "a2167a5571ef",
+              "kind": "Owner candidate",
+              "text": "Minimalist Hustler",
+              "context": "Create a simple collection form in 30 seconds"
+            },
+            {
+              "id": "ff7c1311cb40",
+              "kind": "Owner candidate",
+              "text": "Where the f*ck is that screenshot?",
+              "context": "Where the f*ck is that screenshot? / Where the f*ck is that screenshot?"
+            },
+            {
+              "id": "1224993c1e20",
+              "kind": "Owner candidate",
+              "text": "The perfect testimonial for every pitch, page and post. With Senja you'll have one place for all your proof, ready for you and your team to share.",
+              "context": "Where the f*ck is that screenshot? / Where the f*ck is that screenshot?"
+            },
+            {
+              "id": "24bbf17872ac",
+              "kind": "Owner candidate",
+              "text": "✓Search with natural language",
+              "context": "Where the f*ck is that screenshot?"
+            },
+            {
+              "id": "bcabc017cea9",
+              "kind": "Owner candidate",
+              "text": "✓Filter by offer, buyer, industry, product, plan",
+              "context": "Where the f*ck is that screenshot?"
+            },
+            {
+              "id": "85dbf7ba497e",
+              "kind": "Owner candidate",
+              "text": "✓Share everywhere from the Chrome Extension",
+              "context": "Where the f*ck is that screenshot?"
+            },
+            {
+              "id": "11fd7b5a0d04",
+              "kind": "Owner candidate",
+              "text": "✓Ask the Slack bot for recommendations",
+              "context": "Where the f*ck is that screenshot?"
+            },
+            {
+              "id": "63a7e5175543",
+              "kind": "Owner candidate",
+              "text": "✓Always-on access with the MCP",
+              "context": "Where the f*ck is that screenshot?"
+            },
+            {
+              "id": "732bbb17416c",
+              "kind": "Third party",
+              "text": "Your Proof 118",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "fe81b78334dd",
+              "kind": "Third party",
+              "text": "How Hartley Plumbing cut missed jobs to zero in one month",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "afed8c27fdd1",
+              "kind": "Third party",
+              "text": "✨ Case study generated with Senja AI · 1 metric",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "0b61961b60dd",
+              "kind": "Third party",
+              "text": "Sam Marsh · Marsh & Sons Electrical Approved",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "1f4c3a8ca415",
+              "kind": "Third party",
+              "text": "\"I was sure the techs would never use it. They picked it up in a day.\"",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "d1b6d99f5ccb",
+              "kind": "Third party",
+              "text": "Onboarding · 2 weeks ago",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "d39406b60e3a",
+              "kind": "Third party",
+              "text": "Dave Hartley · Owner, Hartley Plumbing Approved",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "fe21b5e715f5",
+              "kind": "Third party",
+              "text": "\"Scheduling used to eat my Sundays. Now it runs itself and the lads just check their phones.\"",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "21f7b8490d4e",
+              "kind": "Third party",
+              "text": "Time saved · 1 month ago",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "732e8f716a0e",
+              "kind": "Third party",
+              "text": "June Okafor · Office Manager, Bluebird HVAC Approved",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "1b0475618eaf",
+              "kind": "Third party",
+              "text": "\"We stopped double-booking jobs in the first week. Customers noticed before we did.\"",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "6a3fd50ca325",
+              "kind": "Third party",
+              "text": "Ease of scheduling · 1 month ago",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "9e67a51416e1",
+              "kind": "Third party",
+              "text": "Lena Brooks · Owner, Brooks & Sons Heating Approved",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "a60a4250658e",
+              "kind": "Third party",
+              "text": "\"Support actually picks up the phone. Setup took an afternoon.\"",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "0f64fd47950c",
+              "kind": "Third party",
+              "text": "Customer support · 3 weeks ago",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "3a99606ea414",
+              "kind": "Third party",
+              "text": "Search and Filter",
+              "context": "Where the f*ck is that screenshot? / Illustration: the Senja proof library — searching for a story, with topics your customers talk about, filters, and matched case studies and testimonials"
+            },
+            {
+              "id": "b26e945eb491",
+              "kind": "Third party",
+              "text": "Senja was a game changer for us. We we're playing with Google Sheets to handle our testimonials but it was a real mess. Switching to Senja was the right thing to do. We now have a complete platform to collect, store and display testimonials!",
+              "context": "Where the f*ck is that screenshot?"
+            },
+            {
+              "id": "1d4ee510a400",
+              "kind": "Third party",
+              "text": "Share everywhere",
+              "context": "One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "e665a23f22ff",
+              "kind": "Third party",
+              "text": "One testimonial, 12 ways to share it",
+              "context": "One testimonial, 12 ways to share it / One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "2f6d2d02b527",
+              "kind": "Third party",
+              "text": "Don't let your best proof collect digital dust. Senja turns every testimonial into widgets, videos, Reels, images, popups and case studies. Proof at every step of your funnel.",
+              "context": "One testimonial, 12 ways to share it / One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "cf76a3797714",
+              "kind": "Third party",
+              "text": "✓Widgets, popups and Walls of Love",
+              "context": "One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "0b42f0357ecc",
+              "kind": "Third party",
+              "text": "✓Social videos, Reels and images for your feeds",
+              "context": "One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "ac2b56d90cb1",
+              "kind": "Third party",
+              "text": "✓Case studies that close deals for you",
+              "context": "One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "1747160fb5a0",
+              "kind": "Third party",
+              "text": "✓Get stars in Google with Rich Snippets",
+              "context": "One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "7de604081645",
+              "kind": "Third party",
+              "text": "✓Share links that drop proof anywhere",
+              "context": "One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "75f4ff0cb0b7",
+              "kind": "Third party",
+              "text": "✓Unlimited ad-free video hosting built in",
+              "context": "One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "d9e8d81d19c6",
+              "kind": "Third party",
+              "text": "Share video testimonials on your social media",
+              "context": "One testimonial, 12 ways to share it / Share video testimonials on your social media"
+            },
+            {
+              "id": "d159eeb48b00",
+              "kind": "Third party",
+              "text": "Get more visits to your site with stunning videos that you can share on your socials.",
+              "context": "One testimonial, 12 ways to share it / Share video testimonials on your social media"
+            },
+            {
+              "id": "20560e70c49f",
+              "kind": "Third party",
+              "text": "We have collected tons of testimonials and previously it was a bit fiddly having to log in, make a graphic, copy it etc etc, meant that most testimonials just became digital dust. This extension solves all that, if we need a quick social media post, want to add proof to an email or use as ads, we can just pick right from the extension, love it. They're like our very own social proof emojis now!",
+              "context": "One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "13bc9c397a40",
+              "kind": "Third party",
+              "text": "Michael Heap",
+              "context": "One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "df66a135e92c",
+              "kind": "Third party",
+              "text": "Chrome Web Store review",
+              "context": "One testimonial, 12 ways to share it"
+            },
+            {
+              "id": "61aba289dd19",
+              "kind": "Third party",
+              "text": "Testimonials your visitors can check are real",
+              "context": "Testimonials your visitors can check are real / Testimonials your visitors can check are real"
+            },
+            {
+              "id": "d705cd66221b",
+              "kind": "Third party",
+              "text": "Senja marks the testimonials it can vouch for. Verified purchase means the author's email actually paid you through Stripe. Verified means Senja imported it straight from the original post, word for word. Every mark links to a public page that shows how we know it's real.",
+              "context": "Testimonials your visitors can check are real / Testimonials your visitors can check are real"
+            },
+            {
+              "id": "e32920f0f4a8",
+              "kind": "Third party",
+              "text": "✓Verified purchase marks, backed by Stripe",
+              "context": "Testimonials your visitors can check are real"
+            },
+            {
+              "id": "1cc9b4e98071",
+              "kind": "Third party",
+              "text": "✓Verified imports, linked to the original post",
+              "context": "Testimonials your visitors can check are real"
+            },
+            {
+              "id": "463d8f7641f7",
+              "kind": "Third party",
+              "text": "✓A public verification page for every mark",
+              "context": "Testimonials your visitors can check are real"
+            },
+            {
+              "id": "ef9e8a4045ca",
+              "kind": "Third party",
+              "text": "✓Marks on your Walls of Love and widgets",
+              "context": "Testimonials your visitors can check are real"
+            },
+            {
+              "id": "e016db08e334",
+              "kind": "Third party",
+              "text": "✓Verification in the API and MCP, so AI assistants can cite it",
+              "context": "Testimonials your visitors can check are real"
+            },
+            {
+              "id": "7561d8f29699",
+              "kind": "Third party",
+              "text": "✓Edited or refunded? The mark comes off",
+              "context": "Testimonials your visitors can check are real"
+            },
+            {
+              "id": "e5c70794a7df",
+              "kind": "Owner candidate",
+              "text": "Thank every customer like it's still day one",
+              "context": "Thank every customer like it's still day one / Thank every customer like it's still day one"
+            },
+            {
+              "id": "070b03be02b3",
+              "kind": "Owner candidate",
+              "text": "You didn't grow by treating people like numbers. Connect your customers and Senja shows who's paying, who just bought and who's slipping away — so you can invite, thank and win them back in one click.",
+              "context": "Thank every customer like it's still day one / Thank every customer like it's still day one"
+            },
+            {
+              "id": "267fcb35bdcf",
+              "kind": "Owner candidate",
+              "text": "✓Find the customers you should thank",
+              "context": "Thank every customer like it's still day one"
+            },
+            {
+              "id": "1c28302da932",
+              "kind": "Owner candidate",
+              "text": "✓Send e-gifts, coupons and discounts",
+              "context": "Thank every customer like it's still day one"
+            },
+            {
+              "id": "342cb48a535c",
+              "kind": "Owner candidate",
+              "text": "✓Unlock features as a thank you",
+              "context": "Thank every customer like it's still day one"
+            },
+            {
+              "id": "1282124eb6f0",
+              "kind": "Owner candidate",
+              "text": "✓Record personal notes and videos",
+              "context": "Thank every customer like it's still day one"
+            },
+            {
+              "id": "5a2fe340a182",
+              "kind": "Owner candidate",
+              "text": "✓See who redeems every gift",
+              "context": "Thank every customer like it's still day one"
+            },
+            {
+              "id": "08cafccae402",
+              "kind": "Owner candidate",
+              "text": "✓Get an email when a loyal customer churns",
+              "context": "Thank every customer like it's still day one"
+            },
+            {
+              "id": "5f68e41b8656",
+              "kind": "Owner candidate",
+              "text": "Hi Maya 👋 A year of Brightleaf this week! Thank you for every order, every kind word, and for trusting us with your kitchen shelves. There's a little something extra in your next box. Ana",
+              "context": "Thank every customer like it's still day one / Illustration: three sent thank-you emails — a video thank-you, a gift note and a coupon note"
+            },
+            {
+              "id": "2ff6db789788",
+              "kind": "Third party",
+              "text": "Senja is simply awesome. They work hard providing a wide list of review integrations, showing how the company is built in public, and their constant presence with their customers to address bugs and bring in new features.",
+              "context": "Thank every customer like it's still day one"
+            },
+            {
+              "id": "6a0ca18cdea2",
+              "kind": "Owner candidate",
+              "text": "Nathan Falceso",
+              "context": "Thank every customer like it's still day one"
+            },
+            {
+              "id": "58b01dcebec4",
+              "kind": "Owner candidate",
+              "text": "Built for you",
+              "context": "Whatever you make, Senja fits how you work"
+            },
+            {
+              "id": "07240311e1af",
+              "kind": "Owner candidate",
+              "text": "Whatever you make, Senja fits how you work",
+              "context": "Whatever you make, Senja fits how you work / Whatever you make, Senja fits how you work"
+            },
+            {
+              "id": "bc0d4042bf93",
+              "kind": "Owner candidate",
+              "text": "Whether you're a creator, run a SaaS, or sell your own kind of niche thing — Senja is the go-to tool for collecting, managing, and showing off your social proof.",
+              "context": "Whatever you make, Senja fits how you work / Whatever you make, Senja fits how you work"
+            },
+            {
+              "id": "dbb603cdc086",
+              "kind": "Owner candidate",
+              "text": "We know testimonials drive trust — here’s why people trust us",
+              "context": "We know testimonials drive trust — here’s why people trust us"
+            },
+            {
+              "id": "1ff12da71318",
+              "kind": "Owner candidate",
+              "text": "Testimonials made easy",
+              "context": "Ready to boost your business with social proof?"
+            },
+            {
+              "id": "a8243d5e1864",
+              "kind": "Owner candidate",
+              "text": "Ready to boost your business with social proof?",
+              "context": "Ready to boost your business with social proof? / Ready to boost your business with social proof?"
+            },
+            {
+              "id": "97b65448a222",
+              "kind": "Owner candidate",
+              "text": "Set up in minutes and discover how easy it is to collect, manage, and share the social proof that drives your business forward.",
+              "context": "Ready to boost your business with social proof? / Ready to boost your business with social proof?"
+            },
+            {
+              "id": "d40761b29c01",
+              "kind": "Owner candidate",
+              "text": "✓Collect text & video testimonials on autopilot",
+              "context": "Ready to boost your business with social proof?"
+            },
+            {
+              "id": "fb86b578eb5a",
+              "kind": "Owner candidate",
+              "text": "✓Import testimonials from over 30 platforms",
+              "context": "Ready to boost your business with social proof?"
+            },
+            {
+              "id": "874780474a18",
+              "kind": "Owner candidate",
+              "text": "✓Share proof on your website, sales pages, pitches, emails, & socials",
+              "context": "Ready to boost your business with social proof?"
+            }
+          ],
+          "extractionVersion": "2.0"
+        },
+        "contentHash": "8f52b1664e7e0901609f0b252f6dc940c4d0a4c47c472c094634498e915a5104"
+      },
+      {
+        "url": "https://senja.io/pricing",
+        "links": [
+          "#main-content",
+          "/",
+          "/pricing",
+          "/testimonial-software/collect",
+          "/testimonial-software/import",
+          "/testimonial-software/manage",
+          "/testimonial-software/find",
+          "/testimonial-software/analysis",
+          "/testimonial-software/video",
+          "/testimonial-software/spin-the-wheel",
+          "/testimonial-widgets",
+          "/testimonial-images",
+          "/case-study-generator",
+          "/testimonial-software/share",
+          "/testimonial-software/wall-of-love",
+          "/blog/ai-testimonial-video-creator",
+          "/testimonial-software/chrome-extension",
+          "/customer-success-software/gifts",
+          "/customer-success-software/thank-yous",
+          "/customer-success-software",
+          "/resources/social-proof-score",
+          "/testimonial-software",
+          "/testimonial-software/coaches",
+          "/testimonial-software/communities",
+          "/testimonial-software/course-creators",
+          "/testimonial-software/creators",
+          "/testimonial-software/events",
+          "/testimonial-software/newsletters",
+          "/testimonial-software/agencies",
+          "/testimonial-software/ecommerce",
+          "/testimonial-software/employees",
+          "/testimonial-software/freelancers",
+          "/testimonial-software/real-estate-agents",
+          "/testimonial-software/saas",
+          "/testimonial-software/sales-teams",
+          "/use-cases",
+          "https://love.senja.io/",
+          "/blog/category/case-studies",
+          "/compare",
+          "/about",
+          "/world-tour",
+          "/blog",
+          "https://support.senja.io",
+          "/blog/category/office-hours",
+          "/use-cases",
+          "/testimonial-examples",
+          "/testimonial-questions",
+          "/case-study-templates",
+          "/resources/add-testimonials-to-website",
+          "/resources/social-proof-score",
+          "/swipe-files/newsletter-signup-page-examples",
+          "/resources/newsletter-landing-page-swipefile",
+          "/resources/creator-landing-pages",
+          "/resources",
+          "https://app.senja.io/signin",
+          "https://app.senja.io/signup",
+          "/pricing",
+          "https://app.senja.io/signin",
+          "/testimonial-software/collect",
+          "/testimonial-software/import",
+          "/testimonial-software/manage",
+          "/testimonial-software/find",
+          "/testimonial-software/analysis",
+          "/testimonial-software/video",
+          "/testimonial-software/spin-the-wheel",
+          "/testimonial-widgets",
+          "/testimonial-images",
+          "/case-study-generator",
+          "/testimonial-software/share",
+          "/testimonial-software/wall-of-love",
+          "/blog/ai-testimonial-video-creator",
+          "/testimonial-software/chrome-extension",
+          "/customer-success-software/gifts",
+          "/customer-success-software/thank-yous",
+          "/customer-success-software",
+          "/testimonial-software",
+          "/testimonial-software/coaches",
+          "/testimonial-software/communities",
+          "/testimonial-software/course-creators",
+          "/testimonial-software/creators",
+          "/testimonial-software/events",
+          "/testimonial-software/newsletters",
+          "/testimonial-software/agencies",
+          "/testimonial-software/ecommerce",
+          "/testimonial-software/employees",
+          "/testimonial-software/freelancers",
+          "/testimonial-software/real-estate-agents",
+          "/testimonial-software/saas",
+          "/testimonial-software/sales-teams",
+          "/use-cases",
+          "https://love.senja.io/",
+          "/blog/category/case-studies",
+          "/compare",
+          "/about",
+          "/world-tour",
+          "/blog",
+          "https://support.senja.io",
+          "/blog/category/office-hours",
+          "/use-cases",
+          "/testimonial-examples",
+          "/testimonial-questions",
+          "/case-study-templates",
+          "/resources/add-testimonials-to-website",
+          "/resources/social-proof-score",
+          "/swipe-files/newsletter-signup-page-examples",
+          "/resources/newsletter-landing-page-swipefile",
+          "/resources/creator-landing-pages",
+          "/resources",
+          "https://app.senja.io/signup",
+          "https://app.senja.io/signup",
+          "/testimonial-software/video",
+          "https://app.senja.io/signup",
+          "mailto:support@senja.io?subject=Senja%20Business%20early%20access",
+          "/",
+          "https://senja.io/p/senja/r/m7VzsW",
+          "https://support.senja.io/articles/do-you-offer-a-discount-for-non-profits-charities-ng4my",
+          "https://support.senja.io/articles/do-you-have-an-agency-plan-qd7ke",
+          "https://app.senja.io/signup",
+          "/",
+          "/testimonial-software/collect",
+          "/testimonial-software/import",
+          "/testimonial-software/video",
+          "/testimonial-widgets",
+          "/testimonial-software/wall-of-love",
+          "/case-study-generator",
+          "/customer-success-software/thank-yous",
+          "/testimonial-software/migration",
+          "/blog",
+          "/testimonial-examples",
+          "/testimonial-questions",
+          "/testimonial-templates",
+          "/use-cases",
+          "https://support.senja.io",
+          "/compare",
+          "/compare/boast-io-alternative",
+          "/compare/bonjoro-alternative",
+          "/compare/elfsight-alternative",
+          "/compare/famewall-alternative",
+          "/compare/testimonial-hero-alternative",
+          "/compare/testimonial-to-alternative",
+          "/compare/trustmary-alternative",
+          "/compare/videoask-alternative",
+          "/compare/vocalvideo-alternative",
+          "/compare/vouch-alternative",
+          "/about",
+          "/pricing",
+          "/blog/category/case-studies",
+          "https://love.senja.io/",
+          "/affiliates",
+          "/agency-resell",
+          "https://partnerkit.so/f/pitch-ana",
+          "/contact",
+          "https://feedback.senja.io/changelog",
+          "/testimonial-software/agencies",
+          "/testimonial-software/coaches",
+          "/testimonial-software/communities",
+          "/testimonial-software/course-creators",
+          "/testimonial-software/creators",
+          "/testimonial-software/ecommerce",
+          "/testimonial-software/employees",
+          "/testimonial-software/events",
+          "/testimonial-software/freelancers",
+          "/testimonial-software/newsletters",
+          "/testimonial-software/real-estate-agents",
+          "/testimonial-software/saas",
+          "/testimonial-software/sales-teams",
+          "/legal/terms-of-service",
+          "/legal/privacy-policy",
+          "/senja-discount-codes"
+        ],
+        "title": "Plans & Pricing - Free, Forever or Upgrade for Unlimited - Senja",
+        "status": "SUCCESS",
+        "content": "{\"extractionVersion\":\"2.0\",\"url\":\"https://senja.io/pricing\",\"title\":\"Plans & Pricing - Free, Forever or Upgrade for Unlimited - Senja\",\"blocks\":[{\"id\":\"cef9a6659494\",\"text\":\"Plans & Pricing - Free, Forever or Upgrade for Unlimited - Senja\",\"kind\":\"Owner candidate\",\"context\":\"Website title\"},{\"id\":\"fd70eaf5bf68\",\"text\":\"Free, forever. Senja is the most generous free tier of any social proof tool. Sign up and start collecting and sharing social proof from your happy customers. Choose to upgrade later to go unlimited.\",\"kind\":\"Owner candidate\",\"context\":\"Website description\"},{\"id\":\"549d17775fc1\",\"text\":\"Senja\",\"kind\":\"Owner candidate\",\"context\":\"Site name\"},{\"id\":\"5948fb46c322\",\"text\":\"Plans & Pricing\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / Plans & Pricing\"},{\"id\":\"3206d84c1a5a\",\"text\":\"Free, forever. It's the most generous free tier of any social proof tool. Sign up and start collecting and sharing social proof from your happy customers. Choose to upgrade later to go unlimited.\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / Plans & Pricing\"},{\"id\":\"19d9eae8356b\",\"text\":\"✓Collect 15 video and text testimonials\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Collect 15 video and text testimonials\"},{\"id\":\"e45004104a4d\",\"text\":\"Free. More than anywhere else\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Collect 15 video and text testimonials\"},{\"id\":\"8159ed98ccb9\",\"text\":\"✓Testimonial collection form\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Testimonial collection form\"},{\"id\":\"b3125fa25dbd\",\"text\":\"Create a simple or multistep collection form in 60 seconds\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Testimonial collection form\"},{\"id\":\"9aab17d65b12\",\"text\":\"✓Invites and tracking\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Invites and tracking\"},{\"id\":\"afb6f6f05834\",\"text\":\"Invite happy customers individually or in bulk. Send follow ups\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Invites and tracking\"},{\"id\":\"a3caff5aba39\",\"text\":\"✓Import testimonials\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Import testimonials\"},{\"id\":\"7a015d22c354\",\"text\":\"Import your social proof from 18 social media sites and review platforms. Plus text, video and screengrabs\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Import testimonials\"},{\"id\":\"8df44b72b22f\",\"text\":\"✓Testimonial analysis\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Testimonial analysis\"},{\"id\":\"3c7fb57a67ec\",\"text\":\"Analyze 100s of testimonials in seconds\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Testimonial analysis\"},{\"id\":\"6bd93ea22d90\",\"text\":\"✓Generate case studies\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Generate case studies\"},{\"id\":\"ede6bb714b38\",\"text\":\"Turn your best testimonials into full case studies in seconds\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Generate case studies\"},{\"id\":\"8e9b127b4f34\",\"text\":\"✓Verified testimonials\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Verified testimonials\"},{\"id\":\"df34bf227a73\",\"text\":\"Senja marks the testimonials it can vouch for, with a public page visitors can check\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Verified testimonials\"},{\"id\":\"d9025b277294\",\"text\":\"Sync your Stripe customers, see who's paying, and invite or thank them in one click\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Customers\"},{\"id\":\"b2287a75e62e\",\"text\":\"✓Send Thank Yous\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Send Thank Yous\"},{\"id\":\"e27e86ca316c\",\"text\":\"Find customers to thank, then send e-gifts, coupons and feature unlocks\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Send Thank Yous\"},{\"id\":\"17020c9ca75e\",\"text\":\"✓Export testimonials\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Export testimonials\"},{\"id\":\"b1787fe493be\",\"text\":\"So you can move anytime. Includes SD video\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Export testimonials\"},{\"id\":\"5aa0ff5ca81b\",\"text\":\"✓Unlimited testimonial widgets\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Unlimited testimonial widgets\"},{\"id\":\"e6982c06a65d\",\"text\":\"Over 20 templates. Create in seconds and add to your website without code\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Unlimited testimonial widgets\"},{\"id\":\"83bd03558d64\",\"text\":\"✓Unlimited Walls of Love\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Unlimited Walls of Love\"},{\"id\":\"d91efabfb9f2\",\"text\":\"Turn your testimonials into a Wall of Love. Add a CTA and share\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Unlimited Walls of Love\"},{\"id\":\"290bf353e7b6\",\"text\":\"✓Create Reels\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Create Reels\"},{\"id\":\"437eccf33e5e\",\"text\":\"Remix your video testimonials into clips for social posts and ads.\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Create Reels\"},{\"id\":\"6dc5e438da8b\",\"text\":\"✓Widget analytics\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Widget analytics\"},{\"id\":\"7e9b10b561ed\",\"text\":\"Know how many views and clicks your widgets and Walls of Love get\",\"kind\":\"Owner candidate\",\"context\":\"Plans & Pricing / ✓Widget analytics\"},{\"id\":\"d5f7c32766ef\",\"text\":\"Serious about social proof? Try a paid plan and grow your business faster\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster / Serious about social proof? Try a paid plan \"},{\"id\":\"19919d7ce35f\",\"text\":\"Loving Senja? Upgrade to a paid plan to remove branding, collect unlimited testimonials and unlock new features that help you collect more social proof. Take a look at our paid tiers.\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster / Serious about social proof? Try a paid plan \"},{\"id\":\"3962a0bca98f\",\"text\":\"Cancel anytime\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster / Starter\"},{\"id\":\"7b091bcdc5cb\",\"text\":\"✓Unlimited testimonials\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"f52c7ad0583a\",\"text\":\"Everything in free plus...\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster / Starter\"},{\"id\":\"3881ab376a91\",\"text\":\"✓Spin the Wheel\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"de67109980e9\",\"text\":\"Collect twice as many testimonials with our reward system\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"919cb0c64d9e\",\"text\":\"✓Testimonial autosync\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"05c17c18cd4f\",\"text\":\"Automatically pull in your latest testimonials from other sources\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"abd81ecd104b\",\"text\":\"✓Use your own branding\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"5ba2790a0a5e\",\"text\":\"Replace Senja's branding with your own, powered by Brand Kit\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"ed57c0686391\",\"text\":\"✓Custom Domains\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"dfcc132b36a7\",\"text\":\"Use your own domain for your forms and Walls of Love\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"4a9d66ecaa38\",\"text\":\"✓HD video exports\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"efdd6a5f0173\",\"text\":\"Export the videos you collect with our video testimonial software in high definition\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"7ae5c3e4a5ac\",\"text\":\"✓Pro widgets\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"6bda2dcd8560\",\"text\":\"Unlock even more widgets including Avatars Pro\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"3b4c1e81744a\",\"text\":\"✓Word of Mouth\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"},{\"id\":\"9c25b0707116\",\"text\":\"Encourage your customers to share the testimonial they left\",\"kind\":\"Owner candidate\",\"context\":\"Serious about social proof? Try a paid plan and grow your business faster\"}]}",
+        "document": {
+          "url": "https://senja.io/pricing",
+          "title": "Plans & Pricing - Free, Forever or Upgrade for Unlimited - Senja",
+          "blocks": [
+            {
+              "id": "cef9a6659494",
+              "kind": "Owner candidate",
+              "text": "Plans & Pricing - Free, Forever or Upgrade for Unlimited - Senja",
+              "context": "Website title"
+            },
+            {
+              "id": "fd70eaf5bf68",
+              "kind": "Owner candidate",
+              "text": "Free, forever. Senja is the most generous free tier of any social proof tool. Sign up and start collecting and sharing social proof from your happy customers. Choose to upgrade later to go unlimited.",
+              "context": "Website description"
+            },
+            {
+              "id": "549d17775fc1",
+              "kind": "Owner candidate",
+              "text": "Senja",
+              "context": "Site name"
+            },
+            {
+              "id": "5948fb46c322",
+              "kind": "Owner candidate",
+              "text": "Plans & Pricing",
+              "context": "Plans & Pricing / Plans & Pricing"
+            },
+            {
+              "id": "3206d84c1a5a",
+              "kind": "Owner candidate",
+              "text": "Free, forever. It's the most generous free tier of any social proof tool. Sign up and start collecting and sharing social proof from your happy customers. Choose to upgrade later to go unlimited.",
+              "context": "Plans & Pricing / Plans & Pricing"
+            },
+            {
+              "id": "19d9eae8356b",
+              "kind": "Owner candidate",
+              "text": "✓Collect 15 video and text testimonials",
+              "context": "Plans & Pricing / ✓Collect 15 video and text testimonials"
+            },
+            {
+              "id": "e45004104a4d",
+              "kind": "Owner candidate",
+              "text": "Free. More than anywhere else",
+              "context": "Plans & Pricing / ✓Collect 15 video and text testimonials"
+            },
+            {
+              "id": "8159ed98ccb9",
+              "kind": "Owner candidate",
+              "text": "✓Testimonial collection form",
+              "context": "Plans & Pricing / ✓Testimonial collection form"
+            },
+            {
+              "id": "b3125fa25dbd",
+              "kind": "Owner candidate",
+              "text": "Create a simple or multistep collection form in 60 seconds",
+              "context": "Plans & Pricing / ✓Testimonial collection form"
+            },
+            {
+              "id": "9aab17d65b12",
+              "kind": "Owner candidate",
+              "text": "✓Invites and tracking",
+              "context": "Plans & Pricing / ✓Invites and tracking"
+            },
+            {
+              "id": "afb6f6f05834",
+              "kind": "Owner candidate",
+              "text": "Invite happy customers individually or in bulk. Send follow ups",
+              "context": "Plans & Pricing / ✓Invites and tracking"
+            },
+            {
+              "id": "a3caff5aba39",
+              "kind": "Owner candidate",
+              "text": "✓Import testimonials",
+              "context": "Plans & Pricing / ✓Import testimonials"
+            },
+            {
+              "id": "7a015d22c354",
+              "kind": "Owner candidate",
+              "text": "Import your social proof from 18 social media sites and review platforms. Plus text, video and screengrabs",
+              "context": "Plans & Pricing / ✓Import testimonials"
+            },
+            {
+              "id": "8df44b72b22f",
+              "kind": "Owner candidate",
+              "text": "✓Testimonial analysis",
+              "context": "Plans & Pricing / ✓Testimonial analysis"
+            },
+            {
+              "id": "3c7fb57a67ec",
+              "kind": "Owner candidate",
+              "text": "Analyze 100s of testimonials in seconds",
+              "context": "Plans & Pricing / ✓Testimonial analysis"
+            },
+            {
+              "id": "6bd93ea22d90",
+              "kind": "Owner candidate",
+              "text": "✓Generate case studies",
+              "context": "Plans & Pricing / ✓Generate case studies"
+            },
+            {
+              "id": "ede6bb714b38",
+              "kind": "Owner candidate",
+              "text": "Turn your best testimonials into full case studies in seconds",
+              "context": "Plans & Pricing / ✓Generate case studies"
+            },
+            {
+              "id": "8e9b127b4f34",
+              "kind": "Owner candidate",
+              "text": "✓Verified testimonials",
+              "context": "Plans & Pricing / ✓Verified testimonials"
+            },
+            {
+              "id": "df34bf227a73",
+              "kind": "Owner candidate",
+              "text": "Senja marks the testimonials it can vouch for, with a public page visitors can check",
+              "context": "Plans & Pricing / ✓Verified testimonials"
+            },
+            {
+              "id": "d9025b277294",
+              "kind": "Owner candidate",
+              "text": "Sync your Stripe customers, see who's paying, and invite or thank them in one click",
+              "context": "Plans & Pricing / ✓Customers"
+            },
+            {
+              "id": "b2287a75e62e",
+              "kind": "Owner candidate",
+              "text": "✓Send Thank Yous",
+              "context": "Plans & Pricing / ✓Send Thank Yous"
+            },
+            {
+              "id": "e27e86ca316c",
+              "kind": "Owner candidate",
+              "text": "Find customers to thank, then send e-gifts, coupons and feature unlocks",
+              "context": "Plans & Pricing / ✓Send Thank Yous"
+            },
+            {
+              "id": "17020c9ca75e",
+              "kind": "Owner candidate",
+              "text": "✓Export testimonials",
+              "context": "Plans & Pricing / ✓Export testimonials"
+            },
+            {
+              "id": "b1787fe493be",
+              "kind": "Owner candidate",
+              "text": "So you can move anytime. Includes SD video",
+              "context": "Plans & Pricing / ✓Export testimonials"
+            },
+            {
+              "id": "5aa0ff5ca81b",
+              "kind": "Owner candidate",
+              "text": "✓Unlimited testimonial widgets",
+              "context": "Plans & Pricing / ✓Unlimited testimonial widgets"
+            },
+            {
+              "id": "e6982c06a65d",
+              "kind": "Owner candidate",
+              "text": "Over 20 templates. Create in seconds and add to your website without code",
+              "context": "Plans & Pricing / ✓Unlimited testimonial widgets"
+            },
+            {
+              "id": "83bd03558d64",
+              "kind": "Owner candidate",
+              "text": "✓Unlimited Walls of Love",
+              "context": "Plans & Pricing / ✓Unlimited Walls of Love"
+            },
+            {
+              "id": "d91efabfb9f2",
+              "kind": "Owner candidate",
+              "text": "Turn your testimonials into a Wall of Love. Add a CTA and share",
+              "context": "Plans & Pricing / ✓Unlimited Walls of Love"
+            },
+            {
+              "id": "290bf353e7b6",
+              "kind": "Owner candidate",
+              "text": "✓Create Reels",
+              "context": "Plans & Pricing / ✓Create Reels"
+            },
+            {
+              "id": "437eccf33e5e",
+              "kind": "Owner candidate",
+              "text": "Remix your video testimonials into clips for social posts and ads.",
+              "context": "Plans & Pricing / ✓Create Reels"
+            },
+            {
+              "id": "6dc5e438da8b",
+              "kind": "Owner candidate",
+              "text": "✓Widget analytics",
+              "context": "Plans & Pricing / ✓Widget analytics"
+            },
+            {
+              "id": "7e9b10b561ed",
+              "kind": "Owner candidate",
+              "text": "Know how many views and clicks your widgets and Walls of Love get",
+              "context": "Plans & Pricing / ✓Widget analytics"
+            },
+            {
+              "id": "d5f7c32766ef",
+              "kind": "Owner candidate",
+              "text": "Serious about social proof? Try a paid plan and grow your business faster",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster / Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "19919d7ce35f",
+              "kind": "Owner candidate",
+              "text": "Loving Senja? Upgrade to a paid plan to remove branding, collect unlimited testimonials and unlock new features that help you collect more social proof. Take a look at our paid tiers.",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster / Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "3962a0bca98f",
+              "kind": "Owner candidate",
+              "text": "Cancel anytime",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster / Starter"
+            },
+            {
+              "id": "7b091bcdc5cb",
+              "kind": "Owner candidate",
+              "text": "✓Unlimited testimonials",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "f52c7ad0583a",
+              "kind": "Owner candidate",
+              "text": "Everything in free plus...",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster / Starter"
+            },
+            {
+              "id": "3881ab376a91",
+              "kind": "Owner candidate",
+              "text": "✓Spin the Wheel",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "de67109980e9",
+              "kind": "Owner candidate",
+              "text": "Collect twice as many testimonials with our reward system",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "919cb0c64d9e",
+              "kind": "Owner candidate",
+              "text": "✓Testimonial autosync",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "05c17c18cd4f",
+              "kind": "Owner candidate",
+              "text": "Automatically pull in your latest testimonials from other sources",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "abd81ecd104b",
+              "kind": "Owner candidate",
+              "text": "✓Use your own branding",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "5ba2790a0a5e",
+              "kind": "Owner candidate",
+              "text": "Replace Senja's branding with your own, powered by Brand Kit",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "ed57c0686391",
+              "kind": "Owner candidate",
+              "text": "✓Custom Domains",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "dfcc132b36a7",
+              "kind": "Owner candidate",
+              "text": "Use your own domain for your forms and Walls of Love",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "4a9d66ecaa38",
+              "kind": "Owner candidate",
+              "text": "✓HD video exports",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "efdd6a5f0173",
+              "kind": "Owner candidate",
+              "text": "Export the videos you collect with our video testimonial software in high definition",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "7ae5c3e4a5ac",
+              "kind": "Owner candidate",
+              "text": "✓Pro widgets",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "6bda2dcd8560",
+              "kind": "Owner candidate",
+              "text": "Unlock even more widgets including Avatars Pro",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "3b4c1e81744a",
+              "kind": "Owner candidate",
+              "text": "✓Word of Mouth",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "9c25b0707116",
+              "kind": "Owner candidate",
+              "text": "Encourage your customers to share the testimonial they left",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "1d287e4d38b2",
+              "kind": "Owner candidate",
+              "text": "✓Zapier Integration",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "9ba2ecae20b7",
+              "kind": "Owner candidate",
+              "text": "Put testimonial collection and sharing on autopilot",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "93549e0d13b9",
+              "kind": "Owner candidate",
+              "text": "✓API and Webhooks",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "2cc82297bb68",
+              "kind": "Owner candidate",
+              "text": "Build your own custom integrations with the Senja API",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "800c195a6c02",
+              "kind": "Owner candidate",
+              "text": "✓Unlimited Forms",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "17d03eb3bb88",
+              "kind": "Owner candidate",
+              "text": "✓5 Projectsthen $10/month per extra",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "d8723f8ad6a0",
+              "kind": "Owner candidate",
+              "text": "✓5 Seatsthen $5/month per extra",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "7571887faff3",
+              "kind": "Owner candidate",
+              "text": "Everything in Starter plus...",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster / Pro"
+            },
+            {
+              "id": "4d677d3f3dc0",
+              "kind": "Owner candidate",
+              "text": "✓Team access",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "28f320b82b0e",
+              "kind": "Owner candidate",
+              "text": "Let everyone on your team edit or share your social proof with 5 seats included",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "2d3170a9098c",
+              "kind": "Owner candidate",
+              "text": "✓Rich snippets",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "294633fec32b",
+              "kind": "Owner candidate",
+              "text": "Add star ratings to your search results to improve SEO",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "9adbbdcb7f65",
+              "kind": "Owner candidate",
+              "text": "✓Testimonial translation",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "214407994028",
+              "kind": "Owner candidate",
+              "text": "Automatically translate your testimonials into 20 languages",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "c9358e31317c",
+              "kind": "Owner candidate",
+              "text": "$249$179/month",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster / Business"
+            },
+            {
+              "id": "b8feff4d6167",
+              "kind": "Owner candidate",
+              "text": "Founding offer",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster / Business"
+            },
+            {
+              "id": "98e8a61dd83c",
+              "kind": "Owner candidate",
+              "text": "1:1 support with AnaVIP support A direct line to Senja's proof expert",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "1db78f30dcaa",
+              "kind": "Owner candidate",
+              "text": "Everything in Pro plus...",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster / Business"
+            },
+            {
+              "id": "c5047dba21cc",
+              "kind": "Owner candidate",
+              "text": "✓Loyalty-driven Customer Success CRM",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "1e4ef1e7f1b7",
+              "kind": "Owner candidate",
+              "text": "Customer stages from at risk to champion, with next steps",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "1126abee0d69",
+              "kind": "Owner candidate",
+              "text": "✓A daily shortlist",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "cc1e022dd63c",
+              "kind": "Owner candidate",
+              "text": "Who to reach out to, every morning",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "cf17816f2261",
+              "kind": "Owner candidate",
+              "text": "✓Outreach campaigns",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "8fb92b9e3131",
+              "kind": "Owner candidate",
+              "text": "Testimonial, video, case study and G2 review asks",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "c376a6c76cb3",
+              "kind": "Owner candidate",
+              "text": "✓Go beyond the inbox",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "f639a76d258c",
+              "kind": "Owner candidate",
+              "text": "Gifts, handwritten letters, calls, webinars and events",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "f0648fd799ed",
+              "kind": "Owner candidate",
+              "text": "✓Proof strategy audit",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "e4a1872da8b7",
+              "kind": "Owner candidate",
+              "text": "Ana reviews your proof and hands you a plan",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "3a1f08282569",
+              "kind": "Owner candidate",
+              "text": "✓Done-for-you setup",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "b536d5699c73",
+              "kind": "Owner candidate",
+              "text": "We set up your forms, widgets and imports",
+              "context": "Serious about social proof? Try a paid plan and grow your business faster"
+            },
+            {
+              "id": "c0f8af981f2a",
+              "kind": "Owner candidate",
+              "text": "Frequently asked questions",
+              "context": "Frequently asked questions / Frequently asked questions"
+            },
+            {
+              "id": "70c80b0f9e90",
+              "kind": "Owner candidate",
+              "text": "Everything you need to know for complete peace of mind.",
+              "context": "Frequently asked questions / Frequently asked questions"
+            },
+            {
+              "id": "a0e8bf47d74d",
+              "kind": "Owner candidate",
+              "text": "All payments on our standard plans are via debit cards and credit card.",
+              "context": "Frequently asked questions"
+            },
+            {
+              "id": "44d681c45cd8",
+              "kind": "Owner candidate",
+              "text": "We use Stripe, the leading payment processor for SaaS companies.",
+              "context": "Frequently asked questions"
+            },
+            {
+              "id": "ee3e2ba6a833",
+              "kind": "Owner candidate",
+              "text": "Testimonials made easy",
+              "context": "Ready to boost your business with social proof?"
+            },
+            {
+              "id": "3c414ae04404",
+              "kind": "Owner candidate",
+              "text": "Ready to boost your business with social proof?",
+              "context": "Ready to boost your business with social proof? / Ready to boost your business with social proof?"
+            },
+            {
+              "id": "341cb7117c73",
+              "kind": "Owner candidate",
+              "text": "Set up in minutes and discover how easy it is to collect, manage, and share the social proof that drives your business forward.",
+              "context": "Ready to boost your business with social proof? / Ready to boost your business with social proof?"
+            },
+            {
+              "id": "9a195e9d2e7e",
+              "kind": "Owner candidate",
+              "text": "✓Collect text & video testimonials on autopilot",
+              "context": "Ready to boost your business with social proof?"
+            },
+            {
+              "id": "54ed59df41f9",
+              "kind": "Owner candidate",
+              "text": "✓Import testimonials from over 30 platforms",
+              "context": "Ready to boost your business with social proof?"
+            },
+            {
+              "id": "7b061e4d9ecb",
+              "kind": "Owner candidate",
+              "text": "✓Share proof on your website, sales pages, pitches, emails, & socials",
+              "context": "Ready to boost your business with social proof?"
+            }
+          ],
+          "extractionVersion": "2.0"
+        },
+        "contentHash": "ced417bfa54971ecbdc75f6c89c462dfc6c6b362bb25bd7a845d8220cc8710d8"
+      },
+      {
+        "url": "https://senja.io/about",
+        "links": [
+          "#main-content",
+          "/resources/social-proof-score",
+          "/",
+          "/pricing",
+          "/testimonial-software/collect",
+          "/testimonial-software/import",
+          "/testimonial-software/manage",
+          "/testimonial-software/find",
+          "/testimonial-software/analysis",
+          "/testimonial-software/video",
+          "/testimonial-software/spin-the-wheel",
+          "/testimonial-widgets",
+          "/testimonial-images",
+          "/case-study-generator",
+          "/testimonial-software/share",
+          "/testimonial-software/wall-of-love",
+          "/blog/ai-testimonial-video-creator",
+          "/testimonial-software/chrome-extension",
+          "/customer-success-software/gifts",
+          "/customer-success-software/thank-yous",
+          "/customer-success-software",
+          "/resources/social-proof-score",
+          "/testimonial-software",
+          "/testimonial-software/coaches",
+          "/testimonial-software/communities",
+          "/testimonial-software/course-creators",
+          "/testimonial-software/creators",
+          "/testimonial-software/events",
+          "/testimonial-software/newsletters",
+          "/testimonial-software/agencies",
+          "/testimonial-software/ecommerce",
+          "/testimonial-software/employees",
+          "/testimonial-software/freelancers",
+          "/testimonial-software/real-estate-agents",
+          "/testimonial-software/saas",
+          "/testimonial-software/sales-teams",
+          "/use-cases",
+          "https://love.senja.io/",
+          "/blog/category/case-studies",
+          "/compare",
+          "/about",
+          "/world-tour",
+          "/blog",
+          "https://support.senja.io",
+          "/blog/category/office-hours",
+          "/use-cases",
+          "/testimonial-examples",
+          "/testimonial-questions",
+          "/case-study-templates",
+          "/resources/add-testimonials-to-website",
+          "/resources/social-proof-score",
+          "/swipe-files/newsletter-signup-page-examples",
+          "/resources/newsletter-landing-page-swipefile",
+          "/resources/creator-landing-pages",
+          "/resources",
+          "https://app.senja.io/signin",
+          "https://app.senja.io/signup",
+          "/pricing",
+          "https://app.senja.io/signin",
+          "/testimonial-software/collect",
+          "/testimonial-software/import",
+          "/testimonial-software/manage",
+          "/testimonial-software/find",
+          "/testimonial-software/analysis",
+          "/testimonial-software/video",
+          "/testimonial-software/spin-the-wheel",
+          "/testimonial-widgets",
+          "/testimonial-images",
+          "/case-study-generator",
+          "/testimonial-software/share",
+          "/testimonial-software/wall-of-love",
+          "/blog/ai-testimonial-video-creator",
+          "/testimonial-software/chrome-extension",
+          "/customer-success-software/gifts",
+          "/customer-success-software/thank-yous",
+          "/customer-success-software",
+          "/testimonial-software",
+          "/testimonial-software/coaches",
+          "/testimonial-software/communities",
+          "/testimonial-software/course-creators",
+          "/testimonial-software/creators",
+          "/testimonial-software/events",
+          "/testimonial-software/newsletters",
+          "/testimonial-software/agencies",
+          "/testimonial-software/ecommerce",
+          "/testimonial-software/employees",
+          "/testimonial-software/freelancers",
+          "/testimonial-software/real-estate-agents",
+          "/testimonial-software/saas",
+          "/testimonial-software/sales-teams",
+          "/use-cases",
+          "https://love.senja.io/",
+          "/blog/category/case-studies",
+          "/compare",
+          "/about",
+          "/world-tour",
+          "/blog",
+          "https://support.senja.io",
+          "/blog/category/office-hours",
+          "/use-cases",
+          "/testimonial-examples",
+          "/testimonial-questions",
+          "/case-study-templates",
+          "/resources/add-testimonials-to-website",
+          "/resources/social-proof-score",
+          "/swipe-files/newsletter-signup-page-examples",
+          "/resources/newsletter-landing-page-swipefile",
+          "/resources/creator-landing-pages",
+          "/resources",
+          "https://app.senja.io/signup",
+          "https://app.senja.io/signup",
+          "/",
+          "/testimonial-software/collect",
+          "/testimonial-software/import",
+          "/testimonial-software/video",
+          "/testimonial-widgets",
+          "/testimonial-software/wall-of-love",
+          "/case-study-generator",
+          "/customer-success-software/thank-yous",
+          "/testimonial-software/migration",
+          "/blog",
+          "/testimonial-examples",
+          "/testimonial-questions",
+          "/testimonial-templates",
+          "/use-cases",
+          "https://support.senja.io",
+          "/compare",
+          "/compare/boast-io-alternative",
+          "/compare/bonjoro-alternative",
+          "/compare/elfsight-alternative",
+          "/compare/famewall-alternative",
+          "/compare/testimonial-hero-alternative",
+          "/compare/testimonial-to-alternative",
+          "/compare/trustmary-alternative",
+          "/compare/videoask-alternative",
+          "/compare/vocalvideo-alternative",
+          "/compare/vouch-alternative",
+          "/about",
+          "/pricing",
+          "/blog/category/case-studies",
+          "https://love.senja.io/",
+          "/affiliates",
+          "/agency-resell",
+          "https://partnerkit.so/f/pitch-ana",
+          "/contact",
+          "https://feedback.senja.io/changelog",
+          "/testimonial-software/agencies",
+          "/testimonial-software/coaches",
+          "/testimonial-software/communities",
+          "/testimonial-software/course-creators",
+          "/testimonial-software/creators",
+          "/testimonial-software/ecommerce",
+          "/testimonial-software/employees",
+          "/testimonial-software/events",
+          "/testimonial-software/freelancers",
+          "/testimonial-software/newsletters",
+          "/testimonial-software/real-estate-agents",
+          "/testimonial-software/saas",
+          "/testimonial-software/sales-teams",
+          "/legal/terms-of-service",
+          "/legal/privacy-policy",
+          "/senja-discount-codes"
+        ],
+        "title": "About Senja & Meet the Team - Senja",
+        "status": "SUCCESS",
+        "content": "{\"extractionVersion\":\"2.0\",\"url\":\"https://senja.io/about\",\"title\":\"About Senja & Meet the Team - Senja\",\"blocks\":[{\"id\":\"f199bf8bee4d\",\"text\":\"About Senja & Meet the Team - Senja\",\"kind\":\"Owner candidate\",\"context\":\"Website title\"},{\"id\":\"8f1c2beccfe6\",\"text\":\"With Senja you can collect video testimonials, social shoutouts, and reviews from happy customers and share them in your emails, ads, social posts and DMs. Get started for free today.\",\"kind\":\"Owner candidate\",\"context\":\"Website description\"},{\"id\":\"af58d76a7843\",\"text\":\"Senja\",\"kind\":\"Owner candidate\",\"context\":\"Site name\"},{\"id\":\"20f23e3b54da\",\"text\":\"You're awesome. Senja is how you prove it\",\"kind\":\"Owner candidate\",\"context\":\"You're awesome. Senja is how you prove it / You're awesome. Senja is how you prove it\"},{\"id\":\"b0fac6b0bc58\",\"text\":\"It used to be simple.\",\"kind\":\"Owner candidate\",\"context\":\"Stop saying your offer’s great, start proving it.\"},{\"id\":\"158ee79f07ca\",\"text\":\"You could create a great offer, share it with your audience, and watch it sell.\",\"kind\":\"Owner candidate\",\"context\":\"Stop saying your offer’s great, start proving it.\"},{\"id\":\"3f43fd2540e8\",\"text\":\"But things are different now.\",\"kind\":\"Owner candidate\",\"context\":\"Stop saying your offer’s great, start proving it.\"},{\"id\":\"2ec71ecdd688\",\"text\":\"Buyers’ inboxes are flooded with bad offers, fake urgency, scammers, and low-quality AI-generated content.\",\"kind\":\"Owner candidate\",\"context\":\"Stop saying your offer’s great, start proving it.\"},{\"id\":\"1dff7f94a875\",\"text\":\"Your ads don't work as well, your open rates are falling, engagement is down everywhere, and your landing page conversions have dropped.\",\"kind\":\"Owner candidate\",\"context\":\"Stop saying your offer’s great, start proving it.\"},{\"id\":\"8b3cd50e0ed8\",\"text\":\"Buyers don’t know who to trust.\",\"kind\":\"Owner candidate\",\"context\":\"Stop saying your offer’s great, start proving it.\"},{\"id\":\"9da6c182f0ca\",\"text\":\"You need to stand out to get the sales you deserve.\",\"kind\":\"Owner candidate\",\"context\":\"Stop saying your offer’s great, start proving it.\"}]}",
+        "document": {
+          "url": "https://senja.io/about",
+          "title": "About Senja & Meet the Team - Senja",
+          "blocks": [
+            {
+              "id": "f199bf8bee4d",
+              "kind": "Owner candidate",
+              "text": "About Senja & Meet the Team - Senja",
+              "context": "Website title"
+            },
+            {
+              "id": "8f1c2beccfe6",
+              "kind": "Owner candidate",
+              "text": "With Senja you can collect video testimonials, social shoutouts, and reviews from happy customers and share them in your emails, ads, social posts and DMs. Get started for free today.",
+              "context": "Website description"
+            },
+            {
+              "id": "af58d76a7843",
+              "kind": "Owner candidate",
+              "text": "Senja",
+              "context": "Site name"
+            },
+            {
+              "id": "20f23e3b54da",
+              "kind": "Owner candidate",
+              "text": "You're awesome. Senja is how you prove it",
+              "context": "You're awesome. Senja is how you prove it / You're awesome. Senja is how you prove it"
+            },
+            {
+              "id": "b0fac6b0bc58",
+              "kind": "Owner candidate",
+              "text": "It used to be simple.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "158ee79f07ca",
+              "kind": "Owner candidate",
+              "text": "You could create a great offer, share it with your audience, and watch it sell.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "3f43fd2540e8",
+              "kind": "Owner candidate",
+              "text": "But things are different now.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "2ec71ecdd688",
+              "kind": "Owner candidate",
+              "text": "Buyers’ inboxes are flooded with bad offers, fake urgency, scammers, and low-quality AI-generated content.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "1dff7f94a875",
+              "kind": "Owner candidate",
+              "text": "Your ads don't work as well, your open rates are falling, engagement is down everywhere, and your landing page conversions have dropped.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "8b3cd50e0ed8",
+              "kind": "Owner candidate",
+              "text": "Buyers don’t know who to trust.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "9da6c182f0ca",
+              "kind": "Owner candidate",
+              "text": "You need to stand out to get the sales you deserve.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "36c6509c07c2",
+              "kind": "Owner candidate",
+              "text": "You need to build trust and credibility.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "67f0e3a4f466",
+              "kind": "Owner candidate",
+              "text": "Senja can help.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "d0d34973c87b",
+              "kind": "Owner candidate",
+              "text": "Stop saying your offer’s great, start proving it.",
+              "context": "Stop saying your offer’s great, start proving it. / Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "6112cca9347e",
+              "kind": "Owner candidate",
+              "text": "With Senja you can collect video testimonials, social shoutouts, and reviews from happy customers and share them in your emails, ads, social posts and DMs.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "04781424bc86",
+              "kind": "Owner candidate",
+              "text": "You can share relevant testimonials throughout every page on your website.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "2c919bc29a98",
+              "kind": "Owner candidate",
+              "text": "And you can even analyze your testimonials to find out what your customers love about you and write better marketing copy.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "24af9a222c97",
+              "kind": "Owner candidate",
+              "text": "This will bring more visits, higher conversions, and more $$$$.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "44c02ee0bb4b",
+              "kind": "Owner candidate",
+              "text": "It’s like having your own squad of cheerleaders working 24/7 to grow your sales.",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "f43f36a90e3d",
+              "kind": "Owner candidate",
+              "text": "Can you afford to spend months on your next offer and still miss your sales goals?",
+              "context": "Stop saying your offer’s great, start proving it."
+            },
+            {
+              "id": "f119d0055ee3",
+              "kind": "Owner candidate",
+              "text": "Meet the team",
+              "context": "Meet the team / Meet the team"
+            },
+            {
+              "id": "05d8712505b2",
+              "kind": "Owner candidate",
+              "text": "We're a small team working remotely around the world",
+              "context": "Meet the team / Meet the team"
+            },
+            {
+              "id": "200a94a797bf",
+              "kind": "Owner candidate",
+              "text": "Oliver Meakings",
+              "context": "Meet the team / Oliver Meakings"
+            },
+            {
+              "id": "174a924c9f48",
+              "kind": "Owner candidate",
+              "text": "Founder & CEO",
+              "context": "Meet the team / Oliver Meakings"
+            },
+            {
+              "id": "200e75d9de72",
+              "kind": "Owner candidate",
+              "text": "Olly is Senja's CEO and marketing cofounder. He's a London-based expert digital marketer with 20 years' experience in conversion rate optimisation. In his free time, Olly enjoys hiking, kayaking and walking in nature, with his sister's dog Biscuit.",
+              "context": "Meet the team / Oliver Meakings"
+            },
+            {
+              "id": "1b29b8c1fcc1",
+              "kind": "Owner candidate",
+              "text": "Support & Ops",
+              "context": "Meet the team / Rani"
+            },
+            {
+              "id": "da76597c57b7",
+              "kind": "Owner candidate",
+              "text": "The reason our customers feel looked after. Keeps everything running smoothly and turns support into a genuine competitive advantage.",
+              "context": "Meet the team / Rani"
+            },
+            {
+              "id": "853e25eb26a8",
+              "kind": "Owner candidate",
+              "text": "Growth Marketer",
+              "context": "Meet the team / Ana"
+            },
+            {
+              "id": "1cbc9e92f53e",
+              "kind": "Owner candidate",
+              "text": "Runs growth at Senja. Hosts our webinars, looks after partners and affiliates, and tours the globe (virtually) teaching businesses how to grow with customer love.",
+              "context": "Meet the team / Ana"
+            },
+            {
+              "id": "bec6c0aeb033",
+              "kind": "Owner candidate",
+              "text": "Ships product at pace. Turns your customer feedback into features faster than you'd believe. Writes clean code and cares deeply about the product.",
+              "context": "Meet the team / Nikolai"
+            },
+            {
+              "id": "bbcdbf895924",
+              "kind": "Owner candidate",
+              "text": "Testimonials",
+              "context": "Trusted by the best"
+            },
+            {
+              "id": "0a50f7d951ed",
+              "kind": "Owner candidate",
+              "text": "Trusted by the best",
+              "context": "Trusted by the best / Trusted by the best"
+            },
+            {
+              "id": "ef3bef2b7be3",
+              "kind": "Owner candidate",
+              "text": "20,000 of the best creators, SaaS companies and freelancers collect and share testimonials with Senja.",
+              "context": "Trusted by the best / Trusted by the best"
+            },
+            {
+              "id": "cf42519a8b1a",
+              "kind": "Owner candidate",
+              "text": "Testimonials made easy",
+              "context": "Ready to boost your business with social proof?"
+            },
+            {
+              "id": "7f0cae22f3bb",
+              "kind": "Owner candidate",
+              "text": "Ready to boost your business with social proof?",
+              "context": "Ready to boost your business with social proof? / Ready to boost your business with social proof?"
+            },
+            {
+              "id": "9780abc4f123",
+              "kind": "Owner candidate",
+              "text": "Set up in minutes and discover how easy it is to collect, manage, and share the social proof that drives your business forward.",
+              "context": "Ready to boost your business with social proof? / Ready to boost your business with social proof?"
+            },
+            {
+              "id": "e3a8e4651901",
+              "kind": "Owner candidate",
+              "text": "✓Collect text & video testimonials on autopilot",
+              "context": "Ready to boost your business with social proof?"
+            },
+            {
+              "id": "34300f419f38",
+              "kind": "Owner candidate",
+              "text": "✓Import testimonials from over 30 platforms",
+              "context": "Ready to boost your business with social proof?"
+            },
+            {
+              "id": "8e51587b8d76",
+              "kind": "Owner candidate",
+              "text": "✓Share proof on your website, sales pages, pitches, emails, & socials",
+              "context": "Ready to boost your business with social proof?"
+            }
+          ],
+          "extractionVersion": "2.0"
+        },
+        "contentHash": "d3f770a01ba0e0bb8192d4f609dda1b2887246671e09e88c6023db2bc7aecbd4"
+      }
+    ],
+    "version": 1,
+    "createdAt": "2026-11-05T11:32:47.603Z",
+    "updatedAt": "2026-11-05T11:33:00.041Z"
+  },
+  "strategy": {
+    "id": "cmw3l6hbw0005zosgoxz50q17",
+    "workspaceId": "cmw3l5enn0003zosgwe77hr2k",
+    "version": 1,
+    "founderContext": {
+      "resources": {
+        "hoursPerWeek": 3,
+        "monthlyBudget": {
+          "amount": 0,
+          "currency": "USD"
+        }
+      },
+      "productStage": "Launched, no paying customers",
+      "previousEfforts": {
+        "other": null,
+        "channels": [
+          "None"
+        ]
+      }
+    },
+    "output": {
+      "buyer": {
+        "segment": "Bootstrapped SaaS founders with happy paying users who are preparing a launch or sales-page refresh.",
+        "whyChosen": "Existing customers make testimonial collection actionable. This narrower buyer is preferable to pre-revenue founders without customer evidence.",
+        "buyingProblemOrTrigger": "They need customer proof for an upcoming selling moment and can authorize a software purchase themselves."
+      },
+      "tasks": [
+        {
+          "title": "Validate access and offer",
+          "minutes": 30,
+          "directCost": 0,
+          "instruction": "Perform the access check and inspect Senja's actual plans, paid capabilities, and purchase path. Do not propose payment until the offer is verified.",
+          "activityToRecord": "Suitable discussions, applicable rules, and verified paid offer."
+        },
+        {
+          "title": "Prepare a useful demonstration",
+          "minutes": 20,
+          "directCost": 0,
+          "instruction": "Prepare one short walkthrough showing how a founder could create a collection form and gather a customer testimonial. Use sample content clearly marked as such.",
+          "activityToRecord": "Walkthrough and any activation friction."
+        },
+        {
+          "title": "Participate selectively",
+          "minutes": 45,
+          "directCost": 0,
+          "instruction": "Review up to ten recent discussions and make up to five individually relevant replies where rules allow. Ask about their collection obstacle; offer the walkthrough without promising sales gains.",
+          "activityToRecord": "Posts reviewed, buyer fit, replies published, and responses."
+        },
+        {
+          "title": "Support interested founders",
+          "minutes": 35,
+          "directCost": 0,
+          "instruction": "Answer responses. Invite interested founders to collect one real testimonial in Senja; discuss the verified paid offer only when it meets their stated need.",
+          "activityToRecord": "Buying needs, activation, objections, and checkout outcomes."
+        },
+        {
+          "title": "Make the next decision",
+          "minutes": 20,
+          "directCost": 0,
+          "instruction": "Review evidence after seven days and choose whether to repeat, revise, or pause.",
+          "activityToRecord": "Separate engagement, usage, and revenue evidence."
+        }
+      ],
+      "channel": {
+        "name": "Permission-based participation in Indie Hackers discussions",
+        "fallback": "If access fails, check r/SaaS for a current, explicitly permitted feedback or promotion thread serving the same buyer. Proceed only if suitable founders and posting permission are evident; otherwise pause publication.",
+        "whyChosen": "Posts can reveal an immediate trigger before contact, unlike broad cold outreach. With no previous acquisition efforts, no paying customers, and no budget, this tests problem relevance without building a prospect database.",
+        "accessCheck": "Read current community rules and search recent posts for 'first customers', 'launch', and 'testimonials'. Identify three suitable founders and confirm a free, permitted reply route before preparing promotion.",
+        "whereAndHow": "Find recent founder milestone and launch posts; contribute relevant public replies and introduce Senja only where permitted and useful."
+      },
+      "resources": {
+        "basis": "Founder supplied three hours weekly and zero monthly budget. Tasks allocate 150 minutes, reserving 30 for interruptions and follow-up.",
+        "currency": "USD",
+        "availableMinutes": 180,
+        "experimentBudget": 0
+      },
+      "schemaVersion": "advisor/1",
+      "successCriteria": {
+        "adjustWhen": "Relevant replies without activation warrant examining onboarding or offer fit; insufficient permitted exposure warrants changing execution.",
+        "continueWhen": "Provisionally continue if two qualified conversations emerge and one founder activates; test the verified paid offer where appropriate.",
+        "reconsiderWhen": "Reconsider if suitable buyers cannot be reached permissibly or qualified conversations repeatedly reveal no collection need. Silence or one week alone does not establish absent demand.",
+        "evidenceToCollect": "Record replies separately from qualified interest: an authorized founder with a current need considering Senja. Activation is collecting a real testimonial; adoption requires repeated use. Only completed payment confirms revenue."
+      },
+      "importantUnknowns": [
+        "Actual pricing and paid value relative to the buyer's need.",
+        "Whether active, relevant discussions permit product participation."
+      ],
+      "productEvidenceIds": [
+        "s1",
+        "s2"
+      ]
+    },
+    "fixture": false,
+    "createdAt": "2026-11-05T11:33:37.724Z"
+  },
+  "tasks": [
+    {
+      "id": "cmw3l6hcc0006zosgexoouppe",
+      "position": 0,
+      "completed": true,
+      "completedAt": "2026-11-05T11:33:40.744Z",
+      "version": 1
+    },
+    {
+      "id": "cmw3l6hcc0007zosgfn5h6ds4",
+      "position": 1,
+      "completed": false,
+      "completedAt": null,
+      "version": 0
+    },
+    {
+      "id": "cmw3l6hcc0008zosggx9d0kxv",
+      "position": 2,
+      "completed": false,
+      "completedAt": null,
+      "version": 0
+    },
+    {
+      "id": "cmw3l6hcc0009zosgato746zm",
+      "position": 3,
+      "completed": false,
+      "completedAt": null,
+      "version": 0
+    },
+    {
+      "id": "cmw3l6hcc000azosg0dcx24rd",
+      "position": 4,
+      "completed": false,
+      "completedAt": null,
+      "version": 0
+    }
+  ],
+  "operations": [
+    {
+      "kind": "strategy",
+      "status": "SUCCEEDED",
+      "model": "gpt-6.1-sol",
+      "usage": [
+        {
+          "model": "gpt-4.1-mini-2025-04-14",
+          "inputTokens": 7004,
+          "outputTokens": 473,
+          "estimatedCost": 0.0035584000000000006,
+          "reasoningTokens": 0
+        },
+        {
+          "model": "gpt-6.1-sol",
+          "inputTokens": 1386,
+          "outputTokens": 1243,
+          "estimatedCost": 0.015895,
+          "reasoningTokens": 309
+        }
+      ],
+      "estimatedCost": "0.019453",
+      "error": null
+    },
+    {
+      "kind": "explain",
+      "status": "SUCCEEDED",
+      "model": "gpt-4.1-mini",
+      "usage": [
+        {
+          "model": "gpt-4.1-mini-2025-04-14",
+          "inputTokens": 1445,
+          "outputTokens": 211,
+          "estimatedCost": 0.0009156,
+          "reasoningTokens": 0
+        }
+      ],
+      "estimatedCost": "0.000916",
+      "error": null
+    }
+  ],
+  "strategyHash": "e3baa2aaf18ad9061f60787c330fff8c94aaba9a7d00860f80dd3feb17eaf95b",
+  "note": "Database output is deeply equal to original activated API output. JSONB key ordering is ignored. First checkbox completion is a persistence test, not an observed acquisition outcome."
+}

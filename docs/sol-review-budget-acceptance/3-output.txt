@@ -1,0 +1,5 @@
+{
+  "firstExperiment.channelRationale.tradeoff": "Assuming 75 minutes and no spend, test six direct emails: public launch signals may identify urgent needs and reachable owners with simpler purchasing. Replies and real collection attempts will test that hypothesis. This avoids creating and distributing a template, but manual research limits reach.既"
+,"positioning": "Senja’s website describes customizable testimonial forms. Test whether these help course owners collect launch-relevant learner proof by asking about current workflows and observing a real collection attempt; course fit,"
+
+}

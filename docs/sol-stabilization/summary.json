@@ -1,0 +1,160 @@
+{
+  "accepted": false,
+  "elapsedMs": 68609,
+  "usage": null,
+  "failure": {
+    "name": "Error",
+    "message": "The provider returned an incomplete or invalid report.",
+    "reason": "quality_failed",
+    "inputTokens": 5656,
+    "outputTokens": 2522,
+    "stages": [
+      {
+        "stage": "attributed_product_profile",
+        "inputTokens": 2020,
+        "outputTokens": 608
+      },
+      {
+        "stage": "acquisition_strategy",
+        "inputTokens": 1629,
+        "outputTokens": 1815
+      },
+      {
+        "stage": "quality_repair",
+        "inputTokens": 2007,
+        "outputTokens": 99
+      }
+    ],
+    "qualityFailure": {
+      "code": "quality_failed",
+      "issues": [
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: acquisitionChannels.0.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: firstTenPlaybook.0.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: firstTenPlaybook.1.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: thirtyDayPlan.0.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: thirtyDayPlan.1.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: thirtyDayPlan.2.successMetric"
+        },
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.commercialLearning",
+          "reason": "No observable success measure: thirtyDayPlan.3.successMetric"
+        }
+      ],
+      "repairFeasible": false
+    }
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "stage": "attributed_product_profile",
+      "reservedUsd": 0.0367475,
+      "maxOutputTokens": 1200,
+      "latencyMs": 14251,
+      "model": "gpt-6.1-sol",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 2020,
+        "input_tokens_details": {
+          "cache_write_tokens": 2017,
+          "cached_tokens": 0
+        },
+        "output_tokens": 608,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 2628
+      },
+      "incompleteDetails": null,
+      "estimatedCostUsd": 0.0111285,
+      "conservativeCostUsd": 0.01113,
+      "cacheWriteTokens": 2017
+    },
+    {
+      "ordinal": 2,
+      "stage": "acquisition_strategy",
+      "reservedUsd": 0.06506,
+      "maxOutputTokens": 3500,
+      "latencyMs": 45547,
+      "model": "gpt-6.1-sol",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 1629,
+        "input_tokens_details": {
+          "cache_write_tokens": 1626,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1815,
+        "output_tokens_details": {
+          "reasoning_tokens": 156
+        },
+        "total_tokens": 3444
+      },
+      "incompleteDetails": null,
+      "estimatedCostUsd": 0.022221,
+      "conservativeCostUsd": 0.0222225,
+      "cacheWriteTokens": 1626
+    },
+    {
+      "ordinal": 3,
+      "stage": "quality_repair",
+      "reservedUsd": 0.039485,
+      "maxOutputTokens": 700,
+      "latencyMs": 4803,
+      "model": "gpt-6.1-sol",
+      "status": "completed",
+      "usage": {
+        "input_tokens": 2007,
+        "input_tokens_details": {
+          "cache_write_tokens": 2004,
+          "cached_tokens": 0
+        },
+        "output_tokens": 99,
+        "output_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "total_tokens": 2106
+      },
+      "incompleteDetails": null,
+      "estimatedCostUsd": 0.006006,
+      "conservativeCostUsd": 0.0060075,
+      "cacheWriteTokens": 2004
+    }
+  ],
+  "ledger": {
+    "ceilingUsd": 0.2,
+    "attempts": 1,
+    "calls": 3,
+    "actualEstimatedUsd": 0.0393555,
+    "conservativeActualUsd": 0.03936,
+    "uncertainReservationUsd": 0,
+    "stopped": false
+  },
+  "gitHeadUnchanged": true,
+  "trackedWorkingTreeClean": false,
+  "environmentFileUnchanged": true,
+  "databaseWrites": false
+}

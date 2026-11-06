@@ -1,0 +1,126 @@
+{
+  "segments": [
+    {
+      "name": "Independent course creators",
+      "buyer": "Creator who owns the course website and software budget.",
+      "market": "Small education businesses preparing an enrollment campaign.",
+      "problem": "Launch deadlines make collecting and reusing student testimonials urgent.",
+      "access": "Public course websites can expose an owner-operated business contact route.",
+      "tradeoff": "Purchasing authority is concentrated, but willingness to pay may be seasonal and remains unverified."
+    },
+    {
+      "name": "Small B2B SaaS marketing teams",
+      "buyer": "Marketing lead with website responsibility and software purchasing authority.",
+      "market": "Software companies updating landing pages or campaign messaging.",
+      "problem": "Recurring campaigns need relevant customer proof without searching scattered sources.",
+      "access": "Company websites identify teams, but direct marketing contacts may be harder to reach.",
+      "tradeoff": "Recurring use could support willingness to pay, but competing priorities can reduce urgency."
+    },
+    {
+      "name": "Client-facing marketing agencies",
+      "buyer": "Agency owner responsible for client website delivery and tool spending.",
+      "market": "Small agencies delivering websites and marketing campaigns.",
+      "problem": "Client deadlines create pressure to gather and place testimonials.",
+      "access": "Public agency directories and websites often provide business inquiry routes.",
+      "tradeoff": "Owners can authorize spending, but client permissions and unverified multi-client suitability add friction."
+    }
+  ],
+  "firstBuyerWhy": {
+    "advantage": "An independent course creator can connect an enrollment deadline to a website change without cross-team approval.",
+    "risk": "A creator may need testimonials only during launches and see little reason for ongoing payment.",
+    "runnerUpWinsWhen": "Small B2B SaaS marketing teams win when recurring proof updates create a clearer ongoing purchase need."
+  },
+  "buyingMotion": "Sales-assisted",
+  "paymentPath": {
+    "offerKind": "Existing SaaS",
+    "monetizationStatus": "Unknown",
+    "pricingStatementIds": [],
+    "verify": "Inspect Senja's current official offer, paid capabilities and checkout before proposing any paid conversion; the supplied free-start statement does not establish pricing.",
+    "activation": "The creator collects a genuine student testimonial through Senja and adds relevant proof to a course page.",
+    "adoption": "The creator returns to collect or reuse testimonials for another page, post or enrollment campaign.",
+    "paidConversion": "After offer verification, the creator completes a confirmed payment for Senja itself rather than for setup or consulting."
+  },
+  "firstExperiment": {
+    "problem": "Course creators may struggle to obtain and publish relevant student testimonials before enrollment opens.",
+    "identifyProspects": "Manually find independent course websites with a publicly stated upcoming enrollment period and a public business contact route; record the deadline evidence without inferring a testimonial problem.",
+    "channel": "Direct email",
+    "channelRationale": {
+      "decision": "Researched outreach can test deadline-linked pain without requiring an existing audience or website traffic.",
+      "tradeoff": "Manual prospect research limits reach but produces more specific workflow evidence than publishing an undistributed template."
+    },
+    "firstAction": "Verify Senja's current offer, then research eligible course owners and send the initial question through an appropriate public business email address.",
+    "activityTarget": {
+      "quantity": 4,
+      "activity": "Research eligible course owners and send individually relevant business emails."
+    },
+    "resources": {
+      "assumedMinutes": 75,
+      "preparationMinutes": 20,
+      "researchMinutesPerActivity": 8,
+      "executionMinutesPerActivity": 3,
+      "responseMinutes": 11,
+      "activityKind": "Researched contacts",
+      "tools": [
+        {
+          "name": "Public search engine and business websites",
+          "access": "Free/public"
+        },
+        {
+          "name": "Free email account",
+          "access": "Free/public"
+        }
+      ],
+      "directSpend": 0,
+      "constraints": "Zero spend is an experiment assumption, not a founder fact; use public business contacts, respect opt-outs, and avoid paid databases or automated scraping."
+    },
+    "commercialLearning": "Learn whether an enrollment deadline creates a real collection problem and whether the verified Senja offer merits a concrete purchase step.",
+    "continueWhen": "A creator confirms deadline-linked pain and agrees to collect a real testimonial in Senja.",
+    "adjustWhen": "Creators confirm the problem but identify a specific access, workflow or activation obstacle.",
+    "stopWhen": "Reached buyers demonstrate that their existing workflow resolves the problem or that a required capability is absent from Senja; treat silence as inconclusive.",
+    "channelDescription": "Find course owners through public enrollment pages, ask about their testimonial workflow, and offer a guided first product action only after interest."
+  },
+  "alternatives": [
+    {
+      "channel": "Community template",
+      "comparison": {
+        "benefit": "A useful testimonial-request template can enable self-service discovery through a relevant creator community.",
+        "barrier": "Creating the asset and securing moderator-approved access adds effort, while discovery and buying evidence may arrive more slowly than direct conversations."
+      },
+      "preferWhen": "A relevant public community permits useful resource sharing and members visibly discuss testimonial collection.",
+      "firstAction": "Check community rules and relevant discussions before creating a template that leads to Senja's existing collection workflow."
+    },
+    {
+      "channel": "Ecosystem referrals",
+      "comparison": {
+        "benefit": "Course-platform consultants may introduce creators at the moment a sales page needs proof.",
+        "barrier": "Partner access and trust require effort, so evidence is slower without existing relationships or observed Senja user behavior."
+      },
+      "preferWhen": "Public ecosystem participants confirm recurring requests, or permissioned existing-user evidence reveals a repeatable referral source.",
+      "firstAction": "Inspect public course-platform service directories for relevant practitioners and confirm whether an unpaid introduction route exists."
+    }
+  ],
+  "messages": [
+    {
+      "subject": "Student testimonials before enrollment",
+      "body": "Hi [Name], I saw [verified public observation to research] about your course enrollment. How do you currently collect student testimonials and choose which ones go on the sales page? I’m exploring whether Senja fits that workflow."
+    },
+    {
+      "subject": "Worth sharing a collection workflow?",
+      "body": "Hi [Name], following up on my question about student testimonials. Would it be useful if I sent a short example of collecting a testimonial with Senja and reusing it on a course page? No problem if this is not a priority."
+    }
+  ],
+  "positioning": "For course creators preparing enrollment, Senja brings testimonial collection and reusable social proof into one place for course pages and marketing.",
+  "unknowns": [
+    "No market research or external verification has been performed.",
+    "Senja's current paid offer, pricing, checkout and capability restrictions are unverified.",
+    "Creator urgency, purchasing willingness and public-contact availability are hypotheses rather than findings measured in this market research exercise, which has not occurred."
+  ],
+  "recommendationBasis": {
+    "segments": ["s1", "s3"],
+    "acquisitionChannels": ["s1", "s4"],
+    "outreachTemplates": ["s1", "s3"],
+    "firstTenPlaybook": ["s1", "s3"],
+    "thirtyDayPlan": ["s1", "s3"]
+  },
+  "contractVersion": "2"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Error",
+  "reason": "quality_failed",
+  "qualityFailure": {
+    "code": "quality_review_budget",
+    "issues": [
+      {
+        "section": "qualityReview",
+        "reason": "Semantic review could not complete within its schema and budget"
+      }
+    ],
+    "repairFeasible": false
+  },
+  "message": "The provider returned an incomplete or invalid report."
+}

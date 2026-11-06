@@ -1,0 +1,483 @@
+[
+  {
+    "url": "https://tally.so/",
+    "title": "Tally - Create Beautiful Forms for Free | Unlimited Forms & SubmissionsYouTubeXRedditLinkedInInstagramTikTokBlueskyThreadsQuestion mark",
+    "content": "{\"extractionVersion\":\"2.0\",\"url\":\"https://tally.so/\",\"title\":\"Tally - Create Beautiful Forms for Free | Unlimited Forms & SubmissionsYouTubeXRedditLinkedInInstagramTikTokBlueskyThreadsQuestion mark\",\"blocks\":[{\"id\":\"e4a93feeb310\",\"text\":\"Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions\",\"kind\":\"Owner candidate\",\"context\":\"Website title\"},{\"id\":\"8527fe5a6cd2\",\"text\":\"The simplest way to create beautiful, professional forms in seconds. Unlimited forms, unlimited submissions, forever free. Just start typing - no coding needed.\",\"kind\":\"Owner candidate\",\"context\":\"Website description\"},{\"id\":\"ab0c9385adc5\",\"text\":\"Tally Forms\",\"kind\":\"Owner candidate\",\"context\":\"Site name\"},{\"id\":\"96630c62f3b5\",\"text\":\"ProductivityApplication\",\"kind\":\"Owner candidate\",\"context\":\"Structured metadata: SoftwareApplication applicationCategory\"},{\"id\":\"a9f603acc8dd\",\"text\":\"The simplest way to create forms\",\"kind\":\"Owner candidate\",\"context\":\"The simplest way to create forms\"},{\"id\":\"ece355bfd18b\",\"text\":\"Say goodbye to boring forms and surveys. Meet Tally — the free, intuitive form builder you’ve been looking for.\",\"kind\":\"Owner candidate\",\"context\":\"The simplest way to create forms\"},{\"id\":\"0299710e8197\",\"text\":\"A form builder like no other\",\"kind\":\"Owner candidate\",\"context\":\"A form builder like no other\"},{\"id\":\"65688e7cbb37\",\"text\":\"Tally makes it simple for anyone to build free online forms. No need to code — just type your questions like you would in a doc.\",\"kind\":\"Owner candidate\",\"context\":\"A form builder like no other\"},{\"id\":\"f810401f6046\",\"text\":\"Unlimited forms and submissions for free\",\"kind\":\"Owner candidate\",\"context\":\"Unlimited forms and submissions for free\"},{\"id\":\"12433aed35ee\",\"text\":\"Paywalls getting in the way? Not anymore. Tally gives you unlimited forms and submissions, completely free, as long as you stay within our fair usage guidelines.\",\"kind\":\"Owner candidate\",\"context\":\"Unlimited forms and submissions for free\"},{\"id\":\"3c2dd91c27c0\",\"text\":\"Just start typing\",\"kind\":\"Owner candidate\",\"context\":\"Just start typing\"},{\"id\":\"38ab7f15c806\",\"text\":\"Tally is a new type of online form builder that works like a text document. Just start typing on the page and insert blocks same as Notion.\",\"kind\":\"Owner candidate\",\"context\":\"Just start typing\"},{\"id\":\"0a60eb504547\",\"text\":\"Privacy-friendly form builder\",\"kind\":\"Owner candidate\",\"context\":\"Privacy-friendly form builder\"},{\"id\":\"dc5fcd7806b1\",\"text\":\"Your data privacy and security are our top priorities. We are GDPR compliant and treat your data with care and confidentiality. Tally is hosted in Europe, we don’t use cookie-tracking, and all form data is securely stored, and encrypted both in transit and at rest. Learn more about Tally & GDPR.\",\"kind\":\"Owner candidate\",\"context\":\"Privacy-friendly form builder\"},{\"id\":\"aed6b9d4fa24\",\"text\":\"Simple but powerful\",\"kind\":\"Owner candidate\",\"context\":\"Simple but powerful\"},{\"id\":\"019aa02c1c76\",\"text\":\"Advanced features packed in a simple form builder. It couldn’t be easier to create forms that convert.\",\"kind\":\"Owner candidate\",\"context\":\"Simple but powerful\"},{\"id\":\"0459b4ffdb40\",\"text\":\"Build any form in seconds\",\"kind\":\"Owner candidate\",\"context\":\"Build any form in seconds\"},{\"id\":\"c214f7a2708e\",\"text\":\"Easily create online forms using our wide range of free input blocks. Collect contact info, files, signatures, payments, and much more. Build everything from surveys to quizzes to lead generation forms.\",\"kind\":\"Owner candidate\",\"context\":\"Build any form in seconds\"},{\"id\":\"07f4efb50439\",\"text\":\"Craft intelligent forms\",\"kind\":\"Owner candidate\",\"context\":\"Craft intelligent forms\"},{\"id\":\"21413e41d7ca\",\"text\":\"Our smart features make it easy to turn your forms into a tailored experience for every respondent.\",\"kind\":\"Owner candidate\",\"context\":\"Craft intelligent forms\"},{\"id\":\"90a4721b5e42\",\"text\":\"Conditional logic\",\"kind\":\"Owner candidate\",\"context\":\"Conditional logic\"},{\"id\":\"5194d7eee103\",\"text\":\"Build dynamic forms that adapt based on prior inputs or external data. Show and hide blocks, insert branching, or calculate values to create a personalized form experience.\",\"kind\":\"Owner candidate\",\"context\":\"Conditional logic\"},{\"id\":\"2a97f0b130d8\",\"text\":\"Use variables to create dynamic content and calculate values, scores, prices and more.\",\"kind\":\"Owner candidate\",\"context\":\"Calculator\"},{\"id\":\"13f953bc04c9\",\"text\":\"Hidden fields\",\"kind\":\"Owner candidate\",\"context\":\"Hidden fields\"},{\"id\":\"dfc1b956adcd\",\"text\":\"Pass data to your form with URL parameters. Include UTM parameters or personal data for a customized experience.\",\"kind\":\"Owner candidate\",\"context\":\"Hidden fields\"},{\"id\":\"21dd6d87e7e3\",\"text\":\"tally.so/r/3qDpEY?name=Lucy\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"1aa4c614a9d7\",\"text\":\"Make forms uniquely yours\",\"kind\":\"Owner candidate\",\"context\":\"Make forms uniquely yours\"},{\"id\":\"66b0ced14e1c\",\"text\":\"Easily customize the design and layout to fit any form to your brand.\",\"kind\":\"Owner candidate\",\"context\":\"Make forms uniquely yours\"},{\"id\":\"619c758a5405\",\"text\":\"Customize your form\",\"kind\":\"Owner candidate\",\"context\":\"Customize your form\"},{\"id\":\"5084ba6538e8\",\"text\":\"Use our pre-made themes or create your own design by customizing colors, fonts, buttons, and more.\",\"kind\":\"Owner candidate\",\"context\":\"Customize your form\"},{\"id\":\"4a2659f2805d\",\"text\":\"Share with your audience\",\"kind\":\"Owner candidate\",\"context\":\"Share with your audience\"},{\"id\":\"51470267f316\",\"text\":\"Tailor how you share and display forms to connect with your audience across platforms.\",\"kind\":\"Owner candidate\",\"context\":\"Share with your audience\"},{\"id\":\"379317d69194\",\"text\":\"Seamlessly embed your forms into your website, landing page, or Notion. Whether you use WordPress, Webflow, Framer, or any other website builder, integrating Tally forms into your web pages is simple.\",\"kind\":\"Owner candidate\",\"context\":\"Embed\"},{\"id\":\"513b90cdaccc\",\"text\":\"Create an eye-catching popup form for your website in seconds.\",\"kind\":\"Owner candidate\",\"context\":\"Popup\"},{\"id\":\"a32053add6b7\",\"text\":\"Share your unique Tally form link with anyone.\",\"kind\":\"Owner candidate\",\"context\":\"Tally links\"},{\"id\":\"930c0ca4658d\",\"text\":\"tally.so/r/3qDpEY\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"25b994e8c9a8\",\"text\":\"Custom domains\",\"kind\":\"Owner candidate\",\"context\":\"Custom domains\"},{\"id\":\"cd1c17d9736d\",\"text\":\"Host forms on your own (sub)domain to create branded form links.\",\"kind\":\"Owner candidate\",\"context\":\"Custom domains\"},{\"id\":\"2d798b15dbeb\",\"text\":\"forms.yourdomain.com/feedback\",\"kind\":\"Owner candidate\",\"context\":\"\"},{\"id\":\"b0de5bb64cad\",\"text\":\"Connect your favorite tools\",\"kind\":\"Owner candidate\",\"context\":\"Connect your favorite tools\"},{\"id\":\"24be01b78c20\",\"text\":\"Save time using popular integrations to sync your form submissions and build forms from your AI assistant.\",\"kind\":\"Owner candidate\",\"context\":\"Connect your favorite tools\"},{\"id\":\"bdf2bcaf3f55\",\"text\":\"Designed for you\",\"kind\":\"Owner candidate\",\"context\":\"Designed for you\"},{\"id\":\"d25c175688dc\",\"text\":\"Start from scratch or explore templates created by our community.\",\"kind\":\"Owner candidate\",\"context\":\"Designed for you\"},{\"id\":\"4bdfb13a2475\",\"text\":\"· Sell products online\",\"kind\":\"Owner candidate\",\"context\":\"Creators\"},{\"id\":\"ea81354bc697\",\"text\":\"· Grow your newsletter\",\"kind\":\"Owner candidate\",\"context\":\"Creators\"},{\"id\":\"c1f1c9e82dfc\",\"text\":\"· Receive contact form messages\",\"kind\":\"Owner candidate\",\"context\":\"Creators\"},{\"id\":\"988d4bce28e6\",\"text\":\"· Gather audience feedback\",\"kind\":\"Owner candidate\",\"context\":\"Product\"},{\"id\":\"29e248dbfe1b\",\"text\":\"· Receive feature requests\",\"kind\":\"Owner candidate\",\"context\":\"Product\"},{\"id\":\"a266e8861bf4\",\"text\":\"· Conduct user research\",\"kind\":\"Owner candidate\",\"context\":\"Product\"},{\"id\":\"1b5178563694\",\"text\":\"· Generate leads\",\"kind\":\"Owner candidate\",\"context\":\"Marketing\"},{\"id\":\"d997a28447c7\",\"text\":\"· Register users\",\"kind\":\"Owner candidate\",\"context\":\"Marketing\"},{\"id\":\"a832608883ea\",\"text\":\"· Measure customer satisfaction\",\"kind\":\"Owner candidate\",\"context\":\"Marketing\"},{\"id\":\"a2bea4c60bd1\",\"text\":\"· Evaluate employee engagement\",\"kind\":\"Owner candidate\",\"context\":\"HR\"},{\"id\":\"54147218962a\",\"text\":\"· Receive job applications\",\"kind\":\"Owner candidate\",\"context\":\"HR\"},{\"id\":\"b1342f146d39\",\"text\":\"· Create exit surveys\",\"kind\":\"Owner candidate\",\"context\":\"HR\"},{\"id\":\"d075c781a699\",\"text\":\"· Organize team events\",\"kind\":\"Owner candidate\",\"context\":\"Office\"},{\"id\":\"39725638e800\",\"text\":\"· Receive help desk tickets\",\"kind\":\"Owner candidate\",\"context\":\"Office\"},{\"id\":\"baff628d26ef\",\"text\":\"· Collect internal suggestions\",\"kind\":\"Owner candidate\",\"context\":\"Office\"},{\"id\":\"0a08f7f9285f\",\"text\":\"· Create an online quiz\",\"kind\":\"Owner candidate\",\"context\":\"Personal\"},{\"id\":\"1f3c7542be75\",\"text\":\"· Send an RSVP form\",\"kind\":\"Owner candidate\",\"context\":\"Personal\"}]}",
+    "document": {
+      "extractionVersion": "2.0",
+      "url": "https://tally.so/",
+      "title": "Tally - Create Beautiful Forms for Free | Unlimited Forms & SubmissionsYouTubeXRedditLinkedInInstagramTikTokBlueskyThreadsQuestion mark",
+      "blocks": [
+        {
+          "id": "e4a93feeb310",
+          "text": "Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions",
+          "kind": "Owner candidate",
+          "context": "Website title"
+        },
+        {
+          "id": "8527fe5a6cd2",
+          "text": "The simplest way to create beautiful, professional forms in seconds. Unlimited forms, unlimited submissions, forever free. Just start typing - no coding needed.",
+          "kind": "Owner candidate",
+          "context": "Website description"
+        },
+        {
+          "id": "ab0c9385adc5",
+          "text": "Tally Forms",
+          "kind": "Owner candidate",
+          "context": "Site name"
+        },
+        {
+          "id": "96630c62f3b5",
+          "text": "ProductivityApplication",
+          "kind": "Owner candidate",
+          "context": "Structured metadata: SoftwareApplication applicationCategory"
+        },
+        {
+          "id": "a9f603acc8dd",
+          "text": "The simplest way to create forms",
+          "kind": "Owner candidate",
+          "context": "The simplest way to create forms"
+        },
+        {
+          "id": "ece355bfd18b",
+          "text": "Say goodbye to boring forms and surveys. Meet Tally — the free, intuitive form builder you’ve been looking for.",
+          "kind": "Owner candidate",
+          "context": "The simplest way to create forms"
+        },
+        {
+          "id": "0299710e8197",
+          "text": "A form builder like no other",
+          "kind": "Owner candidate",
+          "context": "A form builder like no other"
+        },
+        {
+          "id": "65688e7cbb37",
+          "text": "Tally makes it simple for anyone to build free online forms. No need to code — just type your questions like you would in a doc.",
+          "kind": "Owner candidate",
+          "context": "A form builder like no other"
+        },
+        {
+          "id": "f810401f6046",
+          "text": "Unlimited forms and submissions for free",
+          "kind": "Owner candidate",
+          "context": "Unlimited forms and submissions for free"
+        },
+        {
+          "id": "12433aed35ee",
+          "text": "Paywalls getting in the way? Not anymore. Tally gives you unlimited forms and submissions, completely free, as long as you stay within our fair usage guidelines.",
+          "kind": "Owner candidate",
+          "context": "Unlimited forms and submissions for free"
+        },
+        {
+          "id": "3c2dd91c27c0",
+          "text": "Just start typing",
+          "kind": "Owner candidate",
+          "context": "Just start typing"
+        },
+        {
+          "id": "38ab7f15c806",
+          "text": "Tally is a new type of online form builder that works like a text document. Just start typing on the page and insert blocks same as Notion.",
+          "kind": "Owner candidate",
+          "context": "Just start typing"
+        },
+        {
+          "id": "0a60eb504547",
+          "text": "Privacy-friendly form builder",
+          "kind": "Owner candidate",
+          "context": "Privacy-friendly form builder"
+        },
+        {
+          "id": "dc5fcd7806b1",
+          "text": "Your data privacy and security are our top priorities. We are GDPR compliant and treat your data with care and confidentiality. Tally is hosted in Europe, we don’t use cookie-tracking, and all form data is securely stored, and encrypted both in transit and at rest. Learn more about Tally & GDPR.",
+          "kind": "Owner candidate",
+          "context": "Privacy-friendly form builder"
+        },
+        {
+          "id": "aed6b9d4fa24",
+          "text": "Simple but powerful",
+          "kind": "Owner candidate",
+          "context": "Simple but powerful"
+        },
+        {
+          "id": "019aa02c1c76",
+          "text": "Advanced features packed in a simple form builder. It couldn’t be easier to create forms that convert.",
+          "kind": "Owner candidate",
+          "context": "Simple but powerful"
+        },
+        {
+          "id": "0459b4ffdb40",
+          "text": "Build any form in seconds",
+          "kind": "Owner candidate",
+          "context": "Build any form in seconds"
+        },
+        {
+          "id": "c214f7a2708e",
+          "text": "Easily create online forms using our wide range of free input blocks. Collect contact info, files, signatures, payments, and much more. Build everything from surveys to quizzes to lead generation forms.",
+          "kind": "Owner candidate",
+          "context": "Build any form in seconds"
+        },
+        {
+          "id": "07f4efb50439",
+          "text": "Craft intelligent forms",
+          "kind": "Owner candidate",
+          "context": "Craft intelligent forms"
+        },
+        {
+          "id": "21413e41d7ca",
+          "text": "Our smart features make it easy to turn your forms into a tailored experience for every respondent.",
+          "kind": "Owner candidate",
+          "context": "Craft intelligent forms"
+        },
+        {
+          "id": "90a4721b5e42",
+          "text": "Conditional logic",
+          "kind": "Owner candidate",
+          "context": "Conditional logic"
+        },
+        {
+          "id": "5194d7eee103",
+          "text": "Build dynamic forms that adapt based on prior inputs or external data. Show and hide blocks, insert branching, or calculate values to create a personalized form experience.",
+          "kind": "Owner candidate",
+          "context": "Conditional logic"
+        },
+        {
+          "id": "2a97f0b130d8",
+          "text": "Use variables to create dynamic content and calculate values, scores, prices and more.",
+          "kind": "Owner candidate",
+          "context": "Calculator"
+        },
+        {
+          "id": "13f953bc04c9",
+          "text": "Hidden fields",
+          "kind": "Owner candidate",
+          "context": "Hidden fields"
+        },
+        {
+          "id": "dfc1b956adcd",
+          "text": "Pass data to your form with URL parameters. Include UTM parameters or personal data for a customized experience.",
+          "kind": "Owner candidate",
+          "context": "Hidden fields"
+        },
+        {
+          "id": "21dd6d87e7e3",
+          "text": "tally.so/r/3qDpEY?name=Lucy",
+          "kind": "Owner candidate",
+          "context": ""
+        },
+        {
+          "id": "1aa4c614a9d7",
+          "text": "Make forms uniquely yours",
+          "kind": "Owner candidate",
+          "context": "Make forms uniquely yours"
+        },
+        {
+          "id": "66b0ced14e1c",
+          "text": "Easily customize the design and layout to fit any form to your brand.",
+          "kind": "Owner candidate",
+          "context": "Make forms uniquely yours"
+        },
+        {
+          "id": "619c758a5405",
+          "text": "Customize your form",
+          "kind": "Owner candidate",
+          "context": "Customize your form"
+        },
+        {
+          "id": "5084ba6538e8",
+          "text": "Use our pre-made themes or create your own design by customizing colors, fonts, buttons, and more.",
+          "kind": "Owner candidate",
+          "context": "Customize your form"
+        },
+        {
+          "id": "4a2659f2805d",
+          "text": "Share with your audience",
+          "kind": "Owner candidate",
+          "context": "Share with your audience"
+        },
+        {
+          "id": "51470267f316",
+          "text": "Tailor how you share and display forms to connect with your audience across platforms.",
+          "kind": "Owner candidate",
+          "context": "Share with your audience"
+        },
+        {
+          "id": "379317d69194",
+          "text": "Seamlessly embed your forms into your website, landing page, or Notion. Whether you use WordPress, Webflow, Framer, or any other website builder, integrating Tally forms into your web pages is simple.",
+          "kind": "Owner candidate",
+          "context": "Embed"
+        },
+        {
+          "id": "513b90cdaccc",
+          "text": "Create an eye-catching popup form for your website in seconds.",
+          "kind": "Owner candidate",
+          "context": "Popup"
+        },
+        {
+          "id": "a32053add6b7",
+          "text": "Share your unique Tally form link with anyone.",
+          "kind": "Owner candidate",
+          "context": "Tally links"
+        },
+        {
+          "id": "930c0ca4658d",
+          "text": "tally.so/r/3qDpEY",
+          "kind": "Owner candidate",
+          "context": ""
+        },
+        {
+          "id": "25b994e8c9a8",
+          "text": "Custom domains",
+          "kind": "Owner candidate",
+          "context": "Custom domains"
+        },
+        {
+          "id": "cd1c17d9736d",
+          "text": "Host forms on your own (sub)domain to create branded form links.",
+          "kind": "Owner candidate",
+          "context": "Custom domains"
+        },
+        {
+          "id": "2d798b15dbeb",
+          "text": "forms.yourdomain.com/feedback",
+          "kind": "Owner candidate",
+          "context": ""
+        },
+        {
+          "id": "b0de5bb64cad",
+          "text": "Connect your favorite tools",
+          "kind": "Owner candidate",
+          "context": "Connect your favorite tools"
+        },
+        {
+          "id": "24be01b78c20",
+          "text": "Save time using popular integrations to sync your form submissions and build forms from your AI assistant.",
+          "kind": "Owner candidate",
+          "context": "Connect your favorite tools"
+        },
+        {
+          "id": "bdf2bcaf3f55",
+          "text": "Designed for you",
+          "kind": "Owner candidate",
+          "context": "Designed for you"
+        },
+        {
+          "id": "d25c175688dc",
+          "text": "Start from scratch or explore templates created by our community.",
+          "kind": "Owner candidate",
+          "context": "Designed for you"
+        },
+        {
+          "id": "4bdfb13a2475",
+          "text": "· Sell products online",
+          "kind": "Owner candidate",
+          "context": "Creators"
+        },
+        {
+          "id": "ea81354bc697",
+          "text": "· Grow your newsletter",
+          "kind": "Owner candidate",
+          "context": "Creators"
+        },
+        {
+          "id": "c1f1c9e82dfc",
+          "text": "· Receive contact form messages",
+          "kind": "Owner candidate",
+          "context": "Creators"
+        },
+        {
+          "id": "988d4bce28e6",
+          "text": "· Gather audience feedback",
+          "kind": "Owner candidate",
+          "context": "Product"
+        },
+        {
+          "id": "29e248dbfe1b",
+          "text": "· Receive feature requests",
+          "kind": "Owner candidate",
+          "context": "Product"
+        },
+        {
+          "id": "a266e8861bf4",
+          "text": "· Conduct user research",
+          "kind": "Owner candidate",
+          "context": "Product"
+        },
+        {
+          "id": "1b5178563694",
+          "text": "· Generate leads",
+          "kind": "Owner candidate",
+          "context": "Marketing"
+        },
+        {
+          "id": "d997a28447c7",
+          "text": "· Register users",
+          "kind": "Owner candidate",
+          "context": "Marketing"
+        },
+        {
+          "id": "a832608883ea",
+          "text": "· Measure customer satisfaction",
+          "kind": "Owner candidate",
+          "context": "Marketing"
+        },
+        {
+          "id": "a2bea4c60bd1",
+          "text": "· Evaluate employee engagement",
+          "kind": "Owner candidate",
+          "context": "HR"
+        },
+        {
+          "id": "54147218962a",
+          "text": "· Receive job applications",
+          "kind": "Owner candidate",
+          "context": "HR"
+        },
+        {
+          "id": "b1342f146d39",
+          "text": "· Create exit surveys",
+          "kind": "Owner candidate",
+          "context": "HR"
+        },
+        {
+          "id": "d075c781a699",
+          "text": "· Organize team events",
+          "kind": "Owner candidate",
+          "context": "Office"
+        },
+        {
+          "id": "39725638e800",
+          "text": "· Receive help desk tickets",
+          "kind": "Owner candidate",
+          "context": "Office"
+        },
+        {
+          "id": "baff628d26ef",
+          "text": "· Collect internal suggestions",
+          "kind": "Owner candidate",
+          "context": "Office"
+        },
+        {
+          "id": "0a08f7f9285f",
+          "text": "· Create an online quiz",
+          "kind": "Owner candidate",
+          "context": "Personal"
+        },
+        {
+          "id": "1f3c7542be75",
+          "text": "· Send an RSVP form",
+          "kind": "Owner candidate",
+          "context": "Personal"
+        },
+        {
+          "id": "e76e82d6b69d",
+          "text": "· Organize a volunteer signup",
+          "kind": "Owner candidate",
+          "context": "Personal"
+        },
+        {
+          "id": "9f078e9a771c",
+          "text": "Build stunning forms for free",
+          "kind": "Owner candidate",
+          "context": "Build stunning forms for free"
+        },
+        {
+          "id": "771bc5deb678",
+          "text": "It’s as simple as one-two-three, and guess what? You don’t even need an account to try it out!",
+          "kind": "Owner candidate",
+          "context": "Build stunning forms for free"
+        },
+        {
+          "id": "8530bef1bf61",
+          "text": "Questions & answers",
+          "kind": "Owner candidate",
+          "context": "Questions & answers"
+        }
+      ]
+    },
+    "links": [
+      "/",
+      "/pricing",
+      "/login",
+      "/signup",
+      "/create",
+      "/help/fair-use-policy",
+      "/help/gdpr",
+      "https://tally.so/r/3qDpEY",
+      "/help/chatgpt-integration",
+      "/help/claude-connector",
+      "/help/mcp",
+      "/help/api",
+      "/help/google-sheets-integration",
+      "/help/notion-integration",
+      "/help/airtable-integration",
+      "/help/webhooks",
+      "/help/slack-integration",
+      "/help/discord-integration",
+      "/help/zapier-integration",
+      "/help/make-integration",
+      "/help/n8n-integration",
+      "/help/google-analytics-integration",
+      "/help/facebook-pixel-integration",
+      "/help/linear-integration",
+      "/help/attio-integration",
+      "/help/coda-integration",
+      "/help/pipedream-integration",
+      "/help/fair-use-policy",
+      "/create",
+      "/help/conditional-form-logic",
+      "/help/electronic-signatures",
+      "/help/form-calculator",
+      "/help/file-uploads",
+      "/help/gdpr",
+      "/help/tally-business",
+      "/help/submissions-data-retention",
+      "/help/tally-a-free-typeform-alternative",
+      "/help/tally-a-free-jotform-alternative",
+      "/help/tally-a-free-paperform-alternative",
+      "/help/compare",
+      "/create",
+      "/signup",
+      "/help/create-a-form",
+      "https://twitter.com/TallyForms",
+      "https://reddit.com/r/TallyForms",
+      "https://linkedin.com/company/tallyforms",
+      "https://instagram.com/tallyforms",
+      "https://tiktok.com/@tallyforms",
+      "https://bsky.app/profile/tally.so",
+      "https://threads.net/@tallyforms",
+      "/features",
+      "/pricing",
+      "/customers",
+      "/changelog",
+      "/roadmap",
+      "/feedback",
+      "/templates",
+      "/help/integrations",
+      "/ai-info",
+      "https://love.tally.so/reviews",
+      "https://status.tally.so",
+      "/help/create-a-form",
+      "/help/guides",
+      "/help",
+      "/support",
+      "/experts",
+      "/help/report-abuse",
+      "/about",
+      "https://blog.tally.so/",
+      "/help/press-kit",
+      "/community",
+      "/help/referral-program",
+      "https://developers.tally.so",
+      "https://developers.tally.so/api-reference/mcp",
+      "/help/fair-use-policy",
+      "/help/gdpr",
+      "/help/terms-and-privacy",
+      "/help/tally-a-free-typeform-alternative",
+      "/help/tally-a-free-jotform-alternative",
+      "/help/tally-a-free-and-powerful-google-forms-alternative",
+      "/help/best-free-online-form-builders"
+    ],
+    "contentHash": "0e4f361396ef90491bae07a89dce0b76f3fedf67b539ed960bee46b315f33f51",
+    "status": "SUCCESS"
+  }
+]

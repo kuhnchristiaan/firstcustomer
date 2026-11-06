@@ -1,0 +1,31 @@
+{
+  "name": "advisor_product_identification",
+  "requestedModel": "gpt-4.1-mini",
+  "resolvedModel": "gpt-4.1-mini-2025-04-14",
+  "status": "completed",
+  "serviceTier": "default",
+  "latencyMs": 5995,
+  "reservedUsd": 0.014988,
+  "usage": {
+    "input_tokens": 7004,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 473,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 7477
+  },
+  "usageBasedEstimatedCostUsd": 0.0035584000000000006,
+  "conservativeCostUpperUsd": 0.0035584000000000006,
+  "ratesPerMillionUsd": {
+    "input": 0.4,
+    "cached": 0.1,
+    "write": 0.4,
+    "output": 1.6
+  },
+  "incompleteDetails": null,
+  "error": null
+}
