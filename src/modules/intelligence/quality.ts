@@ -109,11 +109,18 @@ export function compactReviewInput(
   };
 }
 
+export type RepairDiagnostic = {
+  phase: "response" | "patch" | "candidate";
+  kind: "schema" | "budget" | "invalid_json" | "incomplete_output" | "other";
+  violations: { path: string; code: string }[];
+};
+
 export class QualityGateError extends Error {
   constructor(
     reason: string,
     public issues: QualityIssue[],
     public repairFeasible: boolean,
+    public diagnostic?: RepairDiagnostic,
   ) {
     super(reason);
   }
@@ -461,6 +468,7 @@ export async function qualityGate<T extends Record<string, unknown>>(options: {
   } catch {
     throw new QualityGateError("quality_unrepairable", issues, false);
   }
+  let repairPhase: RepairDiagnostic["phase"] = "response";
   try {
     const raw = await options.call(
       repair.wireSchema,
@@ -474,7 +482,10 @@ export async function qualityGate<T extends Record<string, unknown>>(options: {
       ),
       options.outputAllowances?.repair ?? 700,
     );
-    candidate = options.validate(repair.apply(raw) as T);
+    repairPhase = "patch";
+    const patched = repair.apply(raw) as T;
+    repairPhase = "candidate";
+    candidate = options.validate(patched);
   } catch (error) {
     throw new QualityGateError(
       error instanceof Error && /budget/.test(error.message)
@@ -482,6 +493,21 @@ export async function qualityGate<T extends Record<string, unknown>>(options: {
         : "quality_repair_invalid",
       initialIssues,
       false,
+      {
+        phase: repairPhase,
+        kind: error instanceof z.ZodError ? "schema"
+          : error instanceof SyntaxError ? "invalid_json"
+          : error instanceof Error && /budget/.test(error.message) ? "budget"
+          : error instanceof Error && error.message === "incomplete_output" ? "incomplete_output" : "other",
+        // Never log raw output, rejected values, provider errors or Zod messages.
+        // Paths must refer to known contract fields; unknown keys may be user text.
+        violations: error instanceof z.ZodError ? error.issues.slice(0, 12).map(issue => ({
+          path: repairPhase === "patch"
+            ? repair.paths.includes(String(issue.path[0])) ? String(issue.path[0]) : "patch"
+            : Object.hasOwn(leafFields(editable()), issue.path.join(".")) ? issue.path.join(".") : "candidate",
+          code: issue.code,
+        })) : [],
+      },
     );
   }
   issues = inspect();

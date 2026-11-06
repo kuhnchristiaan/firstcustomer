@@ -5,7 +5,7 @@ export function analysisFailure(error: unknown): AppError {
   if (error instanceof ProviderOutputError) {
     if (error.reason === "quality_failed")
       return new AppError(
-        "The analysis is incomplete: its strategy did not pass the final quality review within the available budget. Please try again. Existing reports are unchanged.",
+        "The analysis is incomplete: its strategy could not complete the required quality checks. Existing reports are unchanged.",
         422,
       );
     if (error.reason === "input_budget")
