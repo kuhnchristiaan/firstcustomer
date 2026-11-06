@@ -8,6 +8,21 @@ const config: NextConfig = {
     process.env.NODE_ENV !== "production" && process.env.DEV_LAN_ORIGIN
       ? [new URL(process.env.DEV_LAN_ORIGIN).hostname]
       : [],
+  async redirects() {
+    return [
+      { source: "/preview", destination: "/advisor", permanent: false },
+      {
+        source: "/products/:id",
+        destination: "/products/:id/advisor",
+        permanent: false,
+      },
+      {
+        source: "/guest/report",
+        destination: "/guest/advisor",
+        permanent: false,
+      },
+    ];
+  },
   async headers() {
     return [
       {

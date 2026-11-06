@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { tenant, AppError } from "@/modules/auth/tenant";
+import { tenant, AppError, ownedProduct } from "@/modules/auth/tenant";
 import { advisorEnabled } from "@/modules/advisor/config";
 import { advisorWorkspace, advisorView } from "@/modules/advisor/service";
 import { WorkspaceShell } from "@/components/workspace-shell";
@@ -25,7 +25,15 @@ export default async function ProductAdvisor({
   try {
     w = await advisorWorkspace(t, id);
   } catch (error) {
-    if (error instanceof AppError && error.status === 404) notFound();
+    if (error instanceof AppError && error.status === 404) {
+      let product;
+      try {
+        product = await ownedProduct(t.organizationId, id);
+      } catch {
+        notFound();
+      }
+      redirect(`/advisor?url=${encodeURIComponent(product.websiteUrl)}`);
+    }
     throw error;
   }
   return (
@@ -35,7 +43,7 @@ export default async function ProductAdvisor({
       </Link>
       <AdvisorClient initial={advisorView(w)} />
       <Link href="/dashboard" className="mt-8 inline-block text-sm underline">
-        All products & historical reports
+        All my plans
       </Link>
     </WorkspaceShell>
   );

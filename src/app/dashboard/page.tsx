@@ -1,152 +1,95 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { tenant, AppError } from "@/modules/auth/tenant";
-import { configured, config } from "@/modules/config/env";
 import { db } from "@/lib/db";
+import { WorkspaceShell } from "@/components/workspace-shell";
 import { AdvisorStart } from "@/components/advisor-start";
-import {
-  WorkspaceShell,
-  WorkspaceOverview,
-} from "@/components/workspace-shell";
-import { reportSchema } from "@/modules/intelligence/schema";
-import { strategySchema } from "@/modules/strategy/schema";
-import { strategyEnabled } from "@/modules/strategy/feature";
-import { safeInitialReport } from "@/modules/strategy/claims";
-import { WorkspaceRefresh } from "@/components/workspace-refresh";
-import { activeAnalysis, analysisStatus } from "@/modules/analysis/status";
 import { SignOut } from "@/components/auth-form";
-import { advisorEnabled } from "@/modules/advisor/config";
 export const dynamic = "force-dynamic";
-export default async function Dashboard({
-  searchParams,
-}: {
-  searchParams: Promise<{ url?: string }>;
-}) {
-  if (!configured())
-    return (
-      <main className="container py-16">
-        <h1 className="text-3xl font-semibold">
-          Your workspace is almost ready.
-        </h1>
-        <p className="my-5 muted">
-          Connect FirstCustomers-specific Neon Auth and PostgreSQL to enable
-          accounts and saved reports.
-        </p>
-        <Link href="/preview" className="underline">
-          Explore the sample strategy
-        </Link>
-      </main>
-    );
+export default async function Dashboard() {
   let t;
   try {
     t = await tenant();
-  } catch (e) {
-    if (e instanceof AppError && e.status === 401) redirect("/auth/sign-in");
-    throw e;
+  } catch (error) {
+    if (error instanceof AppError && error.status === 401)
+      redirect("/auth/sign-in");
+    throw error;
   }
   const products = await db().product.findMany({
     where: { organizationId: t.organizationId },
     orderBy: { updatedAt: "desc" },
-    include: {
-      analyses: {
-        orderBy: { startedAt: "desc" },
-        take: 5,
-        select: { id: true, status: true, leaseExpiresAt: true },
-      },
-      profiles: { orderBy: { version: "desc" }, take: 1 },
+    select: {
+      id: true,
+      name: true,
+      websiteUrl: true,
+      advisor: { select: { strategies: { take: 1, select: { id: true } } } },
     },
   });
-  const now = new Date();
-  const processingProduct = products.find((p) =>
-    p.analyses.some((a) => activeAnalysis(a, now)),
-  );
-  const e = config();
-  const monthly = await db().analysisRun.count({
-    where: {
-      product: { organizationId: t.organizationId },
-      startedAt: {
-        gte: new Date(
-          Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), 1),
-        ),
-      },
-    },
-  });
-  const { url = "" } = await searchParams;
-  const approvals =
-    strategyEnabled() && products.length
-      ? await db().strategyApproval.findMany({
-          where: {
-            productId: { in: products.map((p) => p.id) },
-            revision: {
-              analysis: { product: { organizationId: t.organizationId } },
-            },
-          },
-          orderBy: { createdAt: "desc" },
-          distinct: ["productId"],
-          select: {
-            productId: true,
-            revision: { select: { version: true, output: true } },
-          },
-        })
-      : [];
-  const refined = new Map(approvals.map((a) => [a.productId, a.revision]));
-  const nextProduct = products.find((p) => refined.has(p.id) || p.profiles[0]);
-  const savedStrategy = strategySchema.safeParse(
-    nextProduct ? refined.get(nextProduct.id)?.output : undefined,
-  );
-  const savedReport = reportSchema.safeParse(
-    nextProduct?.profiles[0]?.findings,
-  );
-  const nextStep =
-    savedStrategy.success && savedStrategy.data.schemaVersion === "3.0"
-      ? savedStrategy.data.firstMove.action
-      : savedReport.success
-        ? safeInitialReport(savedReport.data, []).firstTenPlaybook[0]?.steps[0]
-        : undefined;
   return (
     <WorkspaceShell>
-      {advisorEnabled() && (
-        <div className="panel mb-6 flex flex-wrap items-center justify-between gap-4">
-          <div>
-            <h2 className="text-xl font-semibold">A focused next move.</h2>
-            <p className="text-sm muted">
-              Your buyer, channel and seven-day acquisition plan.
-            </p>
-          </div>
-          <Link href="/advisor" className="button button-primary px-4 py-3">
-            Open acquisition advisor →
-          </Link>
+      <div className="workspace-heading">
+        <div>
+          <p className="section-kicker">Your acquisition workspace</p>
+          <h1>Your plans</h1>
+          <p>Pick up your strategy and make your next move count.</p>
         </div>
-      )}
-      <WorkspaceRefresh active={Boolean(processingProduct)} />
-      <WorkspaceOverview
-        products={products.map((p) => ({
-          id: p.id,
-          name: p.name,
-          websiteUrl: p.websiteUrl,
-          status: p.status,
-          approvedVersion:
-            refined.get(p.id)?.version ?? p.profiles[0]?.version ?? null,
-          latestStatus: analysisStatus(p.analyses[0], now) ?? p.status,
-          updatedLabel: p.updatedAt.toLocaleDateString("en-ZA", {
-            month: "short",
-            day: "numeric",
-          }),
-        }))}
-        monthly={monthly}
-        quota={e.MONTHLY_ANALYSIS_QUOTA}
-        form={<AdvisorStart initialUrl={url} />}
-        signOut={<SignOut />}
-        nextAction={
-          nextStep && nextProduct
-            ? {
-                text: nextStep,
-                productId: nextProduct.id,
-                name: nextProduct.name,
-              }
-            : undefined
-        }
-      />
+        <SignOut />
+      </div>
+      <section className="workspace-create">
+        <h2>Start an acquisition advisor</h2>
+        <AdvisorStart />
+      </section>
+      <section className="mt-10" id="products">
+        <div className="section-heading mb-5">
+          <h2>Your products & strategies</h2>
+          <span className="text-xs muted">Saved in your workspace</span>
+        </div>
+        {!products.length ? (
+          <div className="empty-state">
+            <h3>Your first move belongs here.</h3>
+            <p>Add your SaaS website above to start your plan.</p>
+          </div>
+        ) : (
+          <div className="product-list">
+            {products.map((p) => {
+              const hasAdvisor = Boolean(p.advisor);
+              const ready = Boolean(p.advisor?.strategies.length);
+              const href = hasAdvisor
+                ? `/products/${p.id}/advisor`
+                : `/advisor?url=${encodeURIComponent(p.websiteUrl)}`;
+              return (
+                <article key={p.id} className="product-row">
+                  <div>
+                    <h3>
+                      <Link href={href}>{p.name}</Link>
+                    </h3>
+                    <p>{p.websiteUrl}</p>
+                  </div>
+                  <div className="product-status">
+                    <span className="badge">
+                      {ready
+                        ? "Plan ready"
+                        : hasAdvisor
+                          ? "Continue setup"
+                          : "Start advisor"}
+                    </span>
+                    <p className="mt-2">
+                      {ready
+                        ? "Your acquisition plan is ready."
+                        : hasAdvisor
+                          ? "Complete your founder context to create a plan."
+                          : "Start an advisor for this product."}
+                    </p>
+                  </div>
+                  <Link href={href} aria-label={`Open ${p.name} advisor`}>
+                    Open advisor →
+                  </Link>
+                </article>
+              );
+            })}
+          </div>
+        )}
+      </section>
     </WorkspaceShell>
   );
 }

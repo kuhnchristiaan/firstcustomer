@@ -24,14 +24,13 @@ export default async function AdvisorHome({
             <span className="eyebrow">YOUR FREE ACQUISITION ADVISOR</span>
             <h1>Your next seven days, focused.</h1>
             <p className="muted">
-              One buyer, one channel and a realistic plan. Expand the reasoning
-              when you need it. Start without an account.
+              Get a focused buyer, channel and seven-day plan for your SaaS.
             </p>
           </div>
           <AdvisorStart initialUrl={(await searchParams).url} guest />
           <p className="mt-6 text-sm muted">
-            Create a free account later to keep your plan, track progress and
-            review what happened.
+            No account required to start. Save your plan with a free account
+            whenever you’re ready.
           </p>
           <Link href="/auth/sign-in" className="mt-4 inline-block underline">
             Already have an account? Sign in
@@ -48,18 +47,16 @@ export default async function AdvisorHome({
   });
   return (
     <WorkspaceShell advisor>
-      <div className="advisor-intro">
-        <span className="eyebrow">YOUR ACQUISITION ADVISOR</span>
-        <h1>A focused next move.</h1>
-        <p className="muted">
-          Turn what your product does into a small, useful acquisition
-          experiment.
-        </p>
-      </div>
-      <div className="flex justify-end mb-4">
+      <div className="advisor-home-heading">
+        <div className="advisor-intro">
+          <span className="eyebrow">YOUR ACQUISITION ADVISOR</span>
+          <h1>A focused next move.</h1>
+          <p className="muted">
+            Find your buyer, choose a channel and make progress this week.
+          </p>
+        </div>
         <SignOut />
       </div>
-      <AdvisorStart initialUrl={(await searchParams).url} />
       {products.length > 0 && (
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Pick up where you left off</h2>
@@ -78,9 +75,10 @@ export default async function AdvisorHome({
           </div>
         </section>
       )}
-      <Link href="/dashboard" className="mt-8 inline-block text-sm underline">
-        All products & historical reports
-      </Link>
+      <section className="advisor-new-plan">
+        <h2>Start a new plan</h2>{" "}
+        <AdvisorStart initialUrl={(await searchParams).url} />
+      </section>
     </WorkspaceShell>
   );
 }

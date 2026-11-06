@@ -7,9 +7,25 @@ import { ensureGuestSession } from "./funnel";
 import { emptyContext } from "@/modules/advisor/schema";
 import type { advisorView } from "@/modules/advisor/service";
 type Data = ReturnType<typeof advisorView>;
+export function guestWebsite(status: string, saved: string, requested: string) {
+  if ((status === "EMPTY" || status === "FAILED") && requested.trim()) {
+    const normalize = (s: string) =>
+      s
+        .trim()
+        .replace(/^https?:\/\//i, "")
+        .replace(/\/$/, "")
+        .toLowerCase();
+    return {
+      url: requested.trim(),
+      clearError: Boolean(saved && normalize(saved) !== normalize(requested)),
+    };
+  }
+  return { url: saved || requested, clearError: false };
+}
 export function GuestAdvisor({ url }: { url: string }) {
   const [data, setData] = useState<Data | null>(null);
   const [error, setError] = useState("");
+  const [legacy, setLegacy] = useState(false);
   const [expiresAt, setExpiresAt] = useState("");
   const [running, setRunning] = useState(false);
   const router = useRouter();
@@ -31,15 +47,20 @@ export function GuestAdvisor({ url }: { url: string }) {
           return;
         }
         if (result.status === "LEGACY") {
-          router.replace("/guest/report");
+          setLegacy(true);
+          setError(
+            "Your earlier work remains saved. Save it in a free account, then start an Advisor plan.",
+          );
+          setData(null);
           return;
         }
         const next = result.data;
-        if (!next.websiteUrl) next.websiteUrl = url;
+        const website = guestWebsite(result.status, next.websiteUrl, url);
+        next.websiteUrl = website.url;
         setData(next);
         setExpiresAt(result.expiresAt);
         setRunning(result.status === "RUNNING");
-        setError(result.error ?? "");
+        setError(website.clearError ? "" : (result.error ?? ""));
         if (result.status === "RUNNING") timer = setTimeout(read, 4000);
       } catch (e) {
         if (live)
@@ -58,6 +79,13 @@ export function GuestAdvisor({ url }: { url: string }) {
     return (
       <div className="panel" role="status">
         {error || "Opening your private guest advisor…"}
+        {legacy && (
+          <p className="mt-4">
+            <Link className="underline" href="/guest/claim">
+              Save your existing work in a free account
+            </Link>
+          </p>
+        )}
       </div>
     );
   if (!data.websiteUrl)

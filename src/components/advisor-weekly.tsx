@@ -110,97 +110,100 @@ export function AdvisorWeekly({
           <p className="text-sm mt-3">Loading saved results…</p>
         )}
         {history && !review && (
-          <form
-            className="mt-5"
-            onSubmit={async (e) => {
-              e.preventDefault();
-              setPending("results");
-              setError("");
-              try {
-                const values = Object.fromEntries(
-                  metrics.map(([name]) => [
-                    name,
-                    numbers[name]?.trim() ? Number(numbers[name]) : null,
-                  ]),
-                );
-                await mutate({
-                  kind: "results",
-                  results: {
-                    planId,
-                    submissionKey: key,
-                    ...values,
-                    feedback,
-                    completedTaskIds: completed,
-                  } as WeeklyResults,
-                });
-                await load();
-                await onResultsSaved();
-              } catch (e) {
-                setError(
-                  e instanceof Error ? e.message : "Could not save results.",
-                );
-              } finally {
-                setPending("");
-              }
-            }}
-          >
-            <div className="advisor-results-grid">
-              {metrics.map(([name, label]) => (
-                <label key={name} htmlFor={`weekly-${name}`}>
-                  {label}
-                  <input
-                    id={`weekly-${name}`}
-                    type="number"
-                    min="0"
-                    max="100000000"
-                    step="1"
-                    placeholder="Unknown"
-                    value={numbers[name] ?? ""}
-                    onChange={(e) =>
-                      setNumbers({ ...numbers, [name]: e.target.value })
-                    }
-                  />
-                </label>
-              ))}
-            </div>
-            <label className="block mt-4" htmlFor="weekly-feedback">
-              Obstacles, objections and feedback
-              <textarea
-                id="weekly-feedback"
-                rows={4}
-                maxLength={12000}
-                value={feedback}
-                onChange={(e) => setFeedback(e.target.value)}
-                placeholder="What did people say? What prevented progress?"
-              />
-            </label>
-            <fieldset className="mt-5">
-              <legend className="font-semibold text-sm">
-                Tasks you actually completed
-              </legend>
-              <p className="text-xs muted mt-1">
-                Confirm or correct this snapshot before saving the week.
-              </p>
-              {tasks.map((t) => (
-                <label className="advisor-confirm-task" key={t.id}>
-                  <input
-                    type="checkbox"
-                    checked={completed.includes(t.id)}
-                    onChange={(e) =>
-                      setCompletionOverrides({
-                        ...completionOverrides,
-                        [t.id]: e.target.checked,
-                      })
-                    }
-                  />
-                  {current.tasks[t.position].title}
-                </label>
-              ))}
-            </fieldset>
-            <Button className="mt-5" disabled={!!pending}>
-              Save weekly results
-            </Button>
-          </form>
+          <details className="advisor-weekly-entry">
+            <summary>Record this week’s results</summary>
+            <form
+              className="mt-5"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                setPending("results");
+                setError("");
+                try {
+                  const values = Object.fromEntries(
+                    metrics.map(([name]) => [
+                      name,
+                      numbers[name]?.trim() ? Number(numbers[name]) : null,
+                    ]),
+                  );
+                  await mutate({
+                    kind: "results",
+                    results: {
+                      planId,
+                      submissionKey: key,
+                      ...values,
+                      feedback,
+                      completedTaskIds: completed,
+                    } as WeeklyResults,
+                  });
+                  await load();
+                  await onResultsSaved();
+                } catch (e) {
+                  setError(
+                    e instanceof Error ? e.message : "Could not save results.",
+                  );
+                } finally {
+                  setPending("");
+                }
+              }}
+            >
+              <div className="advisor-results-grid">
+                {metrics.map(([name, label]) => (
+                  <label key={name} htmlFor={`weekly-${name}`}>
+                    {label}
+                    <input
+                      id={`weekly-${name}`}
+                      type="number"
+                      min="0"
+                      max="100000000"
+                      step="1"
+                      placeholder="Unknown"
+                      value={numbers[name] ?? ""}
+                      onChange={(e) =>
+                        setNumbers({ ...numbers, [name]: e.target.value })
+                      }
+                    />
+                  </label>
+                ))}
+              </div>
+              <label className="block mt-4" htmlFor="weekly-feedback">
+                Obstacles, objections and feedback
+                <textarea
+                  id="weekly-feedback"
+                  rows={4}
+                  maxLength={12000}
+                  value={feedback}
+                  onChange={(e) => setFeedback(e.target.value)}
+                  placeholder="What did people say? What prevented progress?"
+                />
+              </label>
+              <fieldset className="mt-5">
+                <legend className="font-semibold text-sm">
+                  Tasks you actually completed
+                </legend>
+                <p className="text-xs muted mt-1">
+                  Confirm or correct this snapshot before saving the week.
+                </p>
+                {tasks.map((t) => (
+                  <label className="advisor-confirm-task" key={t.id}>
+                    <input
+                      type="checkbox"
+                      checked={completed.includes(t.id)}
+                      onChange={(e) =>
+                        setCompletionOverrides({
+                          ...completionOverrides,
+                          [t.id]: e.target.checked,
+                        })
+                      }
+                    />
+                    {current.tasks[t.position].title}
+                  </label>
+                ))}
+              </fieldset>
+              <Button className="mt-5" disabled={!!pending}>
+                Save weekly results
+              </Button>
+            </form>
+          </details>
         )}
         {review && (
           <div className="mt-5">

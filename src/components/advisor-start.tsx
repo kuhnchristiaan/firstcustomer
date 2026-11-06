@@ -55,6 +55,10 @@ export function AdvisorStart({
           onChange={(e) => setUrl(e.target.value)}
           placeholder="https://your-saas.com"
           autoComplete="url"
+          inputMode="url"
+          autoCapitalize="none"
+          spellCheck={false}
+          maxLength={2048}
           className="min-w-0 flex-1"
         />
         <Button disabled={pending}>
@@ -63,9 +67,9 @@ export function AdvisorStart({
         </Button>
       </div>
       <p className="mt-3 text-sm muted">
-        One buyer. One channel. A practical plan for the next seven days. No
-        lengthy report.
-        {guest && " No account or credit card required."}
+        {guest
+          ? "Free to start · No credit card required"
+          : "Start with your public SaaS website."}
       </p>
       {error && (
         <p role="alert" className="mt-3 text-red-800">

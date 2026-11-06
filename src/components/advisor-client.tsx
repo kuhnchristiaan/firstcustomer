@@ -160,18 +160,6 @@ export function AdvisorClient({
             : "Tell us what you can work with. Every question is optional."}
         </p>
       </header>
-      {guest && s && (
-        <section className="panel advisor-learning" aria-label="Keep your plan">
-          <h2>Your plan is free to read.</h2>
-          <p>
-            Keep it across devices, track completed tasks and review your
-            results with a free account.
-          </p>
-          <Link href="/guest/claim" className="button button-primary mt-4">
-            Save my plan with a free account →
-          </Link>
-        </section>
-      )}
       {data.strategy?.fixture && (
         <div className="advisor-fixture" role="note">
           Local fixture data · No live AI call. This plan demonstrates the
@@ -379,7 +367,11 @@ export function AdvisorClient({
               </label>
             )}
           </fieldset>
-          {guest && <div className="mt-7"><Turnstile onToken={setTurnstileToken} resetKey={resetKey} /></div>}
+          {guest && (
+            <div className="mt-7">
+              <Turnstile onToken={setTurnstileToken} resetKey={resetKey} />
+            </div>
+          )}
           <div className="flex flex-wrap gap-3 mt-7">
             <Button
               disabled={!!pending || (guest && !turnstileToken)}
@@ -501,6 +493,7 @@ export function AdvisorClient({
                   >
                     <div className="advisor-task-top">
                       <input
+                        id={`task-${state.id}`}
                         type="checkbox"
                         aria-label={`Complete: ${task.title}`}
                         checked={state.completed}
@@ -570,7 +563,11 @@ export function AdvisorClient({
                         }}
                       />
                       <div>
-                        <h3>{task.title}</h3>
+                        <h3>
+                          <label htmlFor={`task-${state.id}`}>
+                            {task.title}
+                          </label>
+                        </h3>
                         <span className="text-xs muted">
                           {task.minutes} minutes
                         </span>
@@ -602,18 +599,26 @@ export function AdvisorClient({
                 );
               })}
             </div>
-            {guest && (
-              <p className="mt-4 text-sm">
-                <Link href="/guest/claim" className="underline">
-                  Save your plan to track completed tasks
-                </Link>
-              </p>
-            )}
             <p className="text-xs muted mt-4">
               Checkboxes track activities. Replies, trials and paying customers
               are separate outcomes.
             </p>
           </section>
+          {guest && s && (
+            <section
+              className="panel advisor-learning"
+              aria-label="Keep your plan"
+            >
+              <h2>Your plan is free to read.</h2>
+              <p>
+                Keep it across devices, track completed tasks and review your
+                results with a free account.
+              </p>
+              <Link href="/guest/claim" className="button button-primary mt-4">
+                Save my plan with a free account →
+              </Link>
+            </section>
+          )}
           <section className="panel advisor-learning">
             <h2>What would make this worth continuing?</h2>
             <p>{s.successCriteria.continueWhen}</p>

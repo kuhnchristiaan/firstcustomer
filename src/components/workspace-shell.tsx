@@ -1,16 +1,9 @@
 import Link from "next/link";
-import {
-  LayoutDashboard,
-  Layers2,
-  BookOpen,
-  LifeBuoy,
-  ArrowUpRight,
-} from "lucide-react";
+import { LayoutDashboard, LifeBuoy, ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { advisorEnabled } from "@/modules/advisor/config";
 export function WorkspaceShell({
   children,
-  product = false,
   advisor = false,
 }: {
   children: ReactNode;
@@ -29,23 +22,9 @@ export function WorkspaceShell({
               Acquisition advisor
             </Link>
           )}
-          <Link
-            href="/dashboard"
-            aria-current={!product && !advisor ? "page" : undefined}
-          >
+          <Link href="/dashboard" aria-current={!advisor ? "page" : undefined}>
             <LayoutDashboard size={17} />
-            Historical reports
-          </Link>
-          <Link
-            href="/dashboard#products"
-            aria-current={product && !advisor ? "page" : undefined}
-          >
-            <Layers2 size={17} />
-            Products & strategies
-          </Link>
-          <Link href="/preview">
-            <BookOpen size={17} />
-            Sample strategy
+            My plans
           </Link>
           <Link href="/support">
             <LifeBuoy size={17} />
@@ -129,7 +108,7 @@ export function WorkspaceOverview({
           <h2>Next move · {nextAction.name}</h2>
           <p>{nextAction.text}</p>
           <Link
-            href={`/products/${nextAction.productId}`}
+            href={`/products/${nextAction.productId}/advisor`}
             className="text-link text-xs"
           >
             Open strategy <ArrowUpRight size={14} />
@@ -159,7 +138,7 @@ export function WorkspaceOverview({
               <article key={p.id} className="product-row">
                 <div>
                   <h3>
-                    <Link href={`/products/${p.id}`}>{p.name}</Link>
+                    <Link href={`/products/${p.id}/advisor`}>{p.name}</Link>
                   </h3>
                   <p>{p.websiteUrl}</p>
                 </div>
@@ -184,7 +163,7 @@ export function WorkspaceOverview({
                 </div>
                 <p className="product-date">{p.updatedLabel}</p>
                 <Link
-                  href={`/products/${p.id}`}
+                  href={`/products/${p.id}/advisor`}
                   aria-label={`Open ${p.name} strategy`}
                 >
                   <ArrowUpRight size={18} />

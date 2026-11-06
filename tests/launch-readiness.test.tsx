@@ -18,10 +18,7 @@ it("preserves strong Neon certificate verification without altering local connec
   );
 });
 it("lists only public pages and excludes private report routes", () => {
-  expect(sitemap().map((x) => new URL(x.url).pathname)).toEqual([
-    "/",
-    "/preview",
-  ]);
+  expect(sitemap().map((x) => new URL(x.url).pathname)).toEqual(["/advisor"]);
   expect(JSON.stringify(robots())).toContain("/products/");
 });
 it("offers mobile report navigation without exposing the internal schema version", () => {
