@@ -1,0 +1,211 @@
+{
+  "id": "resp_0c86d22df1116528006aed6849da6887d2b47989ad30312cdf",
+  "object": "response",
+  "created_at": 1793943625,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793943638,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 1500,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_0c86d22df1116528006aed684b66d487d29afb8bda8cb1045f",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq7WhX2yiwb2Qgl0p8ecSmAwiqcrHYDYRYE7nBV0jAQp9UaXZfDjx13TKbck6-w0mYeSJv64kk1zPcKXKIqwrVAk2z7xM4Pav_eH2zLopHFayyTxs-chjAbMvUMbl7xpj9TuTRksJ4y9NiXPjGXsHB2f7IvrgDdPPMRML-pYcENfc16Tqdh39MMJs97GSi8J5_zK5SkpY07o5e3rjfv9riYobcah1tiEBnmu8ormUSpx1Dc_TyVkG-6IKattDaturLZD6MI-kHJAP2sNJCffsHXdOCmezhsQyrHFsD0y_OuD-Cc9-fmD0JBQgA8cVOFcjkFL6O6Z6NC5ETjWcwxjw5aoDNPhbjnwYlRm1AbRqX_NGkLw76UP6Lo1lXk5VJ3O2oLjFld_f_N0Rl2LupiT77f2DPDeRmtYhQyUoPx3tFY-NtxvU_tLBhlmir0EooTd0QDVY4K8OB0NvR25UIsZP7zjax0jP_F2WF7nvbNyjIywki5_ooXObxeailnsumVqqy04NOghBTMMZq6lx1Q6E-dbj71hCzmh0cv4h2Yk7NDPWkpymYZozim7R8az-06_UAo0YUzOv2-vj8cB9LTcOvZMI8e7Q-76dAD4cVZ_4UTvUXZO5LDnK62pnWP3udQKgrFMaCEbIbA9rwE0mfraPHHd_IeCfLE96G5Az4jfTD6jLco9bN9al2dKFy3jeNQ1wxAyNHQMEKVzM2OVuivayvsQmrgchDUgfu2NXpZGt6YlmqOdwPkbNwB8Ydzv4-trOru3q28ZtUaqVxzJgnnQZg-YOZlsW5xZ1mxXQYliZNV-KkypxJxZ-K-RYQ0XWnQbFoYMRJae0mIF_nOUcB7IkxDr-tn-mqOq7S4VRYipg5WVYFe1ZoS0exCz2VY2stgGP8AXt6kG6ebMyWcqPEVxDgvd-P0bHg4enX-b0AL_IUybsppDJTjZGo-qvzbHf8E2nSfFjed56-ebgbIUioOHs2e1huAzDQ6x91JmPR1mcVVeELwUrep3c-59cUdxNxvtHDGeeRFezAiBR8nWD71uGH568iwkmluDZYvtX_iYK9S_VzdkmYLX8sWzG4LByrSDcJmeMQoN8kv0nVFF0bGt_9fQNoMLspjBYxUe-LvIxKK2Ccy4hEBkJJT693X_xEpokKhEPje2RKUMWbLU9Wyp0Quz19inVzH8a8h_7zOO9o2hCaYT7Jy7YJyeuIzp4XPd-gmgCm4jtFAMcGkoLRjFxlqixuFrjbK8RkY1BjumNUwxdwV-RbVl-W2esOlAaX1k6XCk55fRpU_y5L5MXcun1E-W9NJTpRyXxLGs4M_VSF8rD-aiL4EO1vGbQ2e9FLlPjWy5iElXduBae90igODhgI1lhogHaFdnQT1AlS231WGz4LwhqEtqkKB1SGRlue69xu8S4wRwE8ZkINNbJi4szsxgeAvhQgT99PrenU2QCxgcom-MJXNjp5LIS6QoD0lHDGwY9p9Kyfui-afLJ80SBhoufr3Cn0DxtnA0jhzYnCCTFOCJJJT58LDp8G8J0mRC6YdwYI-F2meWv0llTy5_jG29ITSw7MBncrKal6AFIl1F4V_K7EuecyRQgQyajorxdkEZUqF_or7ZmiTod6ojHvQJKwgkMG37ofPZ___3kxcxNtrcyQ3Hy1nxkk47OCLXpZEUtAah7YbqqfOiT8RSHVcUcFu0b_GGAYII3V0-G1r-n_pUVxu-I8ghy8BV7oB4dj2OpjAlaFThNrn4w-bqMy4A58OqOdewWIUoL8abP0lw_7ikU3kD-zWj0MKm-uAz8XLKuafE3pFXYHhcoS6-mp1Fl40x9YpwTQdBcyYSFtZZntQesU-nz9-CstQxMHQ68noOEwEHBztLqYaTKaXwbdTzozBjEXcHxczaVO2kBDUIRfFEQ3CJ7s7YZEr0c7xJ-RXRwSPeJycWAGpw4230DQo9bKOdKwF3MkAByW0g_xIvWoLJy83r6n3Nq0_Z3xr30aublq_i-BoWdXulq5Va99hVoyYMuZkBm5439RjSL__ui6SF5h4UixfsASWVNa0zvbbaro1ympQdtP82e9DlUV4FwOSYfdbzNwCyfDT6IAWcVIwhAOuUIQGQgNKSkxSHjlNWEKjLgCimseZJiuf-sQbQzv8ZlDhKQgzK_SWMnE2gogRphGn1SwDJXzWYyW61aN02m9N87QEyw7ZUjIFsofpkzd7isBGfqW5FXzkXvBpvR_Lt2A8dylAakg9GzDZxAJLZ00A8jw-9csTcl2ao0dd7-BUATIaif2aB_MPdXdgvBKJktPTLzLDislrQ9l0q6OAXhMQwkWb_-imNyr3cuvO4SultYgqny0ggn10TZAqm7PGcGz1QzEmLtJcyiM1pElkRMfrMivyWtgUohDKuK6p4_1JDePW72Hxj9RwfklYpss-kID7lJ30mbg9rY0AjAJ7AebNl-MGQGcg8x7fFVLaueD1CWZdqLASmKN6s1NWikqjxFWEtW_HG2LdwyWlwmNX4Dd3Vqh_B53Ya-pzjck_hkqpp20sSOuv1wFHB1dLxvmZdjDzMbwFqBfeVQAKM-ggGNHRGyOyyj2ktkbQ2pFEGd2KtW2yfeuCGIpLmFPyrAcY0GcUKYWVzRXoyGodUy1FaJK_8nsZNn4VqA2c98PK8YnFbvn-NqqNUCM6VHk5XoeoU70ByDhU8-dFATtAQwhAvE-Zrm4sRWmLOmgwhBTaEHQG7q1P3RQqVokN98b2MVz3scHOqbM7zsQhDd0w-rPyLECQozx2nWhS20v1c4YXn_z7Ek1Zig_sEvZrWK4H2lIU9M8EjrRwBflzB6PsfUqIcSOtAhWOx9HmGzSksqusWKWBK6GpFdhBOa4ynYIivijbECmAPUEr7ZuhfGeF8sFE-utUciAsNKs6swS1b8D_NHq3V9bcqVlNbIAVg3fHLosc3a3CGQY-iSigDQvBvgDNvDpC9s13Dc_EnI_v3iiTbGrs-W20ybAr8-5NNJmNBgAyQWD4GDTONzwwh2k6hu8VVb51ydZ7duds9_zcrNhQbdwlFgnlz0NJAJAPn9jcUUqC_1c8X-whoUlXRbvSHF4gM-Z-KjiHRB4pqPUxeF9tT25tZMD4oNwiAYosKJ2qASOXD-qsTsNNg17rdCKSGt6ox5rtAyMGQC3oo6PywINldnZaEX7YCS2Ym5zwnYLH0jlKIs0sbI4q3kYUgRsO7jxtUkirouxr5sY7g1IM4gMvC3-vq1s7NO27AgiK_5lSXm34I0xY2E_J-j_xsCNBcnwQ2qJ58D30wNsoaA4_mwbcmS7NXyOwRCBO1a_3zXbuye6W3nMZG6mtcMZ7uw-NUVCTxgZ7G37RVycfWTC_TiQFmMpmpNA4v1tF7ZpHUoEPXPPs4V49SbRCTMepGX6x2R_oGeNPR7Br4Ejb_eAMDqyXnzEVWCVhMUFI9HwlXqYy6hpk5UnzAFlwNHA03h88QlLboggr0lwl2G5ipMJ932HmWXI9rqri18AIfTRIg0Z7LPQW7EvVwN-m230IHBPI3nT7jqtJ_-iE-iZ-AgkuYM65_aMpWE4zJKIxW_6pzAD_RgJvIoOeDDr2K6udoEdy9pTBLDrCbBOWV_6AVlBEFRqj8bVoFx0bZjEuq51mZ2c2J1qt1S0J37Xwz78p8P-S6PI7y9fW-bcNwlgcY1jVHDJyblOFnu5cW-ltFm9YP49nSbKV-LQJiOhq9D97XC2iOt3IAqEdE0LVo9QWzwOV13dg4xVXNeMLmnK5OxA7ofF_LEHocjbW28LFLjewE3P3_Hlqj3t1pD3jgV9YxOq9W-V8Dqv6eTRo5h155zSnRsyLCD-ixVzu8FD_E9Kn3U3HKItmCygkQfye78rcoRs-yh4zPwGR20katkdwoLtRgnZ08J9pT2ap9yeWFnkeg68jdWjkqbn7zN91P2Q6ditsw7A1Bz0azALM2uf1tW1ZqOOHTsuPdGEvdOnlzyuqJJV7H_fSs6HxP15gTeHaC63CMuU2YMmDj5Q7ZuAQgO7xl_e2fJUsH1v7bc7GTmyu9ns1M1TYuRVskWFd-mEFDEViResNjngI-AbHGVOUDRhQCPy1CBttLwmzRbXhqeQptLzv6AaAD6zz9B79AcDIVCkg2JV9q2-Oli6af2eCsfl87rJImtVE2WYTw6LjMdVL4XqcJSc_fg_SyV_aMx7yEHVqjj9J7gk6zUT5JAJs6O5a1yiiCNyYIVtF0xL8UAhH6GpUtW8Ox164OddWl6-u3oiehWrLYf-YaQi_lB0MTljWcP_Nda-UK2OHQWvpY208cUeROTW2IwUzVhKT0pqG0Z1hWZ-flipZ3ac26hzBMVN9kcKcMHKtYlEhUMM81O_Hygu4ix9VaE2bmDxXJ5t2epcMXZglBBr_hshrkISzM-v6pLW1j4OrLMXNOIn606Ccl4c-5_chjiTUJLE_7RLubFPR71bHW3CsbXgPGM88zk-O0NT8hROoOmdmSogr33Rs6Xy7JI3lQuMfEOBaKm_xH0j7zL1r9gp9cwhOLZMrOeIRYf_pkN10FxSMBDAiKbR8jFB_ap86vMYZwiIBdBDEQ98dYx8RqD4lJLxMIuahE3ZApJkvnmPRY3SD6wiF6mi6BehjKoIAgRDpvHhHPreCgUx9w8UzkJdUDh_eRNjnvl27Nmk6W_1iyJll0Qt_hiqhaC2WNKGXyMCQ-e-WbB2I2w-MiZ4tim6qZ7WQs8Pd5bo2gb--4qwdHvMY-uGVGqeeNGAg7_yyeQ37sHpqXwkSAKHuyIxWaNH1f7W3ywPwsJ0xixykBkRniKcxNorm7r-ga_YSHoLQzk5P8yPRBOeraMHdDA_pumXAwNlR1PM4I6II8GtTMfX7HmF_0pY6_Mx9xpLXqFElpZt87vZ0hVStlmtvYl24NEs90jf6Pvlbrt4pGihVShcxB52LELenrf28Azvhwh5y7cbxpfh-gxGUcbcuIdkEAvZwDOCZ6YIv9-5Ma-3B3YD0AtJWYzb0A-58rpA-xKLlApUUmJ2u9GYLWFKjio3vnd-xF1iHxOUk5nQZTS91FevHtR1JB8Sf8od6glRPwsBMM0p-zoG1UXNZrGw7RrbcSqd0LhbuWHzCD-J98mzToU_6juNN09ydlViGCSFsau8Z361Qqajw8yDej6bprNBWFgzOTKopKy03dTCujnASHoJlu9kO9sgbk2cdzQLMziYIa-nGMbL7TZVMr1E9cjhVrdwfoRt2uvsQTNMzQ9Lm1mVd8ak63w8mYvu3B60RUBvsyLTUuaWskbKU9OMj6X5AyJcokfAC9pLY74Wc0lN4haTp-ZxwTkeRWrIg15qJkd-AChoRTgsbKqfZVinTyvFVehQJxAHULoSi0qCYlbJpDoy7zNMCgZHzTQWNCYcsOx2jEHMOpyvOT3PElUanE3sje9j0HiVuWSfP8MGHzdOUQH8XFIduPlMya_ECt92GjCuGckYwsLYvmQ4_ObwM4BK3HjnZai6YopwaZdNmeD-ioo0DwXAtbmy-kbGZkXqUK4FfvWRQHJZ9puzNwm-Ko8_C91AIxs1yPUF65xLfDjpVXEf4MD1HjWDjgX0z5h7dEEbH1fyGXjQBumsIiBOUWwbKPMYhD7HJ_l-Da1jypc5afIwCXfoTjD7wmS-Xc4CJfJjCpqp4qPbfwBYmCj3A4B_VVR2MEil7lAT6ZmED0ADYzgTKhX_FnVkLNh_rnySu32eaP4Se_cBm57UbLRv5GsbSlfrKOTyvW0knXPWDTxtbrUXqNe-qOk398NSrL0hw_tAd4sL_k_PFGN7dNDuk9c-jwoZGbT1r99pziM_I9hI6KtuksCNIKJqd0dQwL7o5P490GfRuWEAACq6Z3sDI396OVAnYuNlGzD7IVcHUzSfVtKkdaZCmkZRJX0g_mfolFjEB2isFcNet5jQD_JFD0WFw2s_p9HODhSrlwDuvFxTUf42mUpidCT08nZEi2x3wjjEJ6u9k947gD2vJRjlWfKb7cuVUPTfhK3co6Ky2UXIbO5H1-nRuQZYO4Q3y2MGNPxckR5qhxCBhkyHOF4yxeGLUeHnRRtLCsXmJDTwcQ-2yJmNRCZurB-_Bua-mCwS8aoEQhALtAVZew4zSgLoY9faQ_9yuDxdNXsZqSTuFAG9jXR9JR8Sb6k8ma0yMOKuI1BwTIB0hLgi2ea2_DMI9rfNISoeyZEZv8XI7yQs5aRoKarxxBmPKnwp3z9K1ym3yy4_xz2M32013WRTCk0mohAozB_AMWxciusn6kbU5XA60X9TZylwld0GFeg6V6i-Grb8tVB4BiRg8GK970ncbUkpjDWFBw==",
+      "summary": []
+    },
+    {
+      "id": "msg_0c86d22df1116528006aed6855416887d28cce727225c1699e",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"scores\":{\"productRelevance\":2,\"segmentDifferentiation\":2,\"channelSuitability\":2,\"actionSpecificity\":2,\"commercialRealism\":2,\"claimSafety\":2,\"consistency\":2,\"repetition\":1,\"outreachCompleteness\":2,\"successCriteria\":2},\"issues\":[{\"section\":\"firstExperiment.resources.constraints\",\"reason\":\"Separate resource assumptions from operating guidance; repeated compound wording obscures later-week approval requirements.\"}]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "quality_review",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "scores": {
+            "type": "object",
+            "properties": {
+              "productRelevance": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "segmentDifferentiation": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "channelSuitability": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "actionSpecificity": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "commercialRealism": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "claimSafety": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "consistency": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "repetition": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "outreachCompleteness": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "successCriteria": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              }
+            },
+            "required": [
+              "productRelevance",
+              "segmentDifferentiation",
+              "channelSuitability",
+              "actionSpecificity",
+              "commercialRealism",
+              "claimSafety",
+              "consistency",
+              "repetition",
+              "outreachCompleteness",
+              "successCriteria"
+            ],
+            "additionalProperties": false
+          },
+          "issues": {
+            "maxItems": 12,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "section": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 220
+                }
+              },
+              "required": [
+                "section",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "scores",
+          "issues"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 7277,
+    "input_tokens_details": {
+      "cache_write_tokens": 7274,
+      "cached_tokens": 0
+    },
+    "output_tokens": 441,
+    "output_tokens_details": {
+      "reasoning_tokens": 339
+    },
+    "total_tokens": 7718
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"scores\":{\"productRelevance\":2,\"segmentDifferentiation\":2,\"channelSuitability\":2,\"actionSpecificity\":2,\"commercialRealism\":2,\"claimSafety\":2,\"consistency\":2,\"repetition\":1,\"outreachCompleteness\":2,\"successCriteria\":2},\"issues\":[{\"section\":\"firstExperiment.resources.constraints\",\"reason\":\"Separate resource assumptions from operating guidance; repeated compound wording obscures later-week approval requirements.\"}]}"
+}

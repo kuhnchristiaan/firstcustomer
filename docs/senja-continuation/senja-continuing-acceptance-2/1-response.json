@@ -1,0 +1,334 @@
+{
+  "id": "resp_0ee9c80273ef4fcd006aecd9f337a887d293d78d40b37c20e8",
+  "object": "response",
+  "created_at": 1793907187,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793907194,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 1200,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "msg_0ee9c80273ef4fcd006aecd9f4980887d28a86c8b16b519ba8",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"version\":\"1.0\",\"identity\":{\"name\":\"Senja\",\"summary\":\"Senja collects, organizes and shares testimonials, with customizable collection forms and a centralized library of customer proof.\",\"category\":\"Customer acquisition\",\"primaryJob\":{\"actor\":\"Businesses and marketing teams\",\"problem\":\"Collecting customer testimonials and finding relevant proof to share across marketing channels\",\"outcome\":\"Centralize testimonials and reuse them to support customer trust and marketing\"},\"certainty\":\"Website-supported\",\"evidence\":[{\"blockId\":\"cae551e2b6e4\" \t} \t] } \t,\"statements\":[{\"id\":\"s1\",\"text\":\"Senja offers customizable testimonial collection forms with personalized introductory videos and automated video and text collection.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"8088337baf9d\" \t} \t] } \t,{\"id\":\"s2\",\"text\":\"Senja supports importing testimonials from more than 30 platforms or CSV and automation through Zapier, an API and webhooks.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"d31a29723b2c\" \t} \t] } \t,{\"id\":\"s3\",\"text\":\"Senja provides a shared place for testimonial proof, with natural-language search and filtering by offer, buyer, industry, product and plan.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"1224993c1e20\" \t} \t] } \t,{\"id\":\"s4\",\"text\":\"The website advertises free signup and adding collected testimonials to a website.\",\"kind\":\"Website observation\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"21e09887a3aa\" \t} \t] } \t],\"limitations\":[\"Capabilities are owner claims, not independently verified.\",\"The supplied content does not establish free-plan limits or paid pricing.\"]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "attributed_product_profile",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string",
+            "const": "1.0"
+          },
+          "identity": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 150
+              },
+              "summary": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240
+              },
+              "category": {
+                "type": "string",
+                "enum": [
+                  "Customer acquisition",
+                  "Product analytics",
+                  "Finance operations",
+                  "Developer tools",
+                  "Commerce",
+                  "People operations",
+                  "Security",
+                  "Infrastructure",
+                  "Other",
+                  "Unclear"
+                ]
+              },
+              "primaryJob": {
+                "type": "object",
+                "properties": {
+                  "actor": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  },
+                  "problem": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  },
+                  "outcome": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 400
+                  }
+                },
+                "required": [
+                  "actor",
+                  "problem",
+                  "outcome"
+                ],
+                "additionalProperties": false
+              },
+              "certainty": {
+                "type": "string",
+                "enum": [
+                  "Website-supported",
+                  "Uncertain"
+                ]
+              },
+              "evidence": {
+                "maxItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "blockId": {
+                      "type": "string",
+                      "enum": [
+                        "cae551e2b6e4",
+                        "21e09887a3aa",
+                        "2c982934e88c",
+                        "3a3b6c7867f4",
+                        "d5ed9b4d6396",
+                        "0cc9391227c4",
+                        "36bb6c9839a0",
+                        "185420153522",
+                        "76847a8c4bd1",
+                        "c405b10b7dc9",
+                        "8a6e61d64bfa",
+                        "49630dc6a0cc",
+                        "8cacd7327864",
+                        "560e4f1f3e96",
+                        "bf0d9b91c6ba",
+                        "8088337baf9d",
+                        "b8c2fac70e98",
+                        "7dc0005f6f52",
+                        "049c67802093",
+                        "d31a29723b2c",
+                        "ded279332e6a",
+                        "62f58d67f0df",
+                        "e8aadd46ea4d",
+                        "a2167a5571ef",
+                        "ff7c1311cb40",
+                        "1224993c1e20",
+                        "24bbf17872ac",
+                        "bcabc017cea9"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "blockId"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "name",
+              "summary",
+              "category",
+              "primaryJob",
+              "certainty",
+              "evidence"
+            ],
+            "additionalProperties": false
+          },
+          "statements": {
+            "maxItems": 4,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 20
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 240
+                },
+                "kind": {
+                  "type": "string",
+                  "enum": [
+                    "Website observation",
+                    "Owner product claim",
+                    "Inference",
+                    "Unknown"
+                  ]
+                },
+                "subject": {
+                  "type": "string",
+                  "enum": [
+                    "Owner product",
+                    "Unclear"
+                  ]
+                },
+                "evidence": {
+                  "maxItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "blockId": {
+                        "type": "string",
+                        "enum": [
+                          "cae551e2b6e4",
+                          "21e09887a3aa",
+                          "2c982934e88c",
+                          "3a3b6c7867f4",
+                          "d5ed9b4d6396",
+                          "0cc9391227c4",
+                          "36bb6c9839a0",
+                          "185420153522",
+                          "76847a8c4bd1",
+                          "c405b10b7dc9",
+                          "8a6e61d64bfa",
+                          "49630dc6a0cc",
+                          "8cacd7327864",
+                          "560e4f1f3e96",
+                          "bf0d9b91c6ba",
+                          "8088337baf9d",
+                          "b8c2fac70e98",
+                          "7dc0005f6f52",
+                          "049c67802093",
+                          "d31a29723b2c",
+                          "ded279332e6a",
+                          "62f58d67f0df",
+                          "e8aadd46ea4d",
+                          "a2167a5571ef",
+                          "ff7c1311cb40",
+                          "1224993c1e20",
+                          "24bbf17872ac",
+                          "bcabc017cea9"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "blockId"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "text",
+                "kind",
+                "subject",
+                "evidence"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "limitations": {
+            "maxItems": 4,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            }
+          }
+        },
+        "required": [
+          "version",
+          "identity",
+          "statements",
+          "limitations"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 2043,
+    "input_tokens_details": {
+      "cache_write_tokens": 2040,
+      "cached_tokens": 0
+    },
+    "output_tokens": 416,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2459
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"version\":\"1.0\",\"identity\":{\"name\":\"Senja\",\"summary\":\"Senja collects, organizes and shares testimonials, with customizable collection forms and a centralized library of customer proof.\",\"category\":\"Customer acquisition\",\"primaryJob\":{\"actor\":\"Businesses and marketing teams\",\"problem\":\"Collecting customer testimonials and finding relevant proof to share across marketing channels\",\"outcome\":\"Centralize testimonials and reuse them to support customer trust and marketing\"},\"certainty\":\"Website-supported\",\"evidence\":[{\"blockId\":\"cae551e2b6e4\" \t} \t] } \t,\"statements\":[{\"id\":\"s1\",\"text\":\"Senja offers customizable testimonial collection forms with personalized introductory videos and automated video and text collection.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"8088337baf9d\" \t} \t] } \t,{\"id\":\"s2\",\"text\":\"Senja supports importing testimonials from more than 30 platforms or CSV and automation through Zapier, an API and webhooks.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"d31a29723b2c\" \t} \t] } \t,{\"id\":\"s3\",\"text\":\"Senja provides a shared place for testimonial proof, with natural-language search and filtering by offer, buyer, industry, product and plan.\",\"kind\":\"Owner product claim\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"1224993c1e20\" \t} \t] } \t,{\"id\":\"s4\",\"text\":\"The website advertises free signup and adding collected testimonials to a website.\",\"kind\":\"Website observation\",\"subject\":\"Owner product\",\"evidence\":[{\"blockId\":\"21e09887a3aa\" \t} \t] } \t],\"limitations\":[\"Capabilities are owner claims, not independently verified.\",\"The supplied content does not establish free-plan limits or paid pricing.\"]}"
+}

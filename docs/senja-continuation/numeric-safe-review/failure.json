@@ -1,0 +1,15 @@
+{
+  "name": "Error",
+  "reason": "quality_failed",
+  "qualityFailure": {
+    "code": "quality_failed",
+    "issues": [
+      {
+        "section": "firstExperiment.channelDescription",
+        "reason": "Repeats channel rationale and continuation conditions; retain only distinct execution guidance."
+      }
+    ],
+    "repairFeasible": false
+  },
+  "message": "The provider returned an incomplete or invalid report."
+}

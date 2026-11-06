@@ -1,0 +1,35 @@
+{
+  "accepted": false,
+  "failure": {
+    "name": "Error",
+    "reason": "quality_failed",
+    "qualityFailure": {
+      "code": "quality_repair_invalid",
+      "issues": [
+        {
+          "section": "firstExperiment",
+          "path": "firstExperiment.resources.constraints",
+          "reason": "Incomplete strategic explanation: finish the reasoning component"
+        }
+      ],
+      "repairFeasible": false
+    },
+    "message": "The provider returned an incomplete or invalid report."
+  },
+  "ledger": {
+    "ceilingUsd": 0.15,
+    "actualEstimatedUsd": 0.1113262,
+    "conservativeKnownUsd": 0.12431500000000001,
+    "uncertainReservedUsd": 0.019035,
+    "newPaidCalls": 2
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "attributed_product_profile"
+    }
+  ],
+  "head": "98ab24cbd48a9e2907f3332a028cc26c2b1ea323",
+  "note": "Saved genuine identification reused after exact request matching. Fresh generation and the unchanged one-repair semantic gate; cumulative spending ceiling retained."
+}

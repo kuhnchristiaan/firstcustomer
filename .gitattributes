@@ -4,3 +4,5 @@ docs/sol-final-acceptance/*-output.txt -text -whitespace
 docs/sol-review-budget-acceptance/*-output.txt -text -whitespace
 docs/sol-stabilization/*-output.txt -text -whitespace
 docs/senja-committed-acceptance/*-output.txt -text -whitespace
+docs/senja-continuation/**/*-output.txt -text -whitespace
+docs/senja-continuation/**/output.txt -text -whitespace

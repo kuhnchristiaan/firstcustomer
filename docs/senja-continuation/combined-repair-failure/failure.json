@@ -1,0 +1,21 @@
+{
+  "name": "Error",
+  "reason": "quality_failed",
+  "qualityFailure": {
+    "code": "quality_repair_invalid",
+    "issues": [
+      {
+        "section": "firstExperiment",
+        "path": "firstExperiment.resources.constraints",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      },
+      {
+        "section": "alternatives",
+        "path": "alternatives.1.preferWhen",
+        "reason": "Incomplete strategic explanation: finish the reasoning component"
+      }
+    ],
+    "repairFeasible": false
+  },
+  "message": "The provider returned an incomplete or invalid report."
+}

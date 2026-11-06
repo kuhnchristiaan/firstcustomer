@@ -1,0 +1,34 @@
+{
+  "name": "Error",
+  "message": "The provider returned an incomplete or invalid report.",
+  "reason": "quality_failed",
+  "inputTokens": 5850,
+  "outputTokens": 1948,
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "inputTokens": 2043,
+      "outputTokens": 416
+    },
+    {
+      "stage": "acquisition_strategy",
+      "inputTokens": 1662,
+      "outputTokens": 1479
+    },
+    {
+      "stage": "quality_repair",
+      "inputTokens": 2145,
+      "outputTokens": 53
+    }
+  ],
+  "qualityFailure": {
+    "code": "quality_review_invalid",
+    "issues": [
+      {
+        "section": "qualityReview",
+        "reason": "Semantic review could not complete within its schema and budget"
+      }
+    ],
+    "repairFeasible": false
+  }
+}

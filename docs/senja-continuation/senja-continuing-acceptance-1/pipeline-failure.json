@@ -1,0 +1,15 @@
+{
+  "name": "Error",
+  "message": "The provider returned an incomplete or invalid report.",
+  "reason": "incomplete_output",
+  "inputTokens": 2020,
+  "outputTokens": 1200,
+  "stages": [
+    {
+      "stage": "attributed_product_profile",
+      "inputTokens": 2020,
+      "outputTokens": 1200
+    }
+  ],
+  "qualityFailure": null
+}

@@ -142,7 +142,7 @@ export function assembleAcquisition(
     valueProposition: inferred(s.positioning),
     differentiators: [
       inferred(
-        `Comparative advantage is unvalidated. Test ${s.positioning} against the buyer's current workaround.`,
+        `Comparative advantage is unvalidated. Test ${s.firstBuyerWhy.advantage} against the buyer's current workaround.`,
       ),
     ],
     idealCustomers: s.segments.map((p) => inferred(p.name)),

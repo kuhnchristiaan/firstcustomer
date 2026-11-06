@@ -1,0 +1,19 @@
+{
+  "model": "gpt-6.1-sol",
+  "status": "completed",
+  "latencyMs": 5825,
+  "usage": {
+    "input_tokens": 2504,
+    "input_tokens_details": {
+      "cache_write_tokens": 2501,
+      "cached_tokens": 0
+    },
+    "output_tokens": 110,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2614
+  },
+  "costUsd": 0.0073585,
+  "incompleteDetails": null
+}

@@ -1,0 +1,117 @@
+{
+  "id": "resp_050f2c2650855fc3006aecdb99f0e887d28639f89fc759e656",
+  "object": "response",
+  "created_at": 1793907609,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793907612,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 1000,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "msg_050f2c2650855fc3006aecdb9b485887d283f21cd025df940b",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"firstExperiment.resources.constraints\":\"The 90-minute, no-spend test assumes unconfirmed founder capacity and covers outreach and brief qualification, not activation support.\"}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "quality_repair",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "firstExperiment.resources.constraints": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 220,
+            "description": "Rewrite as one short complete sentence within maxLength; no dangling clause or cut-off qualification."
+          }
+        },
+        "required": [
+          "firstExperiment.resources.constraints"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 2288,
+    "input_tokens_details": {
+      "cache_write_tokens": 2285,
+      "cached_tokens": 0
+    },
+    "output_tokens": 41,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 2329
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"firstExperiment.resources.constraints\":\"The 90-minute, no-spend test assumes unconfirmed founder capacity and covers outreach and brief qualification, not activation support.\"}"
+}

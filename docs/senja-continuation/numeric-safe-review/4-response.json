@@ -1,0 +1,211 @@
+{
+  "id": "resp_0960073aea44ac31006aecddc15d8c87d2827e114bf196b8f0",
+  "object": "response",
+  "created_at": 1793908161,
+  "status": "completed",
+  "access_programs": null,
+  "background": false,
+  "billing": {
+    "payer": "openai"
+  },
+  "completed_at": 1793908170,
+  "error": null,
+  "frequency_penalty": 0,
+  "image": {
+    "context_compression": "disabled"
+  },
+  "incomplete_details": null,
+  "instructions": null,
+  "max_output_tokens": 1500,
+  "max_tool_calls": null,
+  "model": "gpt-6.1-sol",
+  "moderation": null,
+  "output": [
+    {
+      "id": "rs_0960073aea44ac31006aecddc29b0c87d28cb148eb7b4f5ddc",
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABq7N3KZMGuqcM1CtMpkhuAE1qXXvx5YUne9D9H8Q49HPo2q7d630yyOPwh0793YoqAMUftQQJlZ0oEZ_qIoZBTjXdDUI3sbsRP7jVKbrmDl4dk3KbdILU6Uu5G15MIMB4JnGDPNMe6_89431nDSx5qm-m7aPAG2p5DFyUyEjz1OW_5qJHEUgQXkPsOJRkyzMX3eIw_DpTxqQLcYvdW7afvO4DvOVGc0GduWCvmarqtbb6waayVPwlyuHE42wpHsR7dw1-PgmXqRYeI2vxpuaV9-YEOjziJKvQ6zVcAm9t3jPu6ICnnx35yI55T-_qkUwRheeyQNvxz_gW6XK_TuI8SehICWGBEwyv8Yf_Hchmb-skGGdIhWFMqvYCisiXJuR9cuLWA4wdK8M4nGKbfdnxIM0HeVLV-8waX2VSMTPQ65HI7n9znmBOdDf8skZBkwHiYj6PLfQoP-easkKNB1pbNbc41MhYkuXd0l83dkldoknd2K897JFUzipw6MAdlnlh-wiNQZBtYMa3xOASpz8fmcJjnbwmZIs1vSR2WhWvrCDhX-1vOSTUgdgPPZfZtrHWMVfwLMgiZNorlLbyWyItctEi78NOYufPSkUqXvyqdAIV1ZgOJ_bkzKNolZErHSE6N-u0AFUjg1z7FHmn_lRmfPA4EaR_BCj1qjvm7T4MbxIaWc9S6M2gbuirSnmUe55rauzFSG_MP6suGmx0jPvGrmPsLD79j7A6F4ja_-594UapnhmZzwO0mlIKISw_kNE4BQxWHF6R0r5uJ30FRBz76P9k3D62NwLNjtAdBbQ5YUkV6gq_Ps8hk4ONC20oZ0w019bvxLrlLdUO_llIBs3SdNZjeTWdcfih9nZw0RVj1Apz88RoyCmlHYjLXmbfgt8M-q-_G06pWrnss7WQFc_Pve9fmkhWALtF8R5xzUOKXzDm_ObGbqpypOgWVrzKcS8Rll6ThhzJA5bCc7zACtxod23C90yg6xfxj8HRREKIoh6NZnTgIDez26fzL9tgk9iiWXvEtB7CcYFk4jjWcGvkaFcF4BVmNRsWsaC95-JnOC_KXZb3ehEt7n5XlGkLd3OyLqiz2HSs1ujOb313xb2gJqHAT6iN4Own7GZzI54fDSgfiFjDU9ptufPgY0PQv57teHLz5V0fu6jqXhdCm3AneZTlfRI2aO-ladSe6omsBd0aBcY5iWDausJhkhPR65B6qn3KpKzEYCxtvEiy2KldKOGHHkXYD8A3c8BuL6w1B6m1Nvvk9dO_PSdc-JB4xqdemY534hf4nrg4AxnJfNqsV-Iz9SEu3sqeU8kR6t4OGnhgNrQjZbOduz2sKHgo6_bx0XkOibhKxAP6s5mBPE4ls2NozZHWhqhz0cwYdma2T5Q36Y73YY46z5xihjGPMKsOW0SPkrWuAMbJfVQ291x4cXMMZDjPY8wQNKPWzwopw-NZ8fDZMOT91kjR2ZaqEol8E5MNYm_4Qa8Z-VGwyFV0uA60f-wNj4pZnkveVQaJjHz0IbBQGLwHJ-Z6wbg87Oxe93zebW0xfu5lTFdocaGXbX-h1yS7tX11z_0zsMIrd9Eb0Rijhp2D5GCaE1N7gADC717TUE5lq00H927NUDf5cXRU6YL8jH6BsTLqnt1jc6No7wAUbZq2JL2Tx_J6nsdvxE-dmp5V7CiBnR1vZsDBHHgRQFPIZx4nJdsqyRsXfZ7La0xAB7thlQtnr2PBtePQKtWKhgKZikWHw26MPgX0GTkm60VsbtaLU72NT1r4qulwvaJmOScOKQnPU9QGCyDEnRwu5nf4ll6rqIkp-_pQf1I0NKBKCyqJJFegbF18crKPwtlIvz_eMLBQmT-6Q2HCp03IrPicXidzHvS7hAAGatPbw12GKQxZpN60zH5QQDB8HB1TQqva1QWRS4aKmDABF_kU7ScsPeUZxpFWFbwPuLyJBLSGj_5jh1gOoJWtQndMD6INB8fq-XDgdCVk7KyMMDuFEpVexR-05H_FySCt-gpUqYb6DIu_TYWduGDSfTDtN0zmoxv57Udxv7EZeOoGKAmEv8hmls98E1ubAG6Xa2OMMbGK20RFSEU-8aji_mF4WNJ0XJPYAt4RItAFUC6PlJkF4Z2fn96kN9g4ZsJh5ckZb8bjf1-s3MxeMrea1q684phmMsnrcZjTWzdsv3jON6LYmzwG9PYdp8SA_doc8LXRvGu28tNpUFya80h2NVHvNUR-Un5PEPmD3cIjHrafyA1-sCCDF972yyHVM_2wV3Rl82mWmre6Uu5lCdsa6QlurG9CTRjWPXW7CnwPZJTNJiRa20crgC_-mCw-H_uI8FqbjJptfbThqPKCHLR9vZTUS2Y_TB4Z_UgLlFkMogEVn6LzRcNObsgjXp_vKsyDyYNjk1UGPZpP7bwLWFuxzMUHJ7mKjXrQGCrmcQmOs62kRJDV-pLDdxOJgd0wMrTp0SC2hCn7mlpOMM9MS3NvfID68qSy1DHONeACG0S4u3mAyUbc-Yi45Y_y1kznGhuHwRhOnXp4t1tMrJc7gPqBXiLIk8hA0Ro9QqxORGRCf7HlDIJDb96l-ngC-gfHucV-jUZV7MjFlkipyvzOaZ_V1t_zBojt2G8ZDcWWEf4n-aF45JBJxHUQG7cIXmU3OrYw9bqVZC8ntcaXrYTQ8j6Qr6NywdDtuVcz0zA5FYv6gxaE2UCN4VOq9lHdvbGdpPn2mnq1-8cK4mJNz3c6JeesfExvqWW52sCMOE3qLv6CaRL02eqVtqga8Dl5qJXDDCsLno78z1xbx5KgMBJ9iJlxzWwAA6wXDVt4BWEuLv54LClhsdjnUq6Eyz2pMHOeZDaPVnxcSWGWEPQxUIWWqahjQyk1I6Lo7fGgock99UlP_LkDXyC__yPI4x5NR8g3cqcdapgPy9mYVY8orSbGtfoFgX4ynAY3vWt2ZQzIYptsop5xXNNT69-G_tMJ4lPHULylM1zsbLbgpO5x_g8cOcQkYAk2hllTl9hCrUYO5hv_y4LAn7mpHlvjB5-7mO6dPYTgVSJF1ohSjSSRPG-tQgWepZvpMFlHzsUi5FX70cTSsjXclHFqrhcfkfV25eibJhEuII3rUCh6DQXM_S2pyJcM5awog6c8woSrJKTeFztM172w3TiK5_zIjRVCdv16LzqOOfw8aFwdcvPfkbxTy86y85gobSCnUxh9lc7rQy_W1-7VI7-OmRA4EtUQ6g7cFY2RCvFmLkY-vHQgks12aYZpFR7oYAeZdodLI80mqj-rpAWrDGNwlO9jEXten_dHjP7cFHRICuUhmG9K83ZjI6BRQDnwFT1PJTGlMvXp9NUtjTl_r8t1keA9e1SXUqEHWp9-v-nwIn3BqM7U5Gc9pO_8fP_ilig_B7L9XUrF3Qk6e9yRKar3LOXVOh39st63KuKtK5nBBHUvxmlGS8O4qQ5iBV27A6t73TiEd8HzlYfx3taw3slgduf7fGXA5dzinfoDxTeak_ur4BlvWZwJs7QZEtN5DJFoztl_z_udHIIaDw8AcIKN2QTdTvO-IFTrey2g4b0y_roqkoAMtrfyJvB9WyIR2KVb7bTs5Wyg2On2z5UzAHjOwEowlOCSvwHdboKuYR_TbJ2Jq2spkMud5v044fSAFV9TQ7vmumCW2hvSRE3We8aWWOAH8PG0HNewTFPCYUViniZovFtSMqmylUit15GC_QTkY32EcsreT19zSoa7Qu3noYd5cK0fAHTluSsuERwUChHy6gs1GJ9sf-yL-GMG_iFM920lxYjhD9GA4_8K8-MvvZ0dvJcK16kJ0H0VN1hcRad4tgfgy3YAElyVlt00ZVW3xlY8KAvrLWTjJ0JMTzbRG4Wi_mhWnGSWaT2DOIKH8sVwNIeed3CakVlggbFXmklP8P9OIOfD0MPCDW3pP_UlglmZuErGiie2zzHizlZ7xPRyAETfnWuqAwe2E3gI0qiC7cGWfQ3SFmzEBIJlJnBYoE2O8g5QjYBZqiGM7Yc1b_3V3LifKOf62kgGvh5F4yDxKkK5atBRSTdN_DxgTeLYJWCTg-JC-ArFDhs0Yl1BCxCmOERrntps0s_8AZ0_l7nKVL81p8dPSWCURxwYzLacPZxStPoYSA4yzqDLPQ2eEcoPj7lggvzwZwHPtl5Eq_QUB1MblZ-hhSEdnrnNL4BJg1-r-nErBFAb3_ZNV1j4nWY_g8zOud8YhDCIkHx9mx3yvxI6M_NhgWVrQXyh8O4sdwUqAb3BuWvB6Td--qqK3Sb6sVdR2rKMLXY1_szD2rvQ6MVLMJ1xB2Lwj41c3hO9ujzfrlSyRtFsOacSLfKrsZBibWJ667iRZhwN9Hrb7Hl4=",
+      "summary": []
+    },
+    {
+      "id": "msg_0960073aea44ac31006aecddc96bf487d2aa483669e9d9b360",
+      "type": "message",
+      "status": "completed",
+      "content": [
+        {
+          "type": "output_text",
+          "annotations": [],
+          "logprobs": [],
+          "text": "{\"scores\":{\"productRelevance\":2,\"segmentDifferentiation\":2,\"channelSuitability\":2,\"actionSpecificity\":2,\"commercialRealism\":2,\"claimSafety\":2,\"consistency\":2,\"repetition\":1,\"outreachCompleteness\":2,\"successCriteria\":2},\"issues\":[{\"section\":\"firstExperiment.channelDescription\",\"reason\":\"Repeats channel rationale and continuation conditions; retain only distinct execution guidance.\"}]}"
+        }
+      ],
+      "phase": "final_answer",
+      "role": "assistant"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "presence_penalty": 0,
+  "previous_response_id": null,
+  "prompt_cache_key": null,
+  "prompt_cache_retention": "24h",
+  "reasoning": {
+    "context": "all_turns",
+    "effort": "low",
+    "mode": "standard",
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "store": true,
+  "temperature": 1,
+  "text": {
+    "format": {
+      "type": "json_schema",
+      "description": null,
+      "name": "quality_review",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "scores": {
+            "type": "object",
+            "properties": {
+              "productRelevance": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "segmentDifferentiation": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "channelSuitability": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "actionSpecificity": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "commercialRealism": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "claimSafety": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "consistency": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "repetition": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "outreachCompleteness": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              },
+              "successCriteria": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 2
+              }
+            },
+            "required": [
+              "productRelevance",
+              "segmentDifferentiation",
+              "channelSuitability",
+              "actionSpecificity",
+              "commercialRealism",
+              "claimSafety",
+              "consistency",
+              "repetition",
+              "outreachCompleteness",
+              "successCriteria"
+            ],
+            "additionalProperties": false
+          },
+          "issues": {
+            "maxItems": 12,
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "section": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 80
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 220
+                }
+              },
+              "required": [
+                "section",
+                "reason"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "scores",
+          "issues"
+        ],
+        "additionalProperties": false
+      },
+      "strict": true
+    },
+    "verbosity": "medium"
+  },
+  "tool_choice": "auto",
+  "tool_usage": {
+    "image_gen": {
+      "input_tokens": 0,
+      "input_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "output_tokens": 0,
+      "output_tokens_details": {
+        "image_tokens": 0,
+        "text_tokens": 0
+      },
+      "total_tokens": 0
+    },
+    "web_search": {
+      "num_requests": 0
+    }
+  },
+  "tools": [],
+  "top_logprobs": 0,
+  "top_p": 0.98,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 7206,
+    "input_tokens_details": {
+      "cache_write_tokens": 7203,
+      "cached_tokens": 0
+    },
+    "output_tokens": 303,
+    "output_tokens_details": {
+      "reasoning_tokens": 204
+    },
+    "total_tokens": 7509
+  },
+  "user": null,
+  "metadata": {},
+  "output_text": "{\"scores\":{\"productRelevance\":2,\"segmentDifferentiation\":2,\"channelSuitability\":2,\"actionSpecificity\":2,\"commercialRealism\":2,\"claimSafety\":2,\"consistency\":2,\"repetition\":1,\"outreachCompleteness\":2,\"successCriteria\":2},\"issues\":[{\"section\":\"firstExperiment.channelDescription\",\"reason\":\"Repeats channel rationale and continuation conditions; retain only distinct execution guidance.\"}]}"
+}

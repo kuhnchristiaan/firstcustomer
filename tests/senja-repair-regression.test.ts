@@ -82,3 +82,18 @@ it('accepts observable purchase-step wording from the latest genuine trace witho
  expect(transport.create.mock.calls.map(([r])=>r.text.format.name)).toEqual(['attributed_product_profile','acquisition_strategy','quality_review']);
  if(result.report.schemaVersion!=='1.1')throw Error('Wrong schema');expect(result.report.acquisitionStrategy).toEqual(real);
 });
+import {strategyConsistency} from '@/modules/intelligence/strategy-consistency';
+it('groups both genuine incomplete fields into one repair before semantic review',async()=>{
+ env();const root='docs/senja-continuation/improved-prefix/';const read=(p:string)=>JSON.parse(readFileSync(root+p,'utf8'));const real=JSON.parse(read('2-response.json').output_text);const issues=strategyConsistency(real).filter(i=>i.reason.startsWith('Incomplete strategic'));
+ expect(issues.map(i=>i.path).sort()).toEqual(['alternatives.1.preferWhen','firstExperiment.resources.constraints']);
+ const patch={'firstExperiment.channelDescription':'Research public course websites and send individual business emails about current testimonial workflows.','alternatives.1.preferWhen':'Prefer community participation when posting is permitted; consider existing-user discovery only with authorized workflow evidence.','firstExperiment.resources.constraints':'Zero spend and capacity are assumptions. Use public business routes; obtain founder time approval before activation support or later-week execution.'};
+ transport.create.mockResolvedValueOnce(response(JSON.parse(read('1-response.json').output_text))).mockResolvedValueOnce(response(real)).mockResolvedValueOnce(response(patch)).mockResolvedValueOnce(response(passingReview));
+ const result=await provider().analyze(read('sources.json'),AbortSignal.timeout(3000));
+ expect(Object.keys(transport.create.mock.calls[2][0].text.format.schema.properties).sort()).toEqual(Object.keys(patch).sort());expect(transport.create).toHaveBeenCalledTimes(4);
+ if(result.report.schemaVersion!=='1.1')throw Error('Wrong schema');expect(result.report.quality?.repairs).toBe(1);
+});
+it('rejects a genuine complete-looking repair that duplicates numeric resource estimates in prose',()=>{
+ const read=(p:string)=>JSON.parse(readFileSync('docs/senja-continuation/improved-prefix/'+p,'utf8'));const real=JSON.parse(read('2-response.json').output_text);const raw=JSON.parse(readFileSync('docs/senja-continuation/combined-repair-failure/3-output.txt','utf8'));
+ const issues=strategyConsistency(real).filter(i=>i.reason.startsWith('Incomplete strategic'));const p=fieldPatch(real,acquisitionWireSchema().shape,issues);
+ const invalid=p.apply(raw);expect(acquisitionSchema().safeParse(invalid).success).toBe(false);expect(strategyConsistency(invalid).some(i=>i.path==='firstExperiment.resources.constraints')).toBe(true);
+});

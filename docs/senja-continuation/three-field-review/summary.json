@@ -1,0 +1,39 @@
+{
+  "accepted": false,
+  "failure": {
+    "name": "Error",
+    "reason": "quality_failed",
+    "qualityFailure": {
+      "code": "quality_failed",
+      "issues": [
+        {
+          "section": "positioning",
+          "reason": "Repeated across value proposition, positioning and differentiators; consolidate repeated wording and keep the differentiator focused on comparison."
+        }
+      ],
+      "repairFeasible": false
+    },
+    "message": "The provider returned an incomplete or invalid report."
+  },
+  "ledger": {
+    "ceilingUsd": 0.3,
+    "actualEstimatedUsd": 0.2027157,
+    "conservativeKnownUsd": 0.21571500000000002,
+    "uncertainReservedUsd": 0,
+    "newPaidCalls": 2
+  },
+  "stages": [
+    {
+      "ordinal": 1,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "attributed_product_profile"
+    },
+    {
+      "ordinal": 2,
+      "mode": "saved genuine response, not a new paid call",
+      "stage": "acquisition_strategy"
+    }
+  ],
+  "head": "98ab24cbd48a9e2907f3332a028cc26c2b1ea323",
+  "note": "Genuine profile and fresh strategy reused after exact request matching; one bounded repair and mandatory semantic review."
+}

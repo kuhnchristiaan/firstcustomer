@@ -1,0 +1,15 @@
+{
+  "name": "Error",
+  "reason": "quality_failed",
+  "qualityFailure": {
+    "code": "quality_failed",
+    "issues": [
+      {
+        "section": "firstExperiment.resources.constraints",
+        "reason": "Separate resource assumptions from operating guidance; repeated compound wording obscures later-week approval requirements."
+      }
+    ],
+    "repairFeasible": false
+  },
+  "message": "The provider returned an incomplete or invalid report."
+}

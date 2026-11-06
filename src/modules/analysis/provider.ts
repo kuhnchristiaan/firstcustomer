@@ -64,7 +64,7 @@ export function analysisRequest(
     ...(model === "gpt-6.1-sol" ? { reasoning: { effort: "low" as const }, service_tier: "default" as const } : {}),
     max_output_tokens: maxOutput,
     input: [
-      { role: "system" as const, content: instructions },
+      { role: "system" as const, content: instructions + (model === "gpt-6.1-sol" ? "\nEmit compact JSON without indentation, tabs or whitespace padding between fields. Complete all required fields; whitespace is not content." : "") },
       { role: "user" as const, content: JSON.stringify(data) },
     ],
     text: {

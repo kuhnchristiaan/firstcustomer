@@ -74,6 +74,8 @@ export function strategyConsistency(
         path,
         "Incomplete strategic explanation: finish the reasoning component",
       );
+    if (path === "firstExperiment.channelDescription" && /\b(?:later[- ]week execution|separately available founder time)\b/i.test(value))
+      add(path, "Keep channel execution mechanics distinct from resource approval and continuation conditions");
     if (/messages\.\d+\.body$/.test(path) && hasProspectObservation(value))
       add(
         path,
