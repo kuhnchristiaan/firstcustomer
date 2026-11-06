@@ -373,3 +373,17 @@ it('rejects an incomplete Sol quality review without retrying or publishing',asy
  await expect(provider().analyze([f.source],AbortSignal.timeout(3000))).rejects.toMatchObject({reason:'quality_failed',qualityFailure:{code:'quality_review_invalid'}});
  expect(transport.create).toHaveBeenCalledTimes(3);expect(transport.create.mock.calls[2][0].max_output_tokens).toBe(1500);
 });
+
+it('reclaims unused identification headroom instead of truncating Sol generation at 3500 tokens',async()=>{
+ vi.stubEnv('OPENAI_MODEL','gpt-6.1-sol');vi.stubEnv('MAX_OUTPUT_TOKENS','8000');
+ const f=commercialFixture(), s=compactFixture(f.report);
+ const billed=(value:unknown,n:number)=>({...response(value),usage:{input_tokens:200,output_tokens:n}});
+ // Production failure used 185 profile tokens and hit the former 3500 cap.
+ // Transport fixtures test allocation, not a claim that the model now succeeds.
+ transport.create.mockResolvedValueOnce(billed(selectionOf(f.profile),185))
+ .mockResolvedValueOnce(billed(s,3600)).mockResolvedValueOnce(billed(passingReview,900));
+ const result=await provider().analyze([f.source],AbortSignal.timeout(3000));
+ expect(transport.create.mock.calls.map(([r])=>r.max_output_tokens)).toEqual([1200,3815,1500]);
+ expect(result.outputTokens).toBe(4685);
+ expect(transport.create.mock.calls[1][0].max_output_tokens+185+1500+1000+1500).toBe(8000);
+});

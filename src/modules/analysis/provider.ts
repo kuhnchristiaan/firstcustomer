@@ -250,7 +250,9 @@ export function provider(): AnalysisProvider {
             },
             // Reserve both possible reviews and a granular repair, even when the
             // initial review identifies the first defect. Never expand the cap.
-            Math.min(e.OPENAI_MODEL === "gpt-6.1-sol" ? 3500 : 2000, budget.output - outputTokens - 2 * qualityOutput.review - (e.OPENAI_MODEL === "gpt-6.1-sol" ? qualityOutput.repair : 600)),
+            e.OPENAI_MODEL === "gpt-6.1-sol"
+              ? budget.output - outputTokens - 2 * qualityOutput.review - qualityOutput.repair
+              : Math.min(2000, budget.output - outputTokens - 2 * qualityOutput.review - 600),
           ),
         );
         stage = "quality_gate";
