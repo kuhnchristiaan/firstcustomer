@@ -33,6 +33,8 @@ export async function safeFetch(
   input: string,
   signal: AbortSignal,
   redirects = 0,
+  beforeRedirect?: (from: URL, to: URL) => Promise<void>,
+  allowMissingRobots = false,
 ): Promise<{ url: string; body: string; type: string; status: number }> {
   const url = new URL(normalizeUrl(input));
   signal.throwIfAborted();
@@ -79,23 +81,40 @@ export async function safeFetch(
               new AppError("The website returned an invalid redirect."),
             );
           }
-          if (destination.origin !== url.origin) {
+          if (url.protocol === "https:" && destination.protocol !== "https:")
+            return reject(new AppError("Unsafe website redirect."));
+          // Validate the complete destination before invoking a policy hook or
+          // resolving DNS. Each recursive request independently validates DNS.
+          try {
+            normalizeUrl(destination.toString());
+          } catch {
+            return reject(new AppError("Unsafe website redirect."));
+          }
+          if (!beforeRedirect && destination.origin !== url.origin)
             return reject(
               new AppError(
                 "Please submit the final website address. Cross-origin redirects are not crawled.",
               ),
             );
-          }
-          if (url.protocol === "https:" && destination.protocol !== "https:")
-            return reject(new AppError("Unsafe website redirect."));
-          safeFetch(destination.toString(), signal, redirects + 1).then(
-            resolve,
-            reject,
-          );
+          Promise.resolve()
+            .then(() => beforeRedirect?.(url, destination))
+            .then(() =>
+              safeFetch(
+                destination.toString(),
+                signal,
+                redirects + 1,
+                beforeRedirect,
+                allowMissingRobots,
+              ),
+            )
+            .then(resolve, reject);
           return;
         }
         const type = String(res.headers["content-type"] || "");
-        if (!/text\/(html|plain)|application\/xhtml/i.test(type)) {
+        if (
+          !(allowMissingRobots && (status === 404 || status === 410)) &&
+          !/text\/(html|plain)|application\/xhtml/i.test(type)
+        ) {
           res.resume();
           reject(new AppError("The website did not return readable HTML."));
           return;

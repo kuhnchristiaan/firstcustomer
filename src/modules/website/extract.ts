@@ -37,23 +37,52 @@ export async function crawl(
   signal: AbortSignal,
 ): Promise<Source[]> {
   const start = normalizeUrl(input);
-  const origin = new URL(start).origin;
-  const robots = await safeFetch(`${origin}/robots.txt`, signal);
-  if (
-    robots.status !== 404 &&
-    robots.status !== 410 &&
-    (robots.status < 200 || robots.status >= 300)
-  )
-    throw new AppError("Crawling restrictions could not be checked.");
-  const rules = robotsParser(
-    `${origin}/robots.txt`,
-    robots.status === 404 || robots.status === 410 ? "" : robots.body,
-  );
-  const delay = rules.getCrawlDelay("FirstCustomersBot") ?? 0;
-  if (delay > 3)
-    throw new AppError(
-      "This site requests a crawl delay beyond the analysis time budget.",
-    );
+  let origin = new URL(start).origin;
+  const originalHost = new URL(start).hostname
+    .replace(/^www\./i, "")
+    .toLowerCase();
+  const allowedRedirect = (_from: URL, to: URL) => {
+    if (to.hostname.replace(/^www\./i, "").toLowerCase() !== originalHost)
+      throw new AppError(
+        "This website redirects to a different domain. Enter its final address.",
+      );
+  };
+  const policies = new Map<string, Promise<ReturnType<typeof robotsParser>>>();
+  const rulesFor = (siteOrigin: string) => {
+    const cached = policies.get(siteOrigin);
+    if (cached) return cached;
+    const pending = (async () => {
+      const robotsUrl = `${siteOrigin}/robots.txt`;
+      const robots = await safeFetch(
+        robotsUrl,
+        signal,
+        0,
+        async (from, to) => {
+          allowedRedirect(from, to);
+          if (to.origin !== from.origin && to.pathname !== "/robots.txt")
+            throw new AppError("Crawling restrictions could not be checked.");
+        },
+        true,
+      );
+      if (
+        robots.status !== 404 &&
+        robots.status !== 410 &&
+        (robots.status < 200 || robots.status >= 300)
+      )
+        throw new AppError("Crawling restrictions could not be checked.");
+      const rules = robotsParser(
+        robotsUrl,
+        robots.status === 404 || robots.status === 410 ? "" : robots.body,
+      );
+      if ((rules.getCrawlDelay("FirstCustomersBot") ?? 0) > 3)
+        throw new AppError(
+          "This site requests a crawl delay beyond the analysis time budget.",
+        );
+      return rules;
+    })();
+    policies.set(siteOrigin, pending);
+    return pending;
+  };
   const queue = [start];
   const seen = new Set<string>();
   const hashes = new Set<string>();
@@ -65,17 +94,28 @@ export async function crawl(
     chars < maxChars
   ) {
     const url = queue.shift()!;
-    if (seen.has(url) || rules.isAllowed(url, "FirstCustomersBot") === false)
-      continue;
+    if (seen.has(url)) continue;
+    const rules = await rulesFor(new URL(url).origin);
+    if (rules.isAllowed(url, "FirstCustomersBot") === false) continue;
     seen.add(url);
     if (results.length)
-      await new Promise((r) => setTimeout(r, Math.max(300, delay * 1000)));
+      await new Promise((r) =>
+        setTimeout(
+          r,
+          Math.max(300, (rules.getCrawlDelay("FirstCustomersBot") ?? 0) * 1000),
+        ),
+      );
     try {
-      const response = await safeFetch(url, signal);
-      if (new URL(response.url).origin !== origin)
-        throw new AppError("Use the final website URL after redirects.");
-      if (rules.isAllowed(response.url, "FirstCustomersBot") === false)
-        continue;
+      const response = await safeFetch(url, signal, 0, async (from, to) => {
+        allowedRedirect(from, to);
+        const destinationRules = await rulesFor(to.origin);
+        if (
+          destinationRules.isAllowed(to.toString(), "FirstCustomersBot") ===
+          false
+        )
+          throw new AppError("The website does not permit crawling this page.");
+      });
+      origin = new URL(response.url).origin;
       if (response.status < 200 || response.status >= 300) continue;
       const page = extract(response.body, response.url);
       if (!page.content || hashes.has(page.contentHash)) continue;

@@ -81,3 +81,114 @@ it("rejects malformed redirects without an uncaught callback exception", async (
     safeFetch("https://example.com", AbortSignal.timeout(1000)),
   ).rejects.toThrow("invalid redirect");
 });
+
+it("revalidates redirected DNS and never connects to a private destination", async () => {
+  f.lookup.mockImplementation(async (host: string) => [
+    {
+      address: host === "example.com" ? "93.184.216.34" : "127.0.0.1",
+      family: 4,
+    },
+  ]);
+  f.get.mockImplementation((_url, _options, callback) => {
+    const req = new EventEmitter();
+    queueMicrotask(() =>
+      callback({
+        statusCode: 301,
+        headers: { location: "https://www.example.com/" },
+        resume: vi.fn(),
+      }),
+    );
+    return req;
+  });
+  await expect(
+    safeFetch(
+      "https://example.com/",
+      AbortSignal.timeout(1000),
+      0,
+      async () => {},
+    ),
+  ).rejects.toThrow("restricted network");
+  expect(f.get).toHaveBeenCalledTimes(1);
+  expect(f.lookup).toHaveBeenCalledTimes(2);
+});
+it("rejects an HTTPS downgrade even when a redirect policy is supplied", async () => {
+  f.lookup.mockResolvedValue([{ address: "93.184.216.34", family: 4 }]);
+  f.get.mockImplementation((_url, _options, callback) => {
+    const req = new EventEmitter();
+    queueMicrotask(() =>
+      callback({
+        statusCode: 301,
+        headers: { location: "http://example.com/" },
+        resume: vi.fn(),
+      }),
+    );
+    return req;
+  });
+  await expect(
+    safeFetch(
+      "https://example.com/",
+      AbortSignal.timeout(1000),
+      0,
+      async () => {},
+    ),
+  ).rejects.toThrow("Unsafe website redirect");
+  expect(f.get).toHaveBeenCalledTimes(1);
+});
+it("treats a missing robots file without a content type as an allowed missing file only when explicitly requested", async () => {
+  f.lookup.mockResolvedValue([{ address: "93.184.216.34", family: 4 }]);
+  f.get.mockImplementation((_url, _options, callback) => {
+    const req = new EventEmitter();
+    queueMicrotask(() => {
+      const res = Object.assign(new EventEmitter(), {
+        statusCode: 404,
+        headers: {},
+      });
+      callback(res);
+      res.emit("end");
+    });
+    return req;
+  });
+  await expect(
+    safeFetch(
+      "https://example.com/robots.txt",
+      AbortSignal.timeout(1000),
+      0,
+      undefined,
+      true,
+    ),
+  ).resolves.toMatchObject({ status: 404, body: "" });
+});
+
+it("preserves missing-robots handling across a safe redirect", async () => {
+  f.lookup.mockResolvedValue([{ address: "93.184.216.34", family: 4 }]);
+  f.get.mockImplementation((url, _options, callback) => {
+    const req = new EventEmitter();
+    queueMicrotask(() => {
+      if (url.hostname === "example.com")
+        callback({
+          statusCode: 301,
+          headers: { location: "https://www.example.com/robots.txt" },
+          resume: vi.fn(),
+        });
+      else {
+        const res = Object.assign(new EventEmitter(), {
+          statusCode: 404,
+          headers: {},
+        });
+        callback(res);
+        res.emit("end");
+      }
+    });
+    return req;
+  });
+  await expect(
+    safeFetch(
+      "https://example.com/robots.txt",
+      AbortSignal.timeout(1000),
+      0,
+      async () => {},
+      true,
+    ),
+  ).resolves.toMatchObject({ status: 404, body: "" });
+  expect(f.get).toHaveBeenCalledTimes(2);
+});

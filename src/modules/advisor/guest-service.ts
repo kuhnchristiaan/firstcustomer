@@ -10,6 +10,7 @@ import { advisorConfig } from "./config";
 import { generateAdvisor, type UsageEntry } from "./provider";
 import { contextSchema, emptyContext, type FounderContext } from "./schema";
 import { parseGuestAdvisor } from "./guest-contract";
+import { guestFailureMessage } from "./guest-failure";
 import type { advisorView } from "./service";
 const json = (v: unknown) =>
   JSON.parse(JSON.stringify(v)) as Prisma.InputJsonValue;
@@ -85,8 +86,7 @@ export async function generateGuestAdvisor(
         inputTokens: usage.reduce((n, u) => n + u.inputTokens, 0),
         outputTokens: usage.reduce((n, u) => n + u.outputTokens, 0),
         estimatedCost: usage.reduce((n, u) => n + u.estimatedCost, 0),
-        error:
-          "The advisor could not complete this plan. No plan was published.",
+        error: guestFailureMessage(error),
       },
     });
     if (error instanceof AppError) throw error;
