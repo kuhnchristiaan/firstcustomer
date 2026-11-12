@@ -1,5 +1,6 @@
 import { load } from "cheerio";
 import { createHash } from "node:crypto";
+import { setTimeout as delayUntil } from "node:timers/promises";
 import robotsParser from "robots-parser";
 import { normalizeUrl, safeFetch } from "./safe-fetch";
 import { AppError } from "@/lib/errors";
@@ -74,10 +75,6 @@ export async function crawl(
         robotsUrl,
         robots.status === 404 || robots.status === 410 ? "" : robots.body,
       );
-      if ((rules.getCrawlDelay("FirstCustomersBot") ?? 0) > 3)
-        throw new AppError(
-          "This site requests a crawl delay beyond the analysis time budget.",
-        );
       return rules;
     })();
     policies.set(siteOrigin, pending);
@@ -98,13 +95,16 @@ export async function crawl(
     const rules = await rulesFor(new URL(url).origin);
     if (rules.isAllowed(url, "FirstCustomersBot") === false) continue;
     seen.add(url);
-    if (results.length)
-      await new Promise((r) =>
-        setTimeout(
-          r,
-          Math.max(300, (rules.getCrawlDelay("FirstCustomersBot") ?? 0) * 1000),
-        ),
+    if (results.length) {
+      const waitMs = Math.max(
+        300,
+        (rules.getCrawlDelay("FirstCustomersBot") ?? 0) * 1000,
       );
+      // Retain the first usable page rather than exhausting the AI deadline.
+      // Never fetch another page sooner than the site's requested delay.
+      if (waitMs > 10000) break;
+      await delayUntil(waitMs, undefined, { signal });
+    }
     try {
       const response = await safeFetch(url, signal, 0, async (from, to) => {
         allowedRedirect(from, to);
